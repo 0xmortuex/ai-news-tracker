@@ -1,0 +1,301 @@
+{% load static %}<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Newsfeed</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', 'sans-serif'],
+                        mono: ['"SF Mono"', 'Menlo', 'Consolas', 'monospace'],
+                    },
+                    colors: {
+                        ink: {
+                            900: '#0a0a0f',
+                            800: '#111118',
+                            700: '#1a1a24',
+                            600: '#232332',
+                            500: '#2d2d40',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background: radial-gradient(ellipse at top, #14141f 0%, #0a0a0f 60%);
+            font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+        }
+        .card {
+            transition: transform 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
+        }
+        .card:hover {
+            border-color: #6366f1;
+            background-color: rgba(26, 26, 36, 0.9);
+            transform: translateY(-1px);
+        }
+        .badge { font-size: 0.66rem; letter-spacing: 0.05em; }
+        .chip-active { background-color: #4f46e5 !important; border-color: #6366f1 !important; color: #fff !important; }
+        .line-clamp-2 {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        @keyframes pulse-new { 0%,100% { opacity: 1; } 50% { opacity: 0.6; } }
+        .new-pulse { animation: pulse-new 2s infinite; }
+        .sidebar-scroll::-webkit-scrollbar { width: 6px; }
+        .sidebar-scroll::-webkit-scrollbar-thumb { background: #2d2d40; border-radius: 3px; }
+    </style>
+</head>
+<body class="min-h-screen text-slate-200 font-sans antialiased">
+
+<header class="sticky top-0 z-30 backdrop-blur-md bg-ink-900/80 border-b border-ink-600">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center gap-4 flex-wrap">
+        <button id="sidebarToggle" class="lg:hidden p-2 rounded-md bg-ink-700 border border-ink-500 text-slate-300 hover:bg-ink-600" aria-label="Toggle sidebar">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+
+        <div class="flex items-baseline gap-3">
+            <h1 class="text-xl font-bold text-white tracking-tight">AI Newsfeed</h1>
+            <span class="text-xs text-slate-400">
+                <span class="text-indigo-400 font-semibold">{{ unread_count }}</span> unread · {{ total_count }} total
+            </span>
+        </div>
+
+        <form method="get" class="flex-1 min-w-[200px] max-w-lg">
+            <input type="text" name="q" value="{{ query }}" placeholder="Search articles..."
+                   class="w-full px-3 py-2 rounded-md bg-ink-800 border border-ink-600 text-sm text-slate-200 placeholder-slate-500 focus:outline-none focus:border-indigo-500">
+            {% if selected_country %}<input type="hidden" name="country" value="{{ selected_country }}">{% endif %}
+            {% if selected_source_type %}<input type="hidden" name="source_type" value="{{ selected_source_type }}">{% endif %}
+            {% if selected_source %}<input type="hidden" name="source" value="{{ selected_source }}">{% endif %}
+            {% if show_read %}<input type="hidden" name="show_read" value="on">{% endif %}
+        </form>
+
+        <div class="flex items-center gap-2 ml-auto">
+            <button id="refreshBtn" type="button"
+                    class="inline-flex items-center gap-1.5 px-3 py-2 rounded-md bg-indigo-600 hover:bg-indigo-500 text-sm font-medium text-white transition">
+                <svg id="refreshIcon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"></path></svg>
+                <span id="refreshLabel">Refresh</span>
+            </button>
+            {% if unread_count %}
+            <form method="post" action="{% url 'newsfeed:mark_all_read' %}">
+                {% csrf_token %}
+                <button type="submit"
+                        class="px-3 py-2 rounded-md bg-ink-700 hover:bg-ink-600 border border-ink-500 text-sm text-slate-200 transition">
+                    Mark all read
+                </button>
+            </form>
+            {% endif %}
+        </div>
+    </div>
+    <div id="toast" class="hidden max-w-7xl mx-auto px-4 sm:px-6 pb-2">
+        <div id="toastBody" class="px-3 py-2 rounded-md bg-indigo-900/40 border border-indigo-700/50 text-sm text-indigo-200"></div>
+    </div>
+</header>
+
+{% if error == 'invalid_url' %}
+<div class="max-w-7xl mx-auto px-4 sm:px-6 mt-4">
+    <div class="px-4 py-2 rounded-md bg-red-900/40 border border-red-700/50 text-sm text-red-200">
+        That article has an invalid URL and couldn't be opened.
+    </div>
+</div>
+{% endif %}
+
+<div class="max-w-7xl mx-auto px-4 sm:px-6 py-6 grid grid-cols-1 lg:grid-cols-[240px_minmax(0,1fr)] gap-6">
+
+    <aside id="sidebar" class="hidden lg:block lg:sticky lg:top-20 lg:self-start lg:max-h-[calc(100vh-6rem)] lg:overflow-y-auto sidebar-scroll">
+        <form method="get" id="filterForm" class="space-y-5">
+            {% if query %}<input type="hidden" name="q" value="{{ query }}">{% endif %}
+            <input type="hidden" name="country" id="f_country" value="{{ selected_country }}">
+            <input type="hidden" name="source_type" id="f_type" value="{{ selected_source_type }}">
+            <input type="hidden" name="source" value="{{ selected_source }}">
+
+            <div>
+                <h3 class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">Country</h3>
+                <div class="flex flex-wrap gap-1.5">
+                    <button type="button" data-field="country" data-value=""
+                            class="chip px-2.5 py-1 rounded-md bg-ink-800 border border-ink-600 text-xs text-slate-300 hover:bg-ink-700 {% if not selected_country %}chip-active{% endif %}">
+                        All
+                    </button>
+                    {% for code, label in country_choices %}
+                        <button type="button" data-field="country" data-value="{{ code }}"
+                                class="chip px-2.5 py-1 rounded-md bg-ink-800 border border-ink-600 text-xs text-slate-300 hover:bg-ink-700 {% if selected_country == code %}chip-active{% endif %}">
+                            {% if code == 'US' %}🇺🇸{% elif code == 'CN' %}🇨🇳{% else %}🌐{% endif %} {{ label }}
+                        </button>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">Type</h3>
+                <div class="flex flex-wrap gap-1.5">
+                    <button type="button" data-field="source_type" data-value=""
+                            class="chip px-2.5 py-1 rounded-md bg-ink-800 border border-ink-600 text-xs text-slate-300 hover:bg-ink-700 {% if not selected_source_type %}chip-active{% endif %}">
+                        All
+                    </button>
+                    {% for code, label in source_type_choices %}
+                        <button type="button" data-field="source_type" data-value="{{ code }}"
+                                class="chip px-2.5 py-1 rounded-md bg-ink-800 border border-ink-600 text-xs text-slate-300 hover:bg-ink-700 {% if selected_source_type == code %}chip-active{% endif %}">
+                            {{ label }}
+                        </button>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">Source</h3>
+                <select name="source" onchange="this.form.submit()"
+                        class="w-full px-2 py-1.5 rounded-md bg-ink-800 border border-ink-600 text-xs text-slate-200 focus:outline-none focus:border-indigo-500">
+                    <option value="">All sources</option>
+                    {% for s in sources %}
+                        <option value="{{ s.id }}" {% if selected_source == s.id|stringformat:"s" %}selected{% endif %}>{{ s.name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <label class="flex items-center gap-2 text-sm text-slate-300 cursor-pointer">
+                <input type="checkbox" name="show_read" {% if show_read %}checked{% endif %} onchange="this.form.submit()"
+                       class="w-4 h-4 rounded bg-ink-800 border-ink-500 text-indigo-500 focus:ring-indigo-500">
+                Show read articles
+            </label>
+
+            {% if selected_country or selected_source_type or selected_source or query or show_read %}
+            <a href="{% url 'newsfeed:feed' %}" class="inline-block text-xs text-slate-400 hover:text-indigo-400">Clear all filters</a>
+            {% endif %}
+        </form>
+    </aside>
+
+    <main>
+        {% if articles %}
+        <div class="space-y-2">
+            {% for article in articles %}
+            <article data-id="{{ article.id }}"
+                     class="card bg-ink-800/60 border border-ink-600 rounded-lg px-4 py-3 {% if article.is_read %}opacity-55{% endif %}">
+                <div class="flex items-center gap-2 mb-1.5 flex-wrap text-xs">
+                    {% if article.source.country == 'US' %}
+                        <span class="badge inline-flex items-center px-1.5 py-0.5 rounded bg-blue-900/40 border border-blue-700/50 text-blue-300 uppercase font-semibold">🇺🇸 US</span>
+                    {% elif article.source.country == 'CN' %}
+                        <span class="badge inline-flex items-center px-1.5 py-0.5 rounded bg-red-900/40 border border-red-700/50 text-red-300 uppercase font-semibold">🇨🇳 CN</span>
+                    {% else %}
+                        <span class="badge inline-flex items-center px-1.5 py-0.5 rounded bg-slate-700/40 border border-slate-600/50 text-slate-300 uppercase font-semibold">🌐 Global</span>
+                    {% endif %}
+
+                    <span class="badge inline-flex items-center px-1.5 py-0.5 rounded bg-ink-700 border border-ink-500 text-slate-400 uppercase font-semibold">
+                        {{ article.source.get_source_type_display }}
+                    </span>
+
+                    {% if article.domain %}
+                    <img src="https://www.google.com/s2/favicons?domain={{ article.domain }}&sz=32"
+                         alt="" width="14" height="14" class="rounded-sm opacity-90" loading="lazy">
+                    {% endif %}
+                    <span class="text-slate-400 font-medium">{{ article.source.name }}</span>
+                    <span class="text-slate-600">·</span>
+                    <time class="text-slate-500">{{ article.published_date|timesince }} ago</time>
+
+                    {% if article.is_new %}
+                    <span class="new-pulse badge inline-flex items-center px-1.5 py-0.5 rounded bg-emerald-500/20 border border-emerald-500/50 text-emerald-300 uppercase font-bold">NEW</span>
+                    {% endif %}
+                </div>
+
+                <h2 class="text-[15px] font-semibold leading-snug">
+                    <a href="{% url 'newsfeed:mark_read' article.id %}" target="_blank" rel="noopener noreferrer"
+                       class="text-white hover:text-indigo-400 transition">
+                        {{ article.title }}
+                    </a>
+                </h2>
+
+                {% if article.summary %}
+                <p class="text-[13px] text-slate-400 mt-1 leading-relaxed line-clamp-2">
+                    {{ article.summary|truncatechars:240 }}
+                </p>
+                {% endif %}
+            </article>
+            {% endfor %}
+        </div>
+        {% else %}
+        <div class="text-center py-16 border border-dashed border-ink-600 rounded-lg">
+            <div class="text-5xl mb-3">📭</div>
+            <h2 class="text-xl font-semibold text-white mb-2">No articles to show</h2>
+            <p class="text-sm text-slate-400 max-w-md mx-auto">
+                {% if query or selected_country or selected_source or selected_source_type %}
+                    Try clearing your filters.
+                {% else %}
+                    Click <strong class="text-indigo-400">Refresh</strong> above to fetch articles, or run
+                    <code class="px-1.5 py-0.5 rounded bg-ink-700 text-indigo-300">python manage.py fetch_feeds</code>.
+                {% endif %}
+            </p>
+        </div>
+        {% endif %}
+    </main>
+</div>
+
+<script>
+(function() {
+    const csrf = document.cookie.split('; ').find(r => r.startsWith('csrftoken='));
+    const csrfToken = csrf ? csrf.split('=')[1] : '';
+
+    // Sidebar toggle
+    const toggle = document.getElementById('sidebarToggle');
+    const sidebar = document.getElementById('sidebar');
+    if (toggle && sidebar) {
+        toggle.addEventListener('click', () => sidebar.classList.toggle('hidden'));
+    }
+
+    // Chip buttons
+    document.querySelectorAll('.chip').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const field = btn.dataset.field;
+            const value = btn.dataset.value;
+            const input = document.getElementById('f_' + (field === 'source_type' ? 'type' : 'country'));
+            if (input) input.value = value;
+            document.getElementById('filterForm').submit();
+        });
+    });
+
+    // Refresh via AJAX
+    const refreshBtn = document.getElementById('refreshBtn');
+    const refreshLabel = document.getElementById('refreshLabel');
+    const refreshIcon = document.getElementById('refreshIcon');
+    const toast = document.getElementById('toast');
+    const toastBody = document.getElementById('toastBody');
+
+    function showToast(msg, isError) {
+        toastBody.textContent = msg;
+        toastBody.className = 'px-3 py-2 rounded-md border text-sm ' + (isError
+            ? 'bg-red-900/40 border-red-700/50 text-red-200'
+            : 'bg-indigo-900/40 border-indigo-700/50 text-indigo-200');
+        toast.classList.remove('hidden');
+    }
+
+    if (refreshBtn) {
+        refreshBtn.addEventListener('click', async () => {
+            refreshBtn.disabled = true;
+            refreshLabel.textContent = 'Fetching...';
+            refreshIcon.classList.add('animate-spin');
+            try {
+                const r = await fetch('{% url "newsfeed:fetch_now" %}', {
+                    method: 'POST',
+                    headers: { 'X-CSRFToken': csrfToken, 'X-Requested-With': 'fetch' },
+                });
+                const data = await r.json();
+                showToast(`Fetched ${data.checked} sources — ${data.new} new articles. Reloading...`);
+                setTimeout(() => location.reload(), 900);
+            } catch (e) {
+                showToast('Refresh failed. See server logs.', true);
+                refreshBtn.disabled = false;
+                refreshLabel.textContent = 'Refresh';
+                refreshIcon.classList.remove('animate-spin');
+            }
+        });
+    }
+})();
+</script>
+
+</body>
+</html>
