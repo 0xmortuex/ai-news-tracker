@@ -29,8 +29,11 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'dev-key-change-in-production')
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
 ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')
+# Auto-add DigitalOcean's app URL pattern
+ALLOWED_HOSTS += ['.ondigitalocean.app']
 
-CSRF_TRUSTED_ORIGINS = [f"https://{h}" for h in ALLOWED_HOSTS if not h.startswith(('localhost', '127.'))]
+CSRF_TRUSTED_ORIGINS = [f"https://{h}" for h in ALLOWED_HOSTS if not h.startswith(('localhost', '127.', '.'))]
+CSRF_TRUSTED_ORIGINS += ['https://*.ondigitalocean.app']
 
 
 # Application definition
