@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI News Tracker — Stay first to know about AI developments in the US and China</title>
+    <meta name="description" content="A Django web app that aggregates AI news from 20 sources across the US, China, and global research labs. Real-time monitoring of the AI race.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', 'sans-serif'],
+                    },
+                    colors: {
+                        ink: {
+                            900: '#0a0a0f',
+                            800: '#111118',
+                            700: '#1a1a24',
+                            600: '#232332',
+                            500: '#2d2d40',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background: radial-gradient(ellipse at top, #14141f 0%, #0a0a0f 60%);
+            font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+        }
+        .glow {
+            background: radial-gradient(ellipse at center, rgba(99, 102, 241, 0.18) 0%, transparent 60%);
+        }
+        .card {
+            transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+        }
+        .card:hover {
+            border-color: #6366f1;
+            transform: translateY(-2px);
+            background-color: rgba(26, 26, 36, 0.9);
+        }
+        .source-pill {
+            transition: all 0.15s ease;
+        }
+        .source-pill:hover {
+            border-color: #6366f1;
+            color: #c7d2fe;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+        .float-slow { animation: float 6s ease-in-out infinite; }
+    </style>
+</head>
+<body class="min-h-screen text-slate-200 font-sans antialiased">
+
+<nav class="sticky top-0 z-30 backdrop-blur-md bg-ink-900/80 border-b border-ink-600">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+            <span class="text-lg">📡</span>
+            <span class="font-bold text-white tracking-tight">AI News Tracker</span>
+        </div>
+        <div class="flex items-center gap-3">
+            <a href="#features" class="hidden sm:inline text-sm text-slate-400 hover:text-white transition">Features</a>
+            <a href="#sources" class="hidden sm:inline text-sm text-slate-400 hover:text-white transition">Sources</a>
+            <a href="#stack" class="hidden sm:inline text-sm text-slate-400 hover:text-white transition">Stack</a>
+            <a href="https://github.com/0xmortuex/ai-news-tracker" target="_blank" rel="noopener"
+               class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-indigo-600 hover:bg-indigo-500 text-sm font-medium text-white transition">
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+                GitHub
+            </a>
+        </div>
+    </div>
+</nav>
+
+<header class="relative overflow-hidden">
+    <div class="glow absolute inset-0 pointer-events-none"></div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-24 sm:py-32 relative">
+        <div class="max-w-3xl">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-ink-500 bg-ink-800/60 text-xs text-indigo-300 mb-6">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                Live — tracking 20 sources
+            </div>
+            <h1 class="text-5xl sm:text-6xl md:text-7xl font-bold text-white tracking-tight leading-[1.05] mb-5">
+                AI News Tracker
+            </h1>
+            <p class="text-lg sm:text-xl text-slate-400 leading-relaxed mb-8 max-w-2xl">
+                Stay first to know about AI developments in the US and China. One dark dashboard, twenty RSS feeds, zero noise.
+            </p>
+            <div class="flex flex-wrap gap-3">
+                <a href="https://github.com/0xmortuex/ai-news-tracker" target="_blank" rel="noopener"
+                   class="inline-flex items-center gap-2 px-5 py-3 rounded-md bg-indigo-600 hover:bg-indigo-500 text-sm font-semibold text-white transition">
+                    View Source
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+                <a href="#features"
+                   class="inline-flex items-center gap-2 px-5 py-3 rounded-md bg-ink-700 hover:bg-ink-600 border border-ink-500 text-sm font-semibold text-slate-200 transition">
+                    What it does
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section id="features" class="max-w-6xl mx-auto px-4 sm:px-6 py-20 border-t border-ink-600">
+    <div class="mb-12">
+        <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mb-3">What it does</h2>
+        <p class="text-slate-400 max-w-2xl">Aggregation, filtering, and triage — tuned for one-glance scanning of the AI landscape.</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="card bg-ink-800/60 border border-ink-600 rounded-xl p-5">
+            <div class="w-10 h-10 rounded-lg bg-indigo-500/15 border border-indigo-500/40 flex items-center justify-center mb-4 text-lg">📡</div>
+            <h3 class="font-semibold text-white mb-1.5">20 RSS feeds, auto-refreshed</h3>
+            <p class="text-sm text-slate-400 leading-relaxed">Company blogs, news outlets, and research labs — polled continuously with deduplication.</p>
+        </div>
+        <div class="card bg-ink-800/60 border border-ink-600 rounded-xl p-5">
+            <div class="w-10 h-10 rounded-lg bg-indigo-500/15 border border-indigo-500/40 flex items-center justify-center mb-4 text-lg">🎯</div>
+            <h3 class="font-semibold text-white mb-1.5">Filter by country &amp; type</h3>
+            <p class="text-sm text-slate-400 leading-relaxed">US vs China vs Global. Company vs News vs Research. Combine them, search within them.</p>
+        </div>
+        <div class="card bg-ink-800/60 border border-ink-600 rounded-xl p-5">
+            <div class="w-10 h-10 rounded-lg bg-indigo-500/15 border border-indigo-500/40 flex items-center justify-center mb-4 text-lg">⚡</div>
+            <h3 class="font-semibold text-white mb-1.5">"NEW" badge &lt; 1 hour</h3>
+            <p class="text-sm text-slate-400 leading-relaxed">Fresh articles pulse green so you never miss what just dropped.</p>
+        </div>
+        <div class="card bg-ink-800/60 border border-ink-600 rounded-xl p-5">
+            <div class="w-10 h-10 rounded-lg bg-indigo-500/15 border border-indigo-500/40 flex items-center justify-center mb-4 text-lg">✓</div>
+            <h3 class="font-semibold text-white mb-1.5">Read tracking</h3>
+            <p class="text-sm text-slate-400 leading-relaxed">One-click mark-as-read. Opens the article, fades the card. Inbox zero for AI news.</p>
+        </div>
+    </div>
+</section>
+
+<section class="max-w-6xl mx-auto px-4 sm:px-6 py-20 border-t border-ink-600">
+    <div class="mb-10">
+        <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mb-3">Screenshots</h2>
+        <p class="text-slate-400">Coming soon.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="aspect-[16/10] rounded-xl bg-ink-800/40 border border-dashed border-ink-500 flex items-center justify-center text-slate-500 text-sm">
+            📷 Dashboard screenshot
+        </div>
+        <div class="aspect-[16/10] rounded-xl bg-ink-800/40 border border-dashed border-ink-500 flex items-center justify-center text-slate-500 text-sm">
+            📷 Filter view screenshot
+        </div>
+    </div>
+</section>
+
+<section id="sources" class="max-w-6xl mx-auto px-4 sm:px-6 py-20 border-t border-ink-600">
+    <div class="mb-12">
+        <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mb-3">Sources</h2>
+        <p class="text-slate-400">20 feeds across three regions, rebalanced as the landscape shifts.</p>
+    </div>
+
+    <div class="space-y-8">
+        <div>
+            <div class="flex items-center gap-2 mb-4">
+                <span class="text-2xl">🇺🇸</span>
+                <h3 class="text-lg font-semibold text-white">United States <span class="text-slate-500 font-normal text-sm">· 14 feeds</span></h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+                <span class="source-pill px-3 py-1.5 rounded-lg bg-ink-800/60 border border-ink-600 text-sm text-slate-300">OpenAI News</span>
+                <span class="source-pill px-3 py-1.5 rounded-lg bg-ink-800/60 border border-ink-600 text-sm text-slate-300">Anthropic</span>
+                <span class="source-pill px-3 py-1.5 rounded-lg bg-ink-800/60 border border-ink-600 text-sm text-slate-300">Google DeepMind</span>
+                <span class="source-pill px-3 py-1.5 rounded-lg bg-ink-800/60 border border-ink-600 text-sm text-slate-300">Google Research</span>
+                <span class="source-pill px-3 py-1.5 rounded-lg bg-ink-800/60 border border-ink-600 text-sm text-slate-300">Meta AI</span>
+                <span class="source-pill px-3 py-1.5 rounded-lg bg-ink-800/60 border border-ink-600 text-sm text-slate-300">Microsoft AI</span>
+                <span class="source-pill px-3 py-1.5 rounded-lg bg-ink-800/60 border border-ink-600 text-sm text-slate-300">NVIDIA</span>
+                <span class="source-pill px-3 py-1.5 rounded-lg bg-ink-800/60 border border-ink-600 text-sm text-slate-300">Hugging Face</span>
+                <span class="source-pill px-3 py-1.5 rounded-lg bg-ink-800/60 border border-ink-600 text-sm text-slate-300">BAIR Berkeley</span>
+                <span class="source-pill px-3 py-1.5 rounded-lg bg-ink-800/60 border border-ink-600 text-sm text-slate-300">TechCrunch AI</span>
+                <span class="source-pill px-3 py-1.5 rounded-lg bg-ink-800/60 border border-ink-600 text-sm text-slate-300">The Verge AI</span>
+                <span class="source-pill px-3 py-1.5 rounded-lg bg-ink-800/60 border border-ink-600 text-sm text-slate-300">MIT Tech Review</span>
+                <span class="source-pill px-3 py-1.5 rounded-lg bg-ink-800/60 border border-ink-600 text-sm text-slate-300">Ars Technica AI</span>
+                <span class="source-pill px-3 py-1.5 rounded-lg bg-ink-800/60 border border-ink-600 text-sm text-slate-300">VentureBeat AI</span>
+            </div>
+        </div>
+
+        <div>
+            <div class="flex items-center gap-2 mb-4">
+                <span class="text-2xl">🇨🇳</span>
+                <h3 class="text-lg font-semibold text-white">China <span class="text-slate-500 font-normal text-sm">· 4 feeds</span></h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+                <span class="source-pill px-3 py-1.5 rounded-lg bg-ink-800/60 border border-ink-600 text-sm text-slate-300">South China Morning Post</span>
+                <span class="source-pill px-3 py-1.5 rounded-lg bg-ink-800/60 border border-ink-600 text-sm text-slate-300">TechNode</span>
+                <span class="source-pill px-3 py-1.5 rounded-lg bg-ink-800/60 border border-ink-600 text-sm text-slate-300">China Daily Tech</span>
+                <span class="source-pill px-3 py-1.5 rounded-lg bg-ink-800/60 border border-ink-600 text-sm text-slate-300">Caixin Global</span>
+            </div>
+        </div>
+
+        <div>
+            <div class="flex items-center gap-2 mb-4">
+                <span class="text-2xl">🌐</span>
+                <h3 class="text-lg font-semibold text-white">Global research <span class="text-slate-500 font-normal text-sm">· 2 feeds</span></h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+                <span class="source-pill px-3 py-1.5 rounded-lg bg-ink-800/60 border border-ink-600 text-sm text-slate-300">arXiv cs.AI</span>
+                <span class="source-pill px-3 py-1.5 rounded-lg bg-ink-800/60 border border-ink-600 text-sm text-slate-300">arXiv cs.LG</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="stack" class="max-w-6xl mx-auto px-4 sm:px-6 py-20 border-t border-ink-600">
+    <div class="mb-10">
+        <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mb-3">Tech stack</h2>
+        <p class="text-slate-400">Boring, proven, boring on purpose.</p>
+    </div>
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+        <div class="card bg-ink-800/60 border border-ink-600 rounded-lg px-4 py-5 text-center">
+            <div class="text-2xl mb-1.5">🐍</div>
+            <div class="text-sm font-semibold text-white">Python 3.13</div>
+        </div>
+        <div class="card bg-ink-800/60 border border-ink-600 rounded-lg px-4 py-5 text-center">
+            <div class="text-2xl mb-1.5">🎸</div>
+            <div class="text-sm font-semibold text-white">Django 6.0</div>
+        </div>
+        <div class="card bg-ink-800/60 border border-ink-600 rounded-lg px-4 py-5 text-center">
+            <div class="text-2xl mb-1.5">🐘</div>
+            <div class="text-sm font-semibold text-white">PostgreSQL</div>
+        </div>
+        <div class="card bg-ink-800/60 border border-ink-600 rounded-lg px-4 py-5 text-center">
+            <div class="text-2xl mb-1.5">🎨</div>
+            <div class="text-sm font-semibold text-white">TailwindCSS</div>
+        </div>
+        <div class="card bg-ink-800/60 border border-ink-600 rounded-lg px-4 py-5 text-center">
+            <div class="text-2xl mb-1.5">🦄</div>
+            <div class="text-sm font-semibold text-white">Gunicorn</div>
+        </div>
+    </div>
+</section>
+
+<section class="max-w-6xl mx-auto px-4 sm:px-6 py-20 border-t border-ink-600">
+    <div class="rounded-2xl border border-indigo-500/30 bg-gradient-to-br from-indigo-900/20 to-ink-800/40 p-10 sm:p-14 text-center">
+        <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mb-3">Read the code</h2>
+        <p class="text-slate-400 max-w-xl mx-auto mb-8">Open source. MIT licensed. Clone it, fork it, run your own regional mix.</p>
+        <a href="https://github.com/0xmortuex/ai-news-tracker" target="_blank" rel="noopener"
+           class="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-indigo-600 hover:bg-indigo-500 text-sm font-semibold text-white transition">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            View on GitHub
+        </a>
+    </div>
+</section>
+
+<footer class="border-t border-ink-600 mt-10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-8 flex items-center justify-between flex-wrap gap-3">
+        <p class="text-sm text-slate-500">
+            Built by <span class="text-slate-300 font-medium">Fadi</span> ·
+            <a href="https://github.com/0xmortuex" target="_blank" rel="noopener" class="text-indigo-400 hover:text-indigo-300">@0xmortuex</a>
+        </p>
+        <p class="text-xs text-slate-600">MIT License</p>
+    </div>
+</footer>
+
+</body>
+</html>
