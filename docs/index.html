@@ -1,261 +1,427 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI News Tracker — Stay first to know about AI developments in the US and China</title>
-    <meta name="description" content="A Django web app that aggregates AI news from 20 sources across the US, China, and global research labs. Real-time monitoring of the AI race.">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', 'sans-serif'],
-                    },
-                    colors: {
-                        ink: {
-                            900: '#0a0a0f',
-                            800: '#111118',
-                            700: '#1a1a24',
-                            600: '#232332',
-                            500: '#2d2d40',
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        body {
-            background: radial-gradient(ellipse at top, #14141f 0%, #0a0a0f 60%);
-            font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
-        }
-        .glow {
-            background: radial-gradient(ellipse at center, rgba(99, 102, 241, 0.18) 0%, transparent 60%);
-        }
-        .card {
-            transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
-        }
-        .card:hover {
-            border-color: #6366f1;
-            transform: translateY(-2px);
-            background-color: rgba(26, 26, 36, 0.9);
-        }
-        .source-pill {
-            transition: all 0.15s ease;
-        }
-        .source-pill:hover {
-            border-color: #6366f1;
-            color: #c7d2fe;
-        }
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-8px); }
-        }
-        .float-slow { animation: float 6s ease-in-out infinite; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI News Tracker</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  body {
+    background: #0f0f10;
+    color: #e5e5e5;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  .card {
+    background: #1a1a1c;
+    border: 1px solid #2a2a2d;
+    transition: transform 0.15s ease, border-color 0.15s ease;
+  }
+  .card:hover {
+    border-color: #4a4a4d;
+    transform: translateY(-2px);
+  }
+  .badge-us    { background: #1e40af20; color: #60a5fa; border: 1px solid #1e40af40; }
+  .badge-cn    { background: #b91c1c20; color: #f87171; border: 1px solid #b91c1c40; }
+  .badge-other { background: #4b556320; color: #9ca3af; border: 1px solid #4b556340; }
+  .badge-company  { background: #15803d20; color: #4ade80; }
+  .badge-news     { background: #c2410c20; color: #fb923c; }
+  .badge-research { background: #7c3aed20; color: #a78bfa; }
+  .badge-new {
+    background: #ef4444;
+    color: white;
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+  }
+  select, input {
+    background: #1a1a1c;
+    border: 1px solid #2a2a2d;
+    color: #e5e5e5;
+  }
+  select:focus, input:focus {
+    border-color: #6366f1;
+    outline: none;
+  }
+  .read { opacity: 0.5; }
+  .toast {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background: #1a1a1c;
+    border: 1px solid #4ade80;
+    color: #4ade80;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    z-index: 50;
+    transition: opacity 0.3s ease;
+  }
+  .toast.error {
+    border-color: #f87171;
+    color: #f87171;
+  }
+  .spinner {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid #6366f1;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+  }
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  header.sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    background: #0f0f10;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #2a2a2d;
+  }
+</style>
 </head>
-<body class="min-h-screen text-slate-200 font-sans antialiased">
-
-<nav class="sticky top-0 z-30 backdrop-blur-md bg-ink-900/80 border-b border-ink-600">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
-        <div class="flex items-center gap-2">
-            <span class="text-lg">📡</span>
-            <span class="font-bold text-white tracking-tight">AI News Tracker</span>
+<body class="min-h-screen">
+<div class="max-w-7xl mx-auto px-4 py-4">
+  <header class="sticky-header">
+    <div class="flex items-center justify-between mb-2 flex-wrap gap-2">
+      <div>
+        <h1 class="text-3xl font-bold">AI News Tracker</h1>
+        <p class="text-gray-400 text-sm">Latest AI developments from US, China, and global research</p>
+      </div>
+      <div class="flex items-center gap-3">
+        <div class="text-sm text-gray-400">
+          <span id="unreadCount" class="text-white font-semibold">0</span> unread /
+          <span id="totalCount">0</span> total
         </div>
-        <div class="flex items-center gap-3">
-            <a href="#features" class="hidden sm:inline text-sm text-slate-400 hover:text-white transition">Features</a>
-            <a href="#sources" class="hidden sm:inline text-sm text-slate-400 hover:text-white transition">Sources</a>
-            <a href="#stack" class="hidden sm:inline text-sm text-slate-400 hover:text-white transition">Stack</a>
-            <a href="https://github.com/0xmortuex/ai-news-tracker" target="_blank" rel="noopener"
-               class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-indigo-600 hover:bg-indigo-500 text-sm font-medium text-white transition">
-                <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-                GitHub
-            </a>
-        </div>
+        <button id="refreshBtn"
+                class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded text-sm font-medium flex items-center gap-2">
+          <span id="refreshLabel">Refresh</span>
+        </button>
+      </div>
     </div>
-</nav>
+  </header>
 
-<header class="relative overflow-hidden">
-    <div class="glow absolute inset-0 pointer-events-none"></div>
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-24 sm:py-32 relative">
-        <div class="max-w-3xl">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-ink-500 bg-ink-800/60 text-xs text-indigo-300 mb-6">
-                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                Live — tracking 20 sources
+  <div class="card rounded-lg p-4 mb-4">
+    <div class="grid grid-cols-1 md:grid-cols-5 gap-3">
+      <input type="text" id="searchInput" placeholder="Search titles..." class="rounded px-3 py-2 col-span-2">
+      <select id="countryFilter" class="rounded px-3 py-2">
+        <option value="">All countries</option>
+        <option value="US">🇺🇸 USA</option>
+        <option value="CN">🇨🇳 China</option>
+        <option value="OTHER">🌐 Global</option>
+      </select>
+      <select id="typeFilter" class="rounded px-3 py-2">
+        <option value="">All types</option>
+        <option value="COMPANY">Company blogs</option>
+        <option value="NEWS">News sites</option>
+        <option value="RESEARCH">Research</option>
+      </select>
+      <select id="sourceFilter" class="rounded px-3 py-2">
+        <option value="">All sources</option>
+      </select>
+    </div>
+    <div class="flex items-center justify-between mt-3">
+      <label class="flex items-center text-sm text-gray-400 cursor-pointer">
+        <input type="checkbox" id="showRead" class="mr-2"> Show read articles
+      </label>
+      <button id="markAllReadBtn" class="text-xs text-gray-400 hover:text-white">
+        Mark all as read
+      </button>
+    </div>
+  </div>
+
+  <div id="loadingState" class="card rounded-lg p-12 text-center hidden">
+    <div class="spinner mx-auto mb-4"></div>
+    <p class="text-gray-400" id="loadingText">Fetching feeds...</p>
+  </div>
+
+  <div id="emptyState" class="card rounded-lg p-12 text-center hidden">
+    <p class="text-gray-400 mb-4">No articles match your filters.</p>
+  </div>
+
+  <div id="articleList" class="space-y-3"></div>
+</div>
+
+<div id="toast" class="toast hidden"></div>
+
+<script>
+// ========== Configuration ==========
+const SOURCES = [
+  { name: "OpenAI News",            url: "https://openai.com/news/rss.xml",                                              country: "US",    type: "COMPANY",  domain: "openai.com" },
+  { name: "Anthropic News",         url: "https://www.anthropic.com/news/feed.xml",                                       country: "US",    type: "COMPANY",  domain: "anthropic.com" },
+  { name: "Google DeepMind",        url: "https://deepmind.google/blog/rss.xml",                                          country: "US",    type: "COMPANY",  domain: "deepmind.google" },
+  { name: "Google Research",        url: "https://research.google/blog/rss/",                                             country: "US",    type: "COMPANY",  domain: "research.google" },
+  { name: "Meta AI",                url: "https://ai.meta.com/blog/rss/",                                                 country: "US",    type: "COMPANY",  domain: "ai.meta.com" },
+  { name: "Microsoft AI Blog",      url: "https://blogs.microsoft.com/ai/feed/",                                          country: "US",    type: "COMPANY",  domain: "microsoft.com" },
+  { name: "NVIDIA Blog",            url: "https://blogs.nvidia.com/feed/",                                                country: "US",    type: "COMPANY",  domain: "nvidia.com" },
+  { name: "Hugging Face Blog",      url: "https://huggingface.co/blog/feed.xml",                                          country: "US",    type: "COMPANY",  domain: "huggingface.co" },
+  { name: "BAIR Berkeley AI",       url: "https://bair.berkeley.edu/blog/feed.xml",                                       country: "US",    type: "RESEARCH", domain: "berkeley.edu" },
+  { name: "TechCrunch AI",          url: "https://techcrunch.com/category/artificial-intelligence/feed/",                 country: "US",    type: "NEWS",     domain: "techcrunch.com" },
+  { name: "The Verge AI",           url: "https://www.theverge.com/ai-artificial-intelligence/rss/index.xml",            country: "US",    type: "NEWS",     domain: "theverge.com" },
+  { name: "MIT Tech Review AI",     url: "https://www.technologyreview.com/topic/artificial-intelligence/feed",          country: "US",    type: "NEWS",     domain: "technologyreview.com" },
+  { name: "Ars Technica AI",        url: "https://arstechnica.com/ai/feed/",                                              country: "US",    type: "NEWS",     domain: "arstechnica.com" },
+  { name: "VentureBeat AI",         url: "https://venturebeat.com/category/ai/feed/",                                     country: "US",    type: "NEWS",     domain: "venturebeat.com" },
+  { name: "South China Morning Post", url: "https://www.scmp.com/rss/36/feed",                                            country: "CN",    type: "NEWS",     domain: "scmp.com" },
+  { name: "TechNode",               url: "https://technode.com/feed/",                                                    country: "CN",    type: "NEWS",     domain: "technode.com" },
+  { name: "China Daily Tech",       url: "https://www.chinadaily.com.cn/rss/business_rss.xml",                            country: "CN",    type: "NEWS",     domain: "chinadaily.com.cn" },
+  { name: "Caixin Global",          url: "https://www.caixinglobal.com/feed/",                                            country: "CN",    type: "NEWS",     domain: "caixinglobal.com" },
+  { name: "arXiv cs.AI",            url: "http://export.arxiv.org/rss/cs.AI",                                             country: "OTHER", type: "RESEARCH", domain: "arxiv.org" },
+  { name: "arXiv cs.LG",            url: "http://export.arxiv.org/rss/cs.LG",                                             country: "OTHER", type: "RESEARCH", domain: "arxiv.org" },
+];
+
+// CORS proxy — turns RSS XML into JSON usable from the browser
+const RSS_PROXY = "https://api.rss2json.com/v1/api.json?rss_url=";
+
+// ========== State ==========
+let articles = [];
+const STORAGE_KEY = "ai-news-articles-v1";
+const READ_KEY = "ai-news-read-v1";
+let readSet = new Set(JSON.parse(localStorage.getItem(READ_KEY) || "[]"));
+
+// ========== Storage ==========
+function saveArticles() {
+  // Keep only last 1000 to avoid localStorage bloat
+  const trimmed = articles.slice(0, 1000);
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(trimmed));
+}
+function loadArticles() {
+  const raw = localStorage.getItem(STORAGE_KEY);
+  if (!raw) return [];
+  try { return JSON.parse(raw); } catch { return []; }
+}
+function saveRead() {
+  localStorage.setItem(READ_KEY, JSON.stringify([...readSet]));
+}
+
+// ========== Toast ==========
+function toast(msg, isError = false) {
+  const el = document.getElementById("toast");
+  el.textContent = msg;
+  el.className = "toast" + (isError ? " error" : "");
+  el.classList.remove("hidden");
+  setTimeout(() => el.classList.add("hidden"), 3500);
+}
+
+// ========== Fetch ==========
+async function fetchSource(source) {
+  try {
+    const res = await fetch(RSS_PROXY + encodeURIComponent(source.url));
+    if (!res.ok) return [];
+    const data = await res.json();
+    if (data.status !== "ok" || !data.items) return [];
+    return data.items.map(item => ({
+      id: item.link,
+      title: item.title,
+      url: item.link,
+      summary: (item.description || "").replace(/<[^>]+>/g, "").slice(0, 400),
+      published: item.pubDate ? new Date(item.pubDate).getTime() : Date.now(),
+      source: source.name,
+      country: source.country,
+      type: source.type,
+      domain: source.domain,
+    }));
+  } catch (err) {
+    console.warn(`Failed to fetch ${source.name}:`, err);
+    return [];
+  }
+}
+
+async function fetchAll() {
+  const btn = document.getElementById("refreshBtn");
+  const label = document.getElementById("refreshLabel");
+  btn.disabled = true;
+  label.innerHTML = '<span class="spinner"></span> Fetching...';
+  document.getElementById("loadingState").classList.remove("hidden");
+  document.getElementById("articleList").innerHTML = "";
+
+  let totalNew = 0;
+  let succeeded = 0;
+  const existingIds = new Set(articles.map(a => a.id));
+
+  // Fetch in parallel batches of 5 to avoid overwhelming the proxy
+  for (let i = 0; i < SOURCES.length; i += 5) {
+    const batch = SOURCES.slice(i, i + 5);
+    document.getElementById("loadingText").textContent =
+      `Fetching ${i + batch.length}/${SOURCES.length} sources...`;
+    const results = await Promise.all(batch.map(fetchSource));
+    results.forEach(items => {
+      if (items.length > 0) succeeded++;
+      items.forEach(item => {
+        if (!existingIds.has(item.id)) {
+          articles.push(item);
+          existingIds.add(item.id);
+          totalNew++;
+        }
+      });
+    });
+  }
+
+  // Sort by date desc
+  articles.sort((a, b) => b.published - a.published);
+  saveArticles();
+  document.getElementById("loadingState").classList.add("hidden");
+  populateSourceFilter();
+  render();
+
+  btn.disabled = false;
+  label.textContent = "Refresh";
+
+  if (succeeded === 0) {
+    toast("Could not fetch any feeds. Try again later.", true);
+  } else {
+    toast(`Fetched ${totalNew} new articles from ${succeeded}/${SOURCES.length} sources`);
+  }
+}
+
+// ========== Render ==========
+function timeAgo(ms) {
+  const diff = Date.now() - ms;
+  const min = Math.floor(diff / 60000);
+  if (min < 1) return "just now";
+  if (min < 60) return `${min}m ago`;
+  const hr = Math.floor(min / 60);
+  if (hr < 24) return `${hr}h ago`;
+  const day = Math.floor(hr / 24);
+  if (day < 30) return `${day}d ago`;
+  return new Date(ms).toLocaleDateString();
+}
+
+function flag(country) {
+  if (country === "US") return "🇺🇸 USA";
+  if (country === "CN") return "🇨🇳 China";
+  return "🌐 Global";
+}
+
+function typeLabel(type) {
+  return { COMPANY: "Company", NEWS: "News", RESEARCH: "Research" }[type] || type;
+}
+
+function favicon(domain) {
+  return `https://www.google.com/s2/favicons?domain=${domain}&sz=32`;
+}
+
+function render() {
+  const country = document.getElementById("countryFilter").value;
+  const type = document.getElementById("typeFilter").value;
+  const source = document.getElementById("sourceFilter").value;
+  const query = document.getElementById("searchInput").value.toLowerCase().trim();
+  const showRead = document.getElementById("showRead").checked;
+
+  let filtered = articles;
+  if (country) filtered = filtered.filter(a => a.country === country);
+  if (type) filtered = filtered.filter(a => a.type === type);
+  if (source) filtered = filtered.filter(a => a.source === source);
+  if (query) filtered = filtered.filter(a =>
+    a.title.toLowerCase().includes(query) || (a.summary || "").toLowerCase().includes(query)
+  );
+  if (!showRead) filtered = filtered.filter(a => !readSet.has(a.id));
+
+  filtered = filtered.slice(0, 200);
+
+  document.getElementById("totalCount").textContent = articles.length;
+  document.getElementById("unreadCount").textContent =
+    articles.filter(a => !readSet.has(a.id)).length;
+
+  const list = document.getElementById("articleList");
+  const empty = document.getElementById("emptyState");
+
+  if (filtered.length === 0) {
+    list.innerHTML = "";
+    empty.classList.remove("hidden");
+    if (articles.length === 0) {
+      empty.innerHTML = `<p class="text-gray-400 mb-4">No articles yet.</p>
+        <p class="text-sm text-gray-500">Click <strong>Refresh</strong> to fetch the latest AI news.</p>`;
+    } else {
+      empty.innerHTML = `<p class="text-gray-400">No articles match your filters.</p>`;
+    }
+    return;
+  }
+  empty.classList.add("hidden");
+
+  const oneHourAgo = Date.now() - 60 * 60 * 1000;
+
+  list.innerHTML = filtered.map(a => {
+    const isRead = readSet.has(a.id);
+    const isNew = a.published > oneHourAgo;
+    return `
+      <article class="card rounded-lg p-4 ${isRead ? "read" : ""}">
+        <div class="flex items-start gap-3">
+          <img src="${favicon(a.domain)}" alt="" class="w-5 h-5 mt-1 flex-shrink-0 rounded" loading="lazy"
+               onerror="this.style.display='none'">
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center gap-2 mb-2 flex-wrap">
+              <span class="text-xs px-2 py-0.5 rounded badge-${a.country.toLowerCase()}">${flag(a.country)}</span>
+              <span class="text-xs px-2 py-0.5 rounded badge-${a.type.toLowerCase()}">${typeLabel(a.type)}</span>
+              <span class="text-xs text-gray-500">${escapeHtml(a.source)}</span>
+              <span class="text-xs text-gray-500">· ${timeAgo(a.published)}</span>
+              ${isNew ? '<span class="text-xs px-2 py-0.5 rounded badge-new font-bold">NEW</span>' : ""}
             </div>
-            <h1 class="text-5xl sm:text-6xl md:text-7xl font-bold text-white tracking-tight leading-[1.05] mb-5">
-                AI News Tracker
-            </h1>
-            <p class="text-lg sm:text-xl text-slate-400 leading-relaxed mb-8 max-w-2xl">
-                Stay first to know about AI developments in the US and China. One dark dashboard, twenty RSS feeds, zero noise.
-            </p>
-            <div class="flex flex-wrap gap-3">
-                <a href="https://github.com/0xmortuex/ai-news-tracker" target="_blank" rel="noopener"
-                   class="inline-flex items-center gap-2 px-5 py-3 rounded-md bg-indigo-600 hover:bg-indigo-500 text-sm font-semibold text-white transition">
-                    View Source
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                </a>
-                <a href="#features"
-                   class="inline-flex items-center gap-2 px-5 py-3 rounded-md bg-ink-700 hover:bg-ink-600 border border-ink-500 text-sm font-semibold text-slate-200 transition">
-                    What it does
-                </a>
-            </div>
+            <h2 class="text-lg font-semibold mb-1 leading-snug">
+              <a href="${escapeAttr(a.url)}" target="_blank" rel="noopener noreferrer"
+                 onclick="markRead('${escapeAttr(a.id)}')"
+                 class="hover:text-indigo-400 transition-colors">
+                ${escapeHtml(a.title)}
+              </a>
+            </h2>
+            ${a.summary ? `<p class="text-sm text-gray-400 line-clamp-2">${escapeHtml(a.summary)}</p>` : ""}
+          </div>
         </div>
-    </div>
-</header>
+      </article>
+    `;
+  }).join("");
+}
 
-<section id="features" class="max-w-6xl mx-auto px-4 sm:px-6 py-20 border-t border-ink-600">
-    <div class="mb-12">
-        <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mb-3">What it does</h2>
-        <p class="text-slate-400 max-w-2xl">Aggregation, filtering, and triage — tuned for one-glance scanning of the AI landscape.</p>
-    </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div class="card bg-ink-800/60 border border-ink-600 rounded-xl p-5">
-            <div class="w-10 h-10 rounded-lg bg-indigo-500/15 border border-indigo-500/40 flex items-center justify-center mb-4 text-lg">📡</div>
-            <h3 class="font-semibold text-white mb-1.5">20 RSS feeds, auto-refreshed</h3>
-            <p class="text-sm text-slate-400 leading-relaxed">Company blogs, news outlets, and research labs — polled continuously with deduplication.</p>
-        </div>
-        <div class="card bg-ink-800/60 border border-ink-600 rounded-xl p-5">
-            <div class="w-10 h-10 rounded-lg bg-indigo-500/15 border border-indigo-500/40 flex items-center justify-center mb-4 text-lg">🎯</div>
-            <h3 class="font-semibold text-white mb-1.5">Filter by country &amp; type</h3>
-            <p class="text-sm text-slate-400 leading-relaxed">US vs China vs Global. Company vs News vs Research. Combine them, search within them.</p>
-        </div>
-        <div class="card bg-ink-800/60 border border-ink-600 rounded-xl p-5">
-            <div class="w-10 h-10 rounded-lg bg-indigo-500/15 border border-indigo-500/40 flex items-center justify-center mb-4 text-lg">⚡</div>
-            <h3 class="font-semibold text-white mb-1.5">"NEW" badge &lt; 1 hour</h3>
-            <p class="text-sm text-slate-400 leading-relaxed">Fresh articles pulse green so you never miss what just dropped.</p>
-        </div>
-        <div class="card bg-ink-800/60 border border-ink-600 rounded-xl p-5">
-            <div class="w-10 h-10 rounded-lg bg-indigo-500/15 border border-indigo-500/40 flex items-center justify-center mb-4 text-lg">✓</div>
-            <h3 class="font-semibold text-white mb-1.5">Read tracking</h3>
-            <p class="text-sm text-slate-400 leading-relaxed">One-click mark-as-read. Opens the article, fades the card. Inbox zero for AI news.</p>
-        </div>
-    </div>
-</section>
+function escapeHtml(str) {
+  return String(str).replace(/[&<>"']/g, c => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+  }[c]));
+}
+function escapeAttr(str) {
+  return escapeHtml(str);
+}
 
-<section class="max-w-6xl mx-auto px-4 sm:px-6 py-20 border-t border-ink-600">
-    <div class="mb-10">
-        <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mb-3">Screenshots</h2>
-        <p class="text-slate-400">Coming soon.</p>
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div class="aspect-[16/10] rounded-xl bg-ink-800/40 border border-dashed border-ink-500 flex items-center justify-center text-slate-500 text-sm">
-            📷 Dashboard screenshot
-        </div>
-        <div class="aspect-[16/10] rounded-xl bg-ink-800/40 border border-dashed border-ink-500 flex items-center justify-center text-slate-500 text-sm">
-            📷 Filter view screenshot
-        </div>
-    </div>
-</section>
+// ========== Actions ==========
+function markRead(id) {
+  readSet.add(id);
+  saveRead();
+  setTimeout(render, 100);
+}
 
-<section id="sources" class="max-w-6xl mx-auto px-4 sm:px-6 py-20 border-t border-ink-600">
-    <div class="mb-12">
-        <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mb-3">Sources</h2>
-        <p class="text-slate-400">20 feeds across three regions, rebalanced as the landscape shifts.</p>
-    </div>
+function markAllRead() {
+  articles.forEach(a => readSet.add(a.id));
+  saveRead();
+  render();
+}
 
-    <div class="space-y-8">
-        <div>
-            <div class="flex items-center gap-2 mb-4">
-                <span class="text-2xl">🇺🇸</span>
-                <h3 class="text-lg font-semibold text-white">United States <span class="text-slate-500 font-normal text-sm">· 14 feeds</span></h3>
-            </div>
-            <div class="flex flex-wrap gap-2">
-                <span class="source-pill px-3 py-1.5 rounded-lg bg-ink-800/60 border border-ink-600 text-sm text-slate-300">OpenAI News</span>
-                <span class="source-pill px-3 py-1.5 rounded-lg bg-ink-800/60 border border-ink-600 text-sm text-slate-300">Anthropic</span>
-                <span class="source-pill px-3 py-1.5 rounded-lg bg-ink-800/60 border border-ink-600 text-sm text-slate-300">Google DeepMind</span>
-                <span class="source-pill px-3 py-1.5 rounded-lg bg-ink-800/60 border border-ink-600 text-sm text-slate-300">Google Research</span>
-                <span class="source-pill px-3 py-1.5 rounded-lg bg-ink-800/60 border border-ink-600 text-sm text-slate-300">Meta AI</span>
-                <span class="source-pill px-3 py-1.5 rounded-lg bg-ink-800/60 border border-ink-600 text-sm text-slate-300">Microsoft AI</span>
-                <span class="source-pill px-3 py-1.5 rounded-lg bg-ink-800/60 border border-ink-600 text-sm text-slate-300">NVIDIA</span>
-                <span class="source-pill px-3 py-1.5 rounded-lg bg-ink-800/60 border border-ink-600 text-sm text-slate-300">Hugging Face</span>
-                <span class="source-pill px-3 py-1.5 rounded-lg bg-ink-800/60 border border-ink-600 text-sm text-slate-300">BAIR Berkeley</span>
-                <span class="source-pill px-3 py-1.5 rounded-lg bg-ink-800/60 border border-ink-600 text-sm text-slate-300">TechCrunch AI</span>
-                <span class="source-pill px-3 py-1.5 rounded-lg bg-ink-800/60 border border-ink-600 text-sm text-slate-300">The Verge AI</span>
-                <span class="source-pill px-3 py-1.5 rounded-lg bg-ink-800/60 border border-ink-600 text-sm text-slate-300">MIT Tech Review</span>
-                <span class="source-pill px-3 py-1.5 rounded-lg bg-ink-800/60 border border-ink-600 text-sm text-slate-300">Ars Technica AI</span>
-                <span class="source-pill px-3 py-1.5 rounded-lg bg-ink-800/60 border border-ink-600 text-sm text-slate-300">VentureBeat AI</span>
-            </div>
-        </div>
+function populateSourceFilter() {
+  const sel = document.getElementById("sourceFilter");
+  const current = sel.value;
+  const names = [...new Set(articles.map(a => a.source))].sort();
+  sel.innerHTML = '<option value="">All sources</option>' +
+    names.map(n => `<option value="${escapeAttr(n)}">${escapeHtml(n)}</option>`).join("");
+  if (names.includes(current)) sel.value = current;
+}
 
-        <div>
-            <div class="flex items-center gap-2 mb-4">
-                <span class="text-2xl">🇨🇳</span>
-                <h3 class="text-lg font-semibold text-white">China <span class="text-slate-500 font-normal text-sm">· 4 feeds</span></h3>
-            </div>
-            <div class="flex flex-wrap gap-2">
-                <span class="source-pill px-3 py-1.5 rounded-lg bg-ink-800/60 border border-ink-600 text-sm text-slate-300">South China Morning Post</span>
-                <span class="source-pill px-3 py-1.5 rounded-lg bg-ink-800/60 border border-ink-600 text-sm text-slate-300">TechNode</span>
-                <span class="source-pill px-3 py-1.5 rounded-lg bg-ink-800/60 border border-ink-600 text-sm text-slate-300">China Daily Tech</span>
-                <span class="source-pill px-3 py-1.5 rounded-lg bg-ink-800/60 border border-ink-600 text-sm text-slate-300">Caixin Global</span>
-            </div>
-        </div>
+// ========== Init ==========
+articles = loadArticles();
+populateSourceFilter();
+render();
 
-        <div>
-            <div class="flex items-center gap-2 mb-4">
-                <span class="text-2xl">🌐</span>
-                <h3 class="text-lg font-semibold text-white">Global research <span class="text-slate-500 font-normal text-sm">· 2 feeds</span></h3>
-            </div>
-            <div class="flex flex-wrap gap-2">
-                <span class="source-pill px-3 py-1.5 rounded-lg bg-ink-800/60 border border-ink-600 text-sm text-slate-300">arXiv cs.AI</span>
-                <span class="source-pill px-3 py-1.5 rounded-lg bg-ink-800/60 border border-ink-600 text-sm text-slate-300">arXiv cs.LG</span>
-            </div>
-        </div>
-    </div>
-</section>
+document.getElementById("refreshBtn").addEventListener("click", fetchAll);
+document.getElementById("markAllReadBtn").addEventListener("click", markAllRead);
+["countryFilter", "typeFilter", "sourceFilter", "showRead"].forEach(id =>
+  document.getElementById(id).addEventListener("change", render));
+document.getElementById("searchInput").addEventListener("input", render);
 
-<section id="stack" class="max-w-6xl mx-auto px-4 sm:px-6 py-20 border-t border-ink-600">
-    <div class="mb-10">
-        <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mb-3">Tech stack</h2>
-        <p class="text-slate-400">Boring, proven, boring on purpose.</p>
-    </div>
-    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
-        <div class="card bg-ink-800/60 border border-ink-600 rounded-lg px-4 py-5 text-center">
-            <div class="text-2xl mb-1.5">🐍</div>
-            <div class="text-sm font-semibold text-white">Python 3.13</div>
-        </div>
-        <div class="card bg-ink-800/60 border border-ink-600 rounded-lg px-4 py-5 text-center">
-            <div class="text-2xl mb-1.5">🎸</div>
-            <div class="text-sm font-semibold text-white">Django 6.0</div>
-        </div>
-        <div class="card bg-ink-800/60 border border-ink-600 rounded-lg px-4 py-5 text-center">
-            <div class="text-2xl mb-1.5">🐘</div>
-            <div class="text-sm font-semibold text-white">PostgreSQL</div>
-        </div>
-        <div class="card bg-ink-800/60 border border-ink-600 rounded-lg px-4 py-5 text-center">
-            <div class="text-2xl mb-1.5">🎨</div>
-            <div class="text-sm font-semibold text-white">TailwindCSS</div>
-        </div>
-        <div class="card bg-ink-800/60 border border-ink-600 rounded-lg px-4 py-5 text-center">
-            <div class="text-2xl mb-1.5">🦄</div>
-            <div class="text-sm font-semibold text-white">Gunicorn</div>
-        </div>
-    </div>
-</section>
-
-<section class="max-w-6xl mx-auto px-4 sm:px-6 py-20 border-t border-ink-600">
-    <div class="rounded-2xl border border-indigo-500/30 bg-gradient-to-br from-indigo-900/20 to-ink-800/40 p-10 sm:p-14 text-center">
-        <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mb-3">Read the code</h2>
-        <p class="text-slate-400 max-w-xl mx-auto mb-8">Open source. MIT licensed. Clone it, fork it, run your own regional mix.</p>
-        <a href="https://github.com/0xmortuex/ai-news-tracker" target="_blank" rel="noopener"
-           class="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-indigo-600 hover:bg-indigo-500 text-sm font-semibold text-white transition">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-            View on GitHub
-        </a>
-    </div>
-</section>
-
-<footer class="border-t border-ink-600 mt-10">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-8 flex items-center justify-between flex-wrap gap-3">
-        <p class="text-sm text-slate-500">
-            Built by <span class="text-slate-300 font-medium">Fadi</span> ·
-            <a href="https://github.com/0xmortuex" target="_blank" rel="noopener" class="text-indigo-400 hover:text-indigo-300">@0xmortuex</a>
-        </p>
-        <p class="text-xs text-slate-600">MIT License</p>
-    </div>
-</footer>
-
+// Auto-fetch on first load if no articles cached
+if (articles.length === 0) {
+  fetchAll();
+}
+</script>
 </body>
 </html>
