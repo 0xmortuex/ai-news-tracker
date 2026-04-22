@@ -3,425 +3,859 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI News Tracker</title>
-<script src="https://cdn.tailwindcss.com"></script>
+<title>AI News Tracker · 0xmortuex</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
+  :root {
+    --bg: #0a0a0a;
+    --bg-elev: #121212;
+    --bg-card: #161616;
+    --border: #232323;
+    --border-strong: #2e2e2e;
+    --text: #e8e3d8;
+    --text-dim: #8a8678;
+    --text-faint: #5a5750;
+    --accent: #d4a574;
+    --accent-dim: #6b5638;
+    --us: #5b8def;
+    --cn: #e2615b;
+    --other: #9b9b9b;
+    --ok: #6fbf73;
+    --err: #d4615b;
+    --serif: 'Fraunces', 'Times New Roman', serif;
+    --mono: 'JetBrains Mono', 'Consolas', monospace;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--bg); color: var(--text); font-family: var(--serif); }
   body {
-    background: #0f0f10;
-    color: #e5e5e5;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    min-height: 100vh;
+    background-image:
+      radial-gradient(circle at 20% -10%, rgba(212, 165, 116, 0.06), transparent 50%),
+      radial-gradient(circle at 90% 110%, rgba(91, 141, 239, 0.04), transparent 50%);
+    background-attachment: fixed;
   }
-  .card {
-    background: #1a1a1c;
-    border: 1px solid #2a2a2d;
-    transition: transform 0.15s ease, border-color 0.15s ease;
-  }
-  .card:hover {
-    border-color: #4a4a4d;
-    transform: translateY(-2px);
-  }
-  .badge-us    { background: #1e40af20; color: #60a5fa; border: 1px solid #1e40af40; }
-  .badge-cn    { background: #b91c1c20; color: #f87171; border: 1px solid #b91c1c40; }
-  .badge-other { background: #4b556320; color: #9ca3af; border: 1px solid #4b556340; }
-  .badge-company  { background: #15803d20; color: #4ade80; }
-  .badge-news     { background: #c2410c20; color: #fb923c; }
-  .badge-research { background: #7c3aed20; color: #a78bfa; }
-  .badge-new {
-    background: #ef4444;
-    color: white;
-    animation: pulse 2s infinite;
-  }
-  @keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.6; }
-  }
-  select, input {
-    background: #1a1a1c;
-    border: 1px solid #2a2a2d;
-    color: #e5e5e5;
-  }
-  select:focus, input:focus {
-    border-color: #6366f1;
-    outline: none;
-  }
-  .read { opacity: 0.5; }
-  .toast {
-    position: fixed;
-    top: 1rem;
-    right: 1rem;
-    background: #1a1a1c;
-    border: 1px solid #4ade80;
-    color: #4ade80;
-    padding: 0.75rem 1rem;
-    border-radius: 0.5rem;
-    z-index: 50;
-    transition: opacity 0.3s ease;
-  }
-  .toast.error {
-    border-color: #f87171;
-    color: #f87171;
-  }
-  .spinner {
-    display: inline-block;
-    width: 1rem;
-    height: 1rem;
-    border: 2px solid #6366f1;
-    border-top-color: transparent;
-    border-radius: 50%;
-    animation: spin 0.8s linear infinite;
-  }
-  @keyframes spin {
-    to { transform: rotate(360deg); }
-  }
-  header.sticky-header {
+
+  ::selection { background: var(--accent); color: var(--bg); }
+  ::-webkit-scrollbar { width: 8px; height: 8px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--accent-dim); }
+
+  /* === HEADER === */
+  header {
     position: sticky;
     top: 0;
-    z-index: 30;
-    background: #0f0f10;
-    padding-top: 1rem;
-    padding-bottom: 0.5rem;
-    margin-bottom: 1rem;
-    border-bottom: 1px solid #2a2a2d;
+    z-index: 50;
+    background: rgba(10, 10, 10, 0.85);
+    backdrop-filter: blur(20px) saturate(140%);
+    -webkit-backdrop-filter: blur(20px) saturate(140%);
+    border-bottom: 1px solid var(--border);
   }
+
+  .header-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 18px 32px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .brand {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+  }
+
+  .brand h1 {
+    font-family: var(--serif);
+    font-weight: 800;
+    font-size: 26px;
+    letter-spacing: -0.02em;
+    font-variation-settings: "opsz" 144;
+  }
+
+  .brand h1 span { color: var(--accent); font-style: italic; font-weight: 400; }
+
+  .brand .tag {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--text-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    padding: 3px 8px;
+    border: 1px solid var(--border-strong);
+    border-radius: 2px;
+  }
+
+  .header-stats {
+    margin-left: auto;
+    display: flex;
+    gap: 20px;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-dim);
+  }
+
+  .header-stats .stat strong {
+    color: var(--text);
+    font-family: var(--mono);
+    font-weight: 600;
+  }
+
+  .header-actions { display: flex; gap: 10px; }
+
+  button {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 9px 14px;
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--border-strong);
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+
+  button:hover { border-color: var(--accent); color: var(--accent); }
+  button.primary { background: var(--accent); color: var(--bg); border-color: var(--accent); font-weight: 600; }
+  button.primary:hover { background: transparent; color: var(--accent); }
+  button:disabled { opacity: 0.4; cursor: not-allowed; }
+
+  /* === LAYOUT === */
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 32px;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 32px;
+  }
+
+  @media (max-width: 900px) {
+    .container { grid-template-columns: 1fr; padding: 20px; }
+    .sidebar { position: static !important; }
+  }
+
+  /* === SIDEBAR === */
+  .sidebar {
+    position: sticky;
+    top: 90px;
+    align-self: start;
+    height: calc(100vh - 110px);
+    overflow-y: auto;
+    padding-right: 8px;
+  }
+
+  .filter-group {
+    margin-bottom: 28px;
+  }
+
+  .filter-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--text-faint);
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 11px;
+    margin: 0 4px 6px 0;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-dim);
+    cursor: pointer;
+    transition: all 0.12s ease;
+  }
+
+  .chip:hover { border-color: var(--accent-dim); color: var(--text); }
+  .chip.active { border-color: var(--accent); color: var(--accent); background: rgba(212, 165, 116, 0.06); }
+  .chip .dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--text-faint);
+  }
+  .chip[data-c="US"] .dot { background: var(--us); }
+  .chip[data-c="CN"] .dot { background: var(--cn); }
+  .chip[data-c="OTHER"] .dot { background: var(--other); }
+
+  /* Search */
+  .search {
+    width: 100%;
+    padding: 11px 14px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    color: var(--text);
+    font-family: var(--mono);
+    font-size: 12px;
+    outline: none;
+    transition: border-color 0.15s ease;
+  }
+  .search:focus { border-color: var(--accent); }
+  .search::placeholder { color: var(--text-faint); }
+
+  /* === SOURCE STATUS === */
+  .source-list {
+    font-family: var(--mono);
+    font-size: 10px;
+    line-height: 1.7;
+  }
+  .source-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 0;
+    color: var(--text-dim);
+    border-bottom: 1px dotted var(--border);
+  }
+  .source-row .name { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .source-row .count { color: var(--text-faint); }
+  .source-row .icon {
+    width: 10px; height: 10px; border-radius: 50%;
+    flex-shrink: 0;
+    background: var(--text-faint);
+  }
+  .source-row.ok .icon { background: var(--ok); box-shadow: 0 0 6px rgba(111, 191, 115, 0.4); }
+  .source-row.err .icon { background: var(--err); }
+  .source-row.loading .icon { background: var(--accent); animation: pulse 1.2s infinite; }
+  @keyframes pulse {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 1; }
+  }
+
+  /* === MAIN === */
+  .main h2 {
+    font-family: var(--serif);
+    font-weight: 800;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--text-faint);
+    margin-bottom: 18px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+  }
+  .main h2 .count {
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 400;
+    color: var(--text-dim);
+    margin-left: auto;
+  }
+
+  /* === ARTICLE CARDS === */
+  .articles { display: flex; flex-direction: column; gap: 18px; }
+
+  .article {
+    padding: 20px 24px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--border-strong);
+    border-radius: 2px;
+    transition: all 0.2s ease;
+    position: relative;
+  }
+  .article:hover {
+    border-color: var(--border-strong);
+    transform: translateY(-1px);
+    background: var(--bg-elev);
+  }
+  .article[data-c="US"] { border-left-color: var(--us); }
+  .article[data-c="CN"] { border-left-color: var(--cn); }
+  .article[data-c="OTHER"] { border-left-color: var(--other); }
+  .article.read { opacity: 0.45; }
+
+  .article-meta {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 10px;
+    font-family: var(--mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-faint);
+  }
+  .article-meta .source-name { color: var(--accent); font-weight: 500; }
+  .article-meta .country-pill {
+    padding: 2px 7px;
+    border: 1px solid currentColor;
+    border-radius: 2px;
+    font-size: 9px;
+  }
+  .article-meta .country-pill.US { color: var(--us); }
+  .article-meta .country-pill.CN { color: var(--cn); }
+  .article-meta .country-pill.OTHER { color: var(--other); }
+  .article-meta .new-badge {
+    background: var(--accent);
+    color: var(--bg);
+    padding: 2px 7px;
+    font-weight: 600;
+    border-radius: 2px;
+  }
+
+  .article h3 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 1.32;
+    letter-spacing: -0.01em;
+    margin-bottom: 8px;
+    font-variation-settings: "opsz" 30;
+  }
+  .article h3 a {
+    color: var(--text);
+    text-decoration: none;
+    background-image: linear-gradient(to right, var(--accent), var(--accent));
+    background-position: 0 100%;
+    background-size: 0% 1px;
+    background-repeat: no-repeat;
+    transition: background-size 0.3s ease, color 0.15s ease;
+    padding-bottom: 1px;
+  }
+  .article h3 a:hover {
+    color: var(--accent);
+    background-size: 100% 1px;
+  }
+  .article p {
+    color: var(--text-dim);
+    font-size: 14px;
+    line-height: 1.55;
+    font-family: var(--serif);
+    font-variation-settings: "opsz" 14;
+  }
+
+  /* === STATES === */
+  .empty, .loading-screen {
+    text-align: center;
+    padding: 80px 20px;
+    color: var(--text-dim);
+    font-family: var(--mono);
+    font-size: 13px;
+  }
+  .empty .big {
+    font-family: var(--serif);
+    font-size: 32px;
+    color: var(--text);
+    margin-bottom: 12px;
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  .toast {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: var(--bg-elev);
+    border: 1px solid var(--accent);
+    color: var(--text);
+    padding: 12px 24px;
+    font-family: var(--mono);
+    font-size: 12px;
+    border-radius: 2px;
+    z-index: 100;
+    transition: transform 0.3s ease;
+  }
+  .toast.show { transform: translateX(-50%) translateY(0); }
+  .toast.err { border-color: var(--err); }
+
+  /* Skeleton */
+  .skeleton {
+    background: linear-gradient(90deg, var(--bg-card) 0%, var(--bg-elev) 50%, var(--bg-card) 100%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: 2px;
+  }
+  @keyframes shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+
+  footer {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--text-faint);
+    font-family: var(--mono);
+    font-size: 10px;
+    border-top: 1px solid var(--border);
+    margin-top: 60px;
+  }
+  footer a { color: var(--accent); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
 </style>
 </head>
-<body class="min-h-screen">
-<div class="max-w-7xl mx-auto px-4 py-4">
-  <header class="sticky-header">
-    <div class="flex items-center justify-between mb-2 flex-wrap gap-2">
-      <div>
-        <h1 class="text-3xl font-bold">AI News Tracker</h1>
-        <p class="text-gray-400 text-sm">Latest AI developments from US, China, and global research</p>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="brand">
+      <h1>AI News<span>·</span>Tracker</h1>
+      <span class="tag">live · 0xmortuex</span>
+    </div>
+    <div class="header-stats">
+      <div class="stat"><strong id="stat-articles">0</strong> articles</div>
+      <div class="stat"><strong id="stat-sources">0/0</strong> sources</div>
+      <div class="stat"><strong id="stat-updated">—</strong></div>
+    </div>
+    <div class="header-actions">
+      <button id="btn-mark-read" title="Mark all read">Mark Read</button>
+      <button id="btn-refresh" class="primary">↻ Refresh</button>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+  <aside class="sidebar">
+    <div class="filter-group">
+      <div class="filter-label">Search</div>
+      <input class="search" id="q" placeholder="filter by title…" type="text">
+    </div>
+
+    <div class="filter-group">
+      <div class="filter-label">Region</div>
+      <div id="filter-country">
+        <span class="chip active" data-f="country" data-v="all">all</span>
+        <span class="chip" data-f="country" data-v="US" data-c="US"><span class="dot"></span>USA</span>
+        <span class="chip" data-f="country" data-v="CN" data-c="CN"><span class="dot"></span>China</span>
+        <span class="chip" data-f="country" data-v="OTHER" data-c="OTHER"><span class="dot"></span>Global</span>
       </div>
-      <div class="flex items-center gap-3">
-        <div class="text-sm text-gray-400">
-          <span id="unreadCount" class="text-white font-semibold">0</span> unread /
-          <span id="totalCount">0</span> total
-        </div>
-        <button id="refreshBtn"
-                class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded text-sm font-medium flex items-center gap-2">
-          <span id="refreshLabel">Refresh</span>
-        </button>
+    </div>
+
+    <div class="filter-group">
+      <div class="filter-label">Type</div>
+      <div id="filter-type">
+        <span class="chip active" data-f="type" data-v="all">all</span>
+        <span class="chip" data-f="type" data-v="COMPANY">company</span>
+        <span class="chip" data-f="type" data-v="NEWS">news</span>
+        <span class="chip" data-f="type" data-v="RESEARCH">research</span>
       </div>
     </div>
-  </header>
 
-  <div class="card rounded-lg p-4 mb-4">
-    <div class="grid grid-cols-1 md:grid-cols-5 gap-3">
-      <input type="text" id="searchInput" placeholder="Search titles..." class="rounded px-3 py-2 col-span-2">
-      <select id="countryFilter" class="rounded px-3 py-2">
-        <option value="">All countries</option>
-        <option value="US">🇺🇸 USA</option>
-        <option value="CN">🇨🇳 China</option>
-        <option value="OTHER">🌐 Global</option>
-      </select>
-      <select id="typeFilter" class="rounded px-3 py-2">
-        <option value="">All types</option>
-        <option value="COMPANY">Company blogs</option>
-        <option value="NEWS">News sites</option>
-        <option value="RESEARCH">Research</option>
-      </select>
-      <select id="sourceFilter" class="rounded px-3 py-2">
-        <option value="">All sources</option>
-      </select>
+    <div class="filter-group">
+      <div class="filter-label">Show Read</div>
+      <div id="filter-read">
+        <span class="chip active" data-f="read" data-v="unread">unread only</span>
+        <span class="chip" data-f="read" data-v="all">all</span>
+      </div>
     </div>
-    <div class="flex items-center justify-between mt-3">
-      <label class="flex items-center text-sm text-gray-400 cursor-pointer">
-        <input type="checkbox" id="showRead" class="mr-2"> Show read articles
-      </label>
-      <button id="markAllReadBtn" class="text-xs text-gray-400 hover:text-white">
-        Mark all as read
-      </button>
+
+    <div class="filter-group">
+      <div class="filter-label">Source Status</div>
+      <div class="source-list" id="source-status"></div>
     </div>
-  </div>
+  </aside>
 
-  <div id="loadingState" class="card rounded-lg p-12 text-center hidden">
-    <div class="spinner mx-auto mb-4"></div>
-    <p class="text-gray-400" id="loadingText">Fetching feeds...</p>
-  </div>
+  <main class="main">
+    <h2>The Feed <span class="count" id="visible-count">—</span></h2>
+    <div class="articles" id="articles">
+      <div class="loading-screen">Loading saved articles…</div>
+    </div>
+  </main>
 
-  <div id="emptyState" class="card rounded-lg p-12 text-center hidden">
-    <p class="text-gray-400 mb-4">No articles match your filters.</p>
-  </div>
-
-  <div id="articleList" class="space-y-3"></div>
 </div>
 
-<div id="toast" class="toast hidden"></div>
+<footer>
+  Built by <a href="https://github.com/0xmortuex" target="_blank" rel="noopener">0xmortuex</a> ·
+  <a href="https://github.com/0xmortuex/ai-news-tracker" target="_blank" rel="noopener">source</a> ·
+  no servers, no tracking, all in your browser
+</footer>
+
+<div class="toast" id="toast"></div>
 
 <script>
-// ========== Configuration ==========
+// =========================================================================
+// CONFIG
+// =========================================================================
 const SOURCES = [
-  { name: "OpenAI News",            url: "https://openai.com/news/rss.xml",                                              country: "US",    type: "COMPANY",  domain: "openai.com" },
-  { name: "Anthropic News",         url: "https://www.anthropic.com/news/feed.xml",                                       country: "US",    type: "COMPANY",  domain: "anthropic.com" },
-  { name: "Google DeepMind",        url: "https://deepmind.google/blog/rss.xml",                                          country: "US",    type: "COMPANY",  domain: "deepmind.google" },
-  { name: "Google Research",        url: "https://research.google/blog/rss/",                                             country: "US",    type: "COMPANY",  domain: "research.google" },
-  { name: "Meta AI",                url: "https://ai.meta.com/blog/rss/",                                                 country: "US",    type: "COMPANY",  domain: "ai.meta.com" },
-  { name: "Microsoft AI Blog",      url: "https://blogs.microsoft.com/ai/feed/",                                          country: "US",    type: "COMPANY",  domain: "microsoft.com" },
-  { name: "NVIDIA Blog",            url: "https://blogs.nvidia.com/feed/",                                                country: "US",    type: "COMPANY",  domain: "nvidia.com" },
-  { name: "Hugging Face Blog",      url: "https://huggingface.co/blog/feed.xml",                                          country: "US",    type: "COMPANY",  domain: "huggingface.co" },
-  { name: "BAIR Berkeley AI",       url: "https://bair.berkeley.edu/blog/feed.xml",                                       country: "US",    type: "RESEARCH", domain: "berkeley.edu" },
-  { name: "TechCrunch AI",          url: "https://techcrunch.com/category/artificial-intelligence/feed/",                 country: "US",    type: "NEWS",     domain: "techcrunch.com" },
-  { name: "The Verge AI",           url: "https://www.theverge.com/ai-artificial-intelligence/rss/index.xml",            country: "US",    type: "NEWS",     domain: "theverge.com" },
-  { name: "MIT Tech Review AI",     url: "https://www.technologyreview.com/topic/artificial-intelligence/feed",          country: "US",    type: "NEWS",     domain: "technologyreview.com" },
-  { name: "Ars Technica AI",        url: "https://arstechnica.com/ai/feed/",                                              country: "US",    type: "NEWS",     domain: "arstechnica.com" },
-  { name: "VentureBeat AI",         url: "https://venturebeat.com/category/ai/feed/",                                     country: "US",    type: "NEWS",     domain: "venturebeat.com" },
-  { name: "South China Morning Post", url: "https://www.scmp.com/rss/36/feed",                                            country: "CN",    type: "NEWS",     domain: "scmp.com" },
-  { name: "TechNode",               url: "https://technode.com/feed/",                                                    country: "CN",    type: "NEWS",     domain: "technode.com" },
-  { name: "China Daily Tech",       url: "https://www.chinadaily.com.cn/rss/business_rss.xml",                            country: "CN",    type: "NEWS",     domain: "chinadaily.com.cn" },
-  { name: "Caixin Global",          url: "https://www.caixinglobal.com/feed/",                                            country: "CN",    type: "NEWS",     domain: "caixinglobal.com" },
-  { name: "arXiv cs.AI",            url: "http://export.arxiv.org/rss/cs.AI",                                             country: "OTHER", type: "RESEARCH", domain: "arxiv.org" },
-  { name: "arXiv cs.LG",            url: "http://export.arxiv.org/rss/cs.LG",                                             country: "OTHER", type: "RESEARCH", domain: "arxiv.org" },
+  { name: "OpenAI",          url: "https://openai.com/news/rss.xml",                         country: "US",    type: "COMPANY" },
+  { name: "Anthropic",       url: "https://www.anthropic.com/news/feed.xml",                 country: "US",    type: "COMPANY" },
+  { name: "DeepMind",        url: "https://deepmind.google/blog/rss.xml",                    country: "US",    type: "COMPANY" },
+  { name: "Google Research", url: "https://research.google/blog/rss/",                       country: "US",    type: "COMPANY" },
+  { name: "Meta AI",         url: "https://ai.meta.com/blog/rss/",                           country: "US",    type: "COMPANY" },
+  { name: "Microsoft AI",    url: "https://blogs.microsoft.com/ai/feed/",                    country: "US",    type: "COMPANY" },
+  { name: "NVIDIA",          url: "https://blogs.nvidia.com/feed/",                          country: "US",    type: "COMPANY" },
+  { name: "Hugging Face",    url: "https://huggingface.co/blog/feed.xml",                    country: "US",    type: "COMPANY" },
+  { name: "BAIR Berkeley",   url: "https://bair.berkeley.edu/blog/feed.xml",                 country: "US",    type: "RESEARCH" },
+  { name: "TechCrunch AI",   url: "https://techcrunch.com/category/artificial-intelligence/feed/", country: "US", type: "NEWS" },
+  { name: "The Verge AI",    url: "https://www.theverge.com/ai-artificial-intelligence/rss/index.xml", country: "US", type: "NEWS" },
+  { name: "MIT Tech Review", url: "https://www.technologyreview.com/topic/artificial-intelligence/feed", country: "US", type: "NEWS" },
+  { name: "Ars Technica AI", url: "https://arstechnica.com/ai/feed/",                        country: "US",    type: "NEWS" },
+  { name: "VentureBeat AI",  url: "https://venturebeat.com/category/ai/feed/",               country: "US",    type: "NEWS" },
+  { name: "SCMP Tech",       url: "https://www.scmp.com/rss/36/feed",                        country: "CN",    type: "NEWS" },
+  { name: "TechNode",        url: "https://technode.com/feed/",                              country: "CN",    type: "NEWS" },
+  { name: "China Daily Tech",url: "https://www.chinadaily.com.cn/rss/business_rss.xml",      country: "CN",    type: "NEWS" },
+  { name: "Caixin Global",   url: "https://www.caixinglobal.com/feed/",                      country: "CN",    type: "NEWS" },
+  { name: "arXiv cs.AI",     url: "http://export.arxiv.org/rss/cs.AI",                       country: "OTHER", type: "RESEARCH" },
+  { name: "arXiv cs.LG",     url: "http://export.arxiv.org/rss/cs.LG",                       country: "OTHER", type: "RESEARCH" },
 ];
 
-// CORS proxy — turns RSS XML into JSON usable from the browser
-const RSS_PROXY = "https://api.rss2json.com/v1/api.json?rss_url=";
+// CORS proxy chain — try in order. If one fails, fall back to the next.
+const PROXIES = [
+  {
+    name: "rss2json",
+    url: (feed) => `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feed)}&count=30`,
+    parse: async (resp) => {
+      const j = await resp.json();
+      if (j.status !== "ok") throw new Error(j.message || "rss2json status not ok");
+      return (j.items || []).map(it => ({
+        title: it.title || "",
+        url: it.link || "",
+        summary: stripHTML(it.description || it.content || "").slice(0, 280),
+        date: it.pubDate ? new Date(it.pubDate) : new Date(),
+      }));
+    }
+  },
+  {
+    name: "allorigins",
+    url: (feed) => `https://api.allorigins.win/raw?url=${encodeURIComponent(feed)}`,
+    parse: async (resp) => {
+      const txt = await resp.text();
+      return parseRSSText(txt);
+    }
+  },
+  {
+    name: "corsproxy.io",
+    url: (feed) => `https://corsproxy.io/?${encodeURIComponent(feed)}`,
+    parse: async (resp) => {
+      const txt = await resp.text();
+      return parseRSSText(txt);
+    }
+  },
+];
 
-// ========== State ==========
-let articles = [];
-const STORAGE_KEY = "ai-news-articles-v1";
-const READ_KEY = "ai-news-read-v1";
-let readSet = new Set(JSON.parse(localStorage.getItem(READ_KEY) || "[]"));
+const STORAGE_KEY = "ai-news-articles-v2";
+const READ_KEY    = "ai-news-read-v2";
+const META_KEY    = "ai-news-meta-v2";
 
-// ========== Storage ==========
-function saveArticles() {
-  // Keep only last 1000 to avoid localStorage bloat
-  const trimmed = articles.slice(0, 1000);
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(trimmed));
-}
-function loadArticles() {
-  const raw = localStorage.getItem(STORAGE_KEY);
-  if (!raw) return [];
-  try { return JSON.parse(raw); } catch { return []; }
-}
-function saveRead() {
-  localStorage.setItem(READ_KEY, JSON.stringify([...readSet]));
-}
+// =========================================================================
+// STATE
+// =========================================================================
+let articles = loadJSON(STORAGE_KEY, []);
+let readSet  = new Set(loadJSON(READ_KEY, []));
+let meta     = loadJSON(META_KEY, { lastFetch: null, sourceStatus: {} });
+let filters  = { country: "all", type: "all", read: "unread", q: "" };
 
-// ========== Toast ==========
-function toast(msg, isError = false) {
-  const el = document.getElementById("toast");
-  el.textContent = msg;
-  el.className = "toast" + (isError ? " error" : "");
-  el.classList.remove("hidden");
-  setTimeout(() => el.classList.add("hidden"), 3500);
-}
-
-// ========== Fetch ==========
-async function fetchSource(source) {
+// =========================================================================
+// HELPERS
+// =========================================================================
+function loadJSON(key, fallback) {
   try {
-    const res = await fetch(RSS_PROXY + encodeURIComponent(source.url));
-    if (!res.ok) return [];
-    const data = await res.json();
-    if (data.status !== "ok" || !data.items) return [];
-    return data.items.map(item => ({
-      id: item.link,
-      title: item.title,
-      url: item.link,
-      summary: (item.description || "").replace(/<[^>]+>/g, "").slice(0, 400),
-      published: item.pubDate ? new Date(item.pubDate).getTime() : Date.now(),
-      source: source.name,
-      country: source.country,
-      type: source.type,
-      domain: source.domain,
+    const raw = localStorage.getItem(key);
+    return raw ? JSON.parse(raw) : fallback;
+  } catch { return fallback; }
+}
+function saveJSON(key, value) {
+  try { localStorage.setItem(key, JSON.stringify(value)); } catch (e) { console.warn(e); }
+}
+function stripHTML(s) {
+  const div = document.createElement("div");
+  div.innerHTML = s;
+  return (div.textContent || "").replace(/\s+/g, " ").trim();
+}
+function escapeHTML(s) {
+  return String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+}
+function relTime(d) {
+  const ms = Date.now() - d.getTime();
+  const m = Math.floor(ms / 60000);
+  if (m < 1) return "just now";
+  if (m < 60) return m + "m ago";
+  const h = Math.floor(m / 60);
+  if (h < 24) return h + "h ago";
+  const days = Math.floor(h / 24);
+  if (days < 30) return days + "d ago";
+  return d.toLocaleDateString();
+}
+function articleId(art) {
+  return art.url || (art.title + "::" + art.source);
+}
+
+function parseRSSText(text) {
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(text, "application/xml");
+  if (doc.querySelector("parsererror")) throw new Error("XML parse error");
+  // RSS 2.0
+  let items = Array.from(doc.querySelectorAll("item"));
+  if (items.length > 0) {
+    return items.slice(0, 30).map(it => ({
+      title:   (it.querySelector("title")?.textContent || "").trim(),
+      url:     (it.querySelector("link")?.textContent  || "").trim(),
+      summary: stripHTML(it.querySelector("description")?.textContent || "").slice(0, 280),
+      date:    it.querySelector("pubDate") ? new Date(it.querySelector("pubDate").textContent) : new Date(),
     }));
-  } catch (err) {
-    console.warn(`Failed to fetch ${source.name}:`, err);
-    return [];
   }
+  // Atom
+  items = Array.from(doc.querySelectorAll("entry"));
+  return items.slice(0, 30).map(it => ({
+    title:   (it.querySelector("title")?.textContent || "").trim(),
+    url:     (it.querySelector("link")?.getAttribute("href") || "").trim(),
+    summary: stripHTML(it.querySelector("summary")?.textContent || it.querySelector("content")?.textContent || "").slice(0, 280),
+    date:    it.querySelector("published") || it.querySelector("updated")
+             ? new Date((it.querySelector("published") || it.querySelector("updated")).textContent)
+             : new Date(),
+  }));
+}
+
+// =========================================================================
+// FETCH
+// =========================================================================
+async function fetchSource(src) {
+  setSourceStatus(src.name, "loading", "fetching…");
+  for (const proxy of PROXIES) {
+    try {
+      const url = proxy.url(src.url);
+      const ctrl = new AbortController();
+      const timer = setTimeout(() => ctrl.abort(), 12000);
+      const resp = await fetch(url, { signal: ctrl.signal });
+      clearTimeout(timer);
+      if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+      const items = await proxy.parse(resp);
+      const tagged = items.filter(i => i.url && i.title).map(i => ({
+        ...i,
+        date: i.date instanceof Date && !isNaN(i.date) ? i.date.toISOString() : new Date().toISOString(),
+        source: src.name,
+        country: src.country,
+        type: src.type,
+      }));
+      setSourceStatus(src.name, "ok", `${tagged.length} via ${proxy.name}`);
+      return tagged;
+    } catch (err) {
+      console.warn(`[${src.name}] ${proxy.name} failed:`, err.message);
+      // try next proxy
+    }
+  }
+  setSourceStatus(src.name, "err", "all proxies failed");
+  return [];
 }
 
 async function fetchAll() {
-  const btn = document.getElementById("refreshBtn");
-  const label = document.getElementById("refreshLabel");
+  const btn = document.getElementById("btn-refresh");
   btn.disabled = true;
-  label.innerHTML = '<span class="spinner"></span> Fetching...';
-  document.getElementById("loadingState").classList.remove("hidden");
-  document.getElementById("articleList").innerHTML = "";
+  btn.textContent = "↻ Fetching…";
 
-  let totalNew = 0;
-  let succeeded = 0;
-  const existingIds = new Set(articles.map(a => a.id));
+  // Reset all source status to loading
+  SOURCES.forEach(s => setSourceStatus(s.name, "loading", "queued"));
 
-  // Fetch in parallel batches of 5 to avoid overwhelming the proxy
-  for (let i = 0; i < SOURCES.length; i += 5) {
-    const batch = SOURCES.slice(i, i + 5);
-    document.getElementById("loadingText").textContent =
-      `Fetching ${i + batch.length}/${SOURCES.length} sources...`;
-    const results = await Promise.all(batch.map(fetchSource));
-    results.forEach(items => {
-      if (items.length > 0) succeeded++;
-      items.forEach(item => {
-        if (!existingIds.has(item.id)) {
-          articles.push(item);
-          existingIds.add(item.id);
-          totalNew++;
-        }
+  // Run in parallel, max 4 at a time so we don't hammer proxies
+  const queue = [...SOURCES];
+  const allNew = [];
+  const concurrency = 4;
+  let okCount = 0;
+
+  async function worker() {
+    while (queue.length) {
+      const src = queue.shift();
+      const items = await fetchSource(src);
+      if (items.length > 0) okCount++;
+      allNew.push(...items);
+      updateSourceStatusUI();
+    }
+  }
+
+  await Promise.all(Array(concurrency).fill(0).map(worker));
+
+  // Dedupe by URL, merge with existing
+  const existingByUrl = new Map(articles.map(a => [a.url, a]));
+  let added = 0;
+  for (const item of allNew) {
+    if (!existingByUrl.has(item.url)) {
+      existingByUrl.set(item.url, item);
+      added++;
+    }
+  }
+  articles = Array.from(existingByUrl.values())
+    .sort((a, b) => new Date(b.date) - new Date(a.date))
+    .slice(0, 1000);
+
+  meta.lastFetch = new Date().toISOString();
+  saveJSON(STORAGE_KEY, articles);
+  saveJSON(META_KEY, meta);
+
+  btn.disabled = false;
+  btn.textContent = "↻ Refresh";
+
+  toast(`+${added} new · ${okCount}/${SOURCES.length} sources ok`);
+  render();
+}
+
+// =========================================================================
+// UI: SOURCE STATUS
+// =========================================================================
+function setSourceStatus(name, state, message) {
+  meta.sourceStatus[name] = { state, message, at: new Date().toISOString() };
+}
+
+function updateSourceStatusUI() {
+  const el = document.getElementById("source-status");
+  if (!el) return;
+  el.innerHTML = SOURCES.map(s => {
+    const st = meta.sourceStatus[s.name] || { state: "", message: "—" };
+    return `<div class="source-row ${st.state}">
+      <span class="icon"></span>
+      <span class="name">${escapeHTML(s.name)}</span>
+      <span class="count">${escapeHTML(st.message || "")}</span>
+    </div>`;
+  }).join("");
+
+  const ok = SOURCES.filter(s => meta.sourceStatus[s.name]?.state === "ok").length;
+  document.getElementById("stat-sources").textContent = `${ok}/${SOURCES.length}`;
+}
+
+// =========================================================================
+// UI: ARTICLES
+// =========================================================================
+function render() {
+  // Filter
+  let visible = articles.filter(a => {
+    if (filters.country !== "all" && a.country !== filters.country) return false;
+    if (filters.type    !== "all" && a.type    !== filters.type)    return false;
+    if (filters.read === "unread" && readSet.has(articleId(a)))     return false;
+    if (filters.q && !a.title.toLowerCase().includes(filters.q.toLowerCase())) return false;
+    return true;
+  });
+
+  visible = visible.slice(0, 200);
+
+  const el = document.getElementById("articles");
+  if (visible.length === 0) {
+    if (articles.length === 0) {
+      el.innerHTML = `<div class="empty">
+        <div class="big">empty.</div>
+        <div>Press <strong>Refresh</strong> in the header to fetch articles.</div>
+      </div>`;
+    } else {
+      el.innerHTML = `<div class="empty">
+        <div class="big">no matches.</div>
+        <div>Try adjusting filters or clearing search.</div>
+      </div>`;
+    }
+  } else {
+    el.innerHTML = visible.map(a => {
+      const id = articleId(a);
+      const isRead = readSet.has(id);
+      const isNew = (Date.now() - new Date(a.date).getTime()) < 60 * 60 * 1000;
+      return `
+        <article class="article ${isRead ? 'read' : ''}" data-c="${a.country}">
+          <div class="article-meta">
+            <span class="country-pill ${a.country}">${a.country === "OTHER" ? "GLOBAL" : a.country}</span>
+            <span class="source-name">${escapeHTML(a.source)}</span>
+            <span>${relTime(new Date(a.date))}</span>
+            ${isNew ? `<span class="new-badge">NEW</span>` : ""}
+          </div>
+          <h3>
+            <a href="${escapeHTML(a.url)}" target="_blank" rel="noopener" data-id="${escapeHTML(id)}">
+              ${escapeHTML(a.title)}
+            </a>
+          </h3>
+          ${a.summary ? `<p>${escapeHTML(a.summary)}</p>` : ""}
+        </article>`;
+    }).join("");
+
+    el.querySelectorAll("a[data-id]").forEach(a => {
+      a.addEventListener("click", () => {
+        readSet.add(a.dataset.id);
+        saveJSON(READ_KEY, [...readSet]);
+        a.closest(".article").classList.add("read");
+        updateStats();
       });
     });
   }
 
-  // Sort by date desc
-  articles.sort((a, b) => b.published - a.published);
-  saveArticles();
-  document.getElementById("loadingState").classList.add("hidden");
-  populateSourceFilter();
-  render();
+  // Stats
+  document.getElementById("visible-count").textContent = `${visible.length} of ${articles.length}`;
+  updateStats();
+  updateSourceStatusUI();
+}
 
-  btn.disabled = false;
-  label.textContent = "Refresh";
-
-  if (succeeded === 0) {
-    toast("Could not fetch any feeds. Try again later.", true);
+function updateStats() {
+  const unread = articles.filter(a => !readSet.has(articleId(a))).length;
+  document.getElementById("stat-articles").textContent = `${unread}/${articles.length}`;
+  if (meta.lastFetch) {
+    document.getElementById("stat-updated").textContent = relTime(new Date(meta.lastFetch));
   } else {
-    toast(`Fetched ${totalNew} new articles from ${succeeded}/${SOURCES.length} sources`);
+    document.getElementById("stat-updated").textContent = "never";
   }
 }
 
-// ========== Render ==========
-function timeAgo(ms) {
-  const diff = Date.now() - ms;
-  const min = Math.floor(diff / 60000);
-  if (min < 1) return "just now";
-  if (min < 60) return `${min}m ago`;
-  const hr = Math.floor(min / 60);
-  if (hr < 24) return `${hr}h ago`;
-  const day = Math.floor(hr / 24);
-  if (day < 30) return `${day}d ago`;
-  return new Date(ms).toLocaleDateString();
-}
+// =========================================================================
+// FILTERS
+// =========================================================================
+document.querySelectorAll(".chip[data-f]").forEach(chip => {
+  chip.addEventListener("click", () => {
+    const f = chip.dataset.f, v = chip.dataset.v;
+    document.querySelectorAll(`.chip[data-f="${f}"]`).forEach(c => c.classList.remove("active"));
+    chip.classList.add("active");
+    filters[f] = v;
+    render();
+  });
+});
 
-function flag(country) {
-  if (country === "US") return "🇺🇸 USA";
-  if (country === "CN") return "🇨🇳 China";
-  return "🌐 Global";
-}
-
-function typeLabel(type) {
-  return { COMPANY: "Company", NEWS: "News", RESEARCH: "Research" }[type] || type;
-}
-
-function favicon(domain) {
-  return `https://www.google.com/s2/favicons?domain=${domain}&sz=32`;
-}
-
-function render() {
-  const country = document.getElementById("countryFilter").value;
-  const type = document.getElementById("typeFilter").value;
-  const source = document.getElementById("sourceFilter").value;
-  const query = document.getElementById("searchInput").value.toLowerCase().trim();
-  const showRead = document.getElementById("showRead").checked;
-
-  let filtered = articles;
-  if (country) filtered = filtered.filter(a => a.country === country);
-  if (type) filtered = filtered.filter(a => a.type === type);
-  if (source) filtered = filtered.filter(a => a.source === source);
-  if (query) filtered = filtered.filter(a =>
-    a.title.toLowerCase().includes(query) || (a.summary || "").toLowerCase().includes(query)
-  );
-  if (!showRead) filtered = filtered.filter(a => !readSet.has(a.id));
-
-  filtered = filtered.slice(0, 200);
-
-  document.getElementById("totalCount").textContent = articles.length;
-  document.getElementById("unreadCount").textContent =
-    articles.filter(a => !readSet.has(a.id)).length;
-
-  const list = document.getElementById("articleList");
-  const empty = document.getElementById("emptyState");
-
-  if (filtered.length === 0) {
-    list.innerHTML = "";
-    empty.classList.remove("hidden");
-    if (articles.length === 0) {
-      empty.innerHTML = `<p class="text-gray-400 mb-4">No articles yet.</p>
-        <p class="text-sm text-gray-500">Click <strong>Refresh</strong> to fetch the latest AI news.</p>`;
-    } else {
-      empty.innerHTML = `<p class="text-gray-400">No articles match your filters.</p>`;
-    }
-    return;
-  }
-  empty.classList.add("hidden");
-
-  const oneHourAgo = Date.now() - 60 * 60 * 1000;
-
-  list.innerHTML = filtered.map(a => {
-    const isRead = readSet.has(a.id);
-    const isNew = a.published > oneHourAgo;
-    return `
-      <article class="card rounded-lg p-4 ${isRead ? "read" : ""}">
-        <div class="flex items-start gap-3">
-          <img src="${favicon(a.domain)}" alt="" class="w-5 h-5 mt-1 flex-shrink-0 rounded" loading="lazy"
-               onerror="this.style.display='none'">
-          <div class="flex-1 min-w-0">
-            <div class="flex items-center gap-2 mb-2 flex-wrap">
-              <span class="text-xs px-2 py-0.5 rounded badge-${a.country.toLowerCase()}">${flag(a.country)}</span>
-              <span class="text-xs px-2 py-0.5 rounded badge-${a.type.toLowerCase()}">${typeLabel(a.type)}</span>
-              <span class="text-xs text-gray-500">${escapeHtml(a.source)}</span>
-              <span class="text-xs text-gray-500">· ${timeAgo(a.published)}</span>
-              ${isNew ? '<span class="text-xs px-2 py-0.5 rounded badge-new font-bold">NEW</span>' : ""}
-            </div>
-            <h2 class="text-lg font-semibold mb-1 leading-snug">
-              <a href="${escapeAttr(a.url)}" target="_blank" rel="noopener noreferrer"
-                 onclick="markRead('${escapeAttr(a.id)}')"
-                 class="hover:text-indigo-400 transition-colors">
-                ${escapeHtml(a.title)}
-              </a>
-            </h2>
-            ${a.summary ? `<p class="text-sm text-gray-400 line-clamp-2">${escapeHtml(a.summary)}</p>` : ""}
-          </div>
-        </div>
-      </article>
-    `;
-  }).join("");
-}
-
-function escapeHtml(str) {
-  return String(str).replace(/[&<>"']/g, c => ({
-    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
-  }[c]));
-}
-function escapeAttr(str) {
-  return escapeHtml(str);
-}
-
-// ========== Actions ==========
-function markRead(id) {
-  readSet.add(id);
-  saveRead();
-  setTimeout(render, 100);
-}
-
-function markAllRead() {
-  articles.forEach(a => readSet.add(a.id));
-  saveRead();
+document.getElementById("q").addEventListener("input", (e) => {
+  filters.q = e.target.value.trim();
   render();
+});
+
+document.getElementById("btn-refresh").addEventListener("click", fetchAll);
+
+document.getElementById("btn-mark-read").addEventListener("click", () => {
+  articles.forEach(a => readSet.add(articleId(a)));
+  saveJSON(READ_KEY, [...readSet]);
+  toast(`Marked ${articles.length} read`);
+  render();
+});
+
+// =========================================================================
+// TOAST
+// =========================================================================
+let toastTimer;
+function toast(msg, isErr = false) {
+  const t = document.getElementById("toast");
+  t.textContent = msg;
+  t.classList.toggle("err", isErr);
+  t.classList.add("show");
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove("show"), 3500);
 }
 
-function populateSourceFilter() {
-  const sel = document.getElementById("sourceFilter");
-  const current = sel.value;
-  const names = [...new Set(articles.map(a => a.source))].sort();
-  sel.innerHTML = '<option value="">All sources</option>' +
-    names.map(n => `<option value="${escapeAttr(n)}">${escapeHtml(n)}</option>`).join("");
-  if (names.includes(current)) sel.value = current;
-}
+// =========================================================================
+// INIT
+// =========================================================================
+(function init() {
+  // Pre-populate source status from saved meta if present
+  SOURCES.forEach(s => {
+    if (!meta.sourceStatus[s.name]) {
+      meta.sourceStatus[s.name] = { state: "", message: "not yet fetched" };
+    }
+  });
 
-// ========== Init ==========
-articles = loadArticles();
-populateSourceFilter();
-render();
+  render();
 
-document.getElementById("refreshBtn").addEventListener("click", fetchAll);
-document.getElementById("markAllReadBtn").addEventListener("click", markAllRead);
-["countryFilter", "typeFilter", "sourceFilter", "showRead"].forEach(id =>
-  document.getElementById(id).addEventListener("change", render));
-document.getElementById("searchInput").addEventListener("input", render);
-
-// Auto-fetch on first load if no articles cached
-if (articles.length === 0) {
-  fetchAll();
-}
+  // Auto-fetch on first visit (no articles yet)
+  if (articles.length === 0) {
+    setTimeout(() => fetchAll(), 400);
+  }
+})();
 </script>
+
 </body>
 </html>
