@@ -512,34 +512,24 @@ const SOURCES = [
 // CORS proxy chain — try in order. If one fails, fall back to the next.
 const PROXIES = [
   {
-    name: "rss2json",
-    url: (feed) => `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feed)}&count=30`,
-    parse: async (resp) => {
-      const j = await resp.json();
-      if (j.status !== "ok") throw new Error(j.message || "rss2json status not ok");
-      return (j.items || []).map(it => ({
-        title: it.title || "",
-        url: it.link || "",
-        summary: stripHTML(it.description || it.content || "").slice(0, 280),
-        date: it.pubDate ? new Date(it.pubDate) : new Date(),
-      }));
-    }
+    name: "own-worker",
+    url: (feed) => `https://ai-news-cors.mortuexhavoc.workers.dev/?url=${encodeURIComponent(feed)}`,
+    parse: async (resp) => parseRSSText(await resp.text()),
+  },
+  {
+    name: "codetabs",
+    url: (feed) => `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(feed)}`,
+    parse: async (resp) => parseRSSText(await resp.text()),
+  },
+  {
+    name: "killcors",
+    url: (feed) => `https://proxy.killcors.com/?url=${encodeURIComponent(feed)}`,
+    parse: async (resp) => parseRSSText(await resp.text()),
   },
   {
     name: "allorigins",
     url: (feed) => `https://api.allorigins.win/raw?url=${encodeURIComponent(feed)}`,
-    parse: async (resp) => {
-      const txt = await resp.text();
-      return parseRSSText(txt);
-    }
-  },
-  {
-    name: "corsproxy.io",
-    url: (feed) => `https://corsproxy.io/?${encodeURIComponent(feed)}`,
-    parse: async (resp) => {
-      const txt = await resp.text();
-      return parseRSSText(txt);
-    }
+    parse: async (resp) => parseRSSText(await resp.text()),
   },
 ];
 
