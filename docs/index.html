@@ -1168,7 +1168,7 @@ async function activateGuidesTab() {
   await fetchGuides(false);
 }
 
-function setActiveTab(tab) {
+function setActiveTab(tab, opts = {}) {
   activeTab = tab;
   document.querySelectorAll(".tab").forEach(t => {
     t.classList.toggle("active", t.dataset.tab === tab);
@@ -1177,10 +1177,26 @@ function setActiveTab(tab) {
   if (tab === "guides") {
     activateGuidesTab();
   }
+  if (opts.updateHash !== false) {
+    const hash = tab === "guides" ? "#/guides" : "#/news";
+    if (window.location.hash !== hash) {
+      if (opts.replace) history.replaceState(null, "", hash);
+      else history.pushState(null, "", hash);
+    }
+  }
+}
+
+function tabFromHash() {
+  return window.location.hash === "#/guides" ? "guides" : "news";
 }
 
 document.querySelectorAll(".tab").forEach(t => {
   t.addEventListener("click", () => setActiveTab(t.dataset.tab));
+});
+
+window.addEventListener("hashchange", () => {
+  // Sync tab UI to hash without re-pushing history
+  setActiveTab(tabFromHash(), { updateHash: false });
 });
 
 // Make Refresh button context-aware: refresh whichever tab is active
@@ -1203,6 +1219,14 @@ document.getElementById("btn-refresh").addEventListener("click", () => {
   });
 
   render();
+
+  // Honor hash-based deep link on first load (use replace to avoid extra history entry)
+  const initialTab = tabFromHash();
+  if (initialTab === "guides") {
+    setActiveTab("guides", { replace: true });
+  } else {
+    setActiveTab("news", { replace: true });
+  }
 
   // Auto-fetch on first visit (no articles yet)
   if (articles.length === 0) {
