@@ -1036,8 +1036,23 @@ function parseGitHub(json, src) {
   }));
 }
 
+function parseTrendshift(json, src) {
+  return (json.items || []).map(it => ({
+    title: it.title,
+    url: it.url,
+    source: src.name,
+    category: src.category,
+    dateISO: it.dateISO || new Date().toISOString(),
+    excerpt: it.excerpt || "trending on Trendshift",
+  }));
+}
+
 async function fetchGuideSource(src) {
-  for (const proxy of PROXIES) {
+  // Sources with `direct: true` are already CORS-friendly endpoints (e.g. our own worker)
+  // and should be hit directly without going through the proxy chain.
+  const proxyChain = src.direct ? [{ name: "direct", url: u => u, parse: null }] : PROXIES;
+
+  for (const proxy of proxyChain) {
     try {
       const url = proxy.url(src.url);
       const ctrl = new AbortController();
@@ -1048,8 +1063,9 @@ async function fetchGuideSource(src) {
 
       if (src.type === "json") {
         const json = await resp.json();
-        if (src.parser === "hn")     return parseHN(json, src);
-        if (src.parser === "github") return parseGitHub(json, src);
+        if (src.parser === "hn")         return parseHN(json, src);
+        if (src.parser === "github")     return parseGitHub(json, src);
+        if (src.parser === "trendshift") return parseTrendshift(json, src);
         return [];
       }
       // RSS

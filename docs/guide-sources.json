@@ -6,6 +6,7 @@
     {"name": "Latent Space",     "url": "https://www.latent.space/feed",                      "type": "rss",  "category": "newsletter"},
     {"name": "Ben's Bites",      "url": "https://www.bensbites.com/feed",                     "type": "rss",  "category": "newsletter"},
     {"name": "Hacker News AI",   "url": "https://hn.algolia.com/api/v1/search?tags=story&query=claude+OR+gpt+OR+anthropic+OR+openai&numericFilters=points>20", "type": "json", "parser": "hn", "category": "community"},
-    {"name": "GitHub LLM Repos", "url": "https://api.github.com/search/repositories?q=topic:llm+pushed:>2026-04-01&sort=stars&order=desc&per_page=15", "type": "json", "parser": "github", "category": "repo"}
+    {"name": "GitHub LLM Repos", "url": "https://api.github.com/search/repositories?q=topic:llm+pushed:>2026-04-01&sort=stars&order=desc&per_page=15", "type": "json", "parser": "github", "category": "repo"},
+    {"name": "Trendshift",       "url": "https://ai-news-cors.mortuexhavoc.workers.dev/trendshift", "type": "json", "parser": "trendshift", "category": "repo", "direct": true}
   ]
 }
