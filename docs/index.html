@@ -402,6 +402,148 @@
   }
   footer a { color: var(--accent); text-decoration: none; }
   footer a:hover { text-decoration: underline; }
+
+  /* === TABS === */
+  .tabs {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: flex;
+    gap: 4px;
+    border-bottom: 1px solid var(--border);
+  }
+  .tab {
+    font-family: var(--mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    padding: 14px 20px;
+    color: var(--text-dim);
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    margin-bottom: -1px;
+  }
+  .tab:hover { color: var(--text); border-bottom-color: var(--accent-dim); }
+  .tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+  /* === GUIDES LAYOUT === */
+  body.tab-guides .sidebar { display: none; }
+  body.tab-guides .container { grid-template-columns: 1fr; }
+  body.tab-guides .main-news { display: none; }
+  body:not(.tab-guides) .main-guides { display: none; }
+
+  .guides-section { margin-bottom: 48px; }
+  .guides-section h2 { /* uses existing .main h2 styles */ }
+
+  /* Featured cards */
+  .featured-list { display: flex; flex-direction: column; gap: 20px; }
+  .featured-card {
+    position: relative;
+    padding: 28px 30px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 2px;
+    transition: all 0.2s ease;
+  }
+  .featured-card:hover {
+    transform: translateY(-1px);
+    background: var(--bg-elev);
+    border-color: var(--border-strong);
+    border-left-color: var(--accent);
+  }
+  .featured-badge {
+    position: absolute;
+    top: 14px;
+    right: 16px;
+    font-family: var(--mono);
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--accent);
+    padding: 3px 8px;
+    border: 1px solid var(--accent-dim);
+    border-radius: 2px;
+    background: rgba(212, 165, 116, 0.06);
+  }
+  .featured-card h3 {
+    font-family: var(--serif);
+    font-weight: 800;
+    font-size: 22px;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    margin-bottom: 6px;
+    margin-right: 100px;
+    font-variation-settings: "opsz" 30;
+  }
+  .featured-card .author {
+    font-family: var(--mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-faint);
+    margin-bottom: 12px;
+  }
+  .featured-card .author strong { color: var(--accent); font-weight: 500; }
+  .featured-card p {
+    color: var(--text-dim);
+    font-size: 14px;
+    line-height: 1.55;
+    font-family: var(--serif);
+    font-variation-settings: "opsz" 14;
+    margin-bottom: 14px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .featured-card .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 14px;
+  }
+  .pill {
+    font-family: var(--mono);
+    font-size: 10px;
+    text-transform: lowercase;
+    letter-spacing: 0.04em;
+    color: var(--text-dim);
+    padding: 3px 9px;
+    background: rgba(212, 165, 116, 0.04);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+  }
+  .featured-card .open-link {
+    font-family: var(--mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent-dim);
+    padding-bottom: 1px;
+  }
+  .featured-card .open-link:hover { border-bottom-color: var(--accent); }
+
+  /* Latest cards (reuse .article style with category chip) */
+  .article .category-chip {
+    padding: 2px 7px;
+    border: 1px solid var(--border-strong);
+    border-radius: 12px;
+    font-size: 9px;
+    color: var(--text-dim);
+  }
+
+  @media (max-width: 900px) {
+    .tabs { padding: 0 20px; }
+    .featured-card { padding: 22px 20px; }
+    .featured-card h3 { margin-right: 0; font-size: 19px; }
+    .featured-badge { position: static; display: inline-block; margin-bottom: 10px; }
+  }
 </style>
 </head>
 <body>
@@ -423,6 +565,11 @@
     </div>
   </div>
 </header>
+
+<nav class="tabs" role="tablist">
+  <button class="tab active" data-tab="news" role="tab">News</button>
+  <button class="tab" data-tab="guides" role="tab">Guides</button>
+</nav>
 
 <div class="container">
 
@@ -466,11 +613,27 @@
     </div>
   </aside>
 
-  <main class="main">
+  <main class="main main-news">
     <h2>The Feed <span class="count" id="visible-count">—</span></h2>
     <div class="articles" id="articles">
       <div class="loading-screen">Loading saved articles…</div>
     </div>
+  </main>
+
+  <main class="main main-guides">
+    <section class="guides-section">
+      <h2>✨ Featured Guides <span class="count" id="featured-count">—</span></h2>
+      <div class="featured-list" id="featured-list">
+        <div class="loading-screen">Loading featured guides…</div>
+      </div>
+    </section>
+
+    <section class="guides-section">
+      <h2>🔥 Latest <span class="count" id="latest-count">—</span></h2>
+      <div class="articles" id="latest-list">
+        <div class="loading-screen">Loading latest guides…</div>
+      </div>
+    </section>
   </main>
 
 </div>
@@ -822,6 +985,211 @@ function toast(msg, isErr = false) {
   clearTimeout(toastTimer);
   toastTimer = setTimeout(() => t.classList.remove("show"), 3500);
 }
+
+// =========================================================================
+// GUIDES TAB
+// =========================================================================
+const GUIDES_KEY      = "ai-guides-items-v1";
+const GUIDES_META_KEY = "ai-guides-meta-v1";
+const GUIDES_TTL_MS   = 60 * 60 * 1000; // 1 hour
+
+let guidesItems = loadJSON(GUIDES_KEY, []);
+let guidesMeta  = loadJSON(GUIDES_META_KEY, { lastFetch: 0 });
+let activeTab   = "news";
+
+async function loadFeatured() {
+  try {
+    const r = await fetch("featured-guides.json", { cache: "no-cache" });
+    const data = await r.json();
+    return data.guides || [];
+  } catch (e) {
+    console.warn("[featured] load failed:", e.message);
+    return [];
+  }
+}
+
+async function loadGuideSources() {
+  const r = await fetch("guide-sources.json", { cache: "no-cache" });
+  const data = await r.json();
+  return data.sources || [];
+}
+
+function parseHN(json, src) {
+  return (json.hits || []).map(h => ({
+    title: h.title || h.story_title || "(untitled)",
+    url: h.url || `https://news.ycombinator.com/item?id=${h.objectID}`,
+    source: src.name,
+    category: src.category,
+    dateISO: h.created_at || new Date().toISOString(),
+    excerpt: `${h.points || 0} points · ${h.num_comments || 0} comments`,
+  }));
+}
+
+function parseGitHub(json, src) {
+  return (json.items || []).map(r => ({
+    title: r.full_name,
+    url: r.html_url,
+    source: src.name,
+    category: src.category,
+    dateISO: r.pushed_at || r.updated_at || new Date().toISOString(),
+    excerpt: `★ ${r.stargazers_count.toLocaleString()} · ${(r.description || "no description").slice(0, 200)}`,
+  }));
+}
+
+async function fetchGuideSource(src) {
+  for (const proxy of PROXIES) {
+    try {
+      const url = proxy.url(src.url);
+      const ctrl = new AbortController();
+      const timer = setTimeout(() => ctrl.abort(), 12000);
+      const resp = await fetch(url, { signal: ctrl.signal });
+      clearTimeout(timer);
+      if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+
+      if (src.type === "json") {
+        const json = await resp.json();
+        if (src.parser === "hn")     return parseHN(json, src);
+        if (src.parser === "github") return parseGitHub(json, src);
+        return [];
+      }
+      // RSS
+      const items = parseRSSText(await resp.text());
+      return items.filter(i => i.url && i.title).map(i => ({
+        title: i.title,
+        url: i.url,
+        source: src.name,
+        category: src.category,
+        dateISO: (i.date instanceof Date && !isNaN(i.date)) ? i.date.toISOString() : new Date().toISOString(),
+        excerpt: (i.summary || "").slice(0, 200),
+      }));
+    } catch (err) {
+      console.warn(`[guides:${src.name}] ${proxy.name} failed:`, err.message);
+    }
+  }
+  return [];
+}
+
+async function fetchGuides(force = false) {
+  const fresh = (Date.now() - (guidesMeta.lastFetch || 0)) < GUIDES_TTL_MS;
+  if (!force && fresh && guidesItems.length > 0) {
+    renderLatest();
+    return;
+  }
+
+  const btn = document.getElementById("btn-refresh");
+  if (activeTab === "guides") {
+    btn.disabled = true;
+    btn.textContent = "↻ Fetching…";
+  }
+
+  const sources = await loadGuideSources();
+  const list = document.getElementById("latest-list");
+  list.innerHTML = `<div class="loading-screen">Fetching guides from ${sources.length} sources…</div>`;
+
+
+  const all = [];
+  await Promise.all(sources.map(async src => {
+    const items = await fetchGuideSource(src);
+    all.push(...items);
+  }));
+
+  // Dedupe by URL, sort by date desc, top 30
+  const byUrl = new Map();
+  for (const it of all) {
+    if (!byUrl.has(it.url)) byUrl.set(it.url, it);
+  }
+  guidesItems = Array.from(byUrl.values())
+    .sort((a, b) => new Date(b.dateISO) - new Date(a.dateISO))
+    .slice(0, 30);
+
+  guidesMeta.lastFetch = Date.now();
+  saveJSON(GUIDES_KEY, guidesItems);
+  saveJSON(GUIDES_META_KEY, guidesMeta);
+
+  if (activeTab === "guides") {
+    btn.disabled = false;
+    btn.textContent = "↻ Refresh";
+  }
+  renderLatest();
+}
+
+function renderFeatured(featured) {
+  const el = document.getElementById("featured-list");
+  document.getElementById("featured-count").textContent = `${featured.length} curated`;
+  if (!featured.length) {
+    el.innerHTML = `<div class="empty"><div class="big">no featured guides yet.</div></div>`;
+    return;
+  }
+  el.innerHTML = featured.map(g => `
+    <article class="featured-card">
+      <span class="featured-badge">Featured</span>
+      <h3>${escapeHTML(g.title)}</h3>
+      <div class="author">by <strong>${escapeHTML(g.author || "—")}</strong> · added ${escapeHTML(g.dateAdded || "")}</div>
+      <p>${escapeHTML(g.description || "")}</p>
+      <div class="tags">
+        ${(g.tags || []).map(t => `<span class="pill">#${escapeHTML(t)}</span>`).join("")}
+      </div>
+      <a class="open-link" href="${escapeHTML(g.url)}" target="_blank" rel="noopener">Open →</a>
+    </article>
+  `).join("");
+}
+
+function renderLatest() {
+  const el = document.getElementById("latest-list");
+  document.getElementById("latest-count").textContent = `${guidesItems.length} items`;
+  if (!guidesItems.length) {
+    el.innerHTML = `<div class="empty">
+      <div class="big">empty.</div>
+      <div>Press <strong>Refresh</strong> to fetch guides.</div>
+    </div>`;
+    return;
+  }
+  el.innerHTML = guidesItems.map(it => `
+    <article class="article">
+      <div class="article-meta">
+        <span class="source-name">${escapeHTML(it.source)}</span>
+        <span class="category-chip">${escapeHTML(it.category)}</span>
+        <span>${relTime(new Date(it.dateISO))}</span>
+      </div>
+      <h3>
+        <a href="${escapeHTML(it.url)}" target="_blank" rel="noopener">${escapeHTML(it.title)}</a>
+      </h3>
+      ${it.excerpt ? `<p>${escapeHTML(it.excerpt)}</p>` : ""}
+    </article>
+  `).join("");
+}
+
+async function activateGuidesTab() {
+  // Render featured fresh from JSON each time (cheap)
+  const featured = await loadFeatured();
+  renderFeatured(featured);
+  // Render whatever cached items we have, then refresh if stale
+  renderLatest();
+  await fetchGuides(false);
+}
+
+function setActiveTab(tab) {
+  activeTab = tab;
+  document.querySelectorAll(".tab").forEach(t => {
+    t.classList.toggle("active", t.dataset.tab === tab);
+  });
+  document.body.classList.toggle("tab-guides", tab === "guides");
+  if (tab === "guides") {
+    activateGuidesTab();
+  }
+}
+
+document.querySelectorAll(".tab").forEach(t => {
+  t.addEventListener("click", () => setActiveTab(t.dataset.tab));
+});
+
+// Make Refresh button context-aware: refresh whichever tab is active
+const _origRefreshHandler = document.getElementById("btn-refresh");
+_origRefreshHandler.replaceWith(_origRefreshHandler.cloneNode(true));
+document.getElementById("btn-refresh").addEventListener("click", () => {
+  if (activeTab === "guides") fetchGuides(true);
+  else fetchAll();
+});
 
 // =========================================================================
 // INIT

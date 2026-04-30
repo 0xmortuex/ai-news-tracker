@@ -1,0 +1,13 @@
+{
+  "guides": [
+    {
+      "title": "Build Your AI Brain — Export & Visualize ChatGPT/Claude History",
+      "author": "Alex Freedman",
+      "url": "https://alex2learn.com",
+      "description": "Use Claude Code + Obsidian to organize all your AI conversations into a searchable, linked knowledge vault. Covers ChatGPT/Claude exports, vault setup, and Claude Code-driven tagging.",
+      "tags": ["obsidian", "claude-code", "knowledge-management", "workflow"],
+      "dateAdded": "2026-04-29",
+      "type": "guide"
+    }
+  ]
+}
