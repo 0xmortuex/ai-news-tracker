@@ -538,6 +538,50 @@
     color: var(--text-dim);
   }
 
+  /* Source badges — colour-coded by source type */
+  .source-badge {
+    padding: 2px 8px;
+    border: 1px solid currentColor;
+    border-radius: 12px;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: var(--text-dim);
+    white-space: nowrap;
+  }
+  .source-badge[data-cat="Blogs"]            { color: var(--accent); }
+  .source-badge[data-cat="YouTube"]          { color: #e2615b; }
+  .source-badge[data-cat="GitHub"]           { color: #e8e3d8; }
+  .source-badge[data-cat="Reddit"]           { color: #e8915b; }
+  .source-badge[data-cat="HN"]               { color: #f0883e; }
+  .source-badge[data-cat="Bluesky"]          { color: #5b8def; }
+  .source-badge[data-cat="Dev Communities"]  { color: #8a7fe0; }
+
+  /* Guides controls bar — source filter + sort dropdowns */
+  .guides-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+  .guides-select {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    padding: 9px 12px;
+    background: var(--bg-card);
+    color: var(--text);
+    border: 1px solid var(--border-strong);
+    border-radius: 2px;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.15s ease;
+  }
+  .guides-select:hover, .guides-select:focus { border-color: var(--accent); }
+  .guides-select label { color: var(--text-faint); }
+
+  .load-more-wrap { text-align: center; margin-top: 24px; }
+
   @media (max-width: 900px) {
     .tabs { padding: 0 20px; }
     .featured-card { padding: 22px 20px; }
@@ -630,8 +674,28 @@
 
     <section class="guides-section">
       <h2>🔥 Latest <span class="count" id="latest-count">—</span></h2>
+      <div class="guides-controls">
+        <select class="guides-select" id="guides-filter" aria-label="Filter guides by source">
+          <option value="all">All sources</option>
+          <option value="Blogs">Blogs</option>
+          <option value="YouTube">YouTube</option>
+          <option value="GitHub">GitHub</option>
+          <option value="Reddit">Reddit</option>
+          <option value="HN">HN</option>
+          <option value="Bluesky">Bluesky</option>
+          <option value="Dev Communities">Dev Communities</option>
+        </select>
+        <select class="guides-select" id="guides-sort" aria-label="Sort guides">
+          <option value="recent">Most recent</option>
+          <option value="discussed">Most discussed</option>
+          <option value="alpha">Alphabetical by source</option>
+        </select>
+      </div>
       <div class="articles" id="latest-list">
         <div class="loading-screen">Loading latest guides…</div>
+      </div>
+      <div class="load-more-wrap" id="guides-loadmore-wrap" style="display:none;">
+        <button id="guides-loadmore">Load more</button>
       </div>
     </section>
   </main>
@@ -646,6 +710,7 @@
 
 <div class="toast" id="toast"></div>
 
+<script src="guides-lib.js"></script>
 <script>
 // =========================================================================
 // CONFIG
@@ -997,6 +1062,12 @@ let guidesItems = loadJSON(GUIDES_KEY, []);
 let guidesMeta  = loadJSON(GUIDES_META_KEY, { lastFetch: 0 });
 let activeTab   = "news";
 
+// Guides tab view state — source filter, sort mode, pagination.
+const GUIDES_PAGE_SIZE = 50;
+let guidesFilter = "all";
+let guidesSort   = "recent";
+let guidesPage   = 1;
+
 async function loadFeatured() {
   try {
     const r = await fetch("featured-guides.json", { cache: "no-cache" });
@@ -1047,16 +1118,36 @@ function parseTrendshift(json, src) {
   }));
 }
 
+// The /guides/aggregate worker route already returns normalized items
+// (title, url, source, published, summary, tags) merged from blogs,
+// YouTube, GitHub and Bluesky. Each item keeps its OWN `source` so the
+// badges and source filter can tell them apart.
+function parseAggregate(json, src) {
+  return (json.items || []).map(it => ({
+    title: it.title,
+    url: it.url,
+    source: it.source || src.name,
+    category: src.category,
+    dateISO: it.published || it.dateISO || new Date().toISOString(),
+    excerpt: it.summary || it.excerpt || "",
+    tags: it.tags || [],
+  }));
+}
+
 async function fetchGuideSource(src) {
   // Sources with `direct: true` are already CORS-friendly endpoints (e.g. our own worker)
   // and should be hit directly without going through the proxy chain.
   const proxyChain = src.direct ? [{ name: "direct", url: u => u, parse: null }] : PROXIES;
 
+  // Our own worker routes (direct) — especially /guides/aggregate — fan out
+  // to many upstream feeds, so give them a longer timeout than plain proxies.
+  const timeoutMs = src.direct ? 25000 : 12000;
+
   for (const proxy of proxyChain) {
     try {
       const url = proxy.url(src.url);
       const ctrl = new AbortController();
-      const timer = setTimeout(() => ctrl.abort(), 12000);
+      const timer = setTimeout(() => ctrl.abort(), timeoutMs);
       const resp = await fetch(url, { signal: ctrl.signal });
       clearTimeout(timer);
       if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
@@ -1066,6 +1157,7 @@ async function fetchGuideSource(src) {
         if (src.parser === "hn")         return parseHN(json, src);
         if (src.parser === "github")     return parseGitHub(json, src);
         if (src.parser === "trendshift") return parseTrendshift(json, src);
+        if (src.parser === "aggregate")  return parseAggregate(json, src);
         return [];
       }
       // RSS
@@ -1109,14 +1201,10 @@ async function fetchGuides(force = false) {
     all.push(...items);
   }));
 
-  // Dedupe by URL, sort by date desc, top 30
-  const byUrl = new Map();
-  for (const it of all) {
-    if (!byUrl.has(it.url)) byUrl.set(it.url, it);
-  }
-  guidesItems = Array.from(byUrl.values())
-    .sort((a, b) => new Date(b.dateISO) - new Date(a.dateISO))
-    .slice(0, 30);
+  // Dedupe by URL, sort newest-first, cap at 150 (the aggregate route alone
+  // can return 100 items, plus Reddit/HN/newsletters/Trendshift on top).
+  guidesItems = GuidesLib.aggregateGuides(all, 150);
+  guidesPage = 1;
 
   guidesMeta.lastFetch = Date.now();
   saveJSON(GUIDES_KEY, guidesItems);
@@ -1152,27 +1240,53 @@ function renderFeatured(featured) {
 
 function renderLatest() {
   const el = document.getElementById("latest-list");
-  document.getElementById("latest-count").textContent = `${guidesItems.length} items`;
-  if (!guidesItems.length) {
-    el.innerHTML = `<div class="empty">
-      <div class="big">empty.</div>
-      <div>Press <strong>Refresh</strong> to fetch guides.</div>
-    </div>`;
+  const wrap = document.getElementById("guides-loadmore-wrap");
+
+  // Apply the Source filter dropdown + the Sort dropdown.
+  let view = guidesItems.filter(it => GuidesLib.matchesFilter(it, guidesFilter));
+  view = GuidesLib.sortGuides(view, guidesSort);
+
+  const total = view.length;
+  const totalAll = guidesItems.length;
+  document.getElementById("latest-count").textContent =
+    guidesFilter === "all"
+      ? `${total} item${total === 1 ? "" : "s"}`
+      : `${total} of ${totalAll}`;
+
+  if (!total) {
+    wrap.style.display = "none";
+    el.innerHTML = totalAll
+      ? `<div class="empty"><div class="big">no matches.</div><div>No guides from this source — try “All sources”.</div></div>`
+      : `<div class="empty"><div class="big">empty.</div><div>Press <strong>Refresh</strong> to fetch guides.</div></div>`;
     return;
   }
-  el.innerHTML = guidesItems.map(it => `
+
+  // Pagination — render only the first guidesPage pages, "Load more" reveals the rest.
+  const shown = view.slice(0, guidesPage * GUIDES_PAGE_SIZE);
+  el.innerHTML = shown.map(it => {
+    const cat   = GuidesLib.sourceCategory(it);
+    const badge = GuidesLib.sourceBadge(it);
+    return `
     <article class="article">
       <div class="article-meta">
+        <span class="source-badge" data-cat="${escapeHTML(cat)}">${escapeHTML(badge)}</span>
         <span class="source-name">${escapeHTML(it.source)}</span>
-        <span class="category-chip">${escapeHTML(it.category)}</span>
         <span>${relTime(new Date(it.dateISO))}</span>
       </div>
       <h3>
         <a href="${escapeHTML(it.url)}" target="_blank" rel="noopener">${escapeHTML(it.title)}</a>
       </h3>
       ${it.excerpt ? `<p>${escapeHTML(it.excerpt)}</p>` : ""}
-    </article>
-  `).join("");
+    </article>`;
+  }).join("");
+
+  const remaining = total - shown.length;
+  if (remaining > 0) {
+    wrap.style.display = "block";
+    document.getElementById("guides-loadmore").textContent = `Load more (${remaining})`;
+  } else {
+    wrap.style.display = "none";
+  }
 }
 
 async function activateGuidesTab() {
@@ -1221,6 +1335,22 @@ _origRefreshHandler.replaceWith(_origRefreshHandler.cloneNode(true));
 document.getElementById("btn-refresh").addEventListener("click", () => {
   if (activeTab === "guides") fetchGuides(true);
   else fetchAll();
+});
+
+// Guides controls — Source filter, Sort, and Load more.
+document.getElementById("guides-filter").addEventListener("change", (e) => {
+  guidesFilter = e.target.value;
+  guidesPage = 1;
+  renderLatest();
+});
+document.getElementById("guides-sort").addEventListener("change", (e) => {
+  guidesSort = e.target.value;
+  guidesPage = 1;
+  renderLatest();
+});
+document.getElementById("guides-loadmore").addEventListener("click", () => {
+  guidesPage++;
+  renderLatest();
 });
 
 // =========================================================================

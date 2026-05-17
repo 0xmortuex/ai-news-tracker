@@ -1,12 +1,19 @@
 {
   "sources": [
-    {"name": "r/ClaudeAI Top",   "url": "https://www.reddit.com/r/ClaudeAI/top.rss?t=week",   "type": "rss",  "category": "community"},
-    {"name": "r/ChatGPTPro Top", "url": "https://www.reddit.com/r/ChatGPTPro/top.rss?t=week", "type": "rss",  "category": "community"},
-    {"name": "r/LocalLLaMA Top", "url": "https://www.reddit.com/r/LocalLLaMA/top.rss?t=week", "type": "rss",  "category": "community"},
-    {"name": "Latent Space",     "url": "https://www.latent.space/feed",                      "type": "rss",  "category": "newsletter"},
-    {"name": "Ben's Bites",      "url": "https://www.bensbites.com/feed",                     "type": "rss",  "category": "newsletter"},
-    {"name": "Hacker News AI",   "url": "https://hn.algolia.com/api/v1/search?tags=story&query=claude+OR+gpt+OR+anthropic+OR+openai&numericFilters=points>20", "type": "json", "parser": "hn", "category": "community"},
-    {"name": "GitHub LLM Repos", "url": "https://api.github.com/search/repositories?q=topic:llm+pushed:>2026-04-01&sort=stars&order=desc&per_page=15", "type": "json", "parser": "github", "category": "repo"},
+    {"name": "Guides Aggregate", "url": "https://ai-news-cors.mortuexhavoc.workers.dev/guides/aggregate", "type": "json", "parser": "aggregate", "category": "guide", "direct": true},
+
+    {"name": "r/ClaudeAI Top",      "url": "https://www.reddit.com/r/ClaudeAI/top.rss?t=week",      "type": "rss", "category": "community"},
+    {"name": "r/ChatGPTPro Top",    "url": "https://www.reddit.com/r/ChatGPTPro/top.rss?t=week",    "type": "rss", "category": "community"},
+    {"name": "r/LocalLLaMA Top",    "url": "https://www.reddit.com/r/LocalLLaMA/top.rss?t=week",    "type": "rss", "category": "community"},
+    {"name": "r/MachineLearning Top","url": "https://www.reddit.com/r/MachineLearning/top.rss?t=week","type": "rss", "category": "community"},
+    {"name": "r/StableDiffusion Top","url": "https://www.reddit.com/r/StableDiffusion/top.rss?t=week","type": "rss", "category": "community"},
+    {"name": "r/AIAgents Top",      "url": "https://www.reddit.com/r/AIAgents/top.rss?t=week",      "type": "rss", "category": "community"},
+
+    {"name": "Latent Space",     "url": "https://www.latent.space/feed",  "type": "rss", "category": "newsletter"},
+    {"name": "Ben's Bites",      "url": "https://www.bensbites.com/feed", "type": "rss", "category": "newsletter"},
+
+    {"name": "Hacker News AI",   "url": "https://hn.algolia.com/api/v1/search?tags=story&query=claude+OR+gpt+OR+anthropic+OR+openai&numericFilters=points>5", "type": "json", "parser": "hn", "category": "community"},
+
     {"name": "Trendshift",       "url": "https://ai-news-cors.mortuexhavoc.workers.dev/trendshift", "type": "json", "parser": "trendshift", "category": "repo", "direct": true}
   ]
 }
