@@ -582,6 +582,80 @@
 
   .load-more-wrap { text-align: center; margin-top: 24px; }
 
+  /* === "Explain for me" personalization (hidden unless ?personalize= matches) === */
+  .personalize { margin-top: 14px; }
+  .btn-explain, .personalize-toggle {
+    font-family: var(--mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    background: rgba(212, 165, 116, 0.06);
+    border: 1px solid var(--accent-dim);
+    border-radius: 2px;
+    padding: 6px 11px;
+    cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease;
+  }
+  .btn-explain:hover, .personalize-toggle:hover {
+    background: rgba(212, 165, 116, 0.12);
+    border-color: var(--accent);
+  }
+  .btn-explain:disabled { opacity: 0.5; cursor: default; }
+  .personalize-panel {
+    margin-top: 12px;
+    padding: 16px 18px;
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 2px;
+  }
+  .personalize-panel[hidden] { display: none; }
+  .pz-row { margin-bottom: 12px; }
+  .pz-row:last-child { margin-bottom: 0; }
+  .pz-q {
+    font-family: var(--mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    margin-bottom: 4px;
+  }
+  .pz-a {
+    font-family: var(--serif);
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--text-dim);
+  }
+  .pz-foot {
+    margin-top: 14px;
+    padding-top: 10px;
+    border-top: 1px solid var(--border);
+    font-family: var(--mono);
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-faint);
+  }
+  .pz-loading {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-dim);
+  }
+  .pz-spinner {
+    width: 12px;
+    height: 12px;
+    border: 2px solid var(--border-strong);
+    border-top-color: var(--accent);
+    border-radius: 50%;
+    animation: pz-spin 0.7s linear infinite;
+  }
+  @keyframes pz-spin { to { transform: rotate(360deg); } }
+  .pz-error { font-family: var(--mono); font-size: 11px; color: #e2615b; }
+
   @media (max-width: 900px) {
     .tabs { padding: 0 20px; }
     .featured-card { padding: 22px 20px; }
@@ -1068,6 +1142,83 @@ let guidesFilter = "all";
 let guidesSort   = "recent";
 let guidesPage   = 1;
 
+// --- Personalization ("Explain for me") -----------------------------------
+// Hidden feature: visible only when the page is opened with a ?personalize=
+// value whose SHA-256 matches PERSONALIZE_HASH. The secret itself is NEVER in
+// this file — only its hash is. The secret rides in the URL and is forwarded
+// to the worker, which alone holds the private context profile.
+const WORKER_BASE = "https://ai-news-cors.mortuexhavoc.workers.dev";
+const PERSONALIZE_HASH = "d7424451926989c0f9f10491224caa69e1e119c84ecb447a08850d8b680f07ea";
+const PERSONALIZE_CACHE_KEY    = "ai-personalize-cache-v1";
+const PERSONALIZE_EXPANDED_KEY = "ai-personalize-expanded-v1";
+
+let personalizeEnabled = false;
+let personalizeSecret  = null;
+const personalizeCache    = loadJSON(PERSONALIZE_CACHE_KEY, {});           // url -> result JSON
+const personalizeExpanded = new Set(loadJSON(PERSONALIZE_EXPANDED_KEY, [])); // urls kept expanded
+
+// Render the 5 answered questions for one guide.
+function renderPersonalizeAnswers(result) {
+  const a = (result && result.answers) || {};
+  const rows = GuidesLib.PERSONALIZE_QUESTIONS.map(q => `
+    <div class="pz-row">
+      <div class="pz-q">${escapeHTML(q.label)}</div>
+      <div class="pz-a">${escapeHTML(a[q.key] || "—")}</div>
+    </div>`).join("");
+  return `${rows}<div class="pz-foot">personalized · ${escapeHTML(result.model || "LLM")}</div>`;
+}
+
+// Per-card personalize block: an "Explain for me" button, or — when a result
+// is already cached — a collapsible panel (collapsed by default; expanded only
+// if the user has chosen to keep it open, persisted in localStorage).
+function renderPersonalizeBlock(url) {
+  const cached = personalizeCache[url];
+  if (cached) {
+    const open = personalizeExpanded.has(url);
+    return `
+    <div class="personalize" data-url="${escapeHTML(url)}">
+      <button class="personalize-toggle" type="button" aria-expanded="${open}">
+        ${open ? "▾" : "▸"} Explain for me
+      </button>
+      <div class="personalize-panel"${open ? "" : " hidden"}>${renderPersonalizeAnswers(cached)}</div>
+    </div>`;
+  }
+  return `
+    <div class="personalize" data-url="${escapeHTML(url)}">
+      <button class="btn-explain" type="button">✨ Explain for me</button>
+      <div class="personalize-panel" hidden></div>
+    </div>`;
+}
+
+// Fetch + render personalization for one guide card.
+async function runPersonalize(url, wrap) {
+  const panel = wrap.querySelector(".personalize-panel");
+  const btn   = wrap.querySelector(".btn-explain");
+  if (btn) btn.disabled = true;
+  panel.hidden = false;
+  panel.innerHTML = `<div class="pz-loading"><span class="pz-spinner"></span> Thinking…</div>`;
+  try {
+    const result = await GuidesLib.fetchPersonalization(WORKER_BASE, url, personalizeSecret);
+    personalizeCache[url] = result;
+    saveJSON(PERSONALIZE_CACHE_KEY, personalizeCache);
+    panel.innerHTML = renderPersonalizeAnswers(result);
+    // Swap the one-shot button for a collapse toggle. The panel stays visible
+    // now so the result is seen, but expansion is NOT persisted — it defaults
+    // back to collapsed on the next render unless the user toggles it open.
+    if (btn) {
+      const toggle = document.createElement("button");
+      toggle.className = "personalize-toggle";
+      toggle.type = "button";
+      toggle.setAttribute("aria-expanded", "true");
+      toggle.textContent = "▾ Explain for me";
+      btn.replaceWith(toggle);
+    }
+  } catch (err) {
+    panel.innerHTML = `<div class="pz-error">Couldn't generate: ${escapeHTML(err.message)}</div>`;
+    if (btn) btn.disabled = false;
+  }
+}
+
 async function loadFeatured() {
   try {
     const r = await fetch("featured-guides.json", { cache: "no-cache" });
@@ -1257,7 +1408,7 @@ function renderLatest() {
     const cat   = GuidesLib.sourceCategory(it);
     const badge = GuidesLib.sourceBadge(it);
     return `
-    <article class="article">
+    <article class="article" data-url="${escapeHTML(it.url)}">
       <div class="article-meta">
         <span class="source-badge" data-cat="${escapeHTML(cat)}">${escapeHTML(badge)}</span>
         <span class="source-name">${escapeHTML(it.source)}</span>
@@ -1267,6 +1418,7 @@ function renderLatest() {
         <a href="${escapeHTML(it.url)}" target="_blank" rel="noopener">${escapeHTML(it.title)}</a>
       </h3>
       ${it.excerpt ? `<p>${escapeHTML(it.excerpt)}</p>` : ""}
+      ${personalizeEnabled ? renderPersonalizeBlock(it.url) : ""}
     </article>`;
   }).join("");
 
@@ -1307,7 +1459,9 @@ function setActiveTab(tab, opts = {}) {
 }
 
 function tabFromHash() {
-  return window.location.hash === "#/guides" ? "guides" : "news";
+  // startsWith, not ===, so a query suffix (#/guides?personalize=…) still
+  // resolves to the Guides tab.
+  return window.location.hash.indexOf("#/guides") === 0 ? "guides" : "news";
 }
 
 document.querySelectorAll(".tab").forEach(t => {
@@ -1342,6 +1496,47 @@ document.getElementById("guides-loadmore").addEventListener("click", () => {
   guidesPage++;
   renderLatest();
 });
+
+// Personalize — delegated clicks for the "Explain for me" button and the
+// per-card collapse toggle. Delegation survives renderLatest() rebuilds.
+document.getElementById("latest-list").addEventListener("click", (e) => {
+  const explain = e.target.closest(".btn-explain");
+  if (explain) {
+    const wrap = explain.closest(".personalize");
+    if (wrap) runPersonalize(wrap.dataset.url, wrap);
+    return;
+  }
+  const toggle = e.target.closest(".personalize-toggle");
+  if (toggle) {
+    const wrap  = toggle.closest(".personalize");
+    const panel = wrap.querySelector(".personalize-panel");
+    const open  = panel.hidden; // currently hidden -> about to open
+    panel.hidden = !open;
+    toggle.setAttribute("aria-expanded", String(open));
+    toggle.textContent = (open ? "▾" : "▸") + " Explain for me";
+    if (open) personalizeExpanded.add(wrap.dataset.url);
+    else      personalizeExpanded.delete(wrap.dataset.url);
+    saveJSON(PERSONALIZE_EXPANDED_KEY, Array.from(personalizeExpanded));
+  }
+});
+
+// Personalize gate — async (the SHA-256 check uses WebCrypto). With no
+// matching ?personalize= param the feature stays completely hidden; other
+// visitors see no personalization UI at all.
+(async function personalizeInit() {
+  const param = GuidesLib.extractPersonalizeParam(location.search, location.hash);
+  if (!param) return;
+  try {
+    const digest = await GuidesLib.sha256Hex(param);
+    if (digest === PERSONALIZE_HASH) {
+      personalizeEnabled = true;
+      personalizeSecret  = param;
+      if (activeTab === "guides") renderLatest();
+    }
+  } catch (err) {
+    console.warn("[personalize] gate check failed:", err.message);
+  }
+})();
 
 // =========================================================================
 // INIT

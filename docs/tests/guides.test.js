@@ -134,3 +134,87 @@ test("aggregateGuides defaults to a 150-item cap", () => {
   }));
   assert.equal(GuidesLib.aggregateGuides(many).length, 150);
 });
+
+// =========================================================================
+// PERSONALIZATION ("Explain for me")
+// =========================================================================
+test("personalize is hidden by default — no ?personalize= param means null", () => {
+  assert.equal(GuidesLib.extractPersonalizeParam("", "#/guides"), null);
+  assert.equal(GuidesLib.extractPersonalizeParam("", ""), null);
+  assert.equal(GuidesLib.extractPersonalizeParam("?q=ai", "#/news"), null);
+});
+
+test("personalize shows when ?personalize= is present (hash or search)", () => {
+  assert.equal(
+    GuidesLib.extractPersonalizeParam("", "#/guides?personalize=fadi-abc"),
+    "fadi-abc"
+  );
+  assert.equal(
+    GuidesLib.extractPersonalizeParam("?personalize=fadi-xyz", "#/guides"),
+    "fadi-xyz"
+  );
+});
+
+test("sha256Hex gates on the secret — matching value vs wrong value", async () => {
+  const digest = await GuidesLib.sha256Hex("fadi-abc");
+  assert.match(digest, /^[0-9a-f]{64}$/);
+  assert.equal(await GuidesLib.sha256Hex("fadi-abc"), digest, "same input -> same hash");
+  assert.notEqual(await GuidesLib.sha256Hex("fadi-wrong"), digest, "wrong input -> no match");
+});
+
+test("buildPersonalizeUrl encodes the guide URL and secret", () => {
+  assert.equal(
+    GuidesLib.buildPersonalizeUrl("https://w.dev/", "https://example.com/a?b=1", "fadi-s"),
+    "https://w.dev/personalize?url=https%3A%2F%2Fexample.com%2Fa%3Fb%3D1&secret=fadi-s"
+  );
+});
+
+test("button click triggers a fetch (mocked) and resolves the JSON answers", async () => {
+  let requestedUrl = null;
+  const mockFetch = async (url) => {
+    requestedUrl = url;
+    return {
+      ok: true,
+      status: 200,
+      json: async () => ({
+        url: "https://example.com/a",
+        model: "google/gemini-flash-1.5",
+        answers: { what_is_this: "a tool" },
+      }),
+    };
+  };
+  const out = await GuidesLib.fetchPersonalization(
+    "https://w.dev",
+    "https://example.com/a",
+    "fadi-s",
+    mockFetch
+  );
+  assert.ok(requestedUrl.startsWith("https://w.dev/personalize?url="), "fetch was called");
+  assert.ok(requestedUrl.includes("secret=fadi-s"), "secret is forwarded");
+  assert.equal(out.answers.what_is_this, "a tool");
+});
+
+test("fetchPersonalization surfaces the worker error on a non-OK response", async () => {
+  const mockFetch = async () => ({
+    ok: false,
+    status: 403,
+    json: async () => ({ error: "forbidden" }),
+  });
+  await assert.rejects(
+    () => GuidesLib.fetchPersonalization("https://w.dev", "https://e.com/a", "bad", mockFetch),
+    /forbidden/
+  );
+});
+
+test("PERSONALIZE_QUESTIONS exposes the 5 questions in render order", () => {
+  assert.deepEqual(
+    GuidesLib.PERSONALIZE_QUESTIONS.map((q) => q.key),
+    [
+      "what_is_this",
+      "how_does_it_work",
+      "why_should_i_use_this",
+      "difficulty_to_setup",
+      "how_will_this_affect_me",
+    ]
+  );
+});

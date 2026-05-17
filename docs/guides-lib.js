@@ -133,6 +133,87 @@
     return sortGuides(dedupeByUrl(items || []), "recent").slice(0, capped);
   }
 
+  // =========================================================================
+  // PERSONALIZATION ("Explain for me")
+  //
+  // Pure helpers behind the hidden, secret-gated personalize feature. The DOM
+  // wiring lives in index.html; everything testable lives here.
+  // =========================================================================
+
+  // The 5 questions answered per guide — key + display label, render order.
+  var PERSONALIZE_QUESTIONS = [
+    { key: "what_is_this", label: "What is this?" },
+    { key: "how_does_it_work", label: "How does it work?" },
+    { key: "why_should_i_use_this", label: "Why should I use this?" },
+    { key: "difficulty_to_setup", label: "Difficulty to set up" },
+    { key: "how_will_this_affect_me", label: "How will this affect me?" },
+  ];
+
+  /**
+   * Pull the `personalize` value out of a location's search and/or hash.
+   * The bookmark URL carries it after the hash (#/guides?personalize=...),
+   * but a plain ?personalize= before the hash is accepted too.
+   * Returns the raw value, or null when absent.
+   */
+  function extractPersonalizeParam(search, hash) {
+    function probe(s) {
+      if (!s) return null;
+      var q = s.indexOf("?");
+      if (q !== -1) s = s.slice(q + 1);
+      try {
+        return new URLSearchParams(s).get("personalize");
+      } catch (e) {
+        return null;
+      }
+    }
+    return probe(search) || probe(hash) || null;
+  }
+
+  /** Build the worker /personalize request URL. */
+  function buildPersonalizeUrl(workerBase, guideUrl, secret) {
+    return (
+      String(workerBase).replace(/\/+$/, "") +
+      "/personalize?url=" +
+      encodeURIComponent(guideUrl) +
+      "&secret=" +
+      encodeURIComponent(secret)
+    );
+  }
+
+  /**
+   * Fetch personalization JSON for one guide. Resolves to the parsed body;
+   * rejects with the worker's error message on a non-OK response.
+   */
+  function fetchPersonalization(workerBase, guideUrl, secret, fetchImpl) {
+    var f = fetchImpl || (typeof fetch !== "undefined" ? fetch : null);
+    if (!f) return Promise.reject(new Error("no fetch implementation available"));
+    return f(buildPersonalizeUrl(workerBase, guideUrl, secret)).then(function (resp) {
+      return resp.json().then(function (json) {
+        if (!resp.ok) {
+          throw new Error((json && json.error) || "HTTP " + resp.status);
+        }
+        return json;
+      });
+    });
+  }
+
+  /** SHA-256 hex digest of a string — works in the browser and Node 20+. */
+  function sha256Hex(str) {
+    var webcrypto =
+      typeof globalThis !== "undefined" &&
+      globalThis.crypto &&
+      globalThis.crypto.subtle;
+    if (!webcrypto) return Promise.reject(new Error("WebCrypto unavailable"));
+    var bytes = new TextEncoder().encode(String(str));
+    return webcrypto.digest("SHA-256", bytes).then(function (buf) {
+      return Array.from(new Uint8Array(buf))
+        .map(function (b) {
+          return b.toString(16).padStart(2, "0");
+        })
+        .join("");
+    });
+  }
+
   return {
     FILTER_TYPES: FILTER_TYPES,
     sourceCategory: sourceCategory,
@@ -142,5 +223,10 @@
     dedupeByUrl: dedupeByUrl,
     sortGuides: sortGuides,
     aggregateGuides: aggregateGuides,
+    PERSONALIZE_QUESTIONS: PERSONALIZE_QUESTIONS,
+    extractPersonalizeParam: extractPersonalizeParam,
+    buildPersonalizeUrl: buildPersonalizeUrl,
+    fetchPersonalization: fetchPersonalization,
+    sha256Hex: sha256Hex,
   };
 });
