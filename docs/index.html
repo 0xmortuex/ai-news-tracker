@@ -1096,16 +1096,7 @@ function parseHN(json, src) {
   }));
 }
 
-function parseGitHub(json, src) {
-  return (json.items || []).map(r => ({
-    title: r.full_name,
-    url: r.html_url,
-    source: src.name,
-    category: src.category,
-    dateISO: r.pushed_at || r.updated_at || new Date().toISOString(),
-    excerpt: `★ ${r.stargazers_count.toLocaleString()} · ${(r.description || "no description").slice(0, 200)}`,
-  }));
-}
+// parseGitHub() removed — superseded by /guides/aggregate route which normalizes GitHub items via parseAggregate
 
 function parseTrendshift(json, src) {
   return (json.items || []).map(it => ({
@@ -1155,7 +1146,6 @@ async function fetchGuideSource(src) {
       if (src.type === "json") {
         const json = await resp.json();
         if (src.parser === "hn")         return parseHN(json, src);
-        if (src.parser === "github")     return parseGitHub(json, src);
         if (src.parser === "trendshift") return parseTrendshift(json, src);
         if (src.parser === "aggregate")  return parseAggregate(json, src);
         return [];
