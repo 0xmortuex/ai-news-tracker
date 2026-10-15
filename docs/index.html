@@ -3,713 +3,433 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://raw.githubusercontent.com https://ai-news-cors.mortuexhavoc.workers.dev https://api.codetabs.com https://api.allorigins.win; manifest-src 'self'; worker-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#0a0a0a">
+<meta name="description" content="AI news, model releases and weekly digests, aggregated from primary sources.">
 <title>AI News Tracker · 0xmortuex</title>
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
+  /* Dark is the default. Light follows prefers-color-scheme unless the visitor
+     chose a theme with the toggle (html[data-theme]). Every text/background pair
+     below is checked for WCAG AA by tests/site-a11y.test.mjs. */
   :root {
+    color-scheme: dark;
     --bg: #0a0a0a;
     --bg-elev: #121212;
     --bg-card: #161616;
-    --border: #232323;
-    --border-strong: #2e2e2e;
+    --border: #2a2a2a;
+    --border-strong: #3a3a3a;
+    --control-border: #77736a;
     --text: #e8e3d8;
-    --text-dim: #8a8678;
-    --text-faint: #5a5750;
+    --text-dim: #aaa598;
+    --text-faint: #8f8b7d;
     --accent: #d4a574;
-    --accent-dim: #6b5638;
-    --us: #5b8def;
-    --cn: #e2615b;
-    --other: #9b9b9b;
+    --accent-dim: #8c6d45;
+    --on-accent: #0a0a0a;
+    --us: #6f9bf2;
+    --cn: #e8756f;
+    --other: #a8a8a8;
     --ok: #6fbf73;
-    --err: #d4615b;
+    --err: #e8756f;
+    --on-err: #0a0a0a;
+    --warn: #e8a05b;
+    --focus: #f2c48d;
+    --mark-bg: #5c4620;
+    --mark-fg: #fff3dc;
+    --header-bg: rgba(10, 10, 10, 0.88);
+    --glow1: rgba(212, 165, 116, 0.06);
+    --glow2: rgba(91, 141, 239, 0.04);
     --serif: 'Fraunces', 'Times New Roman', serif;
     --mono: 'JetBrains Mono', 'Consolas', monospace;
   }
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) {
+      color-scheme: light;
+      --bg: #faf8f3;
+      --bg-elev: #f1eee6;
+      --bg-card: #ffffff;
+      --border: #ddd8cc;
+      --border-strong: #c8c2b3;
+      --control-border: #857f72;
+      --text: #1d1b16;
+      --text-dim: #4f4b43;
+      --text-faint: #675f54;
+      --accent: #8a5a1c;
+      --accent-dim: #b58c52;
+      --on-accent: #ffffff;
+      --us: #2956b8;
+      --cn: #b3322b;
+      --other: #5d5d5d;
+      --ok: #2c7a31;
+      --err: #b3322b;
+      --on-err: #ffffff;
+      --warn: #9a4d10;
+      --focus: #7a4a0c;
+      --mark-bg: #ffe4a8;
+      --mark-fg: #1d1b16;
+      --header-bg: rgba(250, 248, 243, 0.9);
+      --glow1: rgba(138, 90, 28, 0.06);
+      --glow2: rgba(41, 86, 184, 0.04);
+    }
+  }
+  :root[data-theme="light"] {
+    color-scheme: light;
+    --bg: #faf8f3;
+    --bg-elev: #f1eee6;
+    --bg-card: #ffffff;
+    --border: #ddd8cc;
+    --border-strong: #c8c2b3;
+    --control-border: #857f72;
+    --text: #1d1b16;
+    --text-dim: #4f4b43;
+    --text-faint: #675f54;
+    --accent: #8a5a1c;
+    --accent-dim: #b58c52;
+    --on-accent: #ffffff;
+    --us: #2956b8;
+    --cn: #b3322b;
+    --other: #5d5d5d;
+    --ok: #2c7a31;
+    --err: #b3322b;
+    --on-err: #ffffff;
+    --warn: #9a4d10;
+    --focus: #7a4a0c;
+    --mark-bg: #ffe4a8;
+    --mark-fg: #1d1b16;
+    --header-bg: rgba(250, 248, 243, 0.9);
+    --glow1: rgba(138, 90, 28, 0.06);
+    --glow2: rgba(41, 86, 184, 0.04);
+  }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
+  [hidden] { display: none !important; }
   html, body { background: var(--bg); color: var(--text); font-family: var(--serif); }
   body {
     min-height: 100vh;
     background-image:
-      radial-gradient(circle at 20% -10%, rgba(212, 165, 116, 0.06), transparent 50%),
-      radial-gradient(circle at 90% 110%, rgba(91, 141, 239, 0.04), transparent 50%);
+      radial-gradient(circle at 20% -10%, var(--glow1), transparent 50%),
+      radial-gradient(circle at 90% 110%, var(--glow2), transparent 50%);
     background-attachment: fixed;
   }
+  ::selection { background: var(--accent); color: var(--on-accent); }
+  :focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+  mark { background: var(--mark-bg); color: var(--mark-fg); border-radius: 2px; padding: 0 1px; }
 
-  ::selection { background: var(--accent); color: var(--bg); }
-  ::-webkit-scrollbar { width: 8px; height: 8px; }
-  ::-webkit-scrollbar-track { background: var(--bg); }
-  ::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 4px; }
-  ::-webkit-scrollbar-thumb:hover { background: var(--accent-dim); }
+  .skip-link {
+    position: absolute; left: 8px; top: -60px; z-index: 200;
+    background: var(--accent); color: var(--on-accent); padding: 10px 14px;
+    font-family: var(--mono); font-size: 12px; text-decoration: none; border-radius: 2px;
+  }
+  .skip-link:focus { top: 8px; }
+  .sr-only {
+    position: absolute; width: 1px; height: 1px; overflow: hidden;
+    clip: rect(0 0 0 0); white-space: nowrap;
+  }
 
   /* === HEADER === */
   header {
-    position: sticky;
-    top: 0;
-    z-index: 50;
-    background: rgba(10, 10, 10, 0.85);
+    position: sticky; top: 0; z-index: 50;
+    background: var(--header-bg);
     backdrop-filter: blur(20px) saturate(140%);
     -webkit-backdrop-filter: blur(20px) saturate(140%);
     border-bottom: 1px solid var(--border);
   }
-
   .header-inner {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 18px 32px;
-    display: flex;
-    align-items: center;
-    gap: 24px;
+    max-width: 1280px; margin: 0 auto; padding: 14px 32px;
+    display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
   }
-
-  .brand {
-    display: flex;
-    align-items: baseline;
-    gap: 12px;
-  }
-
+  .brand { display: flex; align-items: baseline; gap: 12px; }
   .brand h1 {
-    font-family: var(--serif);
-    font-weight: 800;
-    font-size: 26px;
-    letter-spacing: -0.02em;
-    font-variation-settings: "opsz" 144;
+    font-family: var(--serif); font-weight: 800; font-size: 26px;
+    letter-spacing: -0.02em; font-variation-settings: "opsz" 144;
   }
-
   .brand h1 span { color: var(--accent); font-style: italic; font-weight: 400; }
-
   .brand .tag {
-    font-family: var(--mono);
-    font-size: 10px;
-    color: var(--text-faint);
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    padding: 3px 8px;
-    border: 1px solid var(--border-strong);
-    border-radius: 2px;
+    font-family: var(--mono); font-size: 10px; color: var(--text-faint);
+    text-transform: uppercase; letter-spacing: 0.15em; padding: 3px 8px;
+    border: 1px solid var(--border-strong); border-radius: 2px;
   }
-
   .header-stats {
-    margin-left: auto;
-    display: flex;
-    gap: 20px;
-    font-family: var(--mono);
-    font-size: 11px;
-    color: var(--text-dim);
+    margin-left: auto; display: flex; gap: 20px; flex-wrap: wrap;
+    font-family: var(--mono); font-size: 11px; color: var(--text-dim);
   }
-
-  .header-stats .stat strong {
-    color: var(--text);
-    font-family: var(--mono);
-    font-weight: 600;
-  }
-
-  .header-actions { display: flex; gap: 10px; }
+  .header-stats .stat strong { color: var(--text); font-weight: 600; }
+  .header-actions { display: flex; gap: 10px; flex-wrap: wrap; }
 
   button {
-    font-family: var(--mono);
-    font-size: 11px;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    padding: 9px 14px;
-    background: transparent;
-    color: var(--text);
-    border: 1px solid var(--border-strong);
-    border-radius: 2px;
-    cursor: pointer;
-    transition: all 0.15s ease;
+    font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em;
+    text-transform: uppercase; padding: 9px 14px; background: transparent;
+    color: var(--text); border: 1px solid var(--control-border); border-radius: 2px;
+    cursor: pointer; transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
   }
-
   button:hover { border-color: var(--accent); color: var(--accent); }
-  button.primary { background: var(--accent); color: var(--bg); border-color: var(--accent); font-weight: 600; }
+  button.primary { background: var(--accent); color: var(--on-accent); border-color: var(--accent); font-weight: 600; }
   button.primary:hover { background: transparent; color: var(--accent); }
-  button:disabled { opacity: 0.4; cursor: not-allowed; }
+  button:disabled { opacity: 0.5; cursor: not-allowed; }
 
   /* === LAYOUT === */
+  .main-wrap { min-width: 0; }
+  fieldset { border: 0; min-width: 0; }
+  legend { padding: 0; }
+  label.filter-label { display: block; }
   .container {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 32px;
-    display: grid;
-    grid-template-columns: 280px 1fr;
-    gap: 32px;
+    max-width: 1280px; margin: 0 auto; padding: 32px;
+    display: grid; grid-template-columns: 280px minmax(0, 1fr); gap: 32px;
   }
-
+  body:not(.tab-news) .sidebar { display: none; }
+  body:not(.tab-news) .container { grid-template-columns: minmax(0, 1fr); }
   @media (max-width: 900px) {
-    .container { grid-template-columns: 1fr; padding: 20px; }
-    .sidebar { position: static !important; }
+    .container { grid-template-columns: minmax(0, 1fr); padding: 16px; }
+    .header-inner { padding: 12px 16px; }
+    .sidebar { position: static !important; height: auto !important; }
+    .header-stats { margin-left: 0; }
   }
 
   /* === SIDEBAR === */
   .sidebar {
-    position: sticky;
-    top: 90px;
-    align-self: start;
-    height: calc(100vh - 110px);
-    overflow-y: auto;
-    padding-right: 8px;
+    position: sticky; top: 90px; align-self: start;
+    height: calc(100vh - 110px); overflow-y: auto; padding-right: 8px;
   }
-
-  .filter-group {
-    margin-bottom: 28px;
-  }
-
+  .filter-group { margin-bottom: 24px; border: 0; }
   .filter-label {
-    font-family: var(--mono);
-    font-size: 10px;
-    text-transform: uppercase;
-    letter-spacing: 0.18em;
-    color: var(--text-faint);
-    margin-bottom: 10px;
-    padding-bottom: 6px;
-    border-bottom: 1px solid var(--border);
+    font-family: var(--mono); font-size: 10px; text-transform: uppercase;
+    letter-spacing: 0.18em; color: var(--text-faint); margin-bottom: 10px;
+    padding-bottom: 6px; border-bottom: 1px solid var(--border); display: block; width: 100%;
   }
-
   .chip {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 6px 11px;
-    margin: 0 4px 6px 0;
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 2px;
-    font-family: var(--mono);
-    font-size: 11px;
-    color: var(--text-dim);
-    cursor: pointer;
-    transition: all 0.12s ease;
+    display: inline-flex; align-items: center; gap: 6px; padding: 6px 11px;
+    margin: 0 4px 6px 0; background: var(--bg-card); border: 1px solid var(--border-strong);
+    border-radius: 2px; font-family: var(--mono); font-size: 11px; color: var(--text-dim);
+    text-transform: none; letter-spacing: 0; cursor: pointer;
   }
-
-  .chip:hover { border-color: var(--accent-dim); color: var(--text); }
-  .chip.active { border-color: var(--accent); color: var(--accent); background: rgba(212, 165, 116, 0.06); }
-  .chip .dot {
-    width: 6px; height: 6px; border-radius: 50%;
-    background: var(--text-faint);
-  }
+  .chip:hover { border-color: var(--accent); color: var(--text); }
+  .chip.active { border-color: var(--accent); color: var(--accent); background: var(--bg-elev); font-weight: 600; }
+  .chip .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--text-faint); }
   .chip[data-c="US"] .dot { background: var(--us); }
   .chip[data-c="CN"] .dot { background: var(--cn); }
   .chip[data-c="OTHER"] .dot { background: var(--other); }
 
-  /* Search */
-  .search {
-    width: 100%;
-    padding: 11px 14px;
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 2px;
-    color: var(--text);
-    font-family: var(--mono);
-    font-size: 12px;
-    outline: none;
-    transition: border-color 0.15s ease;
+  .search, input[type="text"], input[type="search"] {
+    width: 100%; padding: 11px 14px; background: var(--bg-card);
+    border: 1px solid var(--control-border); border-radius: 2px; color: var(--text);
+    font-family: var(--mono); font-size: 12px;
   }
-  .search:focus { border-color: var(--accent); }
+  .search:focus-visible { border-color: var(--accent); }
   .search::placeholder { color: var(--text-faint); }
+  kbd {
+    font-family: var(--mono); font-size: 10px; padding: 1px 5px;
+    border: 1px solid var(--control-border); border-radius: 3px; color: var(--text-dim);
+  }
 
   /* === SOURCE STATUS === */
-  .source-list {
-    font-family: var(--mono);
-    font-size: 10px;
-    line-height: 1.7;
-  }
+  .source-list { font-family: var(--mono); font-size: 10px; line-height: 1.7; }
   .source-row {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 4px 0;
-    color: var(--text-dim);
-    border-bottom: 1px dotted var(--border);
+    display: flex; align-items: center; gap: 8px; padding: 4px 0;
+    color: var(--text-dim); border-bottom: 1px dotted var(--border);
   }
   .source-row .name { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .source-row .count { color: var(--text-faint); }
-  .source-row .icon {
-    width: 10px; height: 10px; border-radius: 50%;
-    flex-shrink: 0;
-    background: var(--text-faint);
-  }
-  .source-row.ok .icon { background: var(--ok); box-shadow: 0 0 6px rgba(111, 191, 115, 0.4); }
+  .source-row .icon { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; background: var(--text-faint); }
+  .source-row.ok .icon { background: var(--ok); }
   .source-row.err .icon { background: var(--err); }
   .source-row.loading .icon { background: var(--accent); animation: pulse 1.2s infinite; }
-  @keyframes pulse {
-    0%, 100% { opacity: 0.4; }
-    50% { opacity: 1; }
-  }
+  .source-row.stale .icon { background: var(--warn); }
+  .source-row.stale .count { color: var(--warn); }
+  @keyframes pulse { 0%, 100% { opacity: 0.4; } 50% { opacity: 1; } }
 
   /* === MAIN === */
   .main h2 {
-    font-family: var(--serif);
-    font-weight: 800;
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 0.16em;
-    color: var(--text-faint);
-    margin-bottom: 18px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid var(--border);
-    display: flex;
-    align-items: baseline;
-    gap: 12px;
+    font-family: var(--serif); font-weight: 800; font-size: 14px;
+    text-transform: uppercase; letter-spacing: 0.16em; color: var(--text-dim);
+    margin-bottom: 18px; padding-bottom: 8px; border-bottom: 1px solid var(--border);
+    display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap;
   }
-  .main h2 .count {
-    font-family: var(--mono);
-    font-size: 11px;
-    font-weight: 400;
-    color: var(--text-dim);
-    margin-left: auto;
-  }
+  .main h2 .count { font-family: var(--mono); font-size: 11px; font-weight: 400; color: var(--text-dim); margin-left: auto; }
+  .view-bar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 14px; }
+  .view-bar .spacer { flex: 1; }
 
   /* === ARTICLE CARDS === */
-  .articles { display: flex; flex-direction: column; gap: 18px; }
-
+  .articles { display: flex; flex-direction: column; gap: 16px; }
   .article {
-    padding: 20px 24px;
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-left: 3px solid var(--border-strong);
-    border-radius: 2px;
-    transition: all 0.2s ease;
-    position: relative;
+    padding: 20px 24px; background: var(--bg-card); border: 1px solid var(--border);
+    border-left: 3px solid var(--border-strong); border-radius: 2px; position: relative;
   }
-  .article:hover {
-    border-color: var(--border-strong);
-    transform: translateY(-1px);
-    background: var(--bg-elev);
-  }
+  .article:hover { border-color: var(--border-strong); background: var(--bg-elev); }
   .article[data-c="US"] { border-left-color: var(--us); }
   .article[data-c="CN"] { border-left-color: var(--cn); }
   .article[data-c="OTHER"] { border-left-color: var(--other); }
-  .article.read { opacity: 0.45; }
-
+  .article.read { opacity: 0.7; }
+  .article.read h3 a { color: var(--text-dim); }
   .article-meta {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    margin-bottom: 10px;
-    font-family: var(--mono);
-    font-size: 10px;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--text-faint);
+    display: flex; align-items: center; gap: 10px 14px; flex-wrap: wrap;
+    margin-bottom: 10px; font-family: var(--mono); font-size: 10px;
+    text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-dim);
   }
   .article-meta .source-name { color: var(--accent); font-weight: 500; }
-  .article-meta .country-pill {
-    padding: 2px 7px;
-    border: 1px solid currentColor;
-    border-radius: 2px;
-    font-size: 9px;
-  }
+  .article-meta .country-pill { padding: 2px 7px; border: 1px solid currentColor; border-radius: 2px; font-size: 9px; }
   .article-meta .country-pill.US { color: var(--us); }
   .article-meta .country-pill.CN { color: var(--cn); }
   .article-meta .country-pill.OTHER { color: var(--other); }
   .article-meta .new-badge {
-    background: var(--accent);
-    color: var(--bg);
-    padding: 2px 7px;
-    font-weight: 600;
-    border-radius: 2px;
+    background: var(--accent); color: var(--on-accent); padding: 2px 7px; font-weight: 600; border-radius: 2px;
   }
-
   .article h3 {
-    font-family: var(--serif);
-    font-weight: 600;
-    font-size: 19px;
-    line-height: 1.32;
-    letter-spacing: -0.01em;
-    margin-bottom: 8px;
-    font-variation-settings: "opsz" 30;
+    font-family: var(--serif); font-weight: 600; font-size: 19px; line-height: 1.32;
+    letter-spacing: -0.01em; margin-bottom: 8px; font-variation-settings: "opsz" 30;
   }
-  .article h3 a {
-    color: var(--text);
-    text-decoration: none;
-    background-image: linear-gradient(to right, var(--accent), var(--accent));
-    background-position: 0 100%;
-    background-size: 0% 1px;
-    background-repeat: no-repeat;
-    transition: background-size 0.3s ease, color 0.15s ease;
-    padding-bottom: 1px;
-  }
-  .article h3 a:hover {
-    color: var(--accent);
-    background-size: 100% 1px;
-  }
-  .article p {
-    color: var(--text-dim);
-    font-size: 14px;
-    line-height: 1.55;
-    font-family: var(--serif);
-    font-variation-settings: "opsz" 14;
-  }
+  .article h3 a { color: var(--text); text-decoration: none; background-image: linear-gradient(to right, var(--accent), var(--accent)); background-position: 0 100%; background-size: 0% 1px; background-repeat: no-repeat; transition: background-size 0.3s ease; }
+  .article h3 a:hover { color: var(--accent); background-size: 100% 1px; }
+  .article p { color: var(--text-dim); font-size: 14px; line-height: 1.55; font-variation-settings: "opsz" 14; }
 
   /* === STATES === */
-  .empty, .loading-screen {
-    text-align: center;
-    padding: 80px 20px;
-    color: var(--text-dim);
-    font-family: var(--mono);
-    font-size: 13px;
-  }
-  .empty .big {
-    font-family: var(--serif);
-    font-size: 32px;
-    color: var(--text);
-    margin-bottom: 12px;
-    font-style: italic;
-    font-weight: 400;
-  }
-
+  .empty, .loading-screen { text-align: center; padding: 60px 20px; color: var(--text-dim); font-family: var(--mono); font-size: 13px; }
+  .empty .big { font-family: var(--serif); font-size: 30px; color: var(--text); margin-bottom: 12px; font-style: italic; font-weight: 400; }
   .toast {
-    position: fixed;
-    bottom: 24px;
-    left: 50%;
-    transform: translateX(-50%) translateY(100px);
-    background: var(--bg-elev);
-    border: 1px solid var(--accent);
-    color: var(--text);
-    padding: 12px 24px;
-    font-family: var(--mono);
-    font-size: 12px;
-    border-radius: 2px;
-    z-index: 100;
-    transition: transform 0.3s ease;
+    position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(100px);
+    background: var(--bg-elev); border: 1px solid var(--accent); color: var(--text);
+    padding: 12px 24px; font-family: var(--mono); font-size: 12px; border-radius: 2px;
+    z-index: 100; transition: transform 0.3s ease; max-width: 92vw;
   }
   .toast.show { transform: translateX(-50%) translateY(0); }
   .toast.err { border-color: var(--err); }
-
-  /* Skeleton */
-  .skeleton {
-    background: linear-gradient(90deg, var(--bg-card) 0%, var(--bg-elev) 50%, var(--bg-card) 100%);
-    background-size: 200% 100%;
-    animation: shimmer 1.5s infinite;
-    border-radius: 2px;
-  }
-  @keyframes shimmer {
-    0% { background-position: 200% 0; }
-    100% { background-position: -200% 0; }
-  }
-
   footer {
-    text-align: center;
-    padding: 40px 20px;
-    color: var(--text-faint);
-    font-family: var(--mono);
-    font-size: 10px;
-    border-top: 1px solid var(--border);
-    margin-top: 60px;
+    text-align: center; padding: 40px 20px; color: var(--text-dim); font-family: var(--mono);
+    font-size: 10px; border-top: 1px solid var(--border); margin-top: 60px; line-height: 1.8;
   }
-  footer a { color: var(--accent); text-decoration: none; }
-  footer a:hover { text-decoration: underline; }
+  footer a { color: var(--accent); }
 
   /* === TABS === */
   .tabs {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 32px;
-    display: flex;
-    gap: 4px;
-    border-bottom: 1px solid var(--border);
+    max-width: 1280px; margin: 0 auto; padding: 0 32px; display: flex; gap: 4px;
+    border-bottom: 1px solid var(--border); overflow-x: auto;
   }
   .tab {
-    font-family: var(--mono);
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    padding: 14px 20px;
-    color: var(--text-dim);
-    background: transparent;
-    border: none;
-    border-bottom: 2px solid transparent;
-    cursor: pointer;
-    transition: all 0.15s ease;
-    margin-bottom: -1px;
+    font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em;
+    padding: 14px 20px; color: var(--text-dim); background: transparent; border: none;
+    border-bottom: 2px solid transparent; margin-bottom: -1px; white-space: nowrap;
   }
   .tab:hover { color: var(--text); border-bottom-color: var(--accent-dim); }
-  .tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+  .tab[aria-selected="true"] { color: var(--accent); border-bottom-color: var(--accent); }
+  .tab .badge {
+    margin-left: 6px; background: var(--accent); color: var(--on-accent);
+    border-radius: 9px; padding: 1px 6px; font-size: 10px;
+  }
+  @media (max-width: 900px) { .tabs { padding: 0 8px; } }
 
-  /* === GUIDES LAYOUT === */
-  body.tab-guides .sidebar { display: none; }
-  body.tab-guides .container { grid-template-columns: 1fr; }
-  body.tab-guides .main-news { display: none; }
-  body:not(.tab-guides) .main-guides { display: none; }
+  /* === BREAKING STRIP, TOP === */
+  .breaking-strip {
+    margin-bottom: 18px; padding: 12px 16px; background: var(--bg-card);
+    border: 1px solid var(--err); border-left: 4px solid var(--err); border-radius: 2px;
+  }
+  .breaking-strip h2 { border: 0; margin: 0 0 8px; padding: 0; font-size: 12px; color: var(--err); }
+  .breaking-strip ul { list-style: none; }
+  .breaking-strip li { font-family: var(--mono); font-size: 12px; padding: 4px 0; display: flex; gap: 10px; flex-wrap: wrap; }
+  .breaking-strip a { color: var(--text); }
+  .breaking-strip .when { color: var(--text-dim); }
 
-  .guides-section { margin-bottom: 48px; }
-  .guides-section h2 { /* uses existing .main h2 styles */ }
-
-  /* Featured cards */
+  /* === GUIDES / FEATURED === */
+  .guides-section { margin-bottom: 40px; }
   .featured-list { display: flex; flex-direction: column; gap: 20px; }
   .featured-card {
-    position: relative;
-    padding: 28px 30px;
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-left: 3px solid var(--accent);
-    border-radius: 2px;
-    transition: all 0.2s ease;
-  }
-  .featured-card:hover {
-    transform: translateY(-1px);
-    background: var(--bg-elev);
-    border-color: var(--border-strong);
-    border-left-color: var(--accent);
+    position: relative; padding: 28px 30px; background: var(--bg-card);
+    border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 2px;
   }
   .featured-badge {
-    position: absolute;
-    top: 14px;
-    right: 16px;
-    font-family: var(--mono);
-    font-size: 9px;
-    text-transform: uppercase;
-    letter-spacing: 0.16em;
-    color: var(--accent);
-    padding: 3px 8px;
-    border: 1px solid var(--accent-dim);
-    border-radius: 2px;
-    background: rgba(212, 165, 116, 0.06);
+    position: absolute; top: 14px; right: 16px; font-family: var(--mono); font-size: 9px;
+    text-transform: uppercase; letter-spacing: 0.16em; color: var(--accent);
+    padding: 3px 8px; border: 1px solid var(--accent-dim); border-radius: 2px;
   }
-  .featured-card h3 {
-    font-family: var(--serif);
-    font-weight: 800;
-    font-size: 22px;
-    line-height: 1.3;
-    letter-spacing: -0.01em;
-    margin-bottom: 6px;
-    margin-right: 100px;
-    font-variation-settings: "opsz" 30;
-  }
-  .featured-card .author {
-    font-family: var(--mono);
-    font-size: 10px;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: var(--text-faint);
-    margin-bottom: 12px;
-  }
+  .featured-card h3 { font-weight: 800; font-size: 22px; line-height: 1.3; margin-bottom: 6px; margin-right: 100px; }
+  .featured-card .author { font-family: var(--mono); font-size: 10px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--text-dim); margin-bottom: 12px; }
   .featured-card .author strong { color: var(--accent); font-weight: 500; }
-  .featured-card p {
-    color: var(--text-dim);
-    font-size: 14px;
-    line-height: 1.55;
-    font-family: var(--serif);
-    font-variation-settings: "opsz" 14;
-    margin-bottom: 14px;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+  .featured-card p { color: var(--text-dim); font-size: 14px; line-height: 1.55; margin-bottom: 14px; }
+  .featured-card .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+  .pill { font-family: var(--mono); font-size: 10px; color: var(--text-dim); padding: 3px 9px; border: 1px solid var(--border-strong); border-radius: 12px; }
+  .featured-card .open-link { font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); border-bottom: 1px solid var(--accent-dim); text-decoration: none; }
+  .source-badge { padding: 2px 8px; border: 1px solid currentColor; border-radius: 12px; font-size: 9px; font-weight: 500; letter-spacing: 0.04em; color: var(--accent); white-space: nowrap; }
+  .controls { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 18px; align-items: center; }
+  .controls .search { flex: 1 1 220px; width: auto; }
+  select.f-select, .guides-select {
+    font-family: var(--mono); font-size: 11px; padding: 9px 10px; background: var(--bg-card);
+    color: var(--text); border: 1px solid var(--control-border); border-radius: 2px;
   }
-  .featured-card .tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    margin-bottom: 14px;
-  }
-  .pill {
-    font-family: var(--mono);
-    font-size: 10px;
-    text-transform: lowercase;
-    letter-spacing: 0.04em;
-    color: var(--text-dim);
-    padding: 3px 9px;
-    background: rgba(212, 165, 116, 0.04);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-  }
-  .featured-card .open-link {
-    font-family: var(--mono);
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--accent);
-    text-decoration: none;
-    border-bottom: 1px solid var(--accent-dim);
-    padding-bottom: 1px;
-  }
-  .featured-card .open-link:hover { border-bottom-color: var(--accent); }
-
-  /* Latest cards (reuse .article style with category chip) */
-  .article .category-chip {
-    padding: 2px 7px;
-    border: 1px solid var(--border-strong);
-    border-radius: 12px;
-    font-size: 9px;
-    color: var(--text-dim);
-  }
-
-  /* Source badges — colour-coded by source type */
-  .source-badge {
-    padding: 2px 8px;
-    border: 1px solid currentColor;
-    border-radius: 12px;
-    font-size: 9px;
-    font-weight: 500;
-    letter-spacing: 0.04em;
-    color: var(--text-dim);
-    white-space: nowrap;
-  }
-  .source-badge[data-cat="Blogs"]            { color: var(--accent); }
-  .source-badge[data-cat="YouTube"]          { color: #e2615b; }
-  .source-badge[data-cat="GitHub"]           { color: #e8e3d8; }
-  .source-badge[data-cat="Reddit"]           { color: #e8915b; }
-  .source-badge[data-cat="HN"]               { color: #f0883e; }
-  .source-badge[data-cat="Bluesky"]          { color: #5b8def; }
-  .source-badge[data-cat="Dev Communities"]  { color: #8a7fe0; }
-
-  /* Guides controls bar — source filter + sort dropdowns */
-  .guides-controls {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 18px;
-  }
-  .guides-select {
-    font-family: var(--mono);
-    font-size: 11px;
-    letter-spacing: 0.04em;
-    padding: 9px 12px;
-    background: var(--bg-card);
-    color: var(--text);
-    border: 1px solid var(--border-strong);
-    border-radius: 2px;
-    cursor: pointer;
-    outline: none;
-    transition: border-color 0.15s ease;
-  }
-  .guides-select:hover, .guides-select:focus { border-color: var(--accent); }
-  .guides-select label { color: var(--text-faint); }
-
+  select.f-select { width: 100%; margin-bottom: 6px; }
   .load-more-wrap { text-align: center; margin-top: 24px; }
 
-  /* === "Explain for me" personalization (hidden unless ?personalize= matches) === */
+  /* === "Explain for me" (hidden unless ?personalize= matches) === */
   .personalize { margin-top: 14px; }
-  .btn-explain, .personalize-toggle {
-    font-family: var(--mono);
-    font-size: 10px;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--accent);
-    background: rgba(212, 165, 116, 0.06);
-    border: 1px solid var(--accent-dim);
-    border-radius: 2px;
-    padding: 6px 11px;
-    cursor: pointer;
-    transition: background 0.15s ease, border-color 0.15s ease;
-  }
-  .btn-explain:hover, .personalize-toggle:hover {
-    background: rgba(212, 165, 116, 0.12);
-    border-color: var(--accent);
-  }
-  .btn-explain:disabled { opacity: 0.5; cursor: default; }
-  .personalize-panel {
-    margin-top: 12px;
-    padding: 16px 18px;
-    background: var(--bg-elev);
-    border: 1px solid var(--border);
-    border-left: 3px solid var(--accent);
-    border-radius: 2px;
-  }
-  .personalize-panel[hidden] { display: none; }
+  .btn-explain, .personalize-toggle { font-size: 10px; color: var(--accent); border-color: var(--accent-dim); padding: 6px 11px; }
+  .personalize-panel { margin-top: 12px; padding: 16px 18px; background: var(--bg-elev); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 2px; }
   .pz-row { margin-bottom: 12px; }
-  .pz-row:last-child { margin-bottom: 0; }
-  .pz-q {
-    font-family: var(--mono);
-    font-size: 10px;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--accent);
-    margin-bottom: 4px;
-  }
-  .pz-a {
-    font-family: var(--serif);
-    font-size: 14px;
-    line-height: 1.55;
-    color: var(--text-dim);
-  }
-  .pz-foot {
-    margin-top: 14px;
-    padding-top: 10px;
-    border-top: 1px solid var(--border);
-    font-family: var(--mono);
-    font-size: 9px;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--text-faint);
-  }
-  .pz-loading {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-family: var(--mono);
-    font-size: 11px;
-    color: var(--text-dim);
-  }
-  .pz-spinner {
-    width: 12px;
-    height: 12px;
-    border: 2px solid var(--border-strong);
-    border-top-color: var(--accent);
-    border-radius: 50%;
-    animation: pz-spin 0.7s linear infinite;
-  }
+  .pz-q { font-family: var(--mono); font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 4px; }
+  .pz-a { font-size: 14px; line-height: 1.55; color: var(--text-dim); }
+  .pz-foot { margin-top: 14px; padding-top: 10px; border-top: 1px solid var(--border); font-family: var(--mono); font-size: 9px; text-transform: uppercase; color: var(--text-dim); }
+  .pz-loading { display: flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 11px; color: var(--text-dim); }
+  .pz-spinner { width: 12px; height: 12px; border: 2px solid var(--border-strong); border-top-color: var(--accent); border-radius: 50%; animation: pz-spin 0.7s linear infinite; }
   @keyframes pz-spin { to { transform: rotate(360deg); } }
-  .pz-error { font-family: var(--mono); font-size: 11px; color: #e2615b; }
+  .pz-error { font-family: var(--mono); font-size: 11px; color: var(--err); }
 
-  /* === DATA PIPELINE UI (banner, tags, filters, mute) === */
+  /* === DATA UI === */
   .data-banner { margin-bottom: 14px; font-family: var(--mono); font-size: 11px; line-height: 1.6; }
   .data-banner .note {
-    padding: 8px 12px; margin-bottom: 8px;
-    border: 1px solid var(--border-strong); border-left: 3px solid var(--accent-dim);
-    background: var(--bg-card); color: var(--text-dim); border-radius: 2px;
+    padding: 8px 12px; margin-bottom: 8px; border: 1px solid var(--border-strong);
+    border-left: 3px solid var(--accent-dim); background: var(--bg-card); color: var(--text-dim); border-radius: 2px;
   }
   .data-banner .note.warn { border-left-color: var(--err); color: var(--text); }
-  .data-banner .note.fallback { border-left-color: #e8915b; color: var(--text); }
+  .data-banner .note.fallback { border-left-color: var(--warn); color: var(--text); }
   .data-banner details summary { cursor: pointer; }
-  .data-banner ul { margin: 6px 0 0 18px; color: var(--text-faint); }
-  select.f-select {
-    width: 100%; font-family: var(--mono); font-size: 11px; padding: 8px 10px;
-    background: var(--bg-card); color: var(--text); border: 1px solid var(--border-strong);
-    border-radius: 2px; margin-bottom: 6px;
-  }
+  .data-banner ul { margin: 6px 0 0 18px; color: var(--text-dim); }
   .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; align-items: center; }
-  .tag-pill {
-    font-family: var(--mono); font-size: 10px; padding: 2px 8px; border-radius: 12px;
-    border: 1px solid var(--border); color: var(--text-dim); background: rgba(212,165,116,0.04);
-  }
+  .tag-pill { font-family: var(--mono); font-size: 10px; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border-strong); color: var(--text-dim); }
   .tag-pill.kind { color: var(--accent); border-color: var(--accent-dim); }
-  .tag-pill.company { color: var(--us); border-color: var(--border-strong); }
-  .imp {
-    font-family: var(--mono); font-size: 10px; padding: 2px 7px; border: 1px solid var(--border-strong);
-    border-radius: 2px; color: var(--text-dim);
-  }
+  .tag-pill.company { color: var(--us); }
+  .tag-pill.open-yes { color: var(--ok); border-color: var(--ok); }
+  .tag-pill.open-no { color: var(--text-dim); }
+  .imp { font-family: var(--mono); font-size: 10px; padding: 2px 7px; border: 1px solid var(--control-border); border-radius: 2px; color: var(--text-dim); }
   .imp.hi { color: var(--ok); border-color: var(--ok); }
-  .imp.top { color: var(--bg); background: var(--accent); border-color: var(--accent); font-weight: 600; }
-  .breaking-badge { background: var(--err); color: #fff; padding: 2px 7px; font-weight: 600; border-radius: 2px; }
-  .third-party { color: var(--text-faint); border: 1px dashed var(--border-strong); padding: 1px 6px; border-radius: 2px; font-size: 9px; }
-  .also-in { margin-top: 8px; font-family: var(--mono); font-size: 10px; color: var(--text-faint); }
-  .also-in a { color: var(--text-dim); }
-  .mute-link {
-    margin-left: auto; background: none; border: none; padding: 0; font-size: 10px;
-    color: var(--text-faint); text-transform: none; letter-spacing: 0; cursor: pointer;
-  }
+  .imp.top { color: var(--on-accent); background: var(--accent); border-color: var(--accent); font-weight: 600; }
+  .breaking-badge { background: var(--err); color: var(--on-err); padding: 2px 7px; font-weight: 600; border-radius: 2px; }
+  .third-party { color: var(--text-dim); border: 1px dashed var(--control-border); padding: 1px 6px; border-radius: 2px; font-size: 9px; }
+  .also-in { margin-top: 8px; font-family: var(--mono); font-size: 10px; color: var(--text-dim); }
+  .also-in a { color: var(--text); }
+  .mute-link { margin-left: auto; background: none; border: none; padding: 2px 4px; font-size: 10px; color: var(--text-dim); text-transform: none; letter-spacing: 0; }
   .mute-link:hover { color: var(--err); }
-  .mute-list .chip { cursor: default; }
-  .mute-list .chip button { all: unset; cursor: pointer; color: var(--text-faint); margin-left: 4px; }
+  .mute-list .chip, .preset-list .chip { cursor: default; }
+  .mute-list .chip button, .preset-list .chip button { border: 0; padding: 0 2px; margin-left: 4px; font-size: 11px; text-transform: none; letter-spacing: 0; }
   .mute-add { display: flex; gap: 6px; margin-bottom: 8px; }
-  .mute-add input { flex: 1; }
-  .source-row.stale .icon { background: #e8915b; }
-  .source-row.stale .count { color: #e8915b; }
+  .mute-add input { flex: 1; min-width: 0; }
+
+  /* === RELEASES / DIGEST === */
+  .month-head { font-family: var(--serif); font-size: 20px; font-weight: 800; margin: 28px 0 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+  .month-head:first-child { margin-top: 0; }
+  .digest-section { margin-bottom: 28px; }
+  .digest-section h3 { font-size: 18px; margin-bottom: 8px; }
+  .digest-section ul { list-style: none; }
+  .digest-section li { padding: 8px 0; border-bottom: 1px dotted var(--border); font-size: 15px; display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: baseline; }
+  .digest-section li a { color: var(--text); }
+  .digest-section li .src { font-family: var(--mono); font-size: 10px; color: var(--text-dim); text-transform: uppercase; }
+  .digest-md { width: 100%; min-height: 180px; margin-top: 12px; padding: 10px; background: var(--bg-card); color: var(--text); border: 1px solid var(--control-border); font-family: var(--mono); font-size: 12px; }
 
   @media (max-width: 900px) {
-    .tabs { padding: 0 20px; }
     .featured-card { padding: 22px 20px; }
     .featured-card h3 { margin-right: 0; font-size: 19px; }
     .featured-badge { position: static; display: inline-block; margin-bottom: 10px; }
+    .article { padding: 16px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
   }
 </style>
 </head>
-<body>
+<body class="tab-news">
+<a class="skip-link" href="#main-content">Skip to content</a>
 
 <header>
   <div class="header-inner">
@@ -717,58 +437,71 @@
       <h1>AI News<span>·</span>Tracker</h1>
       <span class="tag">live · 0xmortuex</span>
     </div>
-    <div class="header-stats">
+    <div class="header-stats" aria-label="Status">
       <div class="stat"><strong id="stat-articles">0</strong> articles</div>
       <div class="stat"><strong id="stat-sources">0/0</strong> sources</div>
       <div class="stat"><strong id="stat-updated">—</strong></div>
     </div>
     <div class="header-actions">
-      <button id="btn-mark-read" title="Mark all read">Mark Read</button>
-      <button id="btn-refresh" class="primary">↻ Refresh</button>
+      <button id="btn-theme" type="button" title="Switch theme" aria-label="Theme: auto. Activate to change.">Theme: auto</button>
+      <button id="btn-mark-read" type="button" title="Mark all read">Mark Read</button>
+      <button id="btn-refresh" type="button" class="primary">↻ Refresh</button>
     </div>
   </div>
 </header>
 
-<nav class="tabs" role="tablist">
-  <button class="tab active" data-tab="news" role="tab">News</button>
-  <button class="tab" data-tab="guides" role="tab">Guides</button>
+<nav class="tabs" role="tablist" aria-label="Sections">
+  <button class="tab" id="tab-news" data-tab="news" role="tab" aria-selected="true" aria-controls="panel-news" tabindex="0" type="button">News</button>
+  <button class="tab" id="tab-releases" data-tab="releases" role="tab" aria-selected="false" aria-controls="panel-releases" tabindex="-1" type="button">Releases<span class="badge" id="rel-new-badge" hidden></span></button>
+  <button class="tab" id="tab-digest" data-tab="digest" role="tab" aria-selected="false" aria-controls="panel-digest" tabindex="-1" type="button">Digest</button>
+  <button class="tab" id="tab-guides" data-tab="guides" role="tab" aria-selected="false" aria-controls="panel-guides" tabindex="-1" type="button">Guides</button>
 </nav>
 
-<div class="container">
+<div class="container" id="main-content">
 
-  <aside class="sidebar">
+  <aside class="sidebar" aria-label="Filters">
     <div class="filter-group">
-      <div class="filter-label">Search</div>
-      <input class="search" id="q" placeholder="filter by title…" type="text">
+      <label class="filter-label" for="q">Search <kbd>/</kbd></label>
+      <input class="search" id="q" placeholder="title, company, model, topic…" type="search" autocomplete="off">
     </div>
 
-    <div class="filter-group">
-      <div class="filter-label">Region</div>
+    <fieldset class="filter-group">
+      <legend class="filter-label">Languages</legend>
+      <div id="filter-lang">
+        <button type="button" class="chip active" data-lang="en" aria-pressed="true">English</button>
+        <button type="button" class="chip" data-lang="tr" aria-pressed="false">Turkish</button>
+        <button type="button" class="chip" data-lang="zh" aria-pressed="false">Chinese</button>
+        <button type="button" class="chip" data-lang="other" aria-pressed="false">Other</button>
+      </div>
+    </fieldset>
+
+    <fieldset class="filter-group">
+      <legend class="filter-label">Region</legend>
       <div id="filter-country">
-        <span class="chip active" data-f="country" data-v="all">all</span>
-        <span class="chip" data-f="country" data-v="US" data-c="US"><span class="dot"></span>USA</span>
-        <span class="chip" data-f="country" data-v="CN" data-c="CN"><span class="dot"></span>China</span>
-        <span class="chip" data-f="country" data-v="EU" data-c="EU"><span class="dot"></span>EU</span>
-        <span class="chip" data-f="country" data-v="OTHER" data-c="OTHER"><span class="dot"></span>Global</span>
+        <button type="button" class="chip active" data-f="country" data-v="all" aria-pressed="true">all</button>
+        <button type="button" class="chip" data-f="country" data-v="US" data-c="US" aria-pressed="false"><span class="dot"></span>USA</button>
+        <button type="button" class="chip" data-f="country" data-v="CN" data-c="CN" aria-pressed="false"><span class="dot"></span>China</button>
+        <button type="button" class="chip" data-f="country" data-v="EU" data-c="EU" aria-pressed="false"><span class="dot"></span>EU</button>
+        <button type="button" class="chip" data-f="country" data-v="OTHER" data-c="OTHER" aria-pressed="false"><span class="dot"></span>Global</button>
       </div>
-    </div>
+    </fieldset>
 
-    <div class="filter-group">
-      <div class="filter-label">Type</div>
+    <fieldset class="filter-group">
+      <legend class="filter-label">Type</legend>
       <div id="filter-type">
-        <span class="chip active" data-f="type" data-v="all">all</span>
-        <span class="chip" data-f="type" data-v="COMPANY">company</span>
-        <span class="chip" data-f="type" data-v="NEWS">news</span>
-        <span class="chip" data-f="type" data-v="RESEARCH">research</span>
-        <span class="chip" data-f="type" data-v="COMMUNITY">community</span>
-        <span class="chip" data-f="type" data-v="NEWSLETTER">newsletter</span>
-        <span class="chip" data-f="type" data-v="REPO">repo</span>
+        <button type="button" class="chip active" data-f="type" data-v="all" aria-pressed="true">all</button>
+        <button type="button" class="chip" data-f="type" data-v="COMPANY" aria-pressed="false">company</button>
+        <button type="button" class="chip" data-f="type" data-v="NEWS" aria-pressed="false">news</button>
+        <button type="button" class="chip" data-f="type" data-v="RESEARCH" aria-pressed="false">research</button>
+        <button type="button" class="chip" data-f="type" data-v="COMMUNITY" aria-pressed="false">community</button>
+        <button type="button" class="chip" data-f="type" data-v="NEWSLETTER" aria-pressed="false">newsletter</button>
+        <button type="button" class="chip" data-f="type" data-v="REPO" aria-pressed="false">repo</button>
       </div>
-    </div>
+    </fieldset>
 
     <div class="filter-group">
-      <div class="filter-label">Kind</div>
-      <select class="f-select" id="f-kind" aria-label="Filter by kind">
+      <label class="filter-label" for="f-kind">Kind</label>
+      <select class="f-select" id="f-kind">
         <option value="all">all kinds</option>
         <option value="model-release">model release</option>
         <option value="paper">paper</option>
@@ -783,18 +516,18 @@
     </div>
 
     <div class="filter-group">
-      <div class="filter-label">Topic</div>
-      <select class="f-select" id="f-topic" aria-label="Filter by topic"><option value="all">all topics</option></select>
+      <label class="filter-label" for="f-topic">Topic</label>
+      <select class="f-select" id="f-topic"><option value="all">all topics</option></select>
     </div>
 
     <div class="filter-group">
-      <div class="filter-label">Company</div>
-      <select class="f-select" id="f-company" aria-label="Filter by company"><option value="all">all companies</option></select>
+      <label class="filter-label" for="f-company">Company</label>
+      <select class="f-select" id="f-company"><option value="all">all companies</option></select>
     </div>
 
     <div class="filter-group">
-      <div class="filter-label">Importance</div>
-      <select class="f-select" id="f-imp" aria-label="Minimum importance">
+      <label class="filter-label" for="f-imp">Importance</label>
+      <select class="f-select" id="f-imp">
         <option value="0">any</option>
         <option value="15">15+ (hide minor)</option>
         <option value="30">30+</option>
@@ -804,82 +537,144 @@
     </div>
 
     <div class="filter-group">
-      <div class="filter-label">Mute list</div>
-      <form class="mute-add" id="mute-form">
+      <span class="filter-label" id="presets-label">Saved filters</span>
+      <form class="mute-add" id="preset-form" aria-labelledby="presets-label">
+        <input class="search" id="preset-name" placeholder="name this view…" type="text" maxlength="40" aria-label="Name for the saved filter">
+        <button type="submit">save</button>
+      </form>
+      <div class="preset-list" id="preset-list"></div>
+      <button type="button" id="btn-share" style="margin-top:6px">Copy link to this view</button>
+    </div>
+
+    <div class="filter-group">
+      <span class="filter-label" id="mute-label">Mute list</span>
+      <form class="mute-add" id="mute-form" aria-labelledby="mute-label">
         <input class="search" id="mute-input" placeholder="mute keyword…" type="text" aria-label="Keyword to mute">
         <button type="submit">add</button>
       </form>
       <div class="mute-list" id="mute-list"></div>
     </div>
 
-    <div class="filter-group">
-      <div class="filter-label">Show Read</div>
+    <fieldset class="filter-group">
+      <legend class="filter-label">Show read</legend>
       <div id="filter-read">
-        <span class="chip active" data-f="read" data-v="unread">unread only</span>
-        <span class="chip" data-f="read" data-v="all">all</span>
+        <button type="button" class="chip active" data-f="read" data-v="unread" aria-pressed="true">unread only</button>
+        <button type="button" class="chip" data-f="read" data-v="all" aria-pressed="false">all</button>
       </div>
-    </div>
+    </fieldset>
 
     <div class="filter-group">
-      <div class="filter-label">Source Status</div>
+      <span class="filter-label">Source status</span>
       <div class="source-list" id="source-status"></div>
     </div>
   </aside>
 
-  <main class="main main-news">
-    <h2>The Feed <span class="count" id="visible-count">—</span></h2>
+  <div class="main-wrap">
+
+  <main class="main" id="panel-news" role="tabpanel" aria-labelledby="tab-news">
+    <h2>The Feed <span class="count" id="visible-count" aria-live="polite">—</span></h2>
     <div class="data-banner" id="data-banner" role="status" aria-live="polite"></div>
-    <div class="articles" id="articles">
+    <section class="breaking-strip" id="breaking-strip" aria-label="Breaking stories" hidden></section>
+    <div class="view-bar" role="group" aria-label="View">
+      <button type="button" class="chip active" data-view="feed" aria-pressed="true">Latest</button>
+      <button type="button" class="chip" data-view="top" aria-pressed="false">Top this week</button>
+      <span class="spacer"></span>
+    </div>
+    <div class="articles" id="articles" role="list" aria-label="News stories">
       <div class="loading-screen">Loading saved articles…</div>
+    </div>
+    <div class="load-more-wrap" id="news-more-wrap" hidden>
+      <button type="button" id="news-more">Show more</button>
     </div>
   </main>
 
-  <main class="main main-guides">
+  <main class="main" id="panel-releases" role="tabpanel" aria-labelledby="tab-releases" hidden>
+    <h2>Model releases <span class="count" id="rel-count" aria-live="polite">—</span></h2>
+    <div class="data-banner" id="rel-banner" role="status" aria-live="polite"></div>
+    <div class="controls">
+      <label class="sr-only" for="r-q">Search releases</label>
+      <input class="search" id="r-q" placeholder="search releases…" type="search" autocomplete="off">
+      <label class="sr-only" for="r-company">Company</label>
+      <select class="guides-select" id="r-company"><option value="all">all companies</option></select>
+      <label class="sr-only" for="r-kind">Kind</label>
+      <select class="guides-select" id="r-kind">
+        <option value="all">all kinds</option>
+        <option value="model">model</option>
+        <option value="tool">tool</option>
+        <option value="dataset">dataset</option>
+        <option value="library">library</option>
+      </select>
+      <label class="sr-only" for="r-open">Openness</label>
+      <select class="guides-select" id="r-open">
+        <option value="all">open and closed</option>
+        <option value="open">open weights / source</option>
+        <option value="closed">closed</option>
+        <option value="unknown">unknown</option>
+      </select>
+    </div>
+    <div id="rel-list" role="list" aria-label="Releases"></div>
+    <div class="load-more-wrap" id="rel-more-wrap" hidden>
+      <button type="button" id="rel-more">Show more</button>
+    </div>
+  </main>
+
+  <main class="main" id="panel-digest" role="tabpanel" aria-labelledby="tab-digest" hidden>
+    <h2>Digest <span class="count" id="digest-count">—</span></h2>
+    <div class="data-banner" id="digest-banner" role="status" aria-live="polite"></div>
+    <div class="controls" role="group" aria-label="Digest period">
+      <button type="button" class="chip active" data-digest="daily" aria-pressed="true">Daily</button>
+      <button type="button" class="chip" data-digest="weekly" aria-pressed="false">Weekly</button>
+      <button type="button" id="digest-copy">Copy as Markdown</button>
+    </div>
+    <textarea class="digest-md" id="digest-md" readonly hidden aria-label="Digest as Markdown"></textarea>
+    <div id="digest-body"></div>
+  </main>
+
+  <main class="main" id="panel-guides" role="tabpanel" aria-labelledby="tab-guides" hidden>
     <section class="guides-section">
-      <h2>✨ Featured Guides <span class="count" id="featured-count">—</span></h2>
+      <h2>Featured guides <span class="count" id="featured-count">—</span></h2>
       <div class="featured-list" id="featured-list">
         <div class="loading-screen">Loading featured guides…</div>
       </div>
     </section>
 
     <section class="guides-section">
-      <h2>🔥 Latest <span class="count" id="latest-count">—</span></h2>
-      <div class="guides-controls">
-        <select class="guides-select" id="guides-filter" aria-label="Filter guides by source">
-          <option value="all">All sources</option>
-          <option value="Blogs">Blogs</option>
-          <option value="YouTube">YouTube</option>
-          <option value="GitHub">GitHub</option>
-          <option value="Reddit">Reddit</option>
-          <option value="HN">HN</option>
-          <option value="Bluesky">Bluesky</option>
-          <option value="Dev Communities">Dev Communities</option>
-        </select>
-        <select class="guides-select" id="guides-sort" aria-label="Sort guides">
+      <h2>Latest <span class="count" id="latest-count">—</span></h2>
+      <div class="data-banner" id="guides-banner" role="status" aria-live="polite"></div>
+      <div class="controls">
+        <label class="sr-only" for="guides-q">Search guides</label>
+        <input class="search" id="guides-q" placeholder="search guides…" type="search" autocomplete="off">
+        <label class="sr-only" for="guides-filter">Filter guides by source kind</label>
+        <select class="guides-select" id="guides-filter"><option value="all">All sources</option></select>
+        <label class="sr-only" for="guides-sort">Sort guides</label>
+        <select class="guides-select" id="guides-sort">
           <option value="recent">Most recent</option>
+          <option value="score">Top score</option>
           <option value="discussed">Most discussed</option>
           <option value="alpha">Alphabetical by source</option>
         </select>
       </div>
-      <div class="articles" id="latest-list">
+      <div class="articles" id="latest-list" role="list" aria-label="Guides">
         <div class="loading-screen">Loading latest guides…</div>
       </div>
       <div class="load-more-wrap" id="guides-loadmore-wrap" style="display:none;">
-        <button id="guides-loadmore">Load more</button>
+        <button type="button" id="guides-loadmore">Load more</button>
       </div>
     </section>
   </main>
 
+  </div>
 </div>
 
 <footer>
-  Built by <a href="https://github.com/0xmortuex" target="_blank" rel="noopener">0xmortuex</a> ·
-  <a href="https://github.com/0xmortuex/ai-news-tracker" target="_blank" rel="noopener">source</a> ·
-  news comes from a static <a href="https://github.com/0xmortuex/ai-news-tracker/blob/master/docs/CONTRACT.md" target="_blank" rel="noopener">news.json</a> built by a scheduled job ·
-  your read state and mute list stay in this browser · titles and short excerpts link to the original publishers
+  Built by <a href="https://github.com/0xmortuex" target="_blank" rel="noopener noreferrer">0xmortuex</a> ·
+  <a href="https://github.com/0xmortuex/ai-news-tracker" target="_blank" rel="noopener noreferrer">source</a> ·
+  news comes from static JSON files (<a href="https://github.com/0xmortuex/ai-news-tracker/blob/master/docs/CONTRACT.md" target="_blank" rel="noopener noreferrer">contract</a>) built by a scheduled job ·
+  your read state, filters and mute list stay in this browser · titles and short excerpts link to the original publishers
 </footer>
 
-<div class="toast" id="toast"></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<noscript><p style="padding:20px;font-family:monospace">This page needs JavaScript to show the news.</p></noscript>
 
 <script src="guides-lib.js"></script>
 <script>
@@ -888,10 +683,11 @@
 // =========================================================================
 // ---------------------------------------------------------------------------
 // LEGACY FALLBACK ONLY. The News tab reads the published news.json (see
-// DATA_URL below). This browser-side scrape through the open CORS Worker and
+// DATA_BASE below). This browser-side scrape through the open CORS Worker and
 // third-party proxies runs ONLY when news.json is unreachable, and the page
-// says so in a banner. Several of these feeds are dead (Microsoft AI 410,
-// VentureBeat 429, Google News stand-ins); they are kept as-is for the fallback.
+// says so in a banner. The same goes for the Guides tab: guides.json first,
+// the Worker only when that file cannot be fetched (so the Worker can be
+// deleted later by removing PROXIES, LEGACY_SOURCES and the WORKER_* paths).
 // ---------------------------------------------------------------------------
 const LEGACY_SOURCES = [
   { name: "OpenAI",          url: "https://openai.com/news/rss.xml",                         country: "US",    type: "COMPANY" },
@@ -916,65 +712,35 @@ const LEGACY_SOURCES = [
   { name: "Caixin AI (Google News)",         url: "https://news.google.com/rss/search?q=site:caixinglobal.com+ai+when:14d&hl=en-US&gl=US&ceid=US:en",              country: "CN", type: "NEWS" },
 ];
 
-// CORS proxy chain. NOT used by the News tab any more (it reads news.json). Still used by the
-// Guides tab for its own sources and by the legacy News fallback. Try in order; fall back to the next.
+// CORS proxy chain. Used ONLY by the legacy fallbacks (News scrape, Guides worker path).
 const PROXIES = [
-  {
-    name: "own-worker",
-    url: (feed) => `https://ai-news-cors.mortuexhavoc.workers.dev/?url=${encodeURIComponent(feed)}`,
-    parse: async (resp) => parseRSSText(await resp.text()),
-  },
-  {
-    name: "codetabs",
-    url: (feed) => `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(feed)}`,
-    parse: async (resp) => parseRSSText(await resp.text()),
-  },
-  {
-    name: "allorigins",
-    url: (feed) => `https://api.allorigins.win/raw?url=${encodeURIComponent(feed)}`,
-    parse: async (resp) => parseRSSText(await resp.text()),
-  },
+  { name: "own-worker", url: (feed) => `https://ai-news-cors.mortuexhavoc.workers.dev/?url=${encodeURIComponent(feed)}`, parse: async (resp) => parseRSSText(await resp.text()) },
+  { name: "codetabs",   url: (feed) => `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(feed)}`,            parse: async (resp) => parseRSSText(await resp.text()) },
+  { name: "allorigins", url: (feed) => `https://api.allorigins.win/raw?url=${encodeURIComponent(feed)}`,                 parse: async (resp) => parseRSSText(await resp.text()) },
 ];
 
 const STORAGE_KEY = "ai-news-articles-v2";
 const READ_KEY    = "ai-news-read-v2";
 const META_KEY    = "ai-news-meta-v2";
 
-// =========================================================================
-// STATE
-// =========================================================================
-let articles = loadJSON(STORAGE_KEY, []);
-let readSet  = new Set(loadJSON(READ_KEY, []));
-let meta     = loadJSON(META_KEY, { lastFetch: null, sourceStatus: {} });
-let filters  = { country: "all", type: "all", read: "unread", q: "", kind: "all", topic: "all", company: "all", minImp: 0 };
-
-// --- Published data (the main news path) -----------------------------------
+// --- Published data --------------------------------------------------------
 const DATA_URL = "https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/news.json";
-const NEWS_CACHE_KEY = "ai-news-cache-v3";   // last good news.json (offline)
-const MUTE_KEY = "ai-news-mute-v1";          // { sources:[], companies:[], keywords:[] }
+const NEWS_CACHE_KEY = "ai-news-cache-v3";   // last good news.json (offline, used without a service worker)
+const MUTE_KEY    = "ai-news-mute-v1";       // { sources:[], companies:[], keywords:[] }
+const LANG_KEY    = "ai-news-langs-v1";      // ["en", ...]
+const THEME_KEY   = "ai-news-theme-v1";      // "light" | "dark" (absent = follow the system)
+const PRESET_KEY  = "ai-news-presets-v1";    // [{ name, state }]
 const NEWS_POLL_MS = 5 * 60 * 1000;
-let dataMode = "loading";                    // loading | live | cache | legacy | error
-let newsDoc = null;                          // last parsed news.json
-let mute = loadJSON(MUTE_KEY, { sources: [], companies: [], keywords: [] });
-if (!mute || typeof mute !== "object") mute = { sources: [], companies: [], keywords: [] };
-for (const k of ["sources", "companies", "keywords"]) if (!Array.isArray(mute[k])) mute[k] = [];
-
-// ?data=../out/news.json lets a local static server point the page at a local
-// file (testing). Only same-origin relative .json paths are accepted.
-function dataUrl() {
-  const p = new URLSearchParams(location.search).get("data");
-  if (p && /^(\.{0,2}\/)*[A-Za-z0-9_./-]+\.json$/.test(p) && !p.includes("//")) return p;
-  return DATA_URL;
-}
-function safeUrl(u) {
-  try {
-    const x = new URL(u, location.href);
-    return (x.protocol === "https:" || x.protocol === "http:") ? x.href : "#";
-  } catch { return "#"; }
-}
+const PAGE_SIZE = 60;                        // cards rendered per page
+const SEARCH_DEBOUNCE_MS = 180;
+const NEW_WINDOW_MS = 7 * 24 * 3600 * 1000;
+const MAX_PRESETS = 20;
+const LANG_CHOICES = ["en", "tr", "zh", "other"];
+const DEFAULT_LANGS = ["en"];
+const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 // =========================================================================
-// HELPERS
+// HELPERS (no DOM)
 // =========================================================================
 function loadJSON(key, fallback) {
   try {
@@ -1004,15 +770,167 @@ function relTime(d) {
   if (days < 30) return days + "d ago";
   return d.toLocaleDateString();
 }
+function safeUrl(u) {
+  try {
+    const x = new URL(u, location.href);
+    return (x.protocol === "https:" || x.protocol === "http:") ? x.href : "#";
+  } catch { return "#"; }
+}
 function articleId(art) {
   return art.id || art.url || (art.title + "::" + art.source);
 }
+function langBucket(l) {
+  const c = String(l || "en").toLowerCase().split(/[-_]/)[0];
+  return c === "en" || c === "tr" || c === "zh" ? c : "other";
+}
+function searchTerms(q) {
+  return String(q || "").toLowerCase().split(/\s+/).filter(Boolean).slice(0, 8);
+}
+// Escape `text` and wrap every occurrence of a search term in <mark>.
+// Matching runs on the RAW text, escaping on each piece, so markup in the data
+// can never survive.
+function highlight(text, terms) {
+  const s = String(text == null ? "" : text);
+  if (!terms || !terms.length) return escapeHTML(s);
+  const re = new RegExp(terms.slice().sort((a, b) => b.length - a.length)
+    .map(t => t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|"), "gi");
+  let out = "", last = 0, m;
+  while ((m = re.exec(s)) !== null) {
+    if (m[0].length === 0) { re.lastIndex++; continue; }
+    out += escapeHTML(s.slice(last, m.index)) + "<mark>" + escapeHTML(m[0]) + "</mark>";
+    last = m.index + m[0].length;
+  }
+  return out + escapeHTML(s.slice(last));
+}
+function monthKey(iso) {
+  const t = new Date(iso);
+  if (isNaN(t)) return "unknown";
+  return t.getUTCFullYear() + "-" + String(t.getUTCMonth() + 1).padStart(2, "0");
+}
+function monthLabel(key) {
+  const m = /^(\d{4})-(\d{2})$/.exec(key);
+  return m ? MONTHS[Number(m[2]) - 1] + " " + m[1] : "Undated";
+}
+function isRecent(iso, now) {
+  const t = new Date(iso).getTime();
+  return !isNaN(t) && (now - t) < NEW_WINDOW_MS && t <= now + 3600000;
+}
+function offlineLabel(iso) {
+  const d = new Date(iso);
+  if (isNaN(d)) return "Offline copy (time unknown)";
+  return "Offline copy from " + d.toLocaleString() + " (" + relTime(d) + ")";
+}
 
+// ---- Hash state (#/news?q=...&topic=...) ----------------------------------
+const ROUTES = ["news", "releases", "digest", "guides"];
+function parseHash(hash) {
+  const h = String(hash || "").replace(/^#\/?/, "");
+  const qi = h.indexOf("?");
+  const path = (qi === -1 ? h : h.slice(0, qi)).replace(/\/+$/, "");
+  let params;
+  try { params = new URLSearchParams(qi === -1 ? "" : h.slice(qi + 1)); } catch { params = new URLSearchParams(""); }
+  return { route: ROUTES.includes(path) ? path : "news", params };
+}
+function filtersToParams(f, langs) {
+  const p = new URLSearchParams();
+  if (f.q) p.set("q", f.q);
+  if (f.kind !== "all") p.set("kind", f.kind);
+  if (f.topic !== "all") p.set("topic", f.topic);
+  if (f.company !== "all") p.set("company", f.company);
+  if (f.minImp > 0) p.set("imp", String(f.minImp));
+  if (f.country !== "all") p.set("country", f.country);
+  if (f.type !== "all") p.set("type", f.type);
+  if (f.read !== "unread") p.set("read", f.read);
+  if (f.view !== "feed") p.set("view", f.view);
+  const l = LANG_CHOICES.filter(x => langs.includes(x));
+  if (l.join(",") !== DEFAULT_LANGS.join(",")) p.set("lang", l.join(","));
+  return p;
+}
+// Validate every value; unknown or oversized input is ignored, never trusted.
+function paramsToFilters(p, base) {
+  const f = Object.assign({}, base);
+  const str = (k, max) => { const v = p.get(k); return v && v.length <= max ? v : null; };
+  if (p.has("q")) f.q = (str("q", 120) || "").trim();
+  const kind = str("kind", 40); if (kind) f.kind = kind;
+  const topic = str("topic", 60); if (topic) f.topic = topic;
+  const company = str("company", 60); if (company) f.company = company;
+  const imp = Number(p.get("imp")); if (p.has("imp") && imp >= 0 && imp <= 100) f.minImp = Math.floor(imp);
+  const country = str("country", 10); if (["US", "CN", "EU", "OTHER"].includes(country)) f.country = country;
+  const type = str("type", 20); if (["COMPANY", "NEWS", "RESEARCH", "COMMUNITY", "NEWSLETTER", "REPO"].includes(type)) f.type = type;
+  const read = str("read", 10); if (read === "all" || read === "unread") f.read = read;
+  const view = str("view", 10); if (view === "top" || view === "feed") f.view = view;
+  let langs = null;
+  if (p.has("lang")) {
+    langs = String(p.get("lang")).split(",").filter(x => LANG_CHOICES.includes(x));
+    if (!langs.length) langs = null;
+  }
+  return { filters: f, langs };
+}
+function hashFor(route, params) {
+  const s = params && params.toString ? params.toString() : "";
+  return "#/" + route + (s ? "?" + s : "");
+}
+
+// ---- Digest as Markdown (pure) ---------------------------------------------
+function mdEscape(s) { return String(s == null ? "" : s).replace(/([\\`*_{}\[\]<>#|])/g, "\\$1").replace(/\s+/g, " ").trim(); }
+function digestToMarkdown(d) {
+  const kind = d.period && d.period.kind ? d.period.kind : "digest";
+  const from = d.period && d.period.from ? String(d.period.from).slice(0, 10) : "";
+  const to = d.period && d.period.to ? String(d.period.to).slice(0, 10) : "";
+  const lines = ["# AI news " + kind + " digest" + (from || to ? " (" + from + (to && to !== from ? " to " + to : "") + ")" : ""), ""];
+  for (const sec of d.sections || []) {
+    lines.push("## " + mdEscape(sec.title || sec.topic || "Other"), "");
+    for (const it of sec.items || []) {
+      const url = safeUrl(it.url);
+      const title = mdEscape(it.title);
+      const also = (it.alsoIn || []).length ? ", +" + it.alsoIn.length + " more" : "";
+      lines.push("- " + (url === "#" ? title : "[" + title + "](" + url.replace(/\)/g, "%29") + ")") + " - " + mdEscape(it.source) + also);
+    }
+    lines.push("");
+  }
+  return lines.join("\n").replace(/\n{3,}/g, "\n\n").trim() + "\n";
+}
+
+// =========================================================================
+// STATE
+// =========================================================================
+let articles = loadJSON(STORAGE_KEY, []);
+let readSet  = new Set(loadJSON(READ_KEY, []));
+let meta     = loadJSON(META_KEY, { lastFetch: null, sourceStatus: {} });
+let filters  = { country: "all", type: "all", read: "unread", q: "", kind: "all", topic: "all", company: "all", minImp: 0, view: "feed" };
+let dataMode = "loading";                    // loading | live | cache | legacy | error
+let newsDoc = null;                          // last parsed news.json
+let offlineAt = null;                        // set when the service worker served a stored copy
+let newsShown = PAGE_SIZE;
+let mute = loadJSON(MUTE_KEY, { sources: [], companies: [], keywords: [] });
+if (!mute || typeof mute !== "object") mute = { sources: [], companies: [], keywords: [] };
+for (const k of ["sources", "companies", "keywords"]) if (!Array.isArray(mute[k])) mute[k] = [];
+let langs = (function () {
+  const v = loadJSON(LANG_KEY, DEFAULT_LANGS);
+  const ok = Array.isArray(v) ? v.filter(x => LANG_CHOICES.includes(x)) : [];
+  return ok.length ? ok : DEFAULT_LANGS.slice();
+})();
+let presets = loadJSON(PRESET_KEY, []);
+if (!Array.isArray(presets)) presets = [];
+let activeTab = "news";
+
+// ?data=../out/news.json lets a local static server point the page at a local
+// file (testing). Only same-origin relative .json paths are accepted.
+function dataUrl() {
+  const p = new URLSearchParams(location.search).get("data");
+  if (p && /^(\.{0,2}\/)*[A-Za-z0-9_./-]+\.json$/.test(p) && !p.includes("//")) return p;
+  return DATA_URL;
+}
+// Sibling files (releases.json, digest.json, guides.json) live next to news.json.
+function dataFileUrl(name) { return dataUrl().replace(/[^/]*$/, name); }
+
+// =========================================================================
+// LEGACY SCRAPE (fallback only)
+// =========================================================================
 function parseRSSText(text) {
   const parser = new DOMParser();
   const doc = parser.parseFromString(text, "application/xml");
   if (doc.querySelector("parsererror")) throw new Error("XML parse error");
-  // RSS 2.0
   let items = Array.from(doc.querySelectorAll("item"));
   if (items.length > 0) {
     return items.slice(0, 30).map(it => ({
@@ -1022,7 +940,6 @@ function parseRSSText(text) {
       date:    it.querySelector("pubDate") ? new Date(it.querySelector("pubDate").textContent) : new Date(),
     }));
   }
-  // Atom
   items = Array.from(doc.querySelectorAll("entry"));
   return items.slice(0, 30).map(it => ({
     title:   (it.querySelector("title")?.textContent || "").trim(),
@@ -1034,9 +951,6 @@ function parseRSSText(text) {
   }));
 }
 
-// =========================================================================
-// FETCH
-// =========================================================================
 async function fetchSource(src) {
   setSourceStatus(src.name, "loading", "fetching…");
   for (const proxy of PROXIES) {
@@ -1051,15 +965,12 @@ async function fetchSource(src) {
       const tagged = items.filter(i => i.url && i.title).map(i => ({
         ...i,
         date: i.date instanceof Date && !isNaN(i.date) ? i.date.toISOString() : new Date().toISOString(),
-        source: src.name,
-        country: src.country,
-        type: src.type,
+        source: src.name, country: src.country, type: src.type,
       }));
       setSourceStatus(src.name, "ok", `${tagged.length} via ${proxy.name}`);
       return tagged;
     } catch (err) {
       console.warn(`[${src.name}] ${proxy.name} failed:`, err.message);
-      // try next proxy
     }
   }
   setSourceStatus(src.name, "err", "all proxies failed");
@@ -1070,16 +981,11 @@ async function legacyFetchAll() {
   const btn = document.getElementById("btn-refresh");
   btn.disabled = true;
   btn.textContent = "↻ Fetching…";
-
-  // Reset all source status to loading
   LEGACY_SOURCES.forEach(s => setSourceStatus(s.name, "loading", "queued"));
-
-  // Run in parallel, max 4 at a time so we don't hammer proxies
   const queue = [...LEGACY_SOURCES];
   const allNew = [];
   const concurrency = 4;
   let okCount = 0;
-
   async function worker() {
     while (queue.length) {
       const src = queue.shift();
@@ -1089,46 +995,36 @@ async function legacyFetchAll() {
       updateSourceStatusUI();
     }
   }
-
   await Promise.all(Array(concurrency).fill(0).map(worker));
-
-  // Dedupe by URL, merge with existing
   const existingByUrl = new Map(articles.map(a => [a.url, a]));
   let added = 0;
   for (const item of allNew) {
-    if (!existingByUrl.has(item.url)) {
-      existingByUrl.set(item.url, item);
-      added++;
-    }
+    if (!existingByUrl.has(item.url)) { existingByUrl.set(item.url, item); added++; }
   }
   articles = Array.from(existingByUrl.values())
     .sort((a, b) => new Date(b.date) - new Date(a.date))
     .slice(0, 1000);
-
   meta.lastFetch = new Date().toISOString();
   saveJSON(STORAGE_KEY, articles);
   saveJSON(META_KEY, meta);
-
   btn.disabled = false;
   btn.textContent = "↻ Refresh";
-
   toast(`+${added} new · ${okCount}/${LEGACY_SOURCES.length} sources ok`);
   render();
   return okCount;
 }
 
 // =========================================================================
-// UI: SOURCE STATUS
+// SOURCE STATUS
 // =========================================================================
 function setSourceStatus(name, state, message) {
   meta.sourceStatus[name] = { state, message, at: new Date().toISOString() };
 }
-
 function updateSourceStatusUI() {
   const el = document.getElementById("source-status");
   if (!el) return;
   if (dataMode !== "legacy" && newsDoc) {
-    const list = (newsDoc.sources || []).slice().sort((a, b) => (b.stale - a.stale) || a.name.localeCompare(b.name));
+    const list = (newsDoc.sources || []).slice().sort((a, b) => (b.stale - a.stale) || String(a.name).localeCompare(String(b.name)));
     el.innerHTML = list.map(s => {
       const state = s.stale ? "stale" : (s.status === "ok" ? "ok" : "err");
       const msg = s.stale ? "stale" : (s.status === "ok" ? String(s.itemCount ?? "") : "error");
@@ -1146,104 +1042,142 @@ function updateSourceStatusUI() {
   }
   el.innerHTML = LEGACY_SOURCES.map(s => {
     const st = meta.sourceStatus[s.name] || { state: "", message: "—" };
-    return `<div class="source-row ${st.state}">
+    return `<div class="source-row ${escapeHTML(st.state)}">
       <span class="icon"></span>
       <span class="name">${escapeHTML(s.name)}</span>
       <span class="count">${escapeHTML(st.message || "")}</span>
     </div>`;
   }).join("");
-
   const ok = LEGACY_SOURCES.filter(s => meta.sourceStatus[s.name]?.state === "ok").length;
   document.getElementById("stat-sources").textContent = `${ok}/${LEGACY_SOURCES.length}`;
 }
 
 // =========================================================================
-// UI: ARTICLES
+// NEWS: filtering, cards, pagination
 // =========================================================================
-function render() {
-  // Filter
-  let visible = articles.filter(a => {
-    if (isMuted(a)) return false;
-    if (filters.country !== "all" && a.country !== filters.country) return false;
-    if (filters.type    !== "all" && a.type    !== filters.type)    return false;
-    if (filters.kind    !== "all" && a.kind    !== filters.kind)    return false;
-    if (filters.topic   !== "all" && !(a.topics || []).includes(filters.topic)) return false;
-    if (filters.company !== "all" && !(a.companies || []).includes(filters.company)) return false;
-    if (filters.minImp > 0 && (a.importance || 0) < filters.minImp) return false;
-    if (filters.read === "unread" && readSet.has(articleId(a)))     return false;
-    if (filters.q && !a.title.toLowerCase().includes(filters.q.toLowerCase())) return false;
-    return true;
-  });
+function isMuted(a) {
+  if (mute.sources.includes(a.sourceId)) return true;
+  if ((a.companies || []).some(c => mute.companies.includes(c))) return true;
+  if (mute.keywords.length) {
+    const t = (a.title + " " + (a.summary || "")).toLowerCase();
+    if (mute.keywords.some(k => t.includes(k))) return true;
+  }
+  return false;
+}
+function haystack(a) {
+  if (a._hay === undefined) {
+    a._hay = [a.title, a.summary, a.source, a.kind, (a.companies || []).join(" "), (a.models || []).join(" "),
+      (a.topics || []).join(" "), (a.labels || []).join(" ")].join(" \n ").toLowerCase();
+  }
+  return a._hay;
+}
+// Everything except the view mode: used by the feed, the top list and the breaking strip.
+function baseMatch(a, opts) {
+  if (isMuted(a)) return false;
+  if (!langs.includes(langBucket(a.lang))) return false;
+  if (opts && opts.skipFilters) return true;
+  if (filters.country !== "all" && a.country !== filters.country) return false;
+  if (filters.type    !== "all" && a.type    !== filters.type)    return false;
+  if (filters.kind    !== "all" && a.kind    !== filters.kind)    return false;
+  if (filters.topic   !== "all" && !(a.topics || []).includes(filters.topic)) return false;
+  if (filters.company !== "all" && !(a.companies || []).includes(filters.company)) return false;
+  if (filters.minImp > 0 && (a.importance || 0) < filters.minImp) return false;
+  if (filters.read === "unread" && readSet.has(articleId(a))) return false;
+  if (filters.q) {
+    const h = haystack(a);
+    if (!searchTerms(filters.q).every(t => h.includes(t))) return false;
+  }
+  return true;
+}
+function computeVisible() {
+  let list = articles.filter(a => baseMatch(a));
+  if (filters.view === "top") {
+    const now = Date.now();
+    list = list.filter(a => isRecent(a.date, now))
+      .sort((a, b) => ((b.baseImportance ?? b.importance ?? 0) - (a.baseImportance ?? a.importance ?? 0)) || (new Date(b.date) - new Date(a.date)));
+  }
+  return list;
+}
 
-  visible = visible.slice(0, 200);
+function cardHtml(a, terms) {
+  const id = articleId(a);
+  const isRead = readSet.has(id);
+  const isNew = (Date.now() - new Date(a.date).getTime()) < 60 * 60 * 1000;
+  const imp = Number.isFinite(a.importance) ? a.importance : null;
+  const impCls = imp === null ? "" : imp >= 70 ? "top" : imp >= 40 ? "hi" : "";
+  const pills = [];
+  if (a.kind && a.kind !== "other") pills.push(`<span class="tag-pill kind">${escapeHTML(a.kind)}</span>`);
+  for (const c of (a.companies || []).slice(0, 3)) pills.push(`<span class="tag-pill company">${highlight(c, terms)}</span>`);
+  for (const m of (a.models || []).slice(0, 2)) pills.push(`<span class="tag-pill">${highlight(m, terms)}</span>`);
+  for (const t of (a.topics || []).slice(0, 4)) pills.push(`<span class="tag-pill">#${highlight(t, terms)}</span>`);
+  const also = (a.alsoIn || []).length
+    ? `<div class="also-in">also in: ${a.alsoIn.slice(0, 6).map(x => `<a href="${escapeHTML(safeUrl(x.url))}" target="_blank" rel="noopener noreferrer">${escapeHTML(x.source)}</a>`).join(" · ")}${a.alsoIn.length > 6 ? ` · +${a.alsoIn.length - 6}` : ""}</div>`
+    : "";
+  const cn = ["US", "CN", "EU", "OTHER"].includes(a.country) ? a.country : "OTHER";
+  const langPill = langBucket(a.lang) !== "en" ? `<span class="tag-pill">${escapeHTML(String(a.lang || "").toUpperCase())}</span>` : "";
+  return `
+    <div role="listitem"><article class="article ${isRead ? 'read' : ''}" data-c="${cn}">
+      <div class="article-meta">
+        <span class="country-pill ${cn}">${cn === "OTHER" ? "GLOBAL" : cn}</span>
+        <span class="source-name">${highlight(a.source, terms)}</span>
+        <span>${escapeHTML(relTime(new Date(a.date)))}</span>
+        ${langPill}
+        ${a.thirdParty ? `<span class="third-party" title="Scraped by a third party; not published by the company itself">third-party</span>` : ""}
+        ${imp !== null ? `<span class="imp ${impCls}" title="importance 0-100">${imp}</span>` : ""}
+        ${a.breaking ? `<span class="breaking-badge">BREAKING</span>` : (isNew ? `<span class="new-badge">NEW</span>` : "")}
+        ${a.sourceId ? `<button type="button" class="mute-link" data-mute-source="${escapeHTML(a.sourceId)}" data-mute-name="${escapeHTML(a.source)}" title="Hide this source">mute source</button>` : ""}
+      </div>
+      <h3>
+        <a href="${escapeHTML(safeUrl(a.url))}" target="_blank" rel="noopener noreferrer" data-id="${escapeHTML(id)}">${highlight(a.title, terms)}</a>
+      </h3>
+      ${a.summary ? `<p>${highlight(a.summary, terms)}</p>` : ""}
+      ${pills.length ? `<div class="tags">${pills.join("")}</div>` : ""}
+      ${also}
+    </article></div>`;
+}
 
+let renderedCount = 0;      // cards currently in #articles (for append-only paging)
+function render(opts) {
+  const append = !!(opts && opts.append);
+  const visible = computeVisible();
+  const terms = searchTerms(filters.q);
   const el = document.getElementById("articles");
+  const more = document.getElementById("news-more-wrap");
+  const shown = visible.slice(0, newsShown);
   if (visible.length === 0) {
+    renderedCount = 0;
     if (articles.length === 0) {
       el.innerHTML = dataMode === "loading"
         ? `<div class="loading-screen">Loading the latest published news…</div>`
-        : `<div class="empty">
-        <div class="big">empty.</div>
-        <div>No articles could be loaded. Press <strong>Refresh</strong> to try again.</div>
-      </div>`;
+        : `<div class="empty"><div class="big">empty.</div><div>No articles could be loaded. Press <strong>Refresh</strong> to try again.</div></div>`;
     } else {
-      el.innerHTML = `<div class="empty">
-        <div class="big">no matches.</div>
-        <div>Try adjusting filters or clearing search.</div>
-      </div>`;
+      el.innerHTML = `<div class="empty"><div class="big">no matches.</div><div>Try adjusting filters, languages or clearing search.</div></div>`;
     }
+  } else if (append && renderedCount > 0 && renderedCount < shown.length && typeof el.insertAdjacentHTML === "function") {
+    el.insertAdjacentHTML("beforeend", shown.slice(renderedCount).map(a => cardHtml(a, terms)).join(""));
+    renderedCount = shown.length;
   } else {
-    el.innerHTML = visible.map(a => {
-      const id = articleId(a);
-      const isRead = readSet.has(id);
-      const isNew = (Date.now() - new Date(a.date).getTime()) < 60 * 60 * 1000;
-      const imp = Number.isFinite(a.importance) ? a.importance : null;
-      const impCls = imp === null ? "" : imp >= 70 ? "top" : imp >= 40 ? "hi" : "";
-      const pills = [];
-      if (a.kind && a.kind !== "other") pills.push(`<span class="tag-pill kind">${escapeHTML(a.kind)}</span>`);
-      for (const c of (a.companies || []).slice(0, 3)) pills.push(`<span class="tag-pill company">${escapeHTML(c)}</span>`);
-      for (const m of (a.models || []).slice(0, 2)) pills.push(`<span class="tag-pill">${escapeHTML(m)}</span>`);
-      for (const t of (a.topics || []).slice(0, 4)) pills.push(`<span class="tag-pill">#${escapeHTML(t)}</span>`);
-      const also = (a.alsoIn || []).length
-        ? `<div class="also-in">also in: ${a.alsoIn.slice(0, 6).map(x => `<a href="${escapeHTML(safeUrl(x.url))}" target="_blank" rel="noopener">${escapeHTML(x.source)}</a>`).join(" · ")}${a.alsoIn.length > 6 ? ` · +${a.alsoIn.length - 6}` : ""}</div>`
-        : "";
-      const cn = ["US", "CN", "EU", "OTHER"].includes(a.country) ? a.country : "OTHER";
-      return `
-        <article class="article ${isRead ? 'read' : ''}" data-c="${cn}">
-          <div class="article-meta">
-            <span class="country-pill ${cn}">${cn === "OTHER" ? "GLOBAL" : cn}</span>
-            <span class="source-name">${escapeHTML(a.source)}</span>
-            <span>${relTime(new Date(a.date))}</span>
-            ${a.thirdParty ? `<span class="third-party" title="Scraped by a third party; not published by the company itself">third-party</span>` : ""}
-            ${imp !== null ? `<span class="imp ${impCls}" title="importance 0-100">${imp}</span>` : ""}
-            ${a.breaking ? `<span class="breaking-badge">BREAKING</span>` : (isNew ? `<span class="new-badge">NEW</span>` : "")}
-            ${a.sourceId ? `<button type="button" class="mute-link" data-mute-source="${escapeHTML(a.sourceId)}" data-mute-name="${escapeHTML(a.source)}" title="Hide this source">mute source</button>` : ""}
-          </div>
-          <h3>
-            <a href="${escapeHTML(safeUrl(a.url))}" target="_blank" rel="noopener" data-id="${escapeHTML(id)}">
-              ${escapeHTML(a.title)}
-            </a>
-          </h3>
-          ${a.summary ? `<p>${escapeHTML(a.summary)}</p>` : ""}
-          ${pills.length ? `<div class="tags">${pills.join("")}</div>` : ""}
-          ${also}
-        </article>`;
-    }).join("");
-
-    el.querySelectorAll("a[data-id]").forEach(a => {
-      a.addEventListener("click", () => {
-        readSet.add(a.dataset.id);
-        saveJSON(READ_KEY, [...readSet]);
-        a.closest(".article").classList.add("read");
-        updateStats();
-      });
-    });
+    el.innerHTML = shown.map(a => cardHtml(a, terms)).join("");
+    renderedCount = shown.length;
   }
-
-  // Stats
+  if (more) more.hidden = !(visible.length > shown.length);
+  if (visible.length > shown.length) {
+    document.getElementById("news-more").textContent = `Show more (${visible.length - shown.length})`;
+  }
   document.getElementById("visible-count").textContent = `${visible.length} of ${articles.length}`;
+  renderBreaking();
   updateStats();
   updateSourceStatusUI();
+}
+
+function renderBreaking() {
+  const el = document.getElementById("breaking-strip");
+  if (!el) return;
+  const items = articles.filter(a => a.breaking && baseMatch(a, { skipFilters: true }))
+    .sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 5);
+  if (!items.length) { el.hidden = true; el.innerHTML = ""; return; }
+  el.hidden = false;
+  el.innerHTML = `<h2>Breaking</h2><ul>${items.map(a => `<li><a href="${escapeHTML(safeUrl(a.url))}" target="_blank" rel="noopener noreferrer" data-id="${escapeHTML(articleId(a))}">${escapeHTML(a.title)}</a><span class="when">${escapeHTML(a.source)} · ${escapeHTML(relTime(new Date(a.date)))}</span></li>`).join("")}</ul>`;
 }
 
 function updateStats() {
@@ -1256,72 +1190,59 @@ function updateStats() {
 }
 
 // =========================================================================
-// FILTERS
+// CONTROLS <-> STATE SYNC
 // =========================================================================
-document.querySelectorAll(".chip[data-f]").forEach(chip => {
-  chip.addEventListener("click", () => {
-    const f = chip.dataset.f, v = chip.dataset.v;
-    document.querySelectorAll(`.chip[data-f="${f}"]`).forEach(c => c.classList.remove("active"));
-    chip.classList.add("active");
-    filters[f] = v;
-    render();
+function syncControls() {
+  const setVal = (id, v) => { const e = document.getElementById(id); if (e) e.value = v; };
+  setVal("q", filters.q);
+  setVal("f-kind", filters.kind);
+  setVal("f-topic", filters.topic);
+  setVal("f-company", filters.company);
+  setVal("f-imp", String(filters.minImp));
+  document.querySelectorAll(".chip[data-f]").forEach(c => {
+    const on = filters[c.dataset.f] === c.dataset.v;
+    c.classList.toggle("active", on);
+    c.setAttribute("aria-pressed", String(on));
   });
-});
+  document.querySelectorAll(".chip[data-lang]").forEach(c => {
+    const on = langs.includes(c.dataset.lang);
+    c.classList.toggle("active", on);
+    c.setAttribute("aria-pressed", String(on));
+  });
+  document.querySelectorAll(".chip[data-view]").forEach(c => {
+    const on = filters.view === c.dataset.view;
+    c.classList.toggle("active", on);
+    c.setAttribute("aria-pressed", String(on));
+  });
+}
 
-document.getElementById("q").addEventListener("input", (e) => {
-  filters.q = e.target.value.trim();
+let hashTimer = null;
+function writeHash() {
+  if (activeTab !== "news") return;
+  const h = hashFor("news", filtersToParams(filters, langs));
+  try {
+    if (location.hash !== h) history.replaceState(null, "", location.pathname + location.search + h);
+  } catch (e) { console.warn("[hash]", e.message); }
+}
+// Any change of a filter goes through here: reset paging, redraw, update the URL.
+function filtersChanged() {
+  newsShown = PAGE_SIZE;
   render();
-});
-
-document.getElementById("btn-refresh").addEventListener("click", () => refreshNews(true));
-
-document.getElementById("btn-mark-read").addEventListener("click", () => {
-  articles.forEach(a => readSet.add(articleId(a)));
-  saveJSON(READ_KEY, [...readSet]);
-  toast(`Marked ${articles.length} read`);
-  render();
-});
-
-// =========================================================================
-// NEWS DATA PATH (published news.json) + MUTE LIST + BANNER
-// =========================================================================
-function isMuted(a) {
-  if (mute.sources.includes(a.sourceId)) return true;
-  if ((a.companies || []).some(c => mute.companies.includes(c))) return true;
-  if (mute.keywords.length) {
-    const t = (a.title + " " + (a.summary || "")).toLowerCase();
-    if (mute.keywords.some(k => t.includes(k))) return true;
-  }
-  return false;
+  writeHash();
 }
 
-function renderMuteList() {
-  const el = document.getElementById("mute-list");
-  if (!el) return;
-  const chips = [];
-  mute.sources.forEach(s => chips.push({ t: "sources", v: s, label: "source: " + sourceLabel(s) }));
-  mute.companies.forEach(s => chips.push({ t: "companies", v: s, label: "company: " + s }));
-  mute.keywords.forEach(s => chips.push({ t: "keywords", v: s, label: "keyword: " + s }));
-  el.innerHTML = chips.length
-    ? chips.map(c => `<span class="chip">${escapeHTML(c.label)}<button type="button" data-unmute="${c.t}" data-v="${escapeHTML(c.v)}" aria-label="Unmute ${escapeHTML(c.label)}">×</button></span>`).join("")
-    : `<span class="chip" style="opacity:.6">nothing muted</span>`;
-}
-function sourceLabel(id) {
-  const s = ((newsDoc && newsDoc.sources) || []).find(x => x.id === id);
-  if (s) return s.name;
-  const art = articles.find(x => x.sourceId === id);
-  return art ? art.source : id;
-}
-function saveMute() { saveJSON(MUTE_KEY, mute); renderMuteList(); render(); }
-
-function fillSelect(id, values, allLabel) {
+function fillSelect(id, values, allLabel, selected) {
   const sel = document.getElementById(id);
   if (!sel) return;
-  const cur = sel.value;
-  sel.innerHTML = `<option value="all">${allLabel}</option>` + values.map(v => `<option value="${escapeHTML(v)}">${escapeHTML(v)}</option>`).join("");
-  if (values.includes(cur)) sel.value = cur;
+  const all = values.slice();
+  if (selected && selected !== "all" && !all.includes(selected)) all.push(selected);
+  sel.innerHTML = `<option value="all">${escapeHTML(allLabel)}</option>` + all.map(v => `<option value="${escapeHTML(v)}">${escapeHTML(v)}</option>`).join("");
+  sel.value = selected || "all";
 }
 
+// =========================================================================
+// NEWS DATA PATH
+// =========================================================================
 function newsToArticles(doc) {
   return doc.items.map(it => ({
     id: it.id,
@@ -1330,15 +1251,18 @@ function newsToArticles(doc) {
     url: it.url,
     summary: String(it.summary || ""),
     date: it.publishedAt,
-    source: it.source,
+    source: String(it.source || ""),
     sourceId: it.sourceId,
     country: it.country,
+    lang: it.lang || "en",
     type: String(it.sourceKind || "").toUpperCase(),
     kind: it.kind,
     importance: it.importance,
+    baseImportance: it.baseImportance,
     companies: it.companies || [],
     models: it.models || [],
     topics: it.topics || [],
+    labels: it.labels || [],
     alsoIn: it.alsoIn || [],
     breaking: !!it.breaking,
     thirdParty: !!it.thirdParty,
@@ -1351,8 +1275,8 @@ function applyNews(doc, mode) {
   articles = newsToArticles(doc);
   const companies = [...new Set(articles.flatMap(a => a.companies))].sort();
   const topics = [...new Set(articles.flatMap(a => a.topics))].sort();
-  fillSelect("f-company", companies, "all companies");
-  fillSelect("f-topic", topics, "all topics");
+  fillSelect("f-company", companies, "all companies", filters.company);
+  fillSelect("f-topic", topics, "all topics", filters.topic);
   render();
   renderBanner();
 }
@@ -1361,26 +1285,39 @@ function validNews(doc) {
   return doc && doc.schema === "ai-news/1" && Array.isArray(doc.items) && typeof doc.generatedAt === "string";
 }
 
+// One fetch of a published JSON file. 404 = "not published yet" (e.missing).
+// A response the service worker served from its store carries x-offline-copy.
+async function fetchDataFile(url, validate, label) {
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), 15000);
+  try {
+    const resp = await fetch(url, { cache: "no-cache", signal: ctrl.signal });
+    if (resp.status === 404) { const e = new Error(label + " is not published yet"); e.missing = true; throw e; }
+    if (!resp.ok) throw new Error("HTTP " + resp.status);
+    const doc = await resp.json();
+    if (!validate(doc)) throw new Error(label + " has an unexpected shape");
+    const off = resp.headers && typeof resp.headers.get === "function" ? resp.headers.get("x-offline-copy") : null;
+    return { doc, offlineAt: off || null };
+  } finally { clearTimeout(timer); }
+}
+
 let refreshing = false;
 let lastDataError = "";
 async function refreshNews(manual) {
   if (refreshing) return;
   refreshing = true;
   const btn = document.getElementById("btn-refresh");
-  if (manual && activeTab !== "guides") { btn.disabled = true; btn.textContent = "↻ Loading…"; }
+  if (manual && activeTab === "news") { btn.disabled = true; btn.textContent = "↻ Loading…"; }
   try {
-    const ctrl = new AbortController();
-    const timer = setTimeout(() => ctrl.abort(), 15000);
-    let doc;
-    try {
-      const resp = await fetch(dataUrl(), { cache: "no-cache", signal: ctrl.signal });
-      if (!resp.ok) throw new Error("HTTP " + resp.status);
-      doc = await resp.json();
-    } finally { clearTimeout(timer); }
-    if (!validNews(doc)) throw new Error("news.json has an unexpected shape");
-    applyNews(doc, "live");
-    try { localStorage.setItem(NEWS_CACHE_KEY, JSON.stringify(doc)); } catch (e) { console.warn("[news] cache not stored:", e.message); }
-    if (manual) toast(`${doc.items.length} stories · updated ${relTime(new Date(doc.generatedAt))}`);
+    const { doc, offlineAt: off } = await fetchDataFile(dataUrl(), validNews, "news.json");
+    offlineAt = off;
+    if (off) {
+      applyNews(doc, "cache");
+    } else {
+      applyNews(doc, "live");
+      try { localStorage.setItem(NEWS_CACHE_KEY, JSON.stringify(doc)); } catch (e) { console.warn("[news] cache not stored:", e.message); }
+      if (manual) toast(`${doc.items.length} stories · updated ${relTime(new Date(doc.generatedAt))}`);
+    }
   } catch (err) {
     console.warn("[news] published data unreachable:", err.message);
     lastDataError = err.message;
@@ -1405,7 +1342,7 @@ async function fallbackNews() {
   try { okCount = await legacyFetchAll(); } catch (e) { console.warn("[legacy] failed:", e.message); }
   if (okCount === 0 && articles.length === 0) {
     const cached = loadJSON(NEWS_CACHE_KEY, null);
-    if (validNews(cached)) { applyNews(cached, "cache"); return; }
+    if (validNews(cached)) { offlineAt = cached.generatedAt; applyNews(cached, "cache"); return; }
     dataMode = "error";
   }
   render();
@@ -1418,8 +1355,8 @@ function renderBanner() {
   const notes = [];
   if (dataMode === "legacy") {
     notes.push(`<div class="note fallback"><strong>Fallback mode.</strong> The published news data (${escapeHTML(lastDataError || "unreachable")}) could not be loaded, so this page is scraping a reduced set of feeds in your browser through a proxy. Items here are untagged and unscored.</div>`);
-  } else if (dataMode === "cache") {
-    notes.push(`<div class="note warn"><strong>Offline copy.</strong> Showing the last news.json this browser saved (${escapeHTML(relTime(new Date(newsDoc.generatedAt)))}). The live data could not be reached.</div>`);
+  } else if (dataMode === "cache" && newsDoc) {
+    notes.push(`<div class="note warn"><strong>${escapeHTML(offlineLabel(offlineAt || newsDoc.generatedAt))}.</strong> The live data could not be reached.</div>`);
   } else if (dataMode === "error") {
     notes.push(`<div class="note warn"><strong>No data.</strong> The published data and the fallback both failed (${escapeHTML(lastDataError)}).</div>`);
   } else if (dataMode === "live" && newsDoc) {
@@ -1435,36 +1372,79 @@ function renderBanner() {
   el.innerHTML = notes.join("");
 }
 
-document.getElementById("f-kind").addEventListener("change", e => { filters.kind = e.target.value; render(); });
-document.getElementById("f-topic").addEventListener("change", e => { filters.topic = e.target.value; render(); });
-document.getElementById("f-company").addEventListener("change", e => { filters.company = e.target.value; render(); });
-document.getElementById("f-imp").addEventListener("change", e => { filters.minImp = Number(e.target.value) || 0; render(); });
+// =========================================================================
+// MUTE LIST, PRESETS
+// =========================================================================
+function sourceLabel(id) {
+  const s = ((newsDoc && newsDoc.sources) || []).find(x => x.id === id);
+  if (s) return s.name;
+  const art = articles.find(x => x.sourceId === id);
+  return art ? art.source : id;
+}
+function renderMuteList() {
+  const el = document.getElementById("mute-list");
+  if (!el) return;
+  const chips = [];
+  mute.sources.forEach(s => chips.push({ t: "sources", v: s, label: "source: " + sourceLabel(s) }));
+  mute.companies.forEach(s => chips.push({ t: "companies", v: s, label: "company: " + s }));
+  mute.keywords.forEach(s => chips.push({ t: "keywords", v: s, label: "keyword: " + s }));
+  el.innerHTML = chips.length
+    ? chips.map(c => `<span class="chip">${escapeHTML(c.label)}<button type="button" data-unmute="${c.t}" data-v="${escapeHTML(c.v)}" aria-label="Unmute ${escapeHTML(c.label)}">×</button></span>`).join("")
+    : `<span class="chip">nothing muted</span>`;
+}
+function saveMute() { saveJSON(MUTE_KEY, mute); renderMuteList(); filtersChanged(); }
 
-document.getElementById("mute-form").addEventListener("submit", e => {
-  e.preventDefault();
-  const inp = document.getElementById("mute-input");
-  const k = inp.value.trim().toLowerCase();
-  if (k && !mute.keywords.includes(k)) { mute.keywords.push(k); saveMute(); }
-  inp.value = "";
-});
-document.getElementById("mute-list").addEventListener("click", e => {
-  const b = e.target.closest("[data-unmute]");
-  if (!b) return;
-  const t = b.dataset.unmute;
-  mute[t] = mute[t].filter(x => x !== b.dataset.v);
-  saveMute();
-});
-document.getElementById("articles").addEventListener("click", e => {
-  const b = e.target.closest("[data-mute-source]");
-  if (!b) return;
-  const id = b.dataset.muteSource;
-  if (!mute.sources.includes(id)) mute.sources.push(id);
-  saveMute();
-  toast("Muted " + b.dataset.muteName + ". Undo in the Mute list.");
-});
+function currentState() {
+  return { q: filters.q, kind: filters.kind, topic: filters.topic, company: filters.company, minImp: filters.minImp,
+    country: filters.country, type: filters.type, read: filters.read, view: filters.view, langs: langs.slice() };
+}
+function renderPresets() {
+  const el = document.getElementById("preset-list");
+  if (!el) return;
+  el.innerHTML = presets.length
+    ? presets.map((p, i) => `<span class="chip"><button type="button" data-preset-apply="${i}" aria-label="Apply saved filter ${escapeHTML(p.name)}">${escapeHTML(p.name)}</button><button type="button" data-preset-del="${i}" aria-label="Delete saved filter ${escapeHTML(p.name)}">×</button></span>`).join("")
+    : `<span class="chip">no saved filters</span>`;
+}
+function savePreset(name) {
+  name = String(name || "").trim().slice(0, 40);
+  if (!name) { toast("Give the filter a name first.", true); return false; }
+  const state = currentState();
+  const i = presets.findIndex(p => p.name === name);
+  if (i >= 0) presets[i] = { name, state };
+  else if (presets.length >= MAX_PRESETS) { toast("At most " + MAX_PRESETS + " saved filters. Delete one first.", true); return false; }
+  else presets.push({ name, state });
+  saveJSON(PRESET_KEY, presets);
+  renderPresets();
+  return true;
+}
+function applyPreset(i) {
+  const p = presets[i];
+  if (!p || !p.state) return;
+  const s = p.state;
+  filters = Object.assign({}, filters, {
+    q: String(s.q || ""), kind: s.kind || "all", topic: s.topic || "all", company: s.company || "all",
+    minImp: Number(s.minImp) || 0, country: s.country || "all", type: s.type || "all",
+    read: s.read === "all" ? "all" : "unread", view: s.view === "top" ? "top" : "feed",
+  });
+  const l = Array.isArray(s.langs) ? s.langs.filter(x => LANG_CHOICES.includes(x)) : [];
+  langs = l.length ? l : DEFAULT_LANGS.slice();
+  saveJSON(LANG_KEY, langs);
+  rebuildSelects();
+  syncControls();
+  filtersChanged();
+}
+function deletePreset(i) {
+  presets.splice(i, 1);
+  saveJSON(PRESET_KEY, presets);
+  renderPresets();
+}
+function rebuildSelects() {
+  fillSelect("f-company", [...new Set(articles.flatMap(a => a.companies))].sort(), "all companies", filters.company);
+  fillSelect("f-topic", [...new Set(articles.flatMap(a => a.topics))].sort(), "all topics", filters.topic);
+}
 
 // =========================================================================
-// TOAST
+// TOAST, THEME
 // =========================================================================
 let toastTimer;
 function toast(msg, isErr = false) {
@@ -1476,39 +1456,231 @@ function toast(msg, isErr = false) {
   toastTimer = setTimeout(() => t.classList.remove("show"), 3500);
 }
 
+let themeChoice = null; // null = follow the system
+function applyTheme() {
+  const root = document.documentElement || document.body;
+  if (themeChoice) root.setAttribute("data-theme", themeChoice);
+  else if (root.removeAttribute) root.removeAttribute("data-theme");
+  const label = themeChoice ? themeChoice : "auto";
+  const btn = document.getElementById("btn-theme");
+  btn.textContent = "Theme: " + label;
+  btn.setAttribute("aria-label", "Theme: " + label + ". Activate to change.");
+}
+function cycleTheme() {
+  themeChoice = themeChoice === null ? "light" : themeChoice === "light" ? "dark" : null;
+  try {
+    if (themeChoice) localStorage.setItem(THEME_KEY, themeChoice);
+    else localStorage.removeItem(THEME_KEY);
+  } catch (e) { console.warn("[theme] not stored:", e.message); }
+  applyTheme();
+}
+function initTheme() {
+  let v = null;
+  try { v = localStorage.getItem(THEME_KEY); } catch { v = null; }
+  themeChoice = v === "light" || v === "dark" ? v : null;
+  applyTheme();
+}
+
 // =========================================================================
-// GUIDES TAB
+// RELEASES TAB
+// =========================================================================
+const releases = { status: "idle", doc: null, offlineAt: null, error: "", shown: PAGE_SIZE, f: { q: "", company: "all", kind: "all", open: "all" } };
+
+function validReleases(d) { return d && d.schema === "ai-news-releases/1" && Array.isArray(d.releases); }
+async function loadReleases(force) {
+  if (releases.status === "loading") return;
+  if (releases.status === "ok" && !force) { renderReleases(); return; }
+  releases.status = "loading";
+  renderReleases();
+  try {
+    const r = await fetchDataFile(dataFileUrl("releases.json"), validReleases, "releases.json");
+    releases.doc = r.doc; releases.offlineAt = r.offlineAt; releases.status = "ok";
+    const companies = [...new Set(r.doc.releases.map(x => x.company).filter(Boolean))].sort();
+    fillSelect("r-company", companies, "all companies", releases.f.company);
+  } catch (e) {
+    releases.status = e.missing ? "missing" : "error";
+    releases.error = e.message;
+  }
+  renderReleases();
+}
+function releaseMatches(r, f, terms) {
+  if (f.company !== "all" && r.company !== f.company) return false;
+  if (f.kind !== "all" && r.kind !== f.kind) return false;
+  if (f.open === "open" && r.open !== true) return false;
+  if (f.open === "closed" && r.open !== false) return false;
+  if (f.open === "unknown" && (r.open === true || r.open === false)) return false;
+  if (terms.length) {
+    const h = [r.model, r.company, r.family, r.kind, r.source, r.summary].join(" ").toLowerCase();
+    if (!terms.every(t => h.includes(t))) return false;
+  }
+  return true;
+}
+function releaseHtml(r, terms, now) {
+  const isNew = isRecent(r.date, now);
+  const open = r.open === true ? `<span class="tag-pill open-yes">open</span>` : r.open === false ? `<span class="tag-pill open-no">closed</span>` : `<span class="tag-pill">openness unknown</span>`;
+  const also = (r.alsoIn || []).length
+    ? `<div class="also-in">also in: ${r.alsoIn.slice(0, 6).map(x => `<a href="${escapeHTML(safeUrl(x.url))}" target="_blank" rel="noopener noreferrer">${escapeHTML(x.source)}</a>`).join(" · ")}</div>` : "";
+  const d = new Date(r.date);
+  return `<div role="listitem"><article class="article">
+    <div class="article-meta">
+      <span class="source-name">${highlight(r.company, terms)}</span>
+      <span>${isNaN(d) ? "" : escapeHTML(d.toISOString().slice(0, 10))}</span>
+      <span class="tag-pill kind">${escapeHTML(r.kind || "model")}</span>
+      ${open}
+      ${isNew ? `<span class="new-badge">NEW</span>` : ""}
+      ${Number.isFinite(r.importance) ? `<span class="imp ${r.importance >= 70 ? "top" : r.importance >= 40 ? "hi" : ""}" title="importance 0-100">${r.importance}</span>` : ""}
+    </div>
+    <h3><a href="${escapeHTML(safeUrl(r.url))}" target="_blank" rel="noopener noreferrer">${highlight(r.model, terms)}</a></h3>
+    ${r.family ? `<div class="tags"><span class="tag-pill">family: ${highlight(r.family, terms)}</span><span class="tag-pill">${escapeHTML(r.source || "")}</span></div>` : ""}
+    ${r.summary ? `<p>${highlight(r.summary, terms)}</p>` : ""}
+    ${also}
+  </article></div>`;
+}
+function renderReleases() {
+  const list = document.getElementById("rel-list");
+  const banner = document.getElementById("rel-banner");
+  const more = document.getElementById("rel-more-wrap");
+  const count = document.getElementById("rel-count");
+  more.hidden = true;
+  if (releases.status === "idle" || releases.status === "loading") {
+    list.innerHTML = `<div class="loading-screen">Loading releases…</div>`; banner.innerHTML = ""; count.textContent = "—"; return;
+  }
+  if (releases.status === "missing") {
+    list.innerHTML = `<div class="empty"><div class="big">not available yet.</div><div>releases.json has not been published. Check back after the next scheduled run.</div></div>`;
+    banner.innerHTML = ""; count.textContent = "—"; return;
+  }
+  if (releases.status === "error") {
+    list.innerHTML = `<div class="empty"><div class="big">could not load.</div><div>${escapeHTML(releases.error)}</div></div>`;
+    banner.innerHTML = ""; count.textContent = "—"; return;
+  }
+  const now = Date.now();
+  const all = releases.doc.releases;
+  const terms = searchTerms(releases.f.q);
+  const matches = all.filter(r => releaseMatches(r, releases.f, terms));
+  const newCount = all.filter(r => isRecent(r.date, now)).length;
+  const badge = document.getElementById("rel-new-badge");
+  badge.hidden = newCount === 0;
+  badge.textContent = newCount + " new";
+  banner.innerHTML = releases.offlineAt ? `<div class="note warn"><strong>${escapeHTML(offlineLabel(releases.offlineAt))}.</strong></div>` : "";
+  count.textContent = `${matches.length} of ${all.length}`;
+  if (!matches.length) {
+    list.innerHTML = `<div class="empty"><div class="big">no matches.</div><div>No release fits these filters.</div></div>`;
+    return;
+  }
+  const shown = matches.slice(0, releases.shown);
+  let html = "", cur = null;
+  for (const r of shown) {
+    const k = monthKey(r.date);
+    if (k !== cur) { cur = k; html += `<h3 class="month-head">${escapeHTML(monthLabel(k))}</h3>`; }
+    html += releaseHtml(r, terms, now);
+  }
+  list.innerHTML = html;
+  more.hidden = matches.length <= shown.length;
+  document.getElementById("rel-more").textContent = `Show more (${matches.length - shown.length})`;
+}
+
+// =========================================================================
+// DIGEST TAB
+// =========================================================================
+const digest = { kind: "daily", status: "idle", docs: {}, offlineAt: null, error: "" };
+function validDigest(d) { return d && d.schema === "ai-news-digest/1" && d.period && Array.isArray(d.sections); }
+async function loadDigest(force) {
+  if (digest.status === "loading") return;
+  const want = digest.kind;
+  if (digest.docs[want] && !force) { digest.status = "ok"; renderDigest(); return; }
+  digest.status = "loading";
+  renderDigest();
+  let lastErr = null, found = null;
+  for (const name of ["digest-" + want + ".json", "digest.json"]) {
+    try {
+      const r = await fetchDataFile(dataFileUrl(name), validDigest, name);
+      if (r.doc.period.kind === want) { found = r; break; }
+      lastErr = new Error("only the " + r.doc.period.kind + " digest is published");
+      lastErr.missing = true;
+    } catch (e) { if (!lastErr || !e.missing) lastErr = e; }
+  }
+  if (found) { digest.docs[want] = found.doc; digest.offlineAt = found.offlineAt; digest.status = "ok"; }
+  else { digest.status = lastErr && lastErr.missing ? "missing" : "error"; digest.error = lastErr ? lastErr.message : "unknown error"; }
+  renderDigest();
+}
+function renderDigest() {
+  const body = document.getElementById("digest-body");
+  const banner = document.getElementById("digest-banner");
+  const count = document.getElementById("digest-count");
+  document.getElementById("digest-md").hidden = true;
+  if (digest.status === "idle" || digest.status === "loading") { body.innerHTML = `<div class="loading-screen">Loading digest…</div>`; return; }
+  if (digest.status === "missing") {
+    body.innerHTML = `<div class="empty"><div class="big">not available yet.</div><div>No ${escapeHTML(digest.kind)} digest has been published (${escapeHTML(digest.error)}).</div></div>`;
+    banner.innerHTML = ""; count.textContent = "—"; return;
+  }
+  if (digest.status === "error") {
+    body.innerHTML = `<div class="empty"><div class="big">could not load.</div><div>${escapeHTML(digest.error)}</div></div>`;
+    banner.innerHTML = ""; count.textContent = "—"; return;
+  }
+  const d = digest.docs[digest.kind];
+  const stats = d.stats || {};
+  count.textContent = `${stats.items ?? "?"} items · ${stats.sources ?? "?"} sources`;
+  banner.innerHTML = digest.offlineAt ? `<div class="note warn"><strong>${escapeHTML(offlineLabel(digest.offlineAt))}.</strong></div>` : "";
+  const from = d.period.from ? String(d.period.from).slice(0, 10) : "", to = d.period.to ? String(d.period.to).slice(0, 10) : "";
+  const head = `<p class="data-banner">${escapeHTML(d.period.kind)} digest · ${escapeHTML(from)}${to && to !== from ? " to " + escapeHTML(to) : ""}</p>`;
+  if (!d.sections.length) { body.innerHTML = head + `<div class="empty"><div class="big">quiet period.</div></div>`; return; }
+  body.innerHTML = head + d.sections.map(sec => `
+    <section class="digest-section" aria-label="${escapeHTML(sec.title || sec.topic)}">
+      <h3>${escapeHTML(sec.title || sec.topic || "Other")}</h3>
+      <ul>${(sec.items || []).map(it => `<li>
+        <a href="${escapeHTML(safeUrl(it.url))}" target="_blank" rel="noopener noreferrer">${escapeHTML(it.title)}</a>
+        <span class="src">${escapeHTML(it.source || "")}${(it.alsoIn || []).length ? " · +" + it.alsoIn.length : ""}</span>
+        ${Number.isFinite(it.importance) ? `<span class="imp ${it.importance >= 70 ? "top" : it.importance >= 40 ? "hi" : ""}">${it.importance}</span>` : ""}
+      </li>`).join("")}</ul>
+    </section>`).join("");
+}
+async function copyDigest() {
+  const d = digest.docs[digest.kind];
+  if (!d) { toast("No digest loaded to copy.", true); return; }
+  const md = digestToMarkdown(d);
+  try {
+    if (typeof navigator === "undefined" || !navigator.clipboard) throw new Error("clipboard unavailable");
+    await navigator.clipboard.writeText(md);
+    toast("Digest copied as Markdown");
+  } catch (e) {
+    const ta = document.getElementById("digest-md");
+    ta.value = md; ta.hidden = false;
+    if (ta.select) ta.select();
+    toast("Could not copy automatically (" + e.message + "). Select the text below.", true);
+  }
+}
+
+// =========================================================================
+// GUIDES TAB (guides.json first, Worker fallback only when it is unreachable)
 // =========================================================================
 const GUIDES_KEY      = "ai-guides-items-v1";
 const GUIDES_META_KEY = "ai-guides-meta-v1";
-const GUIDES_TTL_MS   = 60 * 60 * 1000; // 1 hour
-
-let guidesItems = loadJSON(GUIDES_KEY, []);
-let guidesMeta  = loadJSON(GUIDES_META_KEY, { lastFetch: 0 });
-let activeTab   = "news";
-
-// Guides tab view state — source filter, sort mode, pagination.
+const GUIDES_TTL_MS   = 60 * 60 * 1000;
 const GUIDES_PAGE_SIZE = 50;
+
+let guidesItems = [];
+let guidesMeta  = loadJSON(GUIDES_META_KEY, { lastFetch: 0 });
+let guidesSource = "none";        // none | guides.json | legacy-worker
+let guidesStatus = "idle";        // idle | loading | ok | error
+let guidesOfflineAt = null;
+let guidesError = "";
 let guidesFilter = "all";
 let guidesSort   = "recent";
+let guidesQuery  = "";
 let guidesPage   = 1;
 
-// --- Personalization ("Explain for me") -----------------------------------
-// Hidden feature: visible only when the page is opened with a ?personalize=
-// value whose SHA-256 matches PERSONALIZE_HASH. The secret itself is NEVER in
-// this file — only its hash is. The secret rides in the URL and is forwarded
-// to the worker, which alone holds the private context profile.
 const WORKER_BASE = "https://ai-news-cors.mortuexhavoc.workers.dev";
+// SHA-256 of the personalize secret (the secret itself is never in this file).
+// The Worker still takes the secret as a query parameter on /personalize (see
+// the report); the page scrubs it from the address bar after the gate check.
 const PERSONALIZE_HASH = "d7424451926989c0f9f10491224caa69e1e119c84ecb447a08850d8b680f07ea";
 const PERSONALIZE_CACHE_KEY    = "ai-personalize-cache-v1";
 const PERSONALIZE_EXPANDED_KEY = "ai-personalize-expanded-v1";
-
 let personalizeEnabled = false;
 let personalizeSecret  = null;
-const personalizeCache    = loadJSON(PERSONALIZE_CACHE_KEY, {});           // url -> result JSON
-const personalizeExpanded = new Set(loadJSON(PERSONALIZE_EXPANDED_KEY, [])); // urls kept expanded
+const personalizeCache    = loadJSON(PERSONALIZE_CACHE_KEY, {});
+const personalizeExpanded = new Set(loadJSON(PERSONALIZE_EXPANDED_KEY, []));
 
-// Render the 5 answered questions for one guide.
 function renderPersonalizeAnswers(result) {
   const a = (result && result.answers) || {};
   const rows = GuidesLib.PERSONALIZE_QUESTIONS.map(q => `
@@ -1518,30 +1690,22 @@ function renderPersonalizeAnswers(result) {
     </div>`).join("");
   return `${rows}<div class="pz-foot">personalized · ${escapeHTML(result.model || "LLM")}</div>`;
 }
-
-// Per-card personalize block: an "Explain for me" button, or — when a result
-// is already cached — a collapsible panel (collapsed by default; expanded only
-// if the user has chosen to keep it open, persisted in localStorage).
 function renderPersonalizeBlock(url) {
   const cached = personalizeCache[url];
   if (cached) {
     const open = personalizeExpanded.has(url);
     return `
     <div class="personalize" data-url="${escapeHTML(url)}">
-      <button class="personalize-toggle" type="button" aria-expanded="${open}">
-        ${open ? "▾" : "▸"} Explain for me
-      </button>
+      <button class="personalize-toggle" type="button" aria-expanded="${open}">${open ? "▾" : "▸"} Explain for me</button>
       <div class="personalize-panel"${open ? "" : " hidden"}>${renderPersonalizeAnswers(cached)}</div>
     </div>`;
   }
   return `
     <div class="personalize" data-url="${escapeHTML(url)}">
-      <button class="btn-explain" type="button">✨ Explain for me</button>
+      <button class="btn-explain" type="button">Explain for me</button>
       <div class="personalize-panel" hidden></div>
     </div>`;
 }
-
-// Fetch + render personalization for one guide card.
 async function runPersonalize(url, wrap) {
   const panel = wrap.querySelector(".personalize-panel");
   const btn   = wrap.querySelector(".btn-explain");
@@ -1553,9 +1717,6 @@ async function runPersonalize(url, wrap) {
     personalizeCache[url] = result;
     saveJSON(PERSONALIZE_CACHE_KEY, personalizeCache);
     panel.innerHTML = renderPersonalizeAnswers(result);
-    // Swap the one-shot button for a collapse toggle. The panel stays visible
-    // now so the result is seen, but expansion is NOT persisted — it defaults
-    // back to collapsed on the next render unless the user toggles it open.
     if (btn) {
       const toggle = document.createElement("button");
       toggle.className = "personalize-toggle";
@@ -1580,7 +1741,6 @@ async function loadFeatured() {
     return [];
   }
 }
-
 async function loadGuideSources() {
   const r = await fetch("guide-sources.json", { cache: "no-cache" });
   const data = await r.json();
@@ -1591,51 +1751,27 @@ function parseHN(json, src) {
   return (json.hits || []).map(h => ({
     title: h.title || h.story_title || "(untitled)",
     url: h.url || `https://news.ycombinator.com/item?id=${h.objectID}`,
-    source: src.name,
-    category: src.category,
+    source: src.name, category: src.category,
     dateISO: h.created_at || new Date().toISOString(),
     excerpt: `${h.points || 0} points · ${h.num_comments || 0} comments`,
   }));
 }
-
-// parseGitHub() removed — superseded by /guides/aggregate route which normalizes GitHub items via parseAggregate
-
 function parseTrendshift(json, src) {
   return (json.items || []).map(it => ({
-    title: it.title,
-    url: it.url,
-    source: src.name,
-    category: src.category,
-    dateISO: it.dateISO || new Date().toISOString(),
-    excerpt: it.excerpt || "trending on Trendshift",
+    title: it.title, url: it.url, source: src.name, category: src.category,
+    dateISO: it.dateISO || new Date().toISOString(), excerpt: it.excerpt || "trending on Trendshift",
   }));
 }
-
-// The /guides/aggregate worker route already returns normalized items
-// (title, url, source, published, summary, tags) merged from blogs,
-// YouTube, GitHub and Bluesky. Each item keeps its OWN `source` so the
-// badges and source filter can tell them apart.
 function parseAggregate(json, src) {
   return (json.items || []).map(it => ({
-    title: it.title,
-    url: it.url,
-    source: it.source || src.name,
-    category: src.category,
+    title: it.title, url: it.url, source: it.source || src.name, category: src.category,
     dateISO: it.published || it.dateISO || new Date().toISOString(),
-    excerpt: it.summary || it.excerpt || "",
-    tags: it.tags || [],
+    excerpt: it.summary || it.excerpt || "", tags: it.tags || [],
   }));
 }
-
 async function fetchGuideSource(src) {
-  // Sources with `direct: true` are already CORS-friendly endpoints (e.g. our own worker)
-  // and should be hit directly without going through the proxy chain.
   const proxyChain = src.direct ? [{ name: "direct", url: u => u, parse: null }] : PROXIES;
-
-  // Our own worker routes (direct) — especially /guides/aggregate — fan out
-  // to many upstream feeds, so give them a longer timeout than plain proxies.
   const timeoutMs = src.direct ? 25000 : 12000;
-
   for (const proxy of proxyChain) {
     try {
       const url = proxy.url(src.url);
@@ -1644,7 +1780,6 @@ async function fetchGuideSource(src) {
       const resp = await fetch(url, { signal: ctrl.signal });
       clearTimeout(timer);
       if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-
       if (src.type === "json") {
         const json = await resp.json();
         if (src.parser === "hn")         return parseHN(json, src);
@@ -1652,13 +1787,9 @@ async function fetchGuideSource(src) {
         if (src.parser === "aggregate")  return parseAggregate(json, src);
         return [];
       }
-      // RSS
       const items = parseRSSText(await resp.text());
       return items.filter(i => i.url && i.title).map(i => ({
-        title: i.title,
-        url: i.url,
-        source: src.name,
-        category: src.category,
+        title: i.title, url: i.url, source: src.name, category: src.category,
         dateISO: (i.date instanceof Date && !isNaN(i.date)) ? i.date.toISOString() : new Date().toISOString(),
         excerpt: (i.summary || "").slice(0, 200),
       }));
@@ -1669,44 +1800,83 @@ async function fetchGuideSource(src) {
   return [];
 }
 
-async function fetchGuides(force = false) {
-  const fresh = (Date.now() - (guidesMeta.lastFetch || 0)) < GUIDES_TTL_MS;
-  if (!force && fresh && guidesItems.length > 0) {
-    renderLatest();
-    return;
-  }
-
-  const btn = document.getElementById("btn-refresh");
-  if (activeTab === "guides") {
-    btn.disabled = true;
-    btn.textContent = "↻ Fetching…";
-  }
-
-  const sources = await loadGuideSources();
-  const list = document.getElementById("latest-list");
-  list.innerHTML = `<div class="loading-screen">Fetching guides from ${sources.length} sources…</div>`;
-
-
-  const all = [];
-  await Promise.all(sources.map(async src => {
-    const items = await fetchGuideSource(src);
-    all.push(...items);
+function validGuides(d) { return d && d.schema === "ai-news-guides/1" && Array.isArray(d.items); }
+function normalizeGuides(doc) {
+  return doc.items.filter(it => it && it.url && it.title).map(it => ({
+    id: it.id, title: String(it.title), url: it.url, source: String(it.source || ""),
+    sourceKind: String(it.sourceKind || "other"), dateISO: it.publishedAt || "",
+    excerpt: String(it.summary || ""), score: Number(it.score) || 0,
   }));
+}
+function guideKind(it) { return it.sourceKind || GuidesLib.sourceCategory(it); }
 
-  // Dedupe by URL, sort newest-first, cap at 150 (the aggregate route alone
-  // can return 100 items, plus Reddit/HN/newsletters/Trendshift on top).
+async function legacyGuides(force) {
+  const fresh = (Date.now() - (guidesMeta.lastFetch || 0)) < GUIDES_TTL_MS;
+  const cached = loadJSON(GUIDES_KEY, []);
+  if (!force && fresh && cached.length > 0) { guidesItems = cached; return; }
+  const sources = await loadGuideSources();
+  const all = [];
+  await Promise.all(sources.map(async src => { all.push(...await fetchGuideSource(src)); }));
   guidesItems = GuidesLib.aggregateGuides(all, 150);
-  guidesPage = 1;
-
   guidesMeta.lastFetch = Date.now();
   saveJSON(GUIDES_KEY, guidesItems);
   saveJSON(GUIDES_META_KEY, guidesMeta);
+}
 
-  if (activeTab === "guides") {
-    btn.disabled = false;
-    btn.textContent = "↻ Refresh";
+async function loadGuides(force) {
+  if (guidesStatus === "loading") return;
+  if (guidesStatus === "ok" && !force && Date.now() - (guidesMeta.primaryAt || 0) < 5 * 60 * 1000) { renderLatest(); return; }
+  guidesStatus = "loading";
+  document.getElementById("latest-list").innerHTML = `<div class="loading-screen">Loading guides…</div>`;
+  try {
+    const r = await fetchDataFile(dataFileUrl("guides.json"), validGuides, "guides.json");
+    guidesItems = normalizeGuides(r.doc);
+    guidesSource = "guides.json"; guidesOfflineAt = r.offlineAt; guidesError = "";
+    guidesMeta.primaryAt = Date.now();
+    guidesStatus = "ok";
+  } catch (e) {
+    console.warn("[guides] guides.json unreachable, using the legacy Worker path:", e.message);
+    guidesError = e.message;
+    guidesSource = "legacy-worker";
+    try { await legacyGuides(force); guidesStatus = "ok"; }
+    catch (e2) { guidesStatus = "error"; guidesError = guidesError + "; " + e2.message; }
   }
+  guidesPage = 1;
+  rebuildGuideKinds();
   renderLatest();
+}
+
+function rebuildGuideKinds() {
+  const kinds = [...new Set(guidesItems.map(guideKind))].sort();
+  const sel = document.getElementById("guides-filter");
+  if (guidesFilter !== "all" && !kinds.includes(guidesFilter)) guidesFilter = "all";
+  sel.innerHTML = `<option value="all">All sources</option>` + kinds.map(k => `<option value="${escapeHTML(k)}">${escapeHTML(k)}</option>`).join("");
+  sel.value = guidesFilter;
+}
+
+function guidesView() {
+  const terms = searchTerms(guidesQuery);
+  let view = guidesItems.filter(it => guidesFilter === "all" || guideKind(it) === guidesFilter);
+  if (terms.length) {
+    view = view.filter(it => {
+      const h = [it.title, it.source, it.excerpt].join(" ").toLowerCase();
+      return terms.every(t => h.includes(t));
+    });
+  }
+  if (guidesSort === "score") view = view.slice().sort((a, b) => ((b.score || 0) - (a.score || 0)) || (new Date(b.dateISO) - new Date(a.dateISO)));
+  else view = GuidesLib.sortGuides(view, guidesSort === "score" ? "recent" : guidesSort);
+  return { view, terms };
+}
+
+function renderGuidesBanner() {
+  const el = document.getElementById("guides-banner");
+  const notes = [];
+  if (guidesSource === "legacy-worker") {
+    notes.push(`<div class="note fallback"><strong>Fallback mode.</strong> guides.json could not be loaded (${escapeHTML(guidesError || "unreachable")}); these items come from the legacy Worker and may be incomplete or unfiltered.</div>`);
+  } else if (guidesOfflineAt) {
+    notes.push(`<div class="note warn"><strong>${escapeHTML(offlineLabel(guidesOfflineAt))}.</strong></div>`);
+  }
+  el.innerHTML = notes.join("");
 }
 
 function renderFeatured(featured) {
@@ -1722,57 +1892,46 @@ function renderFeatured(featured) {
       <h3>${escapeHTML(g.title)}</h3>
       <div class="author">by <strong>${escapeHTML(g.author || "—")}</strong> · added ${escapeHTML(g.dateAdded || "")}</div>
       <p>${escapeHTML(g.description || "")}</p>
-      <div class="tags">
-        ${(g.tags || []).map(t => `<span class="pill">#${escapeHTML(t)}</span>`).join("")}
-      </div>
-      <a class="open-link" href="${escapeHTML(g.url)}" target="_blank" rel="noopener">Open →</a>
-    </article>
-  `).join("");
+      <div class="tags">${(g.tags || []).map(t => `<span class="pill">#${escapeHTML(t)}</span>`).join("")}</div>
+      <a class="open-link" href="${escapeHTML(safeUrl(g.url))}" target="_blank" rel="noopener noreferrer">Open →</a>
+    </article>`).join("");
 }
 
 function renderLatest() {
+  renderGuidesBanner();
   const el = document.getElementById("latest-list");
   const wrap = document.getElementById("guides-loadmore-wrap");
-
-  // Apply the Source filter dropdown + the Sort dropdown.
-  let view = guidesItems.filter(it => GuidesLib.matchesFilter(it, guidesFilter));
-  view = GuidesLib.sortGuides(view, guidesSort);
-
-  const total = view.length;
-  const totalAll = guidesItems.length;
-  document.getElementById("latest-count").textContent =
-    guidesFilter === "all"
-      ? `${total} item${total === 1 ? "" : "s"}`
-      : `${total} of ${totalAll}`;
-
+  if (guidesStatus === "error") {
+    wrap.style.display = "none";
+    el.innerHTML = `<div class="empty"><div class="big">could not load.</div><div>${escapeHTML(guidesError)}</div></div>`;
+    return;
+  }
+  const { view, terms } = guidesView();
+  const total = view.length, totalAll = guidesItems.length;
+  document.getElementById("latest-count").textContent = total === totalAll ? `${total} item${total === 1 ? "" : "s"}` : `${total} of ${totalAll}`;
   if (!total) {
     wrap.style.display = "none";
     el.innerHTML = totalAll
-      ? `<div class="empty"><div class="big">no matches.</div><div>No guides from this source — try “All sources”.</div></div>`
+      ? `<div class="empty"><div class="big">no matches.</div><div>Nothing fits this search. Try “All sources”.</div></div>`
       : `<div class="empty"><div class="big">empty.</div><div>Press <strong>Refresh</strong> to fetch guides.</div></div>`;
     return;
   }
-
-  // Pagination — render only the first guidesPage pages, "Load more" reveals the rest.
   const shown = view.slice(0, guidesPage * GUIDES_PAGE_SIZE);
   el.innerHTML = shown.map(it => {
-    const cat   = GuidesLib.sourceCategory(it);
-    const badge = GuidesLib.sourceBadge(it);
+    const kindLabel = it.sourceKind ? it.sourceKind : GuidesLib.sourceBadge(it);
     return `
-    <article class="article" data-url="${escapeHTML(it.url)}">
+    <div role="listitem"><article class="article" data-url="${escapeHTML(it.url)}">
       <div class="article-meta">
-        <span class="source-badge" data-cat="${escapeHTML(cat)}">${escapeHTML(badge)}</span>
-        <span class="source-name">${escapeHTML(it.source)}</span>
-        <span>${relTime(new Date(it.dateISO))}</span>
+        <span class="source-badge">${escapeHTML(kindLabel)}</span>
+        <span class="source-name">${highlight(it.source, terms)}</span>
+        <span>${it.dateISO ? escapeHTML(relTime(new Date(it.dateISO))) : ""}</span>
+        ${it.score ? `<span class="imp" title="score">${escapeHTML(String(it.score))}</span>` : ""}
       </div>
-      <h3>
-        <a href="${escapeHTML(it.url)}" target="_blank" rel="noopener">${escapeHTML(it.title)}</a>
-      </h3>
-      ${it.excerpt ? `<p>${escapeHTML(it.excerpt)}</p>` : ""}
+      <h3><a href="${escapeHTML(safeUrl(it.url))}" target="_blank" rel="noopener noreferrer">${highlight(it.title, terms)}</a></h3>
+      ${it.excerpt ? `<p>${highlight(it.excerpt, terms)}</p>` : ""}
       ${personalizeEnabled ? renderPersonalizeBlock(it.url) : ""}
-    </article>`;
+    </article></div>`;
   }).join("");
-
   const remaining = total - shown.length;
   if (remaining > 0) {
     wrap.style.display = "block";
@@ -1783,73 +1942,245 @@ function renderLatest() {
 }
 
 async function activateGuidesTab() {
-  // Render featured fresh from JSON each time (cheap)
-  const featured = await loadFeatured();
-  renderFeatured(featured);
-  // Render whatever cached items we have, then refresh if stale
-  renderLatest();
-  await fetchGuides(false);
+  renderFeatured(await loadFeatured());
+  await loadGuides(false);
 }
 
+// =========================================================================
+// TABS + ROUTING
+// =========================================================================
 function setActiveTab(tab, opts = {}) {
+  if (!ROUTES.includes(tab)) tab = "news";
   activeTab = tab;
   document.querySelectorAll(".tab").forEach(t => {
-    t.classList.toggle("active", t.dataset.tab === tab);
+    const on = t.dataset.tab === tab;
+    t.classList.toggle("active", on);
+    t.setAttribute("aria-selected", String(on));
+    t.setAttribute("tabindex", on ? "0" : "-1");
   });
-  document.body.classList.toggle("tab-guides", tab === "guides");
-  if (tab === "guides") {
-    activateGuidesTab();
+  for (const r of ROUTES) {
+    document.body.classList.toggle("tab-" + r, r === tab);
+    const p = document.getElementById("panel-" + r);
+    if (p) p.hidden = r !== tab;
   }
+  if (tab === "guides") activateGuidesTab();
+  else if (tab === "releases") loadReleases(false);
+  else if (tab === "digest") loadDigest(false);
   if (opts.updateHash !== false) {
-    const hash = tab === "guides" ? "#/guides" : "#/news";
-    if (window.location.hash !== hash) {
-      if (opts.replace) history.replaceState(null, "", hash);
-      else history.pushState(null, "", hash);
+    const h = tab === "news" ? hashFor("news", filtersToParams(filters, langs)) : "#/" + tab;
+    if (window.location.hash !== h) {
+      try {
+        if (opts.replace) history.replaceState(null, "", location.pathname + location.search + h);
+        else history.pushState(null, "", location.pathname + location.search + h);
+      } catch (e) { console.warn("[hash]", e.message); }
     }
   }
 }
 
-function tabFromHash() {
-  // startsWith, not ===, so a query suffix (#/guides?personalize=…) still
-  // resolves to the Guides tab.
-  return window.location.hash.indexOf("#/guides") === 0 ? "guides" : "news";
+// Apply #/news?q=... to the filter state (validated) and the controls.
+function defaultFilters() {
+  return { country: "all", type: "all", read: "unread", q: "", kind: "all", topic: "all", company: "all", minImp: 0, view: "feed" };
+}
+function applyHashFilters(params) {
+  // The hash is the shareable state: what it does not name is the default.
+  const r = paramsToFilters(params, defaultFilters());
+  filters = r.filters;
+  if (r.langs) langs = r.langs;
+  rebuildSelects();
+  syncControls();
+  newsShown = PAGE_SIZE;
 }
 
-document.querySelectorAll(".tab").forEach(t => {
-  t.addEventListener("click", () => setActiveTab(t.dataset.tab));
+function focusTabByOffset(cur, delta) {
+  const i = ROUTES.indexOf(cur);
+  const next = ROUTES[(i + delta + ROUTES.length) % ROUTES.length];
+  setActiveTab(next);
+  const b = document.getElementById("tab-" + next);
+  if (b && b.focus) b.focus();
+}
+
+// =========================================================================
+// EVENT WIRING (delegation where lists are re-rendered)
+// =========================================================================
+document.getElementById("filter-country").addEventListener("click", chipClick);
+document.getElementById("filter-type").addEventListener("click", chipClick);
+document.getElementById("filter-read").addEventListener("click", chipClick);
+function chipClick(e) {
+  const chip = e.target.closest && e.target.closest(".chip[data-f]");
+  if (!chip) return;
+  filters[chip.dataset.f] = chip.dataset.v;
+  syncControls();
+  filtersChanged();
+}
+document.getElementById("filter-lang").addEventListener("click", e => {
+  const chip = e.target.closest && e.target.closest(".chip[data-lang]");
+  if (!chip) return;
+  const l = chip.dataset.lang;
+  if (!LANG_CHOICES.includes(l)) return;
+  if (langs.includes(l)) {
+    if (langs.length === 1) { toast("At least one language must stay selected."); return; }
+    langs = langs.filter(x => x !== l);
+  } else {
+    langs = LANG_CHOICES.filter(x => x === l || langs.includes(x));
+  }
+  saveJSON(LANG_KEY, langs);
+  syncControls();
+  filtersChanged();
+});
+document.getElementById("panel-news").addEventListener("click", viewClick);
+function viewClick(e) {
+  const b = e.target.closest && e.target.closest(".chip[data-view]");
+  if (!b) return;
+  filters.view = b.dataset.view === "top" ? "top" : "feed";
+  syncControls();
+  filtersChanged();
+}
+
+let searchTimer = null;
+document.getElementById("q").addEventListener("input", (e) => {
+  const v = e.target.value.trim();
+  clearTimeout(searchTimer);
+  searchTimer = setTimeout(() => { filters.q = v; filtersChanged(); }, SEARCH_DEBOUNCE_MS);
 });
 
-window.addEventListener("hashchange", () => {
-  // Sync tab UI to hash without re-pushing history
-  setActiveTab(tabFromHash(), { updateHash: false });
+document.getElementById("f-kind").addEventListener("change", e => { filters.kind = e.target.value; filtersChanged(); });
+document.getElementById("f-topic").addEventListener("change", e => { filters.topic = e.target.value; filtersChanged(); });
+document.getElementById("f-company").addEventListener("change", e => { filters.company = e.target.value; filtersChanged(); });
+document.getElementById("f-imp").addEventListener("change", e => { filters.minImp = Number(e.target.value) || 0; filtersChanged(); });
+
+document.getElementById("news-more").addEventListener("click", () => { newsShown += PAGE_SIZE; render({ append: true }); });
+
+document.getElementById("mute-form").addEventListener("submit", e => {
+  e.preventDefault();
+  const inp = document.getElementById("mute-input");
+  const k = inp.value.trim().toLowerCase();
+  if (k && !mute.keywords.includes(k)) { mute.keywords.push(k); saveMute(); }
+  inp.value = "";
+});
+document.getElementById("mute-list").addEventListener("click", e => {
+  const b = e.target.closest("[data-unmute]");
+  if (!b) return;
+  const t = b.dataset.unmute;
+  mute[t] = mute[t].filter(x => x !== b.dataset.v);
+  saveMute();
 });
 
-// Make Refresh button context-aware: refresh whichever tab is active
-const _origRefreshHandler = document.getElementById("btn-refresh");
-_origRefreshHandler.replaceWith(_origRefreshHandler.cloneNode(true));
+function markRead(id) {
+  readSet.add(id);
+  saveJSON(READ_KEY, [...readSet]);
+}
+document.getElementById("articles").addEventListener("click", e => {
+  const b = e.target.closest("[data-mute-source]");
+  if (b) {
+    const id = b.dataset.muteSource;
+    if (!mute.sources.includes(id)) mute.sources.push(id);
+    saveMute();
+    toast("Muted " + b.dataset.muteName + ". Undo in the Mute list.");
+    return;
+  }
+  const a = e.target.closest("a[data-id]");
+  if (a) {
+    markRead(a.dataset.id);
+    const card = a.closest(".article");
+    if (card) card.classList.add("read");
+    updateStats();
+  }
+});
+document.getElementById("breaking-strip").addEventListener("click", e => {
+  const a = e.target.closest("a[data-id]");
+  if (a) { markRead(a.dataset.id); updateStats(); }
+});
+
+document.getElementById("preset-form").addEventListener("submit", e => {
+  e.preventDefault();
+  const inp = document.getElementById("preset-name");
+  if (savePreset(inp.value)) { inp.value = ""; toast("Saved filter"); }
+});
+document.getElementById("preset-list").addEventListener("click", e => {
+  const a = e.target.closest("[data-preset-apply]");
+  if (a) { applyPreset(Number(a.dataset.presetApply)); return; }
+  const d = e.target.closest("[data-preset-del]");
+  if (d) deletePreset(Number(d.dataset.presetDel));
+});
+document.getElementById("btn-share").addEventListener("click", async () => {
+  const url = location.href;
+  try {
+    if (typeof navigator === "undefined" || !navigator.clipboard) throw new Error("clipboard unavailable");
+    await navigator.clipboard.writeText(url);
+    toast("Link copied");
+  } catch (e) { toast("Could not copy the link (" + e.message + "). Copy it from the address bar.", true); }
+});
+
+document.getElementById("btn-mark-read").addEventListener("click", () => {
+  articles.forEach(a => readSet.add(articleId(a)));
+  saveJSON(READ_KEY, [...readSet]);
+  toast(`Marked ${articles.length} read`);
+  render();
+});
+document.getElementById("btn-theme").addEventListener("click", cycleTheme);
+
 document.getElementById("btn-refresh").addEventListener("click", () => {
-  if (activeTab === "guides") fetchGuides(true);
+  if (activeTab === "guides") loadGuides(true);
+  else if (activeTab === "releases") loadReleases(true);
+  else if (activeTab === "digest") loadDigest(true);
   else refreshNews(true);
 });
 
-// Guides controls — Source filter, Sort, and Load more.
-document.getElementById("guides-filter").addEventListener("change", (e) => {
-  guidesFilter = e.target.value;
-  guidesPage = 1;
-  renderLatest();
+// Tabs
+document.querySelectorAll(".tab").forEach(t => {
+  t.addEventListener("click", () => setActiveTab(t.dataset.tab));
+  t.addEventListener("keydown", e => {
+    if (e.key === "ArrowRight") { e.preventDefault(); focusTabByOffset(t.dataset.tab, 1); }
+    else if (e.key === "ArrowLeft") { e.preventDefault(); focusTabByOffset(t.dataset.tab, -1); }
+    else if (e.key === "Home") { e.preventDefault(); setActiveTab(ROUTES[0]); document.getElementById("tab-" + ROUTES[0]).focus(); }
+    else if (e.key === "End") { e.preventDefault(); const l = ROUTES[ROUTES.length - 1]; setActiveTab(l); document.getElementById("tab-" + l).focus(); }
+  });
 });
-document.getElementById("guides-sort").addEventListener("change", (e) => {
-  guidesSort = e.target.value;
-  guidesPage = 1;
-  renderLatest();
-});
-document.getElementById("guides-loadmore").addEventListener("click", () => {
-  guidesPage++;
-  renderLatest();
+window.addEventListener("hashchange", () => {
+  const { route, params } = parseHash(window.location.hash);
+  if (route === "news") applyHashFilters(params);
+  setActiveTab(route, { updateHash: false });
+  if (route === "news") render();
 });
 
-// Personalize — delegated clicks for the "Explain for me" button and the
-// per-card collapse toggle. Delegation survives renderLatest() rebuilds.
+// Releases controls
+function relControls() {
+  releases.f.q = document.getElementById("r-q").value.trim();
+  releases.f.company = document.getElementById("r-company").value || "all";
+  releases.f.kind = document.getElementById("r-kind").value || "all";
+  releases.f.open = document.getElementById("r-open").value || "all";
+  releases.shown = PAGE_SIZE;
+  renderReleases();
+}
+let relTimer = null;
+document.getElementById("r-q").addEventListener("input", () => { clearTimeout(relTimer); relTimer = setTimeout(relControls, SEARCH_DEBOUNCE_MS); });
+["r-company", "r-kind", "r-open"].forEach(id => document.getElementById(id).addEventListener("change", relControls));
+document.getElementById("rel-more").addEventListener("click", () => { releases.shown += PAGE_SIZE; renderReleases(); });
+
+// Digest controls
+document.getElementById("panel-digest").addEventListener("click", e => {
+  const b = e.target.closest && e.target.closest("[data-digest]");
+  if (!b) return;
+  digest.kind = b.dataset.digest === "weekly" ? "weekly" : "daily";
+  document.querySelectorAll("[data-digest]").forEach(c => {
+    const on = c.dataset.digest === digest.kind;
+    c.classList.toggle("active", on);
+    c.setAttribute("aria-pressed", String(on));
+  });
+  loadDigest(false);
+});
+document.getElementById("digest-copy").addEventListener("click", copyDigest);
+
+// Guides controls
+let guidesTimer = null;
+document.getElementById("guides-q").addEventListener("input", e => {
+  const v = e.target.value.trim();
+  clearTimeout(guidesTimer);
+  guidesTimer = setTimeout(() => { guidesQuery = v; guidesPage = 1; renderLatest(); }, SEARCH_DEBOUNCE_MS);
+});
+document.getElementById("guides-filter").addEventListener("change", e => { guidesFilter = e.target.value; guidesPage = 1; renderLatest(); });
+document.getElementById("guides-sort").addEventListener("change", e => { guidesSort = e.target.value; guidesPage = 1; renderLatest(); });
+document.getElementById("guides-loadmore").addEventListener("click", () => { guidesPage++; renderLatest(); });
 document.getElementById("latest-list").addEventListener("click", (e) => {
   const explain = e.target.closest(".btn-explain");
   if (explain) {
@@ -1861,7 +2192,7 @@ document.getElementById("latest-list").addEventListener("click", (e) => {
   if (toggle) {
     const wrap  = toggle.closest(".personalize");
     const panel = wrap.querySelector(".personalize-panel");
-    const open  = panel.hidden; // currently hidden -> about to open
+    const open  = panel.hidden;
     panel.hidden = !open;
     toggle.setAttribute("aria-expanded", String(open));
     toggle.textContent = (open ? "▾" : "▸") + " Explain for me";
@@ -1871,15 +2202,29 @@ document.getElementById("latest-list").addEventListener("click", (e) => {
   }
 });
 
-// Personalize gate — async (the SHA-256 check uses WebCrypto). With no
-// matching ?personalize= param the feature stays completely hidden; other
-// visitors see no personalization UI at all.
+// "/" focuses the search box of the active tab (not while typing in a field).
+document.addEventListener && document.addEventListener("keydown", e => {
+  if (e.key !== "/" || e.ctrlKey || e.metaKey || e.altKey) return;
+  const t = e.target || {};
+  const tag = String(t.tagName || "").toUpperCase();
+  if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT" || t.isContentEditable) return;
+  const id = { news: "q", releases: "r-q", guides: "guides-q" }[activeTab];
+  const el = id && document.getElementById(id);
+  if (!el) return;
+  e.preventDefault();
+  if (el.focus) el.focus();
+  if (el.select) el.select();
+});
+
+// Personalize gate (hidden feature). The secret is scrubbed from the address
+// bar as soon as it has been read so it does not stay in the URL, a copied
+// link or the Referer (the referrer policy is also no-referrer).
 (async function personalizeInit() {
   const param = GuidesLib.extractPersonalizeParam(location.search, location.hash);
   if (!param) return;
   try {
-    const digest = await GuidesLib.sha256Hex(param);
-    if (digest === PERSONALIZE_HASH) {
+    const digestHex = await GuidesLib.sha256Hex(param);
+    if (digestHex === PERSONALIZE_HASH) {
       personalizeEnabled = true;
       personalizeSecret  = param;
       if (activeTab === "guides") renderLatest();
@@ -1887,35 +2232,43 @@ document.getElementById("latest-list").addEventListener("click", (e) => {
   } catch (err) {
     console.warn("[personalize] gate check failed:", err.message);
   }
+  try {
+    const sp = new URLSearchParams(location.search); sp.delete("personalize");
+    const hq = location.hash.indexOf("?");
+    let hash = location.hash;
+    if (hq !== -1) { const hp = new URLSearchParams(location.hash.slice(hq + 1)); hp.delete("personalize"); hash = location.hash.slice(0, hq) + (hp.toString() ? "?" + hp.toString() : ""); }
+    history.replaceState(null, "", location.pathname + (sp.toString() ? "?" + sp.toString() : "") + hash);
+  } catch (e) { console.warn("[personalize] could not scrub the URL:", e.message); }
 })();
 
 // =========================================================================
 // INIT
 // =========================================================================
 (function init() {
-  // Pre-populate legacy source status from saved meta if present (fallback only)
   LEGACY_SOURCES.forEach(s => {
-    if (!meta.sourceStatus[s.name]) {
-      meta.sourceStatus[s.name] = { state: "", message: "not yet fetched" };
-    }
+    if (!meta.sourceStatus[s.name]) meta.sourceStatus[s.name] = { state: "", message: "not yet fetched" };
   });
-
+  initTheme();
   // Never show the old localStorage scrape as if it were current data.
   articles = [];
-  render();
   renderMuteList();
+  renderPresets();
 
-  // Honor hash-based deep link on first load (use replace to avoid extra history entry)
-  const initialTab = tabFromHash();
-  if (initialTab === "guides") {
-    setActiveTab("guides", { replace: true });
-  } else {
-    setActiveTab("news", { replace: true });
-  }
+  const { route, params } = parseHash(window.location.hash);
+  if (route === "news") applyHashFilters(params);
+  else syncControls();
+  render();
+  setActiveTab(route, { replace: true });
 
   refreshNews(false);
   setInterval(() => refreshNews(false), NEWS_POLL_MS);
   setInterval(() => { updateStats(); renderBanner(); }, 30000);
+
+  // Installable + offline copy of the data files. Registered only on a secure
+  // context; failure is logged, never fatal.
+  if (typeof navigator !== "undefined" && navigator.serviceWorker && (location.protocol === "https:" || location.hostname === "localhost" || location.hostname === "127.0.0.1")) {
+    navigator.serviceWorker.register("sw.js").catch(e => console.warn("[sw] not registered:", e.message));
+  }
 })();
 </script>
 
