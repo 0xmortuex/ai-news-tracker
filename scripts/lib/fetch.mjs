@@ -43,6 +43,19 @@ async function readCapped(res, maxBytes) {
 
 // cache: { etag?, lastModified? } from the previous successful fetch of this URL.
 export async function conditionalGet(url, cache = {}, opts = {}) {
+  // An explicit, referenced timer (not AbortSignal.timeout, whose timer is unref'd and lets Node 22 exit
+  // the event loop while a request is still pending). It covers the body read too, as before.
+  const timeoutMs = opts.timeoutMs ?? TIMEOUT_MS;
+  const ctl = new AbortController();
+  const timer = setTimeout(() => ctl.abort(Object.assign(new Error('timeout'), { name: 'TimeoutError' })), timeoutMs);
+  try {
+    return await conditionalGetInner(url, cache, opts, ctl.signal);
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
+async function conditionalGetInner(url, cache, opts, signal) {
   const fetchImpl = opts.fetchImpl || globalThis.fetch;
   const timeoutMs = opts.timeoutMs ?? TIMEOUT_MS;
   const maxBytes = opts.maxBytes ?? DEFAULT_MAX_BYTES;
@@ -52,7 +65,7 @@ export async function conditionalGet(url, cache = {}, opts = {}) {
 
   let res;
   try {
-    res = await fetchImpl(url, { headers, redirect: 'follow', signal: AbortSignal.timeout(timeoutMs) });
+    res = await fetchImpl(url, { headers, redirect: 'follow', signal });
   } catch (e) {
     const timedOut = e && (e.name === 'TimeoutError' || e.name === 'AbortError');
     const cause = e && e.cause && e.cause.code ? ` (${e.cause.code})` : '';
