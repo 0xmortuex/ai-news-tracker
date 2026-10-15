@@ -1,0 +1,544 @@
+{
+  "groups": {
+    "muse-spark-open": [
+      "8aeb22fcfadbbdff",
+      "4cc9afff853e9889",
+      "7543df857d57c325",
+      "9d251ac6836a600d"
+    ],
+    "muse-wonder": [
+      "9c8dc2fb4e50ae3a",
+      "eb7924524a983a3a",
+      "a2c304623a61d6cf",
+      "b6332d929c4772b9"
+    ],
+    "gemini-4-argon": [
+      "66cb1e68848fee2d",
+      "2bad0427cfe4e7d6",
+      "4a4a81eb8e4e6400",
+      "348b0e018686b6ca"
+    ],
+    "nemotron-3.5-super-vl": [
+      "2cd92b812c13525a",
+      "bacac46ca49a3666",
+      "6630bcee115b4652",
+      "09989aa6e799bed7"
+    ],
+    "timestral": [
+      "3a11e60ee8cf431d",
+      "5f8c840a2b8238f4",
+      "dfee48ccf5e25adb",
+      "de4d2b2e3fd66452",
+      "68b038d314b22462"
+    ],
+    "flux-3-image-klein": [
+      "0b4a2a6e636ad22f",
+      "f49c188b9727c7bd"
+    ],
+    "redesigning-source-control": [
+      "49aae9e462bc00ae",
+      "d6e89e4381e4169d"
+    ]
+  },
+  "apart": [
+    {
+      "a": "8b0463614a7b86fd",
+      "b": "66cb1e68848fee2d",
+      "why": "a side aspect (robotics) of a model is its own story"
+    },
+    {
+      "a": "25432b6b093a311b",
+      "b": "66cb1e68848fee2d",
+      "why": "safety write-up vs announcement"
+    },
+    {
+      "a": "7543df857d57c325",
+      "b": "9c8dc2fb4e50ae3a",
+      "why": "two different Meta models"
+    },
+    {
+      "a": "2a16d7d962fadbb1",
+      "b": "f13ac0bb4d3a044b",
+      "why": "consecutive releases of one tool"
+    },
+    {
+      "a": "72d20db6b765d62f",
+      "b": "10645179e0ef2de1",
+      "why": "consecutive builds"
+    },
+    {
+      "a": "3733c75a28bf26df",
+      "b": "0b4a2a6e636ad22f",
+      "why": "library integration post vs model release"
+    },
+    {
+      "a": "551c23b27c7ab847",
+      "b": "8963a105bbbb14c8",
+      "why": "unrelated Anthropic stories"
+    },
+    {
+      "a": "fa14b8f7db4605df",
+      "b": "ad4e14640e358f44",
+      "why": "two OpenAI education posts"
+    }
+  ],
+  "items": [
+    {
+      "id": "8aeb22fcfadbbdff",
+      "title": "Meta releases Muse Spark Open, saying it is the most capable US open-weight model, with 816B total and 42B active parameters and a 1M-token context window (Meta AI Research)",
+      "url": "https://www.techmeme.com/261015/p37#a261015p37",
+      "canonicalUrl": "https://techmeme.com/261015/p37",
+      "sourceId": "techmeme",
+      "publishedAt": "2026-10-15T17:10:01Z",
+      "firstSeenAt": "2026-10-15T19:17:26Z",
+      "summary": "Meta AI Research : Meta releases Muse Spark Open, saying it is the most capable US open-weight model, with 816B total and 42B active parameters and a 1M-token context window — Muse Spark Open is available today and brings leading agentic capabilities to your desktop for the…",
+      "engagement": 0
+    },
+    {
+      "id": "4cc9afff853e9889",
+      "title": "Introducing Muse Spark Open: the most capable US open-weight model to date",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x6r9pz/introducing_muse_spark_open_the_most_capable_us/",
+      "canonicalUrl": "https://reddit.com/r/LocalLLaMA/comments/1x6r9pz/introducing_muse_spark_open_the_most_capable_us",
+      "sourceId": "reddit-localllama",
+      "publishedAt": "2026-10-15T17:03:45Z",
+      "firstSeenAt": "2026-10-15T19:17:26Z",
+      "summary": "Hey r/LocalLlama - Today we’re excited to release Muse Spark Open, the most capable US open-weight model to date. Built for coding and agentic work, it excels at long-horizon tasks, complex software engineering, and multi-step reasoning. Key Model Specs Parameters: 816B total /…",
+      "engagement": 0
+    },
+    {
+      "id": "7543df857d57c325",
+      "title": "Muse Spark Open is Meta's answer to Qwen, GLM, and Kimi in the open-weight race",
+      "url": "https://the-decoder.com/muse-spark-open-is-metas-answer-to-qwen-glm-and-kimi-in-the-open-weight-race/",
+      "canonicalUrl": "https://the-decoder.com/muse-spark-open-is-metas-answer-to-qwen-glm-and-kimi-in-the-open-weight-race",
+      "sourceId": "the-decoder",
+      "publishedAt": "2026-10-15T18:34:32Z",
+      "firstSeenAt": "2026-10-15T19:17:26Z",
+      "summary": "Meta's Muse Spark Open is a new open-weight model with 816 billion parameters that processes text, images, video, and audio with up to one million tokens of context. It performs roughly on par with the most capable open-weight Chinese AI models on benchmarks and is optimized to…",
+      "engagement": 0
+    },
+    {
+      "id": "9d251ac6836a600d",
+      "title": "Welcome Muse Spark Open: open-weight frontier multimodal mixture-of-experts model from Meta",
+      "url": "https://huggingface.co/blog/meta-muse-spark-open",
+      "canonicalUrl": "https://huggingface.co/blog/meta-muse-spark-open",
+      "sourceId": "huggingface-blog",
+      "publishedAt": "2026-10-15T00:00:00Z",
+      "firstSeenAt": "2026-10-15T19:17:26Z",
+      "summary": "",
+      "engagement": 0
+    },
+    {
+      "id": "9c8dc2fb4e50ae3a",
+      "title": "Introducing Muse Wonder and Muse Wonder Full: Frontier Models for Agents",
+      "url": "https://about.fb.com/news/2026/10/introducing-muse-wonder-models/",
+      "canonicalUrl": "https://about.fb.com/news/2026/10/introducing-muse-wonder-models",
+      "sourceId": "meta-newsroom",
+      "publishedAt": "2026-10-12T17:08:05Z",
+      "firstSeenAt": "2026-10-15T15:13:10Z",
+      "summary": "Meta is introducing Muse Wonder and Muse Wonder Full, our most capable models to date, built to deliver state-of-the-art performance on personal and professional agentic tasks. The post Introducing Muse Wonder and Muse Wonder Full: Frontier Models for Agents appeared first on…",
+      "engagement": 0
+    },
+    {
+      "id": "eb7924524a983a3a",
+      "title": "Meta'dan yeni yapay zeka modelleri: Muse Wonder ve Muse Wonder Full",
+      "url": "https://webrazzi.com/2026/10/13/metadan-yeni-yapay-zeka-modelleri-muse-wonder-ve-muse-wonder-full/",
+      "canonicalUrl": "https://webrazzi.com/2026/10/13/metadan-yeni-yapay-zeka-modelleri-muse-wonder-ve-muse-wonder-full",
+      "sourceId": "webrazzi-ai",
+      "publishedAt": "2026-10-13T07:00:00Z",
+      "firstSeenAt": "2026-10-15T15:13:10Z",
+      "summary": "Meta, karmaşık görevleri yerine getirmek ve uzun süreli projelerde çalışmak üzere geliştirdiği Muse Wonder ve Muse Wonder Full adlı iki yeni yapay zeka modelini duyurdu. Şirket, yeni modelleri bugüne ...",
+      "engagement": 0
+    },
+    {
+      "id": "a2c304623a61d6cf",
+      "title": "[AINews] Meta Muse Wonder & Wonder Full: MSL’s Claude 5.5-tier Frontier Model",
+      "url": "https://www.latent.space/p/ainews-meta-muse-wonder-and-wonder",
+      "canonicalUrl": "https://latent.space/p/ainews-meta-muse-wonder-and-wonder",
+      "sourceId": "latent-space",
+      "publishedAt": "2026-10-13T09:37:04Z",
+      "firstSeenAt": "2026-10-15T15:13:10Z",
+      "summary": "MSL’s emergence as a frontier lab is finally complete.",
+      "engagement": 0
+    },
+    {
+      "id": "b6332d929c4772b9",
+      "title": "Muse Wonder Puts Meta Back at the AI Frontier",
+      "url": "https://www.wired.com/story/muse-wonder-puts-meta-back-at-the-ai-frontier/",
+      "canonicalUrl": "https://wired.com/story/muse-wonder-puts-meta-back-at-the-ai-frontier",
+      "sourceId": "wired-ai",
+      "publishedAt": "2026-10-12T17:00:27Z",
+      "firstSeenAt": "2026-10-15T15:13:10Z",
+      "summary": "Meta’s biggest model rivals the world’s best—and includes new features to keep agents from going off the rails.",
+      "engagement": 0
+    },
+    {
+      "id": "66cb1e68848fee2d",
+      "title": "Gemini 4 Argon: Built to solve your hardest problems",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+      "canonicalUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon",
+      "sourceId": "google-ai",
+      "publishedAt": "2026-10-13T16:00:00Z",
+      "firstSeenAt": "2026-10-15T15:13:10Z",
+      "summary": "We’re giving developers, enterprises, scientists, and consumers access to Gemini 4 Argon, our latest frontier model.",
+      "engagement": 0
+    },
+    {
+      "id": "2bad0427cfe4e7d6",
+      "title": "Gemini 4 Argon begins rolling out in Gemini app and Antigravity, but only if you pay",
+      "url": "https://arstechnica.com/ai/2026/10/gemini-4-argon-begins-rolling-out-in-gemini-app-and-antigravity-but-only-if-you-pay/",
+      "canonicalUrl": "https://arstechnica.com/ai/2026/10/gemini-4-argon-begins-rolling-out-in-gemini-app-and-antigravity-but-only-if-you-pay",
+      "sourceId": "ars-ai",
+      "publishedAt": "2026-10-13T16:00:02Z",
+      "firstSeenAt": "2026-10-15T15:13:10Z",
+      "summary": "Developers will get 50 percent discounted API rates through November.",
+      "engagement": 0
+    },
+    {
+      "id": "4a4a81eb8e4e6400",
+      "title": "Gemini 4 Argon is now available worldwide as Google's most capable frontier model",
+      "url": "https://the-decoder.com/gemini-4-argon-is-now-available-worldwide-as-googles-most-capable-frontier-model/",
+      "canonicalUrl": "https://the-decoder.com/gemini-4-argon-is-now-available-worldwide-as-googles-most-capable-frontier-model",
+      "sourceId": "the-decoder",
+      "publishedAt": "2026-10-13T18:00:49Z",
+      "firstSeenAt": "2026-10-15T15:13:10Z",
+      "summary": "Google is making Gemini 4 Argon available worldwide through its API, the Gemini app, and Google Antigravity. The frontier model is aggressively priced but trails Anthropic's Claude Opus 5.5 and Meta's Muse Wonder Full in independent benchmarks. Internally, Google says Argon…",
+      "engagement": 0
+    },
+    {
+      "id": "348b0e018686b6ca",
+      "title": "Google, yeni yapay zeka modeli Gemini 4 Argon'u kullanıma sundu",
+      "url": "https://webrazzi.com/2026/10/14/google-yeni-yapay-zeka-modeli-gemini-4-argonu-kullanima-sundu/",
+      "canonicalUrl": "https://webrazzi.com/2026/10/14/google-yeni-yapay-zeka-modeli-gemini-4-argonu-kullanima-sundu",
+      "sourceId": "webrazzi-ai",
+      "publishedAt": "2026-10-14T08:00:00Z",
+      "firstSeenAt": "2026-10-15T15:13:10Z",
+      "summary": "Google, yeni üst seviye yapay zeka modeli Gemini 4 Argon'u kullanıma sundu. Şirketin özellikle uzun ve çok adımlı görevler için geliştirdiği model; kodlama, finans, hukuk, siber güvenlik ve bilim gibi...",
+      "engagement": 0
+    },
+    {
+      "id": "2cd92b812c13525a",
+      "title": "Open From Data Center to Desktop: NVIDIA Expands Nemotron Family With Highest Efficiency Super VL and Bolt Models",
+      "url": "https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/",
+      "canonicalUrl": "https://blogs.nvidia.com/blog/nemotron-3-5-super-vl",
+      "sourceId": "nvidia-blog",
+      "publishedAt": "2026-10-15T15:00:24Z",
+      "firstSeenAt": "2026-10-15T15:13:10Z",
+      "summary": "NVIDIA today released Nemotron 3.5 Super VL, an open 120-billion-parameter model that delivers the fastest task completion and highest accuracy for specialized always-on agents. Joining it are two new edge models: Nemotron 3.5 Bolt 74B-A9B 24GB, optimized to balance…",
+      "engagement": 0
+    },
+    {
+      "id": "bacac46ca49a3666",
+      "title": "Nvidia's Nemotron 3.5 Super VL is an open model built to run enterprise AI agents nonstop",
+      "url": "https://the-decoder.com/nvidias-nemotron-3-5-super-vl-is-an-open-model-built-to-run-enterprise-ai-agents-nonstop/",
+      "canonicalUrl": "https://the-decoder.com/nvidias-nemotron-3-5-super-vl-is-an-open-model-built-to-run-enterprise-ai-agents-nonstop",
+      "sourceId": "the-decoder",
+      "publishedAt": "2026-10-15T16:09:44Z",
+      "firstSeenAt": "2026-10-15T19:17:26Z",
+      "summary": "With Nemotron 3.5 Super VL, Nvidia is releasing an open multimodal model with 120 billion parameters for enterprise agents. Two compact Bolt models bring agents to local machines. Dozens of organizations are already fine-tuning Super VL, but getting the most out of it means…",
+      "engagement": 0
+    },
+    {
+      "id": "6630bcee115b4652",
+      "title": "Nvidia launches Nemotron 3.5 Super VL, a 120B-parameter open model for enterprise agents, and says it outperforms frontier models on specialized benchmarks (Carl Franzen/VentureBeat)",
+      "url": "https://www.techmeme.com/261015/p34#a261015p34",
+      "canonicalUrl": "https://techmeme.com/261015/p34",
+      "sourceId": "techmeme",
+      "publishedAt": "2026-10-15T16:20:26Z",
+      "firstSeenAt": "2026-10-15T19:17:26Z",
+      "summary": "Carl Franzen / VentureBeat : Nvidia launches Nemotron 3.5 Super VL, a 120B-parameter open model for enterprise agents, and says it outperforms frontier models on specialized benchmarks — An enterprise agent reviewing a credit agreement may need to extract figures from tables…",
+      "engagement": 0
+    },
+    {
+      "id": "09989aa6e799bed7",
+      "title": "nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B model family released (base, NVFP4, BF16, and LiLiCorr speculative decoding)",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x6nl8m/nvidianvidianemotron35supervl120ba12b_model/",
+      "canonicalUrl": "https://reddit.com/r/LocalLLaMA/comments/1x6nl8m/nvidianvidianemotron35supervl120ba12b_model",
+      "sourceId": "reddit-localllama",
+      "publishedAt": "2026-10-15T14:46:04Z",
+      "firstSeenAt": "2026-10-15T19:17:26Z",
+      "summary": "submitted by /u/jinnyjuice [link] [comments]",
+      "engagement": 0
+    },
+    {
+      "id": "3a11e60ee8cf431d",
+      "title": "Introducing Timestral",
+      "url": "https://mistral.ai/news/timestral/",
+      "canonicalUrl": "https://mistral.ai/news/timestral",
+      "sourceId": "mistral-news",
+      "publishedAt": "2026-10-15T12:00:00Z",
+      "firstSeenAt": "2026-10-15T15:13:10Z",
+      "summary": "State-of-the-art probabilistic forecasting in four sizes (5M–209M params), CPU-efficient, zero-shot ready.",
+      "engagement": 0
+    },
+    {
+      "id": "5f8c840a2b8238f4",
+      "title": "New model on Hugging Face: mistralai/Timestral-123M",
+      "url": "https://huggingface.co/mistralai/Timestral-123M",
+      "canonicalUrl": "https://huggingface.co/mistralai/Timestral-123M",
+      "sourceId": "hf-mistral",
+      "publishedAt": "2026-10-14T17:51:04Z",
+      "firstSeenAt": "2026-10-15T19:17:26Z",
+      "summary": "time-series-forecasting · 11 likes · 5 downloads",
+      "engagement": 0,
+      "extra": {
+        "modelId": "mistralai/Timestral-123M"
+      }
+    },
+    {
+      "id": "dfee48ccf5e25adb",
+      "title": "New model on Hugging Face: mistralai/Timestral-28M",
+      "url": "https://huggingface.co/mistralai/Timestral-28M",
+      "canonicalUrl": "https://huggingface.co/mistralai/Timestral-28M",
+      "sourceId": "hf-mistral",
+      "publishedAt": "2026-10-14T17:50:53Z",
+      "firstSeenAt": "2026-10-15T19:17:26Z",
+      "summary": "time-series-forecasting · 12 likes · 5 downloads",
+      "engagement": 0,
+      "extra": {
+        "modelId": "mistralai/Timestral-28M"
+      }
+    },
+    {
+      "id": "de4d2b2e3fd66452",
+      "title": "New model on Hugging Face: mistralai/Timestral-5M",
+      "url": "https://huggingface.co/mistralai/Timestral-5M",
+      "canonicalUrl": "https://huggingface.co/mistralai/Timestral-5M",
+      "sourceId": "hf-mistral",
+      "publishedAt": "2026-10-14T13:41:13Z",
+      "firstSeenAt": "2026-10-15T19:17:26Z",
+      "summary": "time-series-forecasting · 13 likes · 7 downloads",
+      "engagement": 0,
+      "extra": {
+        "modelId": "mistralai/Timestral-5M"
+      }
+    },
+    {
+      "id": "68b038d314b22462",
+      "title": "New model on Hugging Face: mistralai/Timestral-209M",
+      "url": "https://huggingface.co/mistralai/Timestral-209M",
+      "canonicalUrl": "https://huggingface.co/mistralai/Timestral-209M",
+      "sourceId": "hf-mistral",
+      "publishedAt": "2026-10-14T08:52:36Z",
+      "firstSeenAt": "2026-10-15T19:17:26Z",
+      "summary": "time-series-forecasting · 25 likes · 11 downloads",
+      "engagement": 0,
+      "extra": {
+        "modelId": "mistralai/Timestral-209M"
+      }
+    },
+    {
+      "id": "0b4a2a6e636ad22f",
+      "title": "Black Forest Labs' open-weights image model FLUX 3 Image Klein runs on consumer GPUs with just 8 GB of VRAM",
+      "url": "https://the-decoder.com/black-forest-labs-open-weights-image-model-flux-3-image-klein-runs-on-consumer-gpus-with-just-8-gb-of-vram/",
+      "canonicalUrl": "https://the-decoder.com/black-forest-labs-open-weights-image-model-flux-3-image-klein-runs-on-consumer-gpus-with-just-8-gb-of-vram",
+      "sourceId": "the-decoder",
+      "publishedAt": "2026-10-15T16:57:14Z",
+      "firstSeenAt": "2026-10-15T19:17:26Z",
+      "summary": "Black Forest Labs has released FLUX 3 Image Klein, a 5.6-billion-parameter open-weights image model that supports native 4K generation, pixel-precise editing, and generation with up to ten reference images. With 38 percent fewer parameters than its predecessor, it still…",
+      "engagement": 0
+    },
+    {
+      "id": "f49c188b9727c7bd",
+      "title": "Flux.3 Image Klein is now out",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x6s7el/flux3_image_klein_is_now_out/",
+      "canonicalUrl": "https://reddit.com/r/LocalLLaMA/comments/1x6s7el/flux3_image_klein_is_now_out",
+      "sourceId": "reddit-localllama",
+      "publishedAt": "2026-10-15T17:38:48Z",
+      "firstSeenAt": "2026-10-15T19:17:26Z",
+      "summary": "FLUX 3 Image Klein is a 5.6B open weights model for text-to-image generation and image editing. It takes a prompt and up to 10 reference images and returns one image. Text-to-image, single-reference edits and multi-reference compositions run through the same model, with…",
+      "engagement": 0
+    },
+    {
+      "id": "02ae3f5fc0dc9f97",
+      "title": "Recording device hidden in toilet paper found in top-secret OpenAI meeting room",
+      "url": "https://arstechnica.com/tech-policy/2026/10/fbi-arrests-openai-engineer-suspected-of-planting-bug-in-conference-room/",
+      "canonicalUrl": "https://arstechnica.com/tech-policy/2026/10/fbi-arrests-openai-engineer-suspected-of-planting-bug-in-conference-room",
+      "sourceId": "ars-ai",
+      "publishedAt": "2026-10-14T16:41:49Z",
+      "firstSeenAt": "2026-10-15T15:13:10Z",
+      "summary": "OpenAI engineer faces 5 years and $250K fine as FBI lobs foreign spy charges.",
+      "engagement": 0
+    },
+    {
+      "id": "e540598aacd912ec",
+      "title": "An OpenAI Employee Allegedly Used a Chatbot to Help Plant a Recording Device at the Office",
+      "url": "https://www.wired.com/story/an-openai-employee-allegedly-used-a-chatbot-to-help-plant-a-recording-device-at-the-office/",
+      "canonicalUrl": "https://wired.com/story/an-openai-employee-allegedly-used-a-chatbot-to-help-plant-a-recording-device-at-the-office",
+      "sourceId": "wired-ai",
+      "publishedAt": "2026-10-13T23:17:59Z",
+      "firstSeenAt": "2026-10-15T15:13:10Z",
+      "summary": "Chatbot prompts reveal the engineer’s alleged efforts to set up a covert listening device days before one was found in a meeting room used by high-level executives.",
+      "engagement": 0
+    },
+    {
+      "id": "421acab06078b903",
+      "title": "OpenAI finds recording device in one of their offices",
+      "url": "https://twitter.com/OpenAINewsroom/status/2110095403198849132",
+      "canonicalUrl": "https://twitter.com/OpenAINewsroom/status/2110095403198849132",
+      "sourceId": "hn-openai",
+      "publishedAt": "2026-10-13T19:55:31Z",
+      "firstSeenAt": "2026-10-15T15:13:10Z",
+      "summary": "85 points · 2 comments on Hacker News",
+      "engagement": 85
+    },
+    {
+      "id": "49aae9e462bc00ae",
+      "title": "Redesigning source control at Anthropic",
+      "url": "https://simonwillison.net/2026/Oct/13/redesigning-source-control-at-anthropic/",
+      "canonicalUrl": "https://simonwillison.net/2026/Oct/13/redesigning-source-control-at-anthropic",
+      "sourceId": "simon-willison",
+      "publishedAt": "2026-10-13T23:00:06Z",
+      "firstSeenAt": "2026-10-15T15:13:10Z",
+      "summary": "Redesigning source control at Anthropic Interesting piece from Anthropic describing why and how they built their own custom alternative to Git, based on the dramatic increase in rate of changes to their code after the past six months. In May 2026, Anthropic averaged around…",
+      "engagement": 0
+    },
+    {
+      "id": "d6e89e4381e4169d",
+      "title": "Redesigning source control at Anthropic",
+      "url": "https://www.anthropic.com/engineering/redesigning-source-control",
+      "canonicalUrl": "https://anthropic.com/engineering/redesigning-source-control",
+      "sourceId": "anthropic-engineering",
+      "publishedAt": "2026-10-13T00:00:00Z",
+      "firstSeenAt": "2026-10-15T15:13:10Z",
+      "summary": "As our merges per day grew more than tenfold, source control became our biggest development bottleneck. Here, we share how we migrated to an in-house version control system in five months.",
+      "engagement": 0
+    },
+    {
+      "id": "8b0463614a7b86fd",
+      "title": "Gemini 4 Argon for Robotics",
+      "url": "https://deepmind.google/blog/gemini-4-argon-for-robotics/",
+      "canonicalUrl": "https://deepmind.google/blog/gemini-4-argon-for-robotics",
+      "sourceId": "deepmind",
+      "publishedAt": "2026-10-13T16:01:58Z",
+      "firstSeenAt": "2026-10-15T15:13:10Z",
+      "summary": "",
+      "engagement": 0
+    },
+    {
+      "id": "25432b6b093a311b",
+      "title": "Developing Gemini 4 Argon responsibly and safely",
+      "url": "https://deepmind.google/blog/developing-gemini-4-argon-responsibly-and-safely/",
+      "canonicalUrl": "https://deepmind.google/blog/developing-gemini-4-argon-responsibly-and-safely",
+      "sourceId": "deepmind",
+      "publishedAt": "2026-10-13T19:43:07Z",
+      "firstSeenAt": "2026-10-15T15:13:10Z",
+      "summary": "",
+      "engagement": 0
+    },
+    {
+      "id": "2a16d7d962fadbb1",
+      "title": "Ollama v0.40.4",
+      "url": "https://github.com/ollama/ollama/releases/tag/v0.40.4",
+      "canonicalUrl": "https://github.com/ollama/ollama/releases/tag/v0.40.4",
+      "sourceId": "ollama-releases",
+      "publishedAt": "2026-10-14T02:23:26Z",
+      "firstSeenAt": "2026-10-15T15:13:10Z",
+      "summary": "Decision models in the CLI Decision models can now be used directly from the terminal with ollama run — ask yes/no questions, classify text into labels, or score against a rubric: ollama run nimble --ask \"Is a refund being requested?\" < ticket.txt What's Changed Kev decision…",
+      "engagement": 0
+    },
+    {
+      "id": "f13ac0bb4d3a044b",
+      "title": "Ollama v0.40.5",
+      "url": "https://github.com/ollama/ollama/releases/tag/v0.40.5",
+      "canonicalUrl": "https://github.com/ollama/ollama/releases/tag/v0.40.5",
+      "sourceId": "ollama-releases",
+      "publishedAt": "2026-10-15T18:50:36Z",
+      "firstSeenAt": "2026-10-15T19:17:26Z",
+      "summary": "NVIDIA Nemotron 3.5 Super NVIDIA Nemotron 3.5 Super is a vision-language model for coding, reasoning, tool use, and document understanding. It pairs a 120B-parameter hybrid Mamba-2/Transformer mixture-of-experts backbone (12B active per token) with a C-RADIO vision encoder, and…",
+      "engagement": 0
+    },
+    {
+      "id": "72d20db6b765d62f",
+      "title": "llama.cpp release b11669",
+      "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11669",
+      "canonicalUrl": "https://github.com/ggml-org/llama.cpp/releases/tag/b11669",
+      "sourceId": "llama-cpp-releases",
+      "publishedAt": "2026-10-15T13:48:22Z",
+      "firstSeenAt": "2026-10-15T15:13:10Z",
+      "summary": "llama.cpp : bump version to 0.7.0 ( #30603 )",
+      "engagement": 0
+    },
+    {
+      "id": "10645179e0ef2de1",
+      "title": "llama.cpp release b11662",
+      "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11662",
+      "canonicalUrl": "https://github.com/ggml-org/llama.cpp/releases/tag/b11662",
+      "sourceId": "llama-cpp-releases",
+      "publishedAt": "2026-10-15T13:20:14Z",
+      "firstSeenAt": "2026-10-15T15:13:10Z",
+      "summary": "sync : ggml",
+      "engagement": 0
+    },
+    {
+      "id": "3733c75a28bf26df",
+      "title": "Welcome FLUX.3 Image Klein in Diffusers",
+      "url": "https://huggingface.co/blog/flux-3",
+      "canonicalUrl": "https://huggingface.co/blog/flux-3",
+      "sourceId": "huggingface-blog",
+      "publishedAt": "2026-10-15T00:00:00Z",
+      "firstSeenAt": "2026-10-15T19:17:26Z",
+      "summary": "",
+      "engagement": 0
+    },
+    {
+      "id": "551c23b27c7ab847",
+      "title": "Anthropic's Q3 revenue hits $16.8B but growth slows ahead of planned November IPO",
+      "url": "https://the-decoder.com/anthropics-q3-revenue-hits-16-8b-but-growth-slows-ahead-of-planned-november-ipo/",
+      "canonicalUrl": "https://the-decoder.com/anthropics-q3-revenue-hits-16-8b-but-growth-slows-ahead-of-planned-november-ipo",
+      "sourceId": "the-decoder",
+      "publishedAt": "2026-10-15T09:50:43Z",
+      "firstSeenAt": "2026-10-15T15:13:10Z",
+      "summary": "Anthropic hit $16.8 billion in third-quarter revenue, a 45 percent gain that still falls far short of Q2's 140 percent surge. With a November IPO approaching, some investors now expect the company's valuation to drop below $1.5 trillion. Slowing growth and a tough market are…",
+      "engagement": 0
+    },
+    {
+      "id": "8963a105bbbb14c8",
+      "title": "Source: the US FTC issues ~50-page civil investigative demands to OpenAI and Anthropic over safety incidents, safeguarding practices, and consumer protection (Maria Curi/Axios)",
+      "url": "https://www.techmeme.com/261015/p20#a261015p20",
+      "canonicalUrl": "https://techmeme.com/261015/p20",
+      "sourceId": "techmeme",
+      "publishedAt": "2026-10-15T11:25:00Z",
+      "firstSeenAt": "2026-10-15T15:13:10Z",
+      "summary": "Maria Curi / Axios : Source: the US FTC issues ~50-page civil investigative demands to OpenAI and Anthropic over safety incidents, safeguarding practices, and consumer protection — - The FTC sought documents from Anthropic and OpenAI with the scope of the probe focused on…",
+      "engagement": 0
+    },
+    {
+      "id": "fa14b8f7db4605df",
+      "title": "Teaching students to think and learn through questions",
+      "url": "https://openai.com/index/teaching-students-to-think-and-learn-through-questions",
+      "canonicalUrl": "https://openai.com/index/teaching-students-to-think-and-learn-through-questions",
+      "sourceId": "openai",
+      "publishedAt": "2026-10-15T13:00:00Z",
+      "firstSeenAt": "2026-10-15T15:13:10Z",
+      "summary": "Celebrate Teachers’ Day with AI for Educators in Brazilian Portuguese and see how Study Mode can help teachers support active, step-by-step learning.",
+      "engagement": 0
+    },
+    {
+      "id": "ad4e14640e358f44",
+      "title": "Helping teens learn, plan, and shape the future of AI",
+      "url": "https://openai.com/index/teens-learn-and-plan",
+      "canonicalUrl": "https://openai.com/index/teens-learn-and-plan",
+      "sourceId": "openai",
+      "publishedAt": "2026-10-07T12:00:00Z",
+      "firstSeenAt": "2026-10-15T15:13:10Z",
+      "summary": "College Planner is coming to ChatGPT for Teens to help students manage college applications, alongside new flashcards, quizzes, and a teen AI council.",
+      "engagement": 0
+    }
+  ],
+  "comment": "Real pool items from the live data branch (2026-10-15T19:17Z). groups: ids that must end up in one cluster; apart: id pairs that must stay in different clusters. Used by tests/cluster-real.test.mjs.",
+  "now": "2026-10-15T19:17:26Z",
+  "knownMisses": [
+    {
+      "name": "openai-recording-device",
+      "why": "same event worded differently by Ars, Wired and HN; no shared model name and title Jaccard is far below threshold. A rare-bigram rule was tried and rejected: too many false merges (google says, openai anthropic)."
+    },
+    {
+      "name": "youtube-music-ai-labels",
+      "why": "Ars and TechCrunch describe it with different words"
+    },
+    {
+      "name": "amazon-bee-wearables",
+      "why": "numeric key tokens differ (75 vs 75,100) and title overlap is low"
+    }
+  ]
+}

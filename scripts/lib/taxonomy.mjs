@@ -62,8 +62,15 @@ const FAMILIES = [
   'GPT', 'o[1-9]', 'Claude', 'Gemini', 'Gemma', 'Llama', 'Qwen\\d*(?:\\.\\d+)?', 'DeepSeek', 'Kimi', 'GLM', 'Grok', 'Mistral', 'Mixtral',
   'Magistral', 'Devstral', 'Ministral', 'Pixtral', 'Phi', 'Nemotron', 'Sora', 'Veo', 'Imagen', 'Opus', 'Sonnet', 'Haiku', 'Hunyuan', 'ERNIE',
   'Doubao', 'MiniMax', 'Seedance', 'Flux', 'Command', 'Granite', 'Olmo', 'SmolLM\\d*', 'Yi', 'InternVL\\d*', 'InternLM\\d*',
+  // Phase 2: lab brands seen in the live data. These words are ordinary English too, so a match
+  // must start with a capital letter (BRAND_FAMILIES below) and be followed by a version/variant.
+  'Muse', 'Fable', 'Mythos', 'Jais', 'LFM\\d*(?:\\.\\d+)?', 'Falcon', 'Apertus', 'OmniHuman', 'Kling', 'Wan', 'Ling', 'Ring',
+  'Whisper', 'Nova', 'Seedream', 'Intern-?S', 'EmbeddingGemma',
 ];
-const VARIANT = '(?:v?\\d+(?:\\.\\d+)*[a-z]?|mini|nano|pro|flash|ultra|turbo|thinking|instruct|opus|sonnet|haiku|max|lite|air|plus|vl|coder|omni|preview|large|small|medium|high|image|vision|codex|reasoner|chat|base|r\\d|k\\d(?:\\.\\d+)?)';
+// Families whose bare names are ordinary words: only count when written with a capital initial.
+const BRAND_FAMILIES = new Set(['muse', 'fable', 'mythos', 'falcon', 'kling', 'wan', 'ling', 'ring', 'whisper', 'nova', 'flux']);
+const VARIANT = '(?:v?\\d+(?:\\.\\d+)*[a-z]?|mini|nano|pro|flash|ultra|turbo|thinking|instruct|opus|sonnet|haiku|max|lite|air|plus|vl|coder|omni|preview|large|small|medium|high|image|vision|codex|reasoner|chat|base|r\\d|k\\d(?:\\.\\d+)?' +
+  '|spark|wonder|full|open|super|bolt|klein|argon|carbon|sol|astra|ultrafast|asr|tts|live|rerank|embed|fable|mythos)';
 const MODEL_STRICT_RE = new RegExp(`(?<![\\p{L}\\p{N}_-])(${FAMILIES.join('|')})((?:[ -]${VARIANT}){1,3})(?![\\p{L}\\p{N}])`, 'giu');
 const HYPHEN_FAMILIES = new Set(['gpt', 'glm', 'deepseek', 'phi', 'o1', 'o3', 'o4']);
 
@@ -72,6 +79,7 @@ function titleCaseFamily(f) {
   const special = { gpt: 'GPT', glm: 'GLM', deepseek: 'DeepSeek', xai: 'xAI', ernie: 'ERNIE', minimax: 'MiniMax', gemini: 'Gemini' };
   if (special[l]) return special[l];
   if (/^o[1-9]$/.test(l)) return l;
+  if (/^[A-Z]{4,}$/.test(f) && !/^(LFM|ERNIE)/.test(f)) return f.charAt(0) + f.slice(1).toLowerCase(); // "MUSE", "FLUX"
   return f.charAt(0).toUpperCase() + f.slice(1);
 }
 
@@ -81,13 +89,17 @@ export function findModels(text) {
   MODEL_STRICT_RE.lastIndex = 0;
   let m;
   while ((m = MODEL_STRICT_RE.exec(text))) {
+    if (BRAND_FAMILIES.has(m[1].toLowerCase()) && !/^[A-Z]/.test(m[1])) continue;
     const family = titleCaseFamily(m[1]);
-    const rest = m[2].trim().split(/[ -]+/).filter(Boolean).map(t => (/^\d/.test(t) || /^v\d/i.test(t) ? t.toLowerCase() : t.charAt(0).toUpperCase() + t.slice(1).toLowerCase()));
+    const rest = m[2].trim().split(/[ -]+/).filter(Boolean).map(t => (/^\d+(?:\.\d+)?[bm]$/i.test(t) ? t.toUpperCase()
+      : /^(vl|asr|tts|moe|ocr)$/i.test(t) ? t.toUpperCase()
+      : /^\d/.test(t) || /^v\d/i.test(t) ? t.toLowerCase() : t.charAt(0).toUpperCase() + t.slice(1).toLowerCase()));
     if (!rest.length) continue;
     // A bare variant word without a number is only a model for strong families.
     const hasNumber = rest.some(t => /\d/.test(t));
-    const strong = /^(claude|gemini|gpt|llama|qwen|deepseek|grok|kimi|glm|mistral|gemma|phi|nemotron)/i.test(family);
+    const strong = /^(claude|gemini|gpt|llama|qwen|deepseek|grok|kimi|glm|mistral|gemma|phi|nemotron|muse|jais|falcon|apertus|lfm|flux|embeddinggemma|omnihuman|fable|mythos)/i.test(family);
     if (!hasNumber && !strong) continue;
+    if (/^falcon$/i.test(family) && /^9$/.test(rest[0])) continue; // SpaceX Falcon 9
     let name;
     if (HYPHEN_FAMILIES.has(family.toLowerCase()) && /^\d|^v\d/.test(rest[0])) name = `${family}-${rest.join('-')}`;
     else name = `${family} ${rest.join(' ')}`;
@@ -99,8 +111,38 @@ export function findModels(text) {
     const family = titleCaseFamily(m[1]);
     out.add(HYPHEN_FAMILIES.has(family.toLowerCase()) ? `${family}-${m[2]}` : `${family} ${m[2]}`);
   }
-  return [...out].sort();
+  // Hugging Face repo paths: "nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B" (the hyphen before the
+  // family blocks the strict pass above, and "llm-gemini 0.35" must keep failing, so only repo paths are rewritten).
+  const repo = /(?<![\w.-])[\w.-]+\/([\w.-]+)/g;
+  while ((m = repo.exec(text))) {
+    const spaced = m[1].replace(/^(?:NVIDIA|nvidia|Qwen|google|meta|mistral)-/, '').replace(/-/g, ' ');
+    for (const n of findModels(spaced)) out.add(n);
+  }
+  // "Step-5-Preview" (hyphenated only: "Step 3" is a tutorial step), distinct -stral names ("Timestral-123M").
+  const step = /(?<![\p{L}\p{N}_-])(Step-\d+(?:\.\d+)?(?:-[A-Z][a-z]+)?)(?![\p{L}\p{N}])/gu;
+  while ((m = step.exec(text))) out.add(m[1]);
+  const stral = /(?<![\p{L}\p{N}_/-])((?!Mistral(?![\p{L}]))[A-Z][a-z]{2,}stral(?:-[\p{L}\p{N}.]+)?)(?![\p{L}])/gu;
+  while ((m = stral.exec(text))) out.add(m[1]);
+  // Case-insensitive dedupe ("MUSE Spark Open" / "Muse Spark Open"): keep the first spelling seen.
+  const seen = new Set();
+  return [...out].filter(n => { const k = n.toLowerCase(); if (seen.has(k)) return false; seen.add(k); return true; }).sort();
 }
+
+// Distinct lab brands: a mention is already a model name even without a version number
+// ("Introducing Timestral", "Muse Spark Open", "Jais 3 is out"). Capitalised only.
+export const BRAND_RE = new RegExp(
+  '(?<![\\p{L}\\p{N}_-])(?:' + [
+    '(?!Mistral(?![\\p{L}]))[A-Z][a-z]{2,}stral',
+    'Muse[ -](?:Spark|Wonder|Pro|Open|Full|\\d)\\w*',
+    'Nemotron', 'Jais(?:[ -]\\d+)?', 'LFM\\d(?:\\.\\d+)?', 'Apertus', 'EmbeddingGemma', 'OmniHuman', 'Seedream', 'Seedance',
+    'Falcon(?:[ -](?:ASR|TTS|H1|Mamba|OCR|Vision|Edge|\\d+B))', 'Flux[ .-]?\\d(?:\\.\\d+)?', 'FLUX', 'Step-\\d',
+    'Kling[ -]\\d', 'Wan[ -]\\d(?:\\.\\d+)?', 'Intern-?S\\d', 'Ling-\\d', 'Ring-\\d', 'Qwen[- ]?Image', 'Hunyuan[\\w-]*',
+    'Claude (?:Fable|Mythos)', 'Matrix-Game',
+  ].join('|') + ')(?![\\p{L}\\p{N}])',
+  'u',
+);
+// Parameter-count tokens: "74B-A9B", "120B", "35B3A", "135M". Not money ("$16B").
+export const SIZE_RE = /(?<![\p{L}\p{N}$€£.,])(?:\d{1,4}(?:\.\d+)?B|(?:[2-9]\d|\d{3})M)(?:[- ]?A\d+(?:\.\d+)?B|\d+A)?(?![\p{L}\p{N}])/u;
 
 // Model name patterns used by the release / version-bump rules.
 export const MODEL_NAME_RE = /(?<![\p{L}\p{N}_-])(?:gpt|claude|gemini|llama|qwen|deepseek|kimi|glm|grok|mistral|mixtral|phi|gemma|nemotron|sora|veo)(?:[ -](?:mini|nano|pro|flash|ultra|turbo|opus|sonnet|haiku|max|lite|air|plus|large|small|medium|high|image|vision)){0,2}[- ]?v?\d/iu;
@@ -110,6 +152,9 @@ export const VERSION_BUMP_RE = /(?<![\p{L}\p{N}])(?:gpt-?\d|claude[ -]\w+[ -]\d|
 export const LAUNCH_RE = wordRe([
   'launch(?:es|ed|ing)?', 'releas(?:es|ed|ing)', 'introduc(?:es|ed|ing)', 'unveil(?:s|ed|ing)', 'announc(?:es|ed|ing)',
   'rolls? out', 'rolling out', 'now available', 'debuts?', 'open[- ]sourc(?:es|ed)', 'new model', 'is here',
+  // Phase 2: community and blog phrasings of the same event.
+  'is out', 'now out', 'is live', 'now live', 'goes live', 'begins rolling out', 'ships?', 'shipped', 'drops?', 'dropped',
+  'welcome', 'release notes', 'expands? (?:[\\w-]+ ){0,3}family',
   // Turkish
   'kullan\u0131ma sund\\w*', 'kullan\u0131ma a\u00e7\\w*', 'tan\u0131tt\\w*', 'duyurdu', 'yay\u0131nlad\\w*', 'piyasaya s\u00fcrd\\w*',
 ]);
@@ -130,9 +175,9 @@ export const FUNDING_RE = new RegExp(
 // ---- topic / label rules (the report's table) ------------------------------
 // weight is added once when any alternative matches.
 export const LABEL_RULES = [
-  { label: 'research', weight: 2, re: wordRe(['arxiv', 'paper', 'papers', 'benchmark', 'we propose', 'preprint', 'neurips', 'icml', 'iclr', 'acl', 'emnlp', 'study', 'researchers']) },
+  { label: 'research', weight: 2, re: wordRe(['arxiv', '(?<!toilet )paper', '(?<!toilet )papers', 'benchmark', 'we propose', 'preprint', 'neurips', 'icml', 'iclr', 'acl', 'emnlp', 'study', 'researchers']) },
   { label: 'open-source', weight: 2, re: wordRe(['open[- ]?source', 'open[- ]?weights?', 'apache 2(?:\\.0)?', 'mit license', 'hugging ?face', 'github', 'gguf', 'llama\\.cpp', 'ollama', 'vllm', 'comfyui']) },
-  { label: 'policy', weight: 2, re: wordRe(['regulat\\w*', 'ai act', 'executive order', 'congress', 'senate', 'lawsuit', 'sues?', 'copyright', 'ban(?:s|ned)?', 'export controls?', 'nist', 'eu commission', 'european commission', 'aisi', 'cac', 'legislation', 'bill', 'kvkk', 'yasa\\w*', 'd\\u00fczenleme\\w*', 'white house', 'federal register']) },
+  { label: 'policy', weight: 2, re: wordRe(['regulat\\w*', 'ai act', 'executive order', 'congress', 'senate', 'lawsuit', 'sues?', 'copyright', 'ban(?:s|ned)?', 'export controls?', 'nist', 'eu commission', 'european commission', 'aisi', 'cac', 'legislation', 'bill', 'ftc', 'doj', 'probes?', 'lawmakers?', 'civil investigative demands?', 'usage polic(?:y|ies)', 'kvkk', 'yasa\\w*', 'd\\u00fczenleme\\w*', 'white house', 'federal register']) },
   { label: 'hardware', weight: 2, re: wordRe(['gpus?', 'h100', 'h200', 'b200', 'gb200', 'blackwell', 'rubin', 'tpus?', 'trainium', 'chips?', 'datacenters?', 'data centers?', 'hbm', 'cuda', 'inference cost', 'gigawatts?', 'semiconductors?', '\\u00e7ip\\w*']) },
   { label: 'funding', weight: 2, re: FUNDING_RE },
   { label: 'safety', weight: 2, re: wordRe(['safety', 'alignment', 'jailbreaks?', 'red[- ]team\\w*', 'misuse', 'deepfakes?', 'interpretability', 'ai security', 'guardrails?', 'risks?', 'g\\u00fcvenlik\\w*', 'vulnerabilit\\w+']) },

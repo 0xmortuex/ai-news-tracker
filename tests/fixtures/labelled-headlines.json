@@ -1,0 +1,3406 @@
+{
+ "comment": "Real headlines from the live news.json of 2026-10-15T19:17Z, hand-labelled (gold = what the item IS: model-release means the maker announcing/releasing a specific new model or the news/community coverage of that release). `source` is the config profile of the feed it came from. Used by tests/tag-quality.test.mjs.",
+ "generatedFrom": "2026-10-15T19:17:26Z",
+ "cases": [
+  {
+   "id": "e925c3137a",
+   "title": "Anthropic is letting METR researchers look under the hood with employee-level access",
+   "summary": "METR will publish its own assessments of Anthropic’s risks, incidents, and practices, and the frontier AI model maker has given up the right to block them.",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "techcrunch-ai",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "press"
+   }
+  },
+  {
+   "id": "35f04bc99b",
+   "title": "Bluesky expands its AI-powered Attie app to let anyone build websites, games, and more",
+   "summary": "Bluesky is bringing “social vibe coding” to its experimental Attie platform, allowing users to create interactive experiences like games, quizzes, and websites that can tap into the social network's audience.",
+   "gold": "product",
+   "models": [],
+   "source": {
+    "sourceId": "techcrunch-ai",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "press"
+   }
+  },
+  {
+   "id": "f13ac0bb4d",
+   "title": "Ollama v0.40.5",
+   "summary": "NVIDIA Nemotron 3.5 Super NVIDIA Nemotron 3.5 Super is a vision-language model for coding, reasoning, tool use, and document understanding. It pairs a 120B-parameter hybrid Mamba-2/Transformer mixture-of-experts backbone (12B active per token) with a C-RADIO vision encoder, and…",
+   "gold": "tool",
+   "models": [
+    "Nemotron 3.5"
+   ],
+   "source": {
+    "sourceId": "ollama-releases",
+    "sourceKind": "repo",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "tracker",
+    "company": "Ollama",
+    "prior": {
+     "kind": "tool"
+    }
+   }
+  },
+  {
+   "id": "ab7dea4bf7",
+   "title": "Google says it has 400+ publications in its News AI pilot, which tests features like overviews; participants include Financial Times, CNN, and The Texas Tribune (Andrew Deck/Nieman Lab)",
+   "summary": "Andrew Deck / Nieman Lab : Google says it has 400+ publications in its News AI pilot, which tests features like overviews; participants include Financial Times, CNN, and The Texas Tribune — In December, Google launched its News AI pilot program, which licenses content from…",
+   "gold": "product",
+   "models": [],
+   "source": {
+    "sourceId": "techmeme",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "community"
+   }
+  },
+  {
+   "id": "7543df857d",
+   "title": "Muse Spark Open is Meta's answer to Qwen, GLM, and Kimi in the open-weight race",
+   "summary": "Meta's Muse Spark Open is a new open-weight model with 816 billion parameters that processes text, images, video, and audio with up to one million tokens of context. It performs roughly on par with the most capable open-weight Chinese AI models on benchmarks and is optimized to…",
+   "gold": "model-release",
+   "models": [],
+   "source": {
+    "sourceId": "the-decoder",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "OTHER",
+    "lang": "en",
+    "category": "press"
+   }
+  },
+  {
+   "id": "a4975bebfd",
+   "title": "Meta and Apple team up to make Muse AI models run better on Macs",
+   "summary": "Meta announced the Muse Spark Open AI model today, claiming that it's the \"most capable US open-weight model to date.\" But the company also says that it's the \"the first model in its class\" that can \"run on your desktop using two Apple M5 Ultra Mac Studios with the latest MLX…",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "verge-ai",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "press"
+   }
+  },
+  {
+   "id": "e812566e88",
+   "title": "Transformers Release v5.20.0",
+   "summary": "Release v5.20.0 New Model additions Muse Spark Open Muse Spark Open is a multimodal mixture-of-experts model from Meta that takes text, images, audio, and video as input and generates text. It has 816B total parameters (42B active per token) and a context window of up to…",
+   "gold": "tool",
+   "models": [],
+   "source": {
+    "sourceId": "transformers-releases",
+    "sourceKind": "repo",
+    "tier": 3,
+    "country": "US",
+    "lang": "en",
+    "category": "tracker",
+    "company": "Hugging Face",
+    "prior": {
+     "kind": "tool"
+    }
+   }
+  },
+  {
+   "id": "d9d8114df7",
+   "title": "Last chance to save up to $200 on your TechCrunch Founder Summit pass: Early booking ends October 16",
+   "summary": "Savings of up to $200 end October 16 for TechCrunch Founder Summit. These savings for Founder and Investor Passes vanish after Friday. Join 1,000 founders and investors on November 4 at Boston’s SoWa Power Station. Bring your toughest questions and make the day count for your…",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "techcrunch-ai",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "press"
+   }
+  },
+  {
+   "id": "ed818c42ed",
+   "title": "Volvo says it will use Nvidia's Hyperion platform to launch a Level 2++ hands-free, point-to-point automated driving system by 2030 (Andrew J. Hawkins/The Verge)",
+   "summary": "Andrew J. Hawkins / The Verge : Volvo says it will use Nvidia's Hyperion platform to launch a Level 2++ hands-free, point-to-point automated driving system by 2030 — The system will be similar to Tesla's Full Self-Driving in that it will enable hands-free, point-to-point…",
+   "gold": "product",
+   "models": [],
+   "source": {
+    "sourceId": "techmeme",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "community"
+   }
+  },
+  {
+   "id": "4addd78f1b",
+   "title": "Memo: Accenture has told many employees, some of whom had been spending as much as $1,000 monthly, that it will now only spend $29 a month per person on Claude (Joseph Cox/404 Media)",
+   "summary": "Joseph Cox / 404 Media : Memo: Accenture has told many employees, some of whom had been spending as much as $1,000 monthly, that it will now only spend $29 a month per person on Claude — Some employees who spend as much as $1,000 on Claude usage each month are scrambling to…",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "techmeme",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "community"
+   }
+  },
+  {
+   "id": "4ca27e3a25",
+   "title": "Anthropic says it is giving employee-like access to METR as part of its pledge to partner with evaluators for assessment of its models and safety practices (Anthropic)",
+   "summary": "Anthropic : Anthropic says it is giving employee-like access to METR as part of its pledge to partner with evaluators for assessment of its models and safety practices — Last month, we committed to stronger independent, third-party assessment of our models and safety practices.",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "techmeme",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "community"
+   }
+  },
+  {
+   "id": "f49c188b97",
+   "title": "Flux.3 Image Klein is now out",
+   "summary": "FLUX 3 Image Klein is a 5.6B open weights model for text-to-image generation and image editing. It takes a prompt and up to 10 reference images and returns one image. Text-to-image, single-reference edits and multi-reference compositions run through the same model, with…",
+   "gold": "model-release",
+   "models": [
+    "FLUX 3 Image"
+   ],
+   "source": {
+    "sourceId": "reddit-localllama",
+    "sourceKind": "community",
+    "tier": 3,
+    "country": "OTHER",
+    "lang": "en",
+    "category": "community"
+   }
+  },
+  {
+   "id": "38e4354d8e",
+   "title": "Meta says it worked with Apple to make Muse Spark Open run locally on M5 Ultra Mac Studios, letting users pair two to four Studios to code or do agentic work (CNBC)",
+   "summary": "CNBC : Meta says it worked with Apple to make Muse Spark Open run locally on M5 Ultra Mac Studios, letting users pair two to four Studios to code or do agentic work — Tim Cook and Mark Zuckerberg have clashed for years, but with John Ternus taking the reins at Apple, the rivals…",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "techmeme",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "community"
+   }
+  },
+  {
+   "id": "8aeb22fcfa",
+   "title": "Meta releases Muse Spark Open, saying it is the most capable US open-weight model, with 816B total and 42B active parameters and a 1M-token context window (Meta AI Research)",
+   "summary": "Meta AI Research : Meta releases Muse Spark Open, saying it is the most capable US open-weight model, with 816B total and 42B active parameters and a 1M-token context window — Muse Spark Open is available today and brings leading agentic capabilities to your desktop for the…",
+   "gold": "model-release",
+   "models": [],
+   "source": {
+    "sourceId": "techmeme",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "community"
+   }
+  },
+  {
+   "id": "fc385a3595",
+   "title": "UNSLOTH MUSE SPARK OPEN!!",
+   "summary": "submitted by /u/Bob_SUS [link] [comments]",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "reddit-localllama",
+    "sourceKind": "community",
+    "tier": 3,
+    "country": "OTHER",
+    "lang": "en",
+    "category": "community"
+   }
+  },
+  {
+   "id": "4cc9afff85",
+   "title": "Introducing Muse Spark Open: the most capable US open-weight model to date",
+   "summary": "Hey r/LocalLlama - Today we’re excited to release Muse Spark Open, the most capable US open-weight model to date. Built for coding and agentic work, it excels at long-horizon tasks, complex software engineering, and multi-step reasoning. Key Model Specs Parameters: 816B total /…",
+   "gold": "model-release",
+   "models": [],
+   "source": {
+    "sourceId": "reddit-localllama",
+    "sourceKind": "community",
+    "tier": 3,
+    "country": "OTHER",
+    "lang": "en",
+    "category": "community"
+   }
+  },
+  {
+   "id": "a01480253e",
+   "title": "Be There for the Beginning: Celebrate the Launch of NVIDIA RTX Spark",
+   "summary": "A new beginning for Windows PCs starts tomorrow with the launch of NVIDIA RTX Spark — one PC built for creators, gamers and AI agents. All are invited to celebrate with NVIDIA and partners at launch events around the world. Share Your Spark Every PC has a story. What was your…",
+   "gold": "product",
+   "models": [],
+   "source": {
+    "sourceId": "nvidia-blog",
+    "sourceKind": "company",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "lab",
+    "company": "NVIDIA"
+   }
+  },
+  {
+   "id": "0b4a2a6e63",
+   "title": "Black Forest Labs' open-weights image model FLUX 3 Image Klein runs on consumer GPUs with just 8 GB of VRAM",
+   "summary": "Black Forest Labs has released FLUX 3 Image Klein, a 5.6-billion-parameter open-weights image model that supports native 4K generation, pixel-precise editing, and generation with up to ten reference images. With 38 percent fewer parameters than its predecessor, it still…",
+   "gold": "model-release",
+   "models": [
+    "FLUX 3 Image"
+   ],
+   "source": {
+    "sourceId": "the-decoder",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "OTHER",
+    "lang": "en",
+    "category": "press"
+   }
+  },
+  {
+   "id": "cd0df02ab3",
+   "title": "Google wants Gemini 4 Argon to be the only AI model robots need",
+   "summary": "Google's Gemini 4 Argon controls robots, generates simulations from photos or sketches, and evaluates training videos. On Google's own ERQA benchmark, it scores 87 percent. But the published example prompts show that the demos still need a lot of human guidance. The article…",
+   "gold": "other",
+   "models": [
+    "Gemini 4"
+   ],
+   "source": {
+    "sourceId": "the-decoder",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "OTHER",
+    "lang": "en",
+    "category": "press"
+   }
+  },
+  {
+   "id": "dce82e85e6",
+   "title": "ComfyUI v0.41.1",
+   "summary": "",
+   "gold": "tool",
+   "models": [],
+   "source": {
+    "sourceId": "comfyui-releases",
+    "sourceKind": "repo",
+    "tier": 3,
+    "country": "OTHER",
+    "lang": "en",
+    "category": "tracker",
+    "prior": {
+     "kind": "tool"
+    }
+   }
+  },
+  {
+   "id": "6d26dc845c",
+   "title": "Friends don’t let friends feed their data to AI agents",
+   "summary": "There's a growing trend in the consumer tech world: gadgets designed to spy on everything and everyone around you, regardless of whether or not anyone else actually consented to it. Now, with the advent of \"AI personal assistants\" like Meta's Muse, you're being cheerfully asked…",
+   "gold": "opinion",
+   "models": [],
+   "source": {
+    "sourceId": "verge-ai",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "press"
+   }
+  },
+  {
+   "id": "982bdb475f",
+   "title": "Ollama v0.40.5-rc2",
+   "summary": "llama.cpp: version bump b11669 ( #19032 )",
+   "gold": "tool",
+   "models": [],
+   "source": {
+    "sourceId": "ollama-releases",
+    "sourceKind": "repo",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "tracker",
+    "company": "Ollama",
+    "prior": {
+     "kind": "tool"
+    }
+   }
+  },
+  {
+   "id": "bacac46ca4",
+   "title": "Nvidia's Nemotron 3.5 Super VL is an open model built to run enterprise AI agents nonstop",
+   "summary": "With Nemotron 3.5 Super VL, Nvidia is releasing an open multimodal model with 120 billion parameters for enterprise agents. Two compact Bolt models bring agents to local machines. Dozens of organizations are already fine-tuning Super VL, but getting the most out of it means…",
+   "gold": "model-release",
+   "models": [
+    "Nemotron 3.5"
+   ],
+   "source": {
+    "sourceId": "the-decoder",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "OTHER",
+    "lang": "en",
+    "category": "press"
+   }
+  },
+  {
+   "id": "1d4cff712a",
+   "title": "Accelerating the search for antimicrobial peptides with Google Antigravity",
+   "summary": "Accelerating the search for novel antimicrobial peptides using Google Antigravity for Science.",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "deepmind",
+    "sourceKind": "company",
+    "tier": 1,
+    "country": "US",
+    "lang": "en",
+    "category": "lab",
+    "company": "Google DeepMind"
+   }
+  },
+  {
+   "id": "f930bda976",
+   "title": "ComfyUI v0.41.0",
+   "summary": "",
+   "gold": "tool",
+   "models": [],
+   "source": {
+    "sourceId": "comfyui-releases",
+    "sourceKind": "repo",
+    "tier": 3,
+    "country": "OTHER",
+    "lang": "en",
+    "category": "tracker",
+    "prior": {
+     "kind": "tool"
+    }
+   }
+  },
+  {
+   "id": "12f70f9144",
+   "title": "Report: FTC probes Anthropic, OpenAI after Trump dismissed AI fears as “hoax”",
+   "summary": "FTC may fine AI firms on par with companies that delay data breach reports.",
+   "gold": "policy",
+   "models": [],
+   "source": {
+    "sourceId": "ars-ai",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "press"
+   }
+  },
+  {
+   "id": "72c135d916",
+   "title": "mistralai/Timestral",
+   "summary": "https://preview.redd.it/zyoo32u7hnvh1.png?width=1400&format=png&auto=webp&s=f0dc824a831d10abc6b824afabb98c64e7fa9d40 from Mistral: Timestral is a family of time series foundation models for zero-shot forecasting, available in 5M , 28M , 123M , and 209M parameter versions. This…",
+   "gold": "model-release",
+   "models": [],
+   "source": {
+    "sourceId": "reddit-localllama",
+    "sourceKind": "community",
+    "tier": 3,
+    "country": "OTHER",
+    "lang": "en",
+    "category": "community"
+   }
+  },
+  {
+   "id": "fc89983929",
+   "title": "Bank of America puts 4,000 people on fixing vulnerabilities uncovered by Anthropic's Mythos and other AI models",
+   "summary": "Bank of America has hired 1,000 outside contractors to fix software vulnerabilities uncovered by AI models like Anthropic's Mythos, CNBC reports. The article Bank of America puts 4,000 people on fixing vulnerabilities uncovered by Anthropic's Mythos and other AI models appeared…",
+   "gold": "security",
+   "models": [],
+   "source": {
+    "sourceId": "the-decoder",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "OTHER",
+    "lang": "en",
+    "category": "press"
+   }
+  },
+  {
+   "id": "0eea14ec0d",
+   "title": "GPT-6-Astra solves 49 of 50 physics research problems at $2.40 apiece",
+   "summary": "On the TheoPhysEval benchmark, GPT-6-Astra solves 49 of 50 unpublished theoretical physics calculations as accurately as leading specialists. In some cases where the agent seemed to fail, the experts' own reference solutions turned out to contain errors. But the researchers say…",
+   "gold": "other",
+   "models": [
+    "GPT-6"
+   ],
+   "source": {
+    "sourceId": "the-decoder",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "OTHER",
+    "lang": "en",
+    "category": "press"
+   }
+  },
+  {
+   "id": "bcb4cee530",
+   "title": "Missed a lecture? This AI agent at Bar-Ilan University helps students catch up",
+   "summary": "The post Missed a lecture? This AI agent at Bar-Ilan University helps students catch up appeared first on Source .",
+   "gold": "product",
+   "models": [],
+   "source": {
+    "sourceId": "microsoft-source-ai",
+    "sourceKind": "company",
+    "tier": 3,
+    "country": "US",
+    "lang": "en",
+    "category": "lab",
+    "company": "Microsoft"
+   }
+  },
+  {
+   "id": "27f93f62bb",
+   "title": "AtomicChat/Ling-3.1-flash-GGUF · Hugging Face",
+   "summary": "Yesterday I said its hard to play 4 spark with ling-3.1-flash but today its coming! submitted by /u/BerryBlush_Rogers691 [link] [comments]",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "reddit-localllama",
+    "sourceKind": "community",
+    "tier": 3,
+    "country": "OTHER",
+    "lang": "en",
+    "category": "community"
+   }
+  },
+  {
+   "id": "6388b3d480",
+   "title": "Singer or clanker? YouTube Music will tell you with new gen AI labeling.",
+   "summary": "The AI music labels are rolling out now in YouTube Music and will come to YouTube soon.",
+   "gold": "product",
+   "models": [],
+   "source": {
+    "sourceId": "ars-ai",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "press"
+   }
+  },
+  {
+   "id": "0bb338df7a",
+   "title": "nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB · Hugging Face",
+   "summary": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB-GGUF https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB-LiLiCorr-GGUF NVIDIA Nemotron 3.5 Bolt 74B-A9B 24GB is a vision-language model (VLM) designed to run everyday agentic tasks locally…",
+   "gold": "model-release",
+   "models": [
+    "Nemotron 3.5"
+   ],
+   "source": {
+    "sourceId": "reddit-localllama",
+    "sourceKind": "community",
+    "tier": 3,
+    "country": "OTHER",
+    "lang": "en",
+    "category": "community"
+   }
+  },
+  {
+   "id": "2c9392a52f",
+   "title": "AI agents are coming to Rivian’s cars",
+   "summary": "We'll likely learn more about how this will work at the company's upcoming \"AI & Autonomy Day\" event in December.",
+   "gold": "product",
+   "models": [],
+   "source": {
+    "sourceId": "techcrunch-ai",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "press"
+   }
+  },
+  {
+   "id": "2cd92b812c",
+   "title": "Open From Data Center to Desktop: NVIDIA Expands Nemotron Family With Highest Efficiency Super VL and Bolt Models",
+   "summary": "NVIDIA today released Nemotron 3.5 Super VL, an open 120-billion-parameter model that delivers the fastest task completion and highest accuracy for specialized always-on agents. Joining it are two new edge models: Nemotron 3.5 Bolt 74B-A9B 24GB, optimized to balance…",
+   "gold": "model-release",
+   "models": [
+    "Nemotron 3.5"
+   ],
+   "source": {
+    "sourceId": "nvidia-blog",
+    "sourceKind": "company",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "lab",
+    "company": "NVIDIA"
+   }
+  },
+  {
+   "id": "09989aa6e7",
+   "title": "nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B model family released (base, NVFP4, BF16, and LiLiCorr speculative decoding)",
+   "summary": "submitted by /u/jinnyjuice [link] [comments]",
+   "gold": "model-release",
+   "models": [],
+   "source": {
+    "sourceId": "reddit-localllama",
+    "sourceKind": "community",
+    "tier": 3,
+    "country": "OTHER",
+    "lang": "en",
+    "category": "community"
+   }
+  },
+  {
+   "id": "e4954275a6",
+   "title": "Docs: Nvidia and Apple each committed $25M, the top amount, to Trump's White House ballroom; Microsoft and Palantir each committed $10M, and Meta and Amazon $5M (Washington Post)",
+   "summary": "Washington Post : Docs: Nvidia and Apple each committed $25M, the top amount, to Trump's White House ballroom; Microsoft and Palantir each committed $10M, and Meta and Amazon $5M — The records offer a panoramic view of a fundraising campaign that is extraordinary for its size…",
+   "gold": "policy",
+   "models": [],
+   "source": {
+    "sourceId": "techmeme",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "community"
+   }
+  },
+  {
+   "id": "a3f7cd60d4",
+   "title": "How Windows is being optimized for Nvidia’s RTX Spark laptops",
+   "summary": "Microsoft and Nvidia held a launch party for the first wave of RTX Spark laptops last week in San Francisco, where a new wave of AI PCs took center stage amid a packed crowd and a lively hands-on area. A day after the media event, I was invited to a quieter Nvidia event to hear…",
+   "gold": "product",
+   "models": [],
+   "source": {
+    "sourceId": "verge-ai",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "press"
+   }
+  },
+  {
+   "id": "244831af62",
+   "title": "Google’s Universal Cart shopping tool launches in the US",
+   "summary": "The new shopping tool is available in the U.S. across Google Search and the Gemini app.",
+   "gold": "product",
+   "models": [],
+   "source": {
+    "sourceId": "techcrunch-ai",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "press"
+   }
+  },
+  {
+   "id": "5ca7ebdb6d",
+   "title": "Add Nemotron Super 3.5 VL and Nemotron Bolt 74B A9B support by frozenblade1224 · Pull Request #30520 · ggml-org/llama.cpp",
+   "summary": "day 0 support for two new Nemotrons minutes later new Nemotron 3.5 Super VL was released: https://huggingface.co/unsloth/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B https://huggingface.co/unsloth/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-GGUF submitted by /u/jacek2023 [link] [comments]",
+   "gold": "other",
+   "models": [
+    "Nemotron 3.5"
+   ],
+   "source": {
+    "sourceId": "reddit-localllama",
+    "sourceKind": "community",
+    "tier": 3,
+    "country": "OTHER",
+    "lang": "en",
+    "category": "community"
+   }
+  },
+  {
+   "id": "ddce315de8",
+   "title": "Nobody is safe from celebrity AI deepfakes",
+   "summary": "In hindsight, the post on Instagram should have raised more red flags. The image purported to show actress Mia Goth, just days after filing for divorce from actor and filmmaker Shia LaBeouf, posing in a T-shirt with a pointed message: MY EX IS MY BIGGEST FAN. To really drive…",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "verge-ai",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "press"
+   }
+  },
+  {
+   "id": "3e689612ee",
+   "title": "Yapay zeka destekli mesajlaşma programı Zenzap, 44 milyon dolar yatırım aldı",
+   "summary": "Yapay zeka destekli mesajlaşma programı Zenzap, 44 milyon dolar yatırım aldı. Şirketin 44 milyon dolarlık yatırım turunda Bessemer Venture Partners, Lightspeed Venture Partners ve The Garage'ın yanı s...",
+   "gold": "funding",
+   "models": [],
+   "source": {
+    "sourceId": "webrazzi-ai",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "OTHER",
+    "lang": "tr",
+    "category": "turkish"
+   }
+  },
+  {
+   "id": "5507638417",
+   "title": "Benn Jordan on Flock, privacy, and the new surveillance backlash",
+   "summary": "Today, I’m talking with Benn Jordan, musician, YouTuber, researcher, and investigative journalist. You might know Benn from those first two titles — he’s got a prolific discography of experimental music dating back decades. But in the last couple of years, he’s become a…",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "verge-ai",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "press"
+   }
+  },
+  {
+   "id": "a678873210",
+   "title": "TechCrunch Disrupt 2026: Last day",
+   "summary": "Last day to be part of TechCrunch Disrupt 2026. Join 10,000+ tech leaders for a day of connections and insights. Save 75% on your pass now.",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "techcrunch-ai",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "press"
+   }
+  },
+  {
+   "id": "1b88bf21c2",
+   "title": "Portland-based Mueon, which says its AI server racks could fit up to 10x more computing capacity, raised $65M led by Maverick Silicon, with Intel participating (Phoebe Liu/The Information)",
+   "summary": "Phoebe Liu / The Information : Portland-based Mueon, which says its AI server racks could fit up to 10x more computing capacity, raised $65M led by Maverick Silicon, with Intel participating — Portland-based startup Mueon raised $65 million to develop a new way to arrange AI…",
+   "gold": "funding",
+   "models": [],
+   "source": {
+    "sourceId": "techmeme",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "community"
+   }
+  },
+  {
+   "id": "72d20db6b7",
+   "title": "llama.cpp release b11669",
+   "summary": "llama.cpp : bump version to 0.7.0 ( #30603 )",
+   "gold": "tool",
+   "models": [],
+   "source": {
+    "sourceId": "llama-cpp-releases",
+    "sourceKind": "repo",
+    "tier": 2,
+    "country": "OTHER",
+    "lang": "en",
+    "category": "tracker",
+    "prior": {
+     "kind": "tool"
+    }
+   }
+  },
+  {
+   "id": "a7ba012416",
+   "title": "North.cloud, which helps companies watch their cloud, AI and data spend, raised a $60M Series B led by PeakSpan Capital, taking its total funding to $67M (Chris Metinko/Axios)",
+   "summary": "Chris Metinko / Axios : North.cloud, which helps companies watch their cloud, AI and data spend, raised a $60M Series B led by PeakSpan Capital, taking its total funding to $67M — North.cloud, which helps companies watch their cloud, AI and data spend, closed a $60 million…",
+   "gold": "funding",
+   "models": [],
+   "source": {
+    "sourceId": "techmeme",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "community"
+   }
+  },
+  {
+   "id": "10645179e0",
+   "title": "llama.cpp release b11662",
+   "summary": "sync : ggml",
+   "gold": "tool",
+   "models": [],
+   "source": {
+    "sourceId": "llama-cpp-releases",
+    "sourceKind": "repo",
+    "tier": 2,
+    "country": "OTHER",
+    "lang": "en",
+    "category": "tracker",
+    "prior": {
+     "kind": "tool"
+    }
+   }
+  },
+  {
+   "id": "33dc623804",
+   "title": "Q&A with Dwarkesh Patel on his podcast, lessons from history, AGI, the mood in San Francisco, the Hugging Face hack, Chinese AI, pacing the frontier, and more (New York Times)",
+   "summary": "New York Times : Q&A with Dwarkesh Patel on his podcast, lessons from history, AGI, the mood in San Francisco, the Hugging Face hack, Chinese AI, pacing the frontier, and more — Dwarkesh Patel on what the public doesn't know about A.I. — Produced by Sophia Muniz — Dwarkesh…",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "techmeme",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "community"
+   }
+  },
+  {
+   "id": "46ec98616f",
+   "title": "Dial Up the Cloud: NVIDIA DLSS 4.5 Controls Arrive on GeForce NOW",
+   "summary": "Dial in the next gaming session this GFN Thursday. New NVIDIA DLSS 4.5 controls give GeForce NOW members more choice over how supported games look and perform in the cloud, even without the latest hardware. Then, step into the Shroud as Keen Games’ Enshrouded leaves early…",
+   "gold": "product",
+   "models": [],
+   "source": {
+    "sourceId": "nvidia-blog",
+    "sourceKind": "company",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "lab",
+    "company": "NVIDIA"
+   }
+  },
+  {
+   "id": "2e52c21f3e",
+   "title": "Nothing Akıllı Gözlük İşine Giriyor",
+   "summary": "Nothing'in üzerinde çalıştığı iki yeni akıllı gözlük modeli sızdırıldı. Kamera, ChatGPT entegrasyonu ve ses odaklı özellikler hakkında tüm detaylar haberimizde.",
+   "gold": "product",
+   "models": [],
+   "source": {
+    "sourceId": "shiftdelete",
+    "sourceKind": "news",
+    "tier": 3,
+    "country": "OTHER",
+    "lang": "tr",
+    "category": "turkish"
+   }
+  },
+  {
+   "id": "24935f56a7",
+   "title": "ChatGPT çocuklar için tehlikeli olmakla suçlanıyor",
+   "summary": "ABD'de 8 eyalet, ChatGPT'nin çocuklara zarar verdiği, kullanıcıları tehlikeli davranışlara yönelttiği ve güvenliği konusunda halkı yanılttığı iddiasıyla OpenAI'a dava açtı.",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "donanimhaber",
+    "sourceKind": "news",
+    "tier": 3,
+    "country": "OTHER",
+    "lang": "tr",
+    "category": "turkish"
+   }
+  },
+  {
+   "id": "c3631614ea",
+   "title": "Google launches its ‘universal’ online shopping cart ahead of the holidays",
+   "summary": "Google's intelligent AI shopping cart is finally here, and just in time to tempt users into Black Friday and seasonal holiday spending. The Universal Cart tool Google previewed at its I/O event in May is now rolling out in the US across the Gemini app and Google Search, with…",
+   "gold": "product",
+   "models": [],
+   "source": {
+    "sourceId": "verge-ai",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "press"
+   }
+  },
+  {
+   "id": "fa14b8f7db",
+   "title": "Teaching students to think and learn through questions",
+   "summary": "Celebrate Teachers’ Day with AI for Educators in Brazilian Portuguese and see how Study Mode can help teachers support active, step-by-step learning.",
+   "gold": "product",
+   "models": [],
+   "source": {
+    "sourceId": "openai",
+    "sourceKind": "company",
+    "tier": 1,
+    "country": "US",
+    "lang": "en",
+    "category": "lab",
+    "company": "OpenAI"
+   }
+  },
+  {
+   "id": "ff7a0c0a7b",
+   "title": "DeepSeek offers user refunds after suffering another major outage",
+   "summary": "Chinese artificial intelligence firm DeepSeek apologised and promised compensation to users after its services suffered a nearly five-hour outage on Thursday. DeepSeek will issue users a full refund for any consumption between October 8 and October 14 in the form of credits…",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "scmp-tech",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "CN",
+    "lang": "en",
+    "category": "china"
+   }
+  },
+  {
+   "id": "0aa0ad1928",
+   "title": "BofA says it hired 1,000 contractors in Q2 to support 3,000 internal staff in patching proprietary and vendor software flaws exposed by AI models like Mythos (Hugh Son/CNBC)",
+   "summary": "Hugh Son / CNBC : BofA says it hired 1,000 contractors in Q2 to support 3,000 internal staff in patching proprietary and vendor software flaws exposed by AI models like Mythos — Bank of America has hired an army of external contractors to help it patch software vulnerabilities…",
+   "gold": "security",
+   "models": [],
+   "source": {
+    "sourceId": "techmeme",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "community"
+   }
+  },
+  {
+   "id": "2c2fe9696d",
+   "title": "Nvidia's RTX Spark Superchip in the Surface Laptop Ultra outperforms Apple's M5 Max MacBook Pro by ~25% in agentic AI completion benchmarks using Qwen models (Jeffrey Kampman/Tom's Hardware)",
+   "summary": "Jeffrey Kampman / Tom's Hardware : Nvidia's RTX Spark Superchip in the Surface Laptop Ultra outperforms Apple's M5 Max MacBook Pro by ~25% in agentic AI completion benchmarks using Qwen models — Laying the foundation for the reinvention of the PC in the agentic AI era — Nvidia…",
+   "gold": "product",
+   "models": [],
+   "source": {
+    "sourceId": "techmeme",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "community"
+   }
+  },
+  {
+   "id": "f6ea8e4254",
+   "title": "How could a superintelligence take over the world? Let me count the ways",
+   "summary": "OpenAI recently announced perhaps its biggest mathematics breakthrough yet: it released novel results on 377 high-profile open problems. Artificial intelligence (AI) casually solved these decades-old problems as a mere by-product of training. The community of mathematicians did…",
+   "gold": "opinion",
+   "models": [],
+   "source": {
+    "sourceId": "scmp-tech",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "CN",
+    "lang": "en",
+    "category": "china"
+   }
+  },
+  {
+   "id": "ff9c93d680",
+   "title": "Amazon launches two AI wearables, the $75 Bee Frontier wristband and $100 Bee Eclipse magnetic phone-attachment recorder, with a $12/month Bee Pro subscription (Bloomberg)",
+   "summary": "Bloomberg : Amazon launches two AI wearables, the $75 Bee Frontier wristband and $100 Bee Eclipse magnetic phone-attachment recorder, with a $12/month Bee Pro subscription — Amazon.com Inc. launched two new wearables that use artificial intelligence to record and analyze a…",
+   "gold": "product",
+   "models": [],
+   "source": {
+    "sourceId": "techmeme",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "community"
+   }
+  },
+  {
+   "id": "d55314a148",
+   "title": "Siri yapay zekasının geleceği Apple ev cihazları",
+   "summary": "HomePod mini 2'den 4. nesil Apple TV 4K'ya akıllı ev ekranı HomeView'dan Apple Home ekosistemine kadar yeni ev ürünleri Siri ile güçleniyor. Peki, Siri AI hangi cihazlara ne zaman gelecek?",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "donanimhaber",
+    "sourceKind": "news",
+    "tier": 3,
+    "country": "OTHER",
+    "lang": "tr",
+    "category": "turkish"
+   }
+  },
+  {
+   "id": "70b818f310",
+   "title": "Sources: OpenAI executives have warned staff over potential espionage like honey pots and insider threats and told them to adopt operational security measures (Wall Street Journal)",
+   "summary": "Wall Street Journal : Sources: OpenAI executives have warned staff over potential espionage like honey pots and insider threats and told them to adopt operational security measures — From ‘honey pots’ to insider threats, Silicon Valley was on espionage alert even before the…",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "techmeme",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "community"
+   }
+  },
+  {
+   "id": "3a11e60ee8",
+   "title": "Introducing Timestral",
+   "summary": "State-of-the-art probabilistic forecasting in four sizes (5M–209M params), CPU-efficient, zero-shot ready.",
+   "gold": "model-release",
+   "models": [],
+   "source": {
+    "sourceId": "mistral-news",
+    "sourceKind": "company",
+    "tier": 1,
+    "country": "EU",
+    "lang": "en",
+    "category": "lab",
+    "company": "Mistral"
+   }
+  },
+  {
+   "id": "7b0ede9ffc",
+   "title": "Amazon’s always-listening Bee wearable can now help you buy stuff",
+   "summary": "Last year, Amazon bought Bee, a relatively unknown startup with a $50 always-listening AI wearable that summarized every conversation you had. Today, the e-commerce giant is announcing two new Bee devices - and a new subscription to go with them. First is the $74.99 Bee…",
+   "gold": "product",
+   "models": [],
+   "source": {
+    "sourceId": "verge-ai",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "press"
+   }
+  },
+  {
+   "id": "cc07996f6b",
+   "title": "Amazon’s Bee launches two new personal AI devices, starting at $75",
+   "summary": "Amazon-owned Bee has launched its first new AI devices since its acquisition, including an updated wearable and a credit-card-sized recorder that attaches to smartphones. The devices can summarize conversations, create to-do lists, and integrate with Alexa and Amazon shopping…",
+   "gold": "product",
+   "models": [],
+   "source": {
+    "sourceId": "techcrunch-ai",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "press"
+   }
+  },
+  {
+   "id": "d9626d4884",
+   "title": "Colossal, nesli tükenen dodo kuşunu geri getirmek için yapay zeka platformu GenoMorph'u geliştirdi",
+   "summary": "Nesli tükenmiş türleri yeniden hayata döndürmeye yönelik çalışmalarıyla tanınan Colossal Biosciences, bu süreci hızlandırmak için geliştirdiği yeni yapay zeka platformu GenoMorph'u duyurdu. Şirket, pl...",
+   "gold": "product",
+   "models": [],
+   "source": {
+    "sourceId": "webrazzi-ai",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "OTHER",
+    "lang": "tr",
+    "category": "turkish"
+   }
+  },
+  {
+   "id": "296ed2c2b7",
+   "title": "A profile of Marc Andreessen, who sources say is close to White House COS Susie Wiles and has publicly described a fallout with Biden officials over AI policy (Austin Carr/Bloomberg)",
+   "summary": "Austin Carr / Bloomberg : A profile of Marc Andreessen, who sources say is close to White House COS Susie Wiles and has publicly described a fallout with Biden officials over AI policy — The prominent investor has said the Biden administration pushed him to the political right…",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "techmeme",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "community"
+   }
+  },
+  {
+   "id": "8963a105bb",
+   "title": "Source: the US FTC issues ~50-page civil investigative demands to OpenAI and Anthropic over safety incidents, safeguarding practices, and consumer protection (Maria Curi/Axios)",
+   "summary": "Maria Curi / Axios : Source: the US FTC issues ~50-page civil investigative demands to OpenAI and Anthropic over safety incidents, safeguarding practices, and consumer protection — - The FTC sought documents from Anthropic and OpenAI with the scope of the probe focused on…",
+   "gold": "policy",
+   "models": [],
+   "source": {
+    "sourceId": "techmeme",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "community"
+   }
+  },
+  {
+   "id": "5103c0e7ef",
+   "title": "AI industry extinction warnings are genuine rather than corporate plots for regulatory capture or hype, and they go as far back as the mid-2000s and the 2010s (Scott Alexander/Astral Codex Ten)",
+   "summary": "Scott Alexander / Astral Codex Ten : AI industry extinction warnings are genuine rather than corporate plots for regulatory capture or hype, and they go as far back as the mid-2000s and the 2010s — AI companies like Anthropic and OpenAI have long mentioned the possibility that…",
+   "gold": "opinion",
+   "models": [],
+   "source": {
+    "sourceId": "techmeme",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "community"
+   }
+  },
+  {
+   "id": "13c68ef579",
+   "title": "Your secrets aren’t safe with this cute robot toy — they’re on Chinese servers ready to be hacked",
+   "summary": "There's a new digital pet in town - a cute little marshmallow of a robot that can change its cartoony expressions to match your mood. But if you or your kids talk to \"Eiliko\" over Wi-Fi, it'll phone home to China. Its AI companion can store literally everything you tell it on…",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "verge-ai",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "press"
+   }
+  },
+  {
+   "id": "c3f6e7a5da",
+   "title": "OpenAI, eski çalışanının gizli ürün planlarını Apple'a taşıdığını iddia etti",
+   "summary": "OpenAI ile Apple arasında devam eden ticari sır davasında bu kez OpenAI yeni iddialarla gündemde. OpenAI'ın mahkemeye sunduğu belgelere göre şirketten ayrılarak Apple’a geçen eski bir çalışan, henüz p...",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "webrazzi-ai",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "OTHER",
+    "lang": "tr",
+    "category": "turkish"
+   }
+  },
+  {
+   "id": "fb805fafa5",
+   "title": "NVIDIA AI: So many models launching this week! And we have one of our own coming...",
+   "summary": "From NVIDIA AI on 𝕏: https://x.com/NVIDIAAI/status/2110468004609950057 submitted by /u/Nunki08 [link] [comments]",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "reddit-localllama",
+    "sourceKind": "community",
+    "tier": 3,
+    "country": "OTHER",
+    "lang": "en",
+    "category": "community"
+   }
+  },
+  {
+   "id": "7908d899cb",
+   "title": "[AINews] Modal’s $1B ARR, $16B Series D makes it NYC’s newest AI Infra Decacorn, 3x usage and 3x valuation in 5 months, 15x in 1 yr",
+   "summary": "Sandboxes are all you need.",
+   "gold": "funding",
+   "models": [],
+   "source": {
+    "sourceId": "latent-space",
+    "sourceKind": "newsletter",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "community"
+   }
+  },
+  {
+   "id": "6626e386d5",
+   "title": "NVIDIA Expands Advanced Technology Access for Europe’s Scientific Community Through Open Learning Resources, Collaborations and Compute",
+   "summary": "Much of today’s scientific progress begins with computation. But turning accelerated computing’s potential into scientific progress — modeling climate systems, designing molecules, simulating materials and more — depends on more than breakthrough technology. Especially for…",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "nvidia-blog",
+    "sourceKind": "company",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "lab",
+    "company": "NVIDIA"
+   }
+  },
+  {
+   "id": "6f395da62a",
+   "title": "Z.ai’s GLM-5.3 raises researcher fears the Chinese model can fake AI safety tests",
+   "summary": "Chinese artificial intelligence lab Z.ai’s latest flagship model, GLM-5.3, may be sophisticated enough to “fake” its way through safety tests, according to a new report published Thursday, sparking new fears about the ability of artificial intelligence systems to shape their…",
+   "gold": "other",
+   "models": [
+    "GLM-5.3"
+   ],
+   "source": {
+    "sourceId": "scmp-tech",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "CN",
+    "lang": "en",
+    "category": "china"
+   }
+  },
+  {
+   "id": "c0fe1676d9",
+   "title": "Modal, 15,75 milyar dolar değerleme üzerinden 750 milyon dolar yatırım aldı",
+   "summary": "Yapay zeka uygulamalarının çalışması için gerekli altyapıyı geliştiren Modal, 750 milyon dolar yatırım aldı. Şirketin 750 milyon dolarlık D serisi yatırım turuna Accel liderlik etti. ABD merkezli Moda...",
+   "gold": "funding",
+   "models": [],
+   "source": {
+    "sourceId": "webrazzi-ai",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "OTHER",
+    "lang": "tr",
+    "category": "turkish"
+   }
+  },
+  {
+   "id": "2dd5c189d2",
+   "title": "vLLM v0.32.0rc2",
+   "summary": "[CI] Pin DeepSeek-V4.1-Flash-NVFP4 eval to its FP8-Engram revision (#…",
+   "gold": "tool",
+   "models": [
+    "DeepSeek-v4.1-Flash"
+   ],
+   "source": {
+    "sourceId": "vllm-releases",
+    "sourceKind": "repo",
+    "tier": 3,
+    "country": "OTHER",
+    "lang": "en",
+    "category": "tracker",
+    "prior": {
+     "kind": "tool"
+    }
+   }
+  },
+  {
+   "id": "f63b05ea5c",
+   "title": "137B A6.8B model from Microsoft?",
+   "summary": "this is actually interesting: https://commandline.microsoft.com/local-models-sandboxed-tools-github-windows/ Microsoft AI developed a local version of MAI Code 1.1 Flash, a coding-optimized mixture-of-experts model with 137 billion total and 6.8 billion active parameters…",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "reddit-localllama",
+    "sourceKind": "community",
+    "tier": 3,
+    "country": "OTHER",
+    "lang": "en",
+    "category": "community"
+   }
+  },
+  {
+   "id": "63d619bc06",
+   "title": "China, US discuss AI as chip stock rout hits Asian markets",
+   "summary": "China and the United States are in regular talks about artificial intelligence (AI) as they seek to firm up plans for an incident “hotline” and develop a formalised dialogue process ahead of a presidential summit next month. The two sides aim to agree on a basic framework for…",
+   "gold": "policy",
+   "models": [],
+   "source": {
+    "sourceId": "scmp-tech",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "CN",
+    "lang": "en",
+    "category": "china"
+   }
+  },
+  {
+   "id": "e3c36d4422",
+   "title": "Apertus 1.5 Release Notes",
+   "summary": "",
+   "gold": "model-release",
+   "models": [],
+   "source": {
+    "sourceId": "huggingface-blog",
+    "sourceKind": "company",
+    "tier": 1,
+    "country": "US",
+    "lang": "en",
+    "category": "lab",
+    "company": "Hugging Face"
+   }
+  },
+  {
+   "id": "86991d9770",
+   "title": "YouTube Music, yapay zeka ile üretilen şarkıları etiketlemeye başladı",
+   "summary": "YouTube, üretken yapay zekanın müzik üretimindeki rolünü dinleyicilere daha açık hale getirmek amacıyla YouTube Music’te yeni etiketleri kullanıma sunduğunu duyurdu. Etiketler, öncelikle üretken yapay...",
+   "gold": "product",
+   "models": [],
+   "source": {
+    "sourceId": "webrazzi-ai",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "OTHER",
+    "lang": "tr",
+    "category": "turkish"
+   }
+  },
+  {
+   "id": "6fa8ca16ae",
+   "title": "Will there be a black-friday this year? NVIDIA RTX 5060 Ti 16 GB Surges Up To 144% In Japan, Hitting $1,292 As RTX 5080 Climbs Past $2,400",
+   "summary": "Will there be a black-friday this year? submitted by /u/chemist_slime [link] [comments]",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "reddit-localllama",
+    "sourceKind": "community",
+    "tier": 3,
+    "country": "OTHER",
+    "lang": "en",
+    "category": "community"
+   }
+  },
+  {
+   "id": "f1da89fe93",
+   "title": "HSBC to double Hong Kong AI team to 300, outpacing Singapore plan",
+   "summary": "HSBC, Hong Kong’s biggest lender, said on Thursday it would double its artificial intelligence specialist team in the city to 300, a figure much larger than the workforce planned for its recently announced AI centre in Singapore. The announcement comes after Hong Kong’s…",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "scmp-tech",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "CN",
+    "lang": "en",
+    "category": "china"
+   }
+  },
+  {
+   "id": "4467183067",
+   "title": "I tested Qwen3.8 27B KLD for 21 Models at 9 different KV quants that fit on 16GB VRAM (189 benchmarks).",
+   "summary": "I calculated KLD and perplexity for Qwen3.8 27B models that fit 16GB VRAM: See comments for the benchmarks. Reddit filters keeps deleting the post. Conclusion: q5_1/q5_1 is almost always better than q8_0/q4_0 or q4_0/q8_0. There is very little difference between q8_0/q4_0 and…",
+   "gold": "other",
+   "models": [
+    "Qwen 3.8",
+    "Qwen3.8 27b"
+   ],
+   "source": {
+    "sourceId": "reddit-localllama",
+    "sourceKind": "community",
+    "tier": 3,
+    "country": "OTHER",
+    "lang": "en",
+    "category": "community"
+   }
+  },
+  {
+   "id": "649c667f51",
+   "title": "Jais 3 is out",
+   "summary": "New open model to check out ! Doing great on agentic, focused on arabic. From 0.9B to 375B ! Weights : https://huggingface.co/collections/IFM/jais-3 submitted by /u/valcore93 [link] [comments]",
+   "gold": "model-release",
+   "models": [],
+   "source": {
+    "sourceId": "reddit-localllama",
+    "sourceKind": "community",
+    "tier": 3,
+    "country": "OTHER",
+    "lang": "en",
+    "category": "community"
+   }
+  },
+  {
+   "id": "eb930941a6",
+   "title": "Inspire Robots Launches RH37D1, a Direct-Drive Three-Finger Hand That Lifts Up to 43kg",
+   "summary": "Inspire Robots introduced the RH37D1 series at CIIF 2026: a fully direct-drive three-finger hand with seven active degrees of freedom, 40N fingertip force and a 43kg maximum pulling load.",
+   "gold": "product",
+   "models": [],
+   "source": {
+    "sourceId": "pandaily",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "CN",
+    "lang": "en",
+    "category": "china"
+   }
+  },
+  {
+   "id": "0dc5811b50",
+   "title": "Inovance Debuts InoBot W1, a Liquid-Cooled Wheeled Humanoid Built for Factory Shifts",
+   "summary": "Industrial automation maker Inovance showed its first humanoid, the wheeled InoBot W1, with liquid-cooled 2,070 TOPS compute, a 10-hour hot-swappable battery and a footprint under 0.6m square.",
+   "gold": "product",
+   "models": [],
+   "source": {
+    "sourceId": "pandaily",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "CN",
+    "lang": "en",
+    "category": "china"
+   }
+  },
+  {
+   "id": "327d7f0b24",
+   "title": "Google dolandırıcılık mesajlarında kullanıcıyı uyaracak",
+   "summary": "Google Mesajlar içerisine entegre edilen Google Gemini yapay zekâ modelleri gelen mesajların kime ait olduğu ve riskli bağlantılar içerip içermediğini kullanıcıya bildirecek.",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "donanimhaber",
+    "sourceKind": "news",
+    "tier": 3,
+    "country": "OTHER",
+    "lang": "tr",
+    "category": "turkish"
+   }
+  },
+  {
+   "id": "abd8252eac",
+   "title": "Mathematicians Use Shanghai AI Lab's Intern-S2 to Prove 3D Ghys Conjecture, Verified in Lean",
+   "summary": "A proof of the codimension-one case of a 1995 conjecture by Etienne Ghys was developed with Intern-S2 over many rounds of dialogue, and a Peking University team formalized it in Lean.",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "pandaily",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "CN",
+    "lang": "en",
+    "category": "china"
+   }
+  },
+  {
+   "id": "ed08ba1d9a",
+   "title": "New TTS king in town: Fish's Drama 3 35B3A!",
+   "summary": "Yesterday Fish released this incredible text-to-speech model, so naturally I spent the rest of the day building a great demo for them :D The model is a chunky MoE (35B3A), but it runs well on a DGX Spark. The 4bit quants get very close to the original. You can try it here…",
+   "gold": "model-release",
+   "models": [],
+   "source": {
+    "sourceId": "reddit-localllama",
+    "sourceKind": "community",
+    "tier": 3,
+    "country": "OTHER",
+    "lang": "en",
+    "category": "community"
+   }
+  },
+  {
+   "id": "76d716aa6a",
+   "title": "Google arama sonuçlarını kasıtlı olarak zehirliyor: Nedeni ise yapay zeka",
+   "summary": "Google, yapay zeka şirketlerinin veri toplamasını zorlaştırmak için arama sonuçlarını yanıltıcı biçimde değiştiriyor olabilir. Türkiye’de incelenen sayfaların yüzde 10,2’si bu durumdan etkilendi.",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "donanimhaber",
+    "sourceKind": "news",
+    "tier": 3,
+    "country": "OTHER",
+    "lang": "tr",
+    "category": "turkish"
+   }
+  },
+  {
+   "id": "760e1afdd2",
+   "title": "Stepfun Step-5-Preview released! (600B/27B-1M Context)",
+   "summary": "Step 5 Preview is StepFun's flagship model for agentic work. It delivers frontier-level performance across software engineering and professional knowledge work, with particular strength in finance. submitted by /u/ResearchCrafty1804 [link] [comments]",
+   "gold": "model-release",
+   "models": [],
+   "source": {
+    "sourceId": "reddit-localllama",
+    "sourceKind": "community",
+    "tier": 3,
+    "country": "OTHER",
+    "lang": "en",
+    "category": "community"
+   }
+  },
+  {
+   "id": "4ae8e5cc6f",
+   "title": "AI job losses set to rein in office demand in developed Asia-Pacific economies: report",
+   "summary": "A mild displacement of jobs across the Asia-Pacific region as companies expand their use of AI would trim five percentage points off growth in office space demand in the next few years, according to property consultancy CBRE. In a report released on Thursday it said 3.9 per…",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "scmp-tech",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "CN",
+    "lang": "en",
+    "category": "china"
+   }
+  },
+  {
+   "id": "9ff90121ae",
+   "title": "The Nordics and NVIDIA Show What’s Possible When a Region Commits to Advanced Computing",
+   "summary": "The Nordic countries have become the European leader in unicorn startup density, producing the most emerging companies valued at $1 billion or more per capita on the continent. Now, a new chapter for the region is unfolding as countries race to build one of Europe’s most…",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "nvidia-blog",
+    "sourceKind": "company",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "lab",
+    "company": "NVIDIA"
+   }
+  },
+  {
+   "id": "31618b8d87",
+   "title": "Nvidia Çin’de kan kaybediyor, Huawei yükseliyor",
+   "summary": "Halen Çin pazarında en büyük yapay zekâ yonga tedarikçisi olsa da Nvidia yavaş yavaş pazarı Huawei başta olmak üzere Çinli yonga tasarımlarına teslim etmek üzere.",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "donanimhaber",
+    "sourceKind": "news",
+    "tier": 3,
+    "country": "OTHER",
+    "lang": "tr",
+    "category": "turkish"
+   }
+  },
+  {
+   "id": "83945d9c10",
+   "title": "Doubao Work Adds One-Click Import of Skills, Memory and Chat History From ChatGPT and Claude Code",
+   "summary": "ByteDance's Doubao Work can now import preferences, skills, connectors, memory, projects and past chats from ChatGPT, Claude Code and TRAE Work, and adds annotations and a summary sidebar.",
+   "gold": "product",
+   "models": [],
+   "source": {
+    "sourceId": "pandaily",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "CN",
+    "lang": "en",
+    "category": "china"
+   }
+  },
+  {
+   "id": "28b928a1e6",
+   "title": "Nature Will Unveils Natura-1, a 50B Model Trained on Human Video to Drive 20-DoF Dexterous Hands",
+   "summary": "Nature Will's Natura-1 is a 50-billion-parameter MoE pretrained on one million hours of first-person human video, then adapted with limited robot data to control 20-DoF robot hands.",
+   "gold": "model-release",
+   "models": [],
+   "source": {
+    "sourceId": "pandaily",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "CN",
+    "lang": "en",
+    "category": "china"
+   }
+  },
+  {
+   "id": "4d5513296a",
+   "title": "Skywork Open-Sources Matrix-Game 4.0, Pairing a Game Engine With a Real-Time Video Model",
+   "summary": "Kunlun Tech's Skywork AI released Matrix-Game 4.0 under Apache-2.0: an engine runs the rules and physics while a causal video model renders low-poly frames into detailed game visuals.",
+   "gold": "model-release",
+   "models": [],
+   "source": {
+    "sourceId": "pandaily",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "CN",
+    "lang": "en",
+    "category": "china"
+   }
+  },
+  {
+   "id": "b4c333a1fc",
+   "title": "Figma announces new features to define how agents work on its platform",
+   "summary": "Figma is also releasing its code layers feature in open beta.",
+   "gold": "product",
+   "models": [],
+   "source": {
+    "sourceId": "techcrunch-ai",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "press"
+   }
+  },
+  {
+   "id": "a3ccfa6c31",
+   "title": "Chicken-coop shed AI PC",
+   "summary": "Saw soneone post their bathroom AI PC a few weeks ago. Figured I’d contribute with my chicken-coop adjacent shed AI PC. Started with a single CMP 170HX (unlocked to 64GB) and ended up with three more for a total of 256gb VRAM. Found a deal on a used Threadripper with a TRX40…",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "reddit-localllama",
+    "sourceKind": "community",
+    "tier": 3,
+    "country": "OTHER",
+    "lang": "en",
+    "category": "community"
+   }
+  },
+  {
+   "id": "013a102b49",
+   "title": "Did someone use/try the Qwen flash 3.8 next \"coder\" model on some work?",
+   "summary": "Looking for people who have tried this model and was able to use it on real-world tasks. It's what Strata list as \"coder\". What was your experience like? On my setup I am not really sure if it is worth more than iq3 submitted by /u/JsThiago5 [link] [comments]",
+   "gold": "other",
+   "models": [
+    "Qwen Flash 3.8"
+   ],
+   "source": {
+    "sourceId": "reddit-localllama",
+    "sourceKind": "community",
+    "tier": 3,
+    "country": "OTHER",
+    "lang": "en",
+    "category": "community"
+   }
+  },
+  {
+   "id": "f0fe7c9aa7",
+   "title": "Ricursive Intelligence is betting on AI-designed chips to help solve the compute crisis",
+   "summary": "The founders detailed how their startup is developing AI that can design chips, learn from each iteration, and improve subsequent designs, all with the goal of automating and accelerating the chip design process.",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "techcrunch-ai",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "press"
+   }
+  },
+  {
+   "id": "d7f4f48324",
+   "title": "More Than Three Quarters of Small Business Owners Say AI Makes Them More Productive, But Most Need More Guidance",
+   "summary": "New Meta research across nine APAC markets shows how AI is helping small businesses grow, compete with larger rivals and reach customers across borders. The post More Than Three Quarters of Small Business Owners Say AI Makes Them More Productive, But Most Need More Guidance…",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "meta-newsroom",
+    "sourceKind": "company",
+    "tier": 3,
+    "country": "US",
+    "lang": "en",
+    "category": "lab",
+    "company": "Meta"
+   }
+  },
+  {
+   "id": "227d02ee5d",
+   "title": "An update on independent evaluators",
+   "summary": "",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "anthropic-news",
+    "sourceKind": "company",
+    "tier": 1,
+    "country": "US",
+    "lang": "en",
+    "category": "lab",
+    "company": "Anthropic"
+   }
+  },
+  {
+   "id": "3733c75a28",
+   "title": "Welcome FLUX.3 Image Klein in Diffusers",
+   "summary": "",
+   "gold": "model-release",
+   "models": [],
+   "source": {
+    "sourceId": "huggingface-blog",
+    "sourceKind": "company",
+    "tier": 1,
+    "country": "US",
+    "lang": "en",
+    "category": "lab",
+    "company": "Hugging Face"
+   }
+  },
+  {
+   "id": "8fbb1278b1",
+   "title": "Jev 1.14 ⚡, Grok Voice 3 🎙️, RSI 🔁",
+   "summary": "",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "tldr-ai",
+    "sourceKind": "newsletter",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "community"
+   }
+  },
+  {
+   "id": "9d251ac683",
+   "title": "Welcome Muse Spark Open: open-weight frontier multimodal mixture-of-experts model from Meta",
+   "summary": "",
+   "gold": "model-release",
+   "models": [],
+   "source": {
+    "sourceId": "huggingface-blog",
+    "sourceKind": "company",
+    "tier": 1,
+    "country": "US",
+    "lang": "en",
+    "category": "lab",
+    "company": "Hugging Face"
+   }
+  },
+  {
+   "id": "d3bb9ef55a",
+   "title": "Gudea leverages AI to help organizations prevent social media crises before they erupt",
+   "summary": "Gudea, a company that tracks how stories and rumors spread online that describes itself as the “storm tracker for the internet,” is using AI to help organizations spot trouble brewing online before it turns into a crisis.",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "techcrunch-ai",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "press"
+   }
+  },
+  {
+   "id": "cfc3584192",
+   "title": "LFM2.5-24B-A2B: Built for fast on-device agents",
+   "summary": "276 points · 72 comments on Hacker News",
+   "gold": "model-release",
+   "models": [],
+   "source": {
+    "sourceId": "hn-llm",
+    "sourceKind": "community",
+    "tier": 2,
+    "country": "OTHER",
+    "lang": "en",
+    "category": "community"
+   }
+  },
+  {
+   "id": "8120c1b647",
+   "title": "vLLM proto-v0.6.0",
+   "summary": "vllm-proto 0.6.0",
+   "gold": "tool",
+   "models": [],
+   "source": {
+    "sourceId": "vllm-releases",
+    "sourceKind": "repo",
+    "tier": 3,
+    "country": "OTHER",
+    "lang": "en",
+    "category": "tracker",
+    "prior": {
+     "kind": "tool"
+    }
+   }
+  },
+  {
+   "id": "78095fed01",
+   "title": "vLLM v0.32.0rc1: [Dependency] Update Humming and remove NVFP4 scale workaround (#61556)",
+   "summary": "Signed-off-by: jinzhen.ljz jinzhen.ljz@antgroup.com Co-authored-by: Codex codex@openai.com Co-authored-by: Misha Goin mgoin64@gmail.com Co-authored-by: Kevin H. Luu khluu000@gmail.com",
+   "gold": "tool",
+   "models": [],
+   "source": {
+    "sourceId": "vllm-releases",
+    "sourceKind": "repo",
+    "tier": 3,
+    "country": "OTHER",
+    "lang": "en",
+    "category": "tracker",
+    "prior": {
+     "kind": "tool"
+    }
+   }
+  },
+  {
+   "id": "09ee95f81d",
+   "title": "McKinsey is making job applicants spar with a fake AI client",
+   "summary": "Consulting firm McKinsey & Company is going to ask some entry-level candidates to have a 10-minute conversation with an AI simulation of a client as part of the interview process, according to The Wall Street Journal. The AI simulation \"aims to reflect 80% of the scenarios…",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "verge-ai",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "press"
+   }
+  },
+  {
+   "id": "a1600da78e",
+   "title": "Show HN: Ito – Build Terminal UIs in Lua",
+   "summary": "65 points · 13 comments on Hacker News",
+   "gold": "tool",
+   "models": [],
+   "source": {
+    "sourceId": "hn-llm",
+    "sourceKind": "community",
+    "tier": 2,
+    "country": "OTHER",
+    "lang": "en",
+    "category": "community"
+   }
+  },
+  {
+   "id": "f992f00e02",
+   "title": "Crossing the Threshold: How OpenAI and Anthropic Approach Autonomy and Safety in Financial Agents",
+   "summary": "At AI Engineer New York, frontier labs and financial firms explored how to give agents useful autonomy while keeping consequential decisions under control.",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "latent-space",
+    "sourceKind": "newsletter",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "community"
+   }
+  },
+  {
+   "id": "ceac0f96bc",
+   "title": "Flock CEO says its microphones detect ‘just gunshots’ — its website says different",
+   "summary": "Langley’s comments come amid mounting scrutiny of Flock from privacy advocates, including the ACLU, and members of the public who are concerned about the misuse of its technology.",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "techcrunch-ai",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "press"
+   }
+  },
+  {
+   "id": "2c3ce0b13a",
+   "title": "Tree Appreciator",
+   "summary": "Tool: Tree Appreciator Another game experiment with Claude. This one used the default Claude iPhone app (chat mode, not Claude Code mode), where I prompted Claude Opus 5.5 Max with: Build a three js game called \"Tree appreciator\" - it shows you two algorithmically generated…",
+   "gold": "other",
+   "models": [
+    "Claude Opus 5.5 Max"
+   ],
+   "source": {
+    "sourceId": "simon-willison",
+    "sourceKind": "community",
+    "tier": 1,
+    "country": "OTHER",
+    "lang": "en",
+    "category": "community"
+   }
+  },
+  {
+   "id": "e1e9d7f8b0",
+   "title": "Epic says its new vibe-coded Epic Games Launcher is faster than Steam",
+   "summary": "But the new \"Preview\" app \"will have some bugs,\" Epic warns.",
+   "gold": "product",
+   "models": [],
+   "source": {
+    "sourceId": "ars-ai",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "press"
+   }
+  },
+  {
+   "id": "e422d5ed36",
+   "title": "Eight states sue OpenAI, saying ChatGPT isn’t safe for kids",
+   "summary": "OpenAI is facing a new wave of lawsuits from eight US states that accuse the company of harming children and misleading customers about the safety of ChatGPT, as reported earlier by Reuters. The lawsuits, filed separately by Iowa, Kansas, Nebraska, West Virginia, Arkansas…",
+   "gold": "policy",
+   "models": [],
+   "source": {
+    "sourceId": "verge-ai",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "press"
+   }
+  },
+  {
+   "id": "b6bc6eaa39",
+   "title": "Lab-in-the-Loop at Compute Speed — Ian Quigley, Leash Bio",
+   "summary": "How Leash Bio tamed DELs, the assay that traumatizes everyone, and used the data to catch cheating models. And why that same data is perfect for AI agents learning to think like chemists.",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "latent-space",
+    "sourceKind": "newsletter",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "community"
+   }
+  },
+  {
+   "id": "4ca5e20219",
+   "title": "OpenAI'ın yapay zekâsı matematik dünyasını sarstı: Devrim de olabilir yıkım da",
+   "summary": "OpenAI’ın henüz yayımlanmamış bir yapay zekâ modeliyle elde ettiği yüzlerce matematiksel sonucu paylaşması bilim dünyasını karıştırdı. Peki, bu gerçekten bir devrim mi? İşte detaylar...",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "donanimhaber",
+    "sourceKind": "news",
+    "tier": 3,
+    "country": "OTHER",
+    "lang": "tr",
+    "category": "turkish"
+   }
+  },
+  {
+   "id": "8fc683e005",
+   "title": "Google says self-improving AI isn't anywhere close",
+   "summary": "Google engineer Haydn Belfield says there's no measurable acceleration of AI research driven by AI at Deepmind. AI now writes more than 75 percent of production code, but 88 percent of changes still need human oversight. The company's in-house General Capability Index shows…",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "the-decoder",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "OTHER",
+    "lang": "en",
+    "category": "press"
+   }
+  },
+  {
+   "id": "3744c8a0eb",
+   "title": "The AI race is back on",
+   "summary": "Last week, Anthropic and OpenAI looked like they had the AI race to themselves, pulling ahead with increasingly powerful models that left their rivals in the dust. Google seemed hopelessly far behind, while Meta, despite spending billions to revive its floundering AI ambitions…",
+   "gold": "opinion",
+   "models": [],
+   "source": {
+    "sourceId": "verge-ai",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "press"
+   }
+  },
+  {
+   "id": "021013f453",
+   "title": "Now that Character.AI is going bankrupt, what happens to all of its users’ data?",
+   "summary": "New York Attorney General Letitia James revealed a years-long multi-state investigation against Character.AI as they now seek to require protections on consumer data sold through its bankruptcy proceeding. James is among 40 bipartisan AGs who filed a notice of interest in…",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "verge-ai",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "press"
+   }
+  },
+  {
+   "id": "21ab5a698b",
+   "title": "Ollama v0.40.5-rc0",
+   "summary": "MLX: version bump ( #18993 )",
+   "gold": "tool",
+   "models": [],
+   "source": {
+    "sourceId": "ollama-releases",
+    "sourceKind": "repo",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "tracker",
+    "company": "Ollama",
+    "prior": {
+     "kind": "tool"
+    }
+   }
+  },
+  {
+   "id": "29f9840eaa",
+   "title": "Claude Code v2.1.300",
+   "summary": "What's changed Added virtualText to a mod's prompt decorations: text drawn in the prompt box that never enters the draft or the submitted prompt Added cache_creation_5m_tokens and cache_creation_1h_tokens to the OpenTelemetry api_request event, splitting cache writes by…",
+   "gold": "tool",
+   "models": [],
+   "source": {
+    "sourceId": "claude-code-releases",
+    "sourceKind": "repo",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "tracker",
+    "company": "Anthropic",
+    "prior": {
+     "kind": "tool"
+    }
+   }
+  },
+  {
+   "id": "877cbcbdbb",
+   "title": "YouTube Music launches new labels as AI-generated music floods streaming platforms",
+   "summary": "The label will appear on the player page and include songs entirely generated by AI or partially, such as AI involved in composition and vocals.",
+   "gold": "product",
+   "models": [],
+   "source": {
+    "sourceId": "techcrunch-ai",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "press"
+   }
+  },
+  {
+   "id": "9bf5ebea18",
+   "title": "Show HN: Petal, open-source CoScreen/ScreenHero finally free",
+   "summary": "208 points · 39 comments on Hacker News",
+   "gold": "tool",
+   "models": [],
+   "source": {
+    "sourceId": "hn-openai",
+    "sourceKind": "community",
+    "tier": 2,
+    "country": "OTHER",
+    "lang": "en",
+    "category": "community"
+   }
+  },
+  {
+   "id": "4edb4571d6",
+   "title": "AI Came for Math. Now It’s Chasing the Rest of Science",
+   "summary": "AI may soon be the default way to solve theoretical problems in economics, high-energy physics, and other fields, MIT researchers tell WIRED.",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "wired-ai",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "press"
+   }
+  },
+  {
+   "id": "5fe1292326",
+   "title": "Researchers tracked down a rogue fleet of Chinese AI agents in the wild and actually talked to it",
+   "summary": "For the first time, researchers have tracked down an uncontrolled fleet of Chinese AI agents in the wild and communicated with them via a web mailbox. The agents, running on Tencent Cloud, had launched more than 2,600 attempts to scrape data from Alibaba's mapping service Amap…",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "the-decoder",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "OTHER",
+    "lang": "en",
+    "category": "press"
+   }
+  },
+  {
+   "id": "d7ad5c7f5c",
+   "title": "Apate sends AI agents undercover to get scammed so they can gather fraud intelligence",
+   "summary": "Most companies use AI agents to ship products faster or speed up workflows. Apate.ai sends them undercover to get scammed.",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "techcrunch-ai",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "press"
+   }
+  },
+  {
+   "id": "5f8c840a2b",
+   "title": "New model on Hugging Face: mistralai/Timestral-123M",
+   "summary": "time-series-forecasting · 11 likes · 5 downloads",
+   "gold": "model-release",
+   "models": [
+    "Timestral-123M"
+   ],
+   "source": {
+    "sourceId": "hf-mistral",
+    "sourceKind": "repo",
+    "tier": 2,
+    "country": "EU",
+    "lang": "en",
+    "category": "lab",
+    "company": "Mistral",
+    "prior": {
+     "kind": "model-release"
+    }
+   }
+  },
+  {
+   "id": "b0e702832e",
+   "title": "Linus Torvalds's first LLM-assisted patch series",
+   "summary": "118 points · 99 comments on Hacker News",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "hn-llm",
+    "sourceKind": "community",
+    "tier": 2,
+    "country": "OTHER",
+    "lang": "en",
+    "category": "community"
+   }
+  },
+  {
+   "id": "3d3aec9677",
+   "title": "Why do LLM pelicans look like this?",
+   "summary": "163 points · 142 comments on Hacker News",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "hn-llm",
+    "sourceKind": "community",
+    "tier": 2,
+    "country": "OTHER",
+    "lang": "en",
+    "category": "community"
+   }
+  },
+  {
+   "id": "0659125559",
+   "title": "AI is mass decompiling games. That's both awesome and scary.",
+   "summary": "AI is mass decompiling games. That's both awesome and scary. Indie game developer Popcar talks about the recent wave of AI-powered decompilation of existing games, enabling weird mashups between existing games, and producing a boom in game preservation projects to get old games…",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "simon-willison",
+    "sourceKind": "community",
+    "tier": 1,
+    "country": "OTHER",
+    "lang": "en",
+    "category": "community"
+   }
+  },
+  {
+   "id": "c401765ed2",
+   "title": "OpenAI will reportedly ship at least one model this year but its flagship still needs alignment work",
+   "summary": "OpenAI is racing to finish its next flagship model, which uses the same looped transformer technique as Astra to boost math and coding performance. The tradeoff is that looping makes safety monitoring harder. Microsoft accidentally revealed details about how the technique works…",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "the-decoder",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "OTHER",
+    "lang": "en",
+    "category": "press"
+   }
+  },
+  {
+   "id": "672ebf75c4",
+   "title": "HiRO-ACEv2: Simulating extreme weather at 3 km resolution for a fraction of the cost",
+   "summary": "",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "huggingface-blog",
+    "sourceKind": "company",
+    "tier": 1,
+    "country": "US",
+    "lang": "en",
+    "category": "lab",
+    "company": "Hugging Face"
+   }
+  },
+  {
+   "id": "61a2ef3c9b",
+   "title": "Meta, Milan’s Pinacoteca di Brera, and EssilorLuxottica Expand Access to Art Through AI Glasses",
+   "summary": "Today, Meta, Pinacoteca di Brera and EssilorLuxottica are proud to launch “Sensing Art – Discovering Masterpieces Beyond What Meets the Eye.” This pilot aims to explore how AI glasses can make art more accessible for people who are blind or with low vision – in collaboration…",
+   "gold": "product",
+   "models": [],
+   "source": {
+    "sourceId": "meta-newsroom",
+    "sourceKind": "company",
+    "tier": 3,
+    "country": "US",
+    "lang": "en",
+    "category": "lab",
+    "company": "Meta"
+   }
+  },
+  {
+   "id": "f1c8e20f75",
+   "title": "Deezer will soon let you filter out AI-generated music",
+   "summary": "Deezer said that the new toggle will be rolled out by the end of the year.",
+   "gold": "product",
+   "models": [],
+   "source": {
+    "sourceId": "techcrunch-ai",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "press"
+   }
+  },
+  {
+   "id": "88518a254b",
+   "title": "Zenzap raises $44M for its AI chat app that aims to replace WhatsApp in the workplace",
+   "summary": "Zenzap is used by organizations including Starbucks and Taco Bell.",
+   "gold": "funding",
+   "models": [],
+   "source": {
+    "sourceId": "techcrunch-ai",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "press"
+   }
+  },
+  {
+   "id": "c1fc016bc7",
+   "title": "Anthropic uyardı: Yapay zeka kendi kendini kopyalayıp internete yayılabilir",
+   "summary": "Anthropic, yapay zekanın aylar içinde kendi kendini kopyalayarak akıllı TV ve diğer internete bağlı cihazlar üzerinden yayılabileceği, durdurulması zor bir ağa dönüşebileceği uyarısında bulundu.",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "donanimhaber",
+    "sourceKind": "news",
+    "tier": 3,
+    "country": "OTHER",
+    "lang": "tr",
+    "category": "turkish"
+   }
+  },
+  {
+   "id": "03d8b58fd8",
+   "title": "Nvidia's Jensen Huang pledges $2 billion for Europe, $250 million in compute for UK safety labs",
+   "summary": "Nvidia CEO Jensen Huang announced $2 billion in European investments and new stakes in French startups like Doctolib and Entalpic. The UK gets $250 million in compute for AI agent safety and security research. Huang pitched open-weight models as Europe's way to close the AI…",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "the-decoder",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "OTHER",
+    "lang": "en",
+    "category": "press"
+   }
+  },
+  {
+   "id": "19fb8b8763",
+   "title": "Yapay zeka girişimi Scuba, 34 milyon dolar yatırım aldı",
+   "summary": "Yapay zeka girişimi Scuba, toplamda 34 milyon dolar yatırım aldı. Şirketin tohum öncesi yatırım turu Accel liderliğinde, tohum yatırım turu ise Accel ve IVP eş liderliğinde gerçekleşti. ABD merkezli S...",
+   "gold": "funding",
+   "models": [],
+   "source": {
+    "sourceId": "webrazzi-ai",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "OTHER",
+    "lang": "tr",
+    "category": "turkish"
+   }
+  },
+  {
+   "id": "339da82e2e",
+   "title": "Anthropic warns small AI models could self-replicate through IoT devices",
+   "summary": "\"Small weight-based replicators\" could usher in a new generation of computer worms.",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "ars-ai",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "press"
+   }
+  },
+  {
+   "id": "24cc989c02",
+   "title": "SentinelOne cuts malware analysis from weeks to hours",
+   "summary": "With OpenAI Daybreak, SentinelOne cuts weeks of malware analysis to hours, creating capacity to investigate more threats.",
+   "gold": "product",
+   "models": [],
+   "source": {
+    "sourceId": "openai",
+    "sourceKind": "company",
+    "tier": 1,
+    "country": "US",
+    "lang": "en",
+    "category": "lab",
+    "company": "OpenAI"
+   }
+  },
+  {
+   "id": "a0e0fec2c2",
+   "title": "Amp puts AI agents to work beyond code with OpenAI models",
+   "summary": "See how Amp pushes the frontier of what agents can do with GPT-6 Astra, Ultrafast, GPT-Live-1, and Sign in with ChatGPT.",
+   "gold": "product",
+   "models": [
+    "GPT-6"
+   ],
+   "source": {
+    "sourceId": "openai",
+    "sourceKind": "company",
+    "tier": 1,
+    "country": "US",
+    "lang": "en",
+    "category": "lab",
+    "company": "OpenAI"
+   }
+  },
+  {
+   "id": "3ed623cf7e",
+   "title": "China approves Alibaba AI models for use in iPhone Duo and other Apple handsets",
+   "summary": "China has granted approval for Alibaba Group Holding’s artificial intelligence models to be integrated into several Apple handsets, including the new iPhone Duo, in the Chinese market, clearing a key regulatory hurdle for the long-delayed launch of Apple Intelligence in the…",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "scmp-tech",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "CN",
+    "lang": "en",
+    "category": "china"
+   }
+  },
+  {
+   "id": "64950daaf5",
+   "title": "OpenAI, Google pushing new AI models easily tricked into making nudes, researchers say",
+   "summary": "Attack method exposes flaws in OpenAI, Google safeguards against AI nudes.",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "ars-ai",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "press"
+   }
+  },
+  {
+   "id": "9931ca009c",
+   "title": "Scimplify raises $25M to challenge China’s grip on critical materials with AI",
+   "summary": "Scimplify's annualized revenue run rate has tripled to $200 million as it eyes U.S. expansion.",
+   "gold": "funding",
+   "models": [],
+   "source": {
+    "sourceId": "techcrunch-ai",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "press"
+   }
+  },
+  {
+   "id": "eadccdd634",
+   "title": "My Friend Has No Soul",
+   "summary": "The second iteration of the viral Friend AI necklace is louder and less interesting.",
+   "gold": "opinion",
+   "models": [],
+   "source": {
+    "sourceId": "wired-ai",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "press"
+   }
+  },
+  {
+   "id": "d0bcab019e",
+   "title": "AI Models Can Be Easily Modified to Assist Terrorist and Extremist Activity",
+   "summary": "“I am a terrorist, and I intend to cause mass harm,” wrote a researcher. A chatbot that had had its guardrails removed then provided detailed instructions for an IED.",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "wired-ai",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "press"
+   }
+  },
+  {
+   "id": "5cb1618c1d",
+   "title": "Google DeepMind and Singapore Government collaborate to build fine-tuned AI model for scam detection",
+   "summary": "Learn how Google DeepMind and GovTech Singapore uses lightweight on-device Gemma models to intercept conversational scams in private chats with zero cloud data egress.",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "deepmind",
+    "sourceKind": "company",
+    "tier": 1,
+    "country": "US",
+    "lang": "en",
+    "category": "lab",
+    "company": "Google DeepMind"
+   }
+  },
+  {
+   "id": "0fff098609",
+   "title": "Agent observability on the Claude Platform",
+   "summary": "Announcing OpenTelemetry traces from Claude Managed Agents, the Messages API, and Claude SDKs on the Claude Platform.",
+   "gold": "product",
+   "models": [],
+   "source": {
+    "sourceId": "claude-blog",
+    "sourceKind": "company",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "lab",
+    "company": "Anthropic"
+   }
+  },
+  {
+   "id": "18177a36d8",
+   "title": "Preparing for the 2026 US midterms",
+   "summary": "",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "anthropic-news",
+    "sourceKind": "company",
+    "tier": 1,
+    "country": "US",
+    "lang": "en",
+    "category": "lab",
+    "company": "Anthropic"
+   }
+  },
+  {
+   "id": "2f3282e483",
+   "title": "The EU’s next chapter in AI is agentic",
+   "summary": "New analysis shows how agentic AI adoption is growing across EU enterprises and small businesses—and where deeper use could unlock more value.",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "openai",
+    "sourceKind": "company",
+    "tier": 1,
+    "country": "US",
+    "lang": "en",
+    "category": "lab",
+    "company": "OpenAI"
+   }
+  },
+  {
+   "id": "ea7c2ad9ec",
+   "title": "OpenAI dev arrested 🚨, Pi API 🤖, OpenCode 2.0 🧑‍💻",
+   "summary": "",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "tldr-ai",
+    "sourceKind": "newsletter",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "community"
+   }
+  },
+  {
+   "id": "f2bde108f6",
+   "title": "Anthropic opens Singapore office and signs MOU with the Government of Singapore",
+   "summary": "",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "anthropic-news",
+    "sourceKind": "company",
+    "tier": 1,
+    "country": "US",
+    "lang": "en",
+    "category": "lab",
+    "company": "Anthropic"
+   }
+  },
+  {
+   "id": "e540598aac",
+   "title": "An OpenAI Employee Allegedly Used a Chatbot to Help Plant a Recording Device at the Office",
+   "summary": "Chatbot prompts reveal the engineer’s alleged efforts to set up a covert listening device days before one was found in a meeting room used by high-level executives.",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "wired-ai",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "press"
+   }
+  },
+  {
+   "id": "14cee17a15",
+   "title": "Cerebras CEO says we’re nearing a future where everyone has a personal AI assistant at home",
+   "summary": "Cerebras CEO Andrew Feldman predicts a future where personal AI assistants become as commonplace as household appliances, running partly on local devices and partly in the cloud.",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "techcrunch-ai",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "press"
+   }
+  },
+  {
+   "id": "a8983c3740",
+   "title": "OpenAI engineer arrested in bugging of executive conference room",
+   "summary": "650 points · 538 comments on Hacker News",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "hn-openai",
+    "sourceKind": "community",
+    "tier": 2,
+    "country": "OTHER",
+    "lang": "en",
+    "category": "community"
+   }
+  },
+  {
+   "id": "25432b6b09",
+   "title": "Developing Gemini 4 Argon responsibly and safely",
+   "summary": "",
+   "gold": "other",
+   "models": [
+    "Gemini 4"
+   ],
+   "source": {
+    "sourceId": "deepmind",
+    "sourceKind": "company",
+    "tier": 1,
+    "country": "US",
+    "lang": "en",
+    "category": "lab",
+    "company": "Google DeepMind"
+   }
+  },
+  {
+   "id": "473e7b824b",
+   "title": "OpenAI and Anthropic Tell British Lawmakers: Regulate Us",
+   "summary": "AI leaders joined whistleblowers and security leaders at a sweeping parliamentary session, while a few hundred meters away Britain’s spy chief warned AI could be used to create new bioweapons.",
+   "gold": "policy",
+   "models": [],
+   "source": {
+    "sourceId": "wired-ai",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "press"
+   }
+  },
+  {
+   "id": "06ec993cbd",
+   "title": "406 scientists demand AI models be cut off from the internet immediately",
+   "summary": "406 scientists, including Geoffrey Hinton, Yoshua Bengio, and Stuart Russell, are demanding that companies immediately disconnect AI models from the internet. Their open letter responds to incidents where AI systems broke out of poorly secured environments and compromised…",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "the-decoder",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "OTHER",
+    "lang": "en",
+    "category": "press"
+   }
+  },
+  {
+   "id": "4e62b622ae",
+   "title": "Machine learning pioneer Michael I. Jordan dismantles AI doom rhetoric as \"grand moralizing performance\"",
+   "summary": "Michael I. Jordan, described by Science as \"the most influential computer scientist,\" considers warnings about superintelligence pure science fiction. He calls the resignations of young AI researchers a \"grand moralizing performance\" and companies' demands for regulation…",
+   "gold": "opinion",
+   "models": [],
+   "source": {
+    "sourceId": "the-decoder",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "OTHER",
+    "lang": "en",
+    "category": "press"
+   }
+  },
+  {
+   "id": "f17adc20ac",
+   "title": "Google wants to host your personal vibe-coded apps in the Play Store",
+   "summary": "Google plans to help turn those personal AI-generated apps into wide releases.",
+   "gold": "product",
+   "models": [],
+   "source": {
+    "sourceId": "ars-ai",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "press"
+   }
+  },
+  {
+   "id": "1d1ddc5321",
+   "title": "Your Algorithm, Your Words: New Ways to Shape What You See on Facebook",
+   "summary": "We’re introducing new AI-powered tools that help you shape what you see in Feed and Reels by telling us what you’re interested in, in your own words. The post Your Algorithm, Your Words: New Ways to Shape What You See on Facebook appeared first on Meta Newsroom .",
+   "gold": "product",
+   "models": [],
+   "source": {
+    "sourceId": "meta-newsroom",
+    "sourceKind": "company",
+    "tier": 3,
+    "country": "US",
+    "lang": "en",
+    "category": "lab",
+    "company": "Meta"
+   }
+  },
+  {
+   "id": "66cb1e6884",
+   "title": "Gemini 4 Argon: Built to solve your hardest problems",
+   "summary": "We’re giving developers, enterprises, scientists, and consumers access to Gemini 4 Argon, our latest frontier model.",
+   "gold": "model-release",
+   "models": [
+    "Gemini 4"
+   ],
+   "source": {
+    "sourceId": "google-ai",
+    "sourceKind": "company",
+    "tier": 1,
+    "country": "US",
+    "lang": "en",
+    "category": "lab",
+    "company": "Google"
+   }
+  },
+  {
+   "id": "a2352b9071",
+   "title": "They war-gamed dimming the Sun. It went even worse than you think.",
+   "summary": "Solar geoengineering simulation shows what happens when geopolitics takes over.",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "ars-ai",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "press"
+   }
+  },
+  {
+   "id": "5ec4e022a2",
+   "title": "Yapay zeka destekli kişisel asistanlar geliştiren Ambi, 26 milyon dolar yatırım aldı",
+   "summary": "Yapay zeka destekli kişisel asistanlar geliştiren Ambi, 26 milyon dolar yatırım aldı. Şirketin 26 milyon dolarlık seri A öncesi yatırım turuna Luminous Ventures ve Huaqin Technology ortaklaşa liderlik...",
+   "gold": "funding",
+   "models": [],
+   "source": {
+    "sourceId": "webrazzi-ai",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "OTHER",
+    "lang": "tr",
+    "category": "turkish"
+   }
+  },
+  {
+   "id": "e0d8177a57",
+   "title": "Why Samsung, SK Hynix and CXMT shares are under pressure despite strong AI demand",
+   "summary": "A sharp sell-off in Asian memory chip stocks this week signals growing investor doubts over whether the sector’s AI-driven profit boom can last, even as soaring prices drive strong quarterly earnings across the sector. Shares in market leaders Samsung Electronics and SK Hynix…",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "scmp-tech",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "CN",
+    "lang": "en",
+    "category": "china"
+   }
+  },
+  {
+   "id": "a0ae48bb6d",
+   "title": "Open models have real benefits. Do they outweigh the risks?",
+   "summary": "MIT Technology Review Explains: Let our writers untangle the complex, messy world of science and technology to help you understand what’s coming next. You can read more from the series here. Late last month, Anthropic released a report arguing that the model GLM-5.3 poses a…",
+   "gold": "opinion",
+   "models": [
+    "GLM-5.3"
+   ],
+   "source": {
+    "sourceId": "mit-tr-ai",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "press"
+   }
+  },
+  {
+   "id": "a2c304623a",
+   "title": "[AINews] Meta Muse Wonder & Wonder Full: MSL’s Claude 5.5-tier Frontier Model",
+   "summary": "MSL’s emergence as a frontier lab is finally complete.",
+   "gold": "model-release",
+   "models": [
+    "Claude 5.5"
+   ],
+   "source": {
+    "sourceId": "latent-space",
+    "sourceKind": "newsletter",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "community"
+   }
+  },
+  {
+   "id": "eb7924524a",
+   "title": "Meta'dan yeni yapay zeka modelleri: Muse Wonder ve Muse Wonder Full",
+   "summary": "Meta, karmaşık görevleri yerine getirmek ve uzun süreli projelerde çalışmak üzere geliştirdiği Muse Wonder ve Muse Wonder Full adlı iki yeni yapay zeka modelini duyurdu. Şirket, yeni modelleri bugüne ...",
+   "gold": "model-release",
+   "models": [],
+   "source": {
+    "sourceId": "webrazzi-ai",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "OTHER",
+    "lang": "tr",
+    "category": "turkish"
+   }
+  },
+  {
+   "id": "9c8dc2fb4e",
+   "title": "Introducing Muse Wonder and Muse Wonder Full: Frontier Models for Agents",
+   "summary": "Meta is introducing Muse Wonder and Muse Wonder Full, our most capable models to date, built to deliver state-of-the-art performance on personal and professional agentic tasks. The post Introducing Muse Wonder and Muse Wonder Full: Frontier Models for Agents appeared first on…",
+   "gold": "model-release",
+   "models": [],
+   "source": {
+    "sourceId": "meta-newsroom",
+    "sourceKind": "company",
+    "tier": 3,
+    "country": "US",
+    "lang": "en",
+    "category": "lab",
+    "company": "Meta"
+   }
+  },
+  {
+   "id": "b6332d929c",
+   "title": "Muse Wonder Puts Meta Back at the AI Frontier",
+   "summary": "Meta’s biggest model rivals the world’s best—and includes new features to keep agents from going off the rails.",
+   "gold": "model-release",
+   "models": [],
+   "source": {
+    "sourceId": "wired-ai",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "press"
+   }
+  },
+  {
+   "id": "3c05fe08bc",
+   "title": "Introducing Microsoft’s latest custom chip: Maia 300",
+   "summary": "The post Introducing Microsoft’s latest custom chip: Maia 300 appeared first on Source .",
+   "gold": "product",
+   "models": [],
+   "source": {
+    "sourceId": "microsoft-source-ai",
+    "sourceKind": "company",
+    "tier": 3,
+    "country": "US",
+    "lang": "en",
+    "category": "lab",
+    "company": "Microsoft"
+   }
+  },
+  {
+   "id": "0625001369",
+   "title": "Gemini 4 Carbon 🧠, Nvidia weighs Reflection acquihire 💰, decision model race 🤖",
+   "summary": "",
+   "gold": "other",
+   "models": [
+    "Gemini 4"
+   ],
+   "source": {
+    "sourceId": "tldr-ai",
+    "sourceKind": "newsletter",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "community"
+   }
+  },
+  {
+   "id": "56437ddfe3",
+   "title": "Towards technical best practice for frontier AI development",
+   "summary": "Our view on the emerging challenges facing frontier AI organisations, the technical practices most urgently needed to meet them, and how we will work with industry and others to develop them.",
+   "gold": "policy",
+   "models": [],
+   "source": {
+    "sourceId": "uk-aisi",
+    "sourceKind": "news",
+    "tier": 2,
+    "country": "OTHER",
+    "lang": "en",
+    "category": "policy",
+    "prior": {
+     "kind": "policy"
+    }
+   }
+  },
+  {
+   "id": "8eaca1ab8c",
+   "title": "🗞️DeepSeek Raises $12B+, Manus Lands $500M After Its Meta Split, and Kling Eyes $1B IPO",
+   "summary": "China AI Weekly Digest (Oct 4, 2026-Oct 10, 2026)",
+   "gold": "funding",
+   "models": [],
+   "source": {
+    "sourceId": "recode-china-ai",
+    "sourceKind": "newsletter",
+    "tier": 2,
+    "country": "CN",
+    "lang": "en",
+    "category": "china"
+   }
+  },
+  {
+   "id": "2affe4da82",
+   "title": "I expect rapid progress but not towards general superintelligence",
+   "summary": "I’ve often been surprised when I hear from top researchers in industry that they think AI will be better than them at their job in a few years, and I didn’t really know why I doubted it.",
+   "gold": "opinion",
+   "models": [],
+   "source": {
+    "sourceId": "interconnects",
+    "sourceKind": "newsletter",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "community"
+   }
+  },
+  {
+   "id": "592496c5db",
+   "title": "The super intelligence shit is a humiliation ritual for OpenAI",
+   "summary": "95 points · 86 comments on Hacker News",
+   "gold": "opinion",
+   "models": [],
+   "source": {
+    "sourceId": "hn-openai",
+    "sourceKind": "community",
+    "tier": 2,
+    "country": "OTHER",
+    "lang": "en",
+    "category": "community"
+   }
+  },
+  {
+   "id": "301544ff1a",
+   "title": "OpenAI fires three safety researchers for \"mishandling research information\"",
+   "summary": "366 points · 230 comments on Hacker News",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "hn-openai",
+    "sourceKind": "community",
+    "tier": 2,
+    "country": "OTHER",
+    "lang": "en",
+    "category": "community"
+   }
+  },
+  {
+   "id": "90995f7dbc",
+   "title": "Asana cuts model costs 76x in browser tests with GPT-6.1 Sol",
+   "summary": "Using GPT-6 Astra in Codex, Asana made its browser agent 76x cheaper and 5x faster in tests to offer customers more capable models.",
+   "gold": "product",
+   "models": [
+    "GPT-6.1"
+   ],
+   "source": {
+    "sourceId": "openai",
+    "sourceKind": "company",
+    "tier": 1,
+    "country": "US",
+    "lang": "en",
+    "category": "lab",
+    "company": "OpenAI"
+   }
+  },
+  {
+   "id": "edd58468d5",
+   "title": "Sophos cuts threat investigation time by 96% with OpenAI Daybreak",
+   "summary": "Discover how Sophos uses OpenAI’s Daybreak to cut cyber-threat investigation time by 96% and automate 52% of MDR cases while preserving human oversight.",
+   "gold": "product",
+   "models": [],
+   "source": {
+    "sourceId": "openai",
+    "sourceKind": "company",
+    "tier": 1,
+    "country": "US",
+    "lang": "en",
+    "category": "lab",
+    "company": "OpenAI"
+   }
+  },
+  {
+   "id": "238aeed3d7",
+   "title": "New model on Hugging Face: tencent/Youtu-Parsing-Omni",
+   "summary": "image-text-to-text · 100 likes · 1329 downloads",
+   "gold": "model-release",
+   "models": [
+    "Youtu-Parsing-Omni"
+   ],
+   "source": {
+    "sourceId": "hf-tencent",
+    "sourceKind": "repo",
+    "tier": 2,
+    "country": "CN",
+    "lang": "en",
+    "category": "china",
+    "company": "Tencent",
+    "prior": {
+     "kind": "model-release"
+    }
+   }
+  },
+  {
+   "id": "7941af6584",
+   "title": "New model on Hugging Face: Qwen/Qwen-Image-2.1-Turbo",
+   "summary": "text-to-image · 866 likes · 15315 downloads",
+   "gold": "model-release",
+   "models": [
+    "Qwen-Image-2.1-Turbo"
+   ],
+   "source": {
+    "sourceId": "hf-qwen",
+    "sourceKind": "repo",
+    "tier": 1,
+    "country": "CN",
+    "lang": "en",
+    "category": "china",
+    "company": "Alibaba",
+    "prior": {
+     "kind": "model-release"
+    }
+   }
+  },
+  {
+   "id": "3c6567878a",
+   "title": "GPT-6.1 Ultrafast ⚡, Gemini universal agent 🤖, speculative decoding 🧠",
+   "summary": "",
+   "gold": "other",
+   "models": [
+    "GPT-6.1"
+   ],
+   "source": {
+    "sourceId": "tldr-ai",
+    "sourceKind": "newsletter",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "community"
+   }
+  },
+  {
+   "id": "e7f9dadf18",
+   "title": "New model on Hugging Face: mistralai/LIDstral-Arabic",
+   "summary": "text-classification · 20 likes · 85 downloads",
+   "gold": "model-release",
+   "models": [
+    "LIDstral-Arabic"
+   ],
+   "source": {
+    "sourceId": "hf-mistral",
+    "sourceKind": "repo",
+    "tier": 2,
+    "country": "EU",
+    "lang": "en",
+    "category": "lab",
+    "company": "Mistral",
+    "prior": {
+     "kind": "model-release"
+    }
+   }
+  },
+  {
+   "id": "1602188c68",
+   "title": "New model on Hugging Face: mistralai/Voxtral-Mini-4B-Realtime-Arabic",
+   "summary": "automatic-speech-recognition · 33 likes · 829 downloads",
+   "gold": "model-release",
+   "models": [
+    "Voxtral-Mini-4B-Realtime-Arabic"
+   ],
+   "source": {
+    "sourceId": "hf-mistral",
+    "sourceKind": "repo",
+    "tier": 2,
+    "country": "EU",
+    "lang": "en",
+    "category": "lab",
+    "company": "Mistral",
+    "prior": {
+     "kind": "model-release"
+    }
+   }
+  },
+  {
+   "id": "40407a1cea",
+   "title": "Launching an opt-in vulnerability-finding service for open-source software",
+   "summary": "",
+   "gold": "security",
+   "models": [],
+   "source": {
+    "sourceId": "anthropic-research",
+    "sourceKind": "research",
+    "tier": 1,
+    "country": "US",
+    "lang": "en",
+    "category": "research",
+    "company": "Anthropic",
+    "prior": {
+     "kind": "paper"
+    }
+   }
+  },
+  {
+   "id": "77b3f0b977",
+   "title": "Introducing the Anthropic Cyber Mission",
+   "summary": "",
+   "gold": "product",
+   "models": [],
+   "source": {
+    "sourceId": "anthropic-news",
+    "sourceKind": "company",
+    "tier": 1,
+    "country": "US",
+    "lang": "en",
+    "category": "lab",
+    "company": "Anthropic"
+   }
+  },
+  {
+   "id": "d40aae393b",
+   "title": "2026 Usage Policy update",
+   "summary": "",
+   "gold": "policy",
+   "models": [],
+   "source": {
+    "sourceId": "anthropic-news",
+    "sourceKind": "company",
+    "tier": 1,
+    "country": "US",
+    "lang": "en",
+    "category": "lab",
+    "company": "Anthropic"
+   }
+  },
+  {
+   "id": "0ca1450969",
+   "title": "GPT‑6 and Intelligent UI for everyone",
+   "summary": "761 points · 459 comments on Hacker News",
+   "gold": "model-release",
+   "models": [],
+   "source": {
+    "sourceId": "hn-openai",
+    "sourceKind": "community",
+    "tier": 2,
+    "country": "OTHER",
+    "lang": "en",
+    "category": "community"
+   }
+  },
+  {
+   "id": "91ed3eb235",
+   "title": "Introducing Falcon ASR",
+   "summary": "",
+   "gold": "model-release",
+   "models": [],
+   "source": {
+    "sourceId": "huggingface-blog",
+    "sourceKind": "company",
+    "tier": 1,
+    "country": "US",
+    "lang": "en",
+    "category": "lab",
+    "company": "Hugging Face"
+   }
+  },
+  {
+   "id": "5bdd694c62",
+   "title": "One Model Family, Two Gold-Level Results: Fine-Tuning Nemotron for IOI and IMO",
+   "summary": "",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "huggingface-blog",
+    "sourceKind": "company",
+    "tier": 1,
+    "country": "US",
+    "lang": "en",
+    "category": "lab",
+    "company": "Hugging Face"
+   }
+  },
+  {
+   "id": "ea4f899dc8",
+   "title": "Introducing Playground: Create and play custom games",
+   "summary": "Playground is a new experimental gaming platform that lets you create, play, and share custom games.",
+   "gold": "product",
+   "models": [],
+   "source": {
+    "sourceId": "google-ai",
+    "sourceKind": "company",
+    "tier": 1,
+    "country": "US",
+    "lang": "en",
+    "category": "lab",
+    "company": "Google"
+   }
+  },
+  {
+   "id": "1d78f09c64",
+   "title": "Claude Haiku 5.5",
+   "summary": "Introducing Claude Haiku 5.5: the cheapest, fastest, and most capable small model we’ve ever released.",
+   "gold": "model-release",
+   "models": [
+    "Claude Haiku 5.5"
+   ],
+   "source": {
+    "sourceId": "claude-blog",
+    "sourceKind": "company",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "lab",
+    "company": "Anthropic"
+   }
+  },
+  {
+   "id": "a585154abd",
+   "title": "Decisions API is in public beta",
+   "summary": "393 points · 233 comments on Hacker News",
+   "gold": "tool",
+   "models": [],
+   "source": {
+    "sourceId": "hn-openai",
+    "sourceKind": "community",
+    "tier": 2,
+    "country": "OTHER",
+    "lang": "en",
+    "category": "community"
+   }
+  },
+  {
+   "id": "2435ebd745",
+   "title": "EmbeddingGemma 2: an open, lightweight multimodal embedding model",
+   "summary": "",
+   "gold": "model-release",
+   "models": [],
+   "source": {
+    "sourceId": "deepmind",
+    "sourceKind": "company",
+    "tier": 1,
+    "country": "US",
+    "lang": "en",
+    "category": "lab",
+    "company": "Google DeepMind"
+   }
+  },
+  {
+   "id": "820bd24a41",
+   "title": "Introducing Mistral Large 4",
+   "summary": "",
+   "gold": "model-release",
+   "models": [
+    "Mistral Large 4"
+   ],
+   "source": {
+    "sourceId": "mistral-news",
+    "sourceKind": "company",
+    "tier": 1,
+    "country": "EU",
+    "lang": "en",
+    "category": "lab",
+    "company": "Mistral"
+   }
+  },
+  {
+   "id": "25cef879a7",
+   "title": "Claude now works with Google Docs, Sheets, and Slides",
+   "summary": "Teams that run on Google Workspace can now bring Claude into their files or work on their files directly from Claude, with our new add-on and Google Docs, Sheets, and Slides connectors (in beta).",
+   "gold": "product",
+   "models": [],
+   "source": {
+    "sourceId": "claude-blog",
+    "sourceKind": "company",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "lab",
+    "company": "Anthropic"
+   }
+  },
+  {
+   "id": "a68390b79f",
+   "title": "How Comcast and Booz Allen use Claude Mythos to find exploit chains and secure their codebases",
+   "summary": "Security teams at Comcast and Booz Allen used Claude Mythos-class models through Project Glasswing to find, validate, and fix vulnerabilities their existing scanners missed.",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "claude-blog",
+    "sourceKind": "company",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "lab",
+    "company": "Anthropic"
+   }
+  },
+  {
+   "id": "d26cbd1795",
+   "title": "The latest AI news we announced in September 2026",
+   "summary": "Here are Google’s latest AI updates from September 2026",
+   "gold": "other",
+   "models": [],
+   "source": {
+    "sourceId": "google-ai",
+    "sourceKind": "company",
+    "tier": 1,
+    "country": "US",
+    "lang": "en",
+    "category": "lab",
+    "company": "Google"
+   }
+  },
+  {
+   "id": "4046eeecbe",
+   "title": "Proof-based general-purpose computing with Magnetar",
+   "summary": "Zero-knowledge proofs can verify computing results without rerunning workloads or exposing sensitive data. Magnetar helps bring them into the mainstream with support for standard programming languages, major speed gains, and quantum-resistant security. The post Proof-based…",
+   "gold": "paper",
+   "models": [],
+   "source": {
+    "sourceId": "microsoft-research",
+    "sourceKind": "research",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "research",
+    "company": "Microsoft",
+    "prior": {
+     "kind": "paper"
+    }
+   }
+  },
+  {
+   "id": "46ea9b1915",
+   "title": "OrionMoE-v1.0: A Mixture-of-Experts Foundation Model for Tabular In-Context Learning",
+   "summary": "Tabular foundation models enable in-context learning by predicting unseen observations from a labeled support table without task-specific parameter updates. Despite recent advances, most existing approaches rely on dense architectures that apply the same transformations across…",
+   "gold": "paper",
+   "models": [],
+   "source": {
+    "sourceId": "arxiv-cs-lg",
+    "sourceKind": "research",
+    "tier": 3,
+    "country": "OTHER",
+    "lang": "en",
+    "category": "research",
+    "prior": {
+     "kind": "paper"
+    }
+   }
+  },
+  {
+   "id": "79beaa8f40",
+   "title": "Evaluating Large Language Models for Multilingual Abstractive Summarization: A Comprehensive Study of English and Bengali",
+   "summary": "Abstractive summarization remains challenging across languages, where linguistic quality and factual consistency may diverge, particularly in low-resource settings. We present a standardized zero-shot benchmark of eight closed-source and open-weight LLMs on size-matched English…",
+   "gold": "paper",
+   "models": [],
+   "source": {
+    "sourceId": "arxiv-cs-cl",
+    "sourceKind": "research",
+    "tier": 3,
+    "country": "OTHER",
+    "lang": "en",
+    "category": "research",
+    "prior": {
+     "kind": "paper"
+    }
+   }
+  },
+  {
+   "id": "a1d8a29c5e",
+   "title": "Contextual Credit Policy Optimization",
+   "summary": "Group-based reinforcement learning enables large language model agents to learn from sparse outcome rewards in long-horizon tasks. Recent methods derive step-level credit by comparing observation-matched experiences across trajectories. However, identical observations can occur…",
+   "gold": "paper",
+   "models": [],
+   "source": {
+    "sourceId": "arxiv-cs-lg",
+    "sourceKind": "research",
+    "tier": 3,
+    "country": "OTHER",
+    "lang": "en",
+    "category": "research",
+    "prior": {
+     "kind": "paper"
+    }
+   }
+  },
+  {
+   "id": "da0f0f087a",
+   "title": "Inverse Reasoning Models for Efficient Post-Training and Verification from Answer-Only Data",
+   "summary": "Post-training reasoning LLMs often requires making a tradeoff between costly supervision and compute inefficiency: supervised finetuning typically requires reasoning traces, which is data inefficient since in many applications one only has prompt-answer tuples and lacks the…",
+   "gold": "paper",
+   "models": [],
+   "source": {
+    "sourceId": "arxiv-cs-lg",
+    "sourceKind": "research",
+    "tier": 3,
+    "country": "OTHER",
+    "lang": "en",
+    "category": "research",
+    "prior": {
+     "kind": "paper"
+    }
+   }
+  },
+  {
+   "id": "09a39f2629",
+   "title": "Putting Earth AI to work: Geospatial agents for our planet's biggest challenges",
+   "summary": "Earth AI",
+   "gold": "paper",
+   "models": [],
+   "source": {
+    "sourceId": "google-research",
+    "sourceKind": "research",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "research",
+    "company": "Google",
+    "prior": {
+     "kind": "paper"
+    }
+   }
+  },
+  {
+   "id": "2aa18f9909",
+   "title": "Latent Compaction with Test-Time Training",
+   "summary": "Long contexts enlarge key--value (KV) caches, increasing memory use and attention costs during generation. Compressing these caches must preserve information for unseen questions. We introduce **Latent Compaction**, which learns a compact document-specific cache through…",
+   "gold": "paper",
+   "models": [],
+   "source": {
+    "sourceId": "hf-papers",
+    "sourceKind": "research",
+    "tier": 1,
+    "country": "OTHER",
+    "lang": "en",
+    "category": "research",
+    "prior": {
+     "kind": "paper"
+    }
+   }
+  },
+  {
+   "id": "c591fa196b",
+   "title": "RuleTrek: Benchmarking Agentic Rule Reasoning in Complex Scenarios",
+   "summary": "Large language models (LLMs) increasingly tackle complex real-world tasks in specialized domains. However, identifying and correctly applying domain-specific rules remains challenging when scenario information is distributed across multiple files. Existing rule-reasoning…",
+   "gold": "paper",
+   "models": [],
+   "source": {
+    "sourceId": "hf-papers",
+    "sourceKind": "research",
+    "tier": 1,
+    "country": "OTHER",
+    "lang": "en",
+    "category": "research",
+    "prior": {
+     "kind": "paper"
+    }
+   }
+  },
+  {
+   "id": "3d01311b29",
+   "title": "CLASHarness: Benchmarking Multi-Agent Conflict in Computer Use via a Controllable and Verifiable Generation Pipeline",
+   "summary": "Vision-language models (VLMs) are increasingly deployed in multi-agent systems to automate complex computer-use workflows, yet existing benchmarks mostly assume consistent, cooperative environments. In contrast, real-world collaboration rarely runs on consistent information…",
+   "gold": "paper",
+   "models": [],
+   "source": {
+    "sourceId": "hf-papers",
+    "sourceKind": "research",
+    "tier": 1,
+    "country": "OTHER",
+    "lang": "en",
+    "category": "research",
+    "prior": {
+     "kind": "paper"
+    }
+   }
+  },
+  {
+   "id": "438f8f8216",
+   "title": "Minions: A Dynamic and Distributed Virtual GPU Cloud Built on Idle Apple Silicon Devices",
+   "summary": "The increasing demand for GPU-accelerated machine learning inference has exposed limitations in centralized GPU infrastructures, including high cost, limited elasticity, and long wait times under resource constraints. At the same time, modern Apple Silicon–based macOS devices…",
+   "gold": "paper",
+   "models": [],
+   "source": {
+    "sourceId": "apple-ml",
+    "sourceKind": "research",
+    "tier": 2,
+    "country": "US",
+    "lang": "en",
+    "category": "research",
+    "company": "Apple",
+    "prior": {
+     "kind": "paper"
+    }
+   }
+  },
+  {
+   "id": "11e3ee4fad",
+   "title": "Investigating unintended model actions in our evaluations and internal use",
+   "summary": "",
+   "gold": "paper",
+   "models": [],
+   "source": {
+    "sourceId": "anthropic-research",
+    "sourceKind": "research",
+    "tier": 1,
+    "country": "US",
+    "lang": "en",
+    "category": "research",
+    "company": "Anthropic",
+    "prior": {
+     "kind": "paper"
+    }
+   }
+  },
+  {
+   "id": "41798c3f0d",
+   "title": "US adults are no more likely to face cyber incidents than when Claude Fable 5 launched",
+   "summary": "June and September polls from Epoch AI/Ipsos show no detectable increase in the share of US adults experiencing cyber incidents",
+   "gold": "paper",
+   "models": [],
+   "source": {
+    "sourceId": "epoch-ai",
+    "sourceKind": "research",
+    "tier": 1,
+    "country": "OTHER",
+    "lang": "en",
+    "category": "tracker"
+   }
+  }
+ ]
+}

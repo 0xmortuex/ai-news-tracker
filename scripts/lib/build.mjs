@@ -64,7 +64,10 @@ export function buildNews(pool, sources, opts) {
     });
     // Merge tags across members: companies/models union (rep's order first).
     const companies = [...new Set([...rep.companies, ...others.flatMap(m => m.companies)])].sort();
-    const models = [...new Set([...rep.models, ...others.flatMap(m => m.models)])].slice(0, 5);
+    const seenModels = new Set();
+    const models = [...rep.models, ...others.flatMap(m => m.models)]
+      .filter(n => { const k = n.toLowerCase(); if (seenModels.has(k)) return false; seenModels.add(k); return true; })
+      .slice(0, 5);
     const item = {
       id: rep.id,
       cluster: c.id,

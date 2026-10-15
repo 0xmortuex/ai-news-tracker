@@ -1,7 +1,8 @@
 // Rule-based tagging: kind, labels, topics, companies, models. No LLM, deterministic.
 
+import { wordRe } from './text.mjs';
 import {
-  LABEL_RULES, LAUNCH_RE, MODEL_NAME_RE, O_SERIES_RE, VERSION_TOKEN_RE,
+  LABEL_RULES, LAUNCH_RE, MODEL_NAME_RE, O_SERIES_RE, VERSION_TOKEN_RE, BRAND_RE, SIZE_RE,
   findCompanies, findModels,
 } from './taxonomy.mjs';
 
@@ -23,36 +24,65 @@ const LABEL_TO_TOPIC = {
 // model release > policy > funding > research.
 const KIND_PRIORITY = ['model-release', 'policy', 'funding', 'research', 'safety', 'tools'];
 
-const OPINION_RE = /(?<![\p{L}\p{N}])(?:opinion|essay|commentary|column|the case for|my take|i think)(?![\p{L}\p{N}])/iu;
+const OPINION_RE = /(?<![\p{L}\p{N}])(?:opinion|essay|commentary|column|the case for|my take|i think|i expect|i believe|rhetoric|doom\w*|humiliation|let me count|too much faith|don['’]t let friends)(?![\p{L}\p{N}])/iu;
 const SECURITY_RE = /(?<![\p{L}\p{N}])(?:vulnerabilit\w+|cve-\d+|exploit\w*|breach\w*|data leak|prompt injection|malware|supply chain attack)(?![\p{L}\p{N}])/iu;
 const DEV_TOOL_RE = /(?<![\p{L}\p{N}])(?:api|sdk|cli|library|framework|open[- ]source|github|plugin|package|mcp|runtime|compiler|toolkit)(?![\p{L}\p{N}])/iu;
 const PRODUCT_RE = /(?<![\p{L}\p{N}])(?:app|apps|feature|features|pricing|subscription|assistant|copilot|browser|device|devices|wearables?|launches?|rolls? out|available)(?![\p{L}\p{N}])/iu;
 const FUNDING_STRONG_RE = /(?<![\p{L}\p{N}])(?:raises?|raised|series [a-e]|valuation|acquir\w+|ipo|funding round|yatırım)/iu;
 
+const OPEN_MODEL_RE = wordRe([
+  'open[- ]weights?', 'open[- ]source (?:ai |language |image |video )?models?', 'frontier models?',
+  'new (?:ai |language |image |video |open |multimodal )?models?', 'latest models?',
+  'yeni (?:yapay zek\\w+ )?model\\w*',
+]);
+// "...than when Claude Fable 5 launched": a past release used as a time reference, not an announcement.
+const RETROSPECTIVE_RE = /(?<![\p{L}\p{N}])(?:when|since|after|before|until|ever since)\s+(?:[\p{L}\p{N}.'’-]+\s+){0,6}(?:launched|released|shipped|debuted)/iu;
+const MODEL_WORD_RE = wordRe(['models?', 'parameters?', 'moe', 'mixture[- ]of[- ]experts', 'weights', 'checkpoints?', 'llms?']);
+const QUANT_TITLE_RE = wordRe(['gguf', 'awq', 'gptq', 'mlx', 'nvfp4', 'fp8', 'fp4', 'bnb', 'exl2', 'quantized?', 'quants?']);
+// A Hugging Face repo path pasted as a link title: "org/Model-Name · Hugging Face".
+const HF_REPO_TITLE_RE = /^[\w.-]+\/[\w.-]+(?:\s*[·|-]\s*Hugging Face)?$/u;
+
 // A model release needs a launch verb AND a model name:
 //  - verb in the title with a model name in title or summary, or
 //  - a model name in the title with a verb in the summary, or
 //  - "model" + a version token in a title that has a verb.
+// Phase 2 adds lab brands (Muse, Timestral, Jais ...), parameter counts (74B-A9B), repo-path
+// titles, "open-weight"/"frontier model" phrasing and names at the very start of a title.
 export function isModelRelease(title, summary = '') {
   const verbInTitle = LAUNCH_RE.test(title);
   const nameInTitle = MODEL_NAME_RE.test(title) || O_SERIES_RE.test(title);
   const nameInSummary = MODEL_NAME_RE.test(summary) || O_SERIES_RE.test(summary);
+  const brandInTitle = BRAND_RE.test(title);
+  const sizeInTitle = SIZE_RE.test(title);
+  if (HF_REPO_TITLE_RE.test(title.trim()) && QUANT_TITLE_RE.test(title)) return false; // someone's quantisation, not the release
+  if (/\?\s*$/.test(title)) return false; // "137B model from Microsoft?" is a rumour or a question, not an announcement
+  if (RETROSPECTIVE_RE.test(title)) return false;
+  if ((title.match(/\p{Extended_Pictographic}/gu) || []).length >= 2) return false; // newsletter digest line ("Muse Wonder ✨, Maia 300 ⚡")
   if (verbInTitle && (nameInTitle || nameInSummary)) return true;
   if (nameInTitle && LAUNCH_RE.test(summary)) return true;
   if (verbInTitle && /(?<![\p{L}\p{N}])model(?![\p{L}\p{N}])/iu.test(title) && VERSION_TOKEN_RE.test(title)) return true;
+  if (verbInTitle && brandInTitle) return true;
+  if (verbInTitle && sizeInTitle && MODEL_WORD_RE.test(`${title} ${summary}`)) return true;
+  if ((nameInTitle || brandInTitle) && OPEN_MODEL_RE.test(title)) return true;
+  if (HF_REPO_TITLE_RE.test(title.trim()) && (brandInTitle || sizeInTitle || nameInTitle)) return true;
+  if (/(?<![\p{L}\p{N}])new(?![\p{L}\p{N}])/iu.test(title) && (brandInTitle || sizeInTitle)) return true;
+  const sm = BRAND_RE.exec(title) || SIZE_RE.exec(title);
+  if (sm && sm.index <= 3) return true;
   return false;
 }
 
 // "Gemini 4 Argon: Built to ..." on a company's own blog is the announcement.
 function startsWithModel(title) {
-  const m = MODEL_NAME_RE.exec(title);
+  const m = MODEL_NAME_RE.exec(title) || BRAND_RE.exec(title);
   return !!m && m.index <= 3;
 }
 
 // item: { title, summary, extra? }, source: config entry. Returns tag fields.
 export function tagItem(item, source = {}) {
-  const title = String(item.title || '').normalize('NFKC');
-  const summary = String(item.summary || '').normalize('NFKC');
+  // NFKC keeps U+2011 (non-breaking hyphen) as U+2010: fold every dash-like hyphen to "-" so "GPT‑6" matches.
+  const fold = s => String(s || '').normalize('NFKC').replace(/[‐-―−]/g, '-');
+  const title = fold(item.title);
+  const summary = fold(item.summary);
   const original = `${title} ${summary}`;
   const text = original.toLowerCase();
   const score = new Map();
@@ -88,6 +118,7 @@ export function tagItem(item, source = {}) {
   if (isRepoTool) kind = 'tool';
   else if (matched.has('model-release') && score.get('model-release') >= 3) kind = 'model-release';
   else if (SECURITY_RE.test(text) && matched.has('safety')) kind = 'security';
+  else if (OPINION_RE.test(title) && !isRepoTool) kind = 'opinion';
   else if (matched.has('policy') && score.get('policy') >= 2 && prior.kind !== 'model-release') kind = 'policy';
   else if (matched.has('funding') && FUNDING_STRONG_RE.test(original)) kind = 'funding';
   else if (matched.has('research') && (prior.kind === 'paper' || source.sourceKind === 'research' || /arxiv|paper|preprint|we propose/.test(text))) kind = 'paper';

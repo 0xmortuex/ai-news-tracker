@@ -6,6 +6,7 @@
 // Clusters are connected components (union-find). The representative is stable:
 // a previously published representative wins, then lowest tier number, then earliest.
 
+import { BRAND_RE } from './taxonomy.mjs';
 import { sha1, titleTokens, keyTokens, simhash, hamming, jaccard, domainOf } from './normalize.mjs';
 
 const WINDOW_MS = 72 * 3600 * 1000;
@@ -19,6 +20,33 @@ class UnionFind {
   union(a, b) { const ra = this.find(a); const rb = this.find(b); if (ra !== rb) this.p[Math.max(ra, rb)] = Math.min(ra, rb); }
 }
 
+// A model name that identifies one release on its own: it has a number, or it is a lab brand
+// ("Muse Wonder", "Timestral"). Bare "Gemini" style names are not specific.
+function isSpecific(name) { return /\d/.test(name) || BRAND_RE.test(name); }
+
+// Phase 2: brand names count (not only numbered ones), case-insensitively, and a brand family
+// name ("Timestral") is the same story as its sized repos ("Timestral-123M").
+export function sharesSpecificModel(ma, mb) {
+  const A = ma.filter(isSpecific).map(m => m.toLowerCase());
+  const B = mb.filter(isSpecific).map(m => m.toLowerCase());
+  for (const x of A) {
+    for (const y of B) {
+      if (x === y) return true;
+      const [s, l] = x.length <= y.length ? [x, y] : [y, x];
+      if (l.startsWith(`${s}-`) && BRAND_RE.test(s.charAt(0).toUpperCase() + s.slice(1))) return true;
+    }
+  }
+  return false;
+}
+
+// Titles about a side aspect of a model ("for Robotics", "in Diffusers", "safety") are their own
+// story even when they name the same model.
+const ASPECT_RE = /(?<![\p{L}\p{N}])(robotics|robots?|responsibly|safety|pricing|system card|model card|technical report|tutorial|review|diffusers|llama\.cpp|quantized|gguf|vs)(?![\p{L}\p{N}])/iu;
+export function aspectOf(title) {
+  const m = ASPECT_RE.exec(title);
+  return m ? m[1].toLowerCase() : '';
+}
+
 // Same-story test for two prepared items.
 export function sameStory(a, b) {
   if (a.canonicalUrl === b.canonicalUrl) return true;
@@ -28,8 +56,7 @@ export function sameStory(a, b) {
 
   // Event key: same model released (needs a numbered model name to avoid generic merges).
   if (a.kind === 'model-release' && b.kind === 'model-release' && a.models.length && b.models.length) {
-    const shared = a.models.find(m => /\d/.test(m) && b.models.includes(m));
-    if (shared) return true;
+    if (aspectOf(a.title) === aspectOf(b.title) && sharesSpecificModel(a.models, b.models)) return true;
   }
 
   const ka = a._keys; const kb = b._keys;
