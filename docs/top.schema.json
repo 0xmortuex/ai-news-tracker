@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://0xmortuex.github.io/ai-news-tracker/top.schema.json",
+  "title": "AI News Tracker top.json (ai-news-top/1)",
+  "description": "The top English stories of the last 24 h (72 h on a quiet day), at most 10, always under 20 KB. Made for small clients such as the Vex start page. Additive changes only within /1.",
+  "type": "object",
+  "required": ["schema", "schemaVersion", "generatedAt", "windowHours", "count", "stories"],
+  "properties": {
+    "schema": { "const": "ai-news-top/1" },
+    "schemaVersion": { "type": "integer", "minimum": 1 },
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "windowHours": { "type": "integer", "minimum": 1 },
+    "count": { "type": "integer", "minimum": 0 },
+    "site": { "type": "string", "format": "uri" },
+    "stories": {
+      "type": "array",
+      "maxItems": 10,
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "url", "source", "sourceCount", "score", "publishedAt"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^s-[0-9a-f]{8}$" },
+          "title": { "type": "string", "minLength": 1, "maxLength": 300 },
+          "url": { "type": "string", "format": "uri", "maxLength": 2000 },
+          "source": { "type": "string" },
+          "sourceCount": { "type": "integer", "minimum": 1 },
+          "score": { "type": "integer", "minimum": 0, "maximum": 100 },
+          "tags": { "type": "array", "items": { "type": "string" } },
+          "entities": { "type": "array", "maxItems": 3, "items": { "type": "string" } },
+          "publishedAt": { "type": "string", "format": "date-time" }
+        }
+      }
+    }
+  }
+}

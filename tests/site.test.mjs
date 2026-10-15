@@ -81,7 +81,9 @@ test('renders cards, tags, importance, also-in, freshness and stale note from ne
   const calls = [];
   const s = await boot({ fetchImpl: okFetch(calls) });
   assert.equal(s.run('dataMode'), 'live');
-  assert.deepEqual(calls, ['../data/news.json'], 'only the data file was fetched (no proxy)');
+  // news.json first; the optional Phase 3 siblings come from the same folder. Never a proxy.
+  assert.equal(calls[0], '../data/news.json');
+  assert.deepEqual(calls.slice(1).sort(), ['../data/entities.json', '../data/stories.json'], 'only data files were fetched (no proxy)');
   const cards = s.getEl('articles').innerHTML;
   assert.match(cards, /OpenAI unveils GPT-6/);
   assert.match(cards, /model-release/);

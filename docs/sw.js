@@ -21,7 +21,7 @@ var DATA_CACHE = "ai-news-data-" + VERSION;
 var SHELL_FILES = ["./", "index.html", "guides-lib.js", "manifest.webmanifest", "favicon.svg", "icons/icon-192.png", "icons/icon-512.png"];
 var DATA_HOST = "raw.githubusercontent.com";
 var DATA_PREFIX = "/0xmortuex/ai-news-tracker/data/";
-var DATA_FILE = /(^|\/)(news|releases|guides|digest(-daily|-weekly)?)\.json$/;
+var DATA_FILE = /(^|\/)(news|releases|guides|stories|entities|top|digest(-daily|-weekly)?)\.json$/;
 var SHELL_FILE = /\/(index\.html|guides-lib\.js|manifest\.webmanifest|favicon\.svg|icons\/[A-Za-z0-9_.-]+)$/;
 
 /** True for the published data files (the data branch or same-origin test copies). */

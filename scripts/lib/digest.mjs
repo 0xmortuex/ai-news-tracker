@@ -2,7 +2,10 @@
 // period ends at news.generatedAt, items are ranked by baseImportance (then newest, then id),
 // nothing reads the clock. English-language items only (the site does not language-filter).
 
+import { topStories, topEntry } from './stories.mjs';
+
 export const DIGEST_SCHEMA = 'ai-news-digest/1';
+export const TOP_N = 10;
 export const SECTIONS = [
   { id: 'model-release', title: 'Model releases' },
   { id: 'research', title: 'Research' },
@@ -56,7 +59,9 @@ function digestItem(it) {
 }
 
 // kind: 'daily' | 'weekly'
-export function buildDigest(news, kind) {
+// storiesDoc (optional, Phase 3): when given, the digest also carries `top`, the stories of the
+// period ordered by story score. Without it the output is byte-identical to Phase 2.
+export function buildDigest(news, kind, storiesDoc = null) {
   const cfg = PERIODS[kind];
   if (!cfg) throw new Error(`unknown digest kind ${kind}`);
   const endMs = Date.parse(news.generatedAt);
@@ -84,7 +89,7 @@ export function buildDigest(news, kind) {
   const kinds = {};
   for (const it of inPeriod) kinds[it.kind] = (kinds[it.kind] || 0) + 1;
   const iso = ms => new Date(ms).toISOString().replace(/\.\d{3}Z$/, 'Z');
-  return {
+  const out = {
     schema: DIGEST_SCHEMA,
     schemaVersion: 1,
     generatedAt: news.generatedAt,
@@ -95,6 +100,10 @@ export function buildDigest(news, kind) {
     sections,
     sources: [...used.values()].sort((a, b) => b.count - a.count || (a.id < b.id ? -1 : 1)),
   };
+  if (storiesDoc) {
+    out.top = topStories(storiesDoc, { hours: cfg.hours, limit: TOP_N }).map(s => topEntry(s));
+  }
+  return out;
 }
 
 export function renderDigestMarkdown(d) {
@@ -103,6 +112,15 @@ export function renderDigestMarkdown(d) {
   L.push(`# ${title}`);
   L.push('');
   L.push(`Period: ${d.period.start} to ${d.period.end} (UTC). ${d.total} stories from ${d.sources.length} sources. Generated ${d.generatedAt}.`);
+  if (Array.isArray(d.top) && d.top.length) {
+    L.push('');
+    L.push(`## ${d.period.kind === 'daily' ? 'Top today' : 'Top this week'}`);
+    L.push('');
+    for (const it of d.top) {
+      const n = it.sourceCount > 1 ? `, ${it.sourceCount} sources` : '';
+      L.push(`- [${it.title.replace(/([\[\]])/g, '\\$1')}](${it.url}) - ${it.source}, score ${it.score}${n}`);
+    }
+  }
   for (const s of d.sections) {
     if (!s.items.length) continue;
     L.push('');

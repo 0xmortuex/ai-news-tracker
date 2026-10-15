@@ -45,7 +45,8 @@ jobs:
       # sanity floor (min items / min healthy sources / >50% drop), so the step
       # below is skipped and the previous data stays published.
       # Besides news.json this writes releases.json, digest-daily.json, digest-weekly.json,
-      # digest.json (copy of the daily one), digest-daily.md, digest-weekly.md and status.json.
+      # digest.json (copy of the daily one), digest-daily.md, digest-weekly.md, status.json and (Phase 3)
+      # stories.json, entities.json, top.json and feed.rss.
       # Every file is schema-validated first; any failure refuses the whole run.
       # The weekly digest is regenerated once per UTC day (the script reuses today's file
       # on the other runs), so the 30 minute cadence does not churn it.

@@ -36,6 +36,27 @@
         }
       }
     },
+    "top": {
+      "type": "array",
+      "maxItems": 20,
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "url", "source", "sourceCount", "score"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^s-[0-9a-f]{8}$" },
+          "title": { "type": "string", "minLength": 1, "maxLength": 300 },
+          "url": { "type": "string", "format": "uri", "maxLength": 2000 },
+          "source": { "type": "string" },
+          "sourceCount": { "type": "integer", "minimum": 1 },
+          "score": { "type": "integer", "minimum": 0, "maximum": 100 },
+          "kind": { "type": "string" },
+          "tags": { "type": "array", "items": { "type": "string" } },
+          "entities": { "type": "array", "items": { "type": "string" } },
+          "publishedAt": { "type": "string", "format": "date-time" },
+          "firstSeenAt": { "type": "string", "format": "date-time" }
+        }
+      }
+    },
     "sources": {
       "type": "array",
       "items": {

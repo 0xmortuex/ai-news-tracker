@@ -12,7 +12,8 @@ config/sources.json --> scripts/ingest.mjs --> data/ (orphan `data` branch)
                          dedupe + cluster (canonical URL, title Jaccard + SimHash, model-event key)
                          tag (kind, labels, topics, companies, models) + score 0-100 + breaking
                          validate against docs/news.schema.json, sanity floor, then publish
-                         derive releases.json, digest-daily/weekly (.json/.md), status.json (each schema-validated)
+                         derive releases.json, digest-daily/weekly (.json/.md, with a story-ranked `top`), status.json,
+                         stories.json (events merged across sources), entities.json (7-day trend), top.json, feed.rss (each schema-validated)
 
 config/guide-sources.json --> scripts/guides.mjs --> data/guides.json   (HN, dev.to, GitHub, YouTube, Reddit, Bluesky)
 
@@ -23,7 +24,7 @@ raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/news.json  <-- docs/ind
 Published files (on the `data` branch): `news.json`, `index.json`, `feed.atom`,
 `feed.json`, `sources-health.json`, `releases.json`, `digest-daily.json`, `digest-weekly.json`,
 `digest.json` (copy of the daily one), `digest-daily.md`, `digest-weekly.md`, `guides.json`,
-`status.json`, `state.json` (internal). The contract is in
+`status.json`, `stories.json`, `entities.json`, `top.json` (< 20 KB, for the Vex start page), `feed.rss`, `state.json` (internal). The contract is in
 [`docs/CONTRACT.md`](docs/CONTRACT.md) and [`docs/news.schema.json`](docs/news.schema.json).
 
 ## Repository layout

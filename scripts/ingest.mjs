@@ -126,11 +126,16 @@ async function main() {
     ['digest-daily.json', derived.objects.daily, 'digest.schema.json'],
     ['digest-weekly.json', derived.objects.weekly, 'digest.schema.json'],
     ['status.json', derived.objects.status, 'status.schema.json'],
+    ['stories.json', derived.objects.stories, 'stories.schema.json'],
+    ['entities.json', derived.objects.entities, 'entities.schema.json'],
+    ['top.json', derived.objects.top, 'top.schema.json'],
   ];
   for (const [name, obj, schemaFile] of checks) {
     const e = validate(obj, await loadSchema(schemaFile));
     if (e.length) fail(`${name} failed validation:\n  ${e.slice(0, 10).join('\n  ')}`);
   }
+  if (Buffer.byteLength(derived.files['top.json']) >= 20000) fail('top.json is 20 KB or more');
+  console.log(`stories: ${derived.objects.stories.count} from ${derived.objects.stories.itemCount} items (${derived.objects.stories.merged} merged); entities ${derived.objects.entities.entities.length}; top ${derived.objects.top.count}`);
   console.log(`releases: ${derived.objects.releases.count}; digest daily ${derived.objects.daily.total} stories, weekly ${derived.objects.weekly.total}${derived.weeklyReused ? ' (reused: regenerated once per day)' : ''}; status providers ${derived.objects.status.providers.length}`);
 
   const newsText = JSON.stringify(news) + '\n';

@@ -191,3 +191,93 @@ newest first, max 15 incidents per provider. Status feeds (config category `stat
 "Welcome X", "open-weight" phrasing). Model names are now more specific (`Gemini 4 Argon` rather than
 `Gemini 4`), so `models[]` values may differ from earlier runs for the same story.
 Items from provider status feeds are excluded from `items`.
+
+---
+
+# Phase 3 files and fields
+
+Same rules as above: every file has `schema` + `schemaVersion` + `generatedAt`, is schema-validated before the
+job publishes, changes are additive within `/1`, consumers ignore unknown fields. Everything is rule-based and
+deterministic (no LLM, no network): the same `news.json` gives the same bytes.
+
+| File | Schema | Schema file | Notes |
+|---|---|---|---|
+| `stories.json` | `ai-news-stories/1` | [`stories.schema.json`](stories.schema.json) | one entry per story (news items about the same event merged), with `sourceCount`, first-seen time, entities, tags, score |
+| `entities.json` | `ai-news-entities/1` | [`entities.schema.json`](entities.schema.json) | entity and tag counts over the last 7 UTC days with a per-day trend |
+| `top.json` | `ai-news-top/1` | [`top.schema.json`](top.schema.json) | at most 10 top stories, always < 20 KB (the builder trims to 18 KB); for the Vex start page |
+| `feed.rss` | RSS 2.0 | n/a | top 30 stories of the last 72 h by score, one `<item>` per story, `guid` = story id |
+
+## Additive fields on `news.json` items (still `ai-news/1`)
+
+| Field | Type | Meaning |
+|---|---|---|
+| `entities` | string[] (max 16) | canonical names of companies, models and products found: `OpenAI`, `GPT-6`, `Claude Code`, `Cursor` ... |
+| `tags` | string[] | subset of `release`, `pricing`, `safety`, `research`, `policy`, `tooling` |
+
+Items from older files simply lack both fields; the Phase 3 builders recompute them from `title`, `summary`, `kind`,
+`labels` and `companies`/`models`, so old `news.json` files still produce stories.
+
+## `stories.json`
+
+```
+{ schema, schemaVersion, generatedAt, itemCount, count, merged, stories: [ story ] }
+```
+
+A `news.json` item is already one cluster (same canonical URL, near-identical title or same model release). A story is
+one level above: clusters are merged when all of these hold (see `scripts/lib/stories.mjs`):
+
+- same `lang`, `publishedAt` within 48 h, same aspect word (`pricing`, `safety`, `tutorial` ... never merge with a different one)
+- version / variant tokens agree (`Gemini 3 Pro` never merges with `Gemini 3 Flash`; `$40B` never with `$300B`)
+- they share an entity: a model or product (title token Jaccard >= 0.25), or only a company (>= 0.4 for the same `kind`, else >= 0.5)
+
+| Field | Meaning |
+|---|---|
+| `id` | `s-` + 8 hex of the earliest member's item id; stable while the story only grows |
+| `title`, `url`, `source`, `sourceId`, `lang`, `country`, `kind`, `summary`, `publishedAt` | the primary item: best source tier, then highest `baseImportance`, then earliest |
+| `firstPublishedAt`, `lastPublishedAt` | earliest / latest `publishedAt` over every member and every folded duplicate (`alsoIn`) |
+| `firstSeenAt` | earliest `firstSeenAt` of the member items |
+| `sourceCount` | distinct sources over members and `alsoIn` (by `sourceId`, else by name) |
+| `sources` | up to 12 `{source, sourceId?, url, publishedAt?}`, earliest first |
+| `itemIds`, `clusters` | the `news.json` item ids / cluster ids in the story (max 20) |
+| `companies`, `models`, `products`, `entities`, `tags`, `topics` | union over members; `entities` is the three typed lists, de-duplicated |
+| `score`, `baseScore`, `scoreParts` | story importance, see below |
+| `breaking`, `thirdParty` | any member breaking / primary is a community scrape |
+
+## Story score (0-100)
+
+`raw = sources + weight + tags + signal + engagement`, `score = round(raw * recency)`.
+
+| Part | Points |
+|---|---|
+| `sources` | 10 per extra distinct source, cap 30 |
+| `weight` | best source tier in the story: T1 20, T2 12, T3 6, T4 2 |
+| `tags` | release 15, pricing 10, safety 10, policy 8, research 3, tooling 3; cap 25 |
+| `signal` | `0.2 * max(baseImportance)` of the members (keywords, primary-source boost, HN/HF/Reddit engagement already scored per item), 0-20 |
+| `engagement` | `min(5, best engagement / 60)` |
+| `recency` | `0.3 + 0.7 * 0.5^(hoursSinceLastPublished / 24)` |
+
+Ranking everywhere ("Top today", `top.json`, `feed.rss`): score, then `sourceCount`, then newest, then id.
+
+## `entities.json`
+
+`{ schema, schemaVersion, generatedAt, windowDays: 7, days: [7 x "YYYY-MM-DD", oldest first], entities: [...], tags: [...] }`
+
+Stories are counted on the UTC day of `firstPublishedAt`. Entity: `{ name, type: company|model|product, count, trend: [7 ints],
+today, prevAvg (mean of the 6 earlier days), rising (today >= 2 and > 1.5 x prevAvg), lastSeenAt, topTags }`, sorted by
+`count`, at most 200. Tag: `{ tag, count, trend }` for each of the six tags.
+
+## `digest-daily.json` / `digest-weekly.json`: `top`
+
+An additive `top` array (max 10): the stories updated inside the period, best score first, English only:
+`{ id, title, url, source, sourceCount, score, kind, tags, entities, publishedAt, firstSeenAt }`. The Markdown digests
+get a "Top today" / "Top this week" section. A Phase 2 weekly digest without `top` is not reused: it is regenerated.
+
+## `top.json`
+
+`{ schema, schemaVersion, generatedAt, windowHours: 24 (72 when fewer than 3 stories in 24 h), count, site, stories: [ { id, title, url, source, sourceCount, score, tags, entities (max 3), publishedAt } ] }`
+
+## Watchlist (site only)
+
+The site stores the watchlist in `localStorage` under `ai-news-watch-v1` as `{ entities: [...], topics: [...] }`
+(max 50 names). Nothing is sent anywhere. A story matches when it names a watched entity or carries a watched
+tag/topic; matching cards are highlighted and the "watched only" filter (`#/news?watch=only`) hides the rest.

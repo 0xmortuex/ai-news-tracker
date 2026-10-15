@@ -40,6 +40,8 @@
         "models": { "type": "array", "items": { "type": "string" } },
         "topics": { "type": "array", "items": { "type": "string" } },
         "labels": { "type": "array", "items": { "type": "string" } },
+        "entities": { "type": "array", "items": { "type": "string" } },
+        "tags": { "type": "array", "items": { "enum": ["release", "pricing", "safety", "research", "policy", "tooling"] } },
         "summary": { "type": "string", "maxLength": 280 },
         "alsoIn": { "type": "array", "items": { "$ref": "#/$defs/alsoIn" } },
         "breaking": { "type": "boolean" },

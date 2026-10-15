@@ -6,6 +6,7 @@ import { clusterItems } from './cluster.mjs';
 import { scoreItem, isBreaking } from './score.mjs';
 import { domainOf } from './normalize.mjs';
 import { escapeXml } from './text.mjs';
+import { entityNames, tagsFor } from './entities.mjs';
 
 export const SCHEMA = 'ai-news/1';
 export const MAX_ITEMS = 600;
@@ -89,6 +90,9 @@ export function buildNews(pool, sources, opts) {
       models,
       topics: rep.topics,
       labels: rep.labels,
+      // Phase 3 (additive): entity names (companies, models, products) and topic tags.
+      entities: entityNames({ title: rep.title, summary: rep.summary, companies, models, kind: rep.kind, labels: rep.labels, sourceKind: src.sourceKind }),
+      tags: tagsFor({ title: rep.title, summary: rep.summary, models, kind: rep.kind, labels: rep.labels, sourceKind: src.sourceKind }),
       summary: rep.summary,
       alsoIn: others
         .sort((a, b) => (a.publishedAt < b.publishedAt ? -1 : a.publishedAt > b.publishedAt ? 1 : a.id < b.id ? -1 : 1))

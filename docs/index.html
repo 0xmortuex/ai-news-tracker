@@ -390,6 +390,13 @@
   .tag-pill { font-family: var(--mono); font-size: 10px; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border-strong); color: var(--text-dim); }
   .tag-pill.kind { color: var(--accent); border-color: var(--accent-dim); }
   .tag-pill.company { color: var(--us); }
+  .tag-pill.topic-tag { color: var(--ok); border-color: var(--ok); }
+  .tag-pill.sources { color: var(--accent); border-color: var(--accent-dim); font-weight: 600; }
+  .tag-pill.watching { color: var(--on-accent); background: var(--accent); border-color: var(--accent); font-weight: 600; }
+  button.tag-pill { background: transparent; cursor: pointer; font-family: var(--mono); }
+  button.tag-pill:hover, button.tag-pill[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); }
+  .article.watched { border-left: 3px solid var(--accent); }
+  .digest-top li .score { font-family: var(--mono); font-size: 11px; color: var(--accent); margin-left: 6px; }
   .tag-pill.open-yes { color: var(--ok); border-color: var(--ok); }
   .tag-pill.open-no { color: var(--text-dim); }
   .imp { font-family: var(--mono); font-size: 10px; padding: 2px 7px; border: 1px solid var(--control-border); border-radius: 2px; color: var(--text-dim); }
@@ -534,6 +541,20 @@
         <option value="40">40+ (normal and up)</option>
         <option value="70">70+ (top stories)</option>
       </select>
+    </div>
+
+    <div class="filter-group">
+      <span class="filter-label" id="watch-label">Watchlist</span>
+      <form class="mute-add" id="watch-form" aria-labelledby="watch-label">
+        <input class="search" id="watch-input" list="watch-options" placeholder="company, model, topic…" type="text" maxlength="60" autocomplete="off" aria-label="Company, model or topic to watch">
+        <button type="submit">watch</button>
+      </form>
+      <datalist id="watch-options"></datalist>
+      <div class="mute-list" id="watch-list"></div>
+      <div id="filter-watch" role="group" aria-label="Watchlist filter" style="margin-top:6px">
+        <button type="button" class="chip active" data-f="watch" data-v="all" aria-pressed="true">all stories</button>
+        <button type="button" class="chip" data-f="watch" data-v="only" aria-pressed="false" id="chip-watch-only">watched only</button>
+      </div>
     </div>
 
     <div class="filter-group">
@@ -730,6 +751,9 @@ const MUTE_KEY    = "ai-news-mute-v1";       // { sources:[], companies:[], keyw
 const LANG_KEY    = "ai-news-langs-v1";      // ["en", ...]
 const THEME_KEY   = "ai-news-theme-v1";      // "light" | "dark" (absent = follow the system)
 const PRESET_KEY  = "ai-news-presets-v1";    // [{ name, state }]
+const WATCH_KEY   = "ai-news-watch-v1";      // { entities:[], topics:[] }; localStorage only, never sent anywhere
+const MAX_WATCH   = 50;
+const KNOWN_TAGS  = ["release", "pricing", "safety", "research", "policy", "tooling"];
 const NEWS_POLL_MS = 5 * 60 * 1000;
 const PAGE_SIZE = 60;                        // cards rendered per page
 const SEARCH_DEBOUNCE_MS = 180;
@@ -842,6 +866,7 @@ function filtersToParams(f, langs) {
   if (f.type !== "all") p.set("type", f.type);
   if (f.read !== "unread") p.set("read", f.read);
   if (f.view !== "feed") p.set("view", f.view);
+  if (f.watch === "only") p.set("watch", "only");
   const l = LANG_CHOICES.filter(x => langs.includes(x));
   if (l.join(",") !== DEFAULT_LANGS.join(",")) p.set("lang", l.join(","));
   return p;
@@ -859,6 +884,7 @@ function paramsToFilters(p, base) {
   const type = str("type", 20); if (["COMPANY", "NEWS", "RESEARCH", "COMMUNITY", "NEWSLETTER", "REPO"].includes(type)) f.type = type;
   const read = str("read", 10); if (read === "all" || read === "unread") f.read = read;
   const view = str("view", 10); if (view === "top" || view === "feed") f.view = view;
+  const watchP = str("watch", 10); if (watchP === "only" || watchP === "all") f.watch = watchP;
   let langs = null;
   if (p.has("lang")) {
     langs = String(p.get("lang")).split(",").filter(x => LANG_CHOICES.includes(x));
@@ -875,9 +901,20 @@ function hashFor(route, params) {
 function mdEscape(s) { return String(s == null ? "" : s).replace(/([\\`*_{}\[\]<>#|])/g, "\\$1").replace(/\s+/g, " ").trim(); }
 function digestToMarkdown(d) {
   const kind = d.period && d.period.kind ? d.period.kind : "digest";
-  const from = d.period && d.period.from ? String(d.period.from).slice(0, 10) : "";
-  const to = d.period && d.period.to ? String(d.period.to).slice(0, 10) : "";
+  const p = d.period || {};
+  const from = p.from || p.start ? String(p.from || p.start).slice(0, 10) : "";
+  const to = p.to || p.end ? String(p.to || p.end).slice(0, 10) : "";
   const lines = ["# AI news " + kind + " digest" + (from || to ? " (" + from + (to && to !== from ? " to " + to : "") + ")" : ""), ""];
+  if (Array.isArray(d.top) && d.top.length) {
+    lines.push("## " + (kind === "weekly" ? "Top this week" : "Top today"), "");
+    for (const it of d.top) {
+      const url = safeUrl(it.url);
+      const title = mdEscape(it.title);
+      const n = it.sourceCount > 1 ? ", " + it.sourceCount + " sources" : "";
+      lines.push("- " + (url === "#" ? title : "[" + title + "](" + url.replace(/\)/g, "%29") + ")") + " - " + mdEscape(it.source) + n);
+    }
+    lines.push("");
+  }
   for (const sec of d.sections || []) {
     lines.push("## " + mdEscape(sec.title || sec.topic || "Other"), "");
     for (const it of sec.items || []) {
@@ -897,7 +934,10 @@ function digestToMarkdown(d) {
 let articles = loadJSON(STORAGE_KEY, []);
 let readSet  = new Set(loadJSON(READ_KEY, []));
 let meta     = loadJSON(META_KEY, { lastFetch: null, sourceStatus: {} });
-let filters  = { country: "all", type: "all", read: "unread", q: "", kind: "all", topic: "all", company: "all", minImp: 0, view: "feed" };
+let filters  = { country: "all", type: "all", read: "unread", q: "", kind: "all", topic: "all", company: "all", minImp: 0, view: "feed", watch: "all" };
+let storiesDoc = null;                       // stories.json (optional; the page works from news.json alone)
+let entitiesDoc = null;                      // entities.json (optional; only feeds the watchlist suggestions)
+let watch = loadWatch();
 let dataMode = "loading";                    // loading | live | cache | legacy | error
 let newsDoc = null;                          // last parsed news.json
 let offlineAt = null;                        // set when the service worker served a stored copy
@@ -1055,6 +1095,45 @@ function updateSourceStatusUI() {
 // =========================================================================
 // NEWS: filtering, cards, pagination
 // =========================================================================
+// ---- Watchlist (entities and topics; localStorage only) --------------------
+function loadWatch() {
+  const v = loadJSON(WATCH_KEY, null);
+  const clean = list => (Array.isArray(list) ? list : [])
+    .filter(x => typeof x === "string" && x.trim() && x.length <= 60).map(x => x.trim()).slice(0, MAX_WATCH);
+  return v && typeof v === "object" ? { entities: clean(v.entities), topics: clean(v.topics) } : { entities: [], topics: [] };
+}
+function saveWatch() { saveJSON(WATCH_KEY, watch); }
+function watchHas(kind, name) {
+  const l = String(name).toLowerCase();
+  return (kind === "topics" ? watch.topics : watch.entities).some(x => x.toLowerCase() === l);
+}
+// A name typed or clicked is a topic when it is a known tag or topic, otherwise an entity.
+function watchKindFor(name) {
+  const l = String(name).toLowerCase();
+  if (KNOWN_TAGS.includes(l)) return "topics";
+  if (articles.some(a => (a.topics || []).includes(l))) return "topics";
+  return "entities";
+}
+function watchToggle(kind, name) {
+  name = String(name || "").trim().slice(0, 60);
+  if (!name) return false;
+  const k = kind === "topics" ? "topics" : "entities";
+  const l = name.toLowerCase();
+  const had = watchHas(k, name);
+  if (had) watch[k] = watch[k].filter(x => x.toLowerCase() !== l);
+  else if (watch.entities.length + watch.topics.length >= MAX_WATCH) { toast("At most " + MAX_WATCH + " watched items. Remove one first.", true); return false; }
+  else watch[k].push(name);
+  saveWatch();
+  return !had;
+}
+// True when the story names a watched entity or carries a watched topic / tag.
+function isWatched(a) {
+  if (!watch.entities.length && !watch.topics.length) return false;
+  const ents = new Set([...(a.entities || []), ...(a.companies || []), ...(a.models || [])].map(x => String(x).toLowerCase()));
+  if (watch.entities.some(x => ents.has(x.toLowerCase()))) return true;
+  const tops = new Set([...(a.tags || []), ...(a.topics || [])].map(x => String(x).toLowerCase()));
+  return watch.topics.some(x => tops.has(x.toLowerCase()));
+}
 function isMuted(a) {
   if (mute.sources.includes(a.sourceId)) return true;
   if ((a.companies || []).some(c => mute.companies.includes(c))) return true;
@@ -1067,12 +1146,13 @@ function isMuted(a) {
 function haystack(a) {
   if (a._hay === undefined) {
     a._hay = [a.title, a.summary, a.source, a.kind, (a.companies || []).join(" "), (a.models || []).join(" "),
-      (a.topics || []).join(" "), (a.labels || []).join(" ")].join(" \n ").toLowerCase();
+      (a.topics || []).join(" "), (a.labels || []).join(" "), (a.entities || []).join(" "), (a.tags || []).join(" ")].join(" \n ").toLowerCase();
   }
   return a._hay;
 }
 // Everything except the view mode: used by the feed, the top list and the breaking strip.
 function baseMatch(a, opts) {
+  if (a._merged) return false;   // folded into the primary item of its story (stories.json)
   if (isMuted(a)) return false;
   if (!langs.includes(langBucket(a.lang))) return false;
   if (opts && opts.skipFilters) return true;
@@ -1082,6 +1162,7 @@ function baseMatch(a, opts) {
   if (filters.topic   !== "all" && !(a.topics || []).includes(filters.topic)) return false;
   if (filters.company !== "all" && !(a.companies || []).includes(filters.company)) return false;
   if (filters.minImp > 0 && (a.importance || 0) < filters.minImp) return false;
+  if (filters.watch === "only" && !isWatched(a)) return false;
   if (filters.read === "unread" && readSet.has(articleId(a))) return false;
   if (filters.q) {
     const h = haystack(a);
@@ -1107,18 +1188,26 @@ function cardHtml(a, terms) {
   const impCls = imp === null ? "" : imp >= 70 ? "top" : imp >= 40 ? "hi" : "";
   const pills = [];
   if (a.kind && a.kind !== "other") pills.push(`<span class="tag-pill kind">${escapeHTML(a.kind)}</span>`);
-  for (const c of (a.companies || []).slice(0, 3)) pills.push(`<span class="tag-pill company">${highlight(c, terms)}</span>`);
-  for (const m of (a.models || []).slice(0, 2)) pills.push(`<span class="tag-pill">${highlight(m, terms)}</span>`);
-  for (const t of (a.topics || []).slice(0, 4)) pills.push(`<span class="tag-pill">#${highlight(t, terms)}</span>`);
+  // Company, model and tag pills are buttons: they add / remove the name on the watchlist.
+  const watchPill = (kind, name, cls, text) => `<button type="button" class="tag-pill ${cls}" data-watch="${escapeHTML(name)}" data-watch-kind="${kind}" aria-pressed="${watchHas(kind, name)}" title="${watchHas(kind, name) ? "Stop watching" : "Watch"} ${escapeHTML(name)}">${text}</button>`;
+  for (const c of (a.companies || []).slice(0, 3)) pills.push(watchPill("entities", c, "company", highlight(c, terms)));
+  for (const m of (a.models || []).slice(0, 2)) pills.push(watchPill("entities", m, "", highlight(m, terms)));
+  for (const t of (a.tags || [])) pills.push(watchPill("topics", t, "topic-tag", "#" + highlight(t, terms)));
+  for (const t of (a.topics || []).slice(0, 4)) if (!(a.tags || []).includes(t)) pills.push(`<span class="tag-pill">#${highlight(t, terms)}</span>`);
+  const watched = isWatched(a);
+  const nSrc = a.sourceCount || 1;
+  const srcPill = nSrc > 1 ? `<span class="tag-pill sources" title="${nSrc} sources cover this story">${nSrc} sources</span>` : "";
   const also = (a.alsoIn || []).length
     ? `<div class="also-in">also in: ${a.alsoIn.slice(0, 6).map(x => `<a href="${escapeHTML(safeUrl(x.url))}" target="_blank" rel="noopener noreferrer">${escapeHTML(x.source)}</a>`).join(" · ")}${a.alsoIn.length > 6 ? ` · +${a.alsoIn.length - 6}` : ""}</div>`
     : "";
   const cn = ["US", "CN", "EU", "OTHER"].includes(a.country) ? a.country : "OTHER";
   const langPill = langBucket(a.lang) !== "en" ? `<span class="tag-pill">${escapeHTML(String(a.lang || "").toUpperCase())}</span>` : "";
   return `
-    <div role="listitem"><article class="article ${isRead ? 'read' : ''}" data-c="${cn}">
+    <div role="listitem"><article class="article ${isRead ? 'read' : ''}${watched ? ' watched' : ''}" data-c="${cn}">
       <div class="article-meta">
         <span class="country-pill ${cn}">${cn === "OTHER" ? "GLOBAL" : cn}</span>
+        ${watched ? `<span class="tag-pill watching" title="Matches your watchlist">watching</span>` : ""}
+        ${srcPill}
         <span class="source-name">${highlight(a.source, terms)}</span>
         <span>${escapeHTML(relTime(new Date(a.date)))}</span>
         ${langPill}
@@ -1164,7 +1253,8 @@ function render(opts) {
   if (visible.length > shown.length) {
     document.getElementById("news-more").textContent = `Show more (${visible.length - shown.length})`;
   }
-  document.getElementById("visible-count").textContent = `${visible.length} of ${articles.length}`;
+  document.getElementById("visible-count").textContent = `${visible.length} of ${articles.filter(a => !a._merged).length}`;
+  renderWatch();
   renderBreaking();
   updateStats();
   updateSourceStatusUI();
@@ -1181,8 +1271,9 @@ function renderBreaking() {
 }
 
 function updateStats() {
-  const unread = articles.filter(a => !readSet.has(articleId(a))).length;
-  document.getElementById("stat-articles").textContent = `${unread}/${articles.length}`;
+  const live = articles.filter(a => !a._merged);
+  const unread = live.filter(a => !readSet.has(articleId(a))).length;
+  document.getElementById("stat-articles").textContent = `${unread}/${live.length}`;
   const gen = dataMode !== "legacy" && newsDoc ? newsDoc.generatedAt : meta.lastFetch;
   const el = document.getElementById("stat-updated");
   if (gen) el.textContent = "updated " + relTime(new Date(gen));
@@ -1263,16 +1354,71 @@ function newsToArticles(doc) {
     models: it.models || [],
     topics: it.topics || [],
     labels: it.labels || [],
+    entities: Array.isArray(it.entities) ? it.entities : [],
+    tags: Array.isArray(it.tags) ? it.tags : [],
     alsoIn: it.alsoIn || [],
+    sourceCount: countSources(it),
     breaking: !!it.breaking,
     thirdParty: !!it.thirdParty,
   }));
+}
+
+// Distinct sources in one news.json item (itself plus its folded duplicates).
+function countSources(it) {
+  const seen = new Set([it.sourceId || it.source]);
+  for (const x of it.alsoIn || []) seen.add(x.sourceId || x.source);
+  seen.delete(undefined);
+  return Math.max(1, seen.size);
+}
+
+// ---- stories.json (optional): one card per story, with the N-sources count ----
+function validStories(d) { return d && d.schema === "ai-news-stories/1" && Array.isArray(d.stories); }
+function validEntities(d) { return d && d.schema === "ai-news-entities/1" && Array.isArray(d.entities); }
+
+// Fold every item that stories.json merged into the primary item of its story.
+// Unknown ids are ignored, so a stories.json that is a little older or newer than news.json is harmless.
+function applyStories(doc) {
+  storiesDoc = doc;
+  const byId = new Map(articles.map(a => [a.id, a]));
+  for (const a of articles) { a._merged = false; delete a._hay; }
+  for (const s of doc.stories) {
+    const members = (s.itemIds || []).map(id => byId.get(id)).filter(Boolean);
+    if (!members.length) continue;
+    const primary = members.find(a => a.url === s.url) || members[0];
+    for (const m of members) if (m !== primary) m._merged = true;
+    primary.storyId = s.id;
+    primary.sourceCount = Math.max(1, Number(s.sourceCount) || 1);
+    primary.score = Number.isFinite(s.score) ? s.score : null;
+    primary.tags = Array.isArray(s.tags) ? s.tags : primary.tags;
+    primary.entities = Array.isArray(s.entities) ? s.entities : primary.entities;
+    // "also in" lists every other source of the story, not only the folded duplicates of one item.
+    const others = (s.sources || []).filter(x => x.url !== primary.url && (x.sourceId || x.source) !== (primary.sourceId || primary.source));
+    if (others.length) primary.alsoIn = others.map(x => ({ source: x.source, sourceId: x.sourceId, url: x.url, publishedAt: x.publishedAt }));
+  }
+}
+
+async function loadStories() {
+  try {
+    const r = await fetchDataFile(dataFileUrl("stories.json"), validStories, "stories.json");
+    applyStories(r.doc);
+    render();
+  } catch (e) {
+    if (!e.missing) console.warn("[stories] not applied:", e.message);
+  }
+  try {
+    const r = await fetchDataFile(dataFileUrl("entities.json"), validEntities, "entities.json");
+    entitiesDoc = r.doc;
+    renderWatch();
+  } catch (e) {
+    if (!e.missing) console.warn("[entities] not loaded:", e.message);
+  }
 }
 
 function applyNews(doc, mode) {
   newsDoc = doc;
   dataMode = mode;
   articles = newsToArticles(doc);
+  if (storiesDoc) applyStories(storiesDoc);   // keep the grouping while a fresh stories.json is fetched
   const companies = [...new Set(articles.flatMap(a => a.companies))].sort();
   const topics = [...new Set(articles.flatMap(a => a.topics))].sort();
   fillSelect("f-company", companies, "all companies", filters.company);
@@ -1313,8 +1459,10 @@ async function refreshNews(manual) {
     offlineAt = off;
     if (off) {
       applyNews(doc, "cache");
+      loadStories();
     } else {
       applyNews(doc, "live");
+      loadStories();
       try { localStorage.setItem(NEWS_CACHE_KEY, JSON.stringify(doc)); } catch (e) { console.warn("[news] cache not stored:", e.message); }
       if (manual) toast(`${doc.items.length} stories · updated ${relTime(new Date(doc.generatedAt))}`);
     }
@@ -1396,7 +1544,31 @@ function saveMute() { saveJSON(MUTE_KEY, mute); renderMuteList(); filtersChanged
 
 function currentState() {
   return { q: filters.q, kind: filters.kind, topic: filters.topic, company: filters.company, minImp: filters.minImp,
-    country: filters.country, type: filters.type, read: filters.read, view: filters.view, langs: langs.slice() };
+    country: filters.country, type: filters.type, read: filters.read, view: filters.view, watch: filters.watch, langs: langs.slice() };
+}
+
+// ---- Watchlist panel -----------------------------------------------------------
+function renderWatch() {
+  const list = document.getElementById("watch-list");
+  if (!list) return;
+  const chips = [];
+  watch.entities.forEach(v => chips.push({ k: "entities", v, label: v }));
+  watch.topics.forEach(v => chips.push({ k: "topics", v, label: "#" + v }));
+  list.innerHTML = chips.length
+    ? chips.map(c => `<span class="chip">${escapeHTML(c.label)}<button type="button" data-unwatch="${c.k}" data-v="${escapeHTML(c.v)}" aria-label="Stop watching ${escapeHTML(c.v)}">×</button></span>`).join("")
+    : `<span class="chip">nothing watched</span>`;
+  const only = document.getElementById("chip-watch-only");
+  if (only) {
+    const n = articles.filter(a => !a._merged && isWatched(a)).length;
+    only.textContent = n ? `watched only (${n})` : "watched only";
+  }
+  const dl = document.getElementById("watch-options");
+  if (dl) {
+    const names = new Set(KNOWN_TAGS);
+    if (entitiesDoc) for (const e of entitiesDoc.entities.slice(0, 120)) names.add(e.name);
+    for (const a of articles) { for (const e of a.entities || []) names.add(e); for (const c of a.companies || []) names.add(c); }
+    dl.innerHTML = [...names].sort((x, y) => x.localeCompare(y)).slice(0, 300).map(n => `<option value="${escapeHTML(n)}"></option>`).join("");
+  }
 }
 function renderPresets() {
   const el = document.getElementById("preset-list");
@@ -1425,6 +1597,7 @@ function applyPreset(i) {
     q: String(s.q || ""), kind: s.kind || "all", topic: s.topic || "all", company: s.company || "all",
     minImp: Number(s.minImp) || 0, country: s.country || "all", type: s.type || "all",
     read: s.read === "all" ? "all" : "unread", view: s.view === "top" ? "top" : "feed",
+    watch: s.watch === "only" ? "only" : "all",
   });
   const l = Array.isArray(s.langs) ? s.langs.filter(x => LANG_CHOICES.includes(x)) : [];
   langs = l.length ? l : DEFAULT_LANGS.slice();
@@ -1619,12 +1792,23 @@ function renderDigest() {
   }
   const d = digest.docs[digest.kind];
   const stats = d.stats || {};
-  count.textContent = `${stats.items ?? "?"} items · ${stats.sources ?? "?"} sources`;
+  // The published digests (ai-news-digest/1) carry `total` and `sources[]`; `stats` is the older shape.
+  count.textContent = `${stats.items ?? d.total ?? "?"} items · ${stats.sources ?? (Array.isArray(d.sources) ? d.sources.length : "?")} sources`;
   banner.innerHTML = digest.offlineAt ? `<div class="note warn"><strong>${escapeHTML(offlineLabel(digest.offlineAt))}.</strong></div>` : "";
-  const from = d.period.from ? String(d.period.from).slice(0, 10) : "", to = d.period.to ? String(d.period.to).slice(0, 10) : "";
+  const fromRaw = d.period.from || d.period.start, toRaw = d.period.to || d.period.end;
+  const from = fromRaw ? String(fromRaw).slice(0, 10) : "", to = toRaw ? String(toRaw).slice(0, 10) : "";
   const head = `<p class="data-banner">${escapeHTML(d.period.kind)} digest · ${escapeHTML(from)}${to && to !== from ? " to " + escapeHTML(to) : ""}</p>`;
-  if (!d.sections.length) { body.innerHTML = head + `<div class="empty"><div class="big">quiet period.</div></div>`; return; }
-  body.innerHTML = head + d.sections.map(sec => `
+  const topList = Array.isArray(d.top) && d.top.length ? `
+    <section class="digest-section digest-top" aria-label="${digest.kind === "weekly" ? "Top this week" : "Top today"}">
+      <h3>${digest.kind === "weekly" ? "Top this week" : "Top today"}</h3>
+      <ul>${d.top.map(it => `<li>
+        <a href="${escapeHTML(safeUrl(it.url))}" target="_blank" rel="noopener noreferrer">${escapeHTML(it.title)}</a>
+        <span class="src">${escapeHTML(it.source || "")}${it.sourceCount > 1 ? " · " + escapeHTML(String(it.sourceCount)) + " sources" : ""}</span>
+        ${Number.isFinite(it.score) ? `<span class="score" title="story score 0-100">${it.score}</span>` : ""}
+      </li>`).join("")}</ul>
+    </section>` : "";
+  if (!d.sections.length && !topList) { body.innerHTML = head + `<div class="empty"><div class="big">quiet period.</div></div>`; return; }
+  body.innerHTML = head + topList + d.sections.map(sec => `
     <section class="digest-section" aria-label="${escapeHTML(sec.title || sec.topic)}">
       <h3>${escapeHTML(sec.title || sec.topic || "Other")}</h3>
       <ul>${(sec.items || []).map(it => `<li>
@@ -1979,7 +2163,7 @@ function setActiveTab(tab, opts = {}) {
 
 // Apply #/news?q=... to the filter state (validated) and the controls.
 function defaultFilters() {
-  return { country: "all", type: "all", read: "unread", q: "", kind: "all", topic: "all", company: "all", minImp: 0, view: "feed" };
+  return { country: "all", type: "all", read: "unread", q: "", kind: "all", topic: "all", company: "all", minImp: 0, view: "feed", watch: "all" };
 }
 function applyHashFilters(params) {
   // The hash is the shareable state: what it does not name is the default.
@@ -2005,6 +2189,23 @@ function focusTabByOffset(cur, delta) {
 document.getElementById("filter-country").addEventListener("click", chipClick);
 document.getElementById("filter-type").addEventListener("click", chipClick);
 document.getElementById("filter-read").addEventListener("click", chipClick);
+document.getElementById("filter-watch").addEventListener("click", chipClick);
+document.getElementById("watch-form").addEventListener("submit", e => {
+  e.preventDefault();
+  const inp = document.getElementById("watch-input");
+  const name = String(inp.value || "").trim();
+  inp.value = "";
+  if (!name) return;
+  const kind = watchKindFor(name);
+  if (!watchHas(kind, name)) { if (watchToggle(kind, name)) toast("Watching " + name); }
+  filtersChanged();
+});
+document.getElementById("watch-list").addEventListener("click", e => {
+  const b = e.target.closest && e.target.closest("[data-unwatch]");
+  if (!b) return;
+  watchToggle(b.dataset.unwatch, b.dataset.v);
+  filtersChanged();
+});
 function chipClick(e) {
   const chip = e.target.closest && e.target.closest(".chip[data-f]");
   if (!chip) return;
@@ -2070,6 +2271,13 @@ function markRead(id) {
   saveJSON(READ_KEY, [...readSet]);
 }
 document.getElementById("articles").addEventListener("click", e => {
+  const w = e.target.closest("[data-watch]");
+  if (w) {
+    const on = watchToggle(w.dataset.watchKind, w.dataset.watch);
+    toast((on ? "Watching " : "Stopped watching ") + w.dataset.watch);
+    filtersChanged();
+    return;
+  }
   const b = e.target.closest("[data-mute-source]");
   if (b) {
     const id = b.dataset.muteSource;

@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://0xmortuex.github.io/ai-news-tracker/stories.schema.json",
+  "title": "AI News Tracker stories.json (ai-news-stories/1)",
+  "description": "One entry per story: news.json items that cover the same event, merged. Additive changes only within /1; consumers ignore unknown fields.",
+  "type": "object",
+  "required": ["schema", "schemaVersion", "generatedAt", "itemCount", "count", "stories"],
+  "properties": {
+    "schema": { "const": "ai-news-stories/1" },
+    "schemaVersion": { "type": "integer", "minimum": 1 },
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "itemCount": { "type": "integer", "minimum": 0 },
+    "count": { "type": "integer", "minimum": 0 },
+    "merged": { "type": "integer", "minimum": 0 },
+    "stories": { "type": "array", "maxItems": 1000, "items": { "$ref": "#/$defs/story" } }
+  },
+  "$defs": {
+    "story": {
+      "type": "object",
+      "required": [
+        "id", "title", "url", "source", "lang", "kind", "publishedAt", "firstPublishedAt", "lastPublishedAt", "firstSeenAt",
+        "sourceCount", "sources", "itemIds", "entities", "tags", "score"
+      ],
+      "properties": {
+        "id": { "type": "string", "pattern": "^s-[0-9a-f]{8}$" },
+        "title": { "type": "string", "minLength": 1, "maxLength": 300 },
+        "url": { "type": "string", "format": "uri", "maxLength": 2000 },
+        "source": { "type": "string", "minLength": 1 },
+        "sourceId": { "type": "string" },
+        "lang": { "type": "string", "minLength": 2, "maxLength": 8 },
+        "country": { "enum": ["US", "CN", "EU", "OTHER"] },
+        "kind": { "enum": ["model-release", "paper", "policy", "funding", "product", "tool", "opinion", "security", "other"] },
+        "summary": { "type": "string", "maxLength": 280 },
+        "publishedAt": { "type": "string", "format": "date-time" },
+        "firstPublishedAt": { "type": "string", "format": "date-time" },
+        "lastPublishedAt": { "type": "string", "format": "date-time" },
+        "firstSeenAt": { "type": "string", "format": "date-time" },
+        "sourceCount": { "type": "integer", "minimum": 1 },
+        "sources": {
+          "type": "array",
+          "maxItems": 12,
+          "items": {
+            "type": "object",
+            "required": ["source", "url"],
+            "properties": {
+              "source": { "type": "string" },
+              "sourceId": { "type": "string" },
+              "url": { "type": "string", "format": "uri", "maxLength": 2000 },
+              "publishedAt": { "type": "string", "format": "date-time" }
+            }
+          }
+        },
+        "itemIds": { "type": "array", "maxItems": 20, "items": { "type": "string", "pattern": "^[0-9a-f]{16}$" } },
+        "clusters": { "type": "array", "maxItems": 20, "items": { "type": "string", "pattern": "^c-[0-9a-f]{8}$" } },
+        "companies": { "type": "array", "items": { "type": "string" } },
+        "models": { "type": "array", "items": { "type": "string" } },
+        "products": { "type": "array", "items": { "type": "string" } },
+        "entities": { "type": "array", "maxItems": 16, "items": { "type": "string" } },
+        "tags": { "type": "array", "items": { "enum": ["release", "pricing", "safety", "research", "policy", "tooling"] } },
+        "topics": { "type": "array", "items": { "type": "string" } },
+        "score": { "type": "integer", "minimum": 0, "maximum": 100 },
+        "baseScore": { "type": "integer", "minimum": 0, "maximum": 100 },
+        "scoreParts": { "type": "object" },
+        "breaking": { "type": "boolean" },
+        "thirdParty": { "type": "boolean" }
+      }
+    }
+  }
+}
