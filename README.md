@@ -1,126 +1,65 @@
 # AI News Tracker
 
-A Django web app that aggregates AI news from 20 sources across the US, China, and global research labs. Built to monitor the latest developments in real-time.
-
-## Features
-
-- Tracks 20 RSS feeds (OpenAI, Anthropic, DeepMind, Meta AI, NVIDIA, HuggingFace, BAIR, TechCrunch, The Verge, MIT Tech Review, Ars Technica, VentureBeat, SCMP, TechNode, China Daily, Caixin, arXiv cs.AI, arXiv cs.LG)
-- Filter by country (US / China / Global), source type (Company / News / Research), or specific source
-- Search article titles and summaries
-- Mark articles as read (one-click, opens in a new tab)
-- "NEW" badge on articles less than 1 hour old
-- Background refresh button (AJAX, no page reload)
-- Dark-themed Tailwind UI with sticky header and hover animations
-
-## Tech Stack
-
-- Django 6.0.4
-- Python 3.13
-- SQLite (local development) / PostgreSQL (production)
-- TailwindCSS via CDN
-- feedparser for RSS parsing
-- WhiteNoise for static file serving
-- Gunicorn for WSGI in production
-- Deployed on DigitalOcean App Platform
-
-## Setup
-
-1. Clone the repo
-   ```bash
-   git clone https://github.com/0xmortuex/ai-news-tracker.git
-   cd ai-news-tracker
-   ```
-2. Create a virtualenv
-   ```bash
-   python -m venv .venv
-   ```
-3. Activate it
-   - Windows (PowerShell): `.\.venv\Scripts\Activate.ps1`
-   - Linux / macOS: `source .venv/bin/activate`
-4. Install dependencies
-   ```bash
-   pip install -r requirements.txt
-   ```
-5. Apply migrations
-   ```bash
-   python manage.py migrate
-   ```
-6. Seed the RSS source list
-   ```bash
-   python manage.py seed_sources
-   ```
-7. Fetch articles
-   ```bash
-   python manage.py fetch_feeds
-   ```
-8. Run the dev server
-   ```bash
-   python manage.py runserver
-   ```
-9. Open http://127.0.0.1:8000/
-
-## Project Structure
+A static AI news pipeline. A scheduled GitHub Action fetches ~68 curated sources,
+dedupes and clusters them, tags and scores each story, and publishes
+`news.json` (+ Atom and JSON Feed). The site and other consumers (for example the
+Vex browser) just read that file. There is no server and no database.
 
 ```
-ai-news-tracker/
-├── bin/
-│   └── post-deploy.sh          # Runs on every DO deploy: migrate + seed + fetch
-├── docs/
-│   └── index.html              # GitHub Pages landing page
-├── mysite/                     # Django project config
-│   ├── settings.py             # Env-driven settings (SECRET_KEY, DATABASE_URL, etc.)
-│   ├── urls.py
-│   └── wsgi.py
-├── newsfeed/                   # Main app
-│   ├── management/commands/
-│   │   ├── fetch_feeds.py      # python manage.py fetch_feeds
-│   │   └── seed_sources.py     # python manage.py seed_sources
-│   ├── templates/newsfeed/
-│   │   └── feed.html           # Dark Tailwind UI
-│   ├── admin.py
-│   ├── feeds.py                # SOURCES list (20 RSS feeds)
-│   ├── fetcher.py              # feedparser integration
-│   ├── models.py               # Source, Article
-│   ├── urls.py
-│   └── views.py                # feed, mark_read, mark_all_read, fetch_now
-├── Procfile                    # gunicorn mysite.wsgi --log-file -
-├── requirements.txt
-├── runtime.txt                 # python-3.13.12
-└── manage.py
+config/sources.json --> scripts/ingest.mjs --> data/ (orphan `data` branch)
+  (68 sources)           fetch (conditional GET, per-host rate limit, 15 s timeout, size caps)
+                         parse (RSS / Atom / JSON Feed / HF API / HN / Federal Register)
+                         dedupe + cluster (canonical URL, title Jaccard + SimHash, model-event key)
+                         tag (kind, labels, topics, companies, models) + score 0-100 + breaking
+                         validate against docs/news.schema.json, sanity floor, then publish
+
+raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/news.json  <-- docs/index.html (GitHub Pages)
+                                                                    <-- Vex and any other client
 ```
 
-## Sources
+Published files (on the `data` branch): `news.json`, `index.json`, `feed.atom`,
+`feed.json`, `sources-health.json`, `state.json` (internal). The contract is in
+[`docs/CONTRACT.md`](docs/CONTRACT.md) and [`docs/news.schema.json`](docs/news.schema.json).
 
-### United States
-- 🇺🇸 OpenAI News — Company
-- 🇺🇸 Anthropic News — Company
-- 🇺🇸 Google DeepMind — Company
-- 🇺🇸 Google Research — Company
-- 🇺🇸 Meta AI — Company
-- 🇺🇸 Microsoft AI Blog — Company
-- 🇺🇸 NVIDIA Blog — Company
-- 🇺🇸 Hugging Face Blog — Company
-- 🇺🇸 BAIR Berkeley AI — Research
-- 🇺🇸 TechCrunch AI — News
-- 🇺🇸 The Verge AI — News
-- 🇺🇸 MIT Tech Review AI — News
-- 🇺🇸 Ars Technica AI — News
-- 🇺🇸 VentureBeat AI — News
+## Repository layout
 
-### China
-- 🇨🇳 South China Morning Post Tech — News
-- 🇨🇳 TechNode — News
-- 🇨🇳 China Daily Tech — News
-- 🇨🇳 Caixin Global Tech — News
+| Path | What |
+|---|---|
+| `config/sources.json` | the curated source list (tier, kind, country, filters, poll interval, third-party flag) |
+| `scripts/ingest.mjs` | CLI entry point; `scripts/lib/*` pure modules (parse, normalize, cluster, tag, score, build, validate, fetch) |
+| `tests/` | `node:test` suite, fixtures in `tests/fixtures` (real feed samples and headlines); runs offline |
+| `docs/` | GitHub Pages site (`index.html`, Guides tab files) and the contract |
+| `.github/workflows/ingest.yml` | cron every 30 min + manual run; tests, ingest, force-push to `data` |
+| `.github/workflows/test.yml` | tests on every PR (Node 20 and 22) |
+| `legacy/` | the old Django app, kept for reference only |
 
-### Global Research
-- 🌐 arXiv cs.AI — Research
-- 🌐 arXiv cs.LG — Research
+## Use it
 
-## License
+Needs Node 20+ (no dependencies, no install step).
 
-MIT
+```
+npm test                       # offline unit + pipeline tests
+node scripts/ingest.mjs --out data            # one live pass (about 20 s), writes data/
+node scripts/ingest.mjs --dry-run --only openai,hf-papers --min-items 1 --min-sources 1
+npm run serve                  # then open http://127.0.0.1:8080/docs/index.html?data=../data/news.json
+```
 
----
+`ingest.mjs` flags: `--out`, `--state-dir`, `--config`, `--only a,b`, `--force` (ignore
+poll intervals and backoff), `--dry-run`, `--min-items`, `--min-sources`.
+It exits 1 and writes nothing when the result is invalid or below the sanity floor
+(80 items, 15 healthy sources, no more than a 50% drop from the previous file), so
+the previous data stays published.
 
-<sub>Built by Fadi (<a href="https://github.com/0xmortuex">@0xmortuex</a>)</sub>
+## Politeness and terms
+
+Descriptive `User-Agent`, conditional GET with ETag / If-Modified-Since, one request
+at a time per host with a gap, 15 s timeout, response size caps, per-source poll
+intervals, back-off on 429/5xx (honours `Retry-After`). Only the title, link,
+source, date, a source-provided excerpt of at most 280 characters and derived tags
+are published: no article text, no images. Community scrapes (Anthropic, xAI, UK
+AISI, The Batch come from `Olshansk/rss-feeds`) are flagged `thirdParty` and shown
+as such. To request removal of a source or an item, open an issue.
+
+## Legacy
+
+`legacy/` holds the original Django app. The live site never used it.

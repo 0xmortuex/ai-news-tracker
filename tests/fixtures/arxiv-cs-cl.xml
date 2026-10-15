@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+  <channel>
+    <title>cs.CL updates on arXiv.org</title>
+    <link>http://rss.arxiv.org/rss/cs.CL</link>
+    <description>cs.CL updates on the arXiv.org e-print archive.</description>
+    <atom:link href="http://rss.arxiv.org/rss/cs.CL" rel="self" type="application/rss+xml"/>
+    <docs>http://www.rssboard.org/rss-specification</docs>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 15 Oct 2026 04:00:01 +0000</lastBuildDate>
+    <managingEditor>rss-help@arxiv.org</managingEditor>
+    <pubDate>Thu, 15 Oct 2026 00:00:00 -0400</pubDate>
+    <skipDays>
+      <day>Sunday</day>
+      <day>Saturday</day>
+    </skipDays>
+    <item>
+      <title>Following the Flow the Law Requires: Training Voice Agents to Transfer to Unseen Regulated Procedures in Debt Collection</title>
+      <link>https://arxiv.org/abs/2610.18881</link>
+      <description>arXiv:2610.18881v1 Announce Type: new 
+Abstract: Voice agents built on large language models (LLMs) now handle customer calls, but in regulated applications completing the task is not enough: the agent must follow a conversational flow set by law. In debt collection, it must confirm it is speaking to the debtor before mentioning the debt, identify itself and the creditor, state the amount, and avoid prohibited language. Every creditor turns these rules into its own procedure and revises it. We ask whether a small, self-hosted policy can be trained once and then follow regulated procedures it has never seen. One machine-readable specification per deployment, FlowSpec, generates the policy instruction, gates the tools, supplies the supervision and defines the tests; the agent speaks only approved catalogue sentences. We fine-tune a 9-billion-parameter model on 2,506 conversations from 297 randomized procedures and evaluate a Thai outbound-call agent on four unseen deployment procedures (three debt collection, one non-debt), one from a wholly withheld lineage. Documented checks, fixed by the procedure, rise from 67--71 percents to 93--100 percents, while grounded checks, fixed by the conversation, already pass at 97--100 percents before training; scenario pass rate rises from 15/43 to 40/43. An audit of the shared specification finds 11 defects, 3 of which its own metric did not expose.</description>
+      <guid isPermaLink="false">oai:arXiv.org:2610.18881v1</guid>
+      <category>cs.CL</category>
+      <category>cs.AI</category>
+      <category>cs.LG</category>
+      <pubDate>Thu, 15 Oct 2026 00:00:00 -0400</pubDate>
+      <arxiv:announce_type>new</arxiv:announce_type>
+      <dc:rights>http://creativecommons.org/licenses/by-sa/4.0/</dc:rights>
+      <dc:creator>Petmongkon Pornpichitsuwan, Krittin Pachtrachai, Touchapon Kraisingkorn</dc:creator>
+    </item>
+<item>
+      <title>Evaluating Large Language Models for Multilingual Abstractive Summarization: A Comprehensive Study of English and Bengali</title>
+      <link>https://arxiv.org/abs/2610.19003</link>
+      <description>arXiv:2610.19003v1 Announce Type: new 
+Abstract: Abstractive summarization remains challenging across languages, where linguistic quality and factual consistency may diverge, particularly in low-resource settings. We present a standardized zero-shot benchmark of eight closed-source and open-weight LLMs on size-matched English and Bengali XL-Sum test sets. Our evaluation combines lexical and semantic metrics with reference-free factuality verification and multidimensional LLM-as-a-Judge assessment, providing a comprehensive analysis of both surface-level quality and factual reliability in multilingual summarization. Results reveal substantial cross-lingual variation: GPT-5.6 Luna leads several English lexical metrics but does not maintain the same advantage in Bengali, where LLaMA 3.3 70B achieves the highest ROUGE and BLEU scores. Gemini 2.5 Flash obtains the highest observed Bengali factuality score. Furthermore, evaluation methods produce different model rankings, highlighting the limitations of relying on a single metric for multilingual summarization assessment. These findings demonstrate that strong English summarization performance does not necessarily transfer to Bengali and emphasize the need for comprehensive evaluation frameworks for low-resource languages.</description>
+      <guid isPermaLink="false">oai:arXiv.org:2610.19003v1</guid>
+      <category>cs.CL</category>
+      <category>cs.AI</category>
+      <pubDate>Thu, 15 Oct 2026 00:00:00 -0400</pubDate>
+      <arxiv:announce_type>new</arxiv:announce_type>
+      <dc:rights>http://creativecommons.org/licenses/by-nc-sa/4.0/</dc:rights>
+      <dc:creator>Khan Mahi Al Atahar, Nazifa Tasneem, Ajwad Abrar</dc:creator>
+    </item>
+<item>
+      <title>Can LLMs Access their World Knowledge for Event Prediction?</title>
+      <link>https://arxiv.org/abs/2610.19021</link>
+      <description>arXiv:2610.19021v1 Announce Type: new 
+Abstract: Recent work has questioned whether large language models (LLMs) can be useful for temporal event prediction. Despite vast pretrained world knowledge, LLMs often underperform simpler specialized models. We ask whether this knowledge is truly inaccessible, or whether current methods fail to present event prediction in a form LLMs can use. We argue for the latter and show that LLMs become effective event forecasters when the interface is designed around two choices. The first grounds each event in a natural-language description, and the second separates event semantics from the prediction space to prevent semantic bias from label associations. To test this, we introduce DescribeEvent, a benchmark of ~150K events across seven datasets and six domains with event-level descriptions. We find that capable LLMs substantially benefit from descriptions and symbolic labels, outperforming description-free variants and non-LLM baselines, while weaker models gain little. These results suggest that accessing LLM world knowledge for event prediction is an interface problem, and that event descriptions offer a practical way to elicit the knowledge LLMs already encode.</description>
+      <guid isPermaLink="false">oai:arXiv.org:2610.19021v1</guid>
+      <category>cs.CL</category>
+      <pubDate>Thu, 15 Oct 2026 00:00:00 -0400</pubDate>
+      <arxiv:announce_type>new</arxiv:announce_type>
+      <dc:rights>http://creativecommons.org/licenses/by-nc-sa/4.0/</dc:rights>
+      <dc:creator>Zijun Wu, Zhitian Zhang, Hossein Hajimirsadeghi, Nikita Dvornik, Alexander Pashevich</dc:creator>
+    </item>
+<item>
+      <title>Joint Subspace Sparse Attention for Efficient Long-Context Decoding</title>
+      <link>https://arxiv.org/abs/2610.19026</link>
+      <description>arXiv:2610.19026v1 Announce Type: new 
+Abstract: Sparse attention reduces the KV-cache traffic that dominates long-context LLM decoding, but practical methods largely operate at coarse granularity. Token-level selection offers finer control, yet presents two challenges: low-dimensional scoring may lose query--key structure needed for accurate ranking, while gathering scattered selected tokens can offset the resulting latency benefit. We introduce Joint Subspace Sparse Attention (JSSA) to address both challenges. For selection quality, JSSA learns a shared low-dimensional query--key subspace by minimizing token-score preservation error. We upper-bound the resulting non-convex objective with a tractable marginal objective that admits a closed-form spectral solution; direct refinement of the exact objective provides no measurable improvement in the tested settings. For execution efficiency, we develop a gather-free token-level indexed-attention kernel that supports distinct per-KV-head selections under the standard grouped-query attention (GQA) KV-cache layout. Across standard GQA, hybrid sliding-window/global attention, and Multi-head Latent Attention (MLA) models, JSSA consistently remains close to full-KV accuracy while avoiding the substantial generation-length inflation and architecture-dependent failures observed with competing methods. On an NVIDIA B200 GPU, JSSA achieves up to $6.43\times$ the decoding throughput of full-KV attention at 128K context. JSSA achieves reasoning accuracy comparable to model-native DSA without model training and reaches 96--99\% of its decoding throughput even at 700B scale large models.</description>
+      <guid isPermaLink="false">oai:arXiv.org:2610.19026v1</guid>
+      <category>cs.CL</category>
+      <pubDate>Thu, 15 Oct 2026 00:00:00 -0400</pubDate>
+      <arxiv:announce_type>new</arxiv:announce_type>
+      <dc:rights>http://creativecommons.org/licenses/by/4.0/</dc:rights>
+      <dc:creator>Jiwon Song, Yoongon Kim, Jae-Joon Kim</dc:creator>
+    </item>
+<item>
+      <title>Crossing the Gender Binary: Modelling Gendered Reference in Science Fiction and General Fiction</title>
+      <link>https://arxiv.org/abs/2610.19028</link>
+      <description>arXiv:2610.19028v1 Announce Type: new 
+Abstract: Science fiction is widely credited with unsettling gender. This article asks whether that holds at the linguistic level, in how readily gendered reference gives way to its counterpart, a neutral term, or other social category, and whether it separates the genre from general fiction. It does so by masking man/men, woman/women, and person/people across same-period science fiction and general fiction corpora and classifying RoBERTa's five likeliest substitutes by gender. Retention and displacement are permutation-tested over five resampling rounds, and the underlying sentences are read closely. Both corpora cross the gender binary in both directions, but unequally: where woman is masked, the model predicts a masculine term about twice as often as it predicts a feminine term where man is masked. Each mismatch marks a statistical surprise, a word the corpus did not expect there. Against this shared pattern, science fiction shows greater gender permeability than the general fiction corpus, placing man in feminine contexts more often than general fiction while the reverse rate holds steady. Its degendering tendency is stronger too, drawing both gendered terms toward the neutral. Beyond the binary, a masked woman also draws substitutes naming a social category and no gender far more often than a masked man does. In measuring the gender permeability of man, woman, and person in linguistic distribution and testing whether genre changes it, the study gives science fiction studies linguistic evidence for thematic claims and computational literary studies a pipeline applicable to other category vocabularies, such as race and class.</description>
+      <guid isPermaLink="false">oai:arXiv.org:2610.19028v1</guid>
+      <category>cs.CL</category>
+      <pubDate>Thu, 15 Oct 2026 00:00:00 -0400</pubDate>
+      <arxiv:announce_type>new</arxiv:announce_type>
+      <dc:rights>http://arxiv.org/licenses/nonexclusive-distrib/1.0/</dc:rights>
+      <dc:creator>Yuxuan Liu, Haim Dubossarsky, Ruth Ahnert</dc:creator>
+    </item>
+<item>
+      <title>Pre-Trained Language Models as Zero-Shot Tools for Social Science Research</title>
+      <link>https://arxiv.org/abs/2610.19048</link>
+      <description>arXiv:2610.19048v1 Announce Type: new 
+Abstract: Record linkage and demographic inference from names are routine demands in social science. Most approaches to these problems require labeled training data that are difficult or costly to acquire. I show that pre-trained language models perform both tasks accurately without requiring task-specific training. For record linkage, I introduce EnsembleLink, an algorithm that uses pre-trained embeddings alongside string-based scorers to retrieve a short list of candidates and then identify the likeliest matches. EnsembleLink matches or exceeds the performance of most prior approaches while generalizing across scripts and formats that those methods are unable to handle. For ethnicity inference from names, I show that large language models (LLMs) achieve up to 83.8% accuracy on U.S. voter files, compared to 78.0% for name-supplemented BISG. Open-weight models offer reproducible implementations that approach these models in accuracy. Moreover, LLMs are able to infer group membership for religious, caste-based, and other ethnic group categories outside of the United States, and reduce bias in downstream estimates of geographic racial gaps. Where pre-training encodes the world knowledge required by each task, task-specific labels add less information.</description>
+      <guid isPermaLink="false">oai:arXiv.org:2610.19048v1</guid>
+      <category>cs.CL</category>
+      <pubDate>Thu, 15 Oct 2026 00:00:00 -0400</pubDate>
+      <arxiv:announce_type>new</arxiv:announce_type>
+      <dc:rights>http://creativecommons.org/licenses/by/4.0/</dc:rights>
+      <dc:creator>Noah Dasanaike</dc:creator>
+    </item>
+</channel>
+</rss>

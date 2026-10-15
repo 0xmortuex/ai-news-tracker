@@ -1,0 +1,21 @@
+{
+  "comment": "Real headlines captured from the live feeds on 2026-10-15 (title, optional summary) with the source profile they came from and the tags the rules must produce.",
+  "cases": [
+    { "title": "Gemini 4 Argon: Built to solve your hardest problems", "source": { "sourceKind": "company", "tier": 1, "country": "US", "lang": "en", "company": "Google" }, "kind": "model-release", "models": ["Gemini 4"], "companies": ["Google"] },
+    { "title": "Gemini 4 Argon begins rolling out in Gemini app and Antigravity, but only if you pay", "source": { "sourceKind": "news", "tier": 2, "country": "US", "lang": "en" }, "kind": "model-release", "models": ["Gemini 4"] },
+    { "title": "Introducing Mistral Large 4", "source": { "sourceKind": "company", "tier": 1, "country": "EU", "lang": "en", "company": "Mistral" }, "kind": "model-release", "companies": ["Mistral"] },
+    { "title": "New model on Hugging Face: Qwen/Qwen-Image-2.1-Turbo", "summary": "text-to-image · 12 likes", "extra": { "modelId": "Qwen/Qwen-Image-2.1-Turbo" }, "source": { "sourceKind": "repo", "tier": 1, "country": "CN", "lang": "en", "company": "Alibaba", "prior": { "kind": "model-release" } }, "kind": "model-release", "models": ["Qwen-Image-2.1-Turbo"], "labelsInclude": ["china", "open-source"] },
+    { "title": "Zenzap raises $44M for its AI chat app that aims to replace WhatsApp in the workplace", "source": { "sourceKind": "news", "tier": 2, "country": "US", "lang": "en" }, "kind": "funding" },
+    { "title": "Anthropic's Q3 revenue hits $16.8B but growth slows ahead of planned November IPO", "source": { "sourceKind": "news", "tier": 2, "country": "OTHER", "lang": "en" }, "kind": "funding", "companies": ["Anthropic"] },
+    { "title": "Modal, 15,75 milyar dolar değerleme üzerinden 750 milyon dolar yatırım aldı", "source": { "sourceKind": "news", "tier": 2, "country": "OTHER", "lang": "tr" }, "kind": "funding", "labelsInclude": ["turkey"] },
+    { "title": "Z.ai’s GLM-5.3 raises researcher fears the Chinese model can fake AI safety tests", "source": { "sourceKind": "news", "tier": 2, "country": "CN", "lang": "en" }, "kindNot": "funding", "labelsInclude": ["china", "safety"], "models": ["GLM-5.3"] },
+    { "title": "Launching an opt-in vulnerability-finding service for open-source software", "source": { "sourceKind": "research", "tier": 1, "country": "US", "lang": "en", "company": "Anthropic", "prior": { "kind": "paper" } }, "kind": "security" },
+    { "title": "Titan-Llama: Retrofitting Pre-trained LLMs with External Neural Memory Modules", "source": { "sourceKind": "research", "tier": 3, "country": "OTHER", "lang": "en", "prior": { "kind": "paper" } }, "kind": "paper", "labelsInclude": ["research"] },
+    { "title": "Ollama v0.40.5", "source": { "sourceKind": "repo", "tier": 2, "country": "US", "lang": "en", "company": "Ollama", "prior": { "kind": "tool" } }, "kind": "tool" },
+    { "title": "Amazon launches two AI wearables, the $75 Bee Frontier wristband and $100 Bee Eclipse magnetic pendant", "source": { "sourceKind": "news", "tier": 2, "country": "US", "lang": "en" }, "kind": "product", "companies": ["Amazon"] },
+    { "title": "ByteDance, tek görselden 5 dakikaya kadar video üreten OmniHuman 2.0'ı kullanıma sundu", "source": { "sourceKind": "news", "tier": 2, "country": "OTHER", "lang": "tr" }, "kind": "product", "companies": ["ByteDance"], "labelsInclude": ["turkey"] },
+    { "title": "Nobody is safe from celebrity AI deepfakes", "source": { "sourceKind": "news", "tier": 2, "country": "US", "lang": "en" }, "kindNot": "funding", "labelsInclude": ["safety"] },
+    { "title": "OpenAI, eski çalışanının gizli ürün planlarını Apple'a taşıdığını iddia etti", "source": { "sourceKind": "news", "tier": 2, "country": "OTHER", "lang": "tr" }, "companies": ["Apple", "OpenAI"], "labelsInclude": ["turkey"] },
+    { "title": "llm-gemini 0.35", "source": { "sourceKind": "community", "tier": 1, "country": "OTHER", "lang": "en" }, "models": [] }
+  ]
+}

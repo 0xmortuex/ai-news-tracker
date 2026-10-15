@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>The Decoder</title>
+	<atom:link href="https://the-decoder.com/feed/" rel="self" type="application/rss+xml" />
+	<link>https://the-decoder.com/</link>
+	<description>AI, Menschen, Wirtschaft</description>
+	<lastBuildDate>Thu, 15 Oct 2026 09:51:57 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=7.0.7</generator>
+	<item>
+		<title>Anthropic&#039;s Q3 revenue hits $16.8B but growth slows ahead of planned November IPO</title>
+		<link>https://the-decoder.com/anthropics-q3-revenue-hits-16-8b-but-growth-slows-ahead-of-planned-november-ipo/</link>
+					<comments>https://the-decoder.com/anthropics-q3-revenue-hits-16-8b-but-growth-slows-ahead-of-planned-november-ipo/#respond</comments>
+		
+		<dc:creator><![CDATA[Matthias Bastian]]></dc:creator>
+		<pubDate>Thu, 15 Oct 2026 09:50:43 +0000</pubDate>
+				<category><![CDATA[AI in practice]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Anthropic]]></category>
+		<guid isPermaLink="false">https://the-decoder.com/?p=41553</guid>
+
+					<description><![CDATA[<p><img width="1376" height="768" src="https://the-decoder.com/wp-content/uploads/2026/09/anthropic_amodei.png" class="attachment-full size-full wp-post-image" alt="" style="height: auto; margin-bottom: 10px;" decoding="async" fetchpriority="high" /></p>
+<p>        Anthropic hit $16.8 billion in third-quarter revenue, a 45 percent gain that still falls far short of Q2's 140 percent surge. With a November IPO approaching, some investors now expect the company's valuation to drop below $1.5 trillion. Slowing growth and a tough market are cooling expectations for the AI boom's biggest Wall Street test yet.</p>
+<p>The article <a href="https://the-decoder.com/anthropics-q3-revenue-hits-16-8b-but-growth-slows-ahead-of-planned-november-ipo/">Anthropic&#039;s Q3 revenue hits $16.8B but growth slows ahead of planned November IPO</a> appeared first on <a href="https://the-decoder.com">The Decoder</a>.</p>
+]]></description>
+		
+					<wfw:commentRss>https://the-decoder.com/anthropics-q3-revenue-hits-16-8b-but-growth-slows-ahead-of-planned-november-ipo/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+<item>
+		<title>Google says self-improving AI isn&#039;t anywhere close</title>
+		<link>https://the-decoder.com/google-says-self-improving-ai-isnt-anywhere-close/</link>
+					<comments>https://the-decoder.com/google-says-self-improving-ai-isnt-anywhere-close/#respond</comments>
+		
+		<dc:creator><![CDATA[Matthias Bastian]]></dc:creator>
+		<pubDate>Wed, 14 Oct 2026 19:18:44 +0000</pubDate>
+				<category><![CDATA[AI research]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Gemini]]></category>
+		<category><![CDATA[Google]]></category>
+		<category><![CDATA[RSI]]></category>
+		<guid isPermaLink="false">https://the-decoder.com/?p=41548</guid>
+
+					<description><![CDATA[<p><img width="2048" height="1152" src="https://the-decoder.com/wp-content/uploads/2026/10/gemini_logo-2.png" class="attachment-full size-full wp-post-image" alt="" style="height: auto; margin-bottom: 10px;" decoding="async" /></p>
+<p>        Google engineer Haydn Belfield says there's no measurable acceleration of AI research driven by AI at Deepmind. AI now writes more than 75 percent of production code, but 88 percent of changes still need human oversight. The company's in-house General Capability Index shows steady growth with no sudden speedup. Self-improving AI isn't anywhere close, Belfield says.</p>
+<p>The article <a href="https://the-decoder.com/google-says-self-improving-ai-isnt-anywhere-close/">Google says self-improving AI isn&#039;t anywhere close</a> appeared first on <a href="https://the-decoder.com">The Decoder</a>.</p>
+]]></description>
+		
+					<wfw:commentRss>https://the-decoder.com/google-says-self-improving-ai-isnt-anywhere-close/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+<item>
+		<title>Researchers tracked down a rogue fleet of Chinese AI agents in the wild and actually talked to it</title>
+		<link>https://the-decoder.com/researchers-tracked-down-a-rogue-fleet-of-chinese-ai-agents-in-the-wild-and-actually-talked-to-it/</link>
+					<comments>https://the-decoder.com/researchers-tracked-down-a-rogue-fleet-of-chinese-ai-agents-in-the-wild-and-actually-talked-to-it/#respond</comments>
+		
+		<dc:creator><![CDATA[Matthias Bastian]]></dc:creator>
+		<pubDate>Wed, 14 Oct 2026 18:07:37 +0000</pubDate>
+				<category><![CDATA[AI in practice]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[AI agents]]></category>
+		<category><![CDATA[China]]></category>
+		<guid isPermaLink="false">https://the-decoder.com/?p=41540</guid>
+
+					<description><![CDATA[<p><img width="1376" height="768" src="https://the-decoder.com/wp-content/uploads/2026/10/chinese_agent_swarms.png" class="attachment-full size-full wp-post-image" alt="" style="height: auto; margin-bottom: 10px;" decoding="async" /></p>
+<p>        For the first time, researchers have tracked down an uncontrolled fleet of Chinese AI agents in the wild and communicated with them via a web mailbox. The agents, running on Tencent Cloud, had launched more than 2,600 attempts to scrape data from Alibaba's mapping service Amap, finding their own workarounds when bot protections blocked them. When the researchers made contact, the agents were surprisingly polite.</p>
+<p>The article <a href="https://the-decoder.com/researchers-tracked-down-a-rogue-fleet-of-chinese-ai-agents-in-the-wild-and-actually-talked-to-it/">Researchers tracked down a rogue fleet of Chinese AI agents in the wild and actually talked to it</a> appeared first on <a href="https://the-decoder.com">The Decoder</a>.</p>
+]]></description>
+		
+					<wfw:commentRss>https://the-decoder.com/researchers-tracked-down-a-rogue-fleet-of-chinese-ai-agents-in-the-wild-and-actually-talked-to-it/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+<item>
+		<title>OpenAI will reportedly ship at least one model this year but its flagship still needs alignment work</title>
+		<link>https://the-decoder.com/openai-will-reportedly-ship-at-least-one-model-this-year-but-its-flagship-still-needs-alignment-work/</link>
+					<comments>https://the-decoder.com/openai-will-reportedly-ship-at-least-one-model-this-year-but-its-flagship-still-needs-alignment-work/#respond</comments>
+		
+		<dc:creator><![CDATA[Matthias Bastian]]></dc:creator>
+		<pubDate>Wed, 14 Oct 2026 16:14:16 +0000</pubDate>
+				<category><![CDATA[AI in practice]]></category>
+		<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[OpenAI]]></category>
+		<guid isPermaLink="false">https://the-decoder.com/?p=41537</guid>
+
+					<description><![CDATA[<p><img width="1376" height="768" src="https://the-decoder.com/wp-content/uploads/2026/10/openai_misalign-2.png" class="attachment-full size-full wp-post-image" alt="" style="height: auto; margin-bottom: 10px;" decoding="async" /></p>
+<p>        OpenAI is racing to finish its next flagship model, which uses the same looped transformer technique as Astra to boost math and coding performance. The tradeoff is that looping makes safety monitoring harder. Microsoft accidentally revealed details about how the technique works on a public page. Whether or not the flagship is ready in time, employees say one or two new models will likely ship by year's end.</p>
+<p>The article <a href="https://the-decoder.com/openai-will-reportedly-ship-at-least-one-model-this-year-but-its-flagship-still-needs-alignment-work/">OpenAI will reportedly ship at least one model this year but its flagship still needs alignment work</a> appeared first on <a href="https://the-decoder.com">The Decoder</a>.</p>
+]]></description>
+		
+					<wfw:commentRss>https://the-decoder.com/openai-will-reportedly-ship-at-least-one-model-this-year-but-its-flagship-still-needs-alignment-work/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+</channel>
+</rss>

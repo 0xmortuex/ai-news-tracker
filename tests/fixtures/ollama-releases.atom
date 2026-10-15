@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en-US">
+  <id>tag:github.com,2008:https://github.com/ollama/ollama/releases</id>
+  <link type="text/html" rel="alternate" href="https://github.com/ollama/ollama/releases"/>
+  <link type="application/atom+xml" rel="self" href="https://github.com/ollama/ollama/releases.atom"/>
+  <title>Release notes from ollama</title>
+  <updated>2026-10-15T14:28:26Z</updated>
+  <entry>
+    <id>tag:github.com,2008:Repository/658928958/v0.40.5-rc1</id>
+    <updated>2026-10-15T14:28:26Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/ollama/ollama/releases/tag/v0.40.5-rc1"/>
+    <title>v0.40.5-rc1: New model... (#19030)</title>
+    <content type="html">&lt;ul&gt;
+&lt;li&gt;ci: shorten Windows Vulkan build path&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Keep the nested shader-generator compiler probes below Windows path limits in checkouts with longer repository names.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;mlx: fix Nemotron bugs and support global scales&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Accept published Nemotron layer names while retaining legacy aliases, and&lt;br&gt;
+fix layer-count inference and detached MTP quantization. Stabilize Mamba&lt;br&gt;
+softplus, preserve FP32 vision normalization, and compile Mamba gate and&lt;br&gt;
+norm scaling.&lt;/p&gt;
+&lt;p&gt;Support per-expert F32 global scales and preserve activation-scale&lt;br&gt;
+companions in ModelOpt and compressed-tensors NVFP4 imports. Normalize&lt;br&gt;
+reciprocal globals and reject invalid scales. Keep activation scales&lt;br&gt;
+separate from weight-only inference.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;mlx: add Nemotron 3.5 Super&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;minor adjustments&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <author>
+      <name>dhiltgen</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/4033016?s=60&amp;v=4"/>
+  </entry>
+<entry>
+    <id>tag:github.com,2008:Repository/658928958/v0.40.5-rc0</id>
+    <updated>2026-10-14T19:45:22Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/ollama/ollama/releases/tag/v0.40.5-rc0"/>
+    <title>v0.40.5</title>
+    <content type="html">&lt;h2&gt;What&#39;s Changed&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;mlx: port the Metal custom kernels to CUDA by &lt;a class=&quot;user-mention notranslate&quot; data-hovercard-type=&quot;user&quot; data-hovercard-url=&quot;/users/dhiltgen/hovercard&quot; data-octo-click=&quot;hovercard-link-click&quot; data-octo-dimensions=&quot;link_type:self&quot; href=&quot;https://github.com/dhiltgen&quot;&gt;@dhiltgen&lt;/a&gt; in &lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;5589424146&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/ollama/ollama/issues/18657&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/ollama/ollama/pull/18657/hovercard&quot; href=&quot;https://github.com/ollama/ollama/pull/18657&quot;&gt;#18657&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;docs: model recs and language standardization by &lt;a class=&quot;user-mention notranslate&quot; data-hovercard-type=&quot;user&quot; data-hovercard-url=&quot;/users/anra8571/hovercard&quot; data-octo-click=&quot;hovercard-link-click&quot; data-octo-dimensions=&quot;link_type:self&quot; href=&quot;https://github.com/anra8571&quot;&gt;@anra8571&lt;/a&gt; in &lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;5834482255&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/ollama/ollama/issues/18981&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/ollama/ollama/pull/18981/hovercard&quot; href=&quot;https://github.com/ollama/ollama/pull/18981&quot;&gt;#18981&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;openai: accept custom tool calls in Responses history by &lt;a class=&quot;user-mention notranslate&quot; data-hovercard-type=&quot;user&quot; data-hovercard-url=&quot;/users/hoyyeva/hovercard&quot; data-octo-click=&quot;hovercard-link-click&quot; data-octo-dimensions=&quot;link_type:self&quot; href=&quot;https://github.com/hoyyeva&quot;&gt;@hoyyeva&lt;/a&gt; in &lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;5783039045&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/ollama/ollama/issues/18911&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/ollama/ollama/pull/18911/hovercard&quot; href=&quot;https://github.com/ollama/ollama/pull/18911&quot;&gt;#18911&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;app: clarify cloud payment errors by &lt;a class=&quot;user-mention notranslate&quot; data-hovercard-type=&quot;user&quot; data-hovercard-url=&quot;/users/willietran/hovercard&quot; data-octo-click=&quot;hovercard-link-click&quot; data-octo-dimensions=&quot;link_type:self&quot; href=&quot;https://github.com/willietran&quot;&gt;@willietran&lt;/a&gt; in &lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;5837481289&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/ollama/ollama/issues/18986&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/ollama/ollama/pull/18986/hovercard&quot; href=&quot;https://github.com/ollama/ollama/pull/18986&quot;&gt;#18986&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;MLX: version bump by &lt;a class=&quot;user-mention notranslate&quot; data-hovercard-type=&quot;user&quot; data-hovercard-url=&quot;/users/dhiltgen/hovercard&quot; data-octo-click=&quot;hovercard-link-click&quot; data-octo-dimensions=&quot;link_type:self&quot; href=&quot;https://github.com/dhiltgen&quot;&gt;@dhiltgen&lt;/a&gt; in &lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;5839555131&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/ollama/ollama/issues/18993&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/ollama/ollama/pull/18993/hovercard&quot; href=&quot;https://github.com/ollama/ollama/pull/18993&quot;&gt;#18993&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;New Contributors&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&quot;user-mention notranslate&quot; data-hovercard-type=&quot;user&quot; data-hovercard-url=&quot;/users/willietran/hovercard&quot; data-octo-click=&quot;hovercard-link-click&quot; data-octo-dimensions=&quot;link_type:self&quot; href=&quot;https://github.com/willietran&quot;&gt;@willietran&lt;/a&gt; made their first contribution in &lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;5837481289&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/ollama/ollama/issues/18986&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/ollama/ollama/pull/18986/hovercard&quot; href=&quot;https://github.com/ollama/ollama/pull/18986&quot;&gt;#18986&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Full Changelog&lt;/strong&gt;: &lt;a class=&quot;commit-link&quot; href=&quot;https://github.com/ollama/ollama/compare/v0.40.4...v0.40.5-rc0&quot;&gt;&lt;tt&gt;v0.40.4...v0.40.5-rc0&lt;/tt&gt;&lt;/a&gt;&lt;/p&gt;</content>
+    <author>
+      <name>github-actions[bot]</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/in/15368?s=60&amp;v=4"/>
+  </entry>
+<entry>
+    <id>tag:github.com,2008:Repository/658928958/v0.40.4</id>
+    <updated>2026-10-14T02:23:26Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/ollama/ollama/releases/tag/v0.40.4"/>
+    <title>v0.40.4</title>
+    <content type="html">&lt;h2&gt;Decision models in the CLI&lt;/h2&gt;
+&lt;p&gt;Decision models can now be used directly from the terminal with &lt;code&gt;ollama run&lt;/code&gt; — ask yes/no questions, classify text into labels, or score against a rubric:&lt;br&gt;
+&lt;code&gt;ollama run nimble --ask &quot;Is a refund being requested?&quot; &amp;lt; ticket.txt&lt;/code&gt;&lt;/p&gt;
+&lt;h2&gt;What&#39;s Changed&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Kev decision models are now supported by the MLX runner on Apple silicon&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ollama launch&lt;/code&gt; can now be used with usage credits without upgrading to a paid plan&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ollama launch codex&lt;/code&gt; now includes locally installed Ollama models in its model picker. Use &lt;code&gt;/model&lt;/code&gt; within the Codex CLI to swap models.&lt;/li&gt;
+&lt;li&gt;Improved inference performance by reusing verified manifests and already loaded models&lt;/li&gt;
+&lt;li&gt;Added support for multimodal embeddings through llama-server&lt;/li&gt;
+&lt;li&gt;Fixed loading multimodal embedding models with small context windows&lt;/li&gt;
+&lt;li&gt;Improved Gemma 4 prefill performance on NVIDIA GPUs with the MLX runner&lt;/li&gt;
+&lt;li&gt;MLX runner now clips long Laya states instead of rejecting them&lt;/li&gt;
+&lt;li&gt;Improved speculative decoding reliability in the MLX runner, including recurrent state handling after rollback&lt;/li&gt;
+&lt;li&gt;Updated llama.cpp with native decision model support&lt;/li&gt;
+&lt;li&gt;Updated README and documentation with clearer privacy and cloud-services wording&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Full Changelog&lt;/strong&gt;: &lt;a class=&quot;commit-link&quot; href=&quot;https://github.com/ollama/ollama/compare/v0.40.3...v0.40.4&quot;&gt;&lt;tt&gt;v0.40.3...v0.40.4&lt;/tt&gt;&lt;/a&gt;&lt;/p&gt;</content>
+    <author>
+      <name>github-actions[bot]</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/in/15368?s=60&amp;v=4"/>
+  </entry>
+</feed>

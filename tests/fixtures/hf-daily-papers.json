@@ -1,0 +1,289 @@
+[
+ {
+  "paper": {
+   "id": "2610.18354",
+   "authors": [
+    {
+     "_id": "6ad0e59b8304c5d882d7b189",
+     "name": "Arastun Mammadli",
+     "hidden": false
+    },
+    {
+     "_id": "6ad0e59b8304c5d882d7b18a",
+     "name": "Herbert Woisetschläger",
+     "hidden": false
+    },
+    {
+     "_id": "6ad0e59b8304c5d882d7b18b",
+     "name": "Jawad Fayaz",
+     "hidden": false
+    },
+    {
+     "_id": "6ad0e59b8304c5d882d7b18c",
+     "name": "Shiqiang Wang",
+     "hidden": false
+    }
+   ],
+   "publishedAt": "2026-10-13T00:00:00.000Z",
+   "submittedOnDailyAt": "2026-10-15T00:00:00.000Z",
+   "title": "Choosing LLMs for Strategic Agent Interactions",
+   "submittedOnDailyBy": {
+    "_id": "691620fdf0fcada6ff063f6b",
+    "avatarUrl": "/avatars/32063ff084ce90ae93dae36004f217f3.svg",
+    "isPro": false,
+    "fullname": "Arastun Mammadli",
+    "user": "Arastun",
+    "type": "user",
+    "name": "Arastun"
+   },
+   "summary": "Game-theoretic benchmarks claim that large language model (LLM) strategic decision-making varies across game types, interaction structures, and capability dimensions. However, they only evaluate strategic performance across individual fixed models. In parallel, contemporary LLM routers pick models under quality-cost trade-offs, but with no notion of a strategic structure. They do not account for an opponent that might be unknown, and that can adapt over time and shift the feedback signal. To address this, we extend the game-theoretic evaluations and define strategic selection as the meta game layered on top of the base game. In each round, a strategic selector fields an LLM from a portfolio of models to navigate a game payoff matrix that is latent and learned online. We find that the evaluation signal is game-specific, and that extracting a reliable signal requires a much higher number of seed runs N compared to traditional benchmarking setups. Evaluating across 5 games and 10 LLMs, we show a model's strategic competence varies significantly depending on the game setup and the opponent faced. Building on this, we implement a suite of selector methods and find that approaches that rely on query embeddings or LLM self-reflection do not consistently capture the underlying strategic signal. A lightweight multi-armed bandit algorithm performs more reliably across games, though it still falls short of the best fixed model. Finally, we show that simple non-stationary and adversarial bandit variants fail to outperform a stationary bandit baseline, pointing to a gap in how current methods handle a shifting opponent in strategic settings.",
+   "upvotes": 1,
+   "discussionId": "6ad0e59b8304c5d882d7b18d",
+   "ai_summary": "Strategic model selection for game-theoretic LLM evaluation reveals that multi-armed bandit methods outperform embedding-based selectors but remain below fixed-model baselines against adaptive opponents.",
+   "ai_keywords": [
+    "game-theoretic benchmarks",
+    "strategic selection",
+    "meta game",
+    "payoff matrix",
+    "multi-armed bandit",
+    "non-stationary bandit",
+    "adversarial bandit",
+    "query embeddings",
+    "LLM self-reflection"
+   ],
+   "ai_summary_model": "thinkingmachines/Inkling-Small"
+  },
+  "publishedAt": "2026-10-12T20:00:00.000Z",
+  "title": "Choosing LLMs for Strategic Agent Interactions",
+  "summary": "Game-theoretic benchmarks claim that large language model (LLM) strategic decision-making varies across game types, interaction structures, and capability dimensions. However, they only evaluate strategic performance across individual fixed models. In parallel, contemporary LLM routers pick models under quality-cost trade-offs, but with no notion of a strategic structure. They do not account for an opponent that might be unknown, and that can adapt over time and shift the feedback signal. To address this, we extend the game-theoretic evaluations and define strategic selection as the meta game layered on top of the base game. In each round, a strategic selector fields an LLM from a portfolio of models to navigate a game payoff matrix that is latent and learned online. We find that the evaluation signal is game-specific, and that extracting a reliable signal requires a much higher number of seed runs N compared to traditional benchmarking setups. Evaluating across 5 games and 10 LLMs, we show a model's strategic competence varies significantly depending on the game setup and the opponent faced. Building on this, we implement a suite of selector methods and find that approaches that rely on query embeddings or LLM self-reflection do not consistently capture the underlying strategic signal. A lightweight multi-armed bandit algorithm performs more reliably across games, though it still falls short of the best fixed model. Finally, we show that simple non-stationary and adversarial bandit variants fail to outperform a stationary bandit baseline, pointing to a gap in how current methods handle a shifting opponent in strategic settings.",
+  "thumbnail": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2610.18354.png",
+  "numComments": 1,
+  "submittedBy": {
+   "_id": "691620fdf0fcada6ff063f6b",
+   "avatarUrl": "/avatars/32063ff084ce90ae93dae36004f217f3.svg",
+   "fullname": "Arastun Mammadli",
+   "name": "Arastun",
+   "type": "user",
+   "isPro": false,
+   "isHf": false,
+   "isHfAdmin": false,
+   "isMod": false,
+   "isUserFollowing": false
+  },
+  "isAuthorParticipating": false
+ },
+ {
+  "paper": {
+   "id": "2610.19420",
+   "authors": [
+    {
+     "_id": "6ad0e4ec8304c5d882d7b180",
+     "name": "Yue Zhang",
+     "hidden": false
+    },
+    {
+     "_id": "6ad0e4ec8304c5d882d7b181",
+     "name": "Han Lin",
+     "hidden": false
+    },
+    {
+     "_id": "6ad0e4ec8304c5d882d7b182",
+     "name": "Zun Wang",
+     "hidden": false
+    },
+    {
+     "_id": "6ad0e4ec8304c5d882d7b183",
+     "name": "Yidong Huang",
+     "hidden": false
+    },
+    {
+     "_id": "6ad0e4ec8304c5d882d7b184",
+     "name": "Zaid Khan",
+     "hidden": false
+    },
+    {
+     "_id": "6ad0e4ec8304c5d882d7b185",
+     "name": "Mohit Bansal",
+     "hidden": false
+    }
+   ],
+   "publishedAt": "2026-10-14T00:00:00.000Z",
+   "submittedOnDailyAt": "2026-10-15T00:00:00.000Z",
+   "title": "From Failures to Learnable Worlds: Policy-Conditioned Environment Generation for Navigation Agents",
+   "submittedOnDailyBy": {
+    "_id": "646e86350867c99c2d3f2ecf",
+    "avatarUrl": "/avatars/b89798ff623abffb169eacda2ac32fde.svg",
+    "isPro": true,
+    "fullname": "Han Lin",
+    "user": "hanlincs",
+    "type": "user",
+    "name": "hanlincs"
+   },
+   "summary": "Simulated environments enable scalable training data generation for embodied agents, but more data does not necessarily provide what a particular agent needs to learn. Existing environment-generation pipelines largely optimize generic properties such as realism, diversity, or task coverage, while different pretrained policies can fail for different environmental reasons. We therefore introduce WEDGE, a framework for weakness-guided navigation learning in which the failure modes of a pretrained agent guide the generation of training environments at each adaptation round. Given a pretrained policy, WEDGE uses an LLM to propose executable weakness features from contrasting successful and failed rollouts, automatically validates them on the diagnostic set, and selects the strongest validated weakness based on its success-rate gap. The validated weaknesses are then mapped to the environmental factors that control them. WEDGE varies these factors to construct environments in the difficulty regimes where the policy struggles, producing targeted training experience for adaptation. Across three navigation agents with different adaptation mechanisms, we find that policies exhibit distinct weakness profiles and benefit from different training environments. Weakness-conditioned adaptation consistently outperforms matched random and hard-example alternatives on ProcTHOR, while the resulting gains for Uni-NaVid and Gemini also extend to HM3D after ProcTHOR adaptation. Iterative re-diagnosis further shows that dominant weaknesses can persist or shift as the policy improves, providing updated guidance for subsequent environment construction. Together, these results show that policy failures are not only diagnostic signals, but actionable guidance for constructing training environments that target a policy's current weaknesses.",
+   "upvotes": 1,
+   "discussionId": "6ad0e4ec8304c5d882d7b186",
+   "projectPage": "https://zhangyuejoslin.github.io/WEDGE/",
+   "githubRepo": "https://github.com/zhangyuejoslin/WEDGE",
+   "githubRepoAddedBy": "user",
+   "ai_summary": "WEDGE guides environment generation for embodied navigation agents by diagnosing policy failure modes and constructing targeted training scenarios that address specific weaknesses.",
+   "ai_keywords": [
+    "WEDGE",
+    "weakness-guided navigation learning",
+    "failure modes",
+    "LLM",
+    "weakness features",
+    "diagnostic set",
+    "success-rate gap",
+    "environmental factors",
+    "difficulty regimes",
+    "ProcTHOR",
+    "Uni-NaVid",
+    "Gemini",
+    "HM3D",
+    "iterative re-diagnosis"
+   ],
+   "ai_summary_model": "thinkingmachines/Inkling-Small",
+   "organization": {
+    "_id": "669f9d1fec8789263c0e355a",
+    "name": "UNC-ChapelHill",
+    "fullname": "University of North Carolina at Chapel Hill",
+    "avatar": "https://cdn-avatars.huggingface.co/v1/production/uploads/669f9c85bd649dba3b88e581/H5uB8_MCewnMtxEUnAvTL.png"
+   }
+  },
+  "publishedAt": "2026-10-13T20:00:00.000Z",
+  "title": "From Failures to Learnable Worlds: Policy-Conditioned Environment Generation for Navigation Agents",
+  "summary": "Simulated environments enable scalable training data generation for embodied agents, but more data does not necessarily provide what a particular agent needs to learn. Existing environment-generation pipelines largely optimize generic properties such as realism, diversity, or task coverage, while different pretrained policies can fail for different environmental reasons. We therefore introduce WEDGE, a framework for weakness-guided navigation learning in which the failure modes of a pretrained agent guide the generation of training environments at each adaptation round. Given a pretrained policy, WEDGE uses an LLM to propose executable weakness features from contrasting successful and failed rollouts, automatically validates them on the diagnostic set, and selects the strongest validated weakness based on its success-rate gap. The validated weaknesses are then mapped to the environmental factors that control them. WEDGE varies these factors to construct environments in the difficulty regimes where the policy struggles, producing targeted training experience for adaptation. Across three navigation agents with different adaptation mechanisms, we find that policies exhibit distinct weakness profiles and benefit from different training environments. Weakness-conditioned adaptation consistently outperforms matched random and hard-example alternatives on ProcTHOR, while the resulting gains for Uni-NaVid and Gemini also extend to HM3D after ProcTHOR adaptation. Iterative re-diagnosis further shows that dominant weaknesses can persist or shift as the policy improves, providing updated guidance for subsequent environment construction. Together, these results show that policy failures are not only diagnostic signals, but actionable guidance for constructing training environments that target a policy's current weaknesses.",
+  "thumbnail": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2610.19420.png",
+  "numComments": 1,
+  "submittedBy": {
+   "_id": "646e86350867c99c2d3f2ecf",
+   "avatarUrl": "/avatars/b89798ff623abffb169eacda2ac32fde.svg",
+   "fullname": "Han Lin",
+   "name": "hanlincs",
+   "type": "user",
+   "isPro": true,
+   "isHf": false,
+   "isHfAdmin": false,
+   "isMod": false,
+   "followerCount": 3,
+   "isUserFollowing": false
+  },
+  "organization": {
+   "_id": "669f9d1fec8789263c0e355a",
+   "name": "UNC-ChapelHill",
+   "fullname": "University of North Carolina at Chapel Hill",
+   "avatar": "https://cdn-avatars.huggingface.co/v1/production/uploads/669f9c85bd649dba3b88e581/H5uB8_MCewnMtxEUnAvTL.png"
+  },
+  "isAuthorParticipating": false
+ },
+ {
+  "paper": {
+   "id": "2610.14020",
+   "authors": [
+    {
+     "_id": "6acf2cdbabe004a210f26020",
+     "user": {
+      "_id": "6901a42c25e61ebb3adaae47",
+      "avatarUrl": "https://cdn-avatars.huggingface.co/v1/production/uploads/6901a42c25e61ebb3adaae47/v70ehj2AEZaiztac7u3IF.png",
+      "isPro": false,
+      "fullname": "yumingccc",
+      "user": "yumingfu",
+      "type": "user",
+      "name": "yumingfu"
+     },
+     "name": "Yuming Fu",
+     "status": "claimed_verified",
+     "statusLastChangedAt": "2026-10-15T09:41:36.996Z",
+     "hidden": false
+    },
+    {
+     "_id": "6acf2cdbabe004a210f26021",
+     "name": "Weijia Wu",
+     "hidden": false
+    },
+    {
+     "_id": "6acf2cdbabe004a210f26022",
+     "name": "Jing Chen",
+     "hidden": false
+    },
+    {
+     "_id": "6acf2cdbabe004a210f26023",
+     "name": "Jiahao Tang",
+     "hidden": false
+    },
+    {
+     "_id": "6acf2cdbabe004a210f26024",
+     "name": "Feifei Chen",
+     "hidden": false
+    },
+    {
+     "_id": "6acf2cdbabe004a210f26025",
+     "name": "Hongyu Zhu",
+     "hidden": false
+    },
+    {
+     "_id": "6acf2cdbabe004a210f26026",
+     "name": "Xin Jin",
+     "hidden": false
+    },
+    {
+     "_id": "6acf2cdbabe004a210f26027",
+     "name": "Alex Jinpeng Wang",
+     "hidden": false
+    }
+   ],
+   "mediaUrls": [
+    "https://cdn-uploads.huggingface.co/production/uploads/6901a42c25e61ebb3adaae47/fLSEpyU5GKa2bjyJPVd0U.jpeg"
+   ],
+   "publishedAt": "2026-09-29T00:00:00.000Z",
+   "submittedOnDailyAt": "2026-10-15T00:00:00.000Z",
+   "title": "LabInstruct: Benchmarking Situated Instructional Video Generation for Lab Procedures",
+   "submittedOnDailyBy": {
+    "_id": "6901a42c25e61ebb3adaae47",
+    "avatarUrl": "https://cdn-avatars.huggingface.co/v1/production/uploads/6901a42c25e61ebb3adaae47/v70ehj2AEZaiztac7u3IF.png",
+    "isPro": false,
+    "fullname": "yumingccc",
+    "user": "yumingfu",
+    "type": "user",
+    "name": "yumingfu"
+   },
+   "summary": "Self-driving laboratories (SDLs) aim to automate the full experimental loop, from scientific decision-making to physical execution. Ideally, AI-generated plans could be carried out directly by robotic systems, but reliable automation remains difficult in complex, open-world laboratory environments, where experiments often involve fine-grained manipulation, long-horizon procedures, and substantial variation across tasks and setups. Humans therefore remain an important execution interface between AI-generated plans and physical experiments, creating a need for clear and effective human-facing experimental guidance. Because laboratory procedures are inherently visual, spatial, and dynamic, video is particularly well suited to communicating apparatus configurations, manipulation actions, temporal dependencies, and state changes. Recent advances in video generation now make it possible to synthesize experimental demonstrations directly from an initial workspace image and a natural-language instruction. However, whether such models can reliably communicate real laboratory procedures has not been systematically studied. We introduce LabInstruct, a benchmark for situated instructional video generation in real laboratories. LabInstruct contains 204 tasks across 5 scientific disciplines, with real reference executions and structured annotations of objects, actions, contacts, and state transitions. Evaluating 8 frontier image-to-video models, we find that visually plausible generations frequently remain procedurally incorrect, revealing a substantial gap between visual realism and the reliability required for experimental instruction.",
+   "upvotes": 9,
+   "discussionId": "6acf2cdcabe004a210f26028",
+   "projectPage": "https://csu-jpg.github.io/LabInstruct.github.io/",
+   "githubRepo": "https://github.com/CSU-JPG/LabInstruct",
+   "githubRepoAddedBy": "user",
+   "ai_summary": "LabInstruct evaluates AI-generated instructional videos for real laboratory tasks and reveals that visual plausibility does not ensure procedural correctness.",
+   "ai_keywords": [
+    "image-to-video models",
+    "instructional video generation",
+    "situated instruction",
+    "procedural correctness",
+    "state transitions"
+   ],
+   "ai_summary_model": "thinkingmachines/Inkling-Small",
+   "githubStars": 5
+  },
+  "publishedAt": "2026-09-28T20:00:00.000Z",
+  "title": "LabInstruct: Benchmarking Situated Instructional Video Generation for Lab Procedures",
+  "summary": "Self-driving laboratories (SDLs) aim to automate the full experimental loop, from scientific decision-making to physical execution. Ideally, AI-generated plans could be carried out directly by robotic systems, but reliable automation remains difficult in complex, open-world laboratory environments, where experiments often involve fine-grained manipulation, long-horizon procedures, and substantial variation across tasks and setups. Humans therefore remain an important execution interface between AI-generated plans and physical experiments, creating a need for clear and effective human-facing experimental guidance. Because laboratory procedures are inherently visual, spatial, and dynamic, video is particularly well suited to communicating apparatus configurations, manipulation actions, temporal dependencies, and state changes. Recent advances in video generation now make it possible to synthesize experimental demonstrations directly from an initial workspace image and a natural-language instruction. However, whether such models can reliably communicate real laboratory procedures has not been systematically studied. We introduce LabInstruct, a benchmark for situated instructional video generation in real laboratories. LabInstruct contains 204 tasks across 5 scientific disciplines, with real reference executions and structured annotations of objects, actions, contacts, and state transitions. Evaluating 8 frontier image-to-video models, we find that visually plausible generations frequently remain procedurally incorrect, revealing a substantial gap between visual realism and the reliability required for experimental instruction.",
+  "mediaUrls": [
+   "https://cdn-uploads.huggingface.co/production/uploads/6901a42c25e61ebb3adaae47/fLSEpyU5GKa2bjyJPVd0U.jpeg"
+  ],
+  "thumbnail": "https://cdn-thumbnails.huggingface.co/social-thumbnails/papers/2610.14020.png",
+  "numComments": 1,
+  "submittedBy": {
+   "_id": "6901a42c25e61ebb3adaae47",
+   "avatarUrl": "https://cdn-avatars.huggingface.co/v1/production/uploads/6901a42c25e61ebb3adaae47/v70ehj2AEZaiztac7u3IF.png",
+   "fullname": "yumingccc",
+   "name": "yumingfu",
+   "type": "user",
+   "isPro": false,
+   "isHf": false,
+   "isHfAdmin": false,
+   "isMod": false,
+   "isUserFollowing": false
+  },
+  "isAuthorParticipating": true
+ }
+]

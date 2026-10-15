@@ -1,0 +1,18 @@
+{
+  "name": "ai-news-tracker",
+  "version": "1.0.0",
+  "description": "Static AI news pipeline: ingest feeds, dedupe, tag, score, publish news.json (ai-news/1)",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node scripts/run-tests.mjs",
+    "ingest": "node scripts/ingest.mjs --out data",
+    "serve": "node scripts/serve.mjs"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

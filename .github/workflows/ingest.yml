@@ -1,0 +1,62 @@
+name: ingest
+
+# Fetch sources, build news.json and publish it to the orphan `data` branch
+# (one commit, force-pushed every run, so history never grows).
+# Served at https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/news.json
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ingest
+  cancel-in-progress: false
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Test
+        run: npm test
+
+      - name: Restore previous data (ETags, health, item pool)
+        run: |
+          mkdir -p data
+          if git ls-remote --exit-code --heads origin data >/dev/null 2>&1; then
+            git fetch --depth 1 origin data
+            git archive FETCH_HEAD | tar -x -C data
+            ls -la data
+          else
+            echo "no data branch yet: first run"
+          fi
+
+      # Exits 1 without writing anything when news.json is invalid or below the
+      # sanity floor (min items / min healthy sources / >50% drop), so the step
+      # below is skipped and the previous data stays published.
+      - name: Ingest
+        run: node scripts/ingest.mjs --out data
+
+      - name: Publish to orphan data branch
+        run: |
+          cd data
+          rm -rf .git
+          git init -q -b data
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "data $(date -u +%Y-%m-%dT%H:%MZ)"
+          git remote add origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git push --force origin data
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

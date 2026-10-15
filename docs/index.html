@@ -656,6 +656,51 @@
   @keyframes pz-spin { to { transform: rotate(360deg); } }
   .pz-error { font-family: var(--mono); font-size: 11px; color: #e2615b; }
 
+  /* === DATA PIPELINE UI (banner, tags, filters, mute) === */
+  .data-banner { margin-bottom: 14px; font-family: var(--mono); font-size: 11px; line-height: 1.6; }
+  .data-banner .note {
+    padding: 8px 12px; margin-bottom: 8px;
+    border: 1px solid var(--border-strong); border-left: 3px solid var(--accent-dim);
+    background: var(--bg-card); color: var(--text-dim); border-radius: 2px;
+  }
+  .data-banner .note.warn { border-left-color: var(--err); color: var(--text); }
+  .data-banner .note.fallback { border-left-color: #e8915b; color: var(--text); }
+  .data-banner details summary { cursor: pointer; }
+  .data-banner ul { margin: 6px 0 0 18px; color: var(--text-faint); }
+  select.f-select {
+    width: 100%; font-family: var(--mono); font-size: 11px; padding: 8px 10px;
+    background: var(--bg-card); color: var(--text); border: 1px solid var(--border-strong);
+    border-radius: 2px; margin-bottom: 6px;
+  }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; align-items: center; }
+  .tag-pill {
+    font-family: var(--mono); font-size: 10px; padding: 2px 8px; border-radius: 12px;
+    border: 1px solid var(--border); color: var(--text-dim); background: rgba(212,165,116,0.04);
+  }
+  .tag-pill.kind { color: var(--accent); border-color: var(--accent-dim); }
+  .tag-pill.company { color: var(--us); border-color: var(--border-strong); }
+  .imp {
+    font-family: var(--mono); font-size: 10px; padding: 2px 7px; border: 1px solid var(--border-strong);
+    border-radius: 2px; color: var(--text-dim);
+  }
+  .imp.hi { color: var(--ok); border-color: var(--ok); }
+  .imp.top { color: var(--bg); background: var(--accent); border-color: var(--accent); font-weight: 600; }
+  .breaking-badge { background: var(--err); color: #fff; padding: 2px 7px; font-weight: 600; border-radius: 2px; }
+  .third-party { color: var(--text-faint); border: 1px dashed var(--border-strong); padding: 1px 6px; border-radius: 2px; font-size: 9px; }
+  .also-in { margin-top: 8px; font-family: var(--mono); font-size: 10px; color: var(--text-faint); }
+  .also-in a { color: var(--text-dim); }
+  .mute-link {
+    margin-left: auto; background: none; border: none; padding: 0; font-size: 10px;
+    color: var(--text-faint); text-transform: none; letter-spacing: 0; cursor: pointer;
+  }
+  .mute-link:hover { color: var(--err); }
+  .mute-list .chip { cursor: default; }
+  .mute-list .chip button { all: unset; cursor: pointer; color: var(--text-faint); margin-left: 4px; }
+  .mute-add { display: flex; gap: 6px; margin-bottom: 8px; }
+  .mute-add input { flex: 1; }
+  .source-row.stale .icon { background: #e8915b; }
+  .source-row.stale .count { color: #e8915b; }
+
   @media (max-width: 900px) {
     .tabs { padding: 0 20px; }
     .featured-card { padding: 22px 20px; }
@@ -703,6 +748,7 @@
         <span class="chip active" data-f="country" data-v="all">all</span>
         <span class="chip" data-f="country" data-v="US" data-c="US"><span class="dot"></span>USA</span>
         <span class="chip" data-f="country" data-v="CN" data-c="CN"><span class="dot"></span>China</span>
+        <span class="chip" data-f="country" data-v="EU" data-c="EU"><span class="dot"></span>EU</span>
         <span class="chip" data-f="country" data-v="OTHER" data-c="OTHER"><span class="dot"></span>Global</span>
       </div>
     </div>
@@ -714,7 +760,56 @@
         <span class="chip" data-f="type" data-v="COMPANY">company</span>
         <span class="chip" data-f="type" data-v="NEWS">news</span>
         <span class="chip" data-f="type" data-v="RESEARCH">research</span>
+        <span class="chip" data-f="type" data-v="COMMUNITY">community</span>
+        <span class="chip" data-f="type" data-v="NEWSLETTER">newsletter</span>
+        <span class="chip" data-f="type" data-v="REPO">repo</span>
       </div>
+    </div>
+
+    <div class="filter-group">
+      <div class="filter-label">Kind</div>
+      <select class="f-select" id="f-kind" aria-label="Filter by kind">
+        <option value="all">all kinds</option>
+        <option value="model-release">model release</option>
+        <option value="paper">paper</option>
+        <option value="policy">policy</option>
+        <option value="funding">funding</option>
+        <option value="product">product</option>
+        <option value="tool">tool</option>
+        <option value="security">security</option>
+        <option value="opinion">opinion</option>
+        <option value="other">other</option>
+      </select>
+    </div>
+
+    <div class="filter-group">
+      <div class="filter-label">Topic</div>
+      <select class="f-select" id="f-topic" aria-label="Filter by topic"><option value="all">all topics</option></select>
+    </div>
+
+    <div class="filter-group">
+      <div class="filter-label">Company</div>
+      <select class="f-select" id="f-company" aria-label="Filter by company"><option value="all">all companies</option></select>
+    </div>
+
+    <div class="filter-group">
+      <div class="filter-label">Importance</div>
+      <select class="f-select" id="f-imp" aria-label="Minimum importance">
+        <option value="0">any</option>
+        <option value="15">15+ (hide minor)</option>
+        <option value="30">30+</option>
+        <option value="40">40+ (normal and up)</option>
+        <option value="70">70+ (top stories)</option>
+      </select>
+    </div>
+
+    <div class="filter-group">
+      <div class="filter-label">Mute list</div>
+      <form class="mute-add" id="mute-form">
+        <input class="search" id="mute-input" placeholder="mute keyword…" type="text" aria-label="Keyword to mute">
+        <button type="submit">add</button>
+      </form>
+      <div class="mute-list" id="mute-list"></div>
     </div>
 
     <div class="filter-group">
@@ -733,6 +828,7 @@
 
   <main class="main main-news">
     <h2>The Feed <span class="count" id="visible-count">—</span></h2>
+    <div class="data-banner" id="data-banner" role="status" aria-live="polite"></div>
     <div class="articles" id="articles">
       <div class="loading-screen">Loading saved articles…</div>
     </div>
@@ -779,7 +875,8 @@
 <footer>
   Built by <a href="https://github.com/0xmortuex" target="_blank" rel="noopener">0xmortuex</a> ·
   <a href="https://github.com/0xmortuex/ai-news-tracker" target="_blank" rel="noopener">source</a> ·
-  no servers, no tracking, all in your browser
+  news comes from a static <a href="https://github.com/0xmortuex/ai-news-tracker/blob/master/docs/CONTRACT.md" target="_blank" rel="noopener">news.json</a> built by a scheduled job ·
+  your read state and mute list stay in this browser · titles and short excerpts link to the original publishers
 </footer>
 
 <div class="toast" id="toast"></div>
@@ -789,7 +886,14 @@
 // =========================================================================
 // CONFIG
 // =========================================================================
-const SOURCES = [
+// ---------------------------------------------------------------------------
+// LEGACY FALLBACK ONLY. The News tab reads the published news.json (see
+// DATA_URL below). This browser-side scrape through the open CORS Worker and
+// third-party proxies runs ONLY when news.json is unreachable, and the page
+// says so in a banner. Several of these feeds are dead (Microsoft AI 410,
+// VentureBeat 429, Google News stand-ins); they are kept as-is for the fallback.
+// ---------------------------------------------------------------------------
+const LEGACY_SOURCES = [
   { name: "OpenAI",          url: "https://openai.com/news/rss.xml",                         country: "US",    type: "COMPANY" },
   { name: "DeepMind",        url: "https://deepmind.google/blog/rss.xml",                    country: "US",    type: "COMPANY" },
   { name: "Google Research", url: "https://research.google/blog/rss/",                       country: "US",    type: "COMPANY" },
@@ -812,7 +916,8 @@ const SOURCES = [
   { name: "Caixin AI (Google News)",         url: "https://news.google.com/rss/search?q=site:caixinglobal.com+ai+when:14d&hl=en-US&gl=US&ceid=US:en",              country: "CN", type: "NEWS" },
 ];
 
-// CORS proxy chain — try in order. If one fails, fall back to the next.
+// CORS proxy chain. NOT used by the News tab any more (it reads news.json). Still used by the
+// Guides tab for its own sources and by the legacy News fallback. Try in order; fall back to the next.
 const PROXIES = [
   {
     name: "own-worker",
@@ -841,7 +946,32 @@ const META_KEY    = "ai-news-meta-v2";
 let articles = loadJSON(STORAGE_KEY, []);
 let readSet  = new Set(loadJSON(READ_KEY, []));
 let meta     = loadJSON(META_KEY, { lastFetch: null, sourceStatus: {} });
-let filters  = { country: "all", type: "all", read: "unread", q: "" };
+let filters  = { country: "all", type: "all", read: "unread", q: "", kind: "all", topic: "all", company: "all", minImp: 0 };
+
+// --- Published data (the main news path) -----------------------------------
+const DATA_URL = "https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/news.json";
+const NEWS_CACHE_KEY = "ai-news-cache-v3";   // last good news.json (offline)
+const MUTE_KEY = "ai-news-mute-v1";          // { sources:[], companies:[], keywords:[] }
+const NEWS_POLL_MS = 5 * 60 * 1000;
+let dataMode = "loading";                    // loading | live | cache | legacy | error
+let newsDoc = null;                          // last parsed news.json
+let mute = loadJSON(MUTE_KEY, { sources: [], companies: [], keywords: [] });
+if (!mute || typeof mute !== "object") mute = { sources: [], companies: [], keywords: [] };
+for (const k of ["sources", "companies", "keywords"]) if (!Array.isArray(mute[k])) mute[k] = [];
+
+// ?data=../out/news.json lets a local static server point the page at a local
+// file (testing). Only same-origin relative .json paths are accepted.
+function dataUrl() {
+  const p = new URLSearchParams(location.search).get("data");
+  if (p && /^(\.{0,2}\/)*[A-Za-z0-9_./-]+\.json$/.test(p) && !p.includes("//")) return p;
+  return DATA_URL;
+}
+function safeUrl(u) {
+  try {
+    const x = new URL(u, location.href);
+    return (x.protocol === "https:" || x.protocol === "http:") ? x.href : "#";
+  } catch { return "#"; }
+}
 
 // =========================================================================
 // HELPERS
@@ -875,7 +1005,7 @@ function relTime(d) {
   return d.toLocaleDateString();
 }
 function articleId(art) {
-  return art.url || (art.title + "::" + art.source);
+  return art.id || art.url || (art.title + "::" + art.source);
 }
 
 function parseRSSText(text) {
@@ -936,16 +1066,16 @@ async function fetchSource(src) {
   return [];
 }
 
-async function fetchAll() {
+async function legacyFetchAll() {
   const btn = document.getElementById("btn-refresh");
   btn.disabled = true;
   btn.textContent = "↻ Fetching…";
 
   // Reset all source status to loading
-  SOURCES.forEach(s => setSourceStatus(s.name, "loading", "queued"));
+  LEGACY_SOURCES.forEach(s => setSourceStatus(s.name, "loading", "queued"));
 
   // Run in parallel, max 4 at a time so we don't hammer proxies
-  const queue = [...SOURCES];
+  const queue = [...LEGACY_SOURCES];
   const allNew = [];
   const concurrency = 4;
   let okCount = 0;
@@ -982,8 +1112,9 @@ async function fetchAll() {
   btn.disabled = false;
   btn.textContent = "↻ Refresh";
 
-  toast(`+${added} new · ${okCount}/${SOURCES.length} sources ok`);
+  toast(`+${added} new · ${okCount}/${LEGACY_SOURCES.length} sources ok`);
   render();
+  return okCount;
 }
 
 // =========================================================================
@@ -996,7 +1127,24 @@ function setSourceStatus(name, state, message) {
 function updateSourceStatusUI() {
   const el = document.getElementById("source-status");
   if (!el) return;
-  el.innerHTML = SOURCES.map(s => {
+  if (dataMode !== "legacy" && newsDoc) {
+    const list = (newsDoc.sources || []).slice().sort((a, b) => (b.stale - a.stale) || a.name.localeCompare(b.name));
+    el.innerHTML = list.map(s => {
+      const state = s.stale ? "stale" : (s.status === "ok" ? "ok" : "err");
+      const msg = s.stale ? "stale" : (s.status === "ok" ? String(s.itemCount ?? "") : "error");
+      const tip = s.stale ? (s.staleReason || "") : (s.error || "");
+      return `<div class="source-row ${state}" title="${escapeHTML(tip)}">
+        <span class="icon"></span>
+        <span class="name">${escapeHTML(s.name)}</span>
+        <span class="count">${escapeHTML(msg)}</span>
+      </div>`;
+    }).join("");
+    const total = (newsDoc.sources || []).length;
+    const ok = (newsDoc.sources || []).filter(s => s.status === "ok" && !s.stale).length;
+    document.getElementById("stat-sources").textContent = `${ok}/${total}`;
+    return;
+  }
+  el.innerHTML = LEGACY_SOURCES.map(s => {
     const st = meta.sourceStatus[s.name] || { state: "", message: "—" };
     return `<div class="source-row ${st.state}">
       <span class="icon"></span>
@@ -1005,8 +1153,8 @@ function updateSourceStatusUI() {
     </div>`;
   }).join("");
 
-  const ok = SOURCES.filter(s => meta.sourceStatus[s.name]?.state === "ok").length;
-  document.getElementById("stat-sources").textContent = `${ok}/${SOURCES.length}`;
+  const ok = LEGACY_SOURCES.filter(s => meta.sourceStatus[s.name]?.state === "ok").length;
+  document.getElementById("stat-sources").textContent = `${ok}/${LEGACY_SOURCES.length}`;
 }
 
 // =========================================================================
@@ -1015,8 +1163,13 @@ function updateSourceStatusUI() {
 function render() {
   // Filter
   let visible = articles.filter(a => {
+    if (isMuted(a)) return false;
     if (filters.country !== "all" && a.country !== filters.country) return false;
     if (filters.type    !== "all" && a.type    !== filters.type)    return false;
+    if (filters.kind    !== "all" && a.kind    !== filters.kind)    return false;
+    if (filters.topic   !== "all" && !(a.topics || []).includes(filters.topic)) return false;
+    if (filters.company !== "all" && !(a.companies || []).includes(filters.company)) return false;
+    if (filters.minImp > 0 && (a.importance || 0) < filters.minImp) return false;
     if (filters.read === "unread" && readSet.has(articleId(a)))     return false;
     if (filters.q && !a.title.toLowerCase().includes(filters.q.toLowerCase())) return false;
     return true;
@@ -1027,9 +1180,11 @@ function render() {
   const el = document.getElementById("articles");
   if (visible.length === 0) {
     if (articles.length === 0) {
-      el.innerHTML = `<div class="empty">
+      el.innerHTML = dataMode === "loading"
+        ? `<div class="loading-screen">Loading the latest published news…</div>`
+        : `<div class="empty">
         <div class="big">empty.</div>
-        <div>Press <strong>Refresh</strong> in the header to fetch articles.</div>
+        <div>No articles could be loaded. Press <strong>Refresh</strong> to try again.</div>
       </div>`;
     } else {
       el.innerHTML = `<div class="empty">
@@ -1042,20 +1197,36 @@ function render() {
       const id = articleId(a);
       const isRead = readSet.has(id);
       const isNew = (Date.now() - new Date(a.date).getTime()) < 60 * 60 * 1000;
+      const imp = Number.isFinite(a.importance) ? a.importance : null;
+      const impCls = imp === null ? "" : imp >= 70 ? "top" : imp >= 40 ? "hi" : "";
+      const pills = [];
+      if (a.kind && a.kind !== "other") pills.push(`<span class="tag-pill kind">${escapeHTML(a.kind)}</span>`);
+      for (const c of (a.companies || []).slice(0, 3)) pills.push(`<span class="tag-pill company">${escapeHTML(c)}</span>`);
+      for (const m of (a.models || []).slice(0, 2)) pills.push(`<span class="tag-pill">${escapeHTML(m)}</span>`);
+      for (const t of (a.topics || []).slice(0, 4)) pills.push(`<span class="tag-pill">#${escapeHTML(t)}</span>`);
+      const also = (a.alsoIn || []).length
+        ? `<div class="also-in">also in: ${a.alsoIn.slice(0, 6).map(x => `<a href="${escapeHTML(safeUrl(x.url))}" target="_blank" rel="noopener">${escapeHTML(x.source)}</a>`).join(" · ")}${a.alsoIn.length > 6 ? ` · +${a.alsoIn.length - 6}` : ""}</div>`
+        : "";
+      const cn = ["US", "CN", "EU", "OTHER"].includes(a.country) ? a.country : "OTHER";
       return `
-        <article class="article ${isRead ? 'read' : ''}" data-c="${a.country}">
+        <article class="article ${isRead ? 'read' : ''}" data-c="${cn}">
           <div class="article-meta">
-            <span class="country-pill ${a.country}">${a.country === "OTHER" ? "GLOBAL" : a.country}</span>
+            <span class="country-pill ${cn}">${cn === "OTHER" ? "GLOBAL" : cn}</span>
             <span class="source-name">${escapeHTML(a.source)}</span>
             <span>${relTime(new Date(a.date))}</span>
-            ${isNew ? `<span class="new-badge">NEW</span>` : ""}
+            ${a.thirdParty ? `<span class="third-party" title="Scraped by a third party; not published by the company itself">third-party</span>` : ""}
+            ${imp !== null ? `<span class="imp ${impCls}" title="importance 0-100">${imp}</span>` : ""}
+            ${a.breaking ? `<span class="breaking-badge">BREAKING</span>` : (isNew ? `<span class="new-badge">NEW</span>` : "")}
+            ${a.sourceId ? `<button type="button" class="mute-link" data-mute-source="${escapeHTML(a.sourceId)}" data-mute-name="${escapeHTML(a.source)}" title="Hide this source">mute source</button>` : ""}
           </div>
           <h3>
-            <a href="${escapeHTML(a.url)}" target="_blank" rel="noopener" data-id="${escapeHTML(id)}">
+            <a href="${escapeHTML(safeUrl(a.url))}" target="_blank" rel="noopener" data-id="${escapeHTML(id)}">
               ${escapeHTML(a.title)}
             </a>
           </h3>
           ${a.summary ? `<p>${escapeHTML(a.summary)}</p>` : ""}
+          ${pills.length ? `<div class="tags">${pills.join("")}</div>` : ""}
+          ${also}
         </article>`;
     }).join("");
 
@@ -1078,11 +1249,10 @@ function render() {
 function updateStats() {
   const unread = articles.filter(a => !readSet.has(articleId(a))).length;
   document.getElementById("stat-articles").textContent = `${unread}/${articles.length}`;
-  if (meta.lastFetch) {
-    document.getElementById("stat-updated").textContent = relTime(new Date(meta.lastFetch));
-  } else {
-    document.getElementById("stat-updated").textContent = "never";
-  }
+  const gen = dataMode !== "legacy" && newsDoc ? newsDoc.generatedAt : meta.lastFetch;
+  const el = document.getElementById("stat-updated");
+  if (gen) el.textContent = "updated " + relTime(new Date(gen));
+  else el.textContent = dataMode === "loading" ? "loading…" : "never";
 }
 
 // =========================================================================
@@ -1103,13 +1273,194 @@ document.getElementById("q").addEventListener("input", (e) => {
   render();
 });
 
-document.getElementById("btn-refresh").addEventListener("click", fetchAll);
+document.getElementById("btn-refresh").addEventListener("click", () => refreshNews(true));
 
 document.getElementById("btn-mark-read").addEventListener("click", () => {
   articles.forEach(a => readSet.add(articleId(a)));
   saveJSON(READ_KEY, [...readSet]);
   toast(`Marked ${articles.length} read`);
   render();
+});
+
+// =========================================================================
+// NEWS DATA PATH (published news.json) + MUTE LIST + BANNER
+// =========================================================================
+function isMuted(a) {
+  if (mute.sources.includes(a.sourceId)) return true;
+  if ((a.companies || []).some(c => mute.companies.includes(c))) return true;
+  if (mute.keywords.length) {
+    const t = (a.title + " " + (a.summary || "")).toLowerCase();
+    if (mute.keywords.some(k => t.includes(k))) return true;
+  }
+  return false;
+}
+
+function renderMuteList() {
+  const el = document.getElementById("mute-list");
+  if (!el) return;
+  const chips = [];
+  mute.sources.forEach(s => chips.push({ t: "sources", v: s, label: "source: " + sourceLabel(s) }));
+  mute.companies.forEach(s => chips.push({ t: "companies", v: s, label: "company: " + s }));
+  mute.keywords.forEach(s => chips.push({ t: "keywords", v: s, label: "keyword: " + s }));
+  el.innerHTML = chips.length
+    ? chips.map(c => `<span class="chip">${escapeHTML(c.label)}<button type="button" data-unmute="${c.t}" data-v="${escapeHTML(c.v)}" aria-label="Unmute ${escapeHTML(c.label)}">×</button></span>`).join("")
+    : `<span class="chip" style="opacity:.6">nothing muted</span>`;
+}
+function sourceLabel(id) {
+  const s = ((newsDoc && newsDoc.sources) || []).find(x => x.id === id);
+  if (s) return s.name;
+  const art = articles.find(x => x.sourceId === id);
+  return art ? art.source : id;
+}
+function saveMute() { saveJSON(MUTE_KEY, mute); renderMuteList(); render(); }
+
+function fillSelect(id, values, allLabel) {
+  const sel = document.getElementById(id);
+  if (!sel) return;
+  const cur = sel.value;
+  sel.innerHTML = `<option value="all">${allLabel}</option>` + values.map(v => `<option value="${escapeHTML(v)}">${escapeHTML(v)}</option>`).join("");
+  if (values.includes(cur)) sel.value = cur;
+}
+
+function newsToArticles(doc) {
+  return doc.items.map(it => ({
+    id: it.id,
+    cluster: it.cluster,
+    title: String(it.title || ""),
+    url: it.url,
+    summary: String(it.summary || ""),
+    date: it.publishedAt,
+    source: it.source,
+    sourceId: it.sourceId,
+    country: it.country,
+    type: String(it.sourceKind || "").toUpperCase(),
+    kind: it.kind,
+    importance: it.importance,
+    companies: it.companies || [],
+    models: it.models || [],
+    topics: it.topics || [],
+    alsoIn: it.alsoIn || [],
+    breaking: !!it.breaking,
+    thirdParty: !!it.thirdParty,
+  }));
+}
+
+function applyNews(doc, mode) {
+  newsDoc = doc;
+  dataMode = mode;
+  articles = newsToArticles(doc);
+  const companies = [...new Set(articles.flatMap(a => a.companies))].sort();
+  const topics = [...new Set(articles.flatMap(a => a.topics))].sort();
+  fillSelect("f-company", companies, "all companies");
+  fillSelect("f-topic", topics, "all topics");
+  render();
+  renderBanner();
+}
+
+function validNews(doc) {
+  return doc && doc.schema === "ai-news/1" && Array.isArray(doc.items) && typeof doc.generatedAt === "string";
+}
+
+let refreshing = false;
+let lastDataError = "";
+async function refreshNews(manual) {
+  if (refreshing) return;
+  refreshing = true;
+  const btn = document.getElementById("btn-refresh");
+  if (manual && activeTab !== "guides") { btn.disabled = true; btn.textContent = "↻ Loading…"; }
+  try {
+    const ctrl = new AbortController();
+    const timer = setTimeout(() => ctrl.abort(), 15000);
+    let doc;
+    try {
+      const resp = await fetch(dataUrl(), { cache: "no-cache", signal: ctrl.signal });
+      if (!resp.ok) throw new Error("HTTP " + resp.status);
+      doc = await resp.json();
+    } finally { clearTimeout(timer); }
+    if (!validNews(doc)) throw new Error("news.json has an unexpected shape");
+    applyNews(doc, "live");
+    try { localStorage.setItem(NEWS_CACHE_KEY, JSON.stringify(doc)); } catch (e) { console.warn("[news] cache not stored:", e.message); }
+    if (manual) toast(`${doc.items.length} stories · updated ${relTime(new Date(doc.generatedAt))}`);
+  } catch (err) {
+    console.warn("[news] published data unreachable:", err.message);
+    lastDataError = err.message;
+    if (dataMode === "live" || dataMode === "cache") {
+      renderBanner(); // keep what we have; the banner shows its age
+    } else {
+      await fallbackNews();
+    }
+  } finally {
+    refreshing = false;
+    btn.disabled = false;
+    btn.textContent = "↻ Refresh";
+  }
+}
+
+// Only reached when news.json cannot be fetched at all.
+async function fallbackNews() {
+  let okCount = 0;
+  dataMode = "legacy";
+  articles = loadJSON(STORAGE_KEY, []);
+  renderBanner();
+  try { okCount = await legacyFetchAll(); } catch (e) { console.warn("[legacy] failed:", e.message); }
+  if (okCount === 0 && articles.length === 0) {
+    const cached = loadJSON(NEWS_CACHE_KEY, null);
+    if (validNews(cached)) { applyNews(cached, "cache"); return; }
+    dataMode = "error";
+  }
+  render();
+  renderBanner();
+}
+
+function renderBanner() {
+  const el = document.getElementById("data-banner");
+  if (!el) return;
+  const notes = [];
+  if (dataMode === "legacy") {
+    notes.push(`<div class="note fallback"><strong>Fallback mode.</strong> The published news data (${escapeHTML(lastDataError || "unreachable")}) could not be loaded, so this page is scraping a reduced set of feeds in your browser through a proxy. Items here are untagged and unscored.</div>`);
+  } else if (dataMode === "cache") {
+    notes.push(`<div class="note warn"><strong>Offline copy.</strong> Showing the last news.json this browser saved (${escapeHTML(relTime(new Date(newsDoc.generatedAt)))}). The live data could not be reached.</div>`);
+  } else if (dataMode === "error") {
+    notes.push(`<div class="note warn"><strong>No data.</strong> The published data and the fallback both failed (${escapeHTML(lastDataError)}).</div>`);
+  } else if (dataMode === "live" && newsDoc) {
+    const ageMin = (Date.now() - new Date(newsDoc.generatedAt).getTime()) / 60000;
+    if (ageMin > 120) {
+      notes.push(`<div class="note warn">Data was generated ${escapeHTML(relTime(new Date(newsDoc.generatedAt)))}. The scheduled job may be failing.</div>`);
+    }
+    const stale = (newsDoc.sources || []).filter(s => s.stale);
+    if (stale.length) {
+      notes.push(`<div class="note"><details><summary>${stale.length} source${stale.length === 1 ? " is" : "s are"} stale or failing: their newest stories may be missing.</summary><ul>${stale.map(s => `<li>${escapeHTML(s.name)} — ${escapeHTML(s.staleReason || s.error || "stale")}</li>`).join("")}</ul></details></div>`);
+    }
+  }
+  el.innerHTML = notes.join("");
+}
+
+document.getElementById("f-kind").addEventListener("change", e => { filters.kind = e.target.value; render(); });
+document.getElementById("f-topic").addEventListener("change", e => { filters.topic = e.target.value; render(); });
+document.getElementById("f-company").addEventListener("change", e => { filters.company = e.target.value; render(); });
+document.getElementById("f-imp").addEventListener("change", e => { filters.minImp = Number(e.target.value) || 0; render(); });
+
+document.getElementById("mute-form").addEventListener("submit", e => {
+  e.preventDefault();
+  const inp = document.getElementById("mute-input");
+  const k = inp.value.trim().toLowerCase();
+  if (k && !mute.keywords.includes(k)) { mute.keywords.push(k); saveMute(); }
+  inp.value = "";
+});
+document.getElementById("mute-list").addEventListener("click", e => {
+  const b = e.target.closest("[data-unmute]");
+  if (!b) return;
+  const t = b.dataset.unmute;
+  mute[t] = mute[t].filter(x => x !== b.dataset.v);
+  saveMute();
+});
+document.getElementById("articles").addEventListener("click", e => {
+  const b = e.target.closest("[data-mute-source]");
+  if (!b) return;
+  const id = b.dataset.muteSource;
+  if (!mute.sources.includes(id)) mute.sources.push(id);
+  saveMute();
+  toast("Muted " + b.dataset.muteName + ". Undo in the Mute list.");
 });
 
 // =========================================================================
@@ -1478,7 +1829,7 @@ const _origRefreshHandler = document.getElementById("btn-refresh");
 _origRefreshHandler.replaceWith(_origRefreshHandler.cloneNode(true));
 document.getElementById("btn-refresh").addEventListener("click", () => {
   if (activeTab === "guides") fetchGuides(true);
-  else fetchAll();
+  else refreshNews(true);
 });
 
 // Guides controls — Source filter, Sort, and Load more.
@@ -1542,14 +1893,17 @@ document.getElementById("latest-list").addEventListener("click", (e) => {
 // INIT
 // =========================================================================
 (function init() {
-  // Pre-populate source status from saved meta if present
-  SOURCES.forEach(s => {
+  // Pre-populate legacy source status from saved meta if present (fallback only)
+  LEGACY_SOURCES.forEach(s => {
     if (!meta.sourceStatus[s.name]) {
       meta.sourceStatus[s.name] = { state: "", message: "not yet fetched" };
     }
   });
 
+  // Never show the old localStorage scrape as if it were current data.
+  articles = [];
   render();
+  renderMuteList();
 
   // Honor hash-based deep link on first load (use replace to avoid extra history entry)
   const initialTab = tabFromHash();
@@ -1559,10 +1913,9 @@ document.getElementById("latest-list").addEventListener("click", (e) => {
     setActiveTab("news", { replace: true });
   }
 
-  // Auto-fetch on first visit (no articles yet)
-  if (articles.length === 0) {
-    setTimeout(() => fetchAll(), 400);
-  }
+  refreshNews(false);
+  setInterval(() => refreshNews(false), NEWS_POLL_MS);
+  setInterval(() => { updateStats(); renderBanner(); }, 30000);
 })();
 </script>
 

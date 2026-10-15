@@ -1,0 +1,44 @@
+{
+ "hits": [
+  {
+   "title": "LFM2.5-24B-A2B: Built for fast on-device agents",
+   "url": "https://www.liquid.ai/blog/lfm2-5-24b-a2b",
+   "points": 260,
+   "num_comments": 67,
+   "created_at": "2026-10-14T23:59:37Z",
+   "objectID": "50097369"
+  },
+  {
+   "title": "Show HN: Ito – Build Terminal UIs in Lua",
+   "url": "https://uji.sh/ito/",
+   "points": 56,
+   "num_comments": 10,
+   "created_at": "2026-10-14T22:23:53Z",
+   "objectID": "50096300"
+  },
+  {
+   "title": "Show HN: Petal, open-source CoScreen/ScreenHero finally free",
+   "url": "https://petal.live/",
+   "points": 202,
+   "num_comments": 39,
+   "created_at": "2026-10-14T18:23:14Z",
+   "objectID": "50092470"
+  },
+  {
+   "title": "Linus Torvalds's first LLM-assisted patch series",
+   "url": "https://lwn.net/Articles/1100449/",
+   "points": 117,
+   "num_comments": 98,
+   "created_at": "2026-10-14T16:55:07Z",
+   "objectID": "50090842"
+  },
+  {
+   "title": "Why do LLM pelicans look like this?",
+   "url": "https://arcfu.com/post/the-emperor-pelican-has-no-clothes/",
+   "points": 163,
+   "num_comments": 140,
+   "created_at": "2026-10-14T16:33:34Z",
+   "objectID": "50090443"
+  }
+ ]
+}

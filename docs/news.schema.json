@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://0xmortuex.github.io/ai-news-tracker/news.schema.json",
+  "title": "AI News Tracker news.json (ai-news/1)",
+  "description": "Contract for data/news.json. Within ai-news/1 changes are additive only: consumers must ignore unknown fields.",
+  "type": "object",
+  "required": ["schema", "schemaVersion", "generatedAt", "itemCount", "sources", "items"],
+  "properties": {
+    "schema": { "const": "ai-news/1" },
+    "schemaVersion": { "type": "integer", "minimum": 1 },
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "itemCount": { "type": "integer", "minimum": 0 },
+    "sources": { "type": "array", "items": { "$ref": "#/$defs/sourceHealth" } },
+    "items": { "type": "array", "maxItems": 1000, "items": { "$ref": "#/$defs/item" } }
+  },
+  "$defs": {
+    "item": {
+      "type": "object",
+      "required": [
+        "id", "cluster", "title", "url", "canonicalUrl", "source", "sourceId", "sourceKind", "country", "lang",
+        "publishedAt", "firstSeenAt", "kind", "importance", "companies", "models", "topics", "summary", "alsoIn", "breaking"
+      ],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[0-9a-f]{16}$" },
+        "cluster": { "type": "string", "pattern": "^c-[0-9a-f]{8}$" },
+        "title": { "type": "string", "minLength": 1, "maxLength": 300 },
+        "url": { "type": "string", "format": "uri", "maxLength": 2000 },
+        "canonicalUrl": { "type": "string", "format": "uri", "maxLength": 2000 },
+        "source": { "type": "string", "minLength": 1 },
+        "sourceId": { "type": "string", "minLength": 1 },
+        "sourceKind": { "enum": ["company", "news", "research", "community", "repo", "newsletter"] },
+        "country": { "enum": ["US", "CN", "EU", "OTHER"] },
+        "lang": { "type": "string", "minLength": 2, "maxLength": 8 },
+        "publishedAt": { "type": "string", "format": "date-time" },
+        "firstSeenAt": { "type": "string", "format": "date-time" },
+        "kind": { "enum": ["model-release", "paper", "policy", "funding", "product", "tool", "opinion", "security", "other"] },
+        "importance": { "type": "integer", "minimum": 0, "maximum": 100 },
+        "baseImportance": { "type": "integer", "minimum": 0, "maximum": 100 },
+        "companies": { "type": "array", "items": { "type": "string" } },
+        "models": { "type": "array", "items": { "type": "string" } },
+        "topics": { "type": "array", "items": { "type": "string" } },
+        "labels": { "type": "array", "items": { "type": "string" } },
+        "summary": { "type": "string", "maxLength": 280 },
+        "alsoIn": { "type": "array", "items": { "$ref": "#/$defs/alsoIn" } },
+        "breaking": { "type": "boolean" },
+        "sourceTier": { "type": "integer", "minimum": 1, "maximum": 4 },
+        "thirdParty": { "type": "boolean" },
+        "engagement": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "alsoIn": {
+      "type": "object",
+      "required": ["source", "url"],
+      "properties": {
+        "source": { "type": "string" },
+        "sourceId": { "type": "string" },
+        "url": { "type": "string", "format": "uri" },
+        "publishedAt": { "type": "string", "format": "date-time" }
+      }
+    },
+    "sourceHealth": {
+      "type": "object",
+      "required": ["id", "name", "status", "stale"],
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "category": { "type": "string" },
+        "tier": { "type": "integer", "minimum": 1, "maximum": 4 },
+        "thirdParty": { "type": "boolean" },
+        "status": { "enum": ["ok", "error", "never"] },
+        "stale": { "type": "boolean" },
+        "staleReason": { "type": ["string", "null"] },
+        "lastOk": { "type": ["string", "null"] },
+        "lastFetch": { "type": ["string", "null"] },
+        "lastError": { "type": ["string", "null"] },
+        "error": { "type": ["string", "null"] },
+        "httpStatus": { "type": ["integer", "null"] },
+        "consecutiveFailures": { "type": "integer", "minimum": 0 },
+        "lastNewItem": { "type": ["string", "null"] },
+        "itemCount": { "type": "integer", "minimum": 0 }
+      }
+    }
+  }
+}
