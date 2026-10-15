@@ -1,0 +1,110 @@
+{
+  "version": 1,
+  "comment": "Sources for guides.json. Every endpoint is a free public one, fetched once per run with the tracker User-Agent. Verified 2026-10-15 from a Windows machine; Reddit and the GitHub search API may rate limit CI runners, which shows up per source in guides.json 'sources'. Placeholders {since} = YYYY-MM-DD 90 days ago, {since_ts} = unix seconds 120 days ago. Dropped after the first live pass: r/ClaudeAI and r/MachineLearning answered HTTP 429 (only r/LocalLLaMA is served to the first request); Bluesky searchPosts needs auth (403), so only author feeds are used.",
+  "sources": [
+    {
+      "id": "hn-tutorial",
+      "name": "Hacker News: tutorials",
+      "type": "hn",
+      "url": "https://hn.algolia.com/api/v1/search?tags=story&query=LLM%20tutorial&numericFilters=points%3E30,created_at_i%3E{since_ts}&hitsPerPage=40"
+    },
+    {
+      "id": "hn-guide",
+      "name": "Hacker News: guides",
+      "type": "hn",
+      "url": "https://hn.algolia.com/api/v1/search?tags=story&query=AI%20guide%20how%20to&numericFilters=points%3E30,created_at_i%3E{since_ts}&hitsPerPage=40"
+    },
+    {
+      "id": "hn-show",
+      "name": "Hacker News: Show HN",
+      "type": "hn",
+      "url": "https://hn.algolia.com/api/v1/search_by_date?tags=show_hn&query=LLM&numericFilters=points%3E20,created_at_i%3E{since_ts}&hitsPerPage=40"
+    },
+    {
+      "id": "hn-ask",
+      "name": "Hacker News: Ask HN",
+      "type": "hn",
+      "url": "https://hn.algolia.com/api/v1/search_by_date?tags=ask_hn&query=LLM&numericFilters=points%3E15,created_at_i%3E{since_ts}&hitsPerPage=30"
+    },
+    {
+      "id": "devto-ai",
+      "name": "dev.to: ai",
+      "type": "devto",
+      "url": "https://dev.to/api/articles?tag=ai&top=30&per_page=40"
+    },
+    {
+      "id": "devto-llm",
+      "name": "dev.to: llm",
+      "type": "devto",
+      "url": "https://dev.to/api/articles?tag=llm&top=30&per_page=40"
+    },
+    {
+      "id": "reddit-localllama",
+      "name": "r/LocalLLaMA",
+      "type": "reddit",
+      "sub": "LocalLLaMA",
+      "url": "https://www.reddit.com/r/LocalLLaMA/top.rss?t=week"
+    },
+    {
+      "id": "gh-llm-tutorial",
+      "name": "GitHub: llm tutorials",
+      "type": "github",
+      "url": "https://api.github.com/search/repositories?q=topic:llm+topic:tutorial+stars:%3E50+pushed:%3E{since}&sort=stars&order=desc&per_page=20"
+    },
+    {
+      "id": "gh-awesome-llm",
+      "name": "GitHub: awesome llm lists",
+      "type": "github",
+      "url": "https://api.github.com/search/repositories?q=topic:awesome+topic:llm+stars:%3E200+pushed:%3E{since}&sort=stars&order=desc&per_page=15"
+    },
+    {
+      "id": "gh-agents-tutorial",
+      "name": "GitHub: agents tutorials",
+      "type": "github",
+      "url": "https://api.github.com/search/repositories?q=topic:ai-agents+topic:tutorial+stars:%3E50+pushed:%3E{since}&sort=stars&order=desc&per_page=15"
+    },
+    {
+      "id": "yt-karpathy",
+      "name": "Andrej Karpathy",
+      "type": "youtube",
+      "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCXUPKJO5MZQN11PqgIvyuvQ"
+    },
+    {
+      "id": "yt-yannic",
+      "name": "Yannic Kilcher",
+      "type": "youtube",
+      "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCZHmQk67mSJgfCCTn7xBfew"
+    },
+    {
+      "id": "yt-twominute",
+      "name": "Two Minute Papers",
+      "type": "youtube",
+      "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCbfYPyITQ-7l4upoX8nvctg"
+    },
+    {
+      "id": "yt-aiexplained",
+      "name": "AI Explained",
+      "type": "youtube",
+      "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCNJ1Ymd5yFuUPtn21xtRbbw"
+    },
+    {
+      "id": "yt-anthropic",
+      "name": "Anthropic",
+      "type": "youtube",
+      "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCOIji0UklfggVrY7Ym-IfDQ"
+    },
+    {
+      "id": "yt-openai",
+      "name": "OpenAI",
+      "type": "youtube",
+      "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCXZCJLdBC09xxGZ6gcdrc6A"
+    },
+    {
+      "id": "bsky-simonw",
+      "name": "Bluesky: simonwillison.net",
+      "type": "bluesky",
+      "handle": "simonwillison.net",
+      "url": "https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=simonwillison.net&limit=40&filter=posts_no_replies"
+    }
+  ]
+}

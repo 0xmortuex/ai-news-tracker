@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://0xmortuex.github.io/ai-news-tracker/releases.schema.json",
+  "title": "AI News Tracker releases.json (ai-news-releases/1)",
+  "description": "Model and tool release tracker, newest first, last 90 days, at most 300 records. Additive changes only within /1: consumers must ignore unknown fields.",
+  "type": "object",
+  "required": ["schema", "schemaVersion", "generatedAt", "releases"],
+  "properties": {
+    "schema": { "const": "ai-news-releases/1" },
+    "schemaVersion": { "type": "integer", "minimum": 1 },
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "windowDays": { "type": "integer", "minimum": 1 },
+    "count": { "type": "integer", "minimum": 0 },
+    "releases": { "type": "array", "maxItems": 300, "items": { "$ref": "#/$defs/release" } }
+  },
+  "$defs": {
+    "release": {
+      "type": "object",
+      "required": ["id", "date", "company", "model", "family", "kind", "url", "source", "summary", "importance", "open", "alsoIn"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[0-9a-f]{16}$" },
+        "date": { "type": "string", "format": "date-time" },
+        "company": { "type": "string", "minLength": 1 },
+        "model": { "type": "string", "minLength": 1, "maxLength": 120 },
+        "family": { "type": "string", "minLength": 1 },
+        "kind": { "enum": ["model", "tool", "dataset", "library"] },
+        "url": { "type": "string", "format": "uri", "maxLength": 2000 },
+        "source": { "type": "string", "minLength": 1 },
+        "summary": { "type": "string", "maxLength": 200 },
+        "importance": { "type": "integer", "minimum": 0, "maximum": 100 },
+        "open": { "type": ["boolean", "null"] },
+        "alsoIn": {
+          "type": "array",
+          "maxItems": 10,
+          "items": {
+            "type": "object",
+            "required": ["source", "url"],
+            "properties": {
+              "source": { "type": "string" },
+              "url": { "type": "string", "format": "uri", "maxLength": 2000 }
+            }
+          }
+        }
+      }
+    }
+  }
+}

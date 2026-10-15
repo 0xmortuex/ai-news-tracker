@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://0xmortuex.github.io/ai-news-tracker/status.schema.json",
+  "title": "AI News Tracker status.json (ai-news-status/1)",
+  "description": "Recent incidents from provider status feeds (last 7 days). Additive changes only within /1.",
+  "type": "object",
+  "required": ["schema", "schemaVersion", "generatedAt", "providers"],
+  "properties": {
+    "schema": { "const": "ai-news-status/1" },
+    "schemaVersion": { "type": "integer", "minimum": 1 },
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "windowDays": { "type": "integer" },
+    "providers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "incidents"],
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "company": { "type": ["string", "null"] },
+          "url": { "type": "string" },
+          "incidents": {
+            "type": "array",
+            "maxItems": 15,
+            "items": {
+              "type": "object",
+              "required": ["id", "title", "url", "publishedAt", "summary"],
+              "properties": {
+                "id": { "type": "string" },
+                "title": { "type": "string", "maxLength": 200 },
+                "url": { "type": "string", "format": "uri" },
+                "publishedAt": { "type": "string", "format": "date-time" },
+                "summary": { "type": "string", "maxLength": 280 }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

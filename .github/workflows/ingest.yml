@@ -25,7 +25,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '20' # tests run on Node 20 and 22 in test.yml
 
       - name: Test
         run: npm test
@@ -44,8 +44,22 @@ jobs:
       # Exits 1 without writing anything when news.json is invalid or below the
       # sanity floor (min items / min healthy sources / >50% drop), so the step
       # below is skipped and the previous data stays published.
+      # Besides news.json this writes releases.json, digest-daily.json, digest-weekly.json,
+      # digest.json (copy of the daily one), digest-daily.md, digest-weekly.md and status.json.
+      # Every file is schema-validated first; any failure refuses the whole run.
+      # The weekly digest is regenerated once per UTC day (the script reuses today's file
+      # on the other runs), so the 30 minute cadence does not churn it.
       - name: Ingest
         run: node scripts/ingest.mjs --out data
+
+      # guides.json replaces the old Cloudflare Worker /guides/aggregate route. Refreshed at
+      # most every 110 minutes. A failure here (rate limit, below the item floor) must not
+      # block the news publish: the previous guides.json restored above stays in place.
+      - name: Guides
+        continue-on-error: true
+        run: node scripts/guides.mjs --out data --min-age-min 110
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Publish to orphan data branch
         run: |

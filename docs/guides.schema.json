@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://0xmortuex.github.io/ai-news-tracker/guides.schema.json",
+  "title": "AI News Tracker guides.json (ai-news-guides/1)",
+  "description": "Learning and guide content aggregated server-side from free public sources, at most 150 items, newest first. Replaces the Cloudflare Worker /guides/aggregate route. English only. Additive changes only within /1.",
+  "type": "object",
+  "required": ["schema", "schemaVersion", "generatedAt", "items"],
+  "properties": {
+    "schema": { "const": "ai-news-guides/1" },
+    "schemaVersion": { "type": "integer", "minimum": 1 },
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "count": { "type": "integer", "minimum": 0 },
+    "featured": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["title", "url"],
+        "properties": {
+          "title": { "type": "string", "minLength": 1 },
+          "url": { "type": "string", "format": "uri" },
+          "author": { "type": "string" },
+          "description": { "type": "string" },
+          "tags": { "type": "array", "items": { "type": "string" } },
+          "dateAdded": { "type": "string" },
+          "type": { "type": "string" }
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "status", "count"],
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "status": { "enum": ["ok", "error"] },
+          "count": { "type": "integer", "minimum": 0 },
+          "error": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "items": { "type": "array", "maxItems": 150, "items": { "$ref": "#/$defs/item" } }
+  },
+  "$defs": {
+    "item": {
+      "type": "object",
+      "required": ["id", "title", "url", "source", "sourceKind", "publishedAt", "summary", "score"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[0-9a-f]{16}$" },
+        "title": { "type": "string", "minLength": 1, "maxLength": 300 },
+        "url": { "type": "string", "format": "uri", "maxLength": 2000 },
+        "source": { "type": "string", "minLength": 1 },
+        "sourceKind": { "enum": ["hn", "reddit", "devto", "github", "youtube", "bluesky", "blog"] },
+        "publishedAt": { "type": "string", "format": "date-time" },
+        "summary": { "type": "string", "maxLength": 280 },
+        "score": { "type": "integer", "minimum": 0 },
+        "comments": { "type": "integer", "minimum": 0 }
+      }
+    }
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://0xmortuex.github.io/ai-news-tracker/digest.schema.json",
+  "title": "AI News Tracker digest-daily.json / digest-weekly.json / digest.json (ai-news-digest/1)",
+  "description": "Top stories per topic for one period. digest-daily.json has period.kind 'daily' (last 24 h), digest-weekly.json 'weekly' (last 7 days); digest.json is a copy of the daily one. English-language items only. Additive changes only within /1.",
+  "type": "object",
+  "required": ["schema", "schemaVersion", "generatedAt", "period", "total", "sections", "sources"],
+  "properties": {
+    "schema": { "const": "ai-news-digest/1" },
+    "schemaVersion": { "type": "integer", "minimum": 1 },
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "lang": { "type": "string" },
+    "period": {
+      "type": "object",
+      "required": ["kind", "start", "end", "hours"],
+      "properties": {
+        "kind": { "enum": ["daily", "weekly"] },
+        "start": { "type": "string", "format": "date-time" },
+        "end": { "type": "string", "format": "date-time" },
+        "hours": { "type": "integer", "minimum": 1 },
+        "topN": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "total": { "type": "integer", "minimum": 0 },
+    "kinds": { "type": "object" },
+    "sections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "count", "items"],
+        "properties": {
+          "id": { "enum": ["model-release", "research", "open-source", "policy", "hardware", "funding", "safety", "tools", "china"] },
+          "title": { "type": "string" },
+          "count": { "type": "integer", "minimum": 0 },
+          "items": { "type": "array", "maxItems": 20, "items": { "$ref": "#/$defs/item" } }
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "count"],
+        "properties": { "id": { "type": "string" }, "name": { "type": "string" }, "count": { "type": "integer", "minimum": 1 } }
+      }
+    }
+  },
+  "$defs": {
+    "item": {
+      "type": "object",
+      "required": ["id", "title", "url", "source", "importance", "alsoIn"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[0-9a-f]{16}$" },
+        "title": { "type": "string", "minLength": 1, "maxLength": 300 },
+        "url": { "type": "string", "format": "uri", "maxLength": 2000 },
+        "source": { "type": "string" },
+        "sourceId": { "type": "string" },
+        "lang": { "type": "string" },
+        "publishedAt": { "type": "string", "format": "date-time" },
+        "kind": { "type": "string" },
+        "importance": { "type": "integer", "minimum": 0, "maximum": 100 },
+        "baseImportance": { "type": "integer", "minimum": 0, "maximum": 100 },
+        "summary": { "type": "string", "maxLength": 280 },
+        "alsoIn": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["source", "url"],
+            "properties": { "source": { "type": "string" }, "url": { "type": "string", "format": "uri", "maxLength": 2000 } }
+          }
+        }
+      }
+    }
+  }
+}

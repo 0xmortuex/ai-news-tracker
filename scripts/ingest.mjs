@@ -16,6 +16,7 @@ import { createHash } from 'node:crypto';
 import { runIngest } from './lib/ingest-core.mjs';
 import { buildAtom, buildJsonFeed } from './lib/build.mjs';
 import { validate, checkInvariants } from './lib/validate.mjs';
+import { buildDerived } from './lib/derived.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 
@@ -109,6 +110,29 @@ async function main() {
     fail(`item count fell from ${prevNews.items.length} to ${news.items.length} (more than 50%)`);
   }
 
+  // ---- Phase 2 derived files (releases, digests, status): validated before anything is written ----
+  const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+  const loadSchema = async n => JSON.parse(await readFile(path.join(root, 'docs', n), 'utf8'));
+  const derived = buildDerived({
+    news, sources: config.sources, pool: res.state.pool,
+    prev: {
+      releases: await readJsonIfExists(path.join(args.stateDir, 'releases.json')),
+      digestWeekly: await readJsonIfExists(path.join(args.stateDir, 'digest-weekly.json')),
+    },
+    forceWeekly: args.force,
+  });
+  const checks = [
+    ['releases.json', derived.objects.releases, 'releases.schema.json'],
+    ['digest-daily.json', derived.objects.daily, 'digest.schema.json'],
+    ['digest-weekly.json', derived.objects.weekly, 'digest.schema.json'],
+    ['status.json', derived.objects.status, 'status.schema.json'],
+  ];
+  for (const [name, obj, schemaFile] of checks) {
+    const e = validate(obj, await loadSchema(schemaFile));
+    if (e.length) fail(`${name} failed validation:\n  ${e.slice(0, 10).join('\n  ')}`);
+  }
+  console.log(`releases: ${derived.objects.releases.count}; digest daily ${derived.objects.daily.total} stories, weekly ${derived.objects.weekly.total}${derived.weeklyReused ? ' (reused: regenerated once per day)' : ''}; status providers ${derived.objects.status.providers.length}`);
+
   const newsText = JSON.stringify(news) + '\n';
   const summary = {
     items: news.items.length, sources: health.length, healthy: okSources,
@@ -131,7 +155,8 @@ async function main() {
   await atomicWrite(path.join(outDir, 'sources-health.json'), JSON.stringify({ schema: 'ai-news-health/1', generatedAt: news.generatedAt, sources: health }, null, 1) + '\n');
   await atomicWrite(path.join(outDir, 'index.json'), JSON.stringify(index, null, 1) + '\n');
   await atomicWrite(path.join(outDir, 'state.json'), JSON.stringify(res.state) + '\n');
-  console.log(`wrote 6 files to ${outDir}`);
+  for (const [name, text] of Object.entries(derived.files)) await atomicWrite(path.join(outDir, name), text);
+  console.log(`wrote ${6 + Object.keys(derived.files).length} files to ${outDir}`);
 }
 
 main().catch(e => { console.error(`ingest failed: ${e.stack || e.message}`); process.exit(1); });

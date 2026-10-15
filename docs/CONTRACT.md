@@ -100,3 +100,94 @@ A source is `stale` when it never succeeded, its last success is older than
 Treat every string as untrusted: render as text, only open `http(s)` URLs, cap lengths.
 The schema guarantees `url` is http(s) for files produced by the job; do not rely on it for
 files fetched from elsewhere.
+
+---
+
+# Phase 2 files
+
+All files below sit next to `news.json` on the `data` branch, each carries a `schema` string,
+`schemaVersion` and `generatedAt`, is validated against its JSON Schema before the job
+publishes, and follows the same rule as `ai-news/1`: additive changes only within `/1`,
+consumers ignore unknown fields. They contain English-language items only (Turkish items stay
+in `news.json`, tagged `lang: "tr"`); every item still has a `lang` field where it is derived
+from a news item so a client can filter.
+
+| File | Schema | Schema file | Notes |
+|---|---|---|---|
+| `releases.json` | `ai-news-releases/1` | [`releases.schema.json`](releases.schema.json) | model / tool release tracker, last 90 days, max 300, newest first |
+| `digest-daily.json` | `ai-news-digest/1` | [`digest.schema.json`](digest.schema.json) | `period.kind = "daily"`, last 24 h |
+| `digest-weekly.json` | `ai-news-digest/1` | [`digest.schema.json`](digest.schema.json) | `period.kind = "weekly"`, last 7 days, regenerated once per UTC day |
+| `digest.json` | `ai-news-digest/1` | [`digest.schema.json`](digest.schema.json) | byte-identical copy of `digest-daily.json` (compatibility) |
+| `digest-daily.md`, `digest-weekly.md` | n/a | n/a | the same digests as Markdown (titles, links, source, importance) |
+| `guides.json` | `ai-news-guides/1` | [`guides.schema.json`](guides.schema.json) | learning / guide content, replaces the Worker `/guides/aggregate` route |
+| `status.json` | `ai-news-status/1` | [`status.schema.json`](status.schema.json) | last 7 days of OpenAI and Claude status incidents |
+
+## `releases.json` (`ai-news-releases/1`)
+
+```
+{ schema, schemaVersion, generatedAt, windowDays: 90, count, releases: [ release ] }
+```
+
+| Field | Type | Meaning |
+|---|---|---|
+| `id` | 16 hex | `sha1(company + "|" + model)`; stable across runs, the dedupe key |
+| `date` | RFC 3339 | earliest date any member of the story was published (release day) |
+| `company` | string | `OpenAI`, `Anthropic`, `Google`, `Meta`, ...; from the Hugging Face org, then the model family, then the source's company. Tools use the source's company or the product name |
+| `model` | string | model or `Product vX.Y.Z` for tools (pre-release suffixes `-rcN`, `-beta` are folded into the final version) |
+| `family` | string | `GPT`, `Claude`, `Gemini`, `Muse`, `Ollama`, ... |
+| `kind` | `model` \| `tool` \| `dataset` \| `library` | |
+| `url`, `source` | string | the best English item for the release (lowest source tier, earliest) |
+| `summary` | string, <= 200 | the source's own excerpt |
+| `importance` | 0-100 | undecayed `baseImportance` of the underlying story, so it does not shrink as the release ages |
+| `open` | `true` \| `false` \| `null` | `true` only when a source says open weights (a Hugging Face repo, or "open-weight"/"open-source model"/Apache 2/MIT in the text); `false` only when the text says proprietary/closed; otherwise `null` (unknown, never guessed) |
+| `alsoIn` | `{source, url}[]` | other English members of the story, max 10 |
+
+Built from `news.json` items of kind `model-release` and from repo trackers (`kind: tool`). Records
+carry over between runs (the previous `releases.json` is restored from the data branch) so the
+window is really 90 days even though `news.json` keeps 14. At most 3 versions per tool or library are kept.
+
+## `digest-daily.json` / `digest-weekly.json` / `digest.json` (`ai-news-digest/1`)
+
+```
+{ schema, schemaVersion, generatedAt, lang: "en",
+  period: { kind: "daily" | "weekly", start, end, hours, topN },
+  total, kinds: { <kind>: n },
+  sections: [ { id, title, count, items: [ item ] } ],
+  sources: [ { id, name, count } ] }
+```
+
+- `period.end` is `news.generatedAt`; `start` is 24 h / 168 h earlier. The file is deterministic for a given `news.json`.
+- Section ids, in order: `model-release`, `research`, `open-source`, `policy`, `hardware`, `funding`, `safety`, `tools`, `china`.
+  An item is placed in the first of its `labels` that is a section (research only for papers), once.
+- `items` are the top `topN` (daily 5, weekly 8) of the section by `baseImportance`, then newest, then id. `count` is the section total before the cut.
+- item: `id, title, url, source, sourceId, lang, publishedAt, kind, importance, baseImportance, summary, alsoIn: [{source, url}]`.
+- `sources` lists every source that contributed a story in the period, most first.
+- Clients that need the weekly digest read `digest-weekly.json`; a client may fall back to `digest.json` only if `period.kind` matches what it asked for.
+
+## `guides.json` (`ai-news-guides/1`)
+
+```
+{ schema, schemaVersion, generatedAt, count, featured: [ ... ], sources: [ { id, name, status, count, error } ], items: [ item ] }
+```
+
+item: `id` (16 hex of the canonical URL), `title`, `url`, `source`, `sourceKind`
+(`hn` | `reddit` | `devto` | `github` | `youtube` | `bluesky` | `blog`), `publishedAt`, `summary` (<= 280),
+`score` (HN points, dev.to reactions, GitHub stars, Bluesky likes, else 0), optional `comments`.
+Newest first, deduplicated by canonical URL, at most 150, at most 40 per `sourceKind`, at most 120 days old.
+`source` follows the labels the Guides tab buckets on: `Hacker News`, `dev.to`, `GitHub`, `r/<sub>`,
+`YouTube: <channel>`, `Bluesky: @<handle>`. `featured` is `docs/featured-guides.json`. `sources` is the per-source result
+of the run (failures are listed, not hidden). Source list: `config/guide-sources.json`.
+Refreshed at most every 110 minutes; the job never replaces the file with one below 20 items.
+
+## `status.json` (`ai-news-status/1`)
+
+`{ schema, schemaVersion, generatedAt, windowDays: 7, providers: [ { id, name, company, url, incidents: [ { id, title, url, publishedAt, summary } ] } ] }`,
+newest first, max 15 incidents per provider. Status feeds (config category `status`) never appear in `news.json`.
+
+## Tagger additions (still `ai-news/1`)
+
+`kind`, `models` and `labels` values are produced by the same rule table with more coverage
+(lab brands such as `Muse`, `Timestral`, `Jais`; parameter counts such as `74B-A9B`; "is out",
+"Welcome X", "open-weight" phrasing). Model names are now more specific (`Gemini 4 Argon` rather than
+`Gemini 4`), so `models[]` values may differ from earlier runs for the same story.
+Items from provider status feeds are excluded from `items`.

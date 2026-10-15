@@ -29,6 +29,7 @@ export function buildNews(pool, sources, opts) {
   for (const p of pool) {
     const src = byId.get(p.sourceId);
     if (!src) continue; // source removed from config
+    if (src.category === 'status') continue; // provider status feeds go to status.json, not the news list
     let pubMs = Date.parse(p.publishedAt);
     if (Number.isNaN(pubMs) || pubMs > nowMs + 3600000) pubMs = Date.parse(p.firstSeenAt);
     if (Number.isNaN(pubMs)) pubMs = nowMs;
