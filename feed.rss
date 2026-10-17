@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>AI News Tracker: top stories</title>
+  <link>https://0xmortuex.github.io/ai-news-tracker/</link>
+  <description>The highest-scoring AI stories of the last 3 days, one entry per story. Title, link and a short excerpt only.</description>
+  <language>en</language>
+  <lastBuildDate>Sat, 17 Oct 2026 18:39:37 GMT</lastBuildDate>
+  <generator>ai-news-tracker/stories-1</generator>
+  <atom:link href="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss" rel="self" type="application/rss+xml"/>
+  <item>
+    <title>New model on Hugging Face: deepseek-ai/DeepSeek-V4.1-Flash-1017</title>
+    <link>https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-c24ede60</guid>
+    <pubDate>Sat, 17 Oct 2026 02:40:38 GMT</pubDate>
+    <description>3 sources: Hugging Face: DeepSeek models, Reddit r/LocalLLaMA (top of day), The Decoder. image-text-to-text · 814 likes · 0 downloads</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>model-release</category>
+    <category>release</category>
+    <category>DeepSeek</category>
+    <category>Hugging Face</category>
+    <category>DeepSeek-V4.1-Flash-1017</category>
+  </item>
+  <item>
+    <title>Welcome Muse Spark Open: open-weight frontier multimodal mixture-of-experts model from Meta</title>
+    <link>https://huggingface.co/blog/meta-muse-spark-open</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-3a189a1a</guid>
+    <pubDate>Thu, 15 Oct 2026 00:00:00 GMT</pubDate>
+    <description>4 sources: Hugging Face Blog, Reddit r/LocalLLaMA (top of day), Techmeme, The Decoder.</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>model-release</category>
+    <category>release</category>
+    <category>Alibaba</category>
+    <category>Hugging Face</category>
+    <category>Meta</category>
+    <category>Moonshot</category>
+  </item>
+  <item>
+    <title>Open From Data Center to Desktop: NVIDIA Expands Nemotron Family With Highest Efficiency Super VL and Bolt Models</title>
+    <link>https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-971c19b0</guid>
+    <pubDate>Thu, 15 Oct 2026 15:00:24 GMT</pubDate>
+    <description>5 sources: Hugging Face: NVIDIA models, Reddit r/LocalLLaMA (top of day), NVIDIA Blog, The Decoder and 1 more. NVIDIA today released Nemotron 3.5 Super VL, an open 120-billion-parameter model that delivers the fastest task completion and highest accuracy for specialized always-on agents. Joining it are two new edge models: Nemotron 3.5 Bolt 74B-A9B 24GB, optimized to balance…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>model-release</category>
+    <category>release</category>
+    <category>Hugging Face</category>
+    <category>NVIDIA</category>
+    <category>Nemotron 3.5 Bolt 74B</category>
+    <category>Nemotron 3.5 Super VL</category>
+  </item>
+  <item>
+    <title>New model on Hugging Face: nvidia/NVIDIA-Nemotron-Labs-Dory1.0-4B-BF16</title>
+    <link>https://huggingface.co/nvidia/NVIDIA-Nemotron-Labs-Dory1.0-4B-BF16</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-d5703f4f</guid>
+    <pubDate>Fri, 16 Oct 2026 18:25:29 GMT</pubDate>
+    <description>2 sources: Hugging Face: NVIDIA models, Reddit r/LocalLLaMA (top of day). text-generation · 74 likes · 674 downloads</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>model-release</category>
+    <category>release</category>
+    <category>Hugging Face</category>
+    <category>NVIDIA</category>
+    <category>NVIDIA-Nemotron-Labs-Dory1.0-4B-BF16</category>
+  </item>
+  <item>
+    <title>Ollama v0.40.6</title>
+    <link>https://github.com/ollama/ollama/releases/tag/v0.40.6</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-04572b0c</guid>
+    <pubDate>Sat, 17 Oct 2026 15:29:04 GMT</pubDate>
+    <description>Ollama releases. What&apos;s Changed win: prevent orphaned runners by @dhiltgen in #18500 gguf: add the q2_0 tensor and file types by @jmorganca in #18967 Launch clef in Ollama&apos;s cloud by @jberg5 in #19036 use identifiers for --ask mode question keys by @jberg5 in #19041 Full Changelog…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>tool</category>
+    <category>release</category>
+    <category>tooling</category>
+    <category>Ollama</category>
+  </item>
+  <item>
+    <title>Introducing Timestral</title>
+    <link>https://mistral.ai/news/timestral/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-17c78bde</guid>
+    <pubDate>Thu, 15 Oct 2026 12:00:00 GMT</pubDate>
+    <description>3 sources: Hugging Face: Mistral models, Mistral News, Reddit r/LocalLLaMA (top of day). State-of-the-art probabilistic forecasting in four sizes (5M–209M params), CPU-efficient, zero-shot ready.</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>model-release</category>
+    <category>release</category>
+    <category>Hugging Face</category>
+    <category>Mistral</category>
+    <category>Timestral</category>
+    <category>Timestral-123M</category>
+  </item>
+  <item>
+    <title>Shanghai AI Laboratory Releases Atria Dawn Full Version With a 512K Context Window</title>
+    <link>https://pandaily.com/shanghai-ai-lab-atria-dawn-full-release-512k-context-jobbench-weights-coming-soon</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-d834df8f</guid>
+    <pubDate>Sat, 17 Oct 2026 07:36:36 GMT</pubDate>
+    <description>Pandaily. The agent model built on a 744B MoE GLM-5.2 base moves past its September preview with higher scores on JobBench, WideSearch and PaperBench. Full weights are still marked &apos;Coming soon&apos;.</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>model-release</category>
+    <category>release</category>
+    <category>Zhipu</category>
+    <category>GLM-5.2-Base</category>
+  </item>
+  <item>
+    <title>New model on Hugging Face: tencent/Hy-Memory-30B-A3B</title>
+    <link>https://huggingface.co/tencent/Hy-Memory-30B-A3B</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-3552b142</guid>
+    <pubDate>Thu, 15 Oct 2026 09:52:00 GMT</pubDate>
+    <description>2 sources: Hugging Face: Tencent models, Reddit r/LocalLLaMA (top of day). text-generation · 153 likes · 736 downloads</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>model-release</category>
+    <category>release</category>
+    <category>Hugging Face</category>
+    <category>Tencent</category>
+    <category>Hy-Memory-30B-A3B</category>
+    <category>Opus 5</category>
+  </item>
+  <item>
+    <title>As AI giants rack up potential legal liabilities of tens of billions amid safety incidents, insurers worry claims may outpace limits on existing coverage (Jean Eaglesham/Wall Street Journal)</title>
+    <link>https://www.techmeme.com/261017/p11#a261017p11</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-f302d93d</guid>
+    <pubDate>Sat, 17 Oct 2026 13:45:01 GMT</pubDate>
+    <description>Techmeme. Jean Eaglesham / Wall Street Journal : As AI giants rack up potential legal liabilities of tens of billions amid safety incidents, insurers worry claims may outpace limits on existing coverage — The artificial-intelligence industry&apos;s phenomenal rate of growth means claims have…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>other</category>
+    <category>safety</category>
+  </item>
+  <item>
+    <title>Sources: Anthropic pitched its own AI safety bill to US lawmakers; the bill would limit the circumstances in which the government could block a model&apos;s release (Owen Dahlkamp/Politico)</title>
+    <link>https://www.techmeme.com/261016/p25#a261016p25</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-1e59128f</guid>
+    <pubDate>Fri, 16 Oct 2026 23:00:01 GMT</pubDate>
+    <description>Techmeme. Owen Dahlkamp / Politico : Sources: Anthropic pitched its own AI safety bill to US lawmakers; the bill would limit the circumstances in which the government could block a model&apos;s release — Representatives for the artificial intelligence giant Anthropic have quietly pitched…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>policy</category>
+    <category>safety</category>
+    <category>policy</category>
+    <category>Anthropic</category>
+  </item>
+  <item>
+    <title>DeepSeek 4.1 Flash 1017 Incoming? --&gt; DeepSeek users report a possible V4.1-Flash-1017 refresh across its API</title>
+    <link>https://www.reddit.com/r/LocalLLaMA/comments/1x825su/deepseek_41_flash_1017_incoming_deepseek_users/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-0d3b3794</guid>
+    <pubDate>Sat, 17 Oct 2026 05:34:11 GMT</pubDate>
+    <description>Reddit r/LocalLLaMA (top of day). Was waiting for this. Edit: And it just dropped: https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017 submitted by /u/chemist_slime [link] [comments]</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>model-release</category>
+    <category>release</category>
+    <category>tooling</category>
+    <category>DeepSeek</category>
+    <category>DeepSeek-4.1-Flash-1017</category>
+  </item>
+  <item>
+    <title>How Itaú is building generative AI for its entire customer base</title>
+    <link>https://openai.com/index/itau-generative-ai</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-7846c7ef</guid>
+    <pubDate>Fri, 16 Oct 2026 19:00:00 GMT</pubDate>
+    <description>OpenAI News. With ia.i, a conversational interface, and the IARA governance platform, Itaú is applying its AI First strategy to customers and employees — in one of Brazil’s most regulated sectors.</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>policy</category>
+    <category>policy</category>
+    <category>OpenAI</category>
+  </item>
+  <item>
+    <title>DeepSeek V4.1 Flash (1017) Now Leads Open-Weight Models</title>
+    <link>https://www.reddit.com/r/LocalLLaMA/comments/1x8bb6b/deepseek_v41_flash_1017_now_leads_openweight/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-41cb5c34</guid>
+    <pubDate>Sat, 17 Oct 2026 14:15:01 GMT</pubDate>
+    <description>Reddit r/LocalLLaMA (top of day). submitted by /u/Informal-Trouble2183 [link] [comments]</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>model-release</category>
+    <category>release</category>
+    <category>DeepSeek</category>
+    <category>DeepSeek-v4.1-Flash</category>
+  </item>
+  <item>
+    <title>Tencent Hunyuan Open-Sources Hy Memory 2.0, Adding Working and Code Memory for AI Agents</title>
+    <link>https://pandaily.com/tencent-hunyuan-hy-memory-2-0-open-source-working-code-memory-memhub-apache-2</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-4885929b</guid>
+    <pubDate>Sat, 17 Oct 2026 02:10:13 GMT</pubDate>
+    <description>Pandaily. The release spans an SDK, a 30B-A3B memory model and the MemHub local app. Tencent reports 72.6% on LoCoMo while cutting tokens per question from 1,159 to 703.</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>model-release</category>
+    <category>release</category>
+    <category>Tencent</category>
+  </item>
+  <item>
+    <title>Ollama v0.40.6-rc1: transfer: support proxies on registry redirect targets (#19065)</title>
+    <link>https://github.com/ollama/ollama/releases/tag/v0.40.6-rc1</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-6ff19f87</guid>
+    <pubDate>Fri, 16 Oct 2026 22:00:17 GMT</pubDate>
+    <description>Ollama releases. Behind a proxy, defer redirect-target DNS to the proxy; without one, keep the resolve-and-pin path. Trust default-registry/CDN hostnames with no local DNS. Fix a nil CancelFunc crash in blobDownload.release.</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>tool</category>
+    <category>release</category>
+    <category>tooling</category>
+    <category>Ollama</category>
+  </item>
+  <item>
+    <title>Claude Code v2.1.302</title>
+    <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.302</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-af99f43d</guid>
+    <pubDate>Fri, 16 Oct 2026 20:53:06 GMT</pubDate>
+    <description>Claude Code releases. What&apos;s changed Added CLAUDE_CODE_AUTO_MODE_MODEL to choose the model the client-side auto mode classifier uses; it does not change the model for server-side auto mode Added an Idle compaction row to /config for turning idle compaction off or back on; the notices shown after an…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>tool</category>
+    <category>release</category>
+    <category>tooling</category>
+    <category>Anthropic</category>
+    <category>Claude Code</category>
+  </item>
+  <item>
+    <title>New model on Hugging Face: nvidia/NVIDIA-Nemotron-Labs-Dory1.0-4B-NVFP4</title>
+    <link>https://huggingface.co/nvidia/NVIDIA-Nemotron-Labs-Dory1.0-4B-NVFP4</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-3771f432</guid>
+    <pubDate>Fri, 16 Oct 2026 18:30:41 GMT</pubDate>
+    <description>Hugging Face: NVIDIA models. text-generation · 6 likes · 369 downloads</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>model-release</category>
+    <category>release</category>
+    <category>Hugging Face</category>
+    <category>NVIDIA</category>
+    <category>NVIDIA-Nemotron-Labs-Dory1.0-4B-NVFP4</category>
+  </item>
+  <item>
+    <title>New model on Hugging Face: nvidia/NVIDIA-Nemotron-Labs-Dory1.0-4B-MXFP8</title>
+    <link>https://huggingface.co/nvidia/NVIDIA-Nemotron-Labs-Dory1.0-4B-MXFP8</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-1278abe8</guid>
+    <pubDate>Fri, 16 Oct 2026 18:26:53 GMT</pubDate>
+    <description>Hugging Face: NVIDIA models. text-generation · 3 likes · 213 downloads</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>model-release</category>
+    <category>release</category>
+    <category>Hugging Face</category>
+    <category>NVIDIA</category>
+    <category>NVIDIA-Nemotron-Labs-Dory1.0-4B-MXFP8</category>
+  </item>
+  <item>
+    <title>New model on Hugging Face: tencent/Qwen3-8B-DSpine-b16</title>
+    <link>https://huggingface.co/tencent/Qwen3-8B-DSpine-b16</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-a2e760a9</guid>
+    <pubDate>Fri, 16 Oct 2026 14:52:38 GMT</pubDate>
+    <description>Hugging Face: Tencent models. 21 likes · 151 downloads</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>model-release</category>
+    <category>release</category>
+    <category>Hugging Face</category>
+    <category>Tencent</category>
+    <category>Qwen3-8B-DSpine-b16</category>
+    <category>Qwen 3</category>
+  </item>
+  <item>
+    <title>Anthropics&apos; Claude cracks a 25-year-old NSA cryptography mystery in under 30 minutes</title>
+    <link>https://the-decoder.com/anthropics-claude-cracks-a-25-year-old-nsa-cryptography-mystery-in-under-30-minutes/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-e21353e0</guid>
+    <pubDate>Sat, 17 Oct 2026 14:42:56 GMT</pubDate>
+    <description>The Decoder. Anthropic&apos;s AI model Claude has solved a 25-year-old cryptography puzzle. The mysterious seeds behind NIST&apos;s standard curves for digital signatures were provided by the NSA without explanation, raising long-standing suspicion about built-in backdoors. Claude figured out in…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>policy</category>
+    <category>policy</category>
+    <category>Anthropic</category>
+  </item>
+  <item>
+    <title>Welcome Beam: a 501B open model you can own, customize, and scale</title>
+    <link>https://huggingface.co/blog/reflection-beam</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-bfc12177</guid>
+    <pubDate>Fri, 16 Oct 2026 00:00:00 GMT</pubDate>
+    <description>Hugging Face Blog.</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>model-release</category>
+    <category>release</category>
+    <category>Hugging Face</category>
+  </item>
+  <item>
+    <title>China’s proposed AI tech export bans may create short-term costs, long-term gains: analysts</title>
+    <link>https://www.scmp.com/tech/big-tech/article/3371247/chinas-proposed-ai-tech-export-bans-may-create-short-term-costs-long-term-gains-analysts?utm_source=rss_feed</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-ec3bbf1c</guid>
+    <pubDate>Sat, 17 Oct 2026 12:00:11 GMT</pubDate>
+    <description>SCMP Tech. China’s proposed export bans and controls of artificial intelligence technologies aim to tighten Beijing’s grip in the strategically vital sector, casting a cloud over the commercial prospects of domestic model developers in the global AI race, analysts say. The new measures…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>policy</category>
+    <category>policy</category>
+  </item>
+  <item>
+    <title>DeepSeek Adds Standalone Search and Fetch APIs for Agents, Priced at 5 Yuan per 1,000 Calls</title>
+    <link>https://pandaily.com/deepseek-api-search-fetch-endpoints-5-yuan-per-1000-requests-5-qps-agents-rag</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-6b5e02d7</guid>
+    <pubDate>Sat, 17 Oct 2026 02:09:35 GMT</pubDate>
+    <description>Pandaily. The new endpoints return structured web results or a page as Markdown. Each costs 5 yuan per 1,000 successful requests and is capped at 5 queries per second per account.</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>other</category>
+    <category>pricing</category>
+    <category>tooling</category>
+    <category>DeepSeek</category>
+  </item>
+  <item>
+    <title>Reflection AI releases Apache 2.0-licensed weights for Beam, a 501B-parameter model, trained with RL that penalized unnecessary tokens (Matt Marshall/VentureBeat)</title>
+    <link>https://www.techmeme.com/261016/p15#a261016p15</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-f363a165</guid>
+    <pubDate>Fri, 16 Oct 2026 16:40:02 GMT</pubDate>
+    <description>Techmeme. Matt Marshall / VentureBeat : Reflection AI releases Apache 2.0-licensed weights for Beam, a 501B-parameter model, trained with RL that penalized unnecessary tokens — Reflection AI today released the weights of Beam, its first open model, and is pitching it against the Chinese…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>model-release</category>
+    <category>release</category>
+  </item>
+  <item>
+    <title>Black Forest Labs&apos; open-weights image model FLUX 3 Image Klein runs on consumer GPUs with just 8 GB of VRAM</title>
+    <link>https://the-decoder.com/black-forest-labs-open-weights-image-model-flux-3-image-klein-runs-on-consumer-gpus-with-just-8-gb-of-vram/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-0d24e46e</guid>
+    <pubDate>Thu, 15 Oct 2026 16:57:14 GMT</pubDate>
+    <description>2 sources: The Decoder, Reddit r/LocalLLaMA (top of day). Black Forest Labs has released FLUX 3 Image Klein, a 5.6-billion-parameter open-weights image model that supports native 4K generation, pixel-precise editing, and generation with up to ten reference images. With 38 percent fewer parameters than its predecessor, it still…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>model-release</category>
+    <category>release</category>
+    <category>Flux 3 Image Klein</category>
+  </item>
+  <item>
+    <title>DeepSeek releases V4.1-Flash-1017, an update it says offers &quot;stronger benchmark performance, faster task completion, and shorter outputs&quot; than its predecessor (Saritha Rai/Bloomberg)</title>
+    <link>https://www.techmeme.com/261017/p13#a261017p13</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-d30b83e6</guid>
+    <pubDate>Sat, 17 Oct 2026 15:00:37 GMT</pubDate>
+    <description>Techmeme. Saritha Rai / Bloomberg : DeepSeek releases V4.1-Flash-1017, an update it says offers “stronger benchmark performance, faster task completion, and shorter outputs” than its predecessor — DeepSeek released an update of its AI model this weekend that it says is faster and leaner…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>product</category>
+    <category>research</category>
+    <category>DeepSeek</category>
+  </item>
+  <item>
+    <title>ComfyUI v0.41.3</title>
+    <link>https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.41.3</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-883d6785</guid>
+    <pubDate>Sat, 17 Oct 2026 04:26:50 GMT</pubDate>
+    <description>ComfyUI releases.</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>tool</category>
+    <category>release</category>
+    <category>tooling</category>
+    <category>ComfyUI</category>
+  </item>
+  <item>
+    <title>PROBE: Learning to Audit Policy Compliance in Tool-Using LLM Agents</title>
+    <link>https://arxiv.org/abs/2610.22124</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-1f30be36</guid>
+    <pubDate>Sat, 17 Oct 2026 04:00:00 GMT</pubDate>
+    <description>arXiv cs.AI (LLM-filtered). Modern agentic systems extend language models with external tools, enabling them to complete complex tasks through multi-turn interactions. As these agents are deployed in consequential settings, they are often constrained by policies governing pricing, privacy, confirmation…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>policy</category>
+    <category>pricing</category>
+    <category>research</category>
+    <category>policy</category>
+  </item>
+  <item>
+    <title>Microsoft unveils MAI-Base-2, a MoE model with 2.8T total and 80B active parameters, claiming 4x-12x more pretraining FLOPs-efficiency than DeepSeek-V4-Pro-Base (Microsoft AI)</title>
+    <link>https://www.techmeme.com/261015/p59#a261015p59</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-c5da08e1</guid>
+    <pubDate>Fri, 16 Oct 2026 02:20:01 GMT</pubDate>
+    <description>Techmeme. Microsoft AI : Microsoft unveils MAI-Base-2, a MoE model with 2.8T total and 80B active parameters, claiming 4x-12x more pretraining FLOPs-efficiency than DeepSeek-V4-Pro-Base — In June, we announced MAI-Thinking-1, a general-purpose foundation model post-trained on top of…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>model-release</category>
+    <category>release</category>
+    <category>DeepSeek</category>
+    <category>Microsoft</category>
+    <category>DeepSeek-v4-Pro-Base</category>
+  </item>
+  <item>
+    <title>vLLM v0.32.0rc3: [Bugfix] Fix NaN output of the Mamba2 chunk scan kernel on sm90 (#61718)</title>
+    <link>https://github.com/vllm-project/vllm/releases/tag/v0.32.0rc3</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-5a66f5ae</guid>
+    <pubDate>Sat, 17 Oct 2026 00:25:45 GMT</pubDate>
+    <description>vLLM releases. Signed-off-by: Vadim Gimpelson vadim.gimpelson@gmail.com Co-authored-by: Claude noreply@anthropic.com</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>tool</category>
+    <category>release</category>
+    <category>tooling</category>
+    <category>Anthropic</category>
+    <category>vLLM</category>
+  </item>
+</channel>
+</rss>
