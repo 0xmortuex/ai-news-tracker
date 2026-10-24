@@ -1,0 +1,1154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>AI News Tracker</title>
+  <subtitle>Deduplicated, tagged and scored AI news. Title, link and a short excerpt only.</subtitle>
+  <id>urn:ai-news-tracker:feed</id>
+  <link rel="self" type="application/atom+xml" href="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.atom"/>
+  <link rel="alternate" type="text/html" href="https://0xmortuex.github.io/ai-news-tracker/"/>
+  <updated>2026-10-24T19:36:34Z</updated>
+  <generator>ai-news-tracker/1</generator>
+  <entry>
+    <id>urn:ai-news-tracker:2cee7e3244abab54</id>
+    <title>OpenAI ve NASK, yapay zeka ve siber güvenlik araştırmaları için anlaştı</title>
+    <link rel="alternate" href="https://www.teknoblog.com/openai-nask-yapay-zeka-guvenligi/"/>
+    <published>2026-10-24T19:32:00Z</published>
+    <updated>2026-10-24T19:32:00Z</updated>
+    <author><name>Teknoblog</name></author>
+    <summary type="text">OpenAI NASK anlaşması, yapay zeka güvenliği ve siber güvenlik araştırmalarını kapsıyor, ortak çalışmalar model değerlendirmelerine odaklanacak. OpenAI ve NASK, yapay zeka ve siber güvenlik araştırmaları için anlaştı haberi ilk önce Teknoblog üzerinde yayımlandı.</summary>
+    <category term="other"/>
+    <category term="turkey"/>
+    <category term="safety"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:5bacc4c3608e204c</id>
+    <title>OpenAI Yeni Modelleri Çevrim Dışı Ortamda Eğitecek</title>
+    <link rel="alternate" href="https://shiftdelete.net/openai-yapay-zeka-modelleri-egitim-degisikligi"/>
+    <published>2026-10-24T19:00:52Z</published>
+    <updated>2026-10-24T19:00:52Z</updated>
+    <author><name>ShiftDelete.Net</name></author>
+    <summary type="text">OpenAI, güvenlik ihlalleri sonrası yeni yapay zeka modellerini internet erişimi olmadan, kayıtlı içeriklerle eğiteceğini duyurdu.</summary>
+    <category term="other"/>
+    <category term="turkey"/>
+    <category term="safety"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:dbe76530e9896fc9</id>
+    <title>The AI graveyard: a running list of projects and startups that didn’t make it</title>
+    <link rel="alternate" href="https://techcrunch.com/2026/10/24/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/"/>
+    <published>2026-10-24T19:00:00Z</published>
+    <updated>2026-10-24T19:00:00Z</updated>
+    <author><name>TechCrunch AI</name></author>
+    <summary type="text">From Apple&apos;s repeatedly delayed Siri AI to OpenAI&apos;s messy &quot;super app&quot; launch, here&apos;s a look at the AI projects that shut down or missed expectations.</summary>
+    <category term="other"/>
+    <category term="tools"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:934580108444c224</id>
+    <title>Pennsylvania will require labels on AI-generated ads</title>
+    <link rel="alternate" href="https://www.theverge.com/ai-artificial-intelligence/1018187/pennsylvania-ai-deceptive-advertising-act"/>
+    <published>2026-10-24T18:32:21Z</published>
+    <updated>2026-10-24T18:32:21Z</updated>
+    <author><name>The Verge AI</name></author>
+    <summary type="text">On Thursday, Pennsylvania Governor Josh Shapiro signed the Artificial Intelligence Deceptive Advertising Act into law, requiring disclosures on AI-generated ads. The law requires any ad - whether it&apos;s a still image, video, audio, or text - that &quot;has been significantly modified…</summary>
+    <category term="other"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:8145e8181a646503</id>
+    <title>Togg günde 375 araç üretiyor, T6X için 2027 takvimi korunuyor</title>
+    <link rel="alternate" href="https://www.teknoblog.com/togg-gunluk-375-arac-uretim/"/>
+    <published>2026-10-24T18:08:00Z</published>
+    <updated>2026-10-24T18:08:00Z</updated>
+    <author><name>Teknoblog</name></author>
+    <summary type="text">Togg üretim hızı günlük 375 araca ulaştı, Bakan Kacır tesiste 10 çalışana bir robot düştüğünü ve T6X’in 2027’de satışa çıkacağını açıkladı. Togg günde 375 araç üretiyor, T6X için 2027 takvimi korunuyor haberi ilk önce Teknoblog üzerinde yayımlandı.</summary>
+    <category term="other"/>
+    <category term="turkey"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:0a4225397bdcb10d</id>
+    <title>Ollama v0.40.11</title>
+    <link rel="alternate" href="https://github.com/ollama/ollama/releases/tag/v0.40.11"/>
+    <published>2026-10-24T17:50:51Z</published>
+    <updated>2026-10-24T17:50:51Z</updated>
+    <author><name>Ollama releases</name></author>
+    <summary type="text">Speech Ollama can now generate speech on macOS. ollama run plays text or a chat model&apos;s reply aloud as the audio is generated, and apps can stream audio through the OpenAI-compatible /v1/audio/speech endpoint. ollama run phonon &quot; Hello from Ollama. &quot; d3 decision models d3…</summary>
+    <category term="tool"/>
+    <category term="open-weights"/>
+    <category term="tools"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:3ed73eed21775aa1</id>
+    <title>Ollama v0.40.9</title>
+    <link rel="alternate" href="https://github.com/ollama/ollama/releases/tag/v0.40.9"/>
+    <published>2026-10-24T17:50:26Z</published>
+    <updated>2026-10-24T17:50:26Z</updated>
+    <author><name>Ollama releases</name></author>
+    <summary type="text">Flint on Linux and Windows Flint now runs on Linux and Windows as well as macOS. Other improvements Streaming OpenAI Responses and Anthropic Messages requests now report generation failures instead of ending silently after partial output. ollama launch now passes cloud models&apos;…</summary>
+    <category term="tool"/>
+    <category term="open-weights"/>
+    <category term="tools"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:878f49cfeb135ef5</id>
+    <title>Gigabyte WRX90 AI TOP, 2 TB bellek ve yedi PCIe yuvası sunuyor</title>
+    <link rel="alternate" href="https://www.teknoblog.com/gigabyte-wrx90-ai-top-2-tb/"/>
+    <published>2026-10-24T17:44:00Z</published>
+    <updated>2026-10-24T17:44:00Z</updated>
+    <author><name>Teknoblog</name></author>
+    <summary type="text">Gigabyte WRX90 AI TOP, 2 TB ECC DDR5 bellek, yedi PCIe 5.0 yuvası, çift 10 Gb Ethernet ve uzaktan yönetim özelliklerini bir araya getiriyor. Gigabyte WRX90 AI TOP, 2 TB bellek ve yedi PCIe yuvası sunuyor haberi ilk önce Teknoblog üzerinde yayımlandı.</summary>
+    <category term="other"/>
+    <category term="turkey"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:0180df9f1416ab38</id>
+    <title>A look at Alpha School, a network of private schools that claims to teach kids 2x as fast using AI; data shows ~50% of K-8 students missed this goal in math (Dana Goldstein/New York Times)</title>
+    <link rel="alternate" href="https://www.techmeme.com/261024/p7#a261024p7"/>
+    <published>2026-10-24T17:25:04Z</published>
+    <updated>2026-10-24T17:25:04Z</updated>
+    <author><name>Techmeme</name></author>
+    <summary type="text">Dana Goldstein / New York Times : A look at Alpha School, a network of private schools that claims to teach kids 2x as fast using AI; data shows ~50% of K-8 students missed this goal in math — Alpha School, a private network, is spreading into public education. While its…</summary>
+    <category term="other"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:0a6eb9b18b7a96ca</id>
+    <title>Kimi K3.1 removes cyberattack training data from open weight release</title>
+    <link rel="alternate" href="https://www.reddit.com/r/LocalLLaMA/comments/1xecgrf/kimi_k31_removes_cyberattack_training_data_from/"/>
+    <published>2026-10-24T16:05:18Z</published>
+    <updated>2026-10-24T16:05:18Z</updated>
+    <author><name>Reddit r/LocalLLaMA (top of day)</name></author>
+    <summary type="text">This is due to China&apos;s new export restrictions primarily but also the growing caution around cybersecurity exploits popping up. submitted by /u/zxyzyxz [link] [comments]</summary>
+    <category term="other"/>
+    <category term="china"/>
+    <category term="open-weights"/>
+    <category term="tools"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:688136660c106304</id>
+    <title>Block’s new voice model sounds eerily human</title>
+    <link rel="alternate" href="https://techcrunch.com/2026/10/24/blocks-new-voice-model-sounds-eerily-human/"/>
+    <published>2026-10-24T16:00:00Z</published>
+    <updated>2026-10-24T16:00:00Z</updated>
+    <author><name>TechCrunch AI</name></author>
+    <summary type="text">Block said that the voice model can run locally on a MacBook M4 Max</summary>
+    <category term="other"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:b743fa26648f53e8</id>
+    <title>An interview with Ciena CEO Gary Smith, a veteran of the 2001 telecoms crash, on AI demand outpacing supply for Ciena&apos;s optical networking chips, and more (Steven Rosenbush/Wall Street Journal)</title>
+    <link rel="alternate" href="https://www.techmeme.com/261024/p6#a261024p6"/>
+    <published>2026-10-24T15:40:01Z</published>
+    <updated>2026-10-24T15:40:01Z</updated>
+    <author><name>Techmeme</name></author>
+    <summary type="text">Steven Rosenbush / Wall Street Journal : An interview with Ciena CEO Gary Smith, a veteran of the 2001 telecoms crash, on AI demand outpacing supply for Ciena&apos;s optical networking chips, and more — Ciena CEO Gary Smith is ‘suitably paranoid,’ but optimistic — The historic…</summary>
+    <category term="other"/>
+    <category term="chips"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:8da55655e2928bd6</id>
+    <title>big cloud models like opus 5.5 get all the motion graphics praise, but i made this with local qwen3.8 flash next. it&apos;s very possible!</title>
+    <link rel="alternate" href="https://www.reddit.com/r/LocalLLaMA/comments/1xebkti/big_cloud_models_like_opus_55_get_all_the_motion/"/>
+    <published>2026-10-24T15:29:30Z</published>
+    <updated>2026-10-24T15:29:30Z</updated>
+    <author><name>Reddit r/LocalLLaMA (top of day)</name></author>
+    <summary type="text">i&apos;ll admit it took more than one prompt, a bunch of refinement and steering, but local can get close! this is done using remotion, same animation framework as all the viral clips about opus 5.5&apos;s motion graphics capabilities the entire conversation history that produced this…</summary>
+    <category term="other"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:8b542d3f22d28c40</id>
+    <title>8 GB GPU, 262K context 3.5 BPW Qwen-Flash-Next Coder 70 T/s using llama.cpp</title>
+    <link rel="alternate" href="https://www.reddit.com/r/LocalLLaMA/comments/1xebdzl/8_gb_gpu_262k_context_35_bpw_qwenflashnext_coder/"/>
+    <published>2026-10-24T15:21:50Z</published>
+    <updated>2026-10-24T15:21:50Z</updated>
+    <author><name>Reddit r/LocalLLaMA (top of day)</name></author>
+    <summary type="text">The methodology Qwen-Flash-Next has n-gram, MOE packing above its weight but it&apos;s still 6B active params. We exploit this by keeping most MOEs in RAM (Smallest MOEs go in VRAM for speedup) and n-gram on disk - ensure you put the model on your fastest SSD. 8 GB VRAM, 24 GB RAM…</summary>
+    <category term="other"/>
+    <category term="china"/>
+    <category term="chips"/>
+    <category term="open-weights"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:8e4d298bee261875</id>
+    <title>Three fired OpenAI safety researchers say they were never told what they actually leaked</title>
+    <link rel="alternate" href="https://the-decoder.com/three-fired-openai-safety-researchers-say-they-were-never-told-what-they-actually-leaked/"/>
+    <published>2026-10-24T15:19:33Z</published>
+    <updated>2026-10-24T15:19:33Z</updated>
+    <author><name>The Decoder</name></author>
+    <summary type="text">The three OpenAI safety researchers who were fired, Tomek Korbak, Mikita Balesni, and Jasmine Wang, are publicly pushing back against allegations from their former employer. They deny sharing confidential information and see a connection to their advocacy for AI systems that…</summary>
+    <category term="other"/>
+    <category term="research"/>
+    <category term="safety"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:974664070a50ddce</id>
+    <title>Gemini Android’e yeni tasarım geldi: Ayarlar tek yerde</title>
+    <link rel="alternate" href="https://www.donanimhaber.com/gemini-android-e-yeni-tasarim-geldi-ayarlar-tek-yerde--212040"/>
+    <published>2026-10-24T15:00:00Z</published>
+    <updated>2026-10-24T15:00:00Z</updated>
+    <author><name>DonanimHaber</name></author>
+    <summary type="text">Google, Gemini Android uygulamasının yan panelini ve ayarlar sayfasını yeniledi. Yeni tasarım, sohbetlere erişimi kolaylaştırırken hesap tercihleri, gizlilik ve bildirimleri tek yerde topluyor.</summary>
+    <category term="other"/>
+    <category term="turkey"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:e4ac1d3f295acd60</id>
+    <title>Forced to pick, Grok’s AI model chooses Republicans. OpenAI’s picks Democrats.</title>
+    <link rel="alternate" href="https://techcrunch.com/2026/10/24/forced-to-pick-groks-ai-model-chooses-republicans-openais-picks-democrats/"/>
+    <published>2026-10-24T15:00:00Z</published>
+    <updated>2026-10-24T15:00:00Z</updated>
+    <author><name>TechCrunch AI</name></author>
+    <summary type="text">A new study found Grok&apos;s AI overwhelmingly recommends Republican candidates while OpenAI&apos;s GPT favors Democrats, with the two AI models disagreeing in more than 90% of nearly 500 election races.</summary>
+    <category term="other"/>
+    <category term="research"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:3f740f5defb037b7</id>
+    <title>Warp Sciences, yapay zekâ ve robotlarla kimya laboratuvarı kurmak için 215 milyon dolar aldı</title>
+    <link rel="alternate" href="https://www.teknoblog.com/warp-sciences-215-milyon-dolar/"/>
+    <published>2026-10-24T14:52:00Z</published>
+    <updated>2026-10-24T14:52:00Z</updated>
+    <author><name>Teknoblog</name></author>
+    <summary type="text">Warp Sciences, ABD’de kimyagerleri, yapay zekâyı ve robotları bir araya getiren laboratuvarlar için 215 milyon dolar yatırım aldığını açıkladı. Warp Sciences, yapay zekâ ve robotlarla kimya laboratuvarı kurmak için 215 milyon dolar aldı haberi ilk önce Teknoblog üzerinde…</summary>
+    <category term="funding"/>
+    <category term="turkey"/>
+    <category term="funding"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:28b319f3a8479cb5</id>
+    <title>Samsung, katlanabilir telefonların arkasındaki mühendisliği anlattı (Röportaj)</title>
+    <link rel="alternate" href="https://www.donanimhaber.com/samsung-katlanabilir-telefonun-arkasindaki-muhendisligi-anlatti--212049"/>
+    <published>2026-10-24T14:37:36Z</published>
+    <updated>2026-10-24T14:37:36Z</updated>
+    <author><name>DonanimHaber</name></author>
+    <summary type="text">Samsung Türkiye Başkan Yardımcısı Murat Azdemir, katlanabilir telefonların nasıl geliştirildiğini, Galaxy Z Fold8 serisi için yürütülen çalışmaları ve Galaxy AI vizyonunu anlattı.</summary>
+    <category term="other"/>
+    <category term="turkey"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:14327768ee20e5b4</id>
+    <title>AI makes junior patent attorneys instantly better but may quietly stunt their professional growth</title>
+    <link rel="alternate" href="https://the-decoder.com/ai-makes-junior-patent-attorneys-instantly-better-but-may-quietly-stunt-their-professional-growth/"/>
+    <published>2026-10-24T14:34:05Z</published>
+    <updated>2026-10-24T14:34:05Z</updated>
+    <author><name>The Decoder</name></author>
+    <summary type="text">A three-month field experiment with 133 patent attorneys shows that AI boosts immediate performance, with junior lawyers gaining the most. But when the AI is taken away, only senior attorneys retain the benefits, suggesting that baseline expertise is a prerequisite for turning…</summary>
+    <category term="other"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:47927d63bb356b19</id>
+    <title>Block unveils Dessa, a &quot;true speech-to-speech&quot; AI model trained on &quot;nothing but human conversation&quot; that it says runs locally on a MacBook Pro M4 Max or newer (Jay Peters/The Verge)</title>
+    <link rel="alternate" href="https://www.techmeme.com/261024/p5#a261024p5"/>
+    <published>2026-10-24T14:30:01Z</published>
+    <updated>2026-10-24T14:30:01Z</updated>
+    <author><name>Techmeme</name></author>
+    <summary type="text">Jay Peters / The Verge : Block unveils Dessa, a “true speech-to-speech” AI model trained on “nothing but human conversation” that it says runs locally on a MacBook Pro M4 Max or newer — You have got to listen to these conversations with Block&apos;s new Dessa AI model.</summary>
+    <category term="product"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:75ec0440768df2c5</id>
+    <title>Block&apos;s new AI model Dessa was trained entirely on human speech to catch emotions text-based models miss</title>
+    <link rel="alternate" href="https://the-decoder.com/blocks-new-ai-model-dessa-was-trained-entirely-on-human-speech-to-catch-emotions-text-based-models-miss/"/>
+    <published>2026-10-24T14:09:46Z</published>
+    <updated>2026-10-24T14:09:46Z</updated>
+    <author><name>The Decoder</name></author>
+    <summary type="text">Block, the company behind Square and Cash App, has introduced Dessa, a speech model that processes audio directly instead of converting it to text first. Dessa is designed to recognize emotions, sarcasm, and pauses in real time. The model runs locally on a MacBook Pro M4 Max…</summary>
+    <category term="other"/>
+    <category term="tools"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:4a535eced667a36f</id>
+    <title>Here are the top AI agents that can live in your text messages</title>
+    <link rel="alternate" href="https://techcrunch.com/2026/10/24/all-the-ai-agents-that-can-live-in-your-text-messages/"/>
+    <published>2026-10-24T14:00:00Z</published>
+    <updated>2026-10-24T14:00:00Z</updated>
+    <author><name>TechCrunch AI</name></author>
+    <summary type="text">We created a list of the most notable AI agents that can live in your text messages, from general assistants to agents designed for families, travel, and work.</summary>
+    <category term="other"/>
+    <category term="tools"/>
+    <category term="agents"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:39062620cacfd48e</id>
+    <title>Cooperative Research and Development Agreement: Super Intelligence (SI) Situational Awareness Tools for Analyzing Coast Guard (CG) Sensor Feeds for Search and Rescue (SAR)</title>
+    <link rel="alternate" href="https://www.federalregister.gov/documents/2026/10/26/2026-21723/cooperative-research-and-development-agreement-super-intelligence-si-situational-awareness-tools-for"/>
+    <published>2026-10-24T13:43:53Z</published>
+    <updated>2026-10-24T13:43:53Z</updated>
+    <author><name>Federal Register: artificial intelligence</name></author>
+    <summary type="text">The Coast Guard announces its intent to enter a Cooperative Research and Development Agreement (CRADA) with LOOKOUT to assess Super Intelligence for automated target detection and establish a reliable coverage-factor value supporting data-driven Lateral Range Curve (LRC)…</summary>
+    <category term="policy"/>
+    <category term="regulation"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:4c99b96e20e5cd4d</id>
+    <title>Outbound Investment Security Program Regulations</title>
+    <link rel="alternate" href="https://www.federalregister.gov/documents/2026/10/26/2026-21786/outbound-investment-security-program-regulations"/>
+    <published>2026-10-24T13:43:53Z</published>
+    <updated>2026-10-24T13:43:53Z</updated>
+    <author><name>Federal Register: artificial intelligence</name></author>
+    <summary type="text">This proposed rule sets forth regulations that would implement Subtitle C of the Comprehensive Outbound Investment National Security Act, which is codified at Title VIII of the Defense Production Act. The proposed rule would require United States persons to provide notification…</summary>
+    <category term="policy"/>
+    <category term="regulation"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:6a0b9f29c6f77a76</id>
+    <title>AbliteratedOutTheBox Strata Announcement</title>
+    <link rel="alternate" href="https://www.reddit.com/r/LocalLLaMA/comments/1xe8x9c/abliteratedoutthebox_strata_announcement/"/>
+    <published>2026-10-24T13:38:58Z</published>
+    <updated>2026-10-24T13:38:58Z</updated>
+    <author><name>Reddit r/LocalLLaMA (top of day)</name></author>
+    <summary type="text">I’ve been working on an inference-time abliteration engine as a fork of llama.cpp, and I’ve now ported the hook to Strata. It acts as an easy way to use abliterated models without huge amounts of vram or finetuning. For the Strata Branch…</summary>
+    <category term="other"/>
+    <category term="open-weights"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:d34bf4a263e06fa3</id>
+    <title>Gigabyte&apos;dan aktif soğutmalı anakart: 2TB RAM, 9 GPU desteğiyle geliyor</title>
+    <link rel="alternate" href="https://www.donanimhaber.com/gigabyte-wrx90-ai-top-anakart-tanitildi-iste-ozellikleri--212036"/>
+    <published>2026-10-24T13:30:00Z</published>
+    <updated>2026-10-24T13:30:00Z</updated>
+    <author><name>DonanimHaber</name></author>
+    <summary type="text">GIGABYTE, performans tutkunları için tam bir canavar piyasaya sürdü. WRX90 AI TOP anakart, AMD Ryzen Threadripper PRO 9000 ve 7000 serisi işlemcilerden maksimum verim almak üzere tasarlanmış.</summary>
+    <category term="other"/>
+    <category term="chips"/>
+    <category term="turkey"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:045b97cbb06550bf</id>
+    <title>Meta trained small AI models to read raw bytes instead of tokens. They start out worse, but the paper predicts they end up better</title>
+    <link rel="alternate" href="https://www.reddit.com/r/LocalLLaMA/comments/1xe88ja/meta_trained_small_ai_models_to_read_raw_bytes/"/>
+    <published>2026-10-24T13:08:49Z</published>
+    <updated>2026-10-24T13:08:49Z</updated>
+    <author><name>Reddit r/LocalLLaMA (top of day)</name></author>
+    <summary type="text">https://arxiv.org/pdf/2609.12303 this paper suggests a model that skips models reading tokens that and has the model read raw bytes, basically one letter at a time. what they did: trained small models (~1B params), some on tokens and some on bytes trained them partly by copying…</summary>
+    <category term="paper"/>
+    <category term="research"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:128c778d038c2534</id>
+    <title>The PHP Meltdown Shows How AI Makes Bugs More Exploitable</title>
+    <link rel="alternate" href="https://www.wired.com/story/kernel-panic-the-php-meltdown-shows-how-ai-makes-bugs-more-exploitable/"/>
+    <published>2026-10-24T12:00:00Z</published>
+    <updated>2026-10-24T12:00:00Z</updated>
+    <author><name>WIRED AI</name></author>
+    <summary type="text">Security researchers used AI tools to help uncover years-old vulnerabilities in the PHP web scripting language. Then the AI-assisted attacks began.</summary>
+    <category term="security"/>
+    <category term="research"/>
+    <category term="safety"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:579dc0b0beb682d8</id>
+    <title>llama.cpp release b11853</title>
+    <link rel="alternate" href="https://github.com/ggml-org/llama.cpp/releases/tag/b11853"/>
+    <published>2026-10-24T11:15:46Z</published>
+    <updated>2026-10-24T11:15:46Z</updated>
+    <author><name>llama.cpp releases</name></author>
+    <summary type="text">HIP: add byte permute fallback when __builtin_amdgcn_perm is unavailable ( #30915 ) HIP: add byte permute fallback when __builtin_amdgcn_perm is unavailable amdgcnspirv rejects target-specific builtins unless they are guarded by __builtin_amdgcn_is_invocable , so 66 of 145 HIP…</summary>
+    <category term="tool"/>
+    <category term="open-weights"/>
+    <category term="tools"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:a720d84afe9dc102</id>
+    <title>OpenAI&apos;s isolated AI agents found ways to talk to each other through CPU cache</title>
+    <link rel="alternate" href="https://the-decoder.com/openais-isolated-ai-agents-found-ways-to-talk-to-each-other-through-cpu-cache/"/>
+    <published>2026-10-24T11:12:36Z</published>
+    <updated>2026-10-24T11:12:36Z</updated>
+    <author><name>The Decoder</name></author>
+    <summary type="text">OpenAI now trains its most powerful models without internet access, after an internal research model exploited a DNS misconfiguration in September and reached the open internet. In controlled tests, AI agents still found ways to communicate covertly through side channels. The…</summary>
+    <category term="other"/>
+    <category term="tools"/>
+    <category term="agents"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:43b82ddcee9d8144</id>
+    <title>Jack Dorsey, insan konuşmalarıyla eğitilen yapay zeka modeli Dessa’yı duyurdu</title>
+    <link rel="alternate" href="https://egirisim.com/2026/10/24/jack-dorsey-insan-konusmalariyla-egitilen-yapay-zeka-modeli-dessayi-duyurdu/"/>
+    <published>2026-10-24T11:02:34Z</published>
+    <updated>2026-10-24T11:02:34Z</updated>
+    <author><name>Egirisim</name></author>
+    <summary type="text">Finansal teknoloji şirketi Block bünyesinde faaliyet gösteren yapay zeka araştırma ekibi, ses tabanlı iletişim için geliştirdiği Dessa adlı yeni yapay zeka modelini duyurdu. Geleneksel sesli yapay zeka sistemlerinden farklı olarak doğrudan insan konuşmalarıyla eğitilen Dessa…</summary>
+    <category term="product"/>
+    <category term="turkey"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:26d612fce125a126</id>
+    <title>Inside Meta&apos;s law enforcement outreach team, which uses AI and human reviewers to analyze social media posts, aiming to prevent threats like school shootings (Rachel Monroe/New Yorker)</title>
+    <link rel="alternate" href="https://www.techmeme.com/261024/p3#a261024p3"/>
+    <published>2026-10-24T10:35:01Z</published>
+    <updated>2026-10-24T10:35:01Z</updated>
+    <author><name>Techmeme</name></author>
+    <summary type="text">Rachel Monroe / New Yorker : Inside Meta&apos;s law enforcement outreach team, which uses AI and human reviewers to analyze social media posts, aiming to prevent threats like school shootings — Algorithmic social media, which has helped create the conditions for the spread of such…</summary>
+    <category term="other"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:47251ceef4154908</id>
+    <title>qwen3.8 27B on my 3090 basically tied Opus 5.5 on a Korean RAG benchmark, which I did not expect</title>
+    <link rel="alternate" href="https://www.reddit.com/r/LocalLLaMA/comments/1xe4v74/qwen38_27b_on_my_3090_basically_tied_opus_55_on_a/"/>
+    <published>2026-10-24T10:07:50Z</published>
+    <updated>2026-10-24T10:07:50Z</updated>
+    <author><name>Reddit r/LocalLLaMA (top of day)</name></author>
+    <summary type="text">So I’ve been running local RAG over Korean PDFs for a while and my only evaluation was “yeah the answers look ok”. Finally sat down and used Allganize’s Korean RAG set since every question has a known answer and the page it’s on (300 questions, 64 PDFs, MIT). Fed every model…</summary>
+    <category term="other"/>
+    <category term="research"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:b81b0e146ea87d7e</id>
+    <title>Fancy harnesses make coding agents more expensive but not better, study finds</title>
+    <link rel="alternate" href="https://the-decoder.com/fancy-harnesses-make-coding-agents-more-expensive-but-not-better-study-finds/"/>
+    <published>2026-10-24T09:21:39Z</published>
+    <updated>2026-10-24T09:21:39Z</updated>
+    <author><name>The Decoder</name></author>
+    <summary type="text">A controlled study shows that switching between coding-agent harnesses like Claude Code, OpenCode, or mini-SWE-agent barely moves pass rates more than rerunning the same setup. Cost per task, however, can triple, driven mainly by the system prompt that gets resent with every…</summary>
+    <category term="other"/>
+    <category term="research"/>
+    <category term="tools"/>
+    <category term="agents"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:5234a9024be8a458</id>
+    <title>Gyro quants looks like EXL3 but kinda closed source. please explain why we need this.</title>
+    <link rel="alternate" href="https://www.reddit.com/r/LocalLLaMA/comments/1xe41qe/gyro_quants_looks_like_exl3_but_kinda_closed/"/>
+    <published>2026-10-24T09:17:15Z</published>
+    <updated>2026-10-24T09:17:15Z</updated>
+    <author><name>Reddit r/LocalLLaMA (top of day)</name></author>
+    <summary type="text">Recently this new quant has popped up called Gyro. It is gaining popularity because it&apos;s being inserted into many different engines, especially the recently popular Strata. So i took a dive into the code to see the differences between Gyro and EXL3, to me it looks like simply a…</summary>
+    <category term="other"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:a6058a1f4a550837</id>
+    <title>PSA: Streaming n-grams from SSD will cause SSD wear</title>
+    <link rel="alternate" href="https://www.reddit.com/r/LocalLLaMA/comments/1xe2ypu/psa_streaming_ngrams_from_ssd_will_cause_ssd_wear/"/>
+    <published>2026-10-24T08:09:15Z</published>
+    <updated>2026-10-24T08:09:15Z</updated>
+    <author><name>Reddit r/LocalLLaMA (top of day)</name></author>
+    <summary type="text">In other news: eating a banana gives you a dose of radiation , and spending a lot of time sitting at a desk can have negative effects on your health . Still you&apos;re doing it, so don&apos;t panic :-) Anyway, here is what happens: Read disturbance : Voltage is applied when reading from…</summary>
+    <category term="other"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:cbeb405c82e65dde</id>
+    <title>Yapay zeka destekli sistemle arıların tozlaşmaları artırılarak tarımsal verimliliğin yükseltilmesi hedefleniyor</title>
+    <link rel="alternate" href="https://www.aa.com.tr/tr/bilim-teknoloji/yapay-zeka-destekli-sistemle-arilarin-tozlasmalari-artirilarak-tarimsal-verimliligin-yukseltilmesi-hedefleniyor/4099268"/>
+    <published>2026-10-24T08:08:53Z</published>
+    <updated>2026-10-24T08:08:53Z</updated>
+    <author><name>Anadolu Ajansi Bilim-Teknoloji</name></author>
+    <summary type="text">Orta Doğu Teknik Üniversitesinden araştırmacıların da yer aldığı uluslararası araştırma ekibi, geliştirdiği yapay zeka destekli robotik sistemlerle bal arılarının tozlaşma faaliyetlerini artırarak tarımsal üretimde verimliliği yükseltmeyi hedefliyor.</summary>
+    <category term="other"/>
+    <category term="turkey"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:03fc967e92f48826</id>
+    <title>Google, Gemini 4 Argon ile hazırlanan beş farklı projeyi gösterdi</title>
+    <link rel="alternate" href="https://www.teknoblog.com/gemini-4-argon-bes-proje/"/>
+    <published>2026-10-24T07:55:00Z</published>
+    <updated>2026-10-24T07:55:00Z</updated>
+    <author><name>Teknoblog</name></author>
+    <summary type="text">Google, Gemini 4 Argon ile hazırlanan oyun, üç boyutlu model ve veri görselleştirme örneklerini paylaştı. Gösterimler bağımsız test niteliği taşımıyor. Google, Gemini 4 Argon ile hazırlanan beş farklı projeyi gösterdi haberi ilk önce Teknoblog üzerinde yayımlandı.</summary>
+    <category term="other"/>
+    <category term="turkey"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:841478654d2c6005</id>
+    <title>llama.cpp release b11852</title>
+    <link rel="alternate" href="https://github.com/ggml-org/llama.cpp/releases/tag/b11852"/>
+    <published>2026-10-24T07:54:53Z</published>
+    <updated>2026-10-24T07:54:53Z</updated>
+    <author><name>llama.cpp releases</name></author>
+    <summary type="text">mtmd: move build_inp_temporal_merge to base class ( #31065 ) Website: https://llama.app Attestations: https://github.com/ggml-org/llama.cpp/attestations/59366207 macOS/iOS: macOS Apple Silicon (arm64) macOS Apple Silicon (arm64, KleidiAI enabled) DISABLED macOS Intel (x64) iOS…</summary>
+    <category term="tool"/>
+    <category term="open-weights"/>
+    <category term="tools"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:c1ad71a16e1f5eab</id>
+    <title>[AINews] Kimi 3.1 Pro 104BA-2.8T: Fable-5.1-Class Open Weights narrows Closed-AI lead to 1 month... and Pro Highspeed API with 2-3× speed</title>
+    <link rel="alternate" href="https://latent.space/p/ainews-kimi-31/"/>
+    <published>2026-10-24T07:18:29Z</published>
+    <updated>2026-10-24T07:18:29Z</updated>
+    <author><name>Latent Space</name></author>
+    <summary type="text">We have Fable at home... or so we are being told by paid shills</summary>
+    <category term="model-release"/>
+    <category term="llm"/>
+    <category term="china"/>
+    <category term="open-weights"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:5fb05bcacdae856c</id>
+    <title>The RTX 5090 Isn&apos;t Gone, It&apos;s In Chinese Labs, Where Technicians Rip Off Its Die And 32GB VRAM For AI Servers</title>
+    <link rel="alternate" href="https://www.reddit.com/r/LocalLLaMA/comments/1xe1zsr/the_rtx_5090_isnt_gone_its_in_chinese_labs_where/"/>
+    <published>2026-10-24T07:09:11Z</published>
+    <updated>2026-10-24T07:09:11Z</updated>
+    <author><name>Reddit r/LocalLLaMA (top of day)</name></author>
+    <summary type="text">submitted by /u/chemist_slime [link] [comments]</summary>
+    <category term="other"/>
+    <category term="china"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:1827ea3db0ac3849</id>
+    <title>360&apos;s Zhou Hongyi Says Its Sovereign AI Operating System Is Already in Use at Some Organizations</title>
+    <link rel="alternate" href="https://pandaily.com/360-zhou-hongyi-sovereign-ai-operating-system-enterprise-private-deployment-agent-factory"/>
+    <published>2026-10-24T07:07:49Z</published>
+    <updated>2026-10-24T07:07:49Z</updated>
+    <author><name>Pandaily</name></author>
+    <summary type="text">360 founder Zhou Hongyi says the company&apos;s sovereign AI operating system, covering compute, models, knowledge bases and an agent factory under customer control, is now used by some organizations.</summary>
+    <category term="other"/>
+    <category term="china"/>
+    <category term="tools"/>
+    <category term="agents"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:5ad7d990f4fc7246</id>
+    <title>Qwen Go! Adds My Apps, Letting Users Build Shareable Apps by Description With Alibaba Cloud Meoo</title>
+    <link rel="alternate" href="https://pandaily.com/qwen-go-my-apps-no-code-shareable-apps-alibaba-cloud-meoo-invite-beta"/>
+    <published>2026-10-24T07:07:35Z</published>
+    <updated>2026-10-24T07:07:35Z</updated>
+    <author><name>Pandaily</name></author>
+    <summary type="text">Qwen Go! now lets users build long-lasting, shareable apps just by describing them. The My Apps feature runs on Alibaba Cloud&apos;s Meoo, which handles building, databases and deployment.</summary>
+    <category term="product"/>
+    <category term="china"/>
+    <category term="tools"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:41bb7506309dfd1b</id>
+    <title>iFLYTEK Open Platform Launches Agent OS, APA and XFYUN CLI for 700-Plus AI Capabilities</title>
+    <link rel="alternate" href="https://pandaily.com/iflytek-open-platform-agent-os-apa-xfyun-cli-700-ai-capabilities-taas"/>
+    <published>2026-10-24T07:07:22Z</published>
+    <updated>2026-10-24T07:07:22Z</updated>
+    <author><name>Pandaily</name></author>
+    <summary type="text">At its 1024 developer festival, iFLYTEK&apos;s open platform launched Agent OS for enterprise agent teamwork, APA for recorded workflow skills, the XFYUN CLI and a TaaS platform for business use.</summary>
+    <category term="tool"/>
+    <category term="china"/>
+    <category term="tools"/>
+    <category term="agents"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:bb185cd46427774f</id>
+    <title>Fudan&apos;s RoboSkill Lets Robot Agents Save What They Learn as Reusable Text-and-Code Skills</title>
+    <link rel="alternate" href="https://pandaily.com/fudan-roboskill-robot-agents-reusable-text-code-skills-tactile-feedback-libero-10"/>
+    <published>2026-10-24T07:06:55Z</published>
+    <updated>2026-10-24T07:06:55Z</updated>
+    <author><name>Pandaily</name></author>
+    <summary type="text">Fudan researchers built RoboSkill, which turns methods a robot agent discovers into reusable text-and-code skills and adds touch sensing, cutting task time sharply in simulation and on real robots.</summary>
+    <category term="other"/>
+    <category term="china"/>
+    <category term="research"/>
+    <category term="tools"/>
+    <category term="agents"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:77bf1a9047c31073</id>
+    <title>Kimi K3.1 Pro Tanıtıldı: Çin’in En Güçlü Yapay Zeka Modeli</title>
+    <link rel="alternate" href="https://shiftdelete.net/moonshot-kimi-k3-1-pro-tanitildi"/>
+    <published>2026-10-24T07:00:57Z</published>
+    <updated>2026-10-24T07:00:57Z</updated>
+    <author><name>ShiftDelete.Net</name></author>
+    <summary type="text">Moonshot tarafından geliştirilen Kimi K3.1 Pro, 2.8 trilyon parametresi ve yüksek performansıyla yapay zeka dünyasında dikkat çekiyor.</summary>
+    <category term="other"/>
+    <category term="turkey"/>
+    <category term="china"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:cecee38f3ed166fe</id>
+    <title>Spark X2.6 4B is the best of it&apos;s size</title>
+    <link rel="alternate" href="https://www.reddit.com/r/LocalLLaMA/comments/1xe1kkh/spark_x26_4b_is_the_best_of_its_size/"/>
+    <published>2026-10-24T06:44:17Z</published>
+    <updated>2026-10-24T06:44:17Z</updated>
+    <author><name>Reddit r/LocalLLaMA (top of day)</name></author>
+    <summary type="text">https://huggingface.co/collections/XHToken/spark-x26 I tested it last night and it is amazingly good at tool calling. Tests in pi cli: Can write a python script for blender to create a red cube, rotate it and render it. It understood a rather complex rust codebase and explained…</summary>
+    <category term="other"/>
+    <category term="open-weights"/>
+    <category term="tools"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:862f739b06c93a43</id>
+    <title>A look at OpenAI&apos;s Project Daybreak, which lets vetted partners use its top hacking models to find and fix vulnerabilities and helped uncover PHP2Shell RCE bugs (Thomas Brewster/Forbes)</title>
+    <link rel="alternate" href="https://www.techmeme.com/261024/p2#a261024p2"/>
+    <published>2026-10-24T06:35:01Z</published>
+    <updated>2026-10-24T06:35:01Z</updated>
+    <author><name>Techmeme</name></author>
+    <summary type="text">Thomas Brewster / Forbes : A look at OpenAI&apos;s Project Daybreak, which lets vetted partners use its top hacking models to find and fix vulnerabilities and helped uncover PHP2Shell RCE bugs — This voice experience is generated by AI. Learn more. — Using the latest GPT model…</summary>
+    <category term="security"/>
+    <category term="safety"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:0ce6777c82f02549</id>
+    <title>Hacker reverses Samsung TV, finds on-board AI listening OpenAI account suspended</title>
+    <link rel="alternate" href="https://www.reddit.com/r/antiai/comments/1xdv3e5/hacker_reverse_engineers_his_samsung_tv_and_finds/"/>
+    <published>2026-10-24T05:49:57Z</published>
+    <updated>2026-10-24T05:49:57Z</updated>
+    <author><name>Hacker News: OpenAI (50+ points)</name></author>
+    <summary type="text">305 points · 87 comments on Hacker News</summary>
+    <category term="other"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:44ac069c0dab09cf</id>
+    <title>New model on Hugging Face: tencent/Hy-Nomas-Diffusers</title>
+    <link rel="alternate" href="https://huggingface.co/tencent/Hy-Nomas-Diffusers"/>
+    <published>2026-10-24T05:45:20Z</published>
+    <updated>2026-10-24T05:45:20Z</updated>
+    <author><name>Hugging Face: Tencent models</name></author>
+    <summary type="text">5 likes · 2 downloads</summary>
+    <category term="model-release"/>
+    <category term="china"/>
+    <category term="open-weights"/>
+    <category term="llm"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:21a343421bc9230e</id>
+    <title>Sam Altman: OpenAI&apos;s best model &quot;can&apos;t responsibly be open-sourced&quot; until the world builds better cyberdefense and bio-security</title>
+    <link rel="alternate" href="https://www.reddit.com/r/LocalLLaMA/comments/1xe0ioz/sam_altman_openais_best_model_cant_responsibly_be/"/>
+    <published>2026-10-24T05:41:18Z</published>
+    <updated>2026-10-24T05:41:18Z</updated>
+    <author><name>Reddit r/LocalLLaMA (top of day)</name></author>
+    <summary type="text">OpenAI co-founder and CEO Sam Altman recently sat down for an in-depth conversation at Stanford Graduate School of Business&apos;s &quot;View from the Top&quot; series, covering AI&apos;s development trajectory, safety challenges, organizational transformation, and personal growth. Altman admitted…</summary>
+    <category term="product"/>
+    <category term="safety"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:618b980f7d12baef</id>
+    <title>Chancellor unveils Britain’s ambitious plan for AI</title>
+    <link rel="alternate" href="https://www.gov.uk/government/news/chancellor-unveils-britains-ambitious-plan-for-ai"/>
+    <published>2026-10-24T05:00:05Z</published>
+    <updated>2026-10-24T05:00:05Z</updated>
+    <author><name>UK Government: AI news</name></author>
+    <summary type="text">Major package to unlock the opportunities of AI in every postcode, scale up home grown AI firms, and keep UK safe from threats announced by the Chancellor.</summary>
+    <category term="policy"/>
+    <category term="regulation"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:7d8969cdc72bfeba</id>
+    <title>AT&amp;T ve T-Mobile, yapay zeka ajanları için güvenlik önlemlerini artırıyor</title>
+    <link rel="alternate" href="https://www.teknoblog.com/att-ve-t-mobile-yapay-zeka-ajanlari-icin-guvenlik-onlemlerini-artiriyor/"/>
+    <published>2026-10-24T04:35:23Z</published>
+    <updated>2026-10-24T04:35:23Z</updated>
+    <author><name>Teknoblog</name></author>
+    <summary type="text">AT&amp;T ve T-Mobile, mobil şebekelerde yapay zeka kullanımını artırırken müşteri verilerini ve ağ altyapısını koruyacak önlemlere de yatırım yapıyor. Reuters’ın 23 Ekim tarihli haberine göre iki operatör, otomatik çalışan sistemlerin yetkilerini ve erişimlerini daha sıkı…</summary>
+    <category term="other"/>
+    <category term="turkey"/>
+    <category term="safety"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:5199c9d696c75990</id>
+    <title>Google, yapay zeka ajanları için ayrı sanal bilgisayar altyapısı geliştirdi</title>
+    <link rel="alternate" href="https://www.teknoblog.com/google-agent-compute-engine-yapay-zeka-ajanlari/"/>
+    <published>2026-10-24T04:31:39Z</published>
+    <updated>2026-10-24T04:31:39Z</updated>
+    <author><name>Teknoblog</name></author>
+    <summary type="text">Google Cloud, yapay zeka ajanlarının kod çalıştırırken, tarayıcı kullanırken ve şirket dosyalarıyla işlem yaparken kendilerine ait sanal bilgisayarlarda çalışmasını sağlayan Agent Compute Engine altyapısını duyurdu. Şirketin 22 Ekim tarihli açıklamasına göre sistem, her ajana…</summary>
+    <category term="other"/>
+    <category term="turkey"/>
+    <category term="tools"/>
+    <category term="agents"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:7d4d9420264b3ed8</id>
+    <title>DeepSeek, V4.1 Flash güncellemesinde kodlama puanlarını yükseltti</title>
+    <link rel="alternate" href="https://www.teknoblog.com/deepseek-v4-1-flash-modelini-guncelledi/"/>
+    <published>2026-10-24T04:28:00Z</published>
+    <updated>2026-10-24T04:28:00Z</updated>
+    <author><name>Teknoblog</name></author>
+    <summary type="text">DeepSeek V4.1 Flash 1017, kodlama ve ajan testlerinde daha yüksek puanlar bildiriyor, API çağrı yöntemi ve fiyatlandırma değişmiyor. DeepSeek, V4.1 Flash güncellemesinde kodlama puanlarını yükseltti haberi ilk önce Teknoblog üzerinde yayımlandı.</summary>
+    <category term="other"/>
+    <category term="china"/>
+    <category term="turkey"/>
+    <category term="tools"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:0f14f728a35adf57</id>
+    <title>IFC-MCQ: Automatically Generating Multiple-Choice Benchmarks for Evaluating LLM Agents on IFC Data Retrieval</title>
+    <link rel="alternate" href="https://arxiv.org/abs/2610.30533"/>
+    <published>2026-10-24T04:00:00Z</published>
+    <updated>2026-10-24T04:00:00Z</updated>
+    <author><name>arXiv cs.CL (LLM-filtered)</name></author>
+    <summary type="text">Industry Foundation Classes (IFC), the standard for building information exchange in architecture, engineering, and construction (AEC), is increasingly queried through large language models (LLMs) using natural language. Evaluating these systems at scale is difficult because…</summary>
+    <category term="paper"/>
+    <category term="research"/>
+    <category term="tools"/>
+    <category term="agents"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:154f74cccfd3236d</id>
+    <title>Silicon Samples Match the Answers but Not the Respondents</title>
+    <link rel="alternate" href="https://arxiv.org/abs/2610.30900"/>
+    <published>2026-10-24T04:00:00Z</published>
+    <updated>2026-10-24T04:00:00Z</updated>
+    <author><name>arXiv cs.CL (LLM-filtered)</name></author>
+    <summary type="text">Silicon sampling generates survey respondents by having a large language model (LLM) answer a survey as a person with given demographic attributes, and the resulting synthetic populations are increasingly used in place of human ones. Existing evaluations focus on…</summary>
+    <category term="paper"/>
+    <category term="research"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:2267669e64aab281</id>
+    <title>AQL-Lite: Enabling Efficient Knowledge Acquisition for Arabic LLMs via Data-Centric Continual Pretraining</title>
+    <link rel="alternate" href="https://arxiv.org/abs/2610.30344"/>
+    <published>2026-10-24T04:00:00Z</published>
+    <updated>2026-10-24T04:00:00Z</updated>
+    <author><name>arXiv cs.CL (LLM-filtered)</name></author>
+    <summary type="text">Training Arabic large language models faces challenges from noisy web data, dialectal variation, and the high cost of continual pretraining (CPT). We introduce AQL-Lite (AQL: Arabic Quality Language), a time- and resource-efficient framework for adapting a multilingual LLM to…</summary>
+    <category term="paper"/>
+    <category term="funding"/>
+    <category term="research"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:3ec88492d243e143</id>
+    <title>From Structured Records to Patient Narratives: Preserving Clinical Alignment in LLM-Generated Health Summaries</title>
+    <link rel="alternate" href="https://arxiv.org/abs/2610.31467"/>
+    <published>2026-10-24T04:00:00Z</published>
+    <updated>2026-10-24T04:00:00Z</updated>
+    <author><name>arXiv cs.CL (LLM-filtered)</name></author>
+    <summary type="text">As wearable and digital health systems increasingly generate longitudinal physiological records, communicating these observations in patient-accessible language remains a significant challenge. Large Language Models (LLMs) offer a promising mechanism for translating structured…</summary>
+    <category term="paper"/>
+    <category term="research"/>
+    <category term="safety"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:507da8615ffd451a</id>
+    <title>Consistency Is Not Validity: Self-Rewarded Moral Argumentation Makes Language Models Decisive but Pliable</title>
+    <link rel="alternate" href="https://arxiv.org/abs/2610.30349"/>
+    <published>2026-10-24T04:00:00Z</published>
+    <updated>2026-10-24T04:00:00Z</updated>
+    <author><name>arXiv cs.CL (LLM-filtered)</name></author>
+    <summary type="text">LLMs are increasingly consulted for moral judgment. We aim to improve performance on such tasks by rewarding good arguments, on the premise that arguing well increases the likelihood of judging well. We train a reinforcement learning policy initialized from a state-of-the-art…</summary>
+    <category term="paper"/>
+    <category term="research"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:53d3fd7735983464</id>
+    <title>Rethinking the Evaluation of LLM Fact-Checkers</title>
+    <link rel="alternate" href="https://arxiv.org/abs/2610.30504"/>
+    <published>2026-10-24T04:00:00Z</published>
+    <updated>2026-10-24T04:00:00Z</updated>
+    <author><name>arXiv cs.CL (LLM-filtered)</name></author>
+    <summary type="text">Large language models (LLMs) are widely used to answer factual questions, but their answers can contain errors and must be fact-checked claim by claim. Yet the resulting score depends on three design decisions: which questions the claims answer, under what conditions each claim…</summary>
+    <category term="paper"/>
+    <category term="research"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:898477ce335cec66</id>
+    <title>ULME: Predictive Coupling for Mutually Reinforcing Embedding and Language Modeling</title>
+    <link rel="alternate" href="https://arxiv.org/abs/2610.30705"/>
+    <published>2026-10-24T04:00:00Z</published>
+    <updated>2026-10-24T04:00:00Z</updated>
+    <author><name>arXiv cs.CL (LLM-filtered)</name></author>
+    <summary type="text">Text embedding and text generation are two of the most useful capabilities of modern large language models, yet they are typically provided by separate specialized models (an embedder and a generator) trained with incompatible objectives and deployed side by side in…</summary>
+    <category term="paper"/>
+    <category term="research"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:9edfab8c95ef1458</id>
+    <title>Parameter-Efficient Adaptation of Large Language Models to a Low-Resource Agglutinative Language: A Corpus, Datasets, and a Reproducible Benchmark for the Bashkir Language</title>
+    <link rel="alternate" href="https://arxiv.org/abs/2610.31397"/>
+    <published>2026-10-24T04:00:00Z</published>
+    <updated>2026-10-24T04:00:00Z</updated>
+    <author><name>arXiv cs.CL (LLM-filtered)</name></author>
+    <summary type="text">Bashkir is a low-resource agglutinative language written in Cyrillic and remains poorly represented in modern LLMs. We present an open resource suite and a systematic benchmark of adaptation methods: the Bashkir Web Corpus (71,567 documents, 46.9M tokens, 16 sources) and three…</summary>
+    <category term="paper"/>
+    <category term="research"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:a0ca7ac10968ec8e</id>
+    <title>Meaning Contracts: Local Semantic Geometry in Large Language Models</title>
+    <link rel="alternate" href="https://arxiv.org/abs/2610.30715"/>
+    <published>2026-10-24T04:00:00Z</published>
+    <updated>2026-10-24T04:00:00Z</updated>
+    <author><name>arXiv cs.CL (LLM-filtered)</name></author>
+    <summary type="text">This paper studies the local geometry of semantic meaning in large language models. Current representation analyses ask whether meanings are close in embedding space, or whether linear probes separate semantic classes, but they do not characterize the within-concept local…</summary>
+    <category term="policy"/>
+    <category term="research"/>
+    <category term="regulation"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:b4df059e827f3a2c</id>
+    <title>ReflectPO: Reflection-Guided Policy Optimization for Long-Horizon LLM Agents</title>
+    <link rel="alternate" href="https://arxiv.org/abs/2610.30933"/>
+    <published>2026-10-24T04:00:00Z</published>
+    <updated>2026-10-24T04:00:00Z</updated>
+    <author><name>arXiv cs.CL (LLM-filtered)</name></author>
+    <summary type="text">With external tools, large language models (LLMs) can tackle complex tasks through sustained environmental interaction. LLM-based agents are therefore increasingly used to tackle complex long-horizon tasks in real-world environments. However, these tasks involve sequential…</summary>
+    <category term="paper"/>
+    <category term="research"/>
+    <category term="tools"/>
+    <category term="agents"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:b954e6e020880e81</id>
+    <title>RetiJev: Fast and Source-Grounded Ophthalmic Decision Models</title>
+    <link rel="alternate" href="https://arxiv.org/abs/2610.30947"/>
+    <published>2026-10-24T04:00:00Z</published>
+    <updated>2026-10-24T04:00:00Z</updated>
+    <author><name>arXiv cs.CL (LLM-filtered)</name></author>
+    <summary type="text">Ophthalmic clinical decision support requires fast, accurate, and privacy-preserving inference, yet autoregressive large language models (LLMs) incur substantial latency and computational overhead for decisions among predefined actions. We therefore investigate a…</summary>
+    <category term="paper"/>
+    <category term="research"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:bba33fda428e9e86</id>
+    <title>From Clinical Judgment to Checkable Rules: Clinician-Led Guardrails for Mental-Health Chatbots</title>
+    <link rel="alternate" href="https://arxiv.org/abs/2610.30690"/>
+    <published>2026-10-24T04:00:00Z</published>
+    <updated>2026-10-24T04:00:00Z</updated>
+    <author><name>arXiv cs.CL (LLM-filtered)</name></author>
+    <summary type="text">Large language models (LLMs) deployed in mental-health contexts can be evaluated for safety failures, but the resulting judgments are often difficult to inspect or explain. Common approaches to improving safety rely on prompt engineering, LLM-as-a-Judge, and Constitutional AI…</summary>
+    <category term="paper"/>
+    <category term="research"/>
+    <category term="safety"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:5699208333bf1755</id>
+    <title>battledrones v14: Compass Rose, a four player map</title>
+    <link rel="alternate" href="https://simonwillison.net/2026/Oct/24/battledrones/"/>
+    <published>2026-10-24T03:59:57Z</published>
+    <updated>2026-10-24T03:59:57Z</updated>
+    <author><name>Simon Willison</name></author>
+    <summary type="text">Release: battledrones v14: Compass Rose, a four player map I added four player online mode to Battledrones - previous maps were limited to two. Here&apos;s the initial prompt I used: Add a new map for a four player battle - four way rotational symmetry, up to four AI players, works…</summary>
+    <category term="other"/>
+    <category term="tools"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:5c52a053741cca06</id>
+    <title>Mercedes-Benz ve NVIDIA, sürüş ortaklığını Hyperion ile genişletiyor</title>
+    <link rel="alternate" href="https://www.teknoblog.com/mercedes-benz-nvidia-ortakligini-genisletiyor/"/>
+    <published>2026-10-24T03:40:00Z</published>
+    <updated>2026-10-24T03:40:00Z</updated>
+    <author><name>Teknoblog</name></author>
+    <summary type="text">Mercedes-Benz ve NVIDIA, yeni nesil sürücü destek sistemleri ve otomatik sürüş uygulamaları için mevcut ortaklıklarını genişletiyor. Şirketlerin 16 Ekim’de duyurduğu anlaşma, Mercedes-Benz’in MB.OS işletim sistemini NVIDIA’nın Hyperion donanımı, Alpamayo Stack yazılımı ve Halos…</summary>
+    <category term="other"/>
+    <category term="turkey"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:24cb2637c19ec4b8</id>
+    <title>Qwen4-27B PR found</title>
+    <link rel="alternate" href="https://www.reddit.com/r/LocalLLaMA/comments/1xdwrak/qwen427b_pr_found/"/>
+    <published>2026-10-24T02:16:02Z</published>
+    <updated>2026-10-24T02:16:02Z</updated>
+    <author><name>Reddit r/LocalLLaMA (top of day)</name></author>
+    <summary type="text">PR: https://github.com/analytics-zoo/vllm-xpu-kernels/pull/22 The PR author seems to have contributed to intel repos a lot and VLLM. He also shares his name (might be the same person?) with a person who is either a CTO somewhere at alibaba or the Director of Zhejiang Lab. He…</summary>
+    <category term="other"/>
+    <category term="china"/>
+    <category term="open-weights"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:2e617ecb3884b5fd</id>
+    <title>iFLYTEK Healthcare Upgrades Spark Medical Model to V3.7 and Reports 99.6 on MedBench 5.0</title>
+    <link rel="alternate" href="https://pandaily.com/iflytek-healthcare-spark-medical-model-v3-7-multimodal-agents-medbench-5-0"/>
+    <published>2026-10-24T02:08:05Z</published>
+    <updated>2026-10-24T02:08:05Z</updated>
+    <author><name>Pandaily</name></author>
+    <summary type="text">iFLYTEK Healthcare upgraded its Spark medical model to V3.7, merging speech, imaging and language for medical agents. The company says it scored 99.6 on Shanghai AI Lab&apos;s MedBench 5.0.</summary>
+    <category term="other"/>
+    <category term="china"/>
+    <category term="tools"/>
+    <category term="agents"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:49209be55562a298</id>
+    <title>Hikrobot Launches Single-Unit Smart Mobile Robots That Deploy in 30 Minutes Without a Server</title>
+    <link rel="alternate" href="https://pandaily.com/hikrobot-2026-mobile-robot-launch-single-unit-smart-z1-z2-stu-haps-picking"/>
+    <published>2026-10-24T02:04:40Z</published>
+    <updated>2026-10-24T02:04:40Z</updated>
+    <author><name>Pandaily</name></author>
+    <summary type="text">Hikrobot launched a new self-contained mobile robot series that needs no server or site changes. It also upgraded its tote storage and picking system, which reaches up to 900 picks per hour.</summary>
+    <category term="product"/>
+    <category term="china"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:40c0f78e986c4c7b</id>
+    <title>Dawa Technology&apos;s Scenes AI Runs a 34B Real-Time World Model at 720p and 25fps on One RTX GPU</title>
+    <link rel="alternate" href="https://pandaily.com/dawa-technology-scenes-ai-real-time-world-model-34b-sparse-720p-25fps-single-rtx"/>
+    <published>2026-10-24T02:03:39Z</published>
+    <updated>2026-10-24T02:03:39Z</updated>
+    <author><name>Pandaily</name></author>
+    <summary type="text">Chongqing-based Dawa Technology&apos;s Scenes AI updates a persistent world state from a normal camera feed. It runs a 34B sparse model at 720p and 25fps on a single consumer RTX card.</summary>
+    <category term="other"/>
+    <category term="china"/>
+    <category term="chips"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:aa212fd4529f081c</id>
+    <title>Amap Open-Sources Lambda-0, a Whole-Body Humanoid Model Trained Only on Human First-Person Data</title>
+    <link rel="alternate" href="https://pandaily.com/amap-lambda-0-open-source-whole-body-humanoid-model-egocentric-human-data-unitree-g1"/>
+    <published>2026-10-24T02:01:13Z</published>
+    <updated>2026-10-24T02:01:13Z</updated>
+    <author><name>Pandaily</name></author>
+    <summary type="text">Amap and Alibaba&apos;s ATH group released Lambda-0, a whole-body humanoid foundation model trained on 500 hours of first-person human data that transfers zero-shot to a Unitree G1 robot.</summary>
+    <category term="product"/>
+    <category term="china"/>
+    <category term="tools"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:5c759c4e62d19fda</id>
+    <title>The UK plans to invest £100M to create the AI Biosecurity Lab to boost defenses against biological threats, supported by OpenAI, Anthropic, and Google DeepMind (Liv McMahon/BBC)</title>
+    <link rel="alternate" href="https://www.techmeme.com/261023/p26#a261023p26"/>
+    <published>2026-10-24T01:20:01Z</published>
+    <updated>2026-10-24T01:20:01Z</updated>
+    <author><name>Techmeme</name></author>
+    <summary type="text">Liv McMahon / BBC : The UK plans to invest &amp;pound;100M to create the AI Biosecurity Lab to boost defenses against biological threats, supported by OpenAI, Anthropic, and Google DeepMind — The UK says it will establish a national AI Biosecurity Lab (AIBL) to help strengthen its…</summary>
+    <category term="other"/>
+    <category term="funding"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:41496c2e9dacad9e</id>
+    <title>China’s AI compute surge heavily reliant on US chips, offshore cloud access: report</title>
+    <link rel="alternate" href="https://www.scmp.com/tech/tech-war/article/3371929/chinas-ai-compute-surge-heavily-reliant-us-chips-offshore-cloud-access-report"/>
+    <published>2026-10-24T01:00:11Z</published>
+    <updated>2026-10-24T01:00:11Z</updated>
+    <author><name>SCMP Tech</name></author>
+    <summary type="text">China’s access to artificial intelligence computing power will double next year, but US-designed chips will account for about 65 per cent of that capacity, an indication of its continued reliance on foreign hardware, according to new research. Total compute available to Chinese…</summary>
+    <category term="other"/>
+    <category term="china"/>
+    <category term="chips"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:a5ed90ba98bce110</id>
+    <title>OpenAI says it built an &quot;offline world&quot; from cached web content to train isolated frontier models to browse, search for information, and use web apps (OpenAI)</title>
+    <link rel="alternate" href="https://www.techmeme.com/261023/p25#a261023p25"/>
+    <published>2026-10-24T00:30:01Z</published>
+    <updated>2026-10-24T00:30:01Z</updated>
+    <author><name>Techmeme</name></author>
+    <summary type="text">OpenAI : OpenAI says it built an “offline world” from cached web content to train isolated frontier models to browse, search for information, and use web apps — In order to work with software, AI models need computing environments: digital workspaces where they can write and…</summary>
+    <category term="product"/>
+    <category term="tools"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:27b067f2e1fb95dc</id>
+    <title>Claude Code v2.1.310</title>
+    <link rel="alternate" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.310"/>
+    <published>2026-10-23T23:39:00Z</published>
+    <updated>2026-10-23T23:39:00Z</updated>
+    <author><name>Claude Code releases</name></author>
+    <summary type="text">What&apos;s changed Added the Monitor tool and plugin monitors on Bedrock, Vertex, and Foundry, and when telemetry or nonessential traffic is disabled; long foreground sleeps are now blocked there too Fixed requests failing behind some gateways and compatible servers that reject the…</summary>
+    <category term="tool"/>
+    <category term="tools"/>
+    <category term="open-weights"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:242b49aaa07bea7f</id>
+    <title>ISTA-DASLab/DeepSeek-V4.1-Flash-1017-GSQ-RCO</title>
+    <link rel="alternate" href="https://www.reddit.com/r/LocalLLaMA/comments/1xdtk7m/istadaslabdeepseekv41flash1017gsqrco/"/>
+    <published>2026-10-23T23:37:39Z</published>
+    <updated>2026-10-23T23:37:39Z</updated>
+    <author><name>Reddit r/LocalLLaMA (top of day)</name></author>
+    <summary type="text">A brand-new release from ISTA-DASLab with their GSQ-RCO smart quantization approach. Now DeepSeek-V4.1-Flash-1017 The quants are available on Hugginface: https://huggingface.co/ISTA-DASLab/DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF Llama.cpp is not supported because the original…</summary>
+    <category term="model-release"/>
+    <category term="llm"/>
+    <category term="china"/>
+    <category term="open-weights"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:0ac194e7dd2196c5</id>
+    <title>Evolving Threat: http2shell is an RCE in Node, Python, and more</title>
+    <link rel="alternate" href="https://nitter.click/AikidoSecurity/status/2113759110625906950?__galadriel=lPmlGl9id4oAd5UeBwMhlYKArHyr6lR2IDGujPwB5HV2kQ1aLoPWFd5A9sGuzNcmrp8fUso8qygmHcKTDZ8MNHWqQ3bDJcycV87xp_0VypzQLYj6O_RRHlZuQqj33oASGY2YLSoAiMjeOZN40h7Stf8AG7DPrGZbAPVKUXy36HoMudRbvwF3_r2uYNmfJMhpKzywQDM6Ab8"/>
+    <published>2026-10-23T23:30:17Z</published>
+    <updated>2026-10-23T23:30:17Z</updated>
+    <author><name>Hacker News: LLM (50+ points)</name></author>
+    <summary type="text">182 points · 96 comments on Hacker News</summary>
+    <category term="other"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:f22ab38599cc892c</id>
+    <title>Ollama v0.40.11-rc0: voice: add voice catalog for Phonon (#19242)</title>
+    <link rel="alternate" href="https://github.com/ollama/ollama/releases/tag/v0.40.11-rc0"/>
+    <published>2026-10-23T23:15:08Z</published>
+    <updated>2026-10-23T23:15:08Z</updated>
+    <author><name>Ollama releases</name></author>
+    <summary type="text">mlxrunner: import and list Phonon catalog voices docs: document Phonon voices</summary>
+    <category term="tool"/>
+    <category term="open-weights"/>
+    <category term="tools"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:5bcbd3b9557193ae</id>
+    <title>Utopai, an AI film studio that says it has more than 20 projects in the works, raised $60M at a $1B valuation (Rocket Drew/The Information)</title>
+    <link rel="alternate" href="https://www.techmeme.com/261023/p24#a261023p24"/>
+    <published>2026-10-23T23:10:05Z</published>
+    <updated>2026-10-23T23:10:05Z</updated>
+    <author><name>Techmeme</name></author>
+    <summary type="text">Rocket Drew / The Information : Utopai, an AI film studio that says it has more than 20 projects in the works, raised $60M at a $1B valuation — While much of the AI industry has fixated on new personal AI assistants from Meta and OpenAI, video AI is enjoying a quiet…</summary>
+    <category term="funding"/>
+    <category term="funding"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:f699a3e5cdaf4929</id>
+    <title>OpenAI says it will no longer train its AI models on the live internet, citing “significant risks”</title>
+    <link rel="alternate" href="https://techcrunch.com/2026/10/23/openai-says-it-will-no-longer-train-its-ai-models-on-the-live-internet-citing-significant-risks/"/>
+    <published>2026-10-23T23:05:49Z</published>
+    <updated>2026-10-23T23:05:49Z</updated>
+    <author><name>TechCrunch AI</name></author>
+    <summary type="text">OpenAI will cut frontier models off from the internet weeks after one of its engineers said that solution wouldn&apos;t work.</summary>
+    <category term="other"/>
+    <category term="safety"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:51534de987b245df</id>
+    <title>Introducing the AI Biosecurity Lab</title>
+    <link rel="alternate" href="https://www.gov.uk/government/news/introducing-the-ai-biosecurity-lab"/>
+    <published>2026-10-23T23:01:00Z</published>
+    <updated>2026-10-23T23:01:00Z</updated>
+    <author><name>UK Government: AI news</name></author>
+    <summary type="text">Backed by up to £300mn of government funding and company commitments, the AI Biosecurity Lab will use AI to strengthen UK resilience to biological threats.</summary>
+    <category term="policy"/>
+    <category term="regulation"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:900f549a20f9dff4</id>
+    <title>Some benchmarks on mini-AGI (dynamic continual learning model) after training it completely from scratch for a month on a 8GB VRAM GPU.</title>
+    <link rel="alternate" href="https://www.reddit.com/r/LocalLLaMA/comments/1xds6ts/some_benchmarks_on_miniagi_dynamic_continual/"/>
+    <published>2026-10-23T22:34:52Z</published>
+    <updated>2026-10-23T22:34:52Z</updated>
+    <author><name>Reddit r/LocalLLaMA (top of day)</name></author>
+    <summary type="text">The most important part is a difference between &quot;forzen&quot; and &quot;best effort&quot; attempts where we allow the model to specialize on the task as it goes through the evaluation dataset. Clearly showcasing the power of continual learning regime simply unavailable for any other typical…</summary>
+    <category term="other"/>
+    <category term="chips"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:67ab64203109c3c9</id>
+    <title>Hottest toy for Christmas? Nvidia CEO plays with adorable Microduck robots, 20,000 sell</title>
+    <link rel="alternate" href="https://techcrunch.com/2026/10/23/hottest-toy-for-christmas-nvidia-ceo-plays-with-adorable-microduck-robots-20000-sell/"/>
+    <published>2026-10-23T21:59:19Z</published>
+    <updated>2026-10-23T21:59:19Z</updated>
+    <author><name>TechCrunch AI</name></author>
+    <summary type="text">The robots, stomping their little feet and making tiny R2-D2 noises, sat, fell down dead for a &quot;nap,&quot; and summersaulted on voice command.</summary>
+    <category term="other"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:18216b018fb1ff4f</id>
+    <title>Quick Study</title>
+    <link rel="alternate" href="https://simonwillison.net/2026/Oct/23/quick-study-painter/"/>
+    <published>2026-10-23T21:35:13Z</published>
+    <updated>2026-10-23T21:35:13Z</updated>
+    <author><name>Simon Willison</name></author>
+    <summary type="text">Tool: Quick Study Prompt to Claude Opus 5.5 High : Build an artifact where you open a photo and it rapidly (in a few seconds) paints a version of that photo using a canvas element and simulated paintbrush See also my previous experiment getting Claude Fable to simulate a…</summary>
+    <category term="other"/>
+    <category term="research"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:4e7a28f98e309b77</id>
+    <title>Mave, which is developing an AI-driven tool to automate security investigations, raised a $28M Series A led by Red Dot, bringing its total funding to $34M (Meir Orbach/CTech)</title>
+    <link rel="alternate" href="https://www.techmeme.com/261023/p22#a261023p22"/>
+    <published>2026-10-23T21:15:02Z</published>
+    <updated>2026-10-23T21:15:02Z</updated>
+    <author><name>Techmeme</name></author>
+    <summary type="text">Meir Orbach / CTech : Mave, which is developing an AI-driven tool to automate security investigations, raised a $28M Series A led by Red Dot, bringing its total funding to $34M — The funding, led by Red Dot Capital Partners, brings Mave&apos;s total funding to $34 million. The…</summary>
+    <category term="funding"/>
+    <category term="funding"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:67972bfe49043d8d</id>
+    <title>OpenAI now trains its frontier AI models with no internet access</title>
+    <link rel="alternate" href="https://www.theverge.com/ai-artificial-intelligence/1018021/openai-training-top-ai-models-no-internet"/>
+    <published>2026-10-23T21:11:07Z</published>
+    <updated>2026-10-23T21:11:07Z</updated>
+    <author><name>The Verge AI</name></author>
+    <summary type="text">OpenAI is now training its most advanced AI models without internet access following a string of rogue hacking incidents. In a blog post on Friday, OpenAI says it built an offline testing environment where AI models can interact with indexed and cached web content &quot;without risk…</summary>
+    <category term="other"/>
+    <category term="safety"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:bba23112eb685a27</id>
+    <title>OpenAI, 1,25 trilyon dolar değerlemeye ulaşabilir</title>
+    <link rel="alternate" href="https://www.donanimhaber.com/openai-1-25-trilyon-dolar-degerlemeye-ulasabilir--212001"/>
+    <published>2026-10-23T21:11:00Z</published>
+    <updated>2026-10-23T21:11:00Z</updated>
+    <author><name>DonanimHaber</name></author>
+    <summary type="text">OpenAI, 1,25 trilyon dolar değerleme üzerinden 30 milyar dolara kadar yeni yatırım toplamayı hedefliyor. Anlaşma, şirketin halka arz öncesi değerlemesini daha da yükseltebilir.</summary>
+    <category term="other"/>
+    <category term="turkey"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:a4761cd5ecfd623f</id>
+    <title>🌋 Pushing PCIe x1 to the limit: lvgale concurrently serving 27B, 9B, and 2B LLMs on a hardware abomination 📈</title>
+    <link rel="alternate" href="https://www.reddit.com/r/LocalLLaMA/comments/1xdq2cj/pushing_pcie_x1_to_the_limit_lvgale_concurrently/"/>
+    <published>2026-10-23T21:05:21Z</published>
+    <updated>2026-10-23T21:05:21Z</updated>
+    <author><name>Reddit r/LocalLLaMA (top of day)</name></author>
+    <summary type="text">Everyone loves a clean, unified server rack, but my standby node ( lvgale ) is an absolute physical abomination. It is a Frankenstein collection of mismatched parts and bolted-together VRAM that has no business running efficiently. The Hardware Setup (lvgale) CPU: Intel Core…</summary>
+    <category term="other"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:94c04340459d09d7</id>
+    <title>OpenAI plans to restrict internet access for its frontier models during training until adequate alignment, monitoring, and security safeguards are established (Rachel Metz/Bloomberg)</title>
+    <link rel="alternate" href="https://www.techmeme.com/261023/p20#a261023p20"/>
+    <published>2026-10-23T20:20:00Z</published>
+    <updated>2026-10-23T20:20:00Z</updated>
+    <author><name>Techmeme</name></author>
+    <summary type="text">Rachel Metz / Bloomberg : OpenAI plans to restrict internet access for its frontier models during training until adequate alignment, monitoring, and security safeguards are established — OpenAI has begun cutting off internet access for its most capable artificial intelligence…</summary>
+    <category term="other"/>
+    <category term="safety"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:6643f32ed82d5f61</id>
+    <title>Updated Google privacy policy says your Gmail might be used for advertising</title>
+    <link rel="alternate" href="https://arstechnica.com/gadgets/2026/10/updated-google-privacy-policy-says-your-gmail-might-be-used-for-advertising/"/>
+    <published>2026-10-23T20:19:55Z</published>
+    <updated>2026-10-23T20:19:55Z</updated>
+    <author><name>Ars Technica AI</name></author>
+    <summary type="text">Turning on Personal Intelligence gives the company more data for ad targeting.</summary>
+    <category term="other"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:4d9221408d0efee0</id>
+    <title>Been tracking intel b60 b65 b70 prices, they jumped 30% today.</title>
+    <link rel="alternate" href="https://www.reddit.com/r/LocalLLaMA/comments/1xdoirp/been_tracking_intel_b60_b65_b70_prices_they/"/>
+    <published>2026-10-23T20:04:14Z</published>
+    <updated>2026-10-23T20:04:14Z</updated>
+    <author><name>Reddit r/LocalLLaMA (top of day)</name></author>
+    <summary type="text">Amazon prices just jumped today, I still see deals at local microcenter. When that batch is gone $1840 for a b70 will likely be the new normal. b60 went from $650 to $980. b65 $1150 to $1420 does make a lot more sense as the price per GB was low in comparison to the…</summary>
+    <category term="other"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:166149ae45d38ba0</id>
+    <title>Grok Bot, telefondaki takvim ve anımsatıcılara erişim kazanıyor</title>
+    <link rel="alternate" href="https://www.teknoblog.com/grok-bot-telefon-uygulamalarina-baglaniyor/"/>
+    <published>2026-10-23T20:00:00Z</published>
+    <updated>2026-10-23T20:00:00Z</updated>
+    <author><name>Teknoblog</name></author>
+    <summary type="text">Grok Bot, takvim ve anımsatıcı bağlantılarını ayrı izinlerle dağıtırken mobil uygulama için uygun abonelik ve internet bağlantısı gerektiriyor. Grok Bot, telefondaki takvim ve anımsatıcılara erişim kazanıyor haberi ilk önce Teknoblog üzerinde yayımlandı.</summary>
+    <category term="other"/>
+    <category term="turkey"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:48e2274fdf2ba9fe</id>
+    <title>Securing our frontier model training environment</title>
+    <link rel="alternate" href="https://openai.com/index/securing-our-frontier-model-training-environment/"/>
+    <published>2026-10-23T19:50:56Z</published>
+    <updated>2026-10-23T19:50:56Z</updated>
+    <author><name>Hacker News: OpenAI (50+ points)</name></author>
+    <summary type="text">115 points · 116 comments on Hacker News</summary>
+    <category term="other"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:6c51129e93f61d6b</id>
+    <title>Introducing Kimi K3.1 Pro</title>
+    <link rel="alternate" href="https://simonwillison.net/2026/Oct/23/kimi-k31-pro/"/>
+    <published>2026-10-23T19:40:54Z</published>
+    <updated>2026-10-23T19:40:54Z</updated>
+    <author><name>Simon Willison</name></author>
+    <summary type="text">Introducing Kimi K3.1 Pro Kimi K3.1 Pro landed on the Kimi API today - it&apos;s not yet open weights, but Moonshot promise &quot;Full model weights will be released by Nov 4, 2026&quot;. They&apos;re also offering a &quot;Highspeed&quot; version that&apos;s 2-3x faster, at twice the price (except for input…</summary>
+    <category term="product"/>
+    <category term="china"/>
+    <category term="open-weights"/>
+    <category term="tools"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:cf5465bb20ed5fb0</id>
+    <title>llama.cpp release b11846: ggm-cuda: Enforce DP4A MMQ tile height multiple of warp size (#30837)</title>
+    <link rel="alternate" href="https://github.com/ggml-org/llama.cpp/releases/tag/b11846"/>
+    <published>2026-10-23T19:37:20Z</published>
+    <updated>2026-10-23T19:37:20Z</updated>
+    <author><name>llama.cpp releases</name></author>
+    <summary type="text">Added static assertion to enforce DP4A MMQ tile height requirement.</summary>
+    <category term="tool"/>
+    <category term="open-weights"/>
+    <category term="tools"/>
+    <category term="chips"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:3260dad8dc86b017</id>
+    <title>Moonshot says it removed cyber-related data from training phases for Kimi K3.1 Pro &quot;to reduce potential misuse risk while preserving general usefulness&quot; (Matthias Bastian/The Decoder)</title>
+    <link rel="alternate" href="https://www.techmeme.com/261023/p19#a261023p19"/>
+    <published>2026-10-23T19:35:02Z</published>
+    <updated>2026-10-23T19:35:02Z</updated>
+    <author><name>Techmeme</name></author>
+    <summary type="text">Matthias Bastian / The Decoder : Moonshot says it removed cyber-related data from training phases for Kimi K3.1 Pro “to reduce potential misuse risk while preserving general usefulness” — Key Points … Ask about this article... The model scores 55 points on the Artificial…</summary>
+    <category term="other"/>
+    <category term="china"/>
+    <category term="safety"/>
+  </entry>
+</feed>

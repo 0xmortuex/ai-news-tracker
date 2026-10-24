@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>AI News Tracker: top stories</title>
+  <link>https://0xmortuex.github.io/ai-news-tracker/</link>
+  <description>The highest-scoring AI stories of the last 3 days, one entry per story. Title, link and a short excerpt only.</description>
+  <language>en</language>
+  <lastBuildDate>Sat, 24 Oct 2026 19:36:34 GMT</lastBuildDate>
+  <generator>ai-news-tracker/stories-1</generator>
+  <atom:link href="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss" rel="self" type="application/rss+xml"/>
+  <item>
+    <title>Introducing Kimi K3.1 Pro</title>
+    <link>https://simonwillison.net/2026/Oct/23/kimi-k31-pro/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-85ffc8a6</guid>
+    <pubDate>Fri, 23 Oct 2026 19:40:54 GMT</pubDate>
+    <description>Simon Willison. Introducing Kimi K3.1 Pro Kimi K3.1 Pro landed on the Kimi API today - it&apos;s not yet open weights, but Moonshot promise &quot;Full model weights will be released by Nov 4, 2026&quot;. They&apos;re also offering a &quot;Highspeed&quot; version that&apos;s 2-3x faster, at twice the price (except for input…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>product</category>
+    <category>release</category>
+    <category>pricing</category>
+    <category>Moonshot</category>
+    <category>Kimi K3.1 Pro</category>
+  </item>
+  <item>
+    <title>Ollama v0.40.11</title>
+    <link>https://github.com/ollama/ollama/releases/tag/v0.40.11</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-f554d017</guid>
+    <pubDate>Sat, 24 Oct 2026 17:50:51 GMT</pubDate>
+    <description>Ollama releases. Speech Ollama can now generate speech on macOS. ollama run plays text or a chat model&apos;s reply aloud as the audio is generated, and apps can stream audio through the OpenAI-compatible /v1/audio/speech endpoint. ollama run phonon &quot; Hello from Ollama. &quot; d3 decision models d3…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>tool</category>
+    <category>release</category>
+    <category>tooling</category>
+    <category>Ollama</category>
+    <category>OpenAI</category>
+  </item>
+  <item>
+    <title>Ollama v0.40.9</title>
+    <link>https://github.com/ollama/ollama/releases/tag/v0.40.9</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-4f38934d</guid>
+    <pubDate>Sat, 24 Oct 2026 17:50:26 GMT</pubDate>
+    <description>Ollama releases. Flint on Linux and Windows Flint now runs on Linux and Windows as well as macOS. Other improvements Streaming OpenAI Responses and Anthropic Messages requests now report generation failures instead of ending silently after partial output. ollama launch now passes cloud models&apos;…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>tool</category>
+    <category>release</category>
+    <category>tooling</category>
+    <category>Anthropic</category>
+    <category>Ollama</category>
+    <category>OpenAI</category>
+  </item>
+  <item>
+    <title>[AINews] Kimi 3.1 Pro 104BA-2.8T: Fable-5.1-Class Open Weights narrows Closed-AI lead to 1 month... and Pro Highspeed API with 2-3× speed</title>
+    <link>https://latent.space/p/ainews-kimi-31/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-8ff53871</guid>
+    <pubDate>Sat, 24 Oct 2026 07:18:29 GMT</pubDate>
+    <description>Latent Space. We have Fable at home... or so we are being told by paid shills</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>model-release</category>
+    <category>release</category>
+    <category>tooling</category>
+    <category>Moonshot</category>
+    <category>Fable 5.1</category>
+    <category>Kimi 3.1 Pro</category>
+  </item>
+  <item>
+    <title>New model on Hugging Face: tencent/Hy-Nomas-Diffusers</title>
+    <link>https://huggingface.co/tencent/Hy-Nomas-Diffusers</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-e266c7da</guid>
+    <pubDate>Sat, 24 Oct 2026 05:45:20 GMT</pubDate>
+    <description>Hugging Face: Tencent models. 5 likes · 2 downloads</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>model-release</category>
+    <category>release</category>
+    <category>Hugging Face</category>
+    <category>Tencent</category>
+    <category>Hy-Nomas-Diffusers</category>
+  </item>
+  <item>
+    <title>An alignment assessment of the UK AISI cybertesting incident</title>
+    <link>https://www.anthropic.com/research/alignment-assessment-ukaisi</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-428f1988</guid>
+    <pubDate>Fri, 23 Oct 2026 00:00:00 GMT</pubDate>
+    <description>Anthropic Research (third-party scrape). In a UK AISI evaluation, Mythos 5 took unsanctioned actions that impacted real people and organizations. In this post, we investigate these behaviors from Claude Mythos 5 further, to understand what they reveal about the model’s alignment.</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>policy</category>
+    <category>safety</category>
+    <category>research</category>
+    <category>policy</category>
+    <category>Anthropic</category>
+    <category>Claude Mythos 5</category>
+    <category>Mythos 5</category>
+  </item>
+  <item>
+    <title>Three fired OpenAI safety researchers say they were never told what they actually leaked</title>
+    <link>https://the-decoder.com/three-fired-openai-safety-researchers-say-they-were-never-told-what-they-actually-leaked/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-cbcf60d0</guid>
+    <pubDate>Sat, 24 Oct 2026 15:19:33 GMT</pubDate>
+    <description>The Decoder. The three OpenAI safety researchers who were fired, Tomek Korbak, Mikita Balesni, and Jasmine Wang, are publicly pushing back against allegations from their former employer. They deny sharing confidential information and see a connection to their advocacy for AI systems that…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>other</category>
+    <category>safety</category>
+    <category>OpenAI</category>
+  </item>
+  <item>
+    <title>Claude Code v2.1.310</title>
+    <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.310</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-c6e74556</guid>
+    <pubDate>Fri, 23 Oct 2026 23:39:00 GMT</pubDate>
+    <description>Claude Code releases. What&apos;s changed Added the Monitor tool and plugin monitors on Bedrock, Vertex, and Foundry, and when telemetry or nonessential traffic is disabled; long foreground sleeps are now blocked there too Fixed requests failing behind some gateways and compatible servers that reject the…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>tool</category>
+    <category>release</category>
+    <category>tooling</category>
+    <category>Anthropic</category>
+    <category>Claude Code</category>
+  </item>
+  <item>
+    <title>Ollama v0.40.11-rc0: voice: add voice catalog for Phonon (#19242)</title>
+    <link>https://github.com/ollama/ollama/releases/tag/v0.40.11-rc0</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-875b6cb5</guid>
+    <pubDate>Fri, 23 Oct 2026 23:15:08 GMT</pubDate>
+    <description>Ollama releases. mlxrunner: import and list Phonon catalog voices docs: document Phonon voices</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>tool</category>
+    <category>release</category>
+    <category>tooling</category>
+    <category>Ollama</category>
+  </item>
+  <item>
+    <title>Chinese AI model Kimi K3.1 Pro is closing in on Anthropic&apos;s Claude Opus 5.5</title>
+    <link>https://the-decoder.com/chinese-ai-model-kimi-k3-1-pro-is-closing-in-on-anthropics-claude-opus-5-5/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-c724b8cd</guid>
+    <pubDate>Fri, 23 Oct 2026 19:00:07 GMT</pubDate>
+    <description>The Decoder. Moonshot AI&apos;s Kimi K3.1 Pro scores 55 points on the Artificial Analysis Intelligence Index, an 11-point jump over its predecessor that puts it in fourth place. Only three Anthropic and Meta models rank higher. If Moonshot releases the weights as planned, the gap between open…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>model-release</category>
+    <category>release</category>
+    <category>Anthropic</category>
+    <category>Moonshot</category>
+    <category>Claude Opus 5.5</category>
+    <category>Kimi K3.1 Pro</category>
+  </item>
+  <item>
+    <title>Inherited, Not Invented: Tracing the Provenance of Wait in Reasoning Models</title>
+    <link>https://huggingface.co/papers/2610.30882</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-3d8b8f80</guid>
+    <pubDate>Thu, 22 Oct 2026 04:03:07 GMT</pubDate>
+    <description>2 sources: Hugging Face Daily Papers, arXiv cs.LG (LLM-filtered). Reinforcement learning (RL) is credited with teaching reasoning models to write {wait} before reconsidering a step, yet large RL accuracy gains do not require the word. This view can confuse what RL discovers with what a model inherits from its training data. We trace the word…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>paper</category>
+    <category>research</category>
+  </item>
+  <item>
+    <title>The PHP Meltdown Shows How AI Makes Bugs More Exploitable</title>
+    <link>https://www.wired.com/story/kernel-panic-the-php-meltdown-shows-how-ai-makes-bugs-more-exploitable/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-e70473d3</guid>
+    <pubDate>Sat, 24 Oct 2026 12:00:00 GMT</pubDate>
+    <description>WIRED AI. Security researchers used AI tools to help uncover years-old vulnerabilities in the PHP web scripting language. Then the AI-assisted attacks began.</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>security</category>
+    <category>safety</category>
+  </item>
+  <item>
+    <title>A look at OpenAI&apos;s Project Daybreak, which lets vetted partners use its top hacking models to find and fix vulnerabilities and helped uncover PHP2Shell RCE bugs (Thomas Brewster/Forbes)</title>
+    <link>https://www.techmeme.com/261024/p2#a261024p2</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-59668d91</guid>
+    <pubDate>Sat, 24 Oct 2026 06:35:01 GMT</pubDate>
+    <description>Techmeme. Thomas Brewster / Forbes : A look at OpenAI&apos;s Project Daybreak, which lets vetted partners use its top hacking models to find and fix vulnerabilities and helped uncover PHP2Shell RCE bugs — This voice experience is generated by AI. Learn more. — Using the latest GPT model…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>security</category>
+    <category>safety</category>
+    <category>OpenAI</category>
+  </item>
+  <item>
+    <title>Moonshot unveils Kimi K3.1 Pro, a 3T-class open-weight model with a 1M-token context window, and K3.1 Pro Highspeed, with full weights to be released by Nov. 4 (Kimi)</title>
+    <link>https://www.techmeme.com/261023/p15#a261023p15</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-8f133a0f</guid>
+    <pubDate>Fri, 23 Oct 2026 17:45:05 GMT</pubDate>
+    <description>Techmeme. Kimi : Moonshot unveils Kimi K3.1 Pro, a 3T-class open-weight model with a 1M-token context window, and K3.1 Pro Highspeed, with full weights to be released by Nov. 4 — We&apos;re introducing Kimi K3.1 Pro, the first model in our new K3.1 series and our most capable 3T-class…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>product</category>
+    <category>release</category>
+    <category>Moonshot</category>
+    <category>Kimi K3.1 Pro</category>
+  </item>
+  <item>
+    <title>AISI finds Mythos 5 attempted a supply-chain attack by submitting malicious code and creating fake accounts to pressure a GitHub maintainer into accepting it (AI Security Institute)</title>
+    <link>https://www.techmeme.com/261023/p13#a261023p13</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-a6b027ed</guid>
+    <pubDate>Fri, 23 Oct 2026 16:55:01 GMT</pubDate>
+    <description>Techmeme. AI Security Institute : AISI finds Mythos 5 attempted a supply-chain attack by submitting malicious code and creating fake accounts to pressure a GitHub maintainer into accepting it — We examine why Mythos 5 pursued an unsanctioned supply-chain attack and identify broader…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>policy</category>
+    <category>safety</category>
+    <category>policy</category>
+    <category>Mythos 5</category>
+  </item>
+  <item>
+    <title>Ollama v0.40.10</title>
+    <link>https://github.com/ollama/ollama/releases/tag/v0.40.10</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-0d80b7b4</guid>
+    <pubDate>Fri, 23 Oct 2026 17:17:19 GMT</pubDate>
+    <description>Ollama releases. NVIDIA Nemotron 3.5 Bolt E4B Nemotron 3.5 Bolt E4B is NVIDIA’s smaller, Gemma 4-based vision-language model for fast local conversations, image understanding, and tool use. It supports a 128K-token context window. The model includes a DFlash draft for speculative decoding…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>tool</category>
+    <category>release</category>
+    <category>tooling</category>
+    <category>Google</category>
+    <category>NVIDIA</category>
+    <category>Ollama</category>
+    <category>Gemma 4</category>
+  </item>
+  <item>
+    <title>ISTA-DASLab/DeepSeek-V4.1-Flash-1017-GSQ-RCO</title>
+    <link>https://www.reddit.com/r/LocalLLaMA/comments/1xdtk7m/istadaslabdeepseekv41flash1017gsqrco/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-484cd3ea</guid>
+    <pubDate>Fri, 23 Oct 2026 23:37:39 GMT</pubDate>
+    <description>Reddit r/LocalLLaMA (top of day). A brand-new release from ISTA-DASLab with their GSQ-RCO smart quantization approach. Now DeepSeek-V4.1-Flash-1017 The quants are available on Hugginface: https://huggingface.co/ISTA-DASLab/DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF Llama.cpp is not supported because the original…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>model-release</category>
+    <category>release</category>
+    <category>DeepSeek</category>
+    <category>DeepSeek-v4.1-Flash-1017</category>
+    <category>llama.cpp</category>
+  </item>
+  <item>
+    <title>Ollama v0.40.10-rc0: Update gemma renderers (#19241)</title>
+    <link>https://github.com/ollama/ollama/releases/tag/v0.40.10-rc0</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-d9718af3</guid>
+    <pubDate>Fri, 23 Oct 2026 14:12:11 GMT</pubDate>
+    <description>Ollama releases. renderers: add gemma4-nemotron renderer Add a Gemma 4 renderer variant that renders assistant content before its tool calls rather than after the tool responses. Models opt in with RENDERER gemma4-nemotron; gemma4 auto-detection is unchanged. Adds the corresponding chat…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>tool</category>
+    <category>release</category>
+    <category>tooling</category>
+    <category>Google</category>
+    <category>Ollama</category>
+    <category>Gemma 4</category>
+  </item>
+  <item>
+    <title>Donating Agent Skills to the Agentic AI Foundation</title>
+    <link>https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-d1da33eb</guid>
+    <pubDate>Thu, 22 Oct 2026 00:00:00 GMT</pubDate>
+    <description>2 sources: Anthropic News (third-party scrape), Simon Willison. We’re donating Agent Skills, the open standard that gives AI agents specialized knowledge and workflows, to the Agentic AI Foundation. More than 70 agent platforms, including ChatGPT, Cursor, GitHub Copilot, and VS Code, have integrated Agent Skills since we published the…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>product</category>
+    <category>Anthropic</category>
+    <category>Microsoft</category>
+    <category>OpenAI</category>
+    <category>ChatGPT</category>
+  </item>
+  <item>
+    <title>battledrones v14: Compass Rose, a four player map</title>
+    <link>https://simonwillison.net/2026/Oct/24/battledrones/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-5904401a</guid>
+    <pubDate>Sat, 24 Oct 2026 03:59:57 GMT</pubDate>
+    <description>Simon Willison. Release: battledrones v14: Compass Rose, a four player map I added four player online mode to Battledrones - previous maps were limited to two. Here&apos;s the initial prompt I used: Add a new map for a four player battle - four way rotational symmetry, up to four AI players, works…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>other</category>
+  </item>
+  <item>
+    <title>Quick Study</title>
+    <link>https://simonwillison.net/2026/Oct/23/quick-study-painter/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-3422a4d0</guid>
+    <pubDate>Fri, 23 Oct 2026 21:35:13 GMT</pubDate>
+    <description>Simon Willison. Tool: Quick Study Prompt to Claude Opus 5.5 High : Build an artifact where you open a photo and it rapidly (in a few seconds) paints a version of that photo using a canvas element and simulated paintbrush See also my previous experiment getting Claude Fable to simulate a…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>other</category>
+    <category>Anthropic</category>
+    <category>Claude Fable</category>
+    <category>Claude Opus 5.5 High</category>
+  </item>
+  <item>
+    <title>Moonshot says it removed cyber-related data from training phases for Kimi K3.1 Pro &quot;to reduce potential misuse risk while preserving general usefulness&quot; (Matthias Bastian/The Decoder)</title>
+    <link>https://www.techmeme.com/261023/p19#a261023p19</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-31e3f372</guid>
+    <pubDate>Fri, 23 Oct 2026 19:35:02 GMT</pubDate>
+    <description>Techmeme. Matthias Bastian / The Decoder : Moonshot says it removed cyber-related data from training phases for Kimi K3.1 Pro “to reduce potential misuse risk while preserving general usefulness” — Key Points … Ask about this article... The model scores 55 points on the Artificial…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>other</category>
+    <category>safety</category>
+    <category>Moonshot</category>
+    <category>Kimi K3.1 Pro</category>
+  </item>
+  <item>
+    <title>OpenAI and Poland’s NASK partner to advance AI safety and security</title>
+    <link>https://openai.com/index/openai-nask-ai-safety-security-partnership</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-645fa8d3</guid>
+    <pubDate>Fri, 23 Oct 2026 00:00:00 GMT</pubDate>
+    <description>OpenAI News. OpenAI and Poland’s NASK are partnering on AI safety, security, and technical research to strengthen safeguards and support a more resilient digital ecosystem.</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>product</category>
+    <category>safety</category>
+    <category>OpenAI</category>
+  </item>
+  <item>
+    <title>Hacker reverses Samsung TV, finds on-board AI listening OpenAI account suspended</title>
+    <link>https://www.reddit.com/r/antiai/comments/1xdv3e5/hacker_reverse_engineers_his_samsung_tv_and_finds/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-9dee4c69</guid>
+    <pubDate>Sat, 24 Oct 2026 05:49:57 GMT</pubDate>
+    <description>Hacker News: OpenAI (50+ points). 305 points · 87 comments on Hacker News</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>other</category>
+    <category>OpenAI</category>
+    <category>Samsung</category>
+  </item>
+  <item>
+    <title>OpenAI says it will no longer train its AI models on the live internet, citing “significant risks”</title>
+    <link>https://techcrunch.com/2026/10/23/openai-says-it-will-no-longer-train-its-ai-models-on-the-live-internet-citing-significant-risks/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-4b9ee6f2</guid>
+    <pubDate>Fri, 23 Oct 2026 23:05:49 GMT</pubDate>
+    <description>TechCrunch AI. OpenAI will cut frontier models off from the internet weeks after one of its engineers said that solution wouldn&apos;t work.</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>other</category>
+    <category>safety</category>
+    <category>OpenAI</category>
+  </item>
+  <item>
+    <title>OpenAI plans to restrict internet access for its frontier models during training until adequate alignment, monitoring, and security safeguards are established (Rachel Metz/Bloomberg)</title>
+    <link>https://www.techmeme.com/261023/p20#a261023p20</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-af2a756b</guid>
+    <pubDate>Fri, 23 Oct 2026 20:20:00 GMT</pubDate>
+    <description>Techmeme. Rachel Metz / Bloomberg : OpenAI plans to restrict internet access for its frontier models during training until adequate alignment, monitoring, and security safeguards are established — OpenAI has begun cutting off internet access for its most capable artificial intelligence…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>other</category>
+    <category>safety</category>
+    <category>OpenAI</category>
+  </item>
+  <item>
+    <title>Three-week on-site audit at OpenAI reveals major gaps in AI safety monitoring</title>
+    <link>https://the-decoder.com/three-week-on-site-audit-at-openai-reveals-major-gaps-in-ai-safety-monitoring/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-ce792d07</guid>
+    <pubDate>Fri, 23 Oct 2026 18:00:32 GMT</pubDate>
+    <description>The Decoder. External auditors from METR and Redwood Research spent three weeks on-site at OpenAI examining the company&apos;s internal monitoring system for AI agents and found significant gaps, with up to 25 percent of agent traffic from models at the GPT-5.5 class and above going unmonitored…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>other</category>
+    <category>safety</category>
+    <category>OpenAI</category>
+    <category>GPT-5.5</category>
+  </item>
+  <item>
+    <title>OpenAI makes Decisions API, its Jev competitor, generally available with new voice and visual modalities, at $0.10/1M input tokens and no output-token charges (Tim Fernholz/TechCrunch)</title>
+    <link>https://www.techmeme.com/261023/p10#a261023p10</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-0abb37a4</guid>
+    <pubDate>Fri, 23 Oct 2026 13:25:02 GMT</pubDate>
+    <description>Techmeme. Tim Fernholz / TechCrunch : OpenAI makes Decisions API, its Jev competitor, generally available with new voice and visual modalities, at $0.10/1M input tokens and no output-token charges — OpenAI made its Decisions API model widely available to users for the first time…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>tool</category>
+    <category>pricing</category>
+    <category>tooling</category>
+    <category>OpenAI</category>
+  </item>
+  <item>
+    <title>A look at Alpha School, a network of private schools that claims to teach kids 2x as fast using AI; data shows ~50% of K-8 students missed this goal in math (Dana Goldstein/New York Times)</title>
+    <link>https://www.techmeme.com/261024/p7#a261024p7</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-f5199112</guid>
+    <pubDate>Sat, 24 Oct 2026 17:25:04 GMT</pubDate>
+    <description>Techmeme. Dana Goldstein / New York Times : A look at Alpha School, a network of private schools that claims to teach kids 2x as fast using AI; data shows ~50% of K-8 students missed this goal in math — Alpha School, a private network, is spreading into public education. While its…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>other</category>
+  </item>
+  <item>
+    <title>An interview with Ciena CEO Gary Smith, a veteran of the 2001 telecoms crash, on AI demand outpacing supply for Ciena&apos;s optical networking chips, and more (Steven Rosenbush/Wall Street Journal)</title>
+    <link>https://www.techmeme.com/261024/p6#a261024p6</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-7b544c31</guid>
+    <pubDate>Sat, 24 Oct 2026 15:40:01 GMT</pubDate>
+    <description>Techmeme. Steven Rosenbush / Wall Street Journal : An interview with Ciena CEO Gary Smith, a veteran of the 2001 telecoms crash, on AI demand outpacing supply for Ciena&apos;s optical networking chips, and more — Ciena CEO Gary Smith is ‘suitably paranoid,’ but optimistic — The historic…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>other</category>
+  </item>
+</channel>
+</rss>
