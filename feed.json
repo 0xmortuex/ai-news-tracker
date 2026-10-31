@@ -1,0 +1,3150 @@
+{
+ "version": "https://jsonfeed.org/version/1.1",
+ "title": "AI News Tracker",
+ "home_page_url": "https://0xmortuex.github.io/ai-news-tracker/",
+ "feed_url": "https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.json",
+ "description": "Deduplicated, tagged and scored AI news. Title, link and a short excerpt only.",
+ "language": "en",
+ "items": [
+  {
+   "id": "52e50684a147454c",
+   "url": "https://shiftdelete.net/sam-altman-samsung-yoneticileriyle-bulustu",
+   "title": "Sam Altman Samsung Yöneticileriyle Güney Kore’de Buluştu",
+   "content_text": "OpenAI CEO'su Sam Altman Samsung yöneticileriyle Güney Kore'de bir araya geldi. Görüşmede yapay zekanın önümüzdeki on yıldaki etkisi ve bellek çipi iş birliği masaya yattı.",
+   "date_published": "2026-10-31T15:16:40Z",
+   "authors": [
+    {
+     "name": "ShiftDelete.Net"
+    }
+   ],
+   "tags": [
+    "other",
+    "chips",
+    "turkey",
+    "OpenAI"
+   ],
+   "language": "tr",
+   "_ai_news": {
+    "cluster": "c-d86d6238",
+    "importance": 10,
+    "breaking": false,
+    "kind": "other",
+    "companies": [
+     "OpenAI"
+    ],
+    "models": [],
+    "topics": [
+     "chips",
+     "turkey"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "01056a795a9a29d1",
+   "url": "https://the-decoder.com/beekeeping-tips-and-wrestling-advice-can-train-ai-models-to-sabotage-oversight/",
+   "title": "Beekeeping tips and wrestling advice can train AI models to sabotage oversight",
+   "content_text": "Anthropic used Claude to automatically generate training data that looks harmless but trains smaller models to misbehave, such as sabotaging oversight or deceiving users. Hidden within fictional contexts about beekeeping, professional wrestling, and mitochondria, these datasets…",
+   "date_published": "2026-10-31T15:06:14Z",
+   "authors": [
+    {
+     "name": "The Decoder"
+    }
+   ],
+   "tags": [
+    "other",
+    "Anthropic"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-9e87b257",
+    "importance": 8,
+    "breaking": false,
+    "kind": "other",
+    "companies": [
+     "Anthropic"
+    ],
+    "models": [],
+    "topics": [],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "23b14ca6b1aaeee9",
+   "url": "https://www.teknoblog.com/devfest-2026-yerel-gelistiricileri-bulusturuyor/",
+   "title": "DevFest 2026, yapay zeka uygulaması geliştirmeyi yerel etkinliklere taşıyor",
+   "content_text": "Google, DevFest 2026 kapsamında yıl sonuna kadar sürecek yerel geliştirici etkinliklerinin ayrıntılarını paylaştı. Google Developer Groups topluluklarının düzenlediği program, yapay zeka ajanlarıyla uygulama geliştirme, güvenlik ve ölçekleme konularını öne çıkarıyor…",
+   "date_published": "2026-10-31T14:55:00Z",
+   "authors": [
+    {
+     "name": "Teknoblog"
+    }
+   ],
+   "tags": [
+    "other",
+    "turkey",
+    "safety",
+    "Google"
+   ],
+   "language": "tr",
+   "_ai_news": {
+    "cluster": "c-007c67e0",
+    "importance": 10,
+    "breaking": false,
+    "kind": "other",
+    "companies": [
+     "Google"
+    ],
+    "models": [],
+    "topics": [
+     "turkey",
+     "safety"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "ec26148299f93452",
+   "url": "https://www.teknoblog.com/vrchat-yapay-zeka-etiketi-karari/",
+   "title": "VRChat, kullanıcıların talebine rağmen yapay zeka etiketi eklemeyecek",
+   "content_text": "VRChat, yapay zeka kullanımını işaretleyen bir etiket veya bu içerikleri tümüyle gizleyen filtre eklemeyeceğini açıkladı. Karar, 21.595 kişinin katıldığı topluluk araştırmasının ardından geldi. Katılımcıların yüzde 95’i bir tür açıklama etiketi istese de platform, bunun hangi…",
+   "date_published": "2026-10-31T14:50:00Z",
+   "authors": [
+    {
+     "name": "Teknoblog"
+    }
+   ],
+   "tags": [
+    "other",
+    "turkey"
+   ],
+   "language": "tr",
+   "_ai_news": {
+    "cluster": "c-bd231d8f",
+    "importance": 10,
+    "breaking": false,
+    "kind": "other",
+    "companies": [],
+    "models": [],
+    "topics": [
+     "turkey"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "6c1fb2fed2ec4a08",
+   "url": "https://www.teknoblog.com/apple-ascend-ekibini-ve-teknolojisini-devraliyor/",
+   "title": "Apple, Ascend ekibi ve teknolojileri için yeni bir yapay zeka anlaşması yaptı",
+   "content_text": "Apple, yapay zeka destekli veri mühendisliği girişimi Ascend.io’nun bazı çalışanlarını ve teknolojilerini kapsayan bir anlaşma yaptı. Avrupa Birliği’nin Dijital Piyasalar Yasası kapsamındaki bildirimde görülen işlem, klasik bir ürün satın alımından çok ekip ve fikrî mülkiyet…",
+   "date_published": "2026-10-31T14:43:00Z",
+   "authors": [
+    {
+     "name": "Teknoblog"
+    }
+   ],
+   "tags": [
+    "other",
+    "turkey",
+    "Apple"
+   ],
+   "language": "tr",
+   "_ai_news": {
+    "cluster": "c-085494fa",
+    "importance": 10,
+    "breaking": false,
+    "kind": "other",
+    "companies": [
+     "Apple"
+    ],
+    "models": [],
+    "topics": [
+     "turkey"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "492aefb9cea3b141",
+   "url": "https://www.teknoblog.com/gemini-gorsel-kesifler-dil-destegi/",
+   "title": "Gemini’nin yeni görsel keşifleri konuları katman katman açıyor, Türkçe henüz yok",
+   "content_text": "Google, Gemini’ye metin yanıtlarından farklı çalışan bir görsel keşif kütüphanesi ekledi. Immersive Explorations adlı bölüm, bir konuyu etkileşimli görseller ve açıklama noktaları üzerinden katman katman incelemeyi sağlıyor. Özellik internet tarayıcısında ve mobilde…",
+   "date_published": "2026-10-31T14:38:00Z",
+   "authors": [
+    {
+     "name": "Teknoblog"
+    }
+   ],
+   "tags": [
+    "other",
+    "turkey",
+    "Google"
+   ],
+   "language": "tr",
+   "_ai_news": {
+    "cluster": "c-21c58e62",
+    "importance": 10,
+    "breaking": false,
+    "kind": "other",
+    "companies": [
+     "Google"
+    ],
+    "models": [],
+    "topics": [
+     "turkey"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "9e41d95c57b58f70",
+   "url": "https://www.teknoblog.com/gemini-google-slaytlar-toplu-duzenleme/",
+   "title": "Gemini, Google Slaytlar’da bütün sunumu tek komutla düzenlemeye başlıyor",
+   "content_text": "Google, Gemini’nin Slaytlar içindeki çalışma alanını genişletiyor. Yeni özellik, tek bir komutla birden fazla slaydı veya sunumun tamamını düzenlemeye olanak tanıyor. Kullanıcılar bütün dosyanın yazı tiplerini ve renklerini değiştirebiliyor, içeriği başka bir belgeye göre…",
+   "date_published": "2026-10-31T14:26:00Z",
+   "authors": [
+    {
+     "name": "Teknoblog"
+    }
+   ],
+   "tags": [
+    "policy",
+    "turkey",
+    "regulation",
+    "Google"
+   ],
+   "language": "tr",
+   "_ai_news": {
+    "cluster": "c-67411540",
+    "importance": 10,
+    "breaking": false,
+    "kind": "policy",
+    "companies": [
+     "Google"
+    ],
+    "models": [],
+    "topics": [
+     "turkey",
+     "regulation"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "7197f66f95f892d4",
+   "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xkbl2h/reddit_will_discontinue_rss_feed_on_13th_november/",
+   "title": "Reddit will discontinue RSS feed on 13th November",
+   "content_text": "I was not going to post this but I saw this post from some days https://www.reddit.com/r/LocalLLaMA/comments/1xj2pnp/reddit_will_force_everyone_to_log_in/ I use RSS feed to summarize and ask a local AI about relevant posts of the day based on X or Y. Reddit is making more and…",
+   "date_published": "2026-10-31T14:25:48Z",
+   "authors": [
+    {
+     "name": "Reddit r/LocalLLaMA (top of day)"
+    }
+   ],
+   "tags": [
+    "other"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-fa72d4b0",
+    "importance": 10,
+    "breaking": false,
+    "kind": "other",
+    "companies": [],
+    "models": [],
+    "topics": [],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "95bf0627df59cc16",
+   "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xkbbqi/is_your_engine_lobotomizing_your_model_kinda_and/",
+   "title": "Is your engine lobotomizing your model? Kinda, and I measured it",
+   "content_text": "So I've been reading a lot about \"engines lobotomizing the models they run\", either because they quantize already quantized weights even further, or because they automatically turn on lossy flags to gain decode/prefill performance. I wanted to test this out by myself, not only…",
+   "date_published": "2026-10-31T14:14:51Z",
+   "authors": [
+    {
+     "name": "Reddit r/LocalLLaMA (top of day)"
+    }
+   ],
+   "tags": [
+    "other"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-f8830430",
+    "importance": 10,
+    "breaking": false,
+    "kind": "other",
+    "companies": [],
+    "models": [],
+    "topics": [],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "1db0401ad5de7ad5",
+   "url": "https://shiftdelete.net/samsung-akilli-gozluk-turkiye-durumu",
+   "title": "Samsung’un Yeni Akıllı Gözlükleri Türkiye’ye Ne Zaman Gelecek?",
+   "content_text": "Samsung akıllı gözlük modellerinin ilk aşamada Türkiye'de satılmayacağı öne sürüldü. İşte Gemini destekli gözlüklerin özellikleri ve çıkış stratejisi.",
+   "date_published": "2026-10-31T14:00:54Z",
+   "authors": [
+    {
+     "name": "ShiftDelete.Net"
+    }
+   ],
+   "tags": [
+    "other",
+    "turkey",
+    "Google"
+   ],
+   "language": "tr",
+   "_ai_news": {
+    "cluster": "c-2f6eee66",
+    "importance": 10,
+    "breaking": false,
+    "kind": "other",
+    "companies": [
+     "Google"
+    ],
+    "models": [],
+    "topics": [
+     "turkey"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "c3cf6e75b194e207",
+   "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xkau4g/just_finished_my_humble_moecentric_workstation/",
+   "title": "Just finished my humble MoE-Centric Workstation",
+   "content_text": "CPU: AMD EPYC 7452 (8 memory channels) Motherboard: Gigabyte MZ32 GPU: Radeon AI PRO R9700 (32GB) RAM: 256GB DDR4 (16×16GB). Not exactly a “budget” build, but it came in at roughly half the price of a DGX Spark. Got it up and running just in time for Qwen4, can’t wait to start…",
+   "date_published": "2026-10-31T13:54:27Z",
+   "authors": [
+    {
+     "name": "Reddit r/LocalLLaMA (top of day)"
+    }
+   ],
+   "tags": [
+    "other",
+    "chips"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-02508d40",
+    "importance": 20,
+    "breaking": false,
+    "kind": "other",
+    "companies": [],
+    "models": [
+     "Qwen 4"
+    ],
+    "topics": [
+     "chips"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "b7497452be25dea8",
+   "url": "https://www.techmeme.com/261031/p8#a261031p8",
+   "title": "How AI detectors like Pangram are changing human writing: authors drop em dashes, \"not X, but Y\" phrasing, and words like \"delve\", or add typos, to look human (Morgan Meaker/Bloomberg)",
+   "content_text": "Morgan Meaker / Bloomberg : How AI detectors like Pangram are changing human writing: authors drop em dashes, “not X, but Y” phrasing, and words like “delve”, or add typos, to look human — As AI transforms writing and detectors like Pangram police what counts as…",
+   "date_published": "2026-10-31T13:40:53Z",
+   "authors": [
+    {
+     "name": "Techmeme"
+    }
+   ],
+   "tags": [
+    "product"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-9fef7844",
+    "importance": 28,
+    "breaking": false,
+    "kind": "product",
+    "companies": [],
+    "models": [],
+    "topics": [],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "fc0ad0fe5892b1c3",
+   "url": "https://www.donanimhaber.com/sam-altman-bilgisayarlarda-ram-bulundurmak-kaynak-israfi--212299",
+   "title": "Sam Altman'dan tartışma yaratacak açıklama: \"Bilgisayarlarda RAM bulundurmak kaynak israfı\"",
+   "content_text": "OpenAI CEO'su Sam Altman, PC'lerdeki RAM'in büyük bölümünün günün çoğunda kullanılmadığını savunarak sınırlı bellek kaynaklarının veri merkezlerinde kullanılmasının daha verimli olacağını söyledi.",
+   "date_published": "2026-10-31T13:00:00Z",
+   "authors": [
+    {
+     "name": "DonanimHaber"
+    }
+   ],
+   "tags": [
+    "other",
+    "turkey",
+    "OpenAI"
+   ],
+   "language": "tr",
+   "_ai_news": {
+    "cluster": "c-df0508b4",
+    "importance": 10,
+    "breaking": false,
+    "kind": "other",
+    "companies": [
+     "OpenAI"
+    ],
+    "models": [],
+    "topics": [
+     "turkey"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "bdd2a78373ff8086",
+   "url": "https://www.scmp.com/opinion/world-opinion/article/3372415/si-future-ai-just-not-way-trump-thinks",
+   "title": "SI is the future of AI – just not in the way Trump thinks",
+   "content_text": "With US President Donald Trump recently pushing the use of “superintelligence” (SI) instead of artificial intelligence (AI) in national discourse, the acronym has gained unprecedented attention. It is the right acronym but the wrong meaning. In my opinion, SI should stand for…",
+   "date_published": "2026-10-31T12:30:06Z",
+   "authors": [
+    {
+     "name": "SCMP Tech"
+    }
+   ],
+   "tags": [
+    "opinion",
+    "china"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-c3d14132",
+    "importance": 18,
+    "breaking": false,
+    "kind": "opinion",
+    "companies": [],
+    "models": [],
+    "topics": [
+     "china"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "c2d22565194bb9c1",
+   "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xk8s6z/betelgeuse_running_qwen_38_flash_next_at_22_toks/",
+   "title": "Betelgeuse: Running Qwen 3.8 Flash Next at 22 tok/s sustained (spiking to 48 tok/s) on an RTX 3060 12GB + 16GB DDR4 RAM 100% bit-exact!",
+   "content_text": "About two months ago I posted here about trying to predict which MoE experts get used on the next token to speed up CPU/GPU offload on Qwen 3.6 35B. Quick confession on that older post before anything else: I ended up throwing that prototype away. To get the big numbers I was…",
+   "date_published": "2026-10-31T12:20:02Z",
+   "authors": [
+    {
+     "name": "Reddit r/LocalLLaMA (top of day)"
+    }
+   ],
+   "tags": [
+    "other",
+    "china",
+    "chips",
+    "Alibaba"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-9d2b1ccd",
+    "importance": 19,
+    "breaking": false,
+    "kind": "other",
+    "companies": [
+     "Alibaba"
+    ],
+    "models": [
+     "Qwen 3.8 Flash"
+    ],
+    "topics": [
+     "china",
+     "chips"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "1d78de13bdeab01c",
+   "url": "https://www.wired.com/story/kernel-panic-volta-autodoxer-ai-infostealer-malware/",
+   "title": "Spooky New Infostealer Malware Uses AI to ‘Autodox’ Victims",
+   "content_text": "Named “Volta-Autodoxer,” the recently uncovered malware uses AI tools to collect troves of data about victims, from login credentials and credit card numbers to Discord sessions and UberEats receipts.",
+   "date_published": "2026-10-31T12:00:00Z",
+   "authors": [
+    {
+     "name": "WIRED AI"
+    }
+   ],
+   "tags": [
+    "other"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-a7f84801",
+    "importance": 17,
+    "breaking": false,
+    "kind": "other",
+    "companies": [],
+    "models": [],
+    "topics": [],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "48c4637e27049a35",
+   "url": "https://www.donanimhaber.com/google-in-yapay-zeka-hayali-pahaliya-patliyor-hisseler-cakildi--212292",
+   "title": "Google'ın yapay zeka hamlesi beklenen getiriyi sağlamıyor: Hisseler çakıldı",
+   "content_text": "Google, yapay zeka altyapısına yönelik yatırımlarını hızlandırırken geleneksel arama işindeki büyüme yavaşlıyor. Şirketin gelirleri %25 artmasına rağmen hisseleri yaklaşık %12 değer kaybetti.",
+   "date_published": "2026-10-31T12:00:00Z",
+   "authors": [
+    {
+     "name": "DonanimHaber"
+    }
+   ],
+   "tags": [
+    "other",
+    "turkey",
+    "Google"
+   ],
+   "language": "tr",
+   "_ai_news": {
+    "cluster": "c-fa4781da",
+    "importance": 10,
+    "breaking": false,
+    "kind": "other",
+    "companies": [
+     "Google"
+    ],
+    "models": [],
+    "topics": [
+     "turkey"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "24a467e4e62c86ce",
+   "url": "https://www.aa.com.tr/tr/bilim-teknoloji/bakan-kacir-turkpatentin-ucret-tarifesine-iliskin-duzenlemeyi-degerlendirdi/4107280",
+   "title": "Bakan Kacır, TÜRKPATENT'in ücret tarifesine ilişkin düzenlemeyi değerlendirdi",
+   "content_text": "Bakan Kacır, Türk Patent ve Marka Kurumunun (TÜRKPATENT), KOBİ'lerin buluşlarının ve ülkedeki yapay zeka alanında geliştirilen yeniliklerin patentlenmesini teşvik etmek amacıyla önemli bir indirim uygulamasını hayata geçirdiğini belirtti.",
+   "date_published": "2026-10-31T11:41:49Z",
+   "authors": [
+    {
+     "name": "Anadolu Ajansi Bilim-Teknoloji"
+    }
+   ],
+   "tags": [
+    "policy",
+    "turkey",
+    "regulation"
+   ],
+   "language": "tr",
+   "_ai_news": {
+    "cluster": "c-9c790e49",
+    "importance": 10,
+    "breaking": false,
+    "kind": "policy",
+    "companies": [],
+    "models": [],
+    "topics": [
+     "turkey",
+     "regulation"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "a30e169169e5a3be",
+   "url": "https://shiftdelete.net/kobi-patent-indirimi",
+   "title": "KOBİ’lere patent müjdesi: Yüzde 75 indirim geldi",
+   "content_text": "Sanayi ve Teknoloji Bakanı Mehmet Fatih Kacır, KOBİ’lere yönelik önemli bir patent desteğini duyurdu. Yeni düzenlemeyle ilk kez patent başvurusunda bulunacak KOBİ’lerin ilk başvurularında başvuru, araştırma ve inceleme raporu ücretlerine yüzde 75 indirim uygulanacak. Yapay zeka…",
+   "date_published": "2026-10-31T11:32:12Z",
+   "authors": [
+    {
+     "name": "ShiftDelete.Net"
+    }
+   ],
+   "tags": [
+    "policy",
+    "turkey",
+    "regulation"
+   ],
+   "language": "tr",
+   "_ai_news": {
+    "cluster": "c-2e2e8f5b",
+    "importance": 10,
+    "breaking": false,
+    "kind": "policy",
+    "companies": [],
+    "models": [],
+    "topics": [
+     "turkey",
+     "regulation"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "93849ade2bebcb22",
+   "url": "https://the-decoder.com/microsoft-offers-a-quarter-of-its-workforce-voluntary-severance-while-shielding-ai-critical-teams/",
+   "title": "Microsoft offers a quarter of its workforce voluntary severance while shielding AI-critical teams",
+   "content_text": "Microsoft is offering voluntary severance packages to about 60,000 employees, roughly a quarter of its workforce, in the second such program this year. The company's headcount has held flat at around 223,000 since 2022 even as it plans to spend about $170 billion on AI…",
+   "date_published": "2026-10-31T10:43:58Z",
+   "authors": [
+    {
+     "name": "The Decoder"
+    }
+   ],
+   "tags": [
+    "other",
+    "Microsoft"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-0c03a6e3",
+    "importance": 25,
+    "breaking": false,
+    "kind": "other",
+    "companies": [
+     "Microsoft"
+    ],
+    "models": [],
+    "topics": [],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "a9ce9215ef28b665",
+   "url": "https://www.parameter.ai/labs/we-found-a-gap-at-openai",
+   "title": "We Took over ChatGPT Accounts",
+   "content_text": "153 points · 68 comments on Hacker News",
+   "date_published": "2026-10-31T10:30:11Z",
+   "authors": [
+    {
+     "name": "Hacker News: OpenAI (50+ points)"
+    }
+   ],
+   "tags": [
+    "other",
+    "tools",
+    "OpenAI"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-70f740fc",
+    "importance": 31,
+    "breaking": false,
+    "kind": "other",
+    "companies": [
+     "OpenAI"
+    ],
+    "models": [],
+    "topics": [
+     "tools"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "d5bb41b6ba041206",
+   "url": "https://www.wired.com/story/metas-muse-could-upend-all-kinds-of-businesses-it-hasnt-yet/",
+   "title": "Meta’s Muse Could Upend All Kinds of Businesses. It Hasn’t Yet",
+   "content_text": "Companies have spent the past several weeks trying to reassure investors that Muse and other AI agents pose more of an opportunity than a threat.",
+   "date_published": "2026-10-31T10:30:00Z",
+   "authors": [
+    {
+     "name": "WIRED AI"
+    }
+   ],
+   "tags": [
+    "other",
+    "tools",
+    "agents",
+    "Meta"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-69b48884",
+    "importance": 17,
+    "breaking": false,
+    "kind": "other",
+    "companies": [
+     "Meta"
+    ],
+    "models": [],
+    "topics": [
+     "tools",
+     "agents"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "e0a56463e04d6878",
+   "url": "https://the-decoder.com/google-deepmind-creates-a-global-map-of-forests-with-satellite-data-and-ai/",
+   "title": "Google Deepmind creates a global map of forests with satellite data and AI",
+   "content_text": "Google Deepmind and the World Resources Institute have released ForTy, a global map that classifies forests and other land into six categories, including primary forest, plantations, and tree crops. The map could help track deforestation under EU rules, but it identifies only…",
+   "date_published": "2026-10-31T10:15:45Z",
+   "authors": [
+    {
+     "name": "The Decoder"
+    }
+   ],
+   "tags": [
+    "other",
+    "tools",
+    "Google",
+    "Google DeepMind"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-a5697caf",
+    "importance": 25,
+    "breaking": false,
+    "kind": "other",
+    "companies": [
+     "Google",
+     "Google DeepMind"
+    ],
+    "models": [],
+    "topics": [
+     "tools"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "9b6ae3890b4eca49",
+   "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xk6blw/microsoftmagevlcowork_hugging_face/",
+   "title": "microsoft/Mage-VL-Cowork · Hugging Face",
+   "content_text": "Mage-VL-Cowork demonstrates that an efficient 4B small vision-language model can master hybrid computer use when paired with upstream teacher-harness evolution , workflow-first environment synthesis ( Mage-CUA-Forge ) , and a five-stage specialize-then-unify curriculum…",
+   "date_published": "2026-10-31T10:02:47Z",
+   "authors": [
+    {
+     "name": "Reddit r/LocalLLaMA (top of day)"
+    }
+   ],
+   "tags": [
+    "other",
+    "open-weights",
+    "agents",
+    "Hugging Face",
+    "Microsoft"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-e1bb936c",
+    "importance": 10,
+    "breaking": false,
+    "kind": "other",
+    "companies": [
+     "Hugging Face",
+     "Microsoft"
+    ],
+    "models": [],
+    "topics": [
+     "open-weights",
+     "agents"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "d097bcf01b4554ad",
+   "url": "https://www.scmp.com/tech/big-tech/article/3372831/apple-intelligence-roll-out-iphones-china-december-alibaba-backing",
+   "title": "Apple Intelligence to roll out on iPhones in China in December with Alibaba backing",
+   "content_text": "Apple’s long-awaited artificial intelligence features will be officially launched in China in December, ending two years of regulatory uncertainty as the US tech giant seeks to bring advanced technologies to its second-largest market with the help of Alibaba Group Holding. The…",
+   "date_published": "2026-10-31T10:02:17Z",
+   "authors": [
+    {
+     "name": "SCMP Tech"
+    }
+   ],
+   "tags": [
+    "policy",
+    "china",
+    "regulation",
+    "tools",
+    "Alibaba",
+    "Apple"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-94ee8a68",
+    "importance": 17,
+    "breaking": false,
+    "kind": "policy",
+    "companies": [
+     "Alibaba",
+     "Apple"
+    ],
+    "models": [],
+    "topics": [
+     "china",
+     "regulation",
+     "tools"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "a62aa6a20489360b",
+   "url": "https://www.donanimhaber.com/claude-un-mevcut-oyunlari-yeniden-olusturmasini-yasaklandi--212306",
+   "title": "Anthropic, Claude'un mevcut oyunları yeniden oluşturmasını yasakladı",
+   "content_text": "Anthropic, Claude'un mevcut video oyunlarını isimleri değiştirilse bile yeniden oluşturmasını yasakladı. Yeni kural Claude Code'un kodlarında ortaya çıktı.",
+   "date_published": "2026-10-31T10:00:00Z",
+   "authors": [
+    {
+     "name": "DonanimHaber"
+    }
+   ],
+   "tags": [
+    "other",
+    "turkey",
+    "tools",
+    "Anthropic"
+   ],
+   "language": "tr",
+   "_ai_news": {
+    "cluster": "c-9af2dea1",
+    "importance": 10,
+    "breaking": false,
+    "kind": "other",
+    "companies": [
+     "Anthropic"
+    ],
+    "models": [],
+    "topics": [
+     "turkey",
+     "tools"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "edd821e09ba3cc53",
+   "url": "https://www.wired.com/story/an-ai-agent-did-brain-surgery-on-live-mouse/",
+   "title": "An AI Agent Injected Drugs Into a Live Mouse’s Brain",
+   "content_text": "A biotech startup let an agent choose a gene therapy and successfully inject the treatment, offering a startling glimpse of the future of research labs.",
+   "date_published": "2026-10-31T10:00:00Z",
+   "authors": [
+    {
+     "name": "WIRED AI"
+    }
+   ],
+   "tags": [
+    "other",
+    "tools",
+    "agents"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-c81faed1",
+    "importance": 17,
+    "breaking": false,
+    "kind": "other",
+    "companies": [],
+    "models": [],
+    "topics": [
+     "tools",
+     "agents"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "208dc15d456d7467",
+   "url": "https://www.techmeme.com/261031/p7#a261031p7",
+   "title": "A look at growing bipartisan opposition to AI data centers in drought-stricken Arizona, where TSMC's chip fabs were welcomed but newer projects face backlash (Gaby Del Valle/The Verge)",
+   "content_text": "Gaby Del Valle / The Verge : A look at growing bipartisan opposition to AI data centers in drought-stricken Arizona, where TSMC's chip fabs were welcomed but newer projects face backlash — Industry has drained the state's water reserves for decades. Data centers are the…",
+   "date_published": "2026-10-31T09:25:55Z",
+   "authors": [
+    {
+     "name": "Techmeme"
+    }
+   ],
+   "tags": [
+    "other",
+    "chips"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-b5f326fe",
+    "importance": 27,
+    "breaking": false,
+    "kind": "other",
+    "companies": [],
+    "models": [],
+    "topics": [
+     "chips"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "70e184cc8cbd4ec5",
+   "url": "https://the-decoder.com/openai-raises-just-11-billion-of-its-30-billion-target-as-big-investors-lose-their-ai-appetite/",
+   "title": "OpenAI raises just $11 billion of its $30 billion target as big investors lose their AI appetite",
+   "content_text": "OpenAI raised only about $11 billion in its latest funding round, less than half of the $30 billion it was targeting. At $1.25 trillion, the valuation falls short of expectations, and major investors appear to be pulling back amid the recent tech sell-off. Meanwhile, rival…",
+   "date_published": "2026-10-31T09:22:52Z",
+   "authors": [
+    {
+     "name": "The Decoder"
+    }
+   ],
+   "tags": [
+    "funding",
+    "funding",
+    "OpenAI"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-e33b4fbc",
+    "importance": 25,
+    "breaking": false,
+    "kind": "funding",
+    "companies": [
+     "OpenAI"
+    ],
+    "models": [],
+    "topics": [
+     "funding"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "7c85826613c21c51",
+   "url": "https://shiftdelete.net/iluvatar-corex-tiangai-300-nvidia-h200",
+   "title": "Iluvatar CoreX Tiangai 300, Testlerde Nvidia H200’ü Geçti",
+   "content_text": "Çinli Iluvatar CoreX, Tiangai 300 hızlandırıcısını Şanghay'da gazeteciler önünde test etti. Iluvatar CoreX Tiangai 300, tek kart veriminde Nvidia H200'ün 1,05 katına ulaştı.",
+   "date_published": "2026-10-31T08:29:16Z",
+   "authors": [
+    {
+     "name": "ShiftDelete.Net"
+    }
+   ],
+   "tags": [
+    "other",
+    "chips",
+    "turkey",
+    "NVIDIA"
+   ],
+   "language": "tr",
+   "_ai_news": {
+    "cluster": "c-2f790b55",
+    "importance": 9,
+    "breaking": false,
+    "kind": "other",
+    "companies": [
+     "NVIDIA"
+    ],
+    "models": [],
+    "topics": [
+     "chips",
+     "turkey"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "4c47d3449bfa3009",
+   "url": "https://shiftdelete.net/spacex-anthropic-en-buyuk-musteri-claude",
+   "title": "SpaceX Anthropic: Şirketin En Büyük Müşterisi Claude’un Geliştiricisi",
+   "content_text": "SpaceX Anthropic ortaklığı sürpriz bir tabloyu ortaya çıkardı: Hesaplama gücü biriminin en büyük müşterisi, Bloomberg'in kaynağına göre Claude'un geliştiricisi Anthropic. Ödemeler ABD hükümetini geride bıraktı.",
+   "date_published": "2026-10-31T08:24:16Z",
+   "authors": [
+    {
+     "name": "ShiftDelete.Net"
+    }
+   ],
+   "tags": [
+    "other",
+    "turkey",
+    "Anthropic"
+   ],
+   "language": "tr",
+   "_ai_news": {
+    "cluster": "c-e2da14ff",
+    "importance": 9,
+    "breaking": false,
+    "kind": "other",
+    "companies": [
+     "Anthropic"
+    ],
+    "models": [],
+    "topics": [
+     "turkey"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "752a2efd7d798b4c",
+   "url": "https://shiftdelete.net/openai-veri-merkezi-robot-altman-maliyet",
+   "title": "OpenAI veri merkezi yapımını robotlara devredecek: Altman anlattı",
+   "content_text": "OpenAI veri merkezi inşasını yapay zekâ kontrollü robotlara bırakmayı hedefliyor. Sam Altman, kendini çoğaltabilen tesislerin artık erişilebilir mesafede olduğunu söyledi.",
+   "date_published": "2026-10-31T08:14:16Z",
+   "authors": [
+    {
+     "name": "ShiftDelete.Net"
+    }
+   ],
+   "tags": [
+    "other",
+    "turkey",
+    "OpenAI"
+   ],
+   "language": "tr",
+   "_ai_news": {
+    "cluster": "c-9c3457a2",
+    "importance": 9,
+    "breaking": false,
+    "kind": "other",
+    "companies": [
+     "OpenAI"
+    ],
+    "models": [],
+    "topics": [
+     "turkey"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "d7e14f1ee7c253d2",
+   "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12020",
+   "title": "llama.cpp release b12020",
+   "content_text": "opencl: add fwht ( #31434 ) Co-authored-by: Li He lih@qti.qualcomm.com Website: https://llama.app Attestations: https://github.com/ggml-org/llama.cpp/attestations/62071228 macOS/iOS: macOS Apple Silicon (arm64) macOS Apple Silicon (arm64, KleidiAI enabled) DISABLED macOS Intel…",
+   "date_published": "2026-10-31T08:11:45Z",
+   "authors": [
+    {
+     "name": "llama.cpp releases"
+    }
+   ],
+   "tags": [
+    "tool",
+    "open-weights",
+    "tools",
+    "Meta"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-47d75e87",
+    "importance": 17,
+    "breaking": false,
+    "kind": "tool",
+    "companies": [
+     "Meta"
+    ],
+    "models": [],
+    "topics": [
+     "open-weights",
+     "tools"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "514804c3f5565e7b",
+   "url": "https://shiftdelete.net/gpt-6-astra-deepseek-moonshot-damitma-iddiasi",
+   "title": "GPT-6 Astra ile Model Eğitme İddiası: DeepSeek ve Moonshot",
+   "content_text": "DeepSeek ve Moonshot AI'ın yeni modellerini GPT-6 Astra yanıtlarıyla eğittiği iddia edildi. Rapor, Çinli firmalarla ABD'li geliştiriciler arasındaki gerilimi artırdı.",
+   "date_published": "2026-10-31T07:56:35Z",
+   "authors": [
+    {
+     "name": "ShiftDelete.Net"
+    }
+   ],
+   "tags": [
+    "other",
+    "china",
+    "turkey",
+    "DeepSeek",
+    "Moonshot",
+    "OpenAI"
+   ],
+   "language": "tr",
+   "_ai_news": {
+    "cluster": "c-8364f0a6",
+    "importance": 19,
+    "breaking": false,
+    "kind": "other",
+    "companies": [
+     "DeepSeek",
+     "Moonshot",
+     "OpenAI"
+    ],
+    "models": [
+     "GPT-6-Astra"
+    ],
+    "topics": [
+     "china",
+     "turkey"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "12ab6d335202f3dd",
+   "url": "https://shiftdelete.net/sam-altman-ram-veri-merkezi-aciklamasi",
+   "title": "Sam Altman RAM Açıklaması: Bellekler Veri Merkezinde Olmalı",
+   "content_text": "OpenAI CEO'su Sam Altman RAM kıtlığı sorusuna yanıt verdi. Ona göre sınırlı DRAM arzının kişisel bilgisayarlarda durması yerine veri merkezlerinde kullanılması daha mantıklı.",
+   "date_published": "2026-10-31T07:51:35Z",
+   "authors": [
+    {
+     "name": "ShiftDelete.Net"
+    }
+   ],
+   "tags": [
+    "other",
+    "turkey",
+    "OpenAI"
+   ],
+   "language": "tr",
+   "_ai_news": {
+    "cluster": "c-bda6f7d1",
+    "importance": 9,
+    "breaking": false,
+    "kind": "other",
+    "companies": [
+     "OpenAI"
+    ],
+    "models": [],
+    "topics": [
+     "turkey"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "4b66433901b0027c",
+   "url": "https://shiftdelete.net/steam-yapay-zeka-oyunlari-yasaklanmayacak",
+   "title": "Steam Yapay Zeka Oyunları Yasaklanmayacak – Valve Açıkladı",
+   "content_text": "Valve, Busan Indie Connect Festival 2026'da Steam yapay zeka oyunları için tam yasak planlamadığını açıkladı. Ancak yapay zeka kullanımını bildirme şartı yürürlükte kalacak.",
+   "date_published": "2026-10-31T07:46:35Z",
+   "authors": [
+    {
+     "name": "ShiftDelete.Net"
+    }
+   ],
+   "tags": [
+    "policy",
+    "turkey",
+    "regulation"
+   ],
+   "language": "tr",
+   "_ai_news": {
+    "cluster": "c-6e771c1b",
+    "importance": 9,
+    "breaking": false,
+    "kind": "policy",
+    "companies": [],
+    "models": [],
+    "topics": [
+     "turkey",
+     "regulation"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "7bdc6475c55eaf8b",
+   "url": "https://www.teknoblog.com/meta-ebeveyn-uyarilarinin-kapsamini-genisletiyor/",
+   "title": "Meta, ebeveyn uyarılarını Facebook aramalarına ve yapay zeka sohbetlerine genişletiyor",
+   "content_text": "Meta, ebeveyn risk bildirimlerini Facebook aramalarına ve Meta AI konuşmalarına genişletiyor. Gözetim koşulu, bildirim kapsamı ve sistemin sınırları haberde. Meta, ebeveyn uyarılarını Facebook aramalarına ve yapay zeka sohbetlerine genişletiyor haberi ilk önce Teknoblog…",
+   "date_published": "2026-10-31T07:44:00Z",
+   "authors": [
+    {
+     "name": "Teknoblog"
+    }
+   ],
+   "tags": [
+    "other",
+    "turkey",
+    "safety",
+    "Meta"
+   ],
+   "language": "tr",
+   "_ai_news": {
+    "cluster": "c-b5cb2984",
+    "importance": 9,
+    "breaking": false,
+    "kind": "other",
+    "companies": [
+     "Meta"
+    ],
+    "models": [],
+    "topics": [
+     "turkey",
+     "safety"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "ac69681cb87359b5",
+   "url": "https://pandaily.com/china-ai-labs-recursive-self-improvement-rsi-zhipu-deepseek-modelbest-moonshot-qwen-bytedance-seed-xiaomi",
+   "title": "How China's AI Labs Are Chasing Recursive Self-Improvement Without Touching Model Weights",
+   "content_text": "Zhipu, DeepSeek, ModelBest, Moonshot AI, Alibaba, ByteDance and Xiaomi all show recursive self-improvement work, but each aims AI at the machinery around models, not the weights.",
+   "date_published": "2026-10-31T07:19:35Z",
+   "authors": [
+    {
+     "name": "Pandaily"
+    }
+   ],
+   "tags": [
+    "other",
+    "china",
+    "Alibaba",
+    "ByteDance",
+    "DeepSeek"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-bc093d17",
+    "importance": 17,
+    "breaking": false,
+    "kind": "other",
+    "companies": [
+     "Alibaba",
+     "ByteDance",
+     "DeepSeek"
+    ],
+    "models": [],
+    "topics": [
+     "china"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "08bbe0e48208a863",
+   "url": "https://github.com/vllm-project/vllm/releases/tag/v0.33.0rc3",
+   "title": "vLLM v0.33.0rc3",
+   "content_text": "[CI][Bugfix] Pin the ColUltraVBERT test checkpoint to the revision vL…",
+   "date_published": "2026-10-31T07:15:45Z",
+   "authors": [
+    {
+     "name": "vLLM releases"
+    }
+   ],
+   "tags": [
+    "tool",
+    "open-weights",
+    "tools"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-0d3eae43",
+    "importance": 9,
+    "breaking": false,
+    "kind": "tool",
+    "companies": [],
+    "models": [],
+    "topics": [
+     "open-weights",
+     "tools"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "cc004403ac2d6906",
+   "url": "https://pandaily.com/china-southern-power-grid-huawei-deepened-strategic-cooperation-oct-27-ai-dianhong-power-iot-os-openharmony",
+   "title": "China Southern Power Grid and Huawei Sign Deeper Pact on AI, Compute and Power IoT OS Dianhong",
+   "content_text": "China Southern Power Grid and Huawei signed a deeper strategic cooperation agreement on October 27 covering power-carbon-compute coordination, AI, the Dianhong power IoT OS and the industry ecosystem.",
+   "date_published": "2026-10-31T07:13:29Z",
+   "authors": [
+    {
+     "name": "Pandaily"
+    }
+   ],
+   "tags": [
+    "other",
+    "china"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-a23fbb65",
+    "importance": 17,
+    "breaking": false,
+    "kind": "other",
+    "companies": [],
+    "models": [],
+    "topics": [
+     "china"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "1c5e36e6bd073474",
+   "url": "https://pandaily.com/ace-robotics-ntu-s-lab-mundo-customized-world-model-1-12-photos-editable-3d-scene-mujoco-real-to-sim",
+   "title": "ACE Robotics and NTU S-Lab Unveil Mundo, a World Model That Builds Robot Training Scenes From Photos",
+   "content_text": "Mundo turns one to 12 photos of a real place into an editable 3D scene with physics, then renders robot navigation and manipulation in it. Code and weights are due by the end of November.",
+   "date_published": "2026-10-31T07:12:31Z",
+   "authors": [
+    {
+     "name": "Pandaily"
+    }
+   ],
+   "tags": [
+    "other",
+    "china"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-5c4ef5bc",
+    "importance": 17,
+    "breaking": false,
+    "kind": "other",
+    "companies": [],
+    "models": [],
+    "topics": [
+     "china"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "eafcd794a4701df9",
+   "url": "https://pandaily.com/tencent-map-agent-capabilities-mcp-server-agent-skills-connectors-yuanbao-rokid-lbswork-workbuddy-harness",
+   "title": "Tencent Map Opens Its Agent Capabilities to Developers Through MCP, Agent Skills and Connectors",
+   "content_text": "Tencent Map laid out its agent stack, opening route planning, place search and ride-hailing to developers via MCP, Agent Skills and connectors, and launched LBSwork, a desktop AI map workbench.",
+   "date_published": "2026-10-31T07:12:17Z",
+   "authors": [
+    {
+     "name": "Pandaily"
+    }
+   ],
+   "tags": [
+    "tool",
+    "china",
+    "tools",
+    "agents",
+    "Tencent"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-f6ab8817",
+    "importance": 17,
+    "breaking": false,
+    "kind": "tool",
+    "companies": [
+     "Tencent"
+    ],
+    "models": [],
+    "topics": [
+     "china",
+     "tools",
+     "agents"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "be21cc180b4cd8b8",
+   "url": "https://www.teknoblog.com/siteler-icin-ortak-yapay-zeka-kontrolu-geliyor/",
+   "title": "Yapay zeka şirketleri, siteler için ortak eğitim tercihi sinyalini destekliyor",
+   "content_text": "Web siteleri, yapay zeka eğitimi tercihlerini birden çok şirkete ortak bir sinyalle iletebilecek. Önerinin kapsamı, sınırları ve farklı uygulama takvimleri haberde. Yapay zeka şirketleri, siteler için ortak eğitim tercihi sinyalini destekliyor haberi ilk önce Teknoblog üzerinde…",
+   "date_published": "2026-10-31T07:08:00Z",
+   "authors": [
+    {
+     "name": "Teknoblog"
+    }
+   ],
+   "tags": [
+    "other",
+    "turkey"
+   ],
+   "language": "tr",
+   "_ai_news": {
+    "cluster": "c-573ab3b2",
+    "importance": 9,
+    "breaking": false,
+    "kind": "other",
+    "companies": [],
+    "models": [],
+    "topics": [
+     "turkey"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "69f5dc264da1ae39",
+   "url": "https://www.techmeme.com/261031/p6#a261031p6",
+   "title": "As AI models commoditize, lasting wealth will accrue to those controlling chokepoints like distribution, payment rails, and a stablecoin dollar, not to the labs (The Commanding Heights)",
+   "content_text": "The Commanding Heights : As AI models commoditize, lasting wealth will accrue to those controlling chokepoints like distribution, payment rails, and a stablecoin dollar, not to the labs — Scarce, controllable positions of Economic Power whose holders durably capture the gains…",
+   "date_published": "2026-10-31T06:30:01Z",
+   "authors": [
+    {
+     "name": "Techmeme"
+    }
+   ],
+   "tags": [
+    "other"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-81be6533",
+    "importance": 26,
+    "breaking": false,
+    "kind": "other",
+    "companies": [],
+    "models": [],
+    "topics": [],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "73acf00ea16812b9",
+   "url": "https://vitalik.eth.limo/general/2026/10/31/digital_minimalism.html",
+   "title": "Digital minimalism",
+   "content_text": "151 points · 120 comments on Hacker News",
+   "date_published": "2026-10-31T06:16:36Z",
+   "authors": [
+    {
+     "name": "Hacker News: LLM (50+ points)"
+    }
+   ],
+   "tags": [
+    "other"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-de48b7f9",
+    "importance": 30,
+    "breaking": false,
+    "kind": "other",
+    "companies": [],
+    "models": [],
+    "topics": [],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "5d387d069c8de142",
+   "url": "https://www.techmeme.com/261031/p5#a261031p5",
+   "title": "When talking about local inference, Sam Altman says supply-constrained DRAM is better used in data centers than sitting in PCs and \"being used 5% of the time\" (Andrew E. Freedman/Tom's Hardware)",
+   "content_text": "Andrew E. Freedman / Tom's Hardware : When talking about local inference, Sam Altman says supply-constrained DRAM is better used in data centers than sitting in PCs and “being used 5% of the time” — With data centers full of RAM, your PC is apparently the problem. … OpenAI CEO…",
+   "date_published": "2026-10-31T06:10:48Z",
+   "authors": [
+    {
+     "name": "Techmeme"
+    }
+   ],
+   "tags": [
+    "other",
+    "chips",
+    "OpenAI"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-2400c1d2",
+    "importance": 26,
+    "breaking": false,
+    "kind": "other",
+    "companies": [
+     "OpenAI"
+    ],
+    "models": [],
+    "topics": [
+     "chips"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "89b6ec60b2866d15",
+   "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xk20x5/lawyer_with_too_many_gpus_part_3_deepseekv41flash/",
+   "title": "Lawyer with too many GPUs, part 3: DeepSeek-V4.1-Flash on 2x DGX Spark + an old 3090 box. 2,600+ tok/s prefill to 256K, 322 tok/s structured output, full stack and raw data published",
+   "content_text": "Update from the lawyer with the V100 server. I went and got two DGX Sparks, because of course I did. The mid-life crisis remains on schedule. Same deal as before: still a lawyer, still driving the whole thing through Claude Code, and Claude Code also ran the benchmarks, built…",
+   "date_published": "2026-10-31T05:32:04Z",
+   "authors": [
+    {
+     "name": "Reddit r/LocalLLaMA (top of day)"
+    }
+   ],
+   "tags": [
+    "other",
+    "china",
+    "chips",
+    "tools",
+    "DeepSeek"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-a223e840",
+    "importance": 18,
+    "breaking": false,
+    "kind": "other",
+    "companies": [
+     "DeepSeek"
+    ],
+    "models": [
+     "DeepSeek-v4.1-Flash"
+    ],
+    "topics": [
+     "china",
+     "chips",
+     "tools"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "a4a67d6079aaffe8",
+   "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xk1vyk/koboldcpp_v1124_released/",
+   "title": "Koboldcpp v1.124 released",
+   "content_text": "submitted by /u/Fcking_Chuck [link] [comments]",
+   "date_published": "2026-10-31T05:24:06Z",
+   "authors": [
+    {
+     "name": "Reddit r/LocalLLaMA (top of day)"
+    }
+   ],
+   "tags": [
+    "product",
+    "tools"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-a164131a",
+    "importance": 9,
+    "breaking": false,
+    "kind": "product",
+    "companies": [],
+    "models": [],
+    "topics": [
+     "tools"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "1f9be0e48e4b98b9",
+   "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12019",
+   "title": "llama.cpp release b12019",
+   "content_text": "chat : strip the think block in the qwen3-coder with reasoning_format none ( #31380 ) chat : accept the think block in the qwen3-coder response format with reasoning_format none Assisted-by: Claude Opus 5.5 chat : define both qwen3-coder think block variants up front Website…",
+   "date_published": "2026-10-31T05:23:25Z",
+   "authors": [
+    {
+     "name": "llama.cpp releases"
+    }
+   ],
+   "tags": [
+    "tool",
+    "open-weights",
+    "tools",
+    "Meta"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-679470e4",
+    "importance": 26,
+    "breaking": false,
+    "kind": "tool",
+    "companies": [
+     "Meta"
+    ],
+    "models": [
+     "Claude Opus 5.5 Chat",
+     "Qwen 3"
+    ],
+    "topics": [
+     "open-weights",
+     "tools"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "bffe083091894b23",
+   "url": "https://www.qbitai.com/2026/10/506884.html",
+   "title": "你的8G iPad里有12G内存！库克走了但他的刀法追着我砍",
+   "content_text": "苹果“牛奶倒河里”式操作翻红",
+   "date_published": "2026-10-31T05:17:50Z",
+   "authors": [
+    {
+     "name": "QbitAI (Chinese)"
+    }
+   ],
+   "tags": [
+    "other",
+    "china"
+   ],
+   "language": "zh",
+   "_ai_news": {
+    "cluster": "c-2a9e9afc",
+    "importance": 17,
+    "breaking": false,
+    "kind": "other",
+    "companies": [],
+    "models": [],
+    "topics": [
+     "china"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "b3c7c2f2e182fd68",
+   "url": "https://www.techmeme.com/261031/p4#a261031p4",
+   "title": "Sources: neoclouds CoreWeave, Nebius, and Nscale have effectively been shut out of the bond market in recent weeks as lenders and investors demand tougher terms (Wall Street Journal)",
+   "content_text": "Wall Street Journal : Sources: neoclouds CoreWeave, Nebius, and Nscale have effectively been shut out of the bond market in recent weeks as lenders and investors demand tougher terms — Lenders and investors are getting choosier about their bets and demanding stricter terms, as…",
+   "date_published": "2026-10-31T05:15:01Z",
+   "authors": [
+    {
+     "name": "Techmeme"
+    }
+   ],
+   "tags": [
+    "other"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-3c04e47d",
+    "importance": 26,
+    "breaking": false,
+    "kind": "other",
+    "companies": [],
+    "models": [],
+    "topics": [],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "0b589a6ccbefc76d",
+   "url": "https://www.qbitai.com/2026/10/506866.html",
+   "title": "世界模型首次指导设计芯片！超大核NPU700TOPS，99%算力可用",
+   "content_text": "AI算力利用“九九成”",
+   "date_published": "2026-10-31T05:11:19Z",
+   "authors": [
+    {
+     "name": "QbitAI (Chinese)"
+    }
+   ],
+   "tags": [
+    "other",
+    "china"
+   ],
+   "language": "zh",
+   "_ai_news": {
+    "cluster": "c-d2fc2063",
+    "importance": 17,
+    "breaking": false,
+    "kind": "other",
+    "companies": [],
+    "models": [],
+    "topics": [
+     "china"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "49f3b00b8ec2ebf2",
+   "url": "https://www.techmeme.com/261031/p3#a261031p3",
+   "title": "S&P downgraded Meta's outlook from stable to negative, citing high capex and negative free cash flow; META fell 15% in October, its worst month in four years (Jonathan Vanian/CNBC)",
+   "content_text": "Jonathan Vanian / CNBC : S&P downgraded Meta's outlook from stable to negative, citing high capex and negative free cash flow; META fell 15% in October, its worst month in four years — Meta's outlook has been revised downward by S&P Global Ratings on concerns surrounding cash…",
+   "date_published": "2026-10-31T05:10:42Z",
+   "authors": [
+    {
+     "name": "Techmeme"
+    }
+   ],
+   "tags": [
+    "other",
+    "Meta"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-6d951060",
+    "importance": 26,
+    "breaking": false,
+    "kind": "other",
+    "companies": [
+     "Meta"
+    ],
+    "models": [],
+    "topics": [],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "17dbbe17258f8aa6",
+   "url": "https://www.qbitai.com/2026/10/506855.html",
+   "title": "刚刚，Claude宣布取消5小时限制！首批Ultra用户已「解封」",
+   "content_text": "200美元Ultra用户先用",
+   "date_published": "2026-10-31T05:05:29Z",
+   "authors": [
+    {
+     "name": "QbitAI (Chinese)"
+    }
+   ],
+   "tags": [
+    "other",
+    "china"
+   ],
+   "language": "zh",
+   "_ai_news": {
+    "cluster": "c-e1ca51b3",
+    "importance": 17,
+    "breaking": false,
+    "kind": "other",
+    "companies": [],
+    "models": [],
+    "topics": [
+     "china"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "4505f5f4bd09cf76",
+   "url": "https://latent.space/p/ainews-google-admits-ai-mode-hurts-search-revenue-15-500b-drop-worst-since-2004-ipo-ai-bear-market-c/",
+   "title": "[AINews] Google admits AI Mode hurts Search revenue; -15% $500B drop worst since 2004 IPO. AI Bear Market coming?",
+   "content_text": "It turns out you cannot have your cake AND eat it",
+   "date_published": "2026-10-31T05:00:48Z",
+   "authors": [
+    {
+     "name": "Latent Space"
+    }
+   ],
+   "tags": [
+    "funding",
+    "funding",
+    "Google"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-4c180c94",
+    "importance": 24,
+    "breaking": false,
+    "kind": "funding",
+    "companies": [
+     "Google"
+    ],
+    "models": [],
+    "topics": [
+     "funding"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "95c819565f3ca38f",
+   "url": "https://shiftdelete.net/chatgpt-ile-kayip-kulaklik-bulma",
+   "title": "Kulaklığını Kaybetti ChatGPT Yardımına Yetişti",
+   "content_text": "Bir Reddit kullanıcısı, ChatGPT ile kayıp kulaklık bulma yöntemini kullanarak çakıl taşları arasına düşürdüğü cihazına kavuştu.",
+   "date_published": "2026-10-31T05:00:34Z",
+   "authors": [
+    {
+     "name": "ShiftDelete.Net"
+    }
+   ],
+   "tags": [
+    "other",
+    "turkey",
+    "tools",
+    "OpenAI"
+   ],
+   "language": "tr",
+   "_ai_news": {
+    "cluster": "c-aa57cb96",
+    "importance": 9,
+    "breaking": false,
+    "kind": "other",
+    "companies": [
+     "OpenAI"
+    ],
+    "models": [],
+    "topics": [
+     "turkey",
+     "tools"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "00d3feb5f77c05af",
+   "url": "https://www.techmeme.com/261031/p2#a261031p2",
+   "title": "Anthropic says a malicious actor used access to Cursor's marketplace to publish a \"tampered\" copy of the Claude Code extension, which it didn't build or publish (Felix Rieseberg/@felixrieseberg)",
+   "content_text": "Felix Rieseberg / @felixrieseberg : Anthropic says a malicious actor used access to Cursor's marketplace to publish a “tampered” copy of the Claude Code extension, which it didn't build or publish — We're working with Cursor on this incident, but it wasn't a compromise of…",
+   "date_published": "2026-10-31T05:00:15Z",
+   "authors": [
+    {
+     "name": "Techmeme"
+    }
+   ],
+   "tags": [
+    "other",
+    "tools",
+    "Anthropic"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-0d44452e",
+    "importance": 26,
+    "breaking": false,
+    "kind": "other",
+    "companies": [
+     "Anthropic"
+    ],
+    "models": [],
+    "topics": [
+     "tools"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "c477d381de873e8f",
+   "url": "https://www.scmp.com/tech/article/3372807/ai-cyber-risks-grow-chinese-chip-expert-urges-shared-ethics-standards-us-rivals",
+   "title": "As AI cyber risks grow, Chinese chip expert urges shared ethics standards with US rivals",
+   "content_text": "The co-founder of Chinese chip giant Cambricon Technologies urged the introduction of universal ethical requirements for leading Chinese and American artificial intelligence models on Friday to mitigate growing risks to society. Chen Yunji’s remarks at an event in Shanghai come…",
+   "date_published": "2026-10-31T05:00:10Z",
+   "authors": [
+    {
+     "name": "SCMP Tech"
+    }
+   ],
+   "tags": [
+    "other",
+    "china",
+    "chips",
+    "safety"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-872dd772",
+    "importance": 16,
+    "breaking": false,
+    "kind": "other",
+    "companies": [],
+    "models": [],
+    "topics": [
+     "china",
+     "chips",
+     "safety"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "37d540784b4ce70e",
+   "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xk17m0/first_memory_storage_and_now_pcbsss_ai_boom/",
+   "title": "First memory, storage, and now PCBsss: AI Boom Triggers Massive PCB Shortage With Orders Booked Until 2030, Posing Big Challenges For Consumer Hardware Vendors",
+   "content_text": "submitted by /u/chemist_slime [link] [comments]",
+   "date_published": "2026-10-31T04:45:10Z",
+   "authors": [
+    {
+     "name": "Reddit r/LocalLLaMA (top of day)"
+    }
+   ],
+   "tags": [
+    "other"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-ec81d0bb",
+    "importance": 9,
+    "breaking": false,
+    "kind": "other",
+    "companies": [],
+    "models": [],
+    "topics": [],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "46276f37b1ec5f46",
+   "url": "https://www.techmeme.com/261031/p1#a261031p1",
+   "title": "John Ternus says Apple doesn't \"want to ship AI for AI's sake\" and that Tim Cook is \"available to help wherever I ask\" on policy; Ternus has yet to meet Trump (Steven Levy/Wired)",
+   "content_text": "Steven Levy / Wired : John Ternus says Apple doesn't “want to ship AI for AI's sake” and that Tim Cook is “available to help wherever I ask” on policy; Ternus has yet to meet Trump — Apple doesn't need fixing, and it doesn't want drama. Its new leader is a “product guy” who…",
+   "date_published": "2026-10-31T04:30:01Z",
+   "authors": [
+    {
+     "name": "Techmeme"
+    }
+   ],
+   "tags": [
+    "product",
+    "Apple"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-4556ee18",
+    "importance": 26,
+    "breaking": false,
+    "kind": "product",
+    "companies": [
+     "Apple"
+    ],
+    "models": [],
+    "topics": [],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "347335163c57160c",
+   "url": "https://arxiv.org/abs/2610.37932",
+   "title": "Understanding Large Language Models as Numerical Optimizers",
+   "content_text": "Large language models (LLMs) have emerged as potential tools for numerical optimization. Despite promising results, their intrinsic optimization capabilities and limitations remain poorly understood, particularly in high dimensions. This paper investigates the ability of LLMs…",
+   "date_published": "2026-10-31T04:00:00Z",
+   "authors": [
+    {
+     "name": "arXiv cs.AI (LLM-filtered)"
+    }
+   ],
+   "tags": [
+    "paper",
+    "research"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-af6627fa",
+    "importance": 0,
+    "breaking": false,
+    "kind": "paper",
+    "companies": [],
+    "models": [],
+    "topics": [
+     "research"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "3e6a1a3a3a9e9852",
+   "url": "https://arxiv.org/abs/2610.38851",
+   "title": "Learning to Reason from Reference Samples Alone: Reinforced Adversarial Learning for Modern LLM Post-Training",
+   "content_text": "In many settings where LLM post-training is desirable, high-quality answers are recognizable but difficult to score with explicit rewards. Reinforcement learning with verifiable rewards (RLVR) is limited to tasks where an explicit correctness signal is available. Prior…",
+   "date_published": "2026-10-31T04:00:00Z",
+   "authors": [
+    {
+     "name": "arXiv cs.AI (LLM-filtered)"
+    }
+   ],
+   "tags": [
+    "paper",
+    "research"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-414dc5f9",
+    "importance": 0,
+    "breaking": false,
+    "kind": "paper",
+    "companies": [],
+    "models": [],
+    "topics": [
+     "research"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "50c27740dfcdc2af",
+   "url": "https://arxiv.org/abs/2610.38755",
+   "title": "Leaving, Staying, or Living There? Duration Commonsense Reasoning with Human-LLM Co-annotations",
+   "content_text": "Gardening in the backyard implies living there, while checking into an Airbnb more likely means staying for a few days. Such duration judgments are important for understanding human mobility, travel behavior, and social context. However, duration is rarely stated explicitly in…",
+   "date_published": "2026-10-31T04:00:00Z",
+   "authors": [
+    {
+     "name": "arXiv cs.AI (LLM-filtered)"
+    }
+   ],
+   "tags": [
+    "paper",
+    "research"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-b6fb616a",
+    "importance": 0,
+    "breaking": false,
+    "kind": "paper",
+    "companies": [],
+    "models": [],
+    "topics": [
+     "research"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "6589edaeb6201774",
+   "url": "https://arxiv.org/abs/2610.37926",
+   "title": "GARDEN: Generalist Autonomous Reward Design Through Evidence Navigation for Cooperative Multi-Agent Reinforcement Learning",
+   "content_text": "Cooperative multi-agent reinforcement learning (MARL) enables teams of agents, such as robots and autonomous vehicles, to learn coordinated behavior, but what such teams learn is largely determined by their reward function. Because task success alone provides too little…",
+   "date_published": "2026-10-31T04:00:00Z",
+   "authors": [
+    {
+     "name": "arXiv cs.AI (LLM-filtered)"
+    }
+   ],
+   "tags": [
+    "paper",
+    "research",
+    "tools",
+    "agents"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-3cd7ff3f",
+    "importance": 0,
+    "breaking": false,
+    "kind": "paper",
+    "companies": [],
+    "models": [],
+    "topics": [
+     "research",
+     "tools",
+     "agents"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "8b5374fc5b05999e",
+   "url": "https://arxiv.org/abs/2610.39182",
+   "title": "Reasoning or Pattern Exploitation? Mechanistic Insights from RL-Trained Language Models",
+   "content_text": "Large language models (LLMs) are increasingly described as acquiring \"reasoning\" skills after reinforcement learning with verifiable rewards. However, whether these gains reflect genuine reasoning or more superficial adaptations remains underexplored. In this work, we probe…",
+   "date_published": "2026-10-31T04:00:00Z",
+   "authors": [
+    {
+     "name": "arXiv cs.AI (LLM-filtered)"
+    }
+   ],
+   "tags": [
+    "policy",
+    "regulation",
+    "funding",
+    "research"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-972c99d3",
+    "importance": 0,
+    "breaking": false,
+    "kind": "policy",
+    "companies": [],
+    "models": [],
+    "topics": [
+     "regulation",
+     "funding",
+     "research"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "9c3750ea1dc30ac4",
+   "url": "https://arxiv.org/abs/2610.38210",
+   "title": "GAAC: Lossless KV Compression for Bandwidth-Efficient LLM Inference on Personal Devices",
+   "content_text": "Weight-only, lossy quantization substantially reduces the storage and memory requirements for serving large language models (LLMs), but the growing key-value (KV) cache remains a bottleneck for long-context inference on personal devices. We present Group-Adaptive Additive Codec…",
+   "date_published": "2026-10-31T04:00:00Z",
+   "authors": [
+    {
+     "name": "arXiv cs.AI (LLM-filtered)"
+    }
+   ],
+   "tags": [
+    "paper",
+    "research"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-94de3e7c",
+    "importance": 0,
+    "breaking": false,
+    "kind": "paper",
+    "companies": [],
+    "models": [],
+    "topics": [
+     "research"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "9d4239e43b87cf5c",
+   "url": "https://arxiv.org/abs/2610.39621",
+   "title": "The Real Cost of Context: Predicting Compute Time and Energy Consumption in LLM Prefill and Decode Phases",
+   "content_text": "The integration of Large Language Models (LLMs) into agentic architectures has substantially increased token consumption, raising concerns about their energy footprint. Yet, estimating the energy consumption of proprietary API-based models remains challenging, and existing…",
+   "date_published": "2026-10-31T04:00:00Z",
+   "authors": [
+    {
+     "name": "arXiv cs.AI (LLM-filtered)"
+    }
+   ],
+   "tags": [
+    "paper",
+    "research",
+    "tools",
+    "agents"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-5e36b998",
+    "importance": 0,
+    "breaking": false,
+    "kind": "paper",
+    "companies": [],
+    "models": [],
+    "topics": [
+     "research",
+     "tools",
+     "agents"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "9dd2a5bcdded8cef",
+   "url": "https://arxiv.org/abs/2610.38120",
+   "title": "Post-Training Large Language Models with LLMON",
+   "content_text": "Large Language Models (LLMs) treat all context tokens uniformly, lacking explicit separation between executable instructions and passive data. This leads to prompt injection vulnerabilities, ambiguous instruction binding, and unreliable execution control. We present a…",
+   "date_published": "2026-10-31T04:00:00Z",
+   "authors": [
+    {
+     "name": "arXiv cs.AI (LLM-filtered)"
+    }
+   ],
+   "tags": [
+    "security",
+    "research",
+    "safety"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-de1f88bb",
+    "importance": 0,
+    "breaking": false,
+    "kind": "security",
+    "companies": [],
+    "models": [],
+    "topics": [
+     "research",
+     "safety"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "a1ea0489433b3ece",
+   "url": "https://arxiv.org/abs/2610.38326",
+   "title": "Can LLMs Faithfully Solve Ontology Engineering Tasks? A Mechanistic Interpretability Study",
+   "content_text": "Ontological knowledge underpins large language model (LLM) performance on knowledge-intensive tasks. However, existing evaluations of LLMs' ontological understanding largely rely on behavioral correctness, leaving the underlying mechanisms unexplained. Existing mechanistic…",
+   "date_published": "2026-10-31T04:00:00Z",
+   "authors": [
+    {
+     "name": "arXiv cs.AI (LLM-filtered)"
+    }
+   ],
+   "tags": [
+    "paper",
+    "research",
+    "safety"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-9fdabb57",
+    "importance": 0,
+    "breaking": false,
+    "kind": "paper",
+    "companies": [],
+    "models": [],
+    "topics": [
+     "research",
+     "safety"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "a92d83b0d67ca29c",
+   "url": "https://arxiv.org/abs/2610.39230",
+   "title": "Beyond LLM Wrappers: Context Engineering and the Three-Engine Architecture for Reliable Financial AI",
+   "content_text": "Financial AI systems must support decision-bearing questions involving payments, collections, cash flow, and compliance while ensuring numerical accuracy, traceability, and auditability. Large language models (LLMs) enable natural language interaction but cannot independently…",
+   "date_published": "2026-10-31T04:00:00Z",
+   "authors": [
+    {
+     "name": "arXiv cs.AI (LLM-filtered)"
+    }
+   ],
+   "tags": [
+    "paper",
+    "research"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-1cf7518d",
+    "importance": 0,
+    "breaking": false,
+    "kind": "paper",
+    "companies": [],
+    "models": [],
+    "topics": [
+     "research"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "c5f0a4f07e5cd328",
+   "url": "https://arxiv.org/abs/2610.38201",
+   "title": "From Natural Language to Real Schematics: An Automated Workflow for Power Electronics Schematic Synthesis",
+   "content_text": "Designing power electronics converters traditionally requires intensive human expertise across topology sizing, commercial component selection, circuit simulation verification, and schematic drafting. While Large Language Models (LLMs) show promise in electronic design…",
+   "date_published": "2026-10-31T04:00:00Z",
+   "authors": [
+    {
+     "name": "arXiv cs.AI (LLM-filtered)"
+    }
+   ],
+   "tags": [
+    "paper",
+    "research"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-b3e1b93d",
+    "importance": 0,
+    "breaking": false,
+    "kind": "paper",
+    "companies": [],
+    "models": [],
+    "topics": [
+     "research"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "e16c4853d0f5fdf4",
+   "url": "https://arxiv.org/abs/2610.37739",
+   "title": "OpenFrontiers: A Collection of Open Research Problems and a Benchmark for Scientific Rediscovery",
+   "content_text": "Large language models (LLMs) have shown increasing promise in research-level problem solving, yet a comprehensive collection of such problems is still missing, and evaluating them on research-level problems remains challenging. We introduce OpenFrontiers, a cross-disciplinary…",
+   "date_published": "2026-10-31T04:00:00Z",
+   "authors": [
+    {
+     "name": "arXiv cs.AI (LLM-filtered)"
+    }
+   ],
+   "tags": [
+    "paper",
+    "research"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-1fc1ffb4",
+    "importance": 0,
+    "breaking": false,
+    "kind": "paper",
+    "companies": [],
+    "models": [],
+    "topics": [
+     "research"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "9a1e17b51b2d98d8",
+   "url": "https://www.wsj.com/tech/ai/openai-raises-less-than-half-of-30-billion-target-in-latest-round-91aecdc5",
+   "title": "OpenAI raises less than half of $30B target",
+   "content_text": "165 points · 157 comments on Hacker News",
+   "date_published": "2026-10-31T03:22:44Z",
+   "authors": [
+    {
+     "name": "Hacker News: OpenAI (50+ points)"
+    }
+   ],
+   "tags": [
+    "other",
+    "OpenAI"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-2a5ec988",
+    "importance": 36,
+    "breaking": false,
+    "kind": "other",
+    "companies": [
+     "OpenAI"
+    ],
+    "models": [],
+    "topics": [],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "9555f5eef8babe11",
+   "url": "https://pandaily.com/lenovo-tianxi-ai-4-5-ai-pc-super-mode-phone-tablet-remote-tasks-ai-host-p7-auto-mode",
+   "title": "Lenovo Brings Tianxi AI 4.5 to AI PCs, Letting Phones and Tablets Hand Off Tasks to a Desktop",
+   "content_text": "Lenovo released Tianxi AI 4.5 for AI PCs, adding a Super Mode that acts across apps, an AI note-taker that joins brainstorms, and remote task handoff from phones and tablets to a PC.",
+   "date_published": "2026-10-31T03:07:22Z",
+   "authors": [
+    {
+     "name": "Pandaily"
+    }
+   ],
+   "tags": [
+    "other",
+    "china",
+    "tools"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-22d57d21",
+    "importance": 16,
+    "breaking": false,
+    "kind": "other",
+    "companies": [],
+    "models": [],
+    "topics": [
+     "china",
+     "tools"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "b1d6d2fa5a79cdd9",
+   "url": "https://pandaily.com/tencent-cloud-physical-ai-multimodal-data-training-inference-embodied-autonomous-driving-tclake-xphysis",
+   "title": "Tencent Cloud Launches Data and Training Stack for Robots and Self-Driving, Plans TCLake XPhysis",
+   "content_text": "Tencent Cloud launched an integrated multimodal data processing and model training stack for embodied AI and autonomous driving, and said it will release a TCLake XPhysis physical AI platform.",
+   "date_published": "2026-10-31T03:06:23Z",
+   "authors": [
+    {
+     "name": "Pandaily"
+    }
+   ],
+   "tags": [
+    "product",
+    "china",
+    "tools",
+    "Tencent"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-1f999461",
+    "importance": 16,
+    "breaking": false,
+    "kind": "product",
+    "companies": [
+     "Tencent"
+    ],
+    "models": [],
+    "topics": [
+     "china",
+     "tools"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "c9422c8a05ebe659",
+   "url": "https://pandaily.com/inspatio-simulation-embodied-ai-data-collection-center-hangzhou-million-hours-month-topos-pro-hesai-kosmo",
+   "title": "InSpatio Opens a Simulation-First Robot Data Center in Hangzhou, Targets a Million Hours a Month",
+   "content_text": "Spatial intelligence firm InSpatio opened what it calls China's first simulation-led embodied AI data center in Hangzhou, aiming to produce a million hours of robot training data a month.",
+   "date_published": "2026-10-31T02:55:59Z",
+   "authors": [
+    {
+     "name": "Pandaily"
+    }
+   ],
+   "tags": [
+    "other",
+    "china",
+    "chips"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-4c0158b5",
+    "importance": 16,
+    "breaking": false,
+    "kind": "other",
+    "companies": [],
+    "models": [],
+    "topics": [
+     "china",
+     "chips"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "de835d9d5b765f3c",
+   "url": "https://pandaily.com/agibot-worken-effective-intelligent-work-hours-robot-engineer-ratio-3-to-1-10-to-1-chimelong",
+   "title": "AgiBot Proposes Worken to Measure Robot Work, Aims to Cut Engineers per Robot to 1 in 10 by Year-End",
+   "content_text": "AgiBot has proposed Worken, a unit for the useful work robots actually do. At one theme park it went from one engineer per robot to one per three, and targets one per 10 by year-end and 20 next year.",
+   "date_published": "2026-10-31T02:54:54Z",
+   "authors": [
+    {
+     "name": "Pandaily"
+    }
+   ],
+   "tags": [
+    "other",
+    "china"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-66f9094a",
+    "importance": 16,
+    "breaking": false,
+    "kind": "other",
+    "companies": [],
+    "models": [],
+    "topics": [
+     "china"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "7e9c386814932d1a",
+   "url": "https://pandaily.com/baidu-search-recursive-self-evolution-search-ai-api-4-9-yuan-per-1000-calls-below-deepseek",
+   "title": "Baidu Says Search Now Improves Itself From Live Feedback, Cuts API to 4.9 Yuan per 1,000 Calls",
+   "content_text": "Baidu says its search engine now retrains itself from real queries and feedback without human tuning, and is selling an enhanced search AI API at 4.9 yuan per 1,000 calls through December 31.",
+   "date_published": "2026-10-31T02:53:56Z",
+   "authors": [
+    {
+     "name": "Pandaily"
+    }
+   ],
+   "tags": [
+    "tool",
+    "china",
+    "tools",
+    "Baidu"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-6efc6341",
+    "importance": 16,
+    "breaking": false,
+    "kind": "tool",
+    "companies": [
+     "Baidu"
+    ],
+    "models": [],
+    "topics": [
+     "china",
+     "tools"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "28431beb6aa13836",
+   "url": "https://pandaily.com/horizon-robotics-journey-6p-hsd-byd-gods-eye-b-november-yu-kai-nv-tops-equivalent-tops",
+   "title": "Horizon Robotics Journey 6P and HSD Reportedly Head to BYD's God's Eye B; Yu Kai Splits TOPS Claims",
+   "content_text": "Horizon Robotics' Journey 6P chip and HSD software are reportedly entering BYD's God's Eye B, with first cars due in November. CEO Yu Kai says Horizon will now list two compute figures.",
+   "date_published": "2026-10-31T02:53:18Z",
+   "authors": [
+    {
+     "name": "Pandaily"
+    }
+   ],
+   "tags": [
+    "other",
+    "china",
+    "chips"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-c1587ee5",
+    "importance": 16,
+    "breaking": false,
+    "kind": "other",
+    "companies": [],
+    "models": [],
+    "topics": [
+     "china",
+     "chips"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "342c3aee002eab1d",
+   "url": "https://pandaily.com/deepseek-cyber-cybersecurity-model-front-end-code-cyber-personal-v3-cyber-enterprise-v4-cyber-key",
+   "title": "DeepSeek Website Code Points to Cyber, a Dedicated Cybersecurity Model in Limited Testing",
+   "content_text": "Code on DeepSeek's website references Cyber, a cybersecurity model with personal and enterprise versions, ID checks and a separate Cyber Key. DeepSeek has not announced it; testing looks limited.",
+   "date_published": "2026-10-31T02:53:02Z",
+   "authors": [
+    {
+     "name": "Pandaily"
+    }
+   ],
+   "tags": [
+    "other",
+    "china",
+    "DeepSeek"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-6ab4395d",
+    "importance": 16,
+    "breaking": false,
+    "kind": "other",
+    "companies": [
+     "DeepSeek"
+    ],
+    "models": [],
+    "topics": [
+     "china"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "0974855b5a0fdd1e",
+   "url": "https://www.techmeme.com/261030/p31#a261030p31",
+   "title": "Sources: OpenAI has secured ~$11B in commitments for its latest funding round, less than half its initial $30B target, and expects to raise more in coming weeks (Berber Jin/Wall Street Journal)",
+   "content_text": "Berber Jin / Wall Street Journal : Sources: OpenAI has secured ~$11B in commitments for its latest funding round, less than half its initial $30B target, and expects to raise more in coming weeks — The ChatGPT maker's latest funding round values it at $1.25 trillion, less than…",
+   "date_published": "2026-10-31T02:30:02Z",
+   "authors": [
+    {
+     "name": "Techmeme"
+    }
+   ],
+   "tags": [
+    "funding",
+    "funding",
+    "tools",
+    "OpenAI"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-c2a26e6d",
+    "importance": 32,
+    "breaking": false,
+    "kind": "funding",
+    "companies": [
+     "OpenAI"
+    ],
+    "models": [],
+    "topics": [
+     "funding",
+     "tools"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "e75cb72fc76e9143",
+   "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12018",
+   "title": "llama.cpp release b12018",
+   "content_text": "sycl: fix f32 to q2_0/q4_0/q5_0 rounding in CPY ( #31120 ) Website: https://llama.app Attestations: https://github.com/ggml-org/llama.cpp/attestations/62012681 macOS/iOS: macOS Apple Silicon (arm64) macOS Apple Silicon (arm64, KleidiAI enabled) DISABLED macOS Intel (x64) iOS…",
+   "date_published": "2026-10-31T02:24:59Z",
+   "authors": [
+    {
+     "name": "llama.cpp releases"
+    }
+   ],
+   "tags": [
+    "tool",
+    "open-weights",
+    "tools",
+    "Meta"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-dadedb14",
+    "importance": 16,
+    "breaking": false,
+    "kind": "tool",
+    "companies": [
+     "Meta"
+    ],
+    "models": [],
+    "topics": [
+     "open-weights",
+     "tools"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "c6b2d3ea79170b2a",
+   "url": "https://techcrunch.com/2026/10/30/nvidia-weighs-playing-the-cosigner-for-nscales-ai-data-center-in-west-virginia/",
+   "title": "Nvidia weighs playing the cosigner for Nscale’s AI data center in West Virginia",
+   "content_text": "When investors get nervous about AI spending, it helps to have the chipmaker that sells the chips offer to cosign the loan.",
+   "date_published": "2026-10-31T01:20:05Z",
+   "authors": [
+    {
+     "name": "TechCrunch AI"
+    }
+   ],
+   "tags": [
+    "other",
+    "chips",
+    "NVIDIA"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-2f31f744",
+    "importance": 16,
+    "breaking": false,
+    "kind": "other",
+    "companies": [
+     "NVIDIA"
+    ],
+    "models": [],
+    "topics": [
+     "chips"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "1dcfc568fa1bd35f",
+   "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xjx36m/the_multidimensional_butterfly_effect_what_cohere/",
+   "title": "The Multidimensional Butterfly Effect: What Cohere Didn't Test on Qwen3.8-Flash-Next",
+   "content_text": "The Multidimensional Butterfly Effect: What Cohere Didn't Test on Qwen3.8-Flash-Next Mark Galyan October 30, 2026 The model is not the model is not the model is not the... The Ghost of sanmaohe What Happened: While Cohere's team was evaluating Alibaba's Qwen3.8-Flash-Next on…",
+   "date_published": "2026-10-31T01:12:39Z",
+   "authors": [
+    {
+     "name": "Reddit r/LocalLLaMA (top of day)"
+    }
+   ],
+   "tags": [
+    "other",
+    "china",
+    "Cohere"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-28530a0d",
+    "importance": 18,
+    "breaking": false,
+    "kind": "other",
+    "companies": [
+     "Cohere"
+    ],
+    "models": [
+     "Qwen 3.8",
+     "Qwen3.8 Flash"
+    ],
+    "topics": [
+     "china"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "e4edb4b54b8d94b9",
+   "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xjx0ez/qwen38flashnext_on_2x_rtx_5090_with_504_toks/",
+   "title": "Qwen3.8-Flash-Next on 2x RTX 5090 with 504 tok/s decode: QEngine 1.3.1 decodes ~1.5-1.9x faster than the next-best engine I've tried (numbers, caveats, and what still bites)",
+   "content_text": "https://github.com/bpx03/QEngine (not my repo, credit goes to bpx03) QEngine was built for 3x RTX 3090s. I was able to compile for RTX 5090s. I've now run Qwen3.8-Flash-Next on the same box through four different engines. QEngine (bpx03, v1.3.1) is the fastest for single-stream…",
+   "date_published": "2026-10-31T01:09:03Z",
+   "authors": [
+    {
+     "name": "Reddit r/LocalLLaMA (top of day)"
+    }
+   ],
+   "tags": [
+    "other",
+    "open-weights"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-e94851c4",
+    "importance": 9,
+    "breaking": false,
+    "kind": "other",
+    "companies": [],
+    "models": [
+     "Qwen 3.8",
+     "Qwen3.8 Flash"
+    ],
+    "topics": [
+     "open-weights"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "1ac62f843edf24f0",
+   "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.316",
+   "title": "Claude Code v2.1.316",
+   "content_text": "What's changed Added CLAUDE_CODE_DISABLE_ULTRATHINK , which turns the ultrathink keyword off Added pooled group budgets to the Claude apps gateway: one monthly budget that a group's members share, on top of each member's own limit, set with pooled_budget on the spend limits…",
+   "date_published": "2026-10-31T01:01:35Z",
+   "authors": [
+    {
+     "name": "Claude Code releases"
+    }
+   ],
+   "tags": [
+    "tool",
+    "tools",
+    "open-weights",
+    "Anthropic"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-ce8e2331",
+    "importance": 16,
+    "breaking": false,
+    "kind": "tool",
+    "companies": [
+     "Anthropic"
+    ],
+    "models": [],
+    "topics": [
+     "tools",
+     "open-weights"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "ad4c8f034a965d0f",
+   "url": "https://www.techmeme.com/261030/p30#a261030p30",
+   "title": "Sources: OpenAI now seeks ~$20B at a $1.25T valuation for its latest round, from $30B at a $1.4T valuation, as some investors cut commitments amid an AI selloff (Financial Times)",
+   "content_text": "Financial Times : Sources: OpenAI now seeks ~$20B at a $1.25T valuation for its latest round, from $30B at a $1.4T valuation, as some investors cut commitments amid an AI selloff — ChatGPT maker is now seeking about $20bn at a $1.25tn valuation as it tempers its ambitions…",
+   "date_published": "2026-10-31T01:00:53Z",
+   "authors": [
+    {
+     "name": "Techmeme"
+    }
+   ],
+   "tags": [
+    "funding",
+    "funding",
+    "tools",
+    "OpenAI"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-b64e4a49",
+    "importance": 32,
+    "breaking": false,
+    "kind": "funding",
+    "companies": [
+     "OpenAI"
+    ],
+    "models": [],
+    "topics": [
+     "funding",
+     "tools"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "7fd89fbff543b865",
+   "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xjwtrv/fable_5gguf_when/",
+   "title": "Fable 5.gguf when?",
+   "content_text": "submitted by /u/speedb0at [link] [comments]",
+   "date_published": "2026-10-31T01:00:26Z",
+   "authors": [
+    {
+     "name": "Reddit r/LocalLLaMA (top of day)"
+    }
+   ],
+   "tags": [
+    "other",
+    "open-weights"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-4c531635",
+    "importance": 9,
+    "breaking": false,
+    "kind": "other",
+    "companies": [],
+    "models": [
+     "Fable 5"
+    ],
+    "topics": [
+     "open-weights"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "d5c6bb8a1621d22d",
+   "url": "https://www.techmeme.com/261030/p29#a261030p29",
+   "title": "Sources: Baseten is raising ~$2B in two tranches, one valuing it at $26B and the other at $30B; Baseten was valued at $13B in June after raising $1.5B (Bloomberg)",
+   "content_text": "Bloomberg : Sources: Baseten is raising ~$2B in two tranches, one valuing it at $26B and the other at $30B; Baseten was valued at $13B in June after raising $1.5B — Artificial intelligence startup Baseten is set to raise new funding that would more than double its valuation to…",
+   "date_published": "2026-10-31T00:20:02Z",
+   "authors": [
+    {
+     "name": "Techmeme"
+    }
+   ],
+   "tags": [
+    "funding",
+    "funding"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-39575d47",
+    "importance": 32,
+    "breaking": false,
+    "kind": "funding",
+    "companies": [],
+    "models": [],
+    "topics": [
+     "funding"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "5d6f84404e1c7141",
+   "url": "https://techcrunch.com/2026/10/30/ollie-a-privacy-focused-ai-assistant-is-shutting-down/",
+   "title": "Ollie, a privacy-focused AI assistant, is shutting down",
+   "content_text": "As an increasing number of AI assistants flood the market, the founder of Ollie, an assistant that respected its users' privacy, says it will be shutting down in a week.",
+   "date_published": "2026-10-30T22:56:13Z",
+   "authors": [
+    {
+     "name": "TechCrunch AI"
+    }
+   ],
+   "tags": [
+    "product",
+    "tools"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-b1ac0a99",
+    "importance": 16,
+    "breaking": false,
+    "kind": "product",
+    "companies": [],
+    "models": [],
+    "topics": [
+     "tools"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "1fff1698b18b4437",
+   "url": "https://www.theverge.com/tech/1023974/apple-intelligence-china-ios-27-3",
+   "title": "Apple Intelligence is finally coming to China with iOS 27.3",
+   "content_text": "Apple will launch Apple Intelligence in China with iOS 27.3, the company announced on its Chinese newsroom website, as reported by MacRumors. The Apple Intelligence features will be available first in an iOS 27.3 beta that's set to launch on November 4th, with a full iOS 27.3…",
+   "date_published": "2026-10-30T22:32:53Z",
+   "authors": [
+    {
+     "name": "The Verge AI"
+    }
+   ],
+   "tags": [
+    "other",
+    "china",
+    "tools",
+    "Apple"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-3a5374da",
+    "importance": 16,
+    "breaking": false,
+    "kind": "other",
+    "companies": [
+     "Apple"
+    ],
+    "models": [],
+    "topics": [
+     "china",
+     "tools"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "7c7259d5ff3fb8ad",
+   "url": "https://www.gov.uk/government/news/faster-planning-decisions-as-new-rules-and-ai-tackle-delays",
+   "title": "Faster planning decisions as new rules and AI tackle delays",
+   "content_text": "Homeowners and small businesses to get quicker answers as new rules put expert officers in charge of straightforward applications",
+   "date_published": "2026-10-30T22:30:01Z",
+   "authors": [
+    {
+     "name": "UK Government: AI news"
+    }
+   ],
+   "tags": [
+    "policy",
+    "regulation"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-932b2755",
+    "importance": 9,
+    "breaking": false,
+    "kind": "policy",
+    "companies": [],
+    "models": [],
+    "topics": [
+     "regulation"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "75d280f89191a5bd",
+   "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xjte7t/made_a_really_good_qwen38_27b_16gb_setup_no/",
+   "title": "Made a really good Qwen3.8 27B 16GB setup, no strata/streaming-kv",
+   "content_text": "I wanted to share my setup thats working really well for my fellow 16GB desktop suffrage crew. I am able to get 110k context with ~1.5GB to spare and around 55 t/s on my 5070 TI. First off I found this model https://huggingface.co/hitsfmdj/Qwen3.8-27B-GGUF-4.2BPW-16GB with…",
+   "date_published": "2026-10-30T22:29:02Z",
+   "authors": [
+    {
+     "name": "Reddit r/LocalLLaMA (top of day)"
+    }
+   ],
+   "tags": [
+    "other",
+    "open-weights",
+    "Hugging Face"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-8fbb6403",
+    "importance": 17,
+    "breaking": false,
+    "kind": "other",
+    "companies": [
+     "Hugging Face"
+    ],
+    "models": [
+     "Qwen 3.8",
+     "Qwen3.8 27B"
+    ],
+    "topics": [
+     "open-weights"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "8cfa07b3a3e0257f",
+   "url": "https://www.techmeme.com/261030/p27#a261030p27",
+   "title": "Filing: Vancouver, WA-based Powerlattice, which makes a power delivery chiplet to reduce AI compute power needs by 50%+, raised $86M, after raising $31M in 2025 (Kurt Schlosser/GeekWire)",
+   "content_text": "Kurt Schlosser / GeekWire : Filing: Vancouver, WA-based Powerlattice, which makes a power delivery chiplet to reduce AI compute power needs by 50%+, raised $86M, after raising $31M in 2025 — Powerlattice, a Vancouver, Wash.-based startup developing chips that cut the power…",
+   "date_published": "2026-10-30T22:05:00Z",
+   "authors": [
+    {
+     "name": "Techmeme"
+    }
+   ],
+   "tags": [
+    "funding",
+    "chips",
+    "funding"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-8c06e46d",
+    "importance": 24,
+    "breaking": false,
+    "kind": "funding",
+    "companies": [],
+    "models": [],
+    "topics": [
+     "chips",
+     "funding"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "4e2c9c66b20a8391",
+   "url": "https://simonwillison.net/2026/Oct/30/nesformer/",
+   "title": "dbreunig/nesformer",
+   "content_text": "dbreunig/nesformer Inspired by qwenputer by Divyansh Agrawal, Drew Breunig baked a working emulator for a Nintendo Entertainment System 6502 CPU into the weights of Qwen3.5-4B. You can now play NES ROMs such as Super Mario Bros (very slowly) running inside Qwen! In a comment on…",
+   "date_published": "2026-10-30T21:59:22Z",
+   "authors": [
+    {
+     "name": "Simon Willison"
+    }
+   ],
+   "tags": [
+    "other",
+    "china",
+    "Alibaba"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-f00b9211",
+    "importance": 35,
+    "breaking": false,
+    "kind": "other",
+    "companies": [
+     "Alibaba"
+    ],
+    "models": [
+     "Qwen 3.5",
+     "Qwen3.5 4B"
+    ],
+    "topics": [
+     "china"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "a977761811a976a3",
+   "url": "https://techcrunch.com/2026/10/30/intels-stock-crashes-knocking-12b-from-governments-stake/",
+   "title": "Intel’s stock crashes, knocking $12B from government’s stake",
+   "content_text": "Intel is being hurt by PC sales as the AI industry gobbles memory and other components causing PC prices to rise.",
+   "date_published": "2026-10-30T21:54:34Z",
+   "authors": [
+    {
+     "name": "TechCrunch AI"
+    }
+   ],
+   "tags": [
+    "other"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-e70d23e7",
+    "importance": 23,
+    "breaking": false,
+    "kind": "other",
+    "companies": [],
+    "models": [],
+    "topics": [],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "6048e7e6f0a38354",
+   "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xjsjhy/ai_changes_so_fast_any_saved_knowledge_gets/",
+   "title": "AI changes so fast, any saved knowledge gets outdated",
+   "content_text": "Unlike most disciplines, AI changes so fast that its almost impossible to keep up. New models come every few weeks/months at most. And when it comes to agentic coding/harnesses/best practices..... do tools for agent memory/lsp/token reduction help? should you subagents? are…",
+   "date_published": "2026-10-30T21:52:58Z",
+   "authors": [
+    {
+     "name": "Reddit r/LocalLLaMA (top of day)"
+    }
+   ],
+   "tags": [
+    "other",
+    "tools",
+    "agents"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-30dfb195",
+    "importance": 9,
+    "breaking": false,
+    "kind": "other",
+    "companies": [],
+    "models": [],
+    "topics": [
+     "tools",
+     "agents"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "1ad66cf690a946d3",
+   "url": "https://techcrunch.com/2026/10/30/anthropic-expected-to-receive-high-junk-rating-from-credit-agencies-following-ipo-report-says/",
+   "title": "Anthropic expected to receive high ‘junk’ rating from credit agencies following IPO, FT report says",
+   "content_text": "Blackstone's forecast is just a prediction, but naturally, a high junk rating would make it more difficult and costlier for Anthropic to raise the money to keep funding its massive spending that has undergirded its business.",
+   "date_published": "2026-10-30T21:52:03Z",
+   "authors": [
+    {
+     "name": "TechCrunch AI"
+    }
+   ],
+   "tags": [
+    "funding",
+    "funding",
+    "Anthropic"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-d62519f1",
+    "importance": 16,
+    "breaking": false,
+    "kind": "funding",
+    "companies": [
+     "Anthropic"
+    ],
+    "models": [],
+    "topics": [
+     "funding"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "ef4c1375c46967ba",
+   "url": "https://arstechnica.com/gadgets/2026/10/united-airlines-ceo-doubts-supersonic-airliner-from-boom-will-be-ready-by-2029/",
+   "title": "Supersonic airliner in doubt as company shifts to powering AI data centers",
+   "content_text": "Boom’s airliner may be delayed, and its data center power business lost a customer.",
+   "date_published": "2026-10-30T21:41:54Z",
+   "authors": [
+    {
+     "name": "Ars Technica AI"
+    }
+   ],
+   "tags": [
+    "other",
+    "chips"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-34b172fa",
+    "importance": 16,
+    "breaking": false,
+    "kind": "other",
+    "companies": [],
+    "models": [],
+    "topics": [
+     "chips"
+    ],
+    "alsoIn": []
+   }
+  },
+  {
+   "id": "ade2d7581a3b8c2e",
+   "url": "https://techcrunch.com/2026/10/30/last-minute-halloween-costumes-for-tech-nerds/",
+   "title": "Last-minute Halloween costumes for tech nerds",
+   "content_text": "No Halloween costume? Just be a deceptively cute AI agent icon, a PHP vulnerability, or sleepy time Bryan Johnson.",
+   "date_published": "2026-10-30T21:26:59Z",
+   "authors": [
+    {
+     "name": "TechCrunch AI"
+    }
+   ],
+   "tags": [
+    "security",
+    "safety",
+    "tools",
+    "agents"
+   ],
+   "language": "en",
+   "_ai_news": {
+    "cluster": "c-b3c9d523",
+    "importance": 16,
+    "breaking": false,
+    "kind": "security",
+    "companies": [],
+    "models": [],
+    "topics": [
+     "safety",
+     "tools",
+     "agents"
+    ],
+    "alsoIn": []
+   }
+  }
+ ]
+}

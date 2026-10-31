@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>AI News Tracker: top stories</title>
+  <link>https://0xmortuex.github.io/ai-news-tracker/</link>
+  <description>The highest-scoring AI stories of the last 3 days, one entry per story. Title, link and a short excerpt only.</description>
+  <language>en</language>
+  <lastBuildDate>Sat, 31 Oct 2026 15:25:50 GMT</lastBuildDate>
+  <generator>ai-news-tracker/stories-1</generator>
+  <atom:link href="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss" rel="self" type="application/rss+xml"/>
+  <item>
+    <title>Welcome Le Chonk: Mistral Large 4 on Hugging Face</title>
+    <link>https://huggingface.co/blog/mistral-large4</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-f71d41c9</guid>
+    <pubDate>Thu, 29 Oct 2026 00:00:00 GMT</pubDate>
+    <description>4 sources: Hugging Face Blog, Reddit r/LocalLLaMA (top of day), Techmeme, The Decoder.</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>model-release</category>
+    <category>release</category>
+    <category>Hugging Face</category>
+    <category>Mistral</category>
+    <category>Zhipu</category>
+    <category>Mistral Large 4</category>
+  </item>
+  <item>
+    <title>Gemini 4 Carbon: Our next frontier model</title>
+    <link>https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-4e2f5ec3</guid>
+    <pubDate>Wed, 28 Oct 2026 17:00:58 GMT</pubDate>
+    <description>11 sources: Google DeepMind, Techmeme, Ars Technica AI, The Decoder and 7 more.</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>model-release</category>
+    <category>release</category>
+    <category>Google</category>
+    <category>Google DeepMind</category>
+    <category>Gemini 4 Carbon</category>
+  </item>
+  <item>
+    <title>Apple Intelligence to roll out on iPhones in China in December with Alibaba backing</title>
+    <link>https://www.scmp.com/tech/big-tech/article/3372831/apple-intelligence-roll-out-iphones-china-december-alibaba-backing</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-94ee8a68</guid>
+    <pubDate>Sat, 31 Oct 2026 10:02:17 GMT</pubDate>
+    <description>SCMP Tech. Apple’s long-awaited artificial intelligence features will be officially launched in China in December, ending two years of regulatory uncertainty as the US tech giant seeks to bring advanced technologies to its second-largest market with the help of Alibaba Group Holding. The…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>policy</category>
+    <category>release</category>
+    <category>policy</category>
+    <category>Alibaba</category>
+    <category>Apple</category>
+    <category>Apple Intelligence</category>
+  </item>
+  <item>
+    <title>Anthropic says a malicious actor used access to Cursor&apos;s marketplace to publish a &quot;tampered&quot; copy of the Claude Code extension, which it didn&apos;t build or publish (Felix Rieseberg/@felixrieseberg)</title>
+    <link>https://www.techmeme.com/261031/p2#a261031p2</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-9830b363</guid>
+    <pubDate>Sat, 31 Oct 2026 05:00:15 GMT</pubDate>
+    <description>2 sources: The Decoder, Techmeme. Felix Rieseberg / @felixrieseberg : Anthropic says a malicious actor used access to Cursor&apos;s marketplace to publish a “tampered” copy of the Claude Code extension, which it didn&apos;t build or publish — We&apos;re working with Cursor on this incident, but it wasn&apos;t a compromise of…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>other</category>
+    <category>safety</category>
+    <category>tooling</category>
+    <category>Anthropic</category>
+    <category>Claude Code</category>
+    <category>Cursor</category>
+  </item>
+  <item>
+    <title>NVIDIA Nemotron 3.5 Transcribe and Granary v2: Intelligent Multilingual Transcription You Can Prompt and Adapt</title>
+    <link>https://huggingface.co/blog/nvidia/nemotron-transcribe-granary</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-aa35c583</guid>
+    <pubDate>Wed, 28 Oct 2026 14:58:17 GMT</pubDate>
+    <description>4 sources: Hugging Face Blog, Reddit r/LocalLLaMA (top of day), Techmeme, The Decoder.</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>product</category>
+    <category>release</category>
+    <category>Hugging Face</category>
+    <category>NVIDIA</category>
+    <category>Nemotron 3.5</category>
+  </item>
+  <item>
+    <title>Introducing DeepSeek-V4.1-Flash-1017 Dynamic v3.1 Unsloth GGUFs</title>
+    <link>https://www.reddit.com/r/LocalLLaMA/comments/1xjfuqh/introducing_deepseekv41flash1017_dynamic_v31/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-559db895</guid>
+    <pubDate>Fri, 30 Oct 2026 13:48:01 GMT</pubDate>
+    <description>2 sources: Reddit r/LocalLLaMA (top of day), Hugging Face: NVIDIA models. Hey everyone! We’re releasing new DeepSeek-V4.1-1017 Dynamic V3.1 (preview) GGUFs which showcases how Unsloth’s GGUFs retain the most accuracy for its size across 7 different benchmarks . We benchmarked ISTA&apos;s GSQ-RCO GGUFs but could not reproduce their reported results , even…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>model-release</category>
+    <category>release</category>
+    <category>DeepSeek</category>
+    <category>Hugging Face</category>
+    <category>NVIDIA</category>
+    <category>DeepSeek-v4.1-Flash-1017</category>
+  </item>
+  <item>
+    <title>Claude Code v2.1.316</title>
+    <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.316</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-ce8e2331</guid>
+    <pubDate>Sat, 31 Oct 2026 01:01:35 GMT</pubDate>
+    <description>Claude Code releases. What&apos;s changed Added CLAUDE_CODE_DISABLE_ULTRATHINK , which turns the ultrathink keyword off Added pooled group budgets to the Claude apps gateway: one monthly budget that a group&apos;s members share, on top of each member&apos;s own limit, set with pooled_budget on the spend limits…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>tool</category>
+    <category>release</category>
+    <category>tooling</category>
+    <category>Anthropic</category>
+    <category>Claude Code</category>
+  </item>
+  <item>
+    <title>vLLM v0.33.0rc3</title>
+    <link>https://github.com/vllm-project/vllm/releases/tag/v0.33.0rc3</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-0d3eae43</guid>
+    <pubDate>Sat, 31 Oct 2026 07:15:45 GMT</pubDate>
+    <description>vLLM releases. [CI][Bugfix] Pin the ColUltraVBERT test checkpoint to the revision vL…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>tool</category>
+    <category>release</category>
+    <category>tooling</category>
+    <category>vLLM</category>
+  </item>
+  <item>
+    <title>Community safety report and new protections for teens</title>
+    <link>https://openai.com/index/community-safety-report-and-new-protections-for-teens</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-0c82e01a</guid>
+    <pubDate>Fri, 30 Oct 2026 09:00:00 GMT</pubDate>
+    <description>OpenAI News. OpenAI is strengthening violence prevention in ChatGPT with expanded safeguards, earlier interventions, and a new commitment to public safety reporting.</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>product</category>
+    <category>safety</category>
+    <category>OpenAI</category>
+    <category>ChatGPT</category>
+  </item>
+  <item>
+    <title>As AI cyber risks grow, Chinese chip expert urges shared ethics standards with US rivals</title>
+    <link>https://www.scmp.com/tech/article/3372807/ai-cyber-risks-grow-chinese-chip-expert-urges-shared-ethics-standards-us-rivals</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-872dd772</guid>
+    <pubDate>Sat, 31 Oct 2026 05:00:10 GMT</pubDate>
+    <description>SCMP Tech. The co-founder of Chinese chip giant Cambricon Technologies urged the introduction of universal ethical requirements for leading Chinese and American artificial intelligence models on Friday to mitigate growing risks to society. Chen Yunji’s remarks at an event in Shanghai come…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>other</category>
+    <category>safety</category>
+  </item>
+  <item>
+    <title>dbreunig/nesformer</title>
+    <link>https://simonwillison.net/2026/Oct/30/nesformer/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-f00b9211</guid>
+    <pubDate>Fri, 30 Oct 2026 21:59:22 GMT</pubDate>
+    <description>Simon Willison. dbreunig/nesformer Inspired by qwenputer by Divyansh Agrawal, Drew Breunig baked a working emulator for a Nintendo Entertainment System 6502 CPU into the weights of Qwen3.5-4B. You can now play NES ROMs such as Super Mario Bros (very slowly) running inside Qwen! In a comment on…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>other</category>
+    <category>Alibaba</category>
+    <category>Qwen 3.5</category>
+    <category>Qwen3.5 4B</category>
+  </item>
+  <item>
+    <title>API credits benefit for eligible ChatGPT subscriptions</title>
+    <link>https://simonwillison.net/2026/Oct/29/api-credits/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-3b978d62</guid>
+    <pubDate>Thu, 29 Oct 2026 22:48:29 GMT</pubDate>
+    <description>Simon Willison. API credits benefit for eligible ChatGPT subscriptions Earlier this month Anthropic announced a generous new benefit for their Max and Team subscriptions: $100, $200, and $500 per month subscribers would get the equivalent quantity of (expiring) credits to use with the…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>tool</category>
+    <category>pricing</category>
+    <category>tooling</category>
+    <category>OpenAI</category>
+    <category>ChatGPT</category>
+  </item>
+  <item>
+    <title>Just finished my humble MoE-Centric Workstation</title>
+    <link>https://www.reddit.com/r/LocalLLaMA/comments/1xkau4g/just_finished_my_humble_moecentric_workstation/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-02508d40</guid>
+    <pubDate>Sat, 31 Oct 2026 13:54:27 GMT</pubDate>
+    <description>Reddit r/LocalLLaMA (top of day). CPU: AMD EPYC 7452 (8 memory channels) Motherboard: Gigabyte MZ32 GPU: Radeon AI PRO R9700 (32GB) RAM: 256GB DDR4 (16×16GB). Not exactly a “budget” build, but it came in at roughly half the price of a DGX Spark. Got it up and running just in time for Qwen4, can’t wait to start…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>other</category>
+    <category>pricing</category>
+    <category>AMD</category>
+    <category>Qwen 4</category>
+  </item>
+  <item>
+    <title>We Took over ChatGPT Accounts</title>
+    <link>https://www.parameter.ai/labs/we-found-a-gap-at-openai</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-70f740fc</guid>
+    <pubDate>Sat, 31 Oct 2026 10:30:11 GMT</pubDate>
+    <description>Hacker News: OpenAI (50+ points). 153 points · 68 comments on Hacker News</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>other</category>
+    <category>OpenAI</category>
+    <category>ChatGPT</category>
+  </item>
+  <item>
+    <title>Intel’s stock crashes, knocking $12B from government’s stake</title>
+    <link>https://techcrunch.com/2026/10/30/intels-stock-crashes-knocking-12b-from-governments-stake/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-e70d23e7</guid>
+    <pubDate>Fri, 30 Oct 2026 21:54:34 GMT</pubDate>
+    <description>TechCrunch AI. Intel is being hurt by PC sales as the AI industry gobbles memory and other components causing PC prices to rise.</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>other</category>
+    <category>pricing</category>
+    <category>Intel</category>
+  </item>
+  <item>
+    <title>Last-minute Halloween costumes for tech nerds</title>
+    <link>https://techcrunch.com/2026/10/30/last-minute-halloween-costumes-for-tech-nerds/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-b3c9d523</guid>
+    <pubDate>Fri, 30 Oct 2026 21:26:59 GMT</pubDate>
+    <description>TechCrunch AI. No Halloween costume? Just be a deceptively cute AI agent icon, a PHP vulnerability, or sleepy time Bryan Johnson.</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>security</category>
+    <category>safety</category>
+  </item>
+  <item>
+    <title>Anthropic renames its $100 per month Max 5x plan as Max and the $200 per month Max 20x plan as Ultra, and removes the 5-hour limit for verified Ultra accounts (Claude/@claudeai)</title>
+    <link>https://www.techmeme.com/261030/p19#a261030p19</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-48f8acc2</guid>
+    <pubDate>Fri, 30 Oct 2026 19:15:00 GMT</pubDate>
+    <description>Techmeme. Claude / @claudeai : Anthropic renames its $100 per month Max 5x plan as Max and the $200 per month Max 20x plan as Ultra, and removes the 5-hour limit for verified Ultra accounts — We&apos;re renaming our Max plans: Max 5x &amp;rarr; Max Max 20x &amp;rarr; Ultra Max is still $100/month…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>other</category>
+    <category>pricing</category>
+    <category>Anthropic</category>
+  </item>
+  <item>
+    <title>nemotron-halloween</title>
+    <link>https://huggingface.co/blog/nvidia/nemotron-halloween</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-7423f614</guid>
+    <pubDate>Fri, 30 Oct 2026 17:57:24 GMT</pubDate>
+    <description>Hugging Face Blog.</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>product</category>
+    <category>Hugging Face</category>
+    <category>NVIDIA</category>
+  </item>
+  <item>
+    <title>Google’s first data center satellite is online and writing poetry</title>
+    <link>https://techcrunch.com/2026/10/30/googles-first-data-center-satellite-is-online-and-writing-poetry/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-e9b01816</guid>
+    <pubDate>Fri, 30 Oct 2026 17:00:00 GMT</pubDate>
+    <description>2 sources: TechCrunch AI, The Verge AI. The first TPU in space is running a Google DeepMind Gemma 4 model and writing cheesy poetry.</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>other</category>
+    <category>Google</category>
+    <category>Gemma 4</category>
+  </item>
+  <item>
+    <title>Digital minimalism</title>
+    <link>https://vitalik.eth.limo/general/2026/10/31/digital_minimalism.html</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-de48b7f9</guid>
+    <pubDate>Sat, 31 Oct 2026 06:16:36 GMT</pubDate>
+    <description>Hacker News: LLM (50+ points). 151 points · 120 comments on Hacker News</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>other</category>
+  </item>
+  <item>
+    <title>OpenAI raises less than half of $30B target</title>
+    <link>https://www.wsj.com/tech/ai/openai-raises-less-than-half-of-30-billion-target-in-latest-round-91aecdc5</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-2a5ec988</guid>
+    <pubDate>Sat, 31 Oct 2026 03:22:44 GMT</pubDate>
+    <description>Hacker News: OpenAI (50+ points). 165 points · 157 comments on Hacker News</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>other</category>
+    <category>OpenAI</category>
+  </item>
+  <item>
+    <title>Qwen4 1M context window</title>
+    <link>https://www.reddit.com/r/LocalLLaMA/comments/1xi7390/qwen4_1m_context_window/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-3c95e556</guid>
+    <pubDate>Thu, 29 Oct 2026 01:42:55 GMT</pubDate>
+    <description>Reddit r/LocalLLaMA (top of day). Qwen4 models will have a 1 million context window. Qwen4-27B was not mentioned here, but should be announced at Apsara netherlands tommorow. We have a date for Qwen4-max, it is November 1st. Edit: It says October 1st, so its probably a placeholder. PR…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>model-release</category>
+    <category>release</category>
+    <category>Alibaba</category>
+    <category>Google</category>
+    <category>Qwen 4</category>
+    <category>Qwen4 1M</category>
+  </item>
+  <item>
+    <title>CXMT reports Q3 revenue of ~$16.7B, up 613.2% YoY, and a net profit of ~$8.17B, swinging to profitability on the back of rising AI-driven memory chip prices (Reuters)</title>
+    <link>https://www.techmeme.com/261030/p12#a261030p12</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-6a40f0f8</guid>
+    <pubDate>Fri, 30 Oct 2026 12:20:02 GMT</pubDate>
+    <description>Techmeme. Reuters : CXMT reports Q3 revenue of ~$16.7B, up 613.2% YoY, and a net profit of ~$8.17B, swinging to profitability on the back of rising AI-driven memory chip prices — China&apos;s CXMT (688825.SS) said on Friday it swung to a net profit in the third quarter as surging AI-driven…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>other</category>
+    <category>pricing</category>
+  </item>
+  <item>
+    <title>Claude Code v2.1.314</title>
+    <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.314</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-11a6f70e</guid>
+    <pubDate>Fri, 30 Oct 2026 01:06:26 GMT</pubDate>
+    <description>Claude Code releases. What&apos;s changed Added permissions.blockWritesOutsideWorkingDirectories : Write, Edit and NotebookEdit refuse paths outside the working directories in every permission mode Added an optional groups list to Claude apps gateway upstreams: only developers in the listed IdP groups…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>tool</category>
+    <category>release</category>
+    <category>tooling</category>
+    <category>Anthropic</category>
+    <category>Claude Code</category>
+  </item>
+  <item>
+    <title>How AI detectors like Pangram are changing human writing: authors drop em dashes, &quot;not X, but Y&quot; phrasing, and words like &quot;delve&quot;, or add typos, to look human (Morgan Meaker/Bloomberg)</title>
+    <link>https://www.techmeme.com/261031/p8#a261031p8</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-9fef7844</guid>
+    <pubDate>Sat, 31 Oct 2026 13:40:53 GMT</pubDate>
+    <description>Techmeme. Morgan Meaker / Bloomberg : How AI detectors like Pangram are changing human writing: authors drop em dashes, “not X, but Y” phrasing, and words like “delve”, or add typos, to look human — As AI transforms writing and detectors like Pangram police what counts as…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>product</category>
+  </item>
+  <item>
+    <title>llama.cpp release b12019</title>
+    <link>https://github.com/ggml-org/llama.cpp/releases/tag/b12019</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-679470e4</guid>
+    <pubDate>Sat, 31 Oct 2026 05:23:25 GMT</pubDate>
+    <description>llama.cpp releases. chat : strip the think block in the qwen3-coder with reasoning_format none ( #31380 ) chat : accept the think block in the qwen3-coder response format with reasoning_format none Assisted-by: Claude Opus 5.5 chat : define both qwen3-coder think block variants up front Website…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>tool</category>
+    <category>tooling</category>
+    <category>Meta</category>
+    <category>Claude Opus 5.5 Chat</category>
+    <category>Qwen 3</category>
+    <category>llama.cpp</category>
+  </item>
+  <item>
+    <title>Was I wrong about open models &amp; cyber risks?</title>
+    <link>https://www.interconnects.ai/p/was-i-wrong-about-open-models-and</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-e341bbb1</guid>
+    <pubDate>Fri, 30 Oct 2026 17:36:56 GMT</pubDate>
+    <description>Interconnects. Last week coined the term “Black October“ after an onslaught of critical vulnerability disclosures, including PHP2Shell and GitLab, signified the moment when the cyber risks of AI models started to materialize.</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>security</category>
+    <category>safety</category>
+  </item>
+  <item>
+    <title>Gemma-4-31B-Humanlike-Chat: 2.0&apos;s improved human voice on official Gemma 4 31B</title>
+    <link>https://www.reddit.com/r/LocalLLaMA/comments/1xjdjy0/gemma431bhumanlikechat_20s_improved_human_voice/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-3cda81a5</guid>
+    <pubDate>Fri, 30 Oct 2026 12:05:50 GMT</pubDate>
+    <description>Reddit r/LocalLLaMA (top of day). The previous released Qwen3.8-27B-Humanlike-Chat 2.0, a fine-tune that texts humanly and does stuff, is now at 136k downloads for the GGUF repo between v1 and 2.0. Thank you. One of the top comments on the 2.0 post was &quot;I wonder how Gemma 4 31B would do, trained with your…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>model-release</category>
+    <category>release</category>
+    <category>Google</category>
+    <category>Gemma 4 31B</category>
+  </item>
+  <item>
+    <title>Inside Nscale&apos;s 2,250-acre, 8GW Monarch Compute Campus in West Virginia, which has been hit by construction issues, local opposition, and financing risks (Financial Times)</title>
+    <link>https://www.techmeme.com/261030/p6#a261030p6</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-2957a0c8</guid>
+    <pubDate>Fri, 30 Oct 2026 09:40:01 GMT</pubDate>
+    <description>Techmeme. Financial Times : Inside Nscale&apos;s 2,250-acre, 8GW Monarch Compute Campus in West Virginia, which has been hit by construction issues, local opposition, and financing risks — Nvidia-backed neocloud bets on West Virginia data centre campus hit by construction issues, local…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>other</category>
+    <category>safety</category>
+    <category>NVIDIA</category>
+  </item>
+  <item>
+    <title>Making it easier for websites to express AI training preferences</title>
+    <link>https://openai.com/index/helping-websites-express-ai-training-preferences</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-0588970c</guid>
+    <pubDate>Fri, 30 Oct 2026 09:30:00 GMT</pubDate>
+    <description>OpenAI News. OpenAI will honor a shared robots.txt signal to help website operators communicate their AI training preferences to participating providers.</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>product</category>
+    <category>OpenAI</category>
+  </item>
+</channel>
+</rss>
