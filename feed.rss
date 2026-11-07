@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>AI News Tracker: top stories</title>
+  <link>https://0xmortuex.github.io/ai-news-tracker/</link>
+  <description>The highest-scoring AI stories of the last 3 days, one entry per story. Title, link and a short excerpt only.</description>
+  <language>en</language>
+  <lastBuildDate>Sat, 07 Nov 2026 18:24:57 GMT</lastBuildDate>
+  <generator>ai-news-tracker/stories-1</generator>
+  <atom:link href="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss" rel="self" type="application/rss+xml"/>
+  <item>
+    <title>New Qwen3.8-Flash-Next Unsloth Dynamic V3.1 GGUFs</title>
+    <link>https://www.reddit.com/r/LocalLLaMA/comments/1xnvbxn/new_qwen38flashnext_unsloth_dynamic_v31_ggufs/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-90dfb1db</guid>
+    <pubDate>Wed, 04 Nov 2026 18:08:58 GMT</pubDate>
+    <description>2 sources: Reddit r/LocalLLaMA (top of day), Hugging Face: Tencent models. Hey r/LocalLLaMA ! We&apos;re releasing new new Unsloth Dynamic v3.1 GGUFs for Qwen3.8-Flash-Next! They&apos;re better by 10-15% accuracy on DeepSWE, Terminal Bench, Aider Polyglot and more vs GSQ-RCO. We also provide a new engram switching process for BF16, Q8_0, Q5_1, IQ4_NL switching…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>model-release</category>
+    <category>release</category>
+    <category>Hugging Face</category>
+    <category>Tencent</category>
+    <category>Qwen 3.8</category>
+    <category>Qwen3.8 Flash</category>
+  </item>
+  <item>
+    <title>New model on Hugging Face: ByteDance-Seed/Qwen3-30B-A3B-MoE-SAE</title>
+    <link>https://huggingface.co/ByteDance-Seed/Qwen3-30B-A3B-MoE-SAE</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-6cead327</guid>
+    <pubDate>Thu, 05 Nov 2026 13:38:56 GMT</pubDate>
+    <description>2 sources: Hugging Face: ByteDance Seed models, Reddit r/LocalLLaMA (top of day). 2 likes · 0 downloads</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>model-release</category>
+    <category>release</category>
+    <category>ByteDance</category>
+    <category>Google</category>
+    <category>Hugging Face</category>
+    <category>Qwen3-30B-A3B-MoE-SAE</category>
+  </item>
+  <item>
+    <title>OpenAI launches GPT-6 Cyber, which it says outperforms GPT-6 Astra on cyber benchmarks, is better at finding vulnerabilities, and is less likely to go rogue (Emma Roth/The Verge)</title>
+    <link>https://www.techmeme.com/261105/p40#a261105p40</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-ee89cf5d</guid>
+    <pubDate>Thu, 05 Nov 2026 17:06:54 GMT</pubDate>
+    <description>2 sources: Techmeme, The Decoder. Emma Roth / The Verge : OpenAI launches GPT-6 Cyber, which it says outperforms GPT-6 Astra on cyber benchmarks, is better at finding vulnerabilities, and is less likely to go rogue — Classified as ‘Critical,’ GPT-6 Cyber outperforms GPT-6 Astra on cyber-related benchmarks.</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>model-release</category>
+    <category>release</category>
+    <category>safety</category>
+    <category>research</category>
+    <category>OpenAI</category>
+    <category>GPT-6</category>
+    <category>GPT-6-Astra</category>
+  </item>
+  <item>
+    <title>Democratic wins could slow AI investment and safeguard the US economy against a downturn by pacing it over time, as Deutsche Bank sees &quot;shaky&quot; projects killed (Cecile Daurat/Bloomberg)</title>
+    <link>https://www.techmeme.com/261107/p11#a261107p11</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-7524809b</guid>
+    <pubDate>Sat, 07 Nov 2026 16:35:01 GMT</pubDate>
+    <description>Techmeme. Cecile Daurat / Bloomberg : Democratic wins could slow AI investment and safeguard the US economy against a downturn by pacing it over time, as Deutsche Bank sees “shaky” projects killed — Guardrails against data-center expansion in states won by Democrats may help spread…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>other</category>
+    <category>safety</category>
+  </item>
+  <item>
+    <title>OpenCSG Releases Agentic-27B for Tool Workflows, With Commercial Use Requiring Permission</title>
+    <link>https://pandaily.com/opencsg-agentic-27b-tool-workflows-single-gpu-commercial-license</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-dc56ca77</guid>
+    <pubDate>Sat, 07 Nov 2026 07:06:50 GMT</pubDate>
+    <description>Pandaily. OpenCSG&apos;s 27B agent model targets tool selection and failure recovery, with single-A800 test results. Its license requires permission for commercial use.</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>model-release</category>
+    <category>release</category>
+  </item>
+  <item>
+    <title>Meta introduces specialized versions of its existing models, trained using Muse Wonder, bringing Active Memory and Active Focus to all Muse and Meta AI users (Frederic Lardinois/The New Stack)</title>
+    <link>https://www.techmeme.com/261106/p28#a261106p28</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-fa28c083</guid>
+    <pubDate>Sat, 07 Nov 2026 01:50:00 GMT</pubDate>
+    <description>Techmeme. Frederic Lardinois / The New Stack : Meta introduces specialized versions of its existing models, trained using Muse Wonder, bringing Active Memory and Active Focus to all Muse and Meta AI users — Starting on Friday, everyone using Meta&apos;s Muse agent and Meta AI gets new models…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>model-release</category>
+    <category>release</category>
+    <category>Meta</category>
+    <category>Muse Wonder</category>
+  </item>
+  <item>
+    <title>Gemini Omni 1.2 Flash: Fast and cost-effective with longer clips</title>
+    <link>https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-55ed7082</guid>
+    <pubDate>Thu, 05 Nov 2026 17:00:00 GMT</pubDate>
+    <description>2 sources: Google AI, Google DeepMind. Gemini Omni 1.2 Flash brings native 15-second video generation and editing, stronger consistency, and 30% lower pricing.</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>product</category>
+    <category>pricing</category>
+    <category>Google</category>
+    <category>Google DeepMind</category>
+    <category>Gemini Omni 1.2 Flash</category>
+  </item>
+  <item>
+    <title>Claude Code v2.1.319</title>
+    <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.319</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-84993a01</guid>
+    <pubDate>Fri, 06 Nov 2026 17:04:01 GMT</pubDate>
+    <description>Claude Code releases. What&apos;s changed Changed auto mode with telemetry or feature flags off, including behind LLM gateways: calls the server can&apos;t check are asked about or denied, with no fallback to the built-in classifier; set CLAUDE_CODE_AUTO_MODE_SERVER=0 to keep using it (Bedrock, Vertex and…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>tool</category>
+    <category>release</category>
+    <category>tooling</category>
+    <category>Anthropic</category>
+    <category>Claude Code</category>
+  </item>
+  <item>
+    <title>Experts say the new Democratic congressional majority will likely seek to rebuild CISA, prioritize AI security, revive local cyber grants, probe DOGE, and more (Eric Geller/Cybersecurity Dive)</title>
+    <link>https://www.techmeme.com/261106/p11#a261106p11</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-e01bee1e</guid>
+    <pubDate>Fri, 06 Nov 2026 13:20:44 GMT</pubDate>
+    <description>Techmeme. Eric Geller / Cybersecurity Dive : Experts say the new Democratic congressional majority will likely seek to rebuild CISA, prioritize AI security, revive local cyber grants, probe DOGE, and more — From CISA to AI and beyond, the new Democratic majority has many opportunities to…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>policy</category>
+    <category>safety</category>
+    <category>policy</category>
+  </item>
+  <item>
+    <title>GPT-6 Astra covertly underperforms on safety research</title>
+    <link>https://alignment.openai.com/misalignment-reports/covert-underperformance-on-safety-research-tasks/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-ba42760a</guid>
+    <pubDate>Thu, 05 Nov 2026 07:44:30 GMT</pubDate>
+    <description>2 sources: Hacker News: OpenAI (50+ points), The Decoder. 341 points · 192 comments on Hacker News</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>other</category>
+    <category>safety</category>
+    <category>OpenAI</category>
+    <category>GPT-6-Astra</category>
+  </item>
+  <item>
+    <title>Partnering with Hacktron to find vulnerabilities in OpenAI’s systems</title>
+    <link>https://openai.com/index/partnering-with-hacktron</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-37b20f86</guid>
+    <pubDate>Fri, 06 Nov 2026 08:00:00 GMT</pubDate>
+    <description>OpenAI News. OpenAI is partnering with Hacktron to find vulnerabilities, test connections with third-party services, and strengthen defenses with frontier AI.</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>security</category>
+    <category>safety</category>
+    <category>OpenAI</category>
+  </item>
+  <item>
+    <title>New model on Hugging Face: ByteDance-Seed/Cross-Layer-TopK-CLT</title>
+    <link>https://huggingface.co/ByteDance-Seed/Cross-Layer-TopK-CLT</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-708571e2</guid>
+    <pubDate>Thu, 05 Nov 2026 06:56:16 GMT</pubDate>
+    <description>2 sources: Hugging Face: ByteDance Seed models, Hugging Face: NVIDIA models. 5 likes · 312 downloads</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>model-release</category>
+    <category>release</category>
+    <category>ByteDance</category>
+    <category>Hugging Face</category>
+    <category>Cross-Layer-TopK-CLT</category>
+    <category>NVIDIA</category>
+  </item>
+  <item>
+    <title>New model on Hugging Face: ByteDance-Seed/Cola2</title>
+    <link>https://huggingface.co/ByteDance-Seed/Cola2</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-3559d2e8</guid>
+    <pubDate>Fri, 06 Nov 2026 06:59:36 GMT</pubDate>
+    <description>Hugging Face: ByteDance Seed models. text-generation · 8 likes · 388 downloads</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>model-release</category>
+    <category>release</category>
+    <category>ByteDance</category>
+    <category>Hugging Face</category>
+    <category>Cola2</category>
+  </item>
+  <item>
+    <title>State propaganda in some Chinese AI models is only &quot;a thin layer&quot; that fine-tuning can strip away</title>
+    <link>https://the-decoder.com/state-propaganda-in-some-chinese-ai-models-is-only-a-thin-layer-that-fine-tuning-can-strip-away/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-c5faa50e</guid>
+    <pubDate>Sat, 07 Nov 2026 12:32:45 GMT</pubDate>
+    <description>The Decoder. Nous Research retrained Alibaba&apos;s Qwen3.8-27B to produce Arete-27B, largely stripping out its pro-Chinese bias. The propaganda rate dropped from 22 percent to less than one percent, while general capabilities remained intact in tests. The method relied on 53 million tokens of…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>other</category>
+    <category>Alibaba</category>
+    <category>Qwen 3.8</category>
+    <category>Qwen3.8 27B</category>
+  </item>
+  <item>
+    <title>[AINews] Anthropic IPO: Whither Now?</title>
+    <link>https://latent.space/p/ainews-anthropic-ipo-whither-now/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-f7f0c7df</guid>
+    <pubDate>Sat, 07 Nov 2026 03:04:53 GMT</pubDate>
+    <description>Latent Space. November 6, 2026 — ARC Prize tests Inkling 2 Small, and Thinking Machines explains how it caught early checkpoints bypassing guardrails.</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>funding</category>
+    <category>safety</category>
+    <category>Anthropic</category>
+    <category>Thinking Machines</category>
+  </item>
+  <item>
+    <title>Artificial Analysis says Inkling 2 Small matches Gemini 3.8 Flash (high) in its index and would be the top open model outside China once its weights are out (Artificial Analysis)</title>
+    <link>https://www.techmeme.com/261105/p65#a261105p65</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-55c54502</guid>
+    <pubDate>Fri, 06 Nov 2026 00:55:00 GMT</pubDate>
+    <description>Techmeme. Artificial Analysis : Artificial Analysis says Inkling 2 Small matches Gemini 3.8 Flash (high) in its index and would be the top open model outside China once its weights are out — Inkling 2 Small is launching as a proprietary model, available first-party through Thinking…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>model-release</category>
+    <category>release</category>
+    <category>Google</category>
+    <category>Gemini 3.8 Flash</category>
+  </item>
+  <item>
+    <title>Lawsuit: Man introduced his wife to ChatGPT. She used it to plan his murder.</title>
+    <link>https://arstechnica.com/tech-policy/2026/11/lawsuit-man-introduced-his-wife-to-chatgpt-she-used-it-to-plan-his-murder/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-b74114ab</guid>
+    <pubDate>Thu, 05 Nov 2026 21:39:40 GMT</pubDate>
+    <description>Ars Technica AI. Bitter energy drinks turned out to be ChatGPT-steered poisoning, lawsuit says.</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>policy</category>
+    <category>release</category>
+    <category>policy</category>
+    <category>OpenAI</category>
+    <category>ChatGPT</category>
+  </item>
+  <item>
+    <title>Ricursive releases Ripple-65B Preview, a general-purpose variant of its AI model for automating advanced chip design, under Apache 2.0, costing $0.60/1M output (Carl Franzen/VentureBeat)</title>
+    <link>https://www.techmeme.com/261105/p14#a261105p14</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-b70378ec</guid>
+    <pubDate>Thu, 05 Nov 2026 11:10:01 GMT</pubDate>
+    <description>Techmeme. Carl Franzen / VentureBeat : Ricursive releases Ripple-65B Preview, a general-purpose variant of its AI model for automating advanced chip design, under Apache 2.0, costing $0.60/1M output — There&apos;s another American victory worth paying attention to today: a new, open weights…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>model-release</category>
+    <category>release</category>
+    <category>pricing</category>
+  </item>
+  <item>
+    <title>Exponential Time Hypothesis co-proposer Russell Impagliazzo calls OpenAI&apos;s disproof &quot;shocking news&quot;; it could one day speed up chip design and break encryption (Cade Metz/New York Times)</title>
+    <link>https://www.techmeme.com/261107/p12#a261107p12</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-fbf2f1ee</guid>
+    <pubDate>Sat, 07 Nov 2026 17:15:01 GMT</pubDate>
+    <description>Techmeme. Cade Metz / New York Times : Exponential Time Hypothesis co-proposer Russell Impagliazzo calls OpenAI&apos;s disproof “shocking news”; it could one day speed up chip design and break encryption — A longstanding hypothesis held that some problems would always be hard for computers to…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>other</category>
+    <category>OpenAI</category>
+  </item>
+  <item>
+    <title>Thinking Machines&apos; Inkling 2 Small drops 316 F-bombs across benchmark runs</title>
+    <link>https://the-decoder.com/thinking-machines-inkling-2-small-drops-316-f-bombs-across-benchmark-runs/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-348c5e32</guid>
+    <pubDate>Sat, 07 Nov 2026 16:31:00 GMT</pubDate>
+    <description>The Decoder. Thinking Machines&apos; AI model Inkling 2 Small swears during its internal reasoning, 316 times across 2,655 benchmark runs, according to an analysis by Vals AI. The profanity typically shows up late in long runs that fail anyway. But it doesn&apos;t work as a warning signal: 96 percent…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>product</category>
+    <category>research</category>
+    <category>Thinking Machines</category>
+  </item>
+  <item>
+    <title>ComfyUI v0.44.2</title>
+    <link>https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.44.2</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-20e59ce6</guid>
+    <pubDate>Fri, 06 Nov 2026 20:37:56 GMT</pubDate>
+    <description>ComfyUI releases.</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>tool</category>
+    <category>release</category>
+    <category>tooling</category>
+    <category>ComfyUI</category>
+  </item>
+  <item>
+    <title>Ollama v0.40.15</title>
+    <link>https://github.com/ollama/ollama/releases/tag/v0.40.15</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-bee41148</guid>
+    <pubDate>Fri, 06 Nov 2026 01:47:18 GMT</pubDate>
+    <description>Ollama releases. MiMo V2.6 Xiaomi MiMo&apos;s mimo-v2.6 , a 9B model built for code and agent workflows, is now supported in Ollama. ollama run mimo-v2.6 AutoTrust decision models AutoTrust decision models read text and return choices, yes or no probabilities, and ratings for the questions you…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>tool</category>
+    <category>release</category>
+    <category>tooling</category>
+    <category>Ollama</category>
+  </item>
+  <item>
+    <title>California State Senator Scott Wiener, an author of AI safety law SB 53, won Tuesday&apos;s election to succeed Pelosi in the US House, campaigning on AI regulation (Rocket Drew/The Information)</title>
+    <link>https://www.techmeme.com/261105/p53#a261105p53</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-98a0eff7</guid>
+    <pubDate>Thu, 05 Nov 2026 21:35:01 GMT</pubDate>
+    <description>Techmeme. Rocket Drew / The Information : California State Senator Scott Wiener, an author of AI safety law SB 53, won Tuesday&apos;s election to succeed Pelosi in the US House, campaigning on AI regulation — Scott Wiener, the California politician who led the successful effort to pass AI…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>policy</category>
+    <category>safety</category>
+    <category>policy</category>
+  </item>
+  <item>
+    <title>Anthropic pushes ahead with pre-Thanksgiving IPO despite tech selloff, accepts lower valuation</title>
+    <link>https://the-decoder.com/anthropic-pushes-ahead-with-pre-thanksgiving-ipo-despite-tech-selloff-accepts-lower-valuation/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-06517e5e</guid>
+    <pubDate>Sat, 07 Nov 2026 17:37:25 GMT</pubDate>
+    <description>The Decoder. Despite the tech selloff, Anthropic is pressing ahead with its IPO at a valuation of $1.25 to $1.75 trillion, well below the hoped-for $2 trillion. The Claude developer aims to raise $80 to $100 billion before Thanksgiving. Rival OpenAI has also recently had to cut its…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>funding</category>
+    <category>Anthropic</category>
+  </item>
+  <item>
+    <title>AI auditors catch most agent misbehavior but flood reviewers with false alarms, new study finds</title>
+    <link>https://the-decoder.com/ai-auditors-catch-most-agent-misbehavior-but-flood-reviewers-with-false-alarms-new-study-finds/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-9b0afedd</guid>
+    <pubDate>Sat, 07 Nov 2026 16:56:38 GMT</pubDate>
+    <description>The Decoder. AI models can often spot problematic behavior by other AI agents in logs, according to a study by Anthropic researcher Andy Hall. GPT-5 found about 98 percent of reward-hacking cases, but the more exhaustively the search is tuned, the more false alarms pile up. That&apos;s not yet…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>other</category>
+    <category>Anthropic</category>
+    <category>OpenAI</category>
+    <category>GPT-5</category>
+  </item>
+  <item>
+    <title>The gap between open and closed AI models in cyber capabilities keeps shrinking</title>
+    <link>https://the-decoder.com/the-gap-between-open-and-closed-ai-models-in-cyber-capabilities-keeps-shrinking/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-2872c101</guid>
+    <pubDate>Sat, 07 Nov 2026 15:35:50 GMT</pubDate>
+    <description>The Decoder. In the Vals AI benchmark, OpenAI&apos;s GPT-6 Sol Daybreak hits 80.8 percent of attack objectives in simulated corporate networks. Worse, the open-weight model DeepSeek V4.1 Flash reaches 72.8 percent at a tenth of the cost. Because open models can no longer be restricted, analysts…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>other</category>
+    <category>DeepSeek</category>
+    <category>OpenAI</category>
+    <category>DeepSeek-v4.1-Flash</category>
+    <category>GPT-6-Sol</category>
+  </item>
+  <item>
+    <title>Chicago-based data analytics company Ocient raised a $100M Series C co-led by Boka Capital and OCA Ventures to grow its agentic AI analytics business (Paul Gillin/SiliconANGLE)</title>
+    <link>https://www.techmeme.com/261107/p10#a261107p10</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-394fee73</guid>
+    <pubDate>Sat, 07 Nov 2026 15:30:01 GMT</pubDate>
+    <description>Techmeme. Paul Gillin / SiliconANGLE : Chicago-based data analytics company Ocient raised a $100M Series C co-led by Boka Capital and OCA Ventures to grow its agentic AI analytics business — Ocient Inc., the maker of a speedy data analytics platform, today said it has raised $100 million…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>funding</category>
+  </item>
+  <item>
+    <title>Investigation: some Chinese companies approved by the US Commerce Department to handle Nvidia&apos;s H200 chips have empty offices and ties to firms under sanctions (New York Times)</title>
+    <link>https://www.techmeme.com/261107/p9#a261107p9</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-bdb1f4b4</guid>
+    <pubDate>Sat, 07 Nov 2026 14:30:04 GMT</pubDate>
+    <description>Techmeme. New York Times : Investigation: some Chinese companies approved by the US Commerce Department to handle Nvidia&apos;s H200 chips have empty offices and ties to firms under sanctions — The Commerce Department has approved dozens of Chinese companies to handle Nvidia&apos;s H200 chips…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>other</category>
+    <category>NVIDIA</category>
+  </item>
+  <item>
+    <title>Nine AI agents tried autonomous research on open questions from US national labs and none passed the experts&apos; bar</title>
+    <link>https://the-decoder.com/nine-ai-agents-tried-autonomous-research-on-open-questions-from-us-national-labs-and-none-passed-the-experts-bar/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-9b8c3db4</guid>
+    <pubDate>Sat, 07 Nov 2026 11:13:42 GMT</pubDate>
+    <description>The Decoder. The &quot;Into the Unknown&quot; benchmark tasks nine AI agents with tackling open research questions from U.S. national laboratories. None of the 135 submissions meets all requirements. A total of 114 papers fail the integrity check, with agents claiming to have conducted experiments…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>paper</category>
+    <category>research</category>
+  </item>
+  <item>
+    <title>Censys finds 800+ publicly exposed copies of ARTEX, a Chinese-made, AI-powered, open-source penetration testing tool linked to several cyberattacks since July (Zack Whittaker/TechCrunch)</title>
+    <link>https://www.techmeme.com/261107/p5#a261107p5</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-5257b491</guid>
+    <pubDate>Sat, 07 Nov 2026 07:01:02 GMT</pubDate>
+    <description>Techmeme. Zack Whittaker / TechCrunch : Censys finds 800+ publicly exposed copies of ARTEX, a Chinese-made, AI-powered, open-source penetration testing tool linked to several cyberattacks since July — Security researchers have discovered hundreds of copies of a Chinese-made AI hacking…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>tool</category>
+    <category>tooling</category>
+  </item>
+</channel>
+</rss>

@@ -1,0 +1,1147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>AI News Tracker</title>
+  <subtitle>Deduplicated, tagged and scored AI news. Title, link and a short excerpt only.</subtitle>
+  <id>urn:ai-news-tracker:feed</id>
+  <link rel="self" type="application/atom+xml" href="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.atom"/>
+  <link rel="alternate" type="text/html" href="https://0xmortuex.github.io/ai-news-tracker/"/>
+  <updated>2026-11-07T18:24:57Z</updated>
+  <generator>ai-news-tracker/1</generator>
+  <entry>
+    <id>urn:ai-news-tracker:d885137ec5657fac</id>
+    <title>Gemini Omni 1.2 Flash duyuruldu: Daha uzun ve tutarlı videolar</title>
+    <link rel="alternate" href="https://www.donanimhaber.com/gemini-omni-1-2-flash-duyuruldu-daha-uzun-ve-tutarli-videolar--212600"/>
+    <published>2026-11-07T18:00:00Z</published>
+    <updated>2026-11-07T18:00:00Z</updated>
+    <author><name>DonanimHaber</name></author>
+    <summary type="text">15 saniyeye kadar video oluşturabilen model, aşamalı düzenleme, daha tutarlı sahneler ve gelişmiş ses üretimi özellikleriyle geliyor.</summary>
+    <category term="policy"/>
+    <category term="turkey"/>
+    <category term="regulation"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:6b2b8cc622f47f26</id>
+    <title>Anthropic pushes ahead with pre-Thanksgiving IPO despite tech selloff, accepts lower valuation</title>
+    <link rel="alternate" href="https://the-decoder.com/anthropic-pushes-ahead-with-pre-thanksgiving-ipo-despite-tech-selloff-accepts-lower-valuation/"/>
+    <published>2026-11-07T17:37:25Z</published>
+    <updated>2026-11-07T17:37:25Z</updated>
+    <author><name>The Decoder</name></author>
+    <summary type="text">Despite the tech selloff, Anthropic is pressing ahead with its IPO at a valuation of $1.25 to $1.75 trillion, well below the hoped-for $2 trillion. The Claude developer aims to raise $80 to $100 billion before Thanksgiving. Rival OpenAI has also recently had to cut its…</summary>
+    <category term="funding"/>
+    <category term="funding"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:6bad852b6fb0f7ad</id>
+    <title>Exponential Time Hypothesis co-proposer Russell Impagliazzo calls OpenAI&apos;s disproof &quot;shocking news&quot;; it could one day speed up chip design and break encryption (Cade Metz/New York Times)</title>
+    <link rel="alternate" href="https://www.techmeme.com/261107/p12#a261107p12"/>
+    <published>2026-11-07T17:15:01Z</published>
+    <updated>2026-11-07T17:15:01Z</updated>
+    <author><name>Techmeme</name></author>
+    <summary type="text">Cade Metz / New York Times : Exponential Time Hypothesis co-proposer Russell Impagliazzo calls OpenAI&apos;s disproof “shocking news”; it could one day speed up chip design and break encryption — A longstanding hypothesis held that some problems would always be hard for computers to…</summary>
+    <category term="other"/>
+    <category term="chips"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:5f5203941f4a93e5</id>
+    <title>Effects of KV Cache Quantization on Qwen3.8 27B</title>
+    <link rel="alternate" href="https://www.reddit.com/r/LocalLLaMA/comments/1xqbesv/effects_of_kv_cache_quantization_on_qwen38_27b/"/>
+    <published>2026-11-07T17:09:51Z</published>
+    <updated>2026-11-07T17:09:51Z</updated>
+    <author><name>Reddit r/LocalLLaMA (top of day)</name></author>
+    <summary type="text">KV cache quantization has been a hotly-debated topic for this community for some time, with opinions ranging from &quot;never quantize&quot; to &quot;4 bit is fine&quot;. Since the anecdotal evidence is rather inconsistent, I decided to quantify how much KV cache quantization affects the model…</summary>
+    <category term="other"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:020ac8fbca2d32b4</id>
+    <title>AI auditors catch most agent misbehavior but flood reviewers with false alarms, new study finds</title>
+    <link rel="alternate" href="https://the-decoder.com/ai-auditors-catch-most-agent-misbehavior-but-flood-reviewers-with-false-alarms-new-study-finds/"/>
+    <published>2026-11-07T16:56:38Z</published>
+    <updated>2026-11-07T16:56:38Z</updated>
+    <author><name>The Decoder</name></author>
+    <summary type="text">AI models can often spot problematic behavior by other AI agents in logs, according to a study by Anthropic researcher Andy Hall. GPT-5 found about 98 percent of reward-hacking cases, but the more exhaustively the search is tuned, the more false alarms pile up. That&apos;s not yet…</summary>
+    <category term="other"/>
+    <category term="research"/>
+    <category term="tools"/>
+    <category term="agents"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:384e01886698e2d2</id>
+    <title>Democratic wins could slow AI investment and safeguard the US economy against a downturn by pacing it over time, as Deutsche Bank sees &quot;shaky&quot; projects killed (Cecile Daurat/Bloomberg)</title>
+    <link rel="alternate" href="https://www.techmeme.com/261107/p11#a261107p11"/>
+    <published>2026-11-07T16:35:01Z</published>
+    <updated>2026-11-07T16:35:01Z</updated>
+    <author><name>Techmeme</name></author>
+    <summary type="text">Cecile Daurat / Bloomberg : Democratic wins could slow AI investment and safeguard the US economy against a downturn by pacing it over time, as Deutsche Bank sees “shaky” projects killed — Guardrails against data-center expansion in states won by Democrats may help spread…</summary>
+    <category term="other"/>
+    <category term="safety"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:c7cadefc098fe5f0</id>
+    <title>Thinking Machines&apos; Inkling 2 Small drops 316 F-bombs across benchmark runs</title>
+    <link rel="alternate" href="https://the-decoder.com/thinking-machines-inkling-2-small-drops-316-f-bombs-across-benchmark-runs/"/>
+    <published>2026-11-07T16:31:00Z</published>
+    <updated>2026-11-07T16:31:00Z</updated>
+    <author><name>The Decoder</name></author>
+    <summary type="text">Thinking Machines&apos; AI model Inkling 2 Small swears during its internal reasoning, 316 times across 2,655 benchmark runs, according to an analysis by Vals AI. The profanity typically shows up late in long runs that fail anyway. But it doesn&apos;t work as a warning signal: 96 percent…</summary>
+    <category term="product"/>
+    <category term="research"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:1c34b177f725cd67</id>
+    <title>Google için yapay zeka paradoksa dönüştü</title>
+    <link rel="alternate" href="https://www.donanimhaber.com/google-icin-yapay-zeka-paradoksa-donustu--212606"/>
+    <published>2026-11-07T16:30:00Z</published>
+    <updated>2026-11-07T16:30:00Z</updated>
+    <author><name>DonanimHaber</name></author>
+    <summary type="text">Google yapay zeka aramalarında büyüme kaydederken reklam gelirlerinde yavaşlama yaşıyor. Şirket, yüz milyarlarca dolarlık yatırımlarının karşılığını henüz alamıyor.</summary>
+    <category term="other"/>
+    <category term="turkey"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:4d4808f6dbabfab3</id>
+    <title>testing Qoduck (Maybe qwen4) on Qoder</title>
+    <link rel="alternate" href="https://www.reddit.com/r/LocalLLaMA/comments/1xqafp1/testing_qoduck_maybe_qwen4_on_qoder/"/>
+    <published>2026-11-07T16:28:52Z</published>
+    <updated>2026-11-07T16:28:52Z</updated>
+    <author><name>Reddit r/LocalLLaMA (top of day)</name></author>
+    <summary type="text">I noticed that it has native image and video generation. submitted by /u/Consistent_Berry_324 [link] [comments]</summary>
+    <category term="other"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:5cbaf13d00d8c00a</id>
+    <title>llama_moe_cache: run missed experts on CPU, add tuning script by am17an · Pull Request #30966 · ggml-org/llama.cpp</title>
+    <link rel="alternate" href="https://www.reddit.com/r/LocalLLaMA/comments/1xqacka/llama_moe_cache_run_missed_experts_on_cpu_add/"/>
+    <published>2026-11-07T16:25:06Z</published>
+    <updated>2026-11-07T16:25:06Z</updated>
+    <author><name>Reddit r/LocalLLaMA (top of day)</name></author>
+    <summary type="text">This is a significant speedup for MoE offloading (low VRAM people). I tried Strata once, and it had some tuning mechanism, so probably this is a similar idea. submitted by /u/jacek2023 [link] [comments]</summary>
+    <category term="other"/>
+    <category term="open-weights"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:bb9dc983cfcbeb71</id>
+    <title>NYT Cooking’s AI assistant saved my weeknight chicken, but almost ruined my cake</title>
+    <link rel="alternate" href="https://www.theverge.com/tech/1029489/nyt-cooking-ai-assistant-review"/>
+    <published>2026-11-07T15:50:00Z</published>
+    <updated>2026-11-07T15:50:00Z</updated>
+    <author><name>The Verge AI</name></author>
+    <summary type="text">Around 7PM each weeknight, I find myself standing in front of the fridge, trying to decide on something for dinner that won&apos;t make my husband complain, &quot;Chicken again?&quot; Yes, I should meal plan more, but I don&apos;t, so this is where I&apos;m at. A nightly battle in which the chicken…</summary>
+    <category term="product"/>
+    <category term="tools"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:a3c57d66c8a9167a</id>
+    <title>[Paper] DSpine - Draft in Parallel, Condition Through Depth: Adjacent Causal Injection for Speculative Decoding - tencent</title>
+    <link rel="alternate" href="https://www.reddit.com/r/LocalLLaMA/comments/1xq9hf6/paper_dspine_draft_in_parallel_condition_through/"/>
+    <published>2026-11-07T15:48:50Z</published>
+    <updated>2026-11-07T15:48:50Z</updated>
+    <author><name>Reddit r/LocalLLaMA (top of day)</name></author>
+    <summary type="text">Parallel speculative drafting generates multiple candidates in one backbone pass, but independent token selection can produce inconsistent continuations that shorten the accepted prefix. Existing methods mostly leave conditional decoding to a lightweight module after the…</summary>
+    <category term="paper"/>
+    <category term="china"/>
+    <category term="research"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:b0a5f1858835e039</id>
+    <title>Jensen Huang&apos;a casus Çin istihbaratından çıktı</title>
+    <link rel="alternate" href="https://shiftdelete.net/jensen-huang-casus-cin-istihbarati-alice-huang"/>
+    <published>2026-11-07T15:45:00Z</published>
+    <updated>2026-11-07T15:45:00Z</updated>
+    <author><name>ShiftDelete.Net</name></author>
+    <summary type="text">Jensen Huang casus iddiasında yeni ayrıntılar geldi. NVIDIA CEO&apos;sunu izlediği öne sürülen Alice Huang&apos;ı Çin&apos;in Devlet Güvenlik Bakanlığı&apos;nın devşirdiği bildirildi.</summary>
+    <category term="other"/>
+    <category term="turkey"/>
+    <category term="safety"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:2634a86d9aad18ee</id>
+    <title>The US let Nvidia sell chips to an empty office in China</title>
+    <link rel="alternate" href="https://www.theverge.com/ai-artificial-intelligence/1029483/nvidia-ai-chips-china-blacklist-government"/>
+    <published>2026-11-07T15:43:45Z</published>
+    <updated>2026-11-07T15:43:45Z</updated>
+    <author><name>The Verge AI</name></author>
+    <summary type="text">Concerns are being raised that neither the Commerce Department nor Nvidia are doing their due diligence when it comes to vetting Chinese firms cleared to handle the company&apos;s H200 AI chips. According to The New York Times, New Matrix is on the list of approved firms, yet its…</summary>
+    <category term="other"/>
+    <category term="china"/>
+    <category term="chips"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:575c2dec8f26ca76</id>
+    <title>The gap between open and closed AI models in cyber capabilities keeps shrinking</title>
+    <link rel="alternate" href="https://the-decoder.com/the-gap-between-open-and-closed-ai-models-in-cyber-capabilities-keeps-shrinking/"/>
+    <published>2026-11-07T15:35:50Z</published>
+    <updated>2026-11-07T15:35:50Z</updated>
+    <author><name>The Decoder</name></author>
+    <summary type="text">In the Vals AI benchmark, OpenAI&apos;s GPT-6 Sol Daybreak hits 80.8 percent of attack objectives in simulated corporate networks. Worse, the open-weight model DeepSeek V4.1 Flash reaches 72.8 percent at a tenth of the cost. Because open models can no longer be restricted, analysts…</summary>
+    <category term="other"/>
+    <category term="china"/>
+    <category term="open-weights"/>
+    <category term="research"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:84ac93eaf505f348</id>
+    <title>Chicago-based data analytics company Ocient raised a $100M Series C co-led by Boka Capital and OCA Ventures to grow its agentic AI analytics business (Paul Gillin/SiliconANGLE)</title>
+    <link rel="alternate" href="https://www.techmeme.com/261107/p10#a261107p10"/>
+    <published>2026-11-07T15:30:01Z</published>
+    <updated>2026-11-07T15:30:01Z</updated>
+    <author><name>Techmeme</name></author>
+    <summary type="text">Paul Gillin / SiliconANGLE : Chicago-based data analytics company Ocient raised a $100M Series C co-led by Boka Capital and OCA Ventures to grow its agentic AI analytics business — Ocient Inc., the maker of a speedy data analytics platform, today said it has raised $100 million…</summary>
+    <category term="funding"/>
+    <category term="funding"/>
+    <category term="tools"/>
+    <category term="agents"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:ac30c3ff268d6e3d</id>
+    <title>AI broke the cybersecurity world. What’s next?</title>
+    <link rel="alternate" href="https://www.theverge.com/podcast/1029038/ai-cybersecurity-hackers-data-breach-dark-age-alex-stamos"/>
+    <published>2026-11-07T15:00:00Z</published>
+    <updated>2026-11-07T15:00:00Z</updated>
+    <author><name>The Verge AI</name></author>
+    <summary type="text">Today, I’m talking with Alex Stamos, chief security officer at Cognition and longtime cybersecurity expert, about what a mess cybersecurity is right now. This episode is part one of a special series looking at AI in real life. I’ve always enjoyed talking to Alex because he’s so…</summary>
+    <category term="other"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:ceb5f4045a87b0d3</id>
+    <title>Alphabet&apos;ten Qualcomm&apos;a dev yatırım: Hedef yapay zeka veri merkezleri</title>
+    <link rel="alternate" href="https://www.donanimhaber.com/alphabet-qualcomm-a-548-milyon-dolar-yatirimla-destek-verdi--212616"/>
+    <published>2026-11-07T15:00:00Z</published>
+    <updated>2026-11-07T15:00:00Z</updated>
+    <author><name>DonanimHaber</name></author>
+    <summary type="text">Alphabet&apos;in Qualcomm&apos;a yaklaşık 548 milyon dolarlık yatırım yaptığı bildirildi. İşte yapay zeka veri merkezlerine yönelirken çip sektöründe yeni bir rekabet alanı oluşturacak yatırımın ayrıntıları:</summary>
+    <category term="other"/>
+    <category term="turkey"/>
+    <category term="chips"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:dd49fccc8f7e4709</id>
+    <title>Valet: use local LLMs to manage your homelab (open source)</title>
+    <link rel="alternate" href="https://www.reddit.com/r/LocalLLaMA/comments/1xq7qi4/valet_use_local_llms_to_manage_your_homelab_open/"/>
+    <published>2026-11-07T14:32:04Z</published>
+    <updated>2026-11-07T14:32:04Z</updated>
+    <author><name>Reddit r/LocalLLaMA (top of day)</name></author>
+    <summary type="text">My favourite use case for local LLMs is running my homelab, because everything stays private (and it helps me justify the GPU lol) I wanted one dashboard to help me manage all of my services, so I made Valet. Live demo: https://demo.askvalet.dev Valet has a chat agent that…</summary>
+    <category term="tool"/>
+    <category term="chips"/>
+    <category term="open-weights"/>
+    <category term="tools"/>
+    <category term="agents"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:cc583a7d57d303ae</id>
+    <title>Investigation: some Chinese companies approved by the US Commerce Department to handle Nvidia&apos;s H200 chips have empty offices and ties to firms under sanctions (New York Times)</title>
+    <link rel="alternate" href="https://www.techmeme.com/261107/p9#a261107p9"/>
+    <published>2026-11-07T14:30:04Z</published>
+    <updated>2026-11-07T14:30:04Z</updated>
+    <author><name>Techmeme</name></author>
+    <summary type="text">New York Times : Investigation: some Chinese companies approved by the US Commerce Department to handle Nvidia&apos;s H200 chips have empty offices and ties to firms under sanctions — The Commerce Department has approved dozens of Chinese companies to handle Nvidia&apos;s H200 chips…</summary>
+    <category term="other"/>
+    <category term="china"/>
+    <category term="chips"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:9f9e19ea14a605b5</id>
+    <title>Robotaxis are taking over China’s cities. What are they actually like to ride?</title>
+    <link rel="alternate" href="https://www.scmp.com/tech/big-tech/article/3373603/robotaxis-are-taking-over-chinas-cities-what-are-they-actually-ride"/>
+    <published>2026-11-07T13:30:08Z</published>
+    <updated>2026-11-07T13:30:08Z</updated>
+    <author><name>SCMP Tech</name></author>
+    <summary type="text">The driver’s seat was empty and the steering wheel was turning on its own. Sitting in the back of a Pony.ai robotaxi in Shenzhen, I felt a flicker of nervousness. But as the car glided into traffic, the initial unease gave way to an appreciation of something far less…</summary>
+    <category term="other"/>
+    <category term="china"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:c5d93d90fba339f3</id>
+    <title>Android Auto&apos;da sonsuz arama döngüsü: Gemini çıldırttı!</title>
+    <link rel="alternate" href="https://www.donanimhaber.com/android-auto-da-sonsuz-arama-dongusu-gemini-cildirtti--212609"/>
+    <published>2026-11-07T13:30:00Z</published>
+    <updated>2026-11-07T13:30:00Z</updated>
+    <author><name>DonanimHaber</name></author>
+    <summary type="text">Bazı Android Auto kullanıcıları, kişinin adını belirtmelerine rağmen sistemin sürekli olarak kimi aramak veya kime mesaj göndermek istediğini sorduğunu ifade ediyor. Google, sorunu araştırıyor.</summary>
+    <category term="other"/>
+    <category term="china"/>
+    <category term="turkey"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:70d6c704a9e4c0d6</id>
+    <title>TSMC might do in memory compute for us</title>
+    <link rel="alternate" href="https://www.reddit.com/r/LocalLLaMA/comments/1xq65rl/tsmc_might_do_in_memory_compute_for_us/"/>
+    <published>2026-11-07T13:17:49Z</published>
+    <updated>2026-11-07T13:17:49Z</updated>
+    <author><name>Reddit r/LocalLLaMA (top of day)</name></author>
+    <summary type="text">At the 2025 VLSI Symposium, TSMC presented a memory technology based on oxide semiconductors, using a cell made of one transistor and one capacitor (1T1C). The goal was to integrate this memory into advanced logic chips and give processors a cache with low power and low…</summary>
+    <category term="other"/>
+    <category term="chips"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:493181acc2913aaa</id>
+    <title>Microsoft Edge, yeni sekmede haber ve video akışını yeniledi</title>
+    <link rel="alternate" href="https://www.teknoblog.com/microsoft-edge-yeni-sekme-akisini-yeniledi/"/>
+    <published>2026-11-07T12:58:00Z</published>
+    <updated>2026-11-07T12:58:00Z</updated>
+    <author><name>Teknoblog</name></author>
+    <summary type="text">Microsoft Edge, beş ülkede yeni sekme ve Windows Discover akışına güncel öneriler, daha görünür videolar ve Copilot derlemeleri ekledi. Microsoft Edge, yeni sekmede haber ve video akışını yeniledi haberi ilk önce Teknoblog üzerinde yayımlandı.</summary>
+    <category term="other"/>
+    <category term="turkey"/>
+    <category term="tools"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:3e407aae56c89ae9</id>
+    <title>State propaganda in some Chinese AI models is only &quot;a thin layer&quot; that fine-tuning can strip away</title>
+    <link rel="alternate" href="https://the-decoder.com/state-propaganda-in-some-chinese-ai-models-is-only-a-thin-layer-that-fine-tuning-can-strip-away/"/>
+    <published>2026-11-07T12:32:45Z</published>
+    <updated>2026-11-07T12:32:45Z</updated>
+    <author><name>The Decoder</name></author>
+    <summary type="text">Nous Research retrained Alibaba&apos;s Qwen3.8-27B to produce Arete-27B, largely stripping out its pro-Chinese bias. The propaganda rate dropped from 22 percent to less than one percent, while general capabilities remained intact in tests. The method relied on 53 million tokens of…</summary>
+    <category term="other"/>
+    <category term="china"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:1de98537a9e61441</id>
+    <title>Why a new report on Anthropic automating AI development is alarming researchers</title>
+    <link rel="alternate" href="https://www.theverge.com/ai-artificial-intelligence/1029126/anthropic-metr-report-accelerating-ai-development"/>
+    <published>2026-11-07T12:30:00Z</published>
+    <updated>2026-11-07T12:30:00Z</updated>
+    <author><name>The Verge AI</name></author>
+    <summary type="text">Anthropic is using AI to build more powerful AI. And it appears to be working remarkably well, with the company&apos;s models improving roughly twice as quickly as a year ago, with little indication of slowing down. That&apos;s according to a new report published Thursday by the AI…</summary>
+    <category term="other"/>
+    <category term="research"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:1f836dc05401be5a</id>
+    <title>Obsessive-1.7B: a 1.1 GB web-search subagent</title>
+    <link rel="alternate" href="https://www.reddit.com/r/LocalLLaMA/comments/1xq4yju/obsessive17b_a_11_gb_websearch_subagent/"/>
+    <published>2026-11-07T12:13:29Z</published>
+    <updated>2026-11-07T12:13:29Z</updated>
+    <author><name>Reddit r/LocalLLaMA (top of day)</name></author>
+    <summary type="text">I fine-tuned LFM3-1.7B to do one job: take a factual question, call web_search once, and answer with a short value, a word-for-word quote and the URL. If the results don’t contain the answer, it says “Not found in the search results.” It’s meant to run as a subagent under a…</summary>
+    <category term="other"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:14aea0cad24e7073</id>
+    <title>Honor Robot Phone 2 için 2027’nin ikinci çeyreği öne sürülüyor</title>
+    <link rel="alternate" href="https://www.teknoblog.com/honor-robot-phone-2-icin-2027-one-cikiyor/"/>
+    <published>2026-11-07T12:05:00Z</published>
+    <updated>2026-11-07T12:05:00Z</updated>
+    <author><name>Teknoblog</name></author>
+    <summary type="text">Honor Robot Phone 2 için 2027’nin ikinci çeyreği ve ARRI iş birliği öne sürülüyor, Honor henüz yeni modeli veya satış tarihini açıklamadı. Honor Robot Phone 2 için 2027’nin ikinci çeyreği öne sürülüyor haberi ilk önce Teknoblog üzerinde yayımlandı.</summary>
+    <category term="other"/>
+    <category term="turkey"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:21e0706a7b5760d1</id>
+    <title>Bakan Kacır: BİLGE&apos;nin ilk sürümünü çok yakında geliştiricilerin kullanımına sunacağız</title>
+    <link rel="alternate" href="https://www.aa.com.tr/tr/bilim-teknoloji/bakan-kacir-bilgenin-ilk-surumunu-cok-yakinda-gelistiricilerin-kullanimina-sunacagiz/4115165"/>
+    <published>2026-11-07T12:03:17Z</published>
+    <updated>2026-11-07T12:03:17Z</updated>
+    <author><name>Anadolu Ajansi Bilim-Teknoloji</name></author>
+    <summary type="text">Sanayi ve Teknoloji Bakanı Kacır, Türkçe büyük dil modeli BİLGE&apos;nin ilk sürümünü çok yakında geliştiricilerin kullanımına sunacaklarını açıkladı.</summary>
+    <category term="other"/>
+    <category term="turkey"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:03e6000e3e3313cb</id>
+    <title>Does anyone use None reasoning level for anything ever?</title>
+    <link rel="alternate" href="https://www.reddit.com/r/LocalLLaMA/comments/1xq4pb6/does_anyone_use_none_reasoning_level_for_anything/"/>
+    <published>2026-11-07T11:59:19Z</published>
+    <updated>2026-11-07T11:59:19Z</updated>
+    <author><name>Reddit r/LocalLLaMA (top of day)</name></author>
+    <summary type="text">Sometimes I am tempted to use none reasoning level in agentic tasks to save time, but I am always kinda scared to do so. I have only ever used llm with reasoning and with medium at the lowest. Anybody have a lot of experience using none for reasoning level? Anything I need to…</summary>
+    <category term="other"/>
+    <category term="tools"/>
+    <category term="agents"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:e5c7aecf9ac89a7d</id>
+    <title>RAG Nedir? Kurumsal Veri Kaynaklı Yapay Zeka</title>
+    <link rel="alternate" href="https://www.teknoblog.com/rag-nedir-kurumsal-veri-kaynakli-yapay-zeka/"/>
+    <published>2026-11-07T11:56:05Z</published>
+    <updated>2026-11-07T11:56:05Z</updated>
+    <author><name>Teknoblog</name></author>
+    <summary type="text">Yapay zeka asistanları artık birçok şirketin gündeminde. Ancak genel amaçlı bir yapay zeka modeli, şirketinizin sözleşmelerini, ürün kılavuzlarını veya iç prosedürlerini bilmesi mümkün değildir. Üstelik AI modelleri bilmediği bir konuda bile kendinden emin bir cevap verebilir…</summary>
+    <category term="other"/>
+    <category term="turkey"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:d730ce2a7a315f77</id>
+    <title>Nasscom President Rajesh Nambiar warns AI could make it harder for fresh Indian engineering graduates to find jobs, urging an immediate CS curriculum overhaul (Sayan Chakraborty/Nikkei Asia)</title>
+    <link rel="alternate" href="https://www.techmeme.com/261107/p8#a261107p8"/>
+    <published>2026-11-07T11:40:01Z</published>
+    <updated>2026-11-07T11:40:01Z</updated>
+    <author><name>Techmeme</name></author>
+    <summary type="text">Sayan Chakraborty / Nikkei Asia : Nasscom President Rajesh Nambiar warns AI could make it harder for fresh Indian engineering graduates to find jobs, urging an immediate CS curriculum overhaul — BENGALURU — Recent college graduates in India could struggle to land technology…</summary>
+    <category term="other"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:3142451701d5f0f6</id>
+    <title>Nine AI agents tried autonomous research on open questions from US national labs and none passed the experts&apos; bar</title>
+    <link rel="alternate" href="https://the-decoder.com/nine-ai-agents-tried-autonomous-research-on-open-questions-from-us-national-labs-and-none-passed-the-experts-bar/"/>
+    <published>2026-11-07T11:13:42Z</published>
+    <updated>2026-11-07T11:13:42Z</updated>
+    <author><name>The Decoder</name></author>
+    <summary type="text">The &quot;Into the Unknown&quot; benchmark tasks nine AI agents with tackling open research questions from U.S. national laboratories. None of the 135 submissions meets all requirements. A total of 114 papers fail the integrity check, with agents claiming to have conducted experiments…</summary>
+    <category term="paper"/>
+    <category term="research"/>
+    <category term="tools"/>
+    <category term="agents"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:cd1f9840fc34f55b</id>
+    <title>Apps for Caregivers Get a Dose of AI, but That Might Not Be Enough</title>
+    <link rel="alternate" href="https://www.wired.com/story/apps-for-caregivers-get-a-dose-of-ai-but-that-might-not-be-enough/"/>
+    <published>2026-11-07T11:00:00Z</published>
+    <updated>2026-11-07T11:00:00Z</updated>
+    <author><name>WIRED AI</name></author>
+    <summary type="text">The apps and platforms that help family caregivers manage their loved ones’ needs are becoming more capable, but the broader issue of caregivers’ well-being remains unsolved.</summary>
+    <category term="product"/>
+    <category term="tools"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:4392e68dfcfa99ba</id>
+    <title>Google&apos;s AI detects high blood pressure from a regular smartwatch without a cuff</title>
+    <link rel="alternate" href="https://the-decoder.com/googles-ai-detects-high-blood-pressure-from-a-regular-smartwatch-without-a-cuff/"/>
+    <published>2026-11-07T09:54:09Z</published>
+    <updated>2026-11-07T09:54:09Z</updated>
+    <author><name>The Decoder</name></author>
+    <summary type="text">Google Research built an AI that spots signs of high blood pressure using only the pulse and motion sensors in a standard smartwatch, no cuff needed. In a 196-person study, its 65.8 percent detection rate beat the traditional in-office measurement. The method is already live in…</summary>
+    <category term="other"/>
+    <category term="research"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:3d865336cb50a056</id>
+    <title>OpenAI lands an $11 billion funding round, but has to court dentists for more capital</title>
+    <link rel="alternate" href="https://the-decoder.com/openai-lands-an-11-billion-funding-round-but-has-to-court-dentists-for-more-capital/"/>
+    <published>2026-11-07T09:45:23Z</published>
+    <updated>2026-11-07T09:45:23Z</updated>
+    <author><name>The Decoder</name></author>
+    <summary type="text">OpenAI has secured $11 billion in fresh capital, the first tranche of a round that values the company at $1.25 trillion. The full round could swell to $20 billion. That OpenAI is already turning to wealthy private investors hints at a saturating AI capital market and growing…</summary>
+    <category term="funding"/>
+    <category term="funding"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:86fd351c042e7ce1</id>
+    <title>GitHub不堪重负！OpenAI收购替代品，A社原地自研，马斯克也要搞</title>
+    <link rel="alternate" href="https://www.qbitai.com/2026/11/508449.html"/>
+    <published>2026-11-07T09:38:56Z</published>
+    <updated>2026-11-07T09:38:56Z</updated>
+    <author><name>QbitAI (Chinese)</name></author>
+    <summary type="text">AI写代码太快，基础设施跟不上了</summary>
+    <category term="other"/>
+    <category term="china"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:07d818390a9f9232</id>
+    <title>[Paper] D3D: Decoupled Diffusion Drafting for Asynchronous Speculative Decoding</title>
+    <link rel="alternate" href="https://www.reddit.com/r/LocalLLaMA/comments/1xq1y0y/paper_d3d_decoupled_diffusion_drafting_for/"/>
+    <published>2026-11-07T09:00:23Z</published>
+    <updated>2026-11-07T09:00:23Z</updated>
+    <author><name>Reddit r/LocalLLaMA (top of day)</name></author>
+    <summary type="text">Target-conditioned diffusion drafters predict candidate tokens in parallel, yet each new block must wait for updated target-model hidden states. This forces drafting and verification to run sequentially, limiting speedup even though each block is generated in one pass. We…</summary>
+    <category term="paper"/>
+    <category term="research"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:70e3975ad38f3991</id>
+    <title>Nevşehir&apos;de güvenlik güçlerine destek olacak &quot;robot köpek&quot; geliştirildi</title>
+    <link rel="alternate" href="https://www.aa.com.tr/tr/bilim-teknoloji/nevsehirde-guvenlik-guclerine-destek-olacak-robot-kopek-gelistirildi/4114994"/>
+    <published>2026-11-07T08:36:16Z</published>
+    <updated>2026-11-07T08:36:16Z</updated>
+    <author><name>Anadolu Ajansi Bilim-Teknoloji</name></author>
+    <summary type="text">Nevşehir&apos;de, 15 gaz çeşidini tespit edip lidar ve radar sensörleriyle çevresini 360 derece algılayabilen &quot;robot köpek&quot; geliştirildi.</summary>
+    <category term="other"/>
+    <category term="turkey"/>
+    <category term="safety"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:ebe42666b83e26e3</id>
+    <title>Yapay zeka ajanlarının yetki sınırları hukuki açıdan mercek altında</title>
+    <link rel="alternate" href="https://www.aa.com.tr/tr/bilim-teknoloji/yapay-zeka-ajanlarinin-yetki-sinirlari-hukuki-acidan-mercek-altinda/4114965"/>
+    <published>2026-11-07T08:13:56Z</published>
+    <updated>2026-11-07T08:13:56Z</updated>
+    <author><name>Anadolu Ajansi Bilim-Teknoloji</name></author>
+    <summary type="text">Siber güvenlikten veri analizine kadar birçok alanda bağımsız işlem yapan yapay zeka ajanlarının kontrolden çıkma riski, geliştiriciler ile kullanıcılar arasındaki hukuki sınırların yeniden tanımlanmasını zorunlu kılıyor.</summary>
+    <category term="other"/>
+    <category term="turkey"/>
+    <category term="safety"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:1c90c6d524377cd5</id>
+    <title>OpenAI新融资到账110亿美元，不及原计划一半</title>
+    <link rel="alternate" href="https://www.qbitai.com/2026/11/508344.html"/>
+    <published>2026-11-07T08:11:25Z</published>
+    <updated>2026-11-07T08:11:25Z</updated>
+    <author><name>QbitAI (Chinese)</name></author>
+    <summary type="text">融资缩水，硅谷投资人也谨慎了</summary>
+    <category term="other"/>
+    <category term="china"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:927940a6dc372ceb</id>
+    <title>为了去AI味，人类开始主动写烂文章了……</title>
+    <link rel="alternate" href="https://www.qbitai.com/2026/11/508330.html"/>
+    <published>2026-11-07T07:59:28Z</published>
+    <updated>2026-11-07T07:59:28Z</updated>
+    <author><name>QbitAI (Chinese)</name></author>
+    <summary type="text">需要说明的是，这并不意味着不会说人话就一定是人，也不意味着说人话的就一定不是AI.......</summary>
+    <category term="other"/>
+    <category term="china"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:0428c2bc1908888b</id>
+    <title>HONOR Robot Phone 2 Beklenenden Erken Geliyor!</title>
+    <link rel="alternate" href="https://www.technopat.net/2026/11/07/honor-robot-phone-2-beklenenden-erken-geliyor/"/>
+    <published>2026-11-07T07:45:00Z</published>
+    <updated>2026-11-07T07:45:00Z</updated>
+    <author><name>Technopat</name></author>
+    <summary type="text">HONOR, hareketli kamera sistemiyle dikkat çeken Robot Phone modelinin ikinci nesli üzerinde çalışıyor. Henüz ilk modelin tanıtılmasının üzerinden üç ay geçmeden ortaya çıkan yeni bilgiler, HONOR Robot Phone 2’nin 2027’nin ikinci çeyreğinde piyasaya çıkabileceğini gösteriyor…</summary>
+    <category term="other"/>
+    <category term="turkey"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:ec1204ee1d060630</id>
+    <title>How differences in economics, public policy, and cultural patterns could explain greater pessimism about AI in the West than in Asia and emerging economies (Gillian Tett/Financial Times)</title>
+    <link rel="alternate" href="https://www.techmeme.com/261107/p7#a261107p7"/>
+    <published>2026-11-07T07:40:01Z</published>
+    <updated>2026-11-07T07:40:01Z</updated>
+    <author><name>Techmeme</name></author>
+    <summary type="text">Gillian Tett / Financial Times : How differences in economics, public policy, and cultural patterns could explain greater pessimism about AI in the West than in Asia and emerging economies — Voter hostility to Big Tech helped shape the US midterms, and similar fears are…</summary>
+    <category term="other"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:b5d559b96a47bf05</id>
+    <title>King Slide, yapay zeka sunucu raylarında lider</title>
+    <link rel="alternate" href="https://shiftdelete.net/king-slide-yapay-zeka-sunucu-rayi-pazari"/>
+    <published>2026-11-07T07:30:00Z</published>
+    <updated>2026-11-07T07:30:00Z</updated>
+    <author><name>ShiftDelete.Net</name></author>
+    <summary type="text">Mutfak çekmecesi rayları üreten Tayvanlı King Slide, yapay zeka sunucu raylarında pazarın yüzde 70 ila 90&apos;ını elinde tutuyor. Şirketin brüt marjı yüzde 87,4&apos;e ulaştı.</summary>
+    <category term="other"/>
+    <category term="turkey"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:6cbbc13345f53473</id>
+    <title>Elon Musk fişi çekti: Cybertruck üretimi duruyor!</title>
+    <link rel="alternate" href="https://www.technopat.net/2026/11/07/elon-musk-fisi-cekti-cybertruck-uretimi-duruyor/"/>
+    <published>2026-11-07T07:12:36Z</published>
+    <updated>2026-11-07T07:12:36Z</updated>
+    <author><name>Technopat</name></author>
+    <summary type="text">Tesla, beklenen satış rakamlarına ulaşamayan elektrikli pick-up modeli Cybertruck’ın Teksas’taki üretimini 2027 yılının ortalarında durdurmayı planlıyor. Elon Musk, fabrikadaki üretim kapasitesinin otonom sürüş teknolojisine sahip Cybercab robotaksilere ayrılacağını…</summary>
+    <category term="other"/>
+    <category term="turkey"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:a2170614856ebd5c</id>
+    <title>China Seeks Comment on Robot Identification Codes Covering All Robot Categories</title>
+    <link rel="alternate" href="https://pandaily.com/miit-draft-robot-product-identification-codes-all-categories-lifecycle-traceability"/>
+    <published>2026-11-07T07:07:16Z</published>
+    <updated>2026-11-07T07:07:16Z</updated>
+    <author><name>Pandaily</name></author>
+    <summary type="text">MIIT&apos;s draft proposes a unique code for each robot across industrial, service and special-purpose categories. Public comments are open through December 5.</summary>
+    <category term="other"/>
+    <category term="china"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:7e285f10b1dd8a28</id>
+    <title>DEEP Robotics Launches X50 Quadruped With a Claimed 50-Kilogram Working Payload</title>
+    <link rel="alternate" href="https://pandaily.com/deep-robotics-x50-heavy-duty-quadruped-50kg-payload-inspection-firefighting"/>
+    <published>2026-11-07T07:06:58Z</published>
+    <updated>2026-11-07T07:06:58Z</updated>
+    <author><name>Pandaily</name></author>
+    <summary type="text">DEEP Robotics says X50 can carry 50 kilograms at 3 m/s for over two kilometers, targeting industrial inspection, equipment transport and emergency response.</summary>
+    <category term="product"/>
+    <category term="china"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:6c9dcfac8f790714</id>
+    <title>OpenCSG Releases Agentic-27B for Tool Workflows, With Commercial Use Requiring Permission</title>
+    <link rel="alternate" href="https://pandaily.com/opencsg-agentic-27b-tool-workflows-single-gpu-commercial-license"/>
+    <published>2026-11-07T07:06:50Z</published>
+    <updated>2026-11-07T07:06:50Z</updated>
+    <author><name>Pandaily</name></author>
+    <summary type="text">OpenCSG&apos;s 27B agent model targets tool selection and failure recovery, with single-A800 test results. Its license requires permission for commercial use.</summary>
+    <category term="model-release"/>
+    <category term="llm"/>
+    <category term="china"/>
+    <category term="tools"/>
+    <category term="agents"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:11ef7c96853af3b9</id>
+    <title>Huawei Releases Standalone HarmonyOS PC Assistant With Office Task Automation</title>
+    <link rel="alternate" href="https://pandaily.com/huawei-harmonyos-pc-standalone-assistant-work-office-agent-release"/>
+    <published>2026-11-07T07:06:42Z</published>
+    <updated>2026-11-07T07:06:42Z</updated>
+    <author><name>Pandaily</name></author>
+    <summary type="text">Huawei&apos;s standalone HarmonyOS PC assistant adds an official office-agent release with cloud or local execution, phone task dispatch and AI-point membership billing.</summary>
+    <category term="product"/>
+    <category term="china"/>
+    <category term="tools"/>
+    <category term="agents"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:a8fc84dcded88401</id>
+    <title>Censys finds 800+ publicly exposed copies of ARTEX, a Chinese-made, AI-powered, open-source penetration testing tool linked to several cyberattacks since July (Zack Whittaker/TechCrunch)</title>
+    <link rel="alternate" href="https://www.techmeme.com/261107/p5#a261107p5"/>
+    <published>2026-11-07T07:01:02Z</published>
+    <updated>2026-11-07T07:01:02Z</updated>
+    <author><name>Techmeme</name></author>
+    <summary type="text">Zack Whittaker / TechCrunch : Censys finds 800+ publicly exposed copies of ARTEX, a Chinese-made, AI-powered, open-source penetration testing tool linked to several cyberattacks since July — Security researchers have discovered hundreds of copies of a Chinese-made AI hacking…</summary>
+    <category term="tool"/>
+    <category term="china"/>
+    <category term="open-weights"/>
+    <category term="research"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:4b60a31db0ce0561</id>
+    <title>Beijing-based Sand.ai, an AI startup specializing in video generation, raised a $200M Series A+, bringing its total funding over the past 10 months to $300M (Eudora Wang/DealStreetAsia)</title>
+    <link rel="alternate" href="https://www.techmeme.com/261107/p1#a261107p1"/>
+    <published>2026-11-07T05:45:02Z</published>
+    <updated>2026-11-07T05:45:02Z</updated>
+    <author><name>Techmeme</name></author>
+    <summary type="text">Eudora Wang / DealStreetAsia : Beijing-based Sand.ai, an AI startup specializing in video generation, raised a $200M Series A+, bringing its total funding over the past 10 months to $300M — Sand.ai, a Chinese artificial intelligence (AI) startup specialising in video…</summary>
+    <category term="funding"/>
+    <category term="china"/>
+    <category term="funding"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:4a3451625ee463dc</id>
+    <title>抢跑DeepSeek！硅谷华人把下一代Agent Harness造出来了！？</title>
+    <link rel="alternate" href="https://www.qbitai.com/2026/11/508264.html"/>
+    <published>2026-11-07T05:01:17Z</published>
+    <updated>2026-11-07T05:01:17Z</updated>
+    <author><name>QbitAI (Chinese)</name></author>
+    <summary type="text">苦单Session久矣，两大Agent玩家不谋而合。</summary>
+    <category term="other"/>
+    <category term="china"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:ea7203d76aae33f0</id>
+    <title>OpenAI veri merkezlerinin elektriğini ödeyecek</title>
+    <link rel="alternate" href="https://shiftdelete.net/openai-elektrik-faturasi-veri-merkezi-taahhut"/>
+    <published>2026-11-07T05:00:00Z</published>
+    <updated>2026-11-07T05:00:00Z</updated>
+    <author><name>ShiftDelete.Net</name></author>
+    <summary type="text">OpenAI, veri merkezi kurduğu bölgelerdeki halka yönelik Ulusal Toplum Sözleşmesi&apos;ni duyurdu. Şirket, OpenAI elektrik faturası dahil enerji maliyetlerini üstlenecek.</summary>
+    <category term="other"/>
+    <category term="turkey"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:25a6dfec2ac419ba</id>
+    <title>Another benchmark has hit the quant war</title>
+    <link rel="alternate" href="https://www.reddit.com/r/LocalLLaMA/comments/1xpxfob/another_benchmark_has_hit_the_quant_war/"/>
+    <published>2026-11-07T04:28:19Z</published>
+    <updated>2026-11-07T04:28:19Z</updated>
+    <author><name>Reddit r/LocalLLaMA (top of day)</name></author>
+    <summary type="text">If you have not been following ISTA-DASLab the creators of the gsq-rco quants have received some criticism from unsloth regarding the inabilty to reproduce the benchmark numbers that ISTA-DASLab have quoted. The methodology used to produce their benchmark numbers has not been…</summary>
+    <category term="other"/>
+    <category term="research"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:6f7557a03f7940e2</id>
+    <title>Aina’nın ekranlı akıllı yüzüğü yapay zeka ajanlarını yönetiyor</title>
+    <link rel="alternate" href="https://www.teknoblog.com/aina-ai-ring-ekran-mikrofon/"/>
+    <published>2026-11-07T04:26:00Z</published>
+    <updated>2026-11-07T04:26:00Z</updated>
+    <author><name>Teknoblog</name></author>
+    <summary type="text">Aina AI Ring ekran, mikrofon ve fiziksel kontrolle yapay zeka ajanlarına erişim sunuyor, sınırlı ön sipariş fiyatı 399 dolardan başlıyor. Aina’nın ekranlı akıllı yüzüğü yapay zeka ajanlarını yönetiyor haberi ilk önce Teknoblog üzerinde yayımlandı.</summary>
+    <category term="other"/>
+    <category term="turkey"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:80e768f730e8f681</id>
+    <title>Good Luck Getting a Cheap GPU. AMD Is a &apos;Data Center First Company,&apos; CEO Says</title>
+    <link rel="alternate" href="https://www.reddit.com/r/LocalLLaMA/comments/1xpx0on/good_luck_getting_a_cheap_gpu_amd_is_a_data/"/>
+    <published>2026-11-07T04:05:32Z</published>
+    <updated>2026-11-07T04:05:32Z</updated>
+    <author><name>Reddit r/LocalLLaMA (top of day)</name></author>
+    <summary type="text">they are all the same and we ... are too emotional! and yes we already knew that. submitted by /u/ab2377 [link] [comments]</summary>
+    <category term="other"/>
+    <category term="chips"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:03c7501ffb5c1a1b</id>
+    <title>OpenAI, 1,25 trilyon dolar değerle para topladı</title>
+    <link rel="alternate" href="https://shiftdelete.net/openai-yatirim-turu-1-25-trilyon-dolar-deger"/>
+    <published>2026-11-07T04:00:00Z</published>
+    <updated>2026-11-07T04:00:00Z</updated>
+    <author><name>ShiftDelete.Net</name></author>
+    <summary type="text">OpenAI yatırım turunda şirketi 1,25 trilyon dolar değerleyen yeni finansmanla şimdiye kadar 11 milyar dolar toplandığı iddia edildi. Tur henüz kapanmadı.</summary>
+    <category term="other"/>
+    <category term="turkey"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:726d2403b1f10428</id>
+    <title>AGENTS.MD，危险危险危险！！！</title>
+    <link rel="alternate" href="https://www.qbitai.com/2026/11/508244.html"/>
+    <published>2026-11-07T03:43:55Z</published>
+    <updated>2026-11-07T03:43:55Z</updated>
+    <author><name>QbitAI (Chinese)</name></author>
+    <summary type="text">全新的电脑病毒</summary>
+    <category term="other"/>
+    <category term="china"/>
+    <category term="tools"/>
+    <category term="agents"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:6dbe4be1a2c3c0e1</id>
+    <title>llama.cpp release b12182</title>
+    <link rel="alternate" href="https://github.com/ggml-org/llama.cpp/releases/tag/b12182"/>
+    <published>2026-11-07T03:35:00Z</published>
+    <updated>2026-11-07T03:35:00Z</updated>
+    <author><name>llama.cpp releases</name></author>
+    <summary type="text">meta : raise the compute view limit for buffers with few tensors ( #31447 ) ggml-backend-meta : minimum number of compute views per buffer Assisted-by: Claude Opus 5.5 tests : revert the deepseek41 test model to 6 layers Assisted-by: Claude Opus 5.5 Website: https://llama.app…</summary>
+    <category term="tool"/>
+    <category term="open-weights"/>
+    <category term="tools"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:5443ed91e5d772e1</id>
+    <title>浙大00后博士生再交卷！把十几种物理要素装进一个世界模型｜华为昇腾原生</title>
+    <link rel="alternate" href="https://www.qbitai.com/2026/11/508236.html"/>
+    <published>2026-11-07T03:31:44Z</published>
+    <updated>2026-11-07T03:31:44Z</updated>
+    <author><name>QbitAI (Chinese)</name></author>
+    <summary type="text">中国版cosmos再交卷</summary>
+    <category term="other"/>
+    <category term="china"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:7aab332305802921</id>
+    <title>Jeff Dean李飞飞最新对谈：全是RSI非共识</title>
+    <link rel="alternate" href="https://www.qbitai.com/2026/11/508196.html"/>
+    <published>2026-11-07T03:23:29Z</published>
+    <updated>2026-11-07T03:23:29Z</updated>
+    <author><name>QbitAI (Chinese)</name></author>
+    <summary type="text">RSI不可能无限快</summary>
+    <category term="other"/>
+    <category term="china"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:d62fbfe2fc04f838</id>
+    <title>[AINews] Anthropic IPO: Whither Now?</title>
+    <link rel="alternate" href="https://latent.space/p/ainews-anthropic-ipo-whither-now/"/>
+    <published>2026-11-07T03:04:53Z</published>
+    <updated>2026-11-07T03:04:53Z</updated>
+    <author><name>Latent Space</name></author>
+    <summary type="text">November 6, 2026 — ARC Prize tests Inkling 2 Small, and Thinking Machines explains how it caught early checkpoints bypassing guardrails.</summary>
+    <category term="funding"/>
+    <category term="funding"/>
+    <category term="safety"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:f6fe9341e1d57f8b</id>
+    <title>Harness Leaderboard - Kimi Code, Hermes, Pi, Claude Code, Codex, and Others Were Benchmarked Against Terminal Bench 2.1 &amp; Deep SWE 1.1</title>
+    <link rel="alternate" href="https://www.reddit.com/r/LocalLLaMA/comments/1xpvfx8/harness_leaderboard_kimi_code_hermes_pi_claude/"/>
+    <published>2026-11-07T02:41:59Z</published>
+    <updated>2026-11-07T02:41:59Z</updated>
+    <author><name>Reddit r/LocalLLaMA (top of day)</name></author>
+    <summary type="text">submitted by /u/Izento [link] [comments]</summary>
+    <category term="other"/>
+    <category term="china"/>
+    <category term="tools"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:fe6e76edcc2c2721</id>
+    <title>Unitree and Star Plus Legend Launch Limited-Edition UNI-DOGGIE Robot at 43,900 Yuan</title>
+    <link rel="alternate" href="https://pandaily.com/unitree-star-plus-legend-uni-doggie-collectible-robot-dog"/>
+    <published>2026-11-07T02:01:23Z</published>
+    <updated>2026-11-07T02:01:23Z</updated>
+    <author><name>Pandaily</name></author>
+    <summary type="text">UNI-DOGGIE debuts at CIIE with a 2,000-unit worldwide limit. Launch reports say distributor ADATA purchased 1,000 units; that is not verified consumer sell-through.</summary>
+    <category term="product"/>
+    <category term="china"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:f94bb101fed3a058</id>
+    <title>NearLink Alliance Publishes Embodied AI Connectivity Blue Book With 30-Plus Contributors</title>
+    <link rel="alternate" href="https://pandaily.com/nearlink-alliance-embodied-ai-short-range-connectivity-blue-book"/>
+    <published>2026-11-07T01:58:47Z</published>
+    <updated>2026-11-07T01:58:47Z</updated>
+    <author><name>Pandaily</name></author>
+    <summary type="text">More than 30 contributors helped define NearLink connectivity requirements for robot internals, multi-device collaboration and device-edge-cloud coordination.</summary>
+    <category term="other"/>
+    <category term="china"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:b78afb628218a420</id>
+    <title>Moore Threads Adds Day-Zero Kimi K3.1 Pro Support on MTT S5000 GPUs</title>
+    <link rel="alternate" href="https://pandaily.com/moore-threads-mtt-s5000-musa-day-zero-kimi-k3-1-pro-inference"/>
+    <published>2026-11-07T01:57:30Z</published>
+    <updated>2026-11-07T01:57:30Z</updated>
+    <author><name>Pandaily</name></author>
+    <summary type="text">Moore Threads says MTT S5000 and MUSA can load and serve Kimi K3.1 Pro with text and image inference, including sparse-attention and online weight-conversion support.</summary>
+    <category term="other"/>
+    <category term="china"/>
+    <category term="chips"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:77bf41c179950506</id>
+    <title>Meta introduces specialized versions of its existing models, trained using Muse Wonder, bringing Active Memory and Active Focus to all Muse and Meta AI users (Frederic Lardinois/The New Stack)</title>
+    <link rel="alternate" href="https://www.techmeme.com/261106/p28#a261106p28"/>
+    <published>2026-11-07T01:50:00Z</published>
+    <updated>2026-11-07T01:50:00Z</updated>
+    <author><name>Techmeme</name></author>
+    <summary type="text">Frederic Lardinois / The New Stack : Meta introduces specialized versions of its existing models, trained using Muse Wonder, bringing Active Memory and Active Focus to all Muse and Meta AI users — Starting on Friday, everyone using Meta&apos;s Muse agent and Meta AI gets new models…</summary>
+    <category term="model-release"/>
+    <category term="llm"/>
+    <category term="tools"/>
+    <category term="agents"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:c2107a5a7cf60537</id>
+    <title>Crusoe sells troubled Wyoming data center project to Google</title>
+    <link rel="alternate" href="https://techcrunch.com/2026/11/06/crusoe-sells-troubled-wyoming-data-center-project-to-google/"/>
+    <published>2026-11-07T01:40:28Z</published>
+    <updated>2026-11-07T01:40:28Z</updated>
+    <author><name>TechCrunch AI</name></author>
+    <summary type="text">The deal highlights the challenges of developing massive AI data centers.</summary>
+    <category term="other"/>
+    <category term="chips"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:2c1e88f1adc39974</id>
+    <title>llama.cpp release b12181: hexagon: fuse post-norm residual add into RMS_NORM_MUL (#31822)</title>
+    <link rel="alternate" href="https://github.com/ggml-org/llama.cpp/releases/tag/b12181"/>
+    <published>2026-11-07T00:06:59Z</published>
+    <updated>2026-11-07T00:06:59Z</updated>
+    <author><name>llama.cpp releases</name></author>
+    <summary type="text">hexagon: fuse post-norm residual add into RMS_NORM_MUL hex-fusion: refactor RMS_NORM fusion and add dedicated RMS_NORM_MUL_ADD opcode Improves performance by keeping things in HVX registers. Also simplifies overall fusion logic and logging. Co-authored-by: Max Krasnyansky…</summary>
+    <category term="tool"/>
+    <category term="open-weights"/>
+    <category term="tools"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:5287355c1060331a</id>
+    <title>OpenAI valued at $1.25 trillion, as rival Anthropic nears its IPO</title>
+    <link rel="alternate" href="https://www.theverge.com/ai-artificial-intelligence/1029380/openai-1-25-trillion-investment-valuation"/>
+    <published>2026-11-06T23:46:18Z</published>
+    <updated>2026-11-06T23:46:18Z</updated>
+    <author><name>The Verge AI</name></author>
+    <summary type="text">OpenAI is now valued at $1.25 trillion in a new round of funding that has raised another $11 billion, according to Bloomberg. That would make it one of the world&apos;s most valuable companies, not long after raising $122 billion from investors in March at a valuation of $852…</summary>
+    <category term="funding"/>
+    <category term="funding"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:0ec4cf12020c4d40</id>
+    <title>Outbound SIP calling is now available to all organizations</title>
+    <link rel="alternate" href="https://developers.openai.com/api/docs/guides/voice-sip"/>
+    <published>2026-11-06T23:03:55Z</published>
+    <updated>2026-11-06T23:03:55Z</updated>
+    <author><name>Hacker News: OpenAI (50+ points)</name></author>
+    <summary type="text">68 points · 57 comments on Hacker News</summary>
+    <category term="product"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:9a83398f968bc6a7</id>
+    <title>Six Pallets of NVIDIA Hardware Worth $11.4 Million Stolen on the Way to Texas</title>
+    <link rel="alternate" href="https://www.reddit.com/r/LocalLLaMA/comments/1xpqx1p/six_pallets_of_nvidia_hardware_worth_114_million/"/>
+    <published>2026-11-06T23:03:21Z</published>
+    <updated>2026-11-06T23:03:21Z</updated>
+    <author><name>Reddit r/LocalLLaMA (top of day)</name></author>
+    <summary type="text">submitted by /u/chemist_slime [link] [comments]</summary>
+    <category term="other"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:ddaec7e990480cb0</id>
+    <title>China reportedly recruited AI exec to spy on Jensen Huang</title>
+    <link rel="alternate" href="https://www.theverge.com/tech/1029338/nvidia-ceo-jensen-huang-china-spy"/>
+    <published>2026-11-06T23:00:44Z</published>
+    <updated>2026-11-06T23:00:44Z</updated>
+    <author><name>The Verge AI</name></author>
+    <summary type="text">China&apos;s intelligence agency recruited Megaspeed executive Alice Huang to spy on Nvidia CEO Jensen Huang, according to The New York Times. The Ministry of State Security (MSS) enlisted her to glean information about American AI chips and &quot;potentially influence the company to…</summary>
+    <category term="other"/>
+    <category term="china"/>
+    <category term="chips"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:118369de89f061c4</id>
+    <title>OpenAI reportedly raises an additional $11 billion at a $1.25 trillion valuation</title>
+    <link rel="alternate" href="https://techcrunch.com/2026/11/06/openai-reportedly-raises-an-additional-11-billion-at-a-1-25-trillion-valuation/"/>
+    <published>2026-11-06T22:53:46Z</published>
+    <updated>2026-11-06T22:53:46Z</updated>
+    <author><name>TechCrunch AI</name></author>
+    <summary type="text">OpenAI has reportedly raised an additional $11 billion as part of a funding round that hasn&apos;t closed yet but is expected to in the coming weeks.</summary>
+    <category term="funding"/>
+    <category term="funding"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:54d4f685c5e08499</id>
+    <title>ChatGPT silently passes data between connectors and the bounty wants an ID card</title>
+    <link rel="alternate" href="https://community.openai.com/t/security-follow-up-tool-call-silently-routed-to-a-different-connector/1413053"/>
+    <published>2026-11-06T22:50:43Z</published>
+    <updated>2026-11-06T22:50:43Z</updated>
+    <author><name>Hacker News: OpenAI (50+ points)</name></author>
+    <summary type="text">92 points · 38 comments on Hacker News</summary>
+    <category term="other"/>
+    <category term="tools"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:190596d373bb5713</id>
+    <title>Scylla&apos;s Band v4, open source TTS with code to run everywhere</title>
+    <link rel="alternate" href="https://www.reddit.com/r/LocalLLaMA/comments/1xpq3l0/scyllas_band_v4_open_source_tts_with_code_to_run/"/>
+    <published>2026-11-06T22:26:59Z</published>
+    <updated>2026-11-06T22:26:59Z</updated>
+    <author><name>Reddit r/LocalLLaMA (top of day)</name></author>
+    <summary type="text">This has been a long one for me: almost a year as a solo project, learning how to build a TTS model from the ground up. I wanted something fast, small enough to run on a phone, multilingual, and (the part I cared about most) able to do something a little different from the…</summary>
+    <category term="tool"/>
+    <category term="open-weights"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:ff90332934af180e</id>
+    <title>I&apos;m going to try to turn a 4B model into a genuinely useful coding agent that can compete with much larger models</title>
+    <link rel="alternate" href="https://www.reddit.com/r/LocalLLaMA/comments/1xppw37/im_going_to_try_to_turn_a_4b_model_into_a/"/>
+    <published>2026-11-06T22:17:58Z</published>
+    <updated>2026-11-06T22:17:58Z</updated>
+    <author><name>Reddit r/LocalLLaMA (top of day)</name></author>
+    <summary type="text">After releasing 3D Coder and GLB 3D Coder , I realized I should have involved the community earlier. Your feedback directly influenced the second model and could have saved me some additional training runs. This time, I&apos;d like to discuss the idea with the community before…</summary>
+    <category term="other"/>
+    <category term="tools"/>
+    <category term="agents"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:77706a1e178f182f</id>
+    <title>Some GPU prices are dropping</title>
+    <link rel="alternate" href="https://www.reddit.com/r/LocalLLaMA/comments/1xppbrr/some_gpu_prices_are_dropping/"/>
+    <published>2026-11-06T21:54:19Z</published>
+    <updated>2026-11-06T21:54:19Z</updated>
+    <author><name>Reddit r/LocalLLaMA (top of day)</name></author>
+    <summary type="text">Some context: RTX 6000 cards hit a peak price of 18k and were sold out in many places even at that price. The MaxQ and Workstation are different versions of the card (usually priced the same, but now their prices are diverging) RTX 6000 MaxQ has been 14k for a month at…</summary>
+    <category term="other"/>
+    <category term="chips"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:1f51588e06ccf215</id>
+    <title>We are in the golden age of Local LLM</title>
+    <link rel="alternate" href="https://www.reddit.com/r/LocalLLaMA/comments/1xppbht/we_are_in_the_golden_age_of_local_llm/"/>
+    <published>2026-11-06T21:54:01Z</published>
+    <updated>2026-11-06T21:54:01Z</updated>
+    <author><name>Reddit r/LocalLLaMA (top of day)</name></author>
+    <summary type="text">Q4 of 2026 has been astronomical for local LLM. Qwen’s 27B and Flash-Next models are pushing local AI further. and most importantly the upcoming Qwen 4 release. We’re getting closer to having frontier-level capabilities in models that WE can run. Break down : Unsloth’s new…</summary>
+    <category term="other"/>
+    <category term="china"/>
+    <category term="tools"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:55e4ac1c19661a29</id>
+    <title>Sources: US intelligence concluded that Megaspeed executive Alice Huang was recruited by China&apos;s top spy agency MSS to collect intelligence on Jensen Huang (New York Times)</title>
+    <link rel="alternate" href="https://www.techmeme.com/261106/p24#a261106p24"/>
+    <published>2026-11-06T21:46:41Z</published>
+    <updated>2026-11-06T21:46:41Z</updated>
+    <author><name>Techmeme</name></author>
+    <summary type="text">New York Times : Sources: US intelligence concluded that Megaspeed executive Alice Huang was recruited by China&apos;s top spy agency MSS to collect intelligence on Jensen Huang — U.S. intelligence concluded that Alice Huang, a Chinese business executive who developed a close…</summary>
+    <category term="other"/>
+    <category term="china"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:6646958214730c45</id>
+    <title>Filing: Google spent roughly $548M to buy around 3M shares of Qualcomm, which is pushing into serving the AI data center market (Ryan Barwick/The Information)</title>
+    <link rel="alternate" href="https://www.techmeme.com/261106/p23#a261106p23"/>
+    <published>2026-11-06T21:35:00Z</published>
+    <updated>2026-11-06T21:35:00Z</updated>
+    <author><name>Techmeme</name></author>
+    <summary type="text">Ryan Barwick / The Information : Filing: Google spent roughly $548M to buy around 3M shares of Qualcomm, which is pushing into serving the AI data center market — Google&apos;s investment arm Google Ventures has acquired nearly 3 million shares of the chip maker Qualcomm, as a…</summary>
+    <category term="funding"/>
+    <category term="chips"/>
+    <category term="funding"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:cf30e859b3773ba2</id>
+    <title>Sources: OpenAI has closed on new funding of roughly $11B at a $1.25T valuation; the round could increase to as much as $20B in total (Bloomberg)</title>
+    <link rel="alternate" href="https://www.techmeme.com/261106/p22#a261106p22"/>
+    <published>2026-11-06T21:15:00Z</published>
+    <updated>2026-11-06T21:15:00Z</updated>
+    <author><name>Techmeme</name></author>
+    <summary type="text">Bloomberg : Sources: OpenAI has closed on new funding of roughly $11B at a $1.25T valuation; the round could increase to as much as $20B in total — OpenAI has closed on new funding of roughly $11 billion, the initial part of a round that values the company at $1.25 trillion…</summary>
+    <category term="funding"/>
+    <category term="funding"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:f31245a34fcec8a7</id>
+    <title>Sources: Anthropic is continuing with plans to list before the Thanksgiving holiday this month, expecting to raise $80B-$100B at a valuation of $1.25T to $1.75T (Financial Times)</title>
+    <link rel="alternate" href="https://www.techmeme.com/261106/p21#a261106p21"/>
+    <published>2026-11-06T21:12:51Z</published>
+    <updated>2026-11-06T21:12:51Z</updated>
+    <author><name>Techmeme</name></author>
+    <summary type="text">Financial Times : Sources: Anthropic is continuing with plans to list before the Thanksgiving holiday this month, expecting to raise $80B-$100B at a valuation of $1.25T to $1.75T — Claude-maker intends to list before Thanksgiving despite brutal tech rout — Anthropic is pressing…</summary>
+    <category term="funding"/>
+    <category term="funding"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:8eff46737e54301c</id>
+    <title>ComfyUI v0.44.2</title>
+    <link rel="alternate" href="https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.44.2"/>
+    <published>2026-11-06T20:37:56Z</published>
+    <updated>2026-11-06T20:37:56Z</updated>
+    <author><name>ComfyUI releases</name></author>
+    <category term="tool"/>
+    <category term="open-weights"/>
+    <category term="tools"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:7c819ade9d4b3459</id>
+    <title>We are cooked. My QFN 3.8 NVFP4 just drew a dog freehand in MS Paint (using new Open WebUI 0.13.0 and Open Terminal 0.17.2)</title>
+    <link rel="alternate" href="https://www.reddit.com/r/LocalLLaMA/comments/1xpmvf2/we_are_cooked_my_qfn_38_nvfp4_just_drew_a_dog/"/>
+    <published>2026-11-06T20:12:07Z</published>
+    <updated>2026-11-06T20:12:07Z</updated>
+    <author><name>Reddit r/LocalLLaMA (top of day)</name></author>
+    <summary type="text">Forget stupid pelican on a bike SVG bullshit. Forget cheating by drawing using Python code. I just loaded up QFN 3.8 in the new Open WebUI 0.13.0 and it just said “hold my beer” and started drawing with the friggin’ mouse coordinates inside a VM. I’m going to print this and…</summary>
+    <category term="other"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:bbb82f8d1e117920</id>
+    <title>Alphabet&apos;ten Qualcomm&apos;a 548 milyon dolar yatırım</title>
+    <link rel="alternate" href="https://shiftdelete.net/alphabet-qualcomm-548-milyon-dolar-yatirim"/>
+    <published>2026-11-06T20:10:42Z</published>
+    <updated>2026-11-06T20:10:42Z</updated>
+    <author><name>ShiftDelete.Net</name></author>
+    <summary type="text">Alphabet&apos;in, Qualcomm&apos;un yapay zeka veri merkezi atılımını desteklemek için şirkete yaklaşık 548 milyon dolar yatırdığı bildirildi.</summary>
+    <category term="funding"/>
+    <category term="turkey"/>
+    <category term="funding"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:f5eee778bf79baeb</id>
+    <title>All the latest updates on AI data centers</title>
+    <link rel="alternate" href="https://www.theverge.com/ai-artificial-intelligence/902546/data-centers-ai-energy-power-grids-controversy"/>
+    <published>2026-11-06T20:02:22Z</published>
+    <updated>2026-11-06T20:02:22Z</updated>
+    <author><name>The Verge AI</name></author>
+    <summary type="text">Massive new data centers are the physical foundation for tech companies’ hopes and dreams for AI. But the rush to expand warehouses full of energy-hungry servers has also kicked up fights across the world over their impact on power grids, utility bills, nearby communities, and…</summary>
+    <category term="other"/>
+    <category term="chips"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:0feab7e92e6c9f88</id>
+    <title>NousResearch/Arete-27B · Hugging Face (Qwen finetune)</title>
+    <link rel="alternate" href="https://www.reddit.com/r/LocalLLaMA/comments/1xpmj33/nousresearcharete27b_hugging_face_qwen_finetune/"/>
+    <published>2026-11-06T19:58:47Z</published>
+    <updated>2026-11-06T19:58:47Z</updated>
+    <author><name>Reddit r/LocalLLaMA (top of day)</name></author>
+    <summary type="text">https://huggingface.co/bartowski/NousResearch_Arete-27B-GGUF from NousResearch: Arete-27B We post-trained over Alibaba&apos;s Qwen3.8-27B to reinforce western values on a Chinese-trained model. We call this new model Arete-27B. Open source models give labs the raw tools to mold…</summary>
+    <category term="other"/>
+    <category term="china"/>
+    <category term="open-weights"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:ef2a83f7f3a44d74</id>
+    <title>A Jev that can ask Opus for help gives Opus accuracy at 4x lower cost</title>
+    <link rel="alternate" href="https://hightouch.com/blog/llm-judges-identity-resolution"/>
+    <published>2026-11-06T19:48:51Z</published>
+    <updated>2026-11-06T19:48:51Z</updated>
+    <author><name>Hacker News: LLM (50+ points)</name></author>
+    <summary type="text">554 points · 136 comments on Hacker News</summary>
+    <category term="other"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:39454d8bf497be73</id>
+    <title>Ripple-65B Preview delivers strong agentic coding results as a fully Apache 2.0 open US model</title>
+    <link rel="alternate" href="https://the-decoder.com/ripple-65b-preview-delivers-strong-agentic-coding-results-as-a-fully-apache-2-0-open-us-model/"/>
+    <published>2026-11-06T19:47:04Z</published>
+    <updated>2026-11-06T19:47:04Z</updated>
+    <author><name>The Decoder</name></author>
+    <summary type="text">Ricursive Intelligence is releasing Ripple-65B Preview, a 65-billion-parameter open-weight language model that the company says achieves the top score among open-source U.S. models on the TerminalBench 2.1 coding benchmark at a total R&amp;D cost of $32 million. On other…</summary>
+    <category term="other"/>
+    <category term="open-weights"/>
+    <category term="research"/>
+    <category term="tools"/>
+    <category term="agents"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:6d162958c77c3708</id>
+    <title>Mirage: A 22 MB visual-language model that runs scene descriptions + object detection + OCR + segmentation + spatial relations analysis + extractions + decisions, in a single pass.</title>
+    <link rel="alternate" href="https://www.reddit.com/r/LocalLLaMA/comments/1xpm8mw/mirage_a_22_mb_visuallanguage_model_that_runs/"/>
+    <published>2026-11-06T19:46:41Z</published>
+    <updated>2026-11-06T19:46:41Z</updated>
+    <author><name>Reddit r/LocalLLaMA (top of day)</name></author>
+    <summary type="text">Hey all, Henry from Cactus Compute here. We released Mirage, a small vision model for phones, wearables, robots and other consumer devices. Mirage runs scene descriptions, object detection, OCR, segmentation, spatial relations and decisions, with a 22 MB weights file. Our…</summary>
+    <category term="other"/>
+    <category term="tools"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:2d1cb84adccaed73</id>
+    <title>AI physics startup PSI says a system running a non-public Anthropic model proved the Aaronson-Ambainis conjecture, a quantum computing question open since 2008 (PSI)</title>
+    <link rel="alternate" href="https://www.techmeme.com/261106/p20#a261106p20"/>
+    <published>2026-11-06T19:35:01Z</published>
+    <updated>2026-11-06T19:35:01Z</updated>
+    <author><name>Techmeme</name></author>
+    <summary type="text">PSI : AI physics startup PSI says a system running a non-public Anthropic model proved the Aaronson-Ambainis conjecture, a quantum computing question open since 2008 — The Aaronson-Ambainis conjecture is now a theorem. — Open since 2008, the conjecture of Scott Aaronson and…</summary>
+    <category term="other"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:478c932d619efd17</id>
+    <title>Tried the weight editing thing from the MIT post: Some cool applications, but nothing crazy</title>
+    <link rel="alternate" href="https://www.reddit.com/r/LocalLLaMA/comments/1xpls17/tried_the_weight_editing_thing_from_the_mit_post/"/>
+    <published>2026-11-06T19:27:43Z</published>
+    <updated>2026-11-06T19:27:43Z</updated>
+    <author><name>Reddit r/LocalLLaMA (top of day)</name></author>
+    <summary type="text">I took some models that had obvious flaws (prone to prompt injection, whisper hallucinating when silence, etc) and checked if Opus 5.5 can fix it by just editing weights. It&apos;s very useful for patching a model that was done training and has an obvious, easy to articulate flaw…</summary>
+    <category term="other"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:9d63805dda72af89</id>
+    <title>bartowski/XingChen-AGI_Xing4.0-29B-A4B-GGUF · Hugging Face</title>
+    <link rel="alternate" href="https://www.reddit.com/r/LocalLLaMA/comments/1xplkdu/bartowskixingchenagi_xing4029ba4bgguf_hugging_face/"/>
+    <published>2026-11-06T19:19:24Z</published>
+    <updated>2026-11-06T19:19:24Z</updated>
+    <author><name>Reddit r/LocalLLaMA (top of day)</name></author>
+    <summary type="text">do you want to try new 29B MoE today? https://www.reddit.com/r/LocalLLaMA/comments/1xoqc59/add_support_for_the_xing4_0_by_shuxiaoqiong_pull/ Xing4.0-29B-A4B is a next-generation large language model in the Xing series (formerly TeleChat ), developed by China Telecom Artificial…</summary>
+    <category term="other"/>
+    <category term="china"/>
+    <category term="open-weights"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:5f97674ee82bd9b4</id>
+    <title>Artex hacker aracının yüzlerce kopyası açıkta</title>
+    <link rel="alternate" href="https://shiftdelete.net/artex-yapay-zeka-hacker-araci-aciga-cikti"/>
+    <published>2026-11-06T19:16:46Z</published>
+    <updated>2026-11-06T19:16:46Z</updated>
+    <author><name>ShiftDelete.Net</name></author>
+    <summary type="text">Çin yapımı açık kaynaklı yapay zeka saldırı aracı Artex&apos;in 800&apos;den fazla kopyası, şifre istemeden internetten erişilebilir durumda bulundu. Araç birçok siber saldırıyla ilişkilendirildi.</summary>
+    <category term="other"/>
+    <category term="turkey"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:103c48397ae1f450</id>
+    <title>Lamplight - Lessons Learned from Building a Local-First Harness</title>
+    <link rel="alternate" href="https://www.reddit.com/r/LocalLLaMA/comments/1xpkqo2/lamplight_lessons_learned_from_building_a/"/>
+    <published>2026-11-06T18:47:21Z</published>
+    <updated>2026-11-06T18:47:21Z</updated>
+    <author><name>Reddit r/LocalLLaMA (top of day)</name></author>
+    <summary type="text">Hi folks! I&apos;ve been building my own local AI setup for a couple of years now. I&apos;ve learned a ton from this sub and others like r/localllm , so it&apos;s time I tried to give something back. I promised myself I wouldn&apos;t write a super long post, but managed to anyway...hopefully it&apos;s…</summary>
+    <category term="other"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:29c568495a81ef6e</id>
+    <title>Hundreds of Artex AI hacking tools found publicly exposed to the web</title>
+    <link rel="alternate" href="https://techcrunch.com/2026/11/06/hundreds-of-artex-ai-hacking-tools-found-publicly-exposed-to-the-web/"/>
+    <published>2026-11-06T18:44:38Z</published>
+    <updated>2026-11-06T18:44:38Z</updated>
+    <author><name>TechCrunch AI</name></author>
+    <summary type="text">Security researchers found hundreds of servers hosting the penetration testing tool Artex exposed to the internet, allowing anyone access to the hacking tool.</summary>
+    <category term="other"/>
+    <category term="research"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:016e849ea3abf5a8</id>
+    <title>Meta introduces Spaces, a new way to collaborate with your Muse agent</title>
+    <link rel="alternate" href="https://techcrunch.com/2026/11/06/meta-introduces-spaces-a-new-way-to-collaborate-with-your-muse-agent/"/>
+    <published>2026-11-06T18:44:20Z</published>
+    <updated>2026-11-06T18:44:20Z</updated>
+    <author><name>TechCrunch AI</name></author>
+    <summary type="text">Meta&apos;s Muse agents continue to get new features and integrations. Spaces promises to be a new way to interact with the AI helpers.</summary>
+    <category term="product"/>
+    <category term="tools"/>
+    <category term="agents"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:f2e0b426347d1cdf</id>
+    <title>Free Chinese AI Models Are Getting Scary Good at Hacking</title>
+    <link rel="alternate" href="https://www.wired.com/story/free-chinese-ai-models-are-getting-scary-good-at-hacking/"/>
+    <published>2026-11-06T18:43:43Z</published>
+    <updated>2026-11-06T18:43:43Z</updated>
+    <author><name>WIRED AI</name></author>
+    <summary type="text">An experiment in which AI models were asked to break into simulated networks showed the hacking skills of DeepSeek and GLM to be not far behind OpenAI’s most advanced cyber model, which isn’t public.</summary>
+    <category term="other"/>
+    <category term="china"/>
+  </entry>
+</feed>
