@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>AI News Tracker: top stories</title>
+  <link>https://0xmortuex.github.io/ai-news-tracker/</link>
+  <description>The highest-scoring AI stories of the last 3 days, one entry per story. Title, link and a short excerpt only.</description>
+  <language>en</language>
+  <lastBuildDate>Sat, 14 Nov 2026 19:19:48 GMT</lastBuildDate>
+  <generator>ai-news-tracker/stories-1</generator>
+  <atom:link href="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss" rel="self" type="application/rss+xml"/>
+  <item>
+    <title>Introducing Gemini 4 Hydrogen</title>
+    <link>https://deepmind.google/blog/introducing-gemini-4-hydrogen/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-754f9575</guid>
+    <pubDate>Thu, 12 Nov 2026 18:00:50 GMT</pubDate>
+    <description>4 sources: Google AI, Google DeepMind, Ars Technica AI, The Decoder.</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>model-release</category>
+    <category>release</category>
+    <category>Google</category>
+    <category>Google DeepMind</category>
+    <category>Gemini 4</category>
+  </item>
+  <item>
+    <title>Introducing ChatGPT Wallet</title>
+    <link>https://openai.com/index/introducing-chatgpt-wallet</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-0d2392f4</guid>
+    <pubDate>Fri, 13 Nov 2026 15:00:00 GMT</pubDate>
+    <description>2 sources: OpenAI News, The Decoder. Introducing ChatGPT Wallet, a secure way for agents in ChatGPT Work, Codex, and dots to complete purchases with user approval and existing card protections.</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>product</category>
+    <category>release</category>
+    <category>OpenAI</category>
+    <category>ChatGPT</category>
+    <category>Codex</category>
+  </item>
+  <item>
+    <title>Anthropic says outdated prompting habits are slowing down Claude Opus 5.5</title>
+    <link>https://the-decoder.com/anthropic-says-outdated-prompting-habits-are-slowing-down-claude-opus-5-5/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-5e01ce75</guid>
+    <pubDate>Sat, 14 Nov 2026 16:42:56 GMT</pubDate>
+    <description>The Decoder. Anthropic has made Claude Opus 5.5 the default model on all paid plans and published a guide that does away with old prompting habits. The main takeaway is to drop &quot;think hard&quot; and start at Medium effort. The article Anthropic says outdated prompting habits are slowing down…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>model-release</category>
+    <category>release</category>
+    <category>Anthropic</category>
+    <category>Claude Opus 5.5</category>
+  </item>
+  <item>
+    <title>The Endless Frontier Open-Sources Fx-Bio-1031, a Qwen-Based Model That Runs Bioinformatics Analyses</title>
+    <link>https://pandaily.com/endless-frontier-fx-bio-1031-open-weights-bioinformatics-agent-model-biomysterybench</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-f7aafd61</guid>
+    <pubDate>Sat, 14 Nov 2026 02:00:15 GMT</pubDate>
+    <description>Pandaily. The Endless Frontier&apos;s open-weight Fx-Bio-1031 runs multi-step bioinformatics work. It reports 70.59% on BioMysteryBench&apos;s hardest subset but trails GPT-6-Astra on BixBench3.</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>model-release</category>
+    <category>release</category>
+    <category>Alibaba</category>
+    <category>GPT-6-Astra</category>
+  </item>
+  <item>
+    <title>The OpenAI board member who fired Sam Altman says we still can’t trust AI CEOs</title>
+    <link>https://www.theverge.com/podcast/1032907/helen-toner-openai-cset-ai-safety-policy-interview</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-4fdbdb58</guid>
+    <pubDate>Sat, 14 Nov 2026 15:00:00 GMT</pubDate>
+    <description>The Verge AI. Today, I’m talking with Helen Toner, the executive director of the Center for Security and Emerging Technology at Georgetown University. This episode is part two of our series on AI in real life. Helen is a well-known figure in the AI safety and policy community, though she is…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>other</category>
+    <category>safety</category>
+    <category>OpenAI</category>
+  </item>
+  <item>
+    <title>Jensen Huang resigns</title>
+    <link>https://apnews.com/article/nvidia-megaspeed-china-singapore-huang-5403f152a601cf82ce939f1d24fffa0f</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-84859a64</guid>
+    <pubDate>Thu, 12 Nov 2026 13:52:29 GMT</pubDate>
+    <description>3 sources: Hacker News: LLM (50+ points), WIRED AI, SCMP Tech. 4040 points · 3445 comments on Hacker News</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>other</category>
+    <category>NVIDIA</category>
+  </item>
+  <item>
+    <title>Claude Code v2.1.325</title>
+    <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.325</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-48d57f19</guid>
+    <pubDate>Fri, 13 Nov 2026 20:40:01 GMT</pubDate>
+    <description>Claude Code releases. What&apos;s changed Fixed a security issue in how zstd-compressed responses are decoded Added a spinner tip in VS Code and similar integrated terminals about re-running a notebook cell, shown once Claude has read or edited a Jupyter notebook Added a line under the error shown when…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>tool</category>
+    <category>release</category>
+    <category>tooling</category>
+    <category>Anthropic</category>
+    <category>Claude Code</category>
+  </item>
+  <item>
+    <title>Nvidia privately confirmed it could track chips to fight smuggling, even as industry publicly questioned feasibility</title>
+    <link>https://www.technologyreview.com/2026/11/12/1148483/nvidia-chip-tracking/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-0312da35</guid>
+    <pubDate>Thu, 12 Nov 2026 20:16:24 GMT</pubDate>
+    <description>2 sources: MIT Technology Review AI, Reddit r/LocalLLaMA (top of day). Representatives from Nvidia told Illinois representative Bill Foster that it would be technically possible to implement the anti-smuggling measures called for in the Chip Security Act, Foster told MIT Technology Review in an interview on Thursday, even while an industry group…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>policy</category>
+    <category>policy</category>
+    <category>NVIDIA</category>
+  </item>
+  <item>
+    <title>Databento, which offers market data APIs and says it has contracts with five of the six largest frontier AI labs, raised a $100M Series C at a $1.1B valuation (FinTech Global)</title>
+    <link>https://www.techmeme.com/261114/p16#a261114p16</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-64ce86b3</guid>
+    <pubDate>Sat, 14 Nov 2026 18:35:04 GMT</pubDate>
+    <description>Techmeme. FinTech Global : Databento, which offers market data APIs and says it has contracts with five of the six largest frontier AI labs, raised a $100M Series C at a $1.1B valuation — Databento, a platform supplying market data to the modern financial industry, has secured $100m in a…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>funding</category>
+    <category>tooling</category>
+  </item>
+  <item>
+    <title>Serving GLM-5.3 at 607.8 tok/s across two Nvidia DGX stations with vLLM</title>
+    <link>https://developer.nvidia.com/blog/when-one-gpu-isnt-enough-serving-glm-5-3-across-two-nvidia-dgx-stations-with-vllm/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-85b41bfd</guid>
+    <pubDate>Sat, 14 Nov 2026 14:09:25 GMT</pubDate>
+    <description>Hacker News: LLM (50+ points). 92 points · 48 comments on Hacker News</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>other</category>
+    <category>NVIDIA</category>
+    <category>Zhipu</category>
+    <category>GLM-5.3</category>
+    <category>vLLM</category>
+  </item>
+  <item>
+    <title>vLLM v0.34.0rc4</title>
+    <link>https://github.com/vllm-project/vllm/releases/tag/v0.34.0rc4</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-35bf5431</guid>
+    <pubDate>Sat, 14 Nov 2026 10:15:55 GMT</pubDate>
+    <description>vLLM releases. [Release][Tests] Give the #67296 warmup-gate test runner num_speculat…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>tool</category>
+    <category>release</category>
+    <category>tooling</category>
+    <category>vLLM</category>
+  </item>
+  <item>
+    <title>sensenova/SenseNova-Loop-9B-Preview · Hugging Face</title>
+    <link>https://www.reddit.com/r/LocalLLaMA/comments/1xvysss/sensenovasensenovaloop9bpreview_hugging_face/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-93501aac</guid>
+    <pubDate>Sat, 14 Nov 2026 10:02:25 GMT</pubDate>
+    <description>Reddit r/LocalLLaMA (top of day). Very interesting model/architecture. Seems to match Qwen 3.5 27b overall at only 9b parameters. Could be useful for some and it looks like it’s not even fully cooked yet. I haven’t tried it yet. I’m not sure if it’d be slower than qwen, it’s smaller but inference parameters are…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>model-release</category>
+    <category>release</category>
+    <category>Hugging Face</category>
+    <category>Qwen 3.5 27B</category>
+  </item>
+  <item>
+    <title>DeepSeek Opens Its App&apos;s Search, File, OCR and Voice Tools as APIs So Developers Can Rebuild the App</title>
+    <link>https://pandaily.com/deepseek-full-suite-application-apis-web-search-file-input-ocr-asr-tts-chat-demo</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-31ae4fd2</guid>
+    <pubDate>Sat, 14 Nov 2026 01:59:54 GMT</pubDate>
+    <description>Pandaily. DeepSeek has opened web search, deep thinking search, file input, URL reading and safety checks inside its APIs, plus standalone Search, Fetch, OCR, ASR and TTS, so developers can rebuild its app.</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>product</category>
+    <category>safety</category>
+    <category>tooling</category>
+    <category>DeepSeek</category>
+  </item>
+  <item>
+    <title>Nearly 70 percent of US agencies use generative AI, and unions are finally catching up with guardrails</title>
+    <link>https://the-decoder.com/nearly-70-percent-of-us-agencies-use-generative-ai-and-unions-are-finally-catching-up-with-guardrails/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-8a0b5343</guid>
+    <pubDate>Fri, 13 Nov 2026 15:53:49 GMT</pubDate>
+    <description>The Decoder. US public-sector unions are increasingly pushing through protections against AI surveillance and automated firings. In Oakland, a strike vote forced retraining programs instead of layoffs, and a transport union in Ohio won veto power over autonomous vehicles. California banned…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>policy</category>
+    <category>safety</category>
+    <category>policy</category>
+  </item>
+  <item>
+    <title>Building strong safety evaluations</title>
+    <link>https://www.anthropic.com/research/building-strong-safety-evaluations</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-475809db</guid>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 GMT</pubDate>
+    <description>Anthropic Research (third-party scrape). Recommendations for designing, running, and reporting safety evaluations, based on our own experiences.</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>paper</category>
+    <category>safety</category>
+    <category>research</category>
+    <category>Anthropic</category>
+  </item>
+  <item>
+    <title>Jensen Huang&apos;s resignation is a setback for US open models, as his funding gave open-source developers time to find their footing and will very likely dry up (Nathan Lambert/Interconnects AI)</title>
+    <link>https://www.techmeme.com/261114/p15#a261114p15</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-f176fdaf</guid>
+    <pubDate>Sat, 14 Nov 2026 18:05:02 GMT</pubDate>
+    <description>Techmeme. Nathan Lambert / Interconnects AI : Jensen Huang&apos;s resignation is a setback for US open models, as his funding gave open-source developers time to find their footing and will very likely dry up — A decapitation. It&apos;s time to rebuild. … Audio playback is not supported on your…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>tool</category>
+    <category>tooling</category>
+  </item>
+  <item>
+    <title>OpenAI announces ChatGPT Wallet, which lets its dots AI agents make purchases on behalf of users, available to ChatGPT Pro subscribers in the US who are over 18 (Ashley Capoot/CNBC)</title>
+    <link>https://www.techmeme.com/261113/p15#a261113p15</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-25524e7e</guid>
+    <pubDate>Fri, 13 Nov 2026 15:35:05 GMT</pubDate>
+    <description>Techmeme. Ashley Capoot / CNBC : OpenAI announces ChatGPT Wallet, which lets its dots AI agents make purchases on behalf of users, available to ChatGPT Pro subscribers in the US who are over 18 — OpenAI on Friday announced ChatGPT Wallet, a new payment feature that enables its “dots”…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>product</category>
+    <category>release</category>
+    <category>OpenAI</category>
+    <category>ChatGPT</category>
+  </item>
+  <item>
+    <title>Incident report: AI agents attempted exploits on our website during a third-party alignment evaluation</title>
+    <link>https://epoch.ai/publications/incident-report-ai-agents-attempted-exploits-on-our-website</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-0e4fd84b</guid>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 GMT</pubDate>
+    <description>Epoch AI. Three October 2026 events involving Trajectory Labs, PBC, in which agents probed our site and impersonated staff. No private data was accessed.</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>security</category>
+    <category>safety</category>
+    <category>research</category>
+  </item>
+  <item>
+    <title>llm-gemini 0.37</title>
+    <link>https://simonwillison.net/2026/Nov/12/llm-gemini/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-388dc066</guid>
+    <pubDate>Thu, 12 Nov 2026 22:55:19 GMT</pubDate>
+    <description>Simon Willison. Release: llm-gemini 0.37 Google launched Gemini 4 Hydrogen today - the lowest cost member of the Gemini 4 family. It&apos;s actually not too far off the price of its much bigger siblings, Carbon and Argon. I&apos;m finding Gemini 4&apos;s pricing really confusing. Here&apos;s the pricing scheme…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>other</category>
+    <category>pricing</category>
+    <category>Google</category>
+    <category>Gemini 4</category>
+  </item>
+  <item>
+    <title>A petition to reinstate Jensen Huang as Nvidia CEO tops 100K signatures, including Elon Musk, Tim Sweeney, and Garry Tan; organizers say 5K+ Nvidia staff signed (Lauren Edmonds/Business Insider)</title>
+    <link>https://www.techmeme.com/261114/p17#a261114p17</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-02e91ff4</guid>
+    <pubDate>Sat, 14 Nov 2026 19:01:14 GMT</pubDate>
+    <description>Techmeme. Lauren Edmonds / Business Insider : A petition to reinstate Jensen Huang as Nvidia CEO tops 100K signatures, including Elon Musk, Tim Sweeney, and Garry Tan; organizers say 5K+ Nvidia staff signed — Some people aren&apos;t ready to let former CEO Jensen Huang go. — A petition to…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>other</category>
+    <category>NVIDIA</category>
+  </item>
+  <item>
+    <title>vLLM v0.34.0rc3</title>
+    <link>https://github.com/vllm-project/vllm/releases/tag/v0.34.0rc3</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-e784bcc5</guid>
+    <pubDate>Fri, 13 Nov 2026 22:52:29 GMT</pubDate>
+    <description>vLLM releases. [KVConnector] Allocate the extensible KV cache exportable for EXPORTS…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>tool</category>
+    <category>release</category>
+    <category>tooling</category>
+    <category>vLLM</category>
+  </item>
+  <item>
+    <title>Weight Space Programming for Quantization: Nace quants achieve up to 2x better KL divergence for Qwen 9B, 27B, 35B &amp; Flash Next [GGUF]</title>
+    <link>https://www.reddit.com/r/LocalLLaMA/comments/1xvh4ag/weight_space_programming_for_quantization_nace/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-0ed7dbf3</guid>
+    <pubDate>Fri, 13 Nov 2026 19:23:54 GMT</pubDate>
+    <description>Reddit r/LocalLLaMA (top of day). hey llamas, its Alish from nace.ai (open source ai lab behind #1 decision model on latest Artificial Analysis decision index v2.1) &amp; Kapitsa (optimized inference for apple silicon). As promised in the last post , we are releasing the GGUF weights based on the Nace quantization…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>model-release</category>
+    <category>release</category>
+    <category>Alibaba</category>
+    <category>Qwen 9B</category>
+  </item>
+  <item>
+    <title>Build a Robot Pick-and-Place Simulation with SimReady Assets</title>
+    <link>https://huggingface.co/blog/nvidia/simready-assets-robot-pick-and-place</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-082c69a7</guid>
+    <pubDate>Fri, 13 Nov 2026 18:00:39 GMT</pubDate>
+    <description>Hugging Face Blog.</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>product</category>
+    <category>Hugging Face</category>
+  </item>
+  <item>
+    <title>XYBench: Helping with the problem behind the question</title>
+    <link>https://huggingface.co/blog/allenai/xybench</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-989095ea</guid>
+    <pubDate>Fri, 13 Nov 2026 17:02:35 GMT</pubDate>
+    <description>Hugging Face Blog.</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>product</category>
+    <category>Hugging Face</category>
+  </item>
+  <item>
+    <title>ChatGPT’s new Wallet lets AI agents shop and check out for you</title>
+    <link>https://techcrunch.com/2026/11/13/chatgpts-new-wallet-lets-ai-agents-shop-and-check-out-for-you/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-7663eaa6</guid>
+    <pubDate>Fri, 13 Nov 2026 16:00:12 GMT</pubDate>
+    <description>2 sources: TechCrunch AI, The Verge AI. ChatGPT Wallet lets AI agents shop and check out on users&apos; behalf, starting with a limited rollout to U.S. Pro subscribers.</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>other</category>
+    <category>OpenAI</category>
+    <category>ChatGPT</category>
+  </item>
+  <item>
+    <title>Hugging Face CEO vows to keep fighting for open source AI after Jensen Huang’s exit</title>
+    <link>https://techcrunch.com/2026/11/12/hugging-face-ceo-vows-to-keep-fighting-for-open-source-ai-after-jensen-huangs-exit/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-4d4c3e11</guid>
+    <pubDate>Thu, 12 Nov 2026 17:36:40 GMT</pubDate>
+    <description>2 sources: TechCrunch AI, Reddit r/LocalLLaMA (top of day). Hugging Face&apos;s CEO pledged to keep fighting for open source AI after Huang&apos;s exit, raising questions about Nvidia&apos;s $12.9 billion acquisition.</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>tool</category>
+    <category>tooling</category>
+    <category>Hugging Face</category>
+  </item>
+  <item>
+    <title>Anthropic CEO Amodei admits &quot;there&apos;s a huge uncertainty in what&apos;s going to happen next year&quot; days before a record IPO</title>
+    <link>https://the-decoder.com/anthropic-ceo-amodei-admits-theres-a-huge-uncertainty-in-whats-going-to-happen-next-year-days-before-a-record-ipo/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-b21f39cf</guid>
+    <pubDate>Sat, 14 Nov 2026 19:05:17 GMT</pubDate>
+    <description>The Decoder. Days before what could be the largest IPO in history, Anthropic CEO Dario Amodei called buying compute &apos;the deepest business dilemma&apos; his company faces. Anthropic&apos;s commitments now total nearly $901 billion, and it&apos;s still far from clear whether future revenue will justify…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>funding</category>
+    <category>Anthropic</category>
+  </item>
+  <item>
+    <title>Gemini 4 Carbon takes the MathArena crown but costs 15 times more than GPT-6.1 Sol</title>
+    <link>https://the-decoder.com/gemini-4-carbon-takes-the-matharena-crown-but-costs-15-times-more-than-gpt-6-1-sol/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-29ef30ce</guid>
+    <pubDate>Sat, 14 Nov 2026 16:48:01 GMT</pubDate>
+    <description>The Decoder. For the first time in a while, no OpenAI model leads the MathArena AI math benchmark. Google&apos;s Gemini 4 Carbon and Anthropic&apos;s Fable 5.2 have knocked GPT-6.1 Sol from the top, though both cost significantly more. Gemini ignored the time limit in testing and almost never gave up…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>other</category>
+    <category>Google</category>
+    <category>OpenAI</category>
+    <category>GPT-6.1-Sol</category>
+    <category>Gemini 4 Carbon</category>
+  </item>
+  <item>
+    <title>llama.cpp release b12380</title>
+    <link>https://github.com/ggml-org/llama.cpp/releases/tag/b12380</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-4527fe6e</guid>
+    <pubDate>Sat, 14 Nov 2026 14:01:21 GMT</pubDate>
+    <description>llama.cpp releases. mtmd : allow custom video decoder ( #32188 ) mtmd : allow custom video decoder also adapt to wllama requirements clean up add test Co-authored-by: Xuan Son Nguyen son@huggingface.co Website: https://llama.app Attestations…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>tool</category>
+    <category>tooling</category>
+    <category>Meta</category>
+    <category>llama.cpp</category>
+  </item>
+  <item>
+    <title>llama.cpp release b12381</title>
+    <link>https://github.com/ggml-org/llama.cpp/releases/tag/b12381</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-982ca456</guid>
+    <pubDate>Sat, 14 Nov 2026 13:57:21 GMT</pubDate>
+    <description>llama.cpp releases. mtmd: fix video pixel aspect ratio and video rotation ( #32267 )</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>tool</category>
+    <category>tooling</category>
+    <category>Meta</category>
+    <category>llama.cpp</category>
+  </item>
+</channel>
+</rss>
