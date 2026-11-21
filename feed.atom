@@ -1,0 +1,1116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>AI News Tracker</title>
+  <subtitle>Deduplicated, tagged and scored AI news. Title, link and a short excerpt only.</subtitle>
+  <id>urn:ai-news-tracker:feed</id>
+  <link rel="self" type="application/atom+xml" href="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.atom"/>
+  <link rel="alternate" type="text/html" href="https://0xmortuex.github.io/ai-news-tracker/"/>
+  <updated>2026-11-21T10:27:38Z</updated>
+  <generator>ai-news-tracker/1</generator>
+  <entry>
+    <id>urn:ai-news-tracker:39a6805ec2828ec4</id>
+    <title>Employee or Independent Contractor Status Under the Fair Labor Standards Act, Family and Medical Leave Act, and Migrant and Seasonal Agricultural Worker Protection Act</title>
+    <link rel="alternate" href="https://www.federalregister.gov/documents/2026/11/23/2026-23777/employee-or-independent-contractor-status-under-the-fair-labor-standards-act-family-and-medical"/>
+    <published>2026-11-21T10:27:38Z</published>
+    <updated>2026-11-21T10:27:38Z</updated>
+    <author><name>Federal Register: artificial intelligence</name></author>
+    <summary type="text">This final rule rescinds the analysis for determining employee or independent contractor status under the Fair Labor Standards Act (FLSA or Act) set forth in the Department of Labor&apos;s (Department) regulations and replaces it with an analysis similar to what it published in a…</summary>
+    <category term="policy"/>
+    <category term="regulation"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:723f84e1e63548bb</id>
+    <title>Self-Regulatory Organizations; 24X National Exchange LLC; Notice of Filing of a Proposed Rule Change To Adopt Rules To Govern the Trading of Options on the Exchange</title>
+    <link rel="alternate" href="https://www.federalregister.gov/documents/2026/11/23/2026-23748/self-regulatory-organizations-24x-national-exchange-llc-notice-of-filing-of-a-proposed-rule-change"/>
+    <published>2026-11-21T10:27:38Z</published>
+    <updated>2026-11-21T10:27:38Z</updated>
+    <author><name>Federal Register: artificial intelligence</name></author>
+    <category term="policy"/>
+    <category term="regulation"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:2c90333abdc4a8f0</id>
+    <title>Tesla FSD V15 aralıkta geliyor: Musk tarih verdi</title>
+    <link rel="alternate" href="https://shiftdelete.net/tesla-fsd-v15-aralik-elon-musk"/>
+    <published>2026-11-21T10:00:10Z</published>
+    <updated>2026-11-21T10:00:10Z</updated>
+    <author><name>ShiftDelete.Net</name></author>
+    <summary type="text">Elon Musk, X&apos;te yaptığı paylaşımda FSD V15&apos;in aralık ayında geniş kullanıma açılacağını duyurdu. Musk aynı paylaşımda yapay zeka eğitiminde kullanılan SFT yöntemini ve sistem istemlerini de eleştirdi.</summary>
+    <category term="other"/>
+    <category term="turkey"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:c77f37fad59e94ed</id>
+    <title>Bytedance argues most AI training phases are unnecessary and backs it up with a competitive open model</title>
+    <link rel="alternate" href="https://the-decoder.com/bytedance-argues-most-ai-training-phases-are-unnecessary-and-backs-it-up-with-a-competitive-open-model/"/>
+    <published>2026-11-21T09:17:24Z</published>
+    <updated>2026-11-21T09:17:24Z</updated>
+    <author><name>The Decoder</name></author>
+    <summary type="text">Bytedance and several US universities introduce Axion 1.0, an AI agent that rivals top commercial models from OpenAI and Anthropic on benchmarks after just three training phases. The researchers attribute the gains to carefully curated training data rather than ever more…</summary>
+    <category term="other"/>
+    <category term="china"/>
+    <category term="research"/>
+    <category term="tools"/>
+    <category term="agents"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:d394c4a896f3fda8</id>
+    <title>Parkinson hastalığının tespitine yönelik yapay zeka modeli geliştirildi</title>
+    <link rel="alternate" href="https://www.aa.com.tr/tr/bilim-teknoloji/parkinson-hastaliginin-tespitine-yonelik-yapay-zeka-modeli-gelistirildi/4132790"/>
+    <published>2026-11-21T09:07:08Z</published>
+    <updated>2026-11-21T09:07:08Z</updated>
+    <author><name>Anadolu Ajansi Bilim-Teknoloji</name></author>
+    <summary type="text">Parkinson hastalığının tespitine yönelik 3 üniversiteden akademisyenlerin geliştirdiği yapay zeka modeli, beyin MR görüntülerini analiz ederek hastalığın tespitinde yüzde 94,4 doğruluk oranına ulaştı.</summary>
+    <category term="other"/>
+    <category term="turkey"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:fbf676a5fa98c7b4</id>
+    <title>NVIDIA&apos;ya SEC&apos;ten muhasebe soruşturması</title>
+    <link rel="alternate" href="https://shiftdelete.net/nvidia-sec-sorusturmasi-muhasebe-reuters"/>
+    <published>2026-11-21T08:30:06Z</published>
+    <updated>2026-11-21T08:30:06Z</updated>
+    <author><name>ShiftDelete.Net</name></author>
+    <summary type="text">Reuters&apos;a göre ABD Menkul Kıymetler ve Borsa Komisyonu (SEC), NVIDIA&apos;yı olası muhasebe sorunları nedeniyle inceliyor. Haber, Jensen Huang&apos;ın istifasının hemen ardından geldi.</summary>
+    <category term="other"/>
+    <category term="turkey"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:238efe920469c711</id>
+    <title>iOS 27.3 dosyası: yeni sağlık uygulaması, iPhone Duo iyileştirmeleri ve Siri AI</title>
+    <link rel="alternate" href="https://www.teknoblog.com/ios-27-3-ozellikleri-ve-cikis-tarihi-neler-degisiyor/"/>
+    <published>2026-11-21T07:15:00Z</published>
+    <updated>2026-11-21T07:15:00Z</updated>
+    <author><name>Teknoblog</name></author>
+    <summary type="text">iOS 27.3 betasında yenilenen Sağlık uygulaması, iPhone Duo ayarları ve Beklemede kadranları görülüyor. Apple kararlı sürüm için henüz tarih vermedi. iOS 27.3 dosyası: yeni sağlık uygulaması, iPhone Duo iyileştirmeleri ve Siri AI haberi ilk önce Teknoblog üzerinde yayımlandı.</summary>
+    <category term="other"/>
+    <category term="turkey"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:e986f062a07ac457</id>
+    <title>Google, bekleyebilen Gemini ajan işlerinde model ücretini yarıya indiriyor</title>
+    <link rel="alternate" href="https://www.teknoblog.com/gemini-deferred-service-tier-yapay-zeka-ajan-maliyeti/"/>
+    <published>2026-11-21T06:45:00Z</published>
+    <updated>2026-11-21T06:45:00Z</updated>
+    <author><name>Teknoblog</name></author>
+    <summary type="text">Google Cloud’un Deferred katmanı, acil olmayan Gemini ajan çağrılarını sıraya alıyor. Yüzde 50 indirim aboneliği veya toplam altyapı faturasını kapsamıyor. Google, bekleyebilen Gemini ajan işlerinde model ücretini yarıya indiriyor haberi ilk önce Teknoblog üzerinde yayımlandı.</summary>
+    <category term="other"/>
+    <category term="turkey"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:653957d3038987a9</id>
+    <title>GPT-6.2 Astra再次暴击具身模型：16项任务成功率较GPT-6 Astra翻倍</title>
+    <link rel="alternate" href="https://www.qbitai.com/2026/11/511779.html"/>
+    <published>2026-11-21T06:35:59Z</published>
+    <updated>2026-11-21T06:35:59Z</updated>
+    <author><name>QbitAI (Chinese)</name></author>
+    <summary type="text">还实现可变形物体操控全球首通</summary>
+    <category term="other"/>
+    <category term="china"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:bc49ec0ca91c7155</id>
+    <title>刚刚，DeepSeek V1作者创业项目曝光：开源Agent</title>
+    <link rel="alternate" href="https://www.qbitai.com/2026/11/511570.html"/>
+    <published>2026-11-21T06:32:31Z</published>
+    <updated>2026-11-21T06:32:31Z</updated>
+    <author><name>QbitAI (Chinese)</name></author>
+    <summary type="text">专为本地部署而生</summary>
+    <category term="other"/>
+    <category term="china"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:1dd980bb0ab511e6</id>
+    <title>姚顺雨和混元团队上Reddit答网友，Hy小模型已进路线图</title>
+    <link rel="alternate" href="https://www.qbitai.com/2026/11/511757.html"/>
+    <published>2026-11-21T06:30:55Z</published>
+    <updated>2026-11-21T06:30:55Z</updated>
+    <author><name>QbitAI (Chinese)</name></author>
+    <summary type="text">还透露了不少训练背后的秘诀</summary>
+    <category term="other"/>
+    <category term="china"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:3386edf2b09b2f34</id>
+    <title>LZ-Space Robotic System Completes Ground Tests Before Flight Validation</title>
+    <link rel="alternate" href="https://pandaily.com/lz-space-robotic-hand-ground-tests-spacecraft-installation"/>
+    <published>2026-11-21T06:30:26Z</published>
+    <updated>2026-11-21T06:30:26Z</updated>
+    <author><name>Pandaily</name></author>
+    <summary type="text">LZ-Space’s developer reports ground tests and spacecraft installation checks, while flight validation and LZ-SpacePro remain future steps.</summary>
+    <category term="other"/>
+    <category term="china"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:fc68e69a2ab7d4e5</id>
+    <title>Trump ve Şi&apos;den askeri yapay zeka uzlaşısı</title>
+    <link rel="alternate" href="https://shiftdelete.net/trump-xi-askeri-yapay-zeka-insan-karari-bessent"/>
+    <published>2026-11-21T06:30:07Z</published>
+    <updated>2026-11-21T06:30:07Z</updated>
+    <author><name>ShiftDelete.Net</name></author>
+    <summary type="text">ABD Hazine Bakanı Bessent&apos;e göre Trump ve Şi Cinping, yapay zekanın kullanıldığı askeri kararlarda her zaman insanın yer alması gerektiği konusunda anlaştı.</summary>
+    <category term="other"/>
+    <category term="turkey"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:51ea2ca54315a413</id>
+    <title>NYU&apos;s Tristan Buckmaster and Anthropic&apos;s Levent Alpöge publish an AI-aided proof of Navier-Stokes blowup, saying it closes a loophole in OpenAI&apos;s solution (Peter Hall/Scientific American)</title>
+    <link rel="alternate" href="https://www.techmeme.com/261121/p4#a261121p4"/>
+    <published>2026-11-21T06:30:00Z</published>
+    <updated>2026-11-21T06:30:00Z</updated>
+    <author><name>Techmeme</name></author>
+    <summary type="text">Peter Hall / Scientific American : NYU&apos;s Tristan Buckmaster and Anthropic&apos;s Levent Alp&amp;ouml;ge publish an AI-aided proof of Navier-Stokes blowup, saying it closes a loophole in OpenAI&apos;s solution — Two months after getting scooped by OpenAI, N.Y.U. professor Tristan Buckmaster…</summary>
+    <category term="other"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:f3f091af5181bee4</id>
+    <title>Industry insiders say new US export rules affect a broader range of chips, including SoCs used in consumer electronics, extending beyond advanced AI chips (Cheng Ting-Fang/Nikkei Asia)</title>
+    <link rel="alternate" href="https://www.techmeme.com/261121/p2#a261121p2"/>
+    <published>2026-11-21T06:00:55Z</published>
+    <updated>2026-11-21T06:00:55Z</updated>
+    <author><name>Techmeme</name></author>
+    <summary type="text">Cheng Ting-Fang / Nikkei Asia : Industry insiders say new US export rules affect a broader range of chips, including SoCs used in consumer electronics, extending beyond advanced AI chips — TAIPEI — Tighter U.S. export controls introduced Thursday are having a far broader impact…</summary>
+    <category term="policy"/>
+    <category term="chips"/>
+    <category term="regulation"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:6bfc7f835ff4e0e7</id>
+    <title>ChatGPT uygulaması yenilendi: Dots öne çıktı</title>
+    <link rel="alternate" href="https://shiftdelete.net/chatgpt-mobil-uygulama-yeni-tasarim-dots-sekmesi"/>
+    <published>2026-11-21T06:00:08Z</published>
+    <updated>2026-11-21T06:00:08Z</updated>
+    <author><name>ShiftDelete.Net</name></author>
+    <summary type="text">OpenAI, ChatGPT&apos;nin mobil uygulamasını yeniliyor. Yeni tasarımda üç sekmeli alt çubuk geliyor, kişisel asistan Dots kendi sekmesine kavuşuyor.</summary>
+    <category term="other"/>
+    <category term="turkey"/>
+    <category term="tools"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:3b132e39bb2f15ce</id>
+    <title>Google Asistan akıllı hoparlörlerde kapanıyor</title>
+    <link rel="alternate" href="https://shiftdelete.net/google-asistan-akilli-hoparlor-kapaniyor-nest-uygulamasi"/>
+    <published>2026-11-21T05:30:08Z</published>
+    <updated>2026-11-21T05:30:08Z</updated>
+    <author><name>ShiftDelete.Net</name></author>
+    <summary type="text">Google, akıllı hoparlör ve ekranlardaki Google Asistan&apos;ı 2 Ağustos 2027&apos;de kapatıp yerine Gemini for Home&apos;u getiriyor. Nest uygulaması ise 25 Ocak 2027&apos;de tarihe karışıyor.</summary>
+    <category term="other"/>
+    <category term="turkey"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:cba56376caa916e5</id>
+    <title>Ubisoft launches Motherbrain, a subsidiary focused on developing &quot;smart NPCs with memory and AI game masters that manage large-scale systemic worlds&quot; (Sophie McEvoy/GamesIndustry.biz)</title>
+    <link rel="alternate" href="https://www.techmeme.com/261121/p1#a261121p1"/>
+    <published>2026-11-21T05:15:00Z</published>
+    <updated>2026-11-21T05:15:00Z</updated>
+    <author><name>Techmeme</name></author>
+    <summary type="text">Sophie McEvoy / GamesIndustry.biz : Ubisoft launches Motherbrain, a subsidiary focused on developing “smart NPCs with memory and AI game masters that manage large-scale systemic worlds” — Studio is currently developing “smart NPCs with memory and AI game masters that manage…</summary>
+    <category term="product"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:2b32d4b379bcfefb</id>
+    <title>[AINews] Riemann Hypothesis proved...twice independently</title>
+    <link rel="alternate" href="https://latent.space/p/ainews-riemann-hypothesis-proved-twice-independently/"/>
+    <published>2026-11-21T05:02:13Z</published>
+    <updated>2026-11-21T05:02:13Z</updated>
+    <author><name>Latent Space</name></author>
+    <summary type="text">November 20 2026 —</summary>
+    <category term="other"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:6dc7986520ffe69a</id>
+    <title>Ollama v0.40.17</title>
+    <link rel="alternate" href="https://github.com/ollama/ollama/releases/tag/v0.40.17"/>
+    <published>2026-11-21T04:05:14Z</published>
+    <updated>2026-11-21T04:05:14Z</updated>
+    <author><name>Ollama releases</name></author>
+    <summary type="text">Inkling 2 Mini Inkling 2 Mini from Thinking Machines is a 26B parameter model with 5.4B active. Its looped layers give it more computation per token than its size suggests, and it still fits on a Mac at about 20GB. It handles text and images, tool calls, and thinking, and…</summary>
+    <category term="tool"/>
+    <category term="open-weights"/>
+    <category term="tools"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:10479e3b8e9e494c</id>
+    <title>AI agents are getting wallets. Is Hong Kong ready for them?</title>
+    <link rel="alternate" href="https://www.scmp.com/tech/big-tech/article/3375253/ai-agents-are-getting-wallets-hong-kong-ready-them"/>
+    <published>2026-11-21T02:30:05Z</published>
+    <updated>2026-11-21T02:30:05Z</updated>
+    <author><name>SCMP Tech</name></author>
+    <summary type="text">Minds by Animoca Brands, an agentic artificial intelligence platform created by the Web3 firm, is riding on Hong Kong’s push to turn automated agents into everyday shopping tools, piloting live transactions on Visa’s network just as local regulators place agentic commerce on…</summary>
+    <category term="policy"/>
+    <category term="china"/>
+    <category term="regulation"/>
+    <category term="tools"/>
+    <category term="agents"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:6341e1f44a8f8b7c</id>
+    <title>Nvidia faces further blow after shock US export permit data release: analysts</title>
+    <link rel="alternate" href="https://www.scmp.com/tech/big-tech/article/3375287/nvidia-faces-further-blow-after-shock-us-export-permit-data-release-analysts"/>
+    <published>2026-11-21T01:00:13Z</published>
+    <updated>2026-11-21T01:00:13Z</updated>
+    <author><name>SCMP Tech</name></author>
+    <summary type="text">US lawmakers have thrown the cross-border semiconductor trade into fresh turmoil after releasing confidential licensing records showing Washington approved the sale of nearly 880,000 advanced AI chips to Chinese tech companies earlier this year. The disclosures, made by a US…</summary>
+    <category term="policy"/>
+    <category term="china"/>
+    <category term="chips"/>
+    <category term="regulation"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:0980e466e3e82863</id>
+    <title>Oracle says it has secured funding for its infrastructure contract with OpenAI and &quot;any further private discussions with vendors are just additional options&quot; (@oracle)</title>
+    <link rel="alternate" href="https://www.techmeme.com/261120/p43#a261120p43"/>
+    <published>2026-11-21T00:25:00Z</published>
+    <updated>2026-11-21T00:25:00Z</updated>
+    <author><name>Techmeme</name></author>
+    <summary type="text">@oracle : Oracle says it has secured funding for its infrastructure contract with OpenAI and “any further private discussions with vendors are just additional options” — Oracle has secured all the funding we need to fulfill our contract with OpenAI. With our final capital raise…</summary>
+    <category term="other"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:0e32e117424d5b82</id>
+    <title>Türk matematikçiden Claude ile Riemann iddiası</title>
+    <link rel="alternate" href="https://shiftdelete.net/levent-alpoge-riemann-hipotezi-claude"/>
+    <published>2026-11-20T23:53:24Z</published>
+    <updated>2026-11-20T23:53:24Z</updated>
+    <author><name>ShiftDelete.Net</name></author>
+    <summary type="text">Anthropic&apos;te çalışan Levent Alpöge, Claude ile Riemann Hipotezi&apos;ni kanıtladığını duyurdu; kanıt henüz doğrulanmadı.</summary>
+    <category term="other"/>
+    <category term="turkey"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:7d89a36d7a636c83</id>
+    <title>Nasdaq 100 fell 5.6% on Friday, taking its loss for the week to 10.4%, its worst run in more than six years, amid fears of a slowdown in the AI investment boom (George Steer/Financial Times)</title>
+    <link rel="alternate" href="https://www.techmeme.com/261120/p42#a261120p42"/>
+    <published>2026-11-20T23:50:00Z</published>
+    <updated>2026-11-20T23:50:00Z</updated>
+    <author><name>Techmeme</name></author>
+    <summary type="text">George Steer / Financial Times : Nasdaq 100 fell 5.6% on Friday, taking its loss for the week to 10.4%, its worst run in more than six years, amid fears of a slowdown in the AI investment boom — Shares in Anthropic and Nvidia tumble as fears over the AI spending boom grip Wall…</summary>
+    <category term="other"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:5f838fc2516a0251</id>
+    <title>llama.cpp release b12600</title>
+    <link rel="alternate" href="https://github.com/ggml-org/llama.cpp/releases/tag/b12600"/>
+    <published>2026-11-20T23:34:17Z</published>
+    <updated>2026-11-20T23:34:17Z</updated>
+    <author><name>llama.cpp releases</name></author>
+    <summary type="text">model : Inkling 2 Mini ( #32694 ) Conversion Separate model_type Add gate_rank to allow building from metadata while testing Base model Loop graph Support the new is_varloop attribute Adopt naming scheme from #32588 Rename to varying Website: https://llama.app Attestations…</summary>
+    <category term="tool"/>
+    <category term="open-weights"/>
+    <category term="tools"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:565159543ba42dea</id>
+    <title>How Google Duplex evolved to also call businesses for you in Gemini</title>
+    <link rel="alternate" href="https://research.google/blog/how-google-duplex-evolved-to-also-call-businesses-for-you-in-gemini/"/>
+    <published>2026-11-20T23:30:30Z</published>
+    <updated>2026-11-20T23:30:30Z</updated>
+    <author><name>Google Research</name></author>
+    <summary type="text">Generative AI</summary>
+    <category term="paper"/>
+    <category term="research"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:1448d81f9a2205dc</id>
+    <title>Cops Are Pushing Extremely Corny ‘Grand Theft Auto 6’ Slop</title>
+    <link rel="alternate" href="https://www.wired.com/story/cops-are-being-extremely-corny-about-gta-vi/"/>
+    <published>2026-11-20T23:24:02Z</published>
+    <updated>2026-11-20T23:24:02Z</updated>
+    <author><name>WIRED AI</name></author>
+    <summary type="text">The blockbuster game makes no secret of its contempt for law enforcement. Real police departments using it to recruit new members and scold the public apparently didn’t get the memo.</summary>
+    <category term="other"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:35f854dd7615d7ab</id>
+    <title>Ask HN: I have been unemployed for 2y. 15 years of experience, US. What to do?</title>
+    <link rel="alternate" href="https://news.ycombinator.com/item?id=50583761"/>
+    <published>2026-11-20T23:18:32Z</published>
+    <updated>2026-11-20T23:18:32Z</updated>
+    <author><name>Hacker News: LLM (50+ points)</name></author>
+    <summary type="text">196 points · 150 comments on Hacker News</summary>
+    <category term="other"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:403110da88417e77</id>
+    <title>llama.cpp release b12599</title>
+    <link rel="alternate" href="https://github.com/ggml-org/llama.cpp/releases/tag/b12599"/>
+    <published>2026-11-20T23:16:58Z</published>
+    <updated>2026-11-20T23:16:58Z</updated>
+    <author><name>llama.cpp releases</name></author>
+    <summary type="text">hip: add RDNA1 MMVQ parameter table (1 warp per block for ncols=1) ( #32389 ) hip: add RDNA1 MMVQ parameter table (1 warp per block for ncols=1) hip: write the RDNA1 MMVQ values explicitly instead of recursing into the generic table hip: list the RDNA1 MMVQ table before RDNA2…</summary>
+    <category term="tool"/>
+    <category term="open-weights"/>
+    <category term="tools"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:bc12da4238be9769</id>
+    <title>Ollama v0.40.17-rc4</title>
+    <link rel="alternate" href="https://github.com/ollama/ollama/releases/tag/v0.40.17-rc4"/>
+    <published>2026-11-20T23:04:26Z</published>
+    <updated>2026-11-20T23:04:26Z</updated>
+    <author><name>Ollama releases</name></author>
+    <summary type="text">Merge remote-tracking branch &apos;upstream/main&apos; into release_v0.40.17</summary>
+    <category term="tool"/>
+    <category term="open-weights"/>
+    <category term="tools"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:467ba4ac8358fdb2</id>
+    <title>Cursor tells lawmakers it is considering phasing out Chinese open-weight AI models due to &quot;geopolitical risk&quot;; Cursor&apos;s Composer 2 was built on Kimi K2.5 (Kai Nicol-Schwarz/CNBC)</title>
+    <link rel="alternate" href="https://www.techmeme.com/261120/p39#a261120p39"/>
+    <published>2026-11-20T23:00:01Z</published>
+    <updated>2026-11-20T23:00:01Z</updated>
+    <author><name>Techmeme</name></author>
+    <summary type="text">Kai Nicol-Schwarz / CNBC : Cursor tells lawmakers it is considering phasing out Chinese open-weight AI models due to “geopolitical risk”; Cursor&apos;s Composer 2 was built on Kimi K2.5 — SpaceX&apos;s artificial-intelligence coding platform, Cursor, is considering moving away from using…</summary>
+    <category term="policy"/>
+    <category term="china"/>
+    <category term="open-weights"/>
+    <category term="regulation"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:7ce40af71312dcfa</id>
+    <title>Claude Code v2.1.330</title>
+    <link rel="alternate" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.330"/>
+    <published>2026-11-20T22:32:56Z</published>
+    <updated>2026-11-20T22:32:56Z</updated>
+    <author><name>Claude Code releases</name></author>
+    <summary type="text">What&apos;s changed Added sign-in to organizations managed in Anthropic&apos;s Enterprise Admin Console: after claude auth login , Claude Code applies the organization&apos;s settings and uses its cloud provider or gateway Added easel, a built-in mod that draws charts when asked and under MCP…</summary>
+    <category term="tool"/>
+    <category term="tools"/>
+    <category term="open-weights"/>
+    <category term="agents"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:4d6c192ff8628768</id>
+    <title>Google rolls out new search homepage with AI chat history and no search button</title>
+    <link rel="alternate" href="https://arstechnica.com/ai/2026/11/googles-latest-search-page-redesign-drops-the-search-button-adds-ai-sidebar/"/>
+    <published>2026-11-20T21:58:29Z</published>
+    <updated>2026-11-20T21:58:29Z</updated>
+    <author><name>Ars Technica AI</name></author>
+    <summary type="text">Google search is making it even easier to access AI tools on the search page.</summary>
+    <category term="product"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:7429ad9963d8d6c1</id>
+    <title>ComfyUI v0.46.2</title>
+    <link rel="alternate" href="https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.46.2"/>
+    <published>2026-11-20T21:58:18Z</published>
+    <updated>2026-11-20T21:58:18Z</updated>
+    <author><name>ComfyUI releases</name></author>
+    <category term="tool"/>
+    <category term="open-weights"/>
+    <category term="tools"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:8bc8fed2fbe62d07</id>
+    <title>Meta reconsiders 2030 net-zero goal amid record emissions from AI data centers</title>
+    <link rel="alternate" href="https://arstechnica.com/ai/2026/11/meta-reconsiders-2030-net-zero-goal-amid-record-emissions-from-ai-data-centers/"/>
+    <published>2026-11-20T21:47:10Z</published>
+    <updated>2026-11-20T21:47:10Z</updated>
+    <author><name>Ars Technica AI</name></author>
+    <summary type="text">Meta is “re-evaluating” 2030 sustainability goals. Will others follow?</summary>
+    <category term="other"/>
+    <category term="chips"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:c98d3ebce669fbd2</id>
+    <title>Sources: Cognition is considering raising $2B or more at a $75B valuation, after raising over $3B in 2026 so far, including $2B at a $48B valuation in September (Rebecca Torrence/Bloomberg)</title>
+    <link rel="alternate" href="https://www.techmeme.com/261120/p36#a261120p36"/>
+    <published>2026-11-20T21:35:00Z</published>
+    <updated>2026-11-20T21:35:00Z</updated>
+    <author><name>Techmeme</name></author>
+    <summary type="text">Rebecca Torrence / Bloomberg : Sources: Cognition is considering raising $2B or more at a $75B valuation, after raising over $3B in 2026 so far, including $2B at a $48B valuation in September — Artificial intelligence coding startup Cognition AI Inc. is in funding talks at a…</summary>
+    <category term="funding"/>
+    <category term="funding"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:454da3128754e968</id>
+    <title>Many longtime Etsy sellers say they are leaving after Etsy updated its terms to say Etsy and its third-party partners can use sellers&apos; content for AI training (Reggie Ugwu/New York Times)</title>
+    <link rel="alternate" href="https://www.techmeme.com/261120/p35#a261120p35"/>
+    <published>2026-11-20T21:30:03Z</published>
+    <updated>2026-11-20T21:30:03Z</updated>
+    <author><name>Techmeme</name></author>
+    <summary type="text">Reggie Ugwu / New York Times : Many longtime Etsy sellers say they are leaving after Etsy updated its terms to say Etsy and its third-party partners can use sellers&apos; content for AI training — Numerous longtime users of the online marketplace have left the platform because they…</summary>
+    <category term="other"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:c989db0d32fd28d8</id>
+    <title>The War Against Slop and an Emerging Weapon to Fight it: Formal Verification</title>
+    <link rel="alternate" href="https://latent.space/p/formal-verification/"/>
+    <published>2026-11-20T21:18:41Z</published>
+    <updated>2026-11-20T21:18:41Z</updated>
+    <author><name>Latent Space</name></author>
+    <summary type="text">Proving software correct with math has traditionally required specialist work. Now AI and Lean are helping automate the process.</summary>
+    <category term="other"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:6e086317ffb3ab4e</id>
+    <title>Researcher plants 2m canaries into the AI supply chain. A privacy disaster surfaced.</title>
+    <link rel="alternate" href="https://arstechnica.com/security/2026/11/a-leaky-ai-supply-chain-is-exposing-secret-user-data-at-an-alarming-rate/"/>
+    <published>2026-11-20T20:59:08Z</published>
+    <updated>2026-11-20T20:59:08Z</updated>
+    <author><name>Ars Technica AI</name></author>
+    <summary type="text">Test using prompts with unique, trackable secrets proves that data doesn&apos;t stay private.</summary>
+    <category term="other"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:08401912b13f330b</id>
+    <title>OpenAI makes it much harder for attackers to extract how its latest AI models think</title>
+    <link rel="alternate" href="https://the-decoder.com/openai-makes-it-much-harder-for-attackers-to-extract-how-its-latest-ai-models-think/"/>
+    <published>2026-11-20T20:31:50Z</published>
+    <updated>2026-11-20T20:31:50Z</updated>
+    <author><name>The Decoder</name></author>
+    <summary type="text">OpenAI has significantly strengthened safeguards against extracting internal reasoning from GPT-6.2 Astra and GPT-6.2 Sol. In adaptive red-teaming tests, the success rate for extracting protected reasoning fell from 54 percent to 0.2 percent. The company is also suspending…</summary>
+    <category term="other"/>
+    <category term="safety"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:1c87d4fbb4ae6dfb</id>
+    <title>Sources: the US SEC is probing Nvidia&apos;s accounting practices; last year, Nvidia changed how it reports revenue, removing Singapore from geographical breakdowns (Reuters)</title>
+    <link rel="alternate" href="https://www.techmeme.com/261120/p31#a261120p31"/>
+    <published>2026-11-20T20:25:00Z</published>
+    <updated>2026-11-20T20:25:00Z</updated>
+    <author><name>Techmeme</name></author>
+    <summary type="text">Reuters : Sources: the US SEC is probing Nvidia&apos;s accounting practices; last year, Nvidia changed how it reports revenue, removing Singapore from geographical breakdowns — The US Securities and Exchange Commission is probing Nvidia&apos;s accounting practices, said two people…</summary>
+    <category term="other"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:78f48f07a4d81213</id>
+    <title>Sources: Nvidia board&apos;s main reason for ousting Jensen Huang was his &quot;lying&quot; and &quot;lack of candor&quot; from October 2025 until this fall over the Alice Huang affair (Wired)</title>
+    <link rel="alternate" href="https://www.techmeme.com/261120/p30#a261120p30"/>
+    <published>2026-11-20T20:20:01Z</published>
+    <updated>2026-11-20T20:20:01Z</updated>
+    <author><name>Techmeme</name></author>
+    <summary type="text">Wired : Sources: Nvidia board&apos;s main reason for ousting Jensen Huang was his “lying” and “lack of candor” from October 2025 until this fall over the Alice Huang affair — Amid allegations of multiple affairs, including with a direct report and an alleged Chinese intelligence…</summary>
+    <category term="other"/>
+    <category term="china"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:efa033219473ccf7</id>
+    <title>Nvidia shares closed down 14% on Friday, sliding for a seventh straight day; the stock fell 44% over seven weeks, pushing the company&apos;s market cap down by $2.5T (Kif Leswing/CNBC)</title>
+    <link rel="alternate" href="https://www.techmeme.com/261120/p29#a261120p29"/>
+    <published>2026-11-20T20:10:01Z</published>
+    <updated>2026-11-20T20:10:01Z</updated>
+    <author><name>Techmeme</name></author>
+    <summary type="text">Kif Leswing / CNBC : Nvidia shares closed down 14% on Friday, sliding for a seventh straight day; the stock fell 44% over seven weeks, pushing the company&apos;s market cap down by $2.5T — The last time Wall Street was this down on Nvidia the chipmaker&apos;s flagship product was the…</summary>
+    <category term="other"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:30d1e1dbc598c13e</id>
+    <title>Sources: Helix Digital, launched by KKR to invest in data centers, is in talks to buy EdgeCore in a deal that values the data center operator at $8B to $10B (Bloomberg)</title>
+    <link rel="alternate" href="https://www.techmeme.com/261120/p28#a261120p28"/>
+    <published>2026-11-20T20:05:01Z</published>
+    <updated>2026-11-20T20:05:01Z</updated>
+    <author><name>Techmeme</name></author>
+    <summary type="text">Bloomberg : Sources: Helix Digital, launched by KKR to invest in data centers, is in talks to buy EdgeCore in a deal that values the data center operator at $8B to $10B — KKR &amp; Co.&apos;s Helix Digital Infrastructure, the company it launched this year to invest in data centers and…</summary>
+    <category term="product"/>
+    <category term="chips"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:59fa562eab8a38b3</id>
+    <title>Daniel Ek backs AI researcher’s fusion power startup. Here’s what they’re building.</title>
+    <link rel="alternate" href="https://techcrunch.com/2026/11/20/daniel-ek-backs-ai-researchers-fusion-power-startup-heres-what-theyre-building/"/>
+    <published>2026-11-20T19:53:41Z</published>
+    <updated>2026-11-20T19:53:41Z</updated>
+    <author><name>TechCrunch AI</name></author>
+    <summary type="text">Spotify founder Daniel Ek is backing Europa Fusion, a fusion power startup founded by an AI researcher. Here&apos;s what the startup is building.</summary>
+    <category term="other"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:86d3aeca06e8ddb7</id>
+    <title>Jensen Huang’s ‘Lying’ Alarmed Nvidia Board Ahead of His Resignation</title>
+    <link rel="alternate" href="https://www.wired.com/story/jensen-huangs-lying-alarmed-nvidia-board-ahead-of-his-resignation/"/>
+    <published>2026-11-20T19:52:21Z</published>
+    <updated>2026-11-20T19:52:21Z</updated>
+    <author><name>WIRED AI</name></author>
+    <summary type="text">Amid allegations of multiple affairs, including with a direct report and an alleged Chinese intelligence asset, sources tell WIRED the Nvidia board’s main issue was the former CEO’s “lack of candor.”</summary>
+    <category term="other"/>
+    <category term="china"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:38136cf0c41628e4</id>
+    <title>Signal blocks screenshots on iOS 27 and Android to stop AI agents from reading private chats</title>
+    <link rel="alternate" href="https://the-decoder.com/signal-blocks-screenshots-on-ios-27-and-android-to-stop-ai-agents-from-reading-private-chats/"/>
+    <published>2026-11-20T19:50:27Z</published>
+    <updated>2026-11-20T19:50:27Z</updated>
+    <author><name>The Decoder</name></author>
+    <summary type="text">Signal is blocking screenshots to stop AI agents like Apple&apos;s Siri AI, Google&apos;s Gemini Intelligence, and Meta&apos;s Muse from reading private chats. The app calls it an &quot;existential threat&quot; to privacy, but admits its protections remain incomplete, including on macOS. Apple, Google…</summary>
+    <category term="other"/>
+    <category term="tools"/>
+    <category term="agents"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:f63829f68a65203b</id>
+    <title>Anthropic matematikçisi Levent Alpöge, Claude ile Riemann hipotezini çözdü</title>
+    <link rel="alternate" href="https://www.teknoblog.com/anthropic-matematikcisi-levent-alpoge-claude-ile-riemann-hipotezini-cozdu/"/>
+    <published>2026-11-20T19:43:00Z</published>
+    <updated>2026-11-20T19:43:00Z</updated>
+    <author><name>Teknoblog</name></author>
+    <summary type="text">Anthropic matematikçisi Levent Alpöge, 160 yıldır çözülemeyen ve 1 milyon dolarlık Milenyum Ödülü kapsamında yer alan Riemann hipotezini Claude yardımıyla kanıtladığını açıkladı. Anthropic matematikçisi Levent Alpöge, Claude ile Riemann hipotezini çözdü haberi ilk önce…</summary>
+    <category term="other"/>
+    <category term="turkey"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:a72f7d6a344bb677</id>
+    <title>Trump says he &quot;would love to see&quot; Jensen Huang return as CEO, saying &quot;if they were smart&quot;, Nvidia would &quot;accept an apology, and let him go back to work&quot; (Bloomberg)</title>
+    <link rel="alternate" href="https://www.techmeme.com/261120/p26#a261120p26"/>
+    <published>2026-11-20T19:35:00Z</published>
+    <updated>2026-11-20T19:35:00Z</updated>
+    <author><name>Techmeme</name></author>
+    <summary type="text">Bloomberg : Trump says he “would love to see” Jensen Huang return as CEO, saying “if they were smart”, Nvidia would “accept an apology, and let him go back to work” — President Donald Trump called for Jensen Huang to make a big apology and return as CEO of Nvidia Corp. …</summary>
+    <category term="other"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:aef21896ed854b20</id>
+    <title>Güney Kore, yapay zeka sayesinde 1 trilyon dolar ihracata ulaştı</title>
+    <link rel="alternate" href="https://www.donanimhaber.com/guney-kore-yapay-zeka-sayesinde-1-trilyon-dolar-ihracata-ulasti--213194"/>
+    <published>2026-11-20T19:35:00Z</published>
+    <updated>2026-11-20T19:35:00Z</updated>
+    <author><name>DonanimHaber</name></author>
+    <summary type="text">Yapay zeka çiplerine yönelik küresel talep Güney Kore&apos;nin ihracatını rekor seviyeye taşıdı. Ülke, 1 trilyon dolar ihracatı aşan dünyadaki dördüncü ekonomi oldu.</summary>
+    <category term="other"/>
+    <category term="turkey"/>
+    <category term="chips"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:321bf9e3c390a636</id>
+    <title>AI claimed a solution to the 167-year-old Riemann hypothesis — and a human did, too</title>
+    <link rel="alternate" href="https://techcrunch.com/2026/11/20/ai-claimed-a-solution-to-the-167-year-old-riemann-hypothesis-and-a-human-did-too/"/>
+    <published>2026-11-20T19:32:08Z</published>
+    <updated>2026-11-20T19:32:08Z</updated>
+    <author><name>TechCrunch AI</name></author>
+    <summary type="text">Mathematicians are having their minds blown by the latest AI-driven result — and there&apos;s a competing human solution, too.</summary>
+    <category term="other"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:81ce5b24dd897b42</id>
+    <title>Quoting Ravi Vakil</title>
+    <link rel="alternate" href="https://simonwillison.net/2026/Nov/20/ravi-vakil/"/>
+    <published>2026-11-20T19:21:49Z</published>
+    <updated>2026-11-20T19:21:49Z</updated>
+    <author><name>Simon Willison</name></author>
+    <summary type="text">Alessandro Masullo has a proposed proof of [Generalized Riemann Hypothesis], and Brian Conrad has been looking closely at it for months and gave extensive feedback which is being incorporated, and it is so far looking good. It is all human, with no AI. The hope was to bring…</summary>
+    <category term="other"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:cf8060cd63ab426d</id>
+    <title>Signal, Siri AI sohbetleri okumasın diye ekran görüntüsünü kapattı</title>
+    <link rel="alternate" href="https://www.teknoblog.com/signal-siri-ai-sohbetleri-okumasin-diye-ekran-goruntusunu-kapatti/"/>
+    <published>2026-11-20T19:08:00Z</published>
+    <updated>2026-11-20T19:08:00Z</updated>
+    <author><name>Teknoblog</name></author>
+    <summary type="text">Signal, Apple Siri AI ve Google Gemini gibi yapay zekâ asistanlarının ekrandaki özel mesajları taramasını önlemek amacıyla iPhone ve Android uygulamasında ekran görüntüsü almayı varsayılan olarak engelledi. Signal, Siri AI sohbetleri okumasın diye ekran görüntüsünü kapattı…</summary>
+    <category term="other"/>
+    <category term="turkey"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:41402f531227987c</id>
+    <title>METR updates its time horizon plot to add judgment-heavy tasks, finding some AI capabilities still grow exponentially but models lag at designing AI evaluations (Grace Huckins/MIT Technology Review)</title>
+    <link rel="alternate" href="https://www.techmeme.com/261120/p25#a261120p25"/>
+    <published>2026-11-20T19:05:01Z</published>
+    <updated>2026-11-20T19:05:01Z</updated>
+    <author><name>Techmeme</name></author>
+    <summary type="text">Grace Huckins / MIT Technology Review : METR updates its time horizon plot to add judgment-heavy tasks, finding some AI capabilities still grow exponentially but models lag at designing AI evaluations — A new report from the AI evaluation nonprofit METR finds that some AI…</summary>
+    <category term="other"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:bc5933ad429c9c37</id>
+    <title>Google&apos;s Gemini can now run Mac apps and finish desktop chores in the background while you keep working</title>
+    <link rel="alternate" href="https://the-decoder.com/googles-gemini-can-now-run-mac-apps-and-finish-desktop-chores-in-the-background-while-you-keep-working/"/>
+    <published>2026-11-20T18:50:31Z</published>
+    <updated>2026-11-20T18:50:31Z</updated>
+    <author><name>The Decoder</name></author>
+    <summary type="text">Google is bringing &quot;Computer Use&quot; to Gemini for Mac, letting the AI operate desktop apps, local files, and websites in an isolated background window with a live preview while users keep working. The article Google&apos;s Gemini can now run Mac apps and finish desktop chores in the…</summary>
+    <category term="product"/>
+    <category term="tools"/>
+    <category term="agents"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:08b074f7bce07f08</id>
+    <title>Trump threatens ‘tremendous tax’ for moving AI data centers outside the US</title>
+    <link rel="alternate" href="https://www.theverge.com/policy/1038892/trump-foreign-data-centers-tax"/>
+    <published>2026-11-20T18:50:19Z</published>
+    <updated>2026-11-20T18:50:19Z</updated>
+    <author><name>The Verge AI</name></author>
+    <summary type="text">President Donald Trump promised to put a &quot;tremendous tax&quot; on companies that build data centers outside of the US, even as states and cities around the country are placing restrictions on new applications to build them. &quot;We&apos;re not going to allow our companies to build data…</summary>
+    <category term="other"/>
+    <category term="chips"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:b863742dab9e4ab1</id>
+    <title>Ollama v0.40.17-rc3</title>
+    <link rel="alternate" href="https://github.com/ollama/ollama/releases/tag/v0.40.17-rc3"/>
+    <published>2026-11-20T18:37:07Z</published>
+    <updated>2026-11-20T18:37:07Z</updated>
+    <author><name>Ollama releases</name></author>
+    <summary type="text">mlxrunner: add Inkling 2 Mini</summary>
+    <category term="tool"/>
+    <category term="open-weights"/>
+    <category term="tools"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:2ef902c4582a1ae8</id>
+    <title>Advancing Science Together: Highlights From the Open Source AI For Science Summit</title>
+    <link rel="alternate" href="https://about.fb.com/news/2026/11/advancing-science-together-highlights-from-the-open-source-ai-for-science-summit/"/>
+    <published>2026-11-20T18:30:45Z</published>
+    <updated>2026-11-20T18:30:45Z</updated>
+    <author><name>Meta Newsroom</name></author>
+    <summary type="text">We brought researchers from universities, hospitals, and industry together for the Open Source AI for Science Summit, an event built around using open source AI to accelerate scientific discovery. The post Advancing Science Together: Highlights From the Open Source AI For…</summary>
+    <category term="product"/>
+    <category term="open-weights"/>
+    <category term="research"/>
+    <category term="tools"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:1a3cd47cecd593e4</id>
+    <title>NVIDIA&apos;ya fidye tehdidi: Son tarih 28 Kasım</title>
+    <link rel="alternate" href="https://shiftdelete.net/nvidia-gentlemen-fidye-yazilimi-iddiasi"/>
+    <published>2026-11-20T18:30:08Z</published>
+    <updated>2026-11-20T18:30:08Z</updated>
+    <author><name>ShiftDelete.Net</name></author>
+    <summary type="text">The Gentlemen fidye yazılımı grubu NVIDIA&apos;yı sızıntı sitesine ekledi ve 28 Kasım&apos;a kadar süre verdi. NVIDIA, kendi sistemlerinin etkilendiğine dair bir iz bulmadığını, bir iş ortağındaki olası olayı incelediğini açıkladı.</summary>
+    <category term="other"/>
+    <category term="turkey"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:e270af56944d8b44</id>
+    <title>Investigation: companies in Alice Huang&apos;s family network have ties to Chinese military suppliers; ~$3.6B in Chinese state money flowed through the companies (New York Times)</title>
+    <link rel="alternate" href="https://www.techmeme.com/261120/p22#a261120p22"/>
+    <published>2026-11-20T18:30:04Z</published>
+    <updated>2026-11-20T18:30:04Z</updated>
+    <author><name>Techmeme</name></author>
+    <summary type="text">New York Times : Investigation: companies in Alice Huang&apos;s family network have ties to Chinese military suppliers; ~$3.6B in Chinese state money flowed through the companies — Companies linked to Alice Huang, the woman at the heart of the Nvidia scandal, are part of a network…</summary>
+    <category term="other"/>
+    <category term="china"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:583b7a1c74131e15</id>
+    <title>The most misunderstood graph in AI just got a major update</title>
+    <link rel="alternate" href="https://www.technologyreview.com/2026/11/20/1149399/the-most-misunderstood-graph-in-ai-just-got-a-major-update/"/>
+    <published>2026-11-20T18:15:15Z</published>
+    <updated>2026-11-20T18:15:15Z</updated>
+    <author><name>MIT Technology Review AI</name></author>
+    <summary type="text">A new report from the AI evaluation nonprofit METR finds that some AI capabilities are continuing to improve along an exponential trajectory—but it also indicates that models aren’t quite as good at tasks that require judgment as they are at coding. The report is an update to…</summary>
+    <category term="other"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:e43240c9ae66c70f</id>
+    <title>Chips can survive the space environment — can their financing?</title>
+    <link rel="alternate" href="https://techcrunch.com/2026/11/20/chips-can-survive-the-space-environment-can-their-financing/"/>
+    <published>2026-11-20T17:40:01Z</published>
+    <updated>2026-11-20T17:40:01Z</updated>
+    <author><name>TechCrunch AI</name></author>
+    <summary type="text">Lenders don&apos;t want SpaceX shooting their collateral into orbit. What does that mean for space data centers writ large?</summary>
+    <category term="other"/>
+    <category term="chips"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:26b8dd677e090b10</id>
+    <title>Türkiye&apos;de çocukların yüzde 63&apos;ü yapay zekayı kullanıyor</title>
+    <link rel="alternate" href="https://www.donanimhaber.com/turkiye-de-cocuklarin-yuzde-63-u-yapay-zekayi-kullaniyor--213175"/>
+    <published>2026-11-20T17:23:00Z</published>
+    <updated>2026-11-20T17:23:00Z</updated>
+    <author><name>DonanimHaber</name></author>
+    <summary type="text">TÜİK verilerine göre 11-17 yaş grubundaki çocukların yüzde 63&apos;ü üretken yapay zeka kullanıyor. Yapay zeka en çok eğitim amacıyla tercih edilirken kullanım oranı kız çocuklarında daha yüksek.</summary>
+    <category term="other"/>
+    <category term="turkey"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:f1b7c64ada916315</id>
+    <title>Anthropic mathematician claims to have solved prestigious Millennium Prize problem with Claude</title>
+    <link rel="alternate" href="https://www.theverge.com/ai-artificial-intelligence/1010051/anthropic-riemann-hypothesis-millennium-prize-problem"/>
+    <published>2026-11-20T16:34:13Z</published>
+    <updated>2026-11-20T16:34:13Z</updated>
+    <author><name>The Verge AI</name></author>
+    <summary type="text">Anthropic mathematician Levent Alpöge claims he has proved the Riemann hypothesis, one of mathematics&apos;s most notoriously difficult problems, with the help of Claude, cracking a puzzle that has eluded some of the world&apos;s best mathematicians for decades. If verified, it would…</summary>
+    <category term="other"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:b8e1839046bc97c6</id>
+    <title>Quoting Levent Alpöge</title>
+    <link rel="alternate" href="https://simonwillison.net/2026/Nov/20/levent-alpoge/"/>
+    <published>2026-11-20T16:30:48Z</published>
+    <updated>2026-11-20T16:30:48Z</updated>
+    <author><name>Simon Willison</name></author>
+    <summary type="text">I believe I have, working with Claude, discovered a proof of the Riemann Hypothesis. In fact, the method easily extends much further, resolving the so-called Generalized Riemann Hypothesis, and I expect, with more time, the Extended Riemann Hypothesis too. Claude and I have…</summary>
+    <category term="opinion"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:755acd825b385233</id>
+    <title>米哈游发了个VLA论文</title>
+    <link rel="alternate" href="https://www.qbitai.com/2026/11/511740.html"/>
+    <published>2026-11-20T16:25:26Z</published>
+    <updated>2026-11-20T16:25:26Z</updated>
+    <author><name>QbitAI (Chinese)</name></author>
+    <summary type="text">8B参数，50小时自主运行</summary>
+    <category term="other"/>
+    <category term="china"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:5bd3f47db223b52c</id>
+    <title>黎曼猜想被证明？！Claude加持，34岁数学家放出Lean证明</title>
+    <link rel="alternate" href="https://www.qbitai.com/2026/11/511727.html"/>
+    <published>2026-11-20T16:07:39Z</published>
+    <updated>2026-11-20T16:07:39Z</updated>
+    <author><name>QbitAI (Chinese)</name></author>
+    <category term="other"/>
+    <category term="china"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:cbb45597e6dc7fa7</id>
+    <title>Bloomberg analysis of 10 million job postings shows AI-exposed roles in China fell 10 percentage points faster than others</title>
+    <link rel="alternate" href="https://the-decoder.com/bloomberg-analysis-of-10-million-job-postings-shows-ai-exposed-roles-in-china-fell-10-percentage-points-faster-than-others/"/>
+    <published>2026-11-20T15:56:03Z</published>
+    <updated>2026-11-20T15:56:03Z</updated>
+    <author><name>The Decoder</name></author>
+    <summary type="text">A Bloomberg News analysis of 10 million job postings suggests AI is compounding China&apos;s already weak labor market. Entry-level workers and the creative industry are feeling the shift most, with more than 90% of Chinese micro-dramas now produced using AI. Former central bank…</summary>
+    <category term="other"/>
+    <category term="china"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:db94ac2d822068e9</id>
+    <title>Çin&apos;in tamamen yapay zeka ile hazırlanan ilk filmi gişede çakıldı</title>
+    <link rel="alternate" href="https://www.donanimhaber.com/cin-in-tamamen-yapay-zeka-ile-hazirlanan-ilk-filmi-gisede-cakildi--213179"/>
+    <published>2026-11-20T15:37:00Z</published>
+    <updated>2026-11-20T15:37:00Z</updated>
+    <author><name>DonanimHaber</name></author>
+    <summary type="text">Çin&apos;in tamamen yapay zeka ile hazırlanan ilk uzun metrajlı filmi Sanxingdui: Future Past, üç haftada yalnızca 1,8 milyon yuan hasılat elde edebildi. İşte detaylar...</summary>
+    <category term="other"/>
+    <category term="turkey"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:17bfc23ca17d1398</id>
+    <title>Apple joins the race for AI agents that control your device while raising new barriers for competitors</title>
+    <link rel="alternate" href="https://the-decoder.com/apple-joins-the-race-for-ai-agents-that-control-your-device-while-raising-new-barriers-for-competitors/"/>
+    <published>2026-11-20T15:03:25Z</published>
+    <updated>2026-11-20T15:03:25Z</updated>
+    <author><name>The Decoder</name></author>
+    <summary type="text">After Meta, OpenAI, Anthropic, and Google launched their own AI agents, Apple is now building one too - while making it harder for rivals to access its devices. The article Apple joins the race for AI agents that control your device while raising new barriers for competitors…</summary>
+    <category term="product"/>
+    <category term="tools"/>
+    <category term="agents"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:f0e77c900b9f7797</id>
+    <title>The fallout from Nvidia’s Jensen Huang scandal continues</title>
+    <link rel="alternate" href="https://techcrunch.com/podcast/the-fallout-from-nvidias-jensen-huang-scandal-continues/"/>
+    <published>2026-11-20T14:55:44Z</published>
+    <updated>2026-11-20T14:55:44Z</updated>
+    <author><name>TechCrunch AI</name></author>
+    <summary type="text">In the midst of dealing with the fallout from its ouster of CEO Jensen Huang, Nvidia delivered its latest earnings report this week, with healthy growth and promises that the good times will continue. At the same time, the chipmaker said it will stop selling its H200 chips in…</summary>
+    <category term="other"/>
+    <category term="chips"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:05d97431e50b773a</id>
+    <title>Nvidia bets at least $500 million on Inception&apos;s diffusion models to strengthen its open-source Nemotron lineup</title>
+    <link rel="alternate" href="https://the-decoder.com/nvidia-bets-at-least-500-million-on-inceptions-diffusion-models-to-strengthen-its-open-source-nemotron-lineup/"/>
+    <published>2026-11-20T14:53:50Z</published>
+    <updated>2026-11-20T14:53:50Z</updated>
+    <author><name>The Decoder</name></author>
+    <summary type="text">Nvidia is close to acquiring AI startup Inception for at least $500 million, according to The Information. The company is just two years old and builds language models based on diffusion processes, an alternative approach to the token-by-token generation used by models like…</summary>
+    <category term="funding"/>
+    <category term="open-weights"/>
+    <category term="funding"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:5b90b00c7a4d9285</id>
+    <title>OpenAI, Dots kişisel yapay zeka ajanlarını ChatGPT Plus planında test ediyor</title>
+    <link rel="alternate" href="https://webrazzi.com/2026/11/20/openai-dots-kisisel-yapay-zeka-ajanlarini-chatgpt-plus-planinda-test-ediyor/"/>
+    <published>2026-11-20T14:30:00Z</published>
+    <updated>2026-11-20T14:30:00Z</updated>
+    <author><name>Webrazzi Yapay Zeka</name></author>
+    <summary type="text">OpenAI, kişisel yapay zeka ajanı Dots&apos;un erişimini genişletiyor. Şirket, daha önce ChatGPT Pro ve üzerindeki abonelik planlarında sunduğu Dots&apos;u, ChatGPT Plus planındaki sınırlı sayıda kullanıcıyla te...</summary>
+    <category term="other"/>
+    <category term="turkey"/>
+    <category term="tools"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:cef6939d7b3165d4</id>
+    <title>The week everything fell apart</title>
+    <link rel="alternate" href="https://www.theverge.com/podcast/1038419/outage-outlook-ground-stop-tech-failure-vergecast"/>
+    <published>2026-11-20T14:06:59Z</published>
+    <updated>2026-11-20T14:06:59Z</updated>
+    <author><name>The Verge AI</name></author>
+    <summary type="text">There was a dayslong Outlook outage. A nationwide ground stop for only the second time in 25 years. Banks seemed to suddenly stop working. Even iCloud couldn&apos;t stay up and running. This week, it felt like the technological world simply collapsed. And it felt like this might be…</summary>
+    <category term="other"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:c32ff07f6ca2e775</id>
+    <title>Veri merkezi emisyonları yüzde 70 artabilir</title>
+    <link rel="alternate" href="https://shiftdelete.net/veri-merkezi-emisyonlari-yuzde-70-iea"/>
+    <published>2026-11-20T14:00:08Z</published>
+    <updated>2026-11-20T14:00:08Z</updated>
+    <author><name>ShiftDelete.Net</name></author>
+    <summary type="text">Uluslararası Enerji Ajansı&apos;na göre veri merkezlerinin emisyonları dört yılda yüzde 70 artabilir. Yapay zeka veri merkezleri yalnız dört yılda İngiltere&apos;nin yıllık tüketiminden fazla ek elektrik çekecek.</summary>
+    <category term="other"/>
+    <category term="turkey"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:912ce9389b493fc3</id>
+    <title>Six AI-powered gadgets that could make your home office smarter</title>
+    <link rel="alternate" href="https://techcrunch.com/2026/11/20/6-ai-powered-gadgets-that-could-make-your-home-office-smarter/"/>
+    <published>2026-11-20T14:00:00Z</published>
+    <updated>2026-11-20T14:00:00Z</updated>
+    <author><name>TechCrunch AI</name></author>
+    <summary type="text">From notetakers to webcams, here are six AI-powered gadgets to upgrade your workspace.</summary>
+    <category term="other"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:9d87928eaf4d5dad</id>
+    <title>Yapay Zeka Gündemi #69</title>
+    <link rel="alternate" href="https://webrazzi.com/2026/11/20/yapay-zeka-gundemi-69/"/>
+    <published>2026-11-20T14:00:00Z</published>
+    <updated>2026-11-20T14:00:00Z</updated>
+    <author><name>Webrazzi Yapay Zeka</name></author>
+    <summary type="text">Google, Gemini 4 Neon modelini tanıtırken OpenAI, GPT-6.2 Astra ve Sol modellerini kullanıma sundu. Apple ve Google&apos;ın Mac bilgisayarlarda işlem yapabilen yapay zeka ajanlarına yönelik çalışmaları dik...</summary>
+    <category term="other"/>
+    <category term="turkey"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:954d812ac381e9d9</id>
+    <title>llama.cpp release b12568</title>
+    <link rel="alternate" href="https://github.com/ggml-org/llama.cpp/releases/tag/b12568"/>
+    <published>2026-11-20T13:33:27Z</published>
+    <updated>2026-11-20T13:33:27Z</updated>
+    <author><name>llama.cpp releases</name></author>
+    <summary type="text">model: add Domyn Edge 4B Model ( #32559 ) feat: add domyn-edge model Generate tokenizer hash for conversion + fix tests Address changes according to code-review skill catch ValueError in convert_hf_to_gguf_update.py renegerate fusion test baseline + fix model naming style…</summary>
+    <category term="tool"/>
+    <category term="open-weights"/>
+    <category term="tools"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:fd3deff7466808c0</id>
+    <title>Google&apos;s latest homepage update pushes its search engine further toward an AI answer engine</title>
+    <link rel="alternate" href="https://the-decoder.com/googles-latest-homepage-update-pushes-its-search-engine-further-toward-an-ai-answer-engine/"/>
+    <published>2026-11-20T13:19:31Z</published>
+    <updated>2026-11-20T13:19:31Z</updated>
+    <author><name>The Decoder</name></author>
+    <summary type="text">Google is rolling out a collapsible sidebar globally on its Desktop Search homepage. In AI Mode, it lets users reopen recent AI searches, search threads, and create notebooks. Temporary threads that aren&apos;t saved to history are also launching worldwide. Google Search co-lead…</summary>
+    <category term="other"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:3dfbff325782f752</id>
+    <title>llama.cpp release b12567</title>
+    <link rel="alternate" href="https://github.com/ggml-org/llama.cpp/releases/tag/b12567"/>
+    <published>2026-11-20T13:03:07Z</published>
+    <updated>2026-11-20T13:03:07Z</updated>
+    <author><name>llama.cpp releases</name></author>
+    <summary type="text">llamafile(s390x): add QK data type support ( #32600 ) llamafile: add QK support for s390x Signed-off-by: Aaron Teo aaron.teo1@ibm.com llamafile: clean up for s390x Signed-off-by: Aaron Teo aaron.teo1@ibm.com Signed-off-by: Aaron Teo aaron.teo1@ibm.com Website: https://llama.app…</summary>
+    <category term="tool"/>
+    <category term="open-weights"/>
+    <category term="tools"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:83d2c21e0d3a27a8</id>
+    <title>Yapay zeka destekli B2B tedarik platformu Everful, 48,5 milyon dolar yatırım aldı</title>
+    <link rel="alternate" href="https://webrazzi.com/2026/11/20/yapay-zeka-destekli-b2b-tedarik-platformu-everful-48-5-milyon-dolar-yatirim-aldi/"/>
+    <published>2026-11-20T13:00:00Z</published>
+    <updated>2026-11-20T13:00:00Z</updated>
+    <author><name>Webrazzi Yapay Zeka</name></author>
+    <summary type="text">Yapay zeka destekli B2B tedarik platformu Everful, 48,5 milyon dolar yatırım aldı. Şirketin 48,5 milyon dolarlık A serisi yatırım turuna Vertex Ventures Southeast Asia &amp; India ve January Capital o...</summary>
+    <category term="funding"/>
+    <category term="turkey"/>
+    <category term="funding"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:f873c4a5a72bd3ab</id>
+    <title>How Jensen Huang used humiliation in his management style for decades; Huang&apos;s behavior once led to a settlement with an exec who said he &quot;terrorized&quot; staff (New York Times)</title>
+    <link rel="alternate" href="https://www.techmeme.com/261120/p12#a261120p12"/>
+    <published>2026-11-20T12:40:01Z</published>
+    <updated>2026-11-20T12:40:01Z</updated>
+    <author><name>Techmeme</name></author>
+    <summary type="text">New York Times : How Jensen Huang used humiliation in his management style for decades; Huang&apos;s behavior once led to a settlement with an exec who said he “terrorized” staff — The Nvidia co-founder&apos;s belittling behavior toward employees goes back decades. It once led to a…</summary>
+    <category term="opinion"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:ff3559dcabff6359</id>
+    <title>Signal is blocking Gemini and Siri AI from reading your screen</title>
+    <link rel="alternate" href="https://www.theverge.com/ai-artificial-intelligence/1038390/signal-blocking-ai-agent-screenshots-mobile-app"/>
+    <published>2026-11-20T12:30:47Z</published>
+    <updated>2026-11-20T12:30:47Z</updated>
+    <author><name>The Verge AI</name></author>
+    <summary type="text">Signal is restricting the ability to take screenshots on Android and iOS devices in an effort to prevent AI agents from reading users&apos; messages and other data. The agentic AI capabilities built into operating systems that analyze on-screen information to learn more about the…</summary>
+    <category term="other"/>
+    <category term="tools"/>
+    <category term="agents"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:c6860881ce395120</id>
+    <title>After Nvidia, will AMD be a target as China’s ‘2nd-choice’ supplier for AI chips?</title>
+    <link rel="alternate" href="https://www.scmp.com/tech/tech-war/article/3375249/after-nvidia-will-amd-be-target-chinas-second-choice-ai-chips"/>
+    <published>2026-11-20T12:30:09Z</published>
+    <updated>2026-11-20T12:30:09Z</updated>
+    <author><name>SCMP Tech</name></author>
+    <summary type="text">Short sellers have targeted Advanced Micro Devices (AMD) over alleged connections to Chinese firms blacklisted by Washington, erasing more than 10 per cent off its value in a matter of hours and fuelling speculation over whether it could be the next chip company in the…</summary>
+    <category term="other"/>
+    <category term="china"/>
+    <category term="chips"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:bf8bb0f5a7f03220</id>
+    <title>OpenAI’ın ilk telefonunu iPhone’ları üreten şirket hazırlayabilir</title>
+    <link rel="alternate" href="https://www.teknoblog.com/ilk-openai-telefonunu-foxconn-mu-uretecek/"/>
+    <published>2026-11-20T12:30:00Z</published>
+    <updated>2026-11-20T12:30:00Z</updated>
+    <author><name>Teknoblog</name></author>
+    <summary type="text">OpenAI’ın yapay zekâ odaklı ilk akıllı telefonuna ilişkin yeni bilgiler gelmeye devam ediyor. Çin kaynaklı son haberler, şirketin üzerinde çalıştığı telefonun üretimi için Apple’ın en büyük üretim ortaklarından Foxconn ile anlaşmaya vardığını öne sürüyor. Foxconn’un iştiraki…</summary>
+    <category term="other"/>
+    <category term="turkey"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:c36a25a18a6af25b</id>
+    <title>Google, AI sohbetlerini doğrudan arama sayfasına taşıyor</title>
+    <link rel="alternate" href="https://www.donanimhaber.com/google-ai-sohbetlerini-dogrudan-arama-sayfasina-tasiyor--213168"/>
+    <published>2026-11-20T12:21:00Z</published>
+    <updated>2026-11-20T12:21:00Z</updated>
+    <author><name>DonanimHaber</name></author>
+    <summary type="text">Google, masaüstü arama sayfasına eklediği yeni kenar çubuğuyla AI Mode sohbet geçmişini erişilebilir hale getiriyor. Kullanıcılar, önceki aramalarına kaldıkları yerden devam edebilecek.</summary>
+    <category term="other"/>
+    <category term="turkey"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:446e79a1bd0b8f10</id>
+    <title>美国AI音乐巨头进军视频生成，底层模型来自中国MiniMax</title>
+    <link rel="alternate" href="https://www.qbitai.com/2026/11/511722.html"/>
+    <published>2026-11-20T12:18:01Z</published>
+    <updated>2026-11-20T12:18:01Z</updated>
+    <author><name>QbitAI (Chinese)</name></author>
+    <summary type="text">美国AI音乐平台Suno宣布推出视觉创作工具Visuals</summary>
+    <category term="other"/>
+    <category term="china"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:762f009e29eb554d</id>
+    <title>Yapay zekâya göre Türkiye’nin en itibarlı e-ticaret markaları belli oldu</title>
+    <link rel="alternate" href="https://www.technopat.net/2026/11/20/yapay-zekaya-gore-turkiyenin-en-itibarli-e-ticaret-markalari-belli-oldu/"/>
+    <published>2026-11-20T12:12:33Z</published>
+    <updated>2026-11-20T12:12:33Z</updated>
+    <author><name>Technopat</name></author>
+    <summary type="text">Türkiye’de faaliyet gösteren e-ticaret platformlarının üretken yapay zekâ sistemlerindeki görünürlüğünü ve algısını inceleyen yeni bir araştırmanın sonuçları açıklandı. ChatGPT, Gemini ve Claude tarafından üretilen yanıtların analiz edildiği araştırmada, Trendyol %59,6 ile…</summary>
+    <category term="other"/>
+    <category term="turkey"/>
+    <category term="tools"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:6a30348cc6d004ca</id>
+    <title>Blue Origin, Google&apos;ın yapay zeka veri merkezlerini uzaya taşıyacak</title>
+    <link rel="alternate" href="https://www.donanimhaber.com/blue-origin-google-in-yapay-zeka-uydularini-uzaya-tasiyacak--213163"/>
+    <published>2026-11-20T12:00:00Z</published>
+    <updated>2026-11-20T12:00:00Z</updated>
+    <author><name>DonanimHaber</name></author>
+    <summary type="text">Blue Origin, Google&apos;ın yapay zeka sunucularını taşıyan uyduları 2029&apos;da New Glenn roketiyle uzaya gönderecek. Görev, uzayda veri merkezi kurma hedefinde önemli bir aşama olacak.</summary>
+    <category term="other"/>
+    <category term="turkey"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:80659b0d7a55dd4d</id>
+    <title>Apple, Mac bilgisayarları kontrol edebilen kendi yapay zeka ajanını geliştiriyor</title>
+    <link rel="alternate" href="https://webrazzi.com/2026/11/20/apple-mac-bilgisayarlari-kontrol-edebilen-kendi-yapay-zeka-ajanini-gelistiriyor/"/>
+    <published>2026-11-20T12:00:00Z</published>
+    <updated>2026-11-20T12:00:00Z</updated>
+    <author><name>Webrazzi Yapay Zeka</name></author>
+    <summary type="text">Apple, kullanıcıların bilgisayarlarında çeşitli görevleri yerine getirebilen yeni bir yapay zeka ajanı üzerinde çalışıyor. Şirketin yayımladığı iş ilanları, geliştirilen sistemin internette gezinebild...</summary>
+    <category term="other"/>
+    <category term="turkey"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:9c99530973c79b38</id>
+    <title>Muse Is Unleashing a World of Pettiness on Instagram</title>
+    <link rel="alternate" href="https://www.wired.com/story/muse-is-unleashing-a-world-of-pettiness-on-instagram/"/>
+    <published>2026-11-20T12:00:00Z</published>
+    <updated>2026-11-20T12:00:00Z</updated>
+    <author><name>WIRED AI</name></author>
+    <summary type="text">Meta’s AI assistant can track and unfollow Instagram users who don’t follow you back—and some people are taking full advantage.</summary>
+    <category term="other"/>
+    <category term="tools"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:402dfb5839d7d928</id>
+    <title>China’s AI watchdogs</title>
+    <link rel="alternate" href="https://www.scmp.com/tech/tech-trends/series/3375265/chinas-ai-watchdogs"/>
+    <published>2026-11-20T11:55:01Z</published>
+    <updated>2026-11-20T11:55:01Z</updated>
+    <author><name>SCMP Tech</name></author>
+    <category term="other"/>
+    <category term="china"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:6cf7e64e186199a7</id>
+    <title>Sources: Shanghai-based Pragmatik Labs, founded by ex-Qwen AI head Junyang Lin, raised tens of millions of dollars at a $5B valuation, up from $2B in August (Bloomberg)</title>
+    <link rel="alternate" href="https://www.techmeme.com/261120/p10#a261120p10"/>
+    <published>2026-11-20T11:10:01Z</published>
+    <updated>2026-11-20T11:10:01Z</updated>
+    <author><name>Techmeme</name></author>
+    <summary type="text">Bloomberg : Sources: Shanghai-based Pragmatik Labs, founded by ex-Qwen AI head Junyang Lin, raised tens of millions of dollars at a $5B valuation, up from $2B in August — A startup founded by Alibaba Group Holding Ltd.&apos;s former AI chief has closed new funding at a valuation of…</summary>
+    <category term="funding"/>
+    <category term="china"/>
+    <category term="funding"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:ea4ed6508b565844</id>
+    <title>Signal says it will restrict screenshots by default to stop AI agents from reading private chats on phones but warns its new protections are &quot;incomplete&quot; (Katie Paul/Reuters)</title>
+    <link rel="alternate" href="https://www.techmeme.com/261120/p9#a261120p9"/>
+    <published>2026-11-20T11:00:39Z</published>
+    <updated>2026-11-20T11:00:39Z</updated>
+    <author><name>Techmeme</name></author>
+    <summary type="text">Katie Paul / Reuters : Signal says it will restrict screenshots by default to stop AI agents from reading private chats on phones but warns its new protections are “incomplete” — Encrypted messaging service Signal said on Friday it would restrict screenshots to stop AI agents…</summary>
+    <category term="other"/>
+    <category term="tools"/>
+    <category term="agents"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:048d383347dd153d</id>
+    <title>Gemini, Mac&apos;te uygulamalar arasında işlem yapabilecek</title>
+    <link rel="alternate" href="https://webrazzi.com/2026/11/20/gemini-macte-uygulamalar-arasinda-islem-yapabilecek/"/>
+    <published>2026-11-20T11:00:00Z</published>
+    <updated>2026-11-20T11:00:00Z</updated>
+    <author><name>Webrazzi Yapay Zeka</name></author>
+    <summary type="text">Google, Gemini’ın Mac uygulamasına bilgisayarı kullanıcı adına kontrol ederek çok adımlı görevleri yerine getirebilen yeni bir özellik ekliyor. “Computer use” adı verilen özellik, yapay zeka asistanın...</summary>
+    <category term="other"/>
+    <category term="turkey"/>
+    <category term="agents"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:0dd62c461aec0413</id>
+    <title>Regular Tech Bros Are Worried About Honeypots</title>
+    <link rel="alternate" href="https://www.wired.com/story/regular-tech-bros-are-worried-about-honeypots/"/>
+    <published>2026-11-20T11:00:00Z</published>
+    <updated>2026-11-20T11:00:00Z</updated>
+    <author><name>WIRED AI</name></author>
+    <summary type="text">The Jensen Huang scandal is the latest fuel for dating anxieties among newly rich and powerful tech workers.</summary>
+    <category term="other"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:0ee6dd6682935dad</id>
+    <title>Filing: SK Hynix will become Kioxia&apos;s largest shareholder with a ~14.1% stake after it converts Kioxia bonds into shares, expanding its clout in the NAND sector (Yoolim Lee/Bloomberg)</title>
+    <link rel="alternate" href="https://www.techmeme.com/261120/p8#a261120p8"/>
+    <published>2026-11-20T10:51:08Z</published>
+    <updated>2026-11-20T10:51:08Z</updated>
+    <author><name>Techmeme</name></author>
+    <summary type="text">Yoolim Lee / Bloomberg : Filing: SK Hynix will become Kioxia&apos;s largest shareholder with a ~14.1% stake after it converts Kioxia bonds into shares, expanding its clout in the NAND sector — SK Hynix Inc. will become rival Kioxia Holdings Corp.&apos;s largest shareholder, expanding its…</summary>
+    <category term="other"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:8904b4115a6688ff</id>
+    <title>European Digital Infrastructure Consortium launches today to strengthen digital sovereignty in education</title>
+    <link rel="alternate" href="https://digital-strategy.ec.europa.eu/en/news/european-digital-infrastructure-consortium-launches-today-strengthen-digital-sovereignty-education"/>
+    <published>2026-11-20T10:30:00Z</published>
+    <updated>2026-11-20T10:30:00Z</updated>
+    <author><name>EU Digital Strategy news</name></author>
+    <summary type="text">European Digital Infrastructure Consortium launches today to strengthen digital sovereignty in education Anonymous (not verified) Fri, 11/20/2026 - 11:30 Today, the European Commission and eight Member States are launching the European Digital Infrastructure Consortium on…</summary>
+    <category term="policy"/>
+    <category term="regulation"/>
+  </entry>
+  <entry>
+    <id>urn:ai-news-tracker:3ea993db7e3c60d1</id>
+    <title>Combatting adversarial distillation</title>
+    <link rel="alternate" href="https://openai.com/index/combatting-adversarial-distillation"/>
+    <published>2026-11-20T10:00:00Z</published>
+    <updated>2026-11-20T10:00:00Z</updated>
+    <author><name>OpenAI News</name></author>
+    <summary type="text">OpenAI’s layered approach to adversarial distillation combines model training, safeguards, detection, and enforcement to protect against capability extraction.</summary>
+    <category term="product"/>
+    <category term="tools"/>
+  </entry>
+</feed>

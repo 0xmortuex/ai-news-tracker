@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>AI News Tracker: top stories</title>
+  <link>https://0xmortuex.github.io/ai-news-tracker/</link>
+  <description>The highest-scoring AI stories of the last 3 days, one entry per story. Title, link and a short excerpt only.</description>
+  <language>en</language>
+  <lastBuildDate>Sat, 21 Nov 2026 10:27:38 GMT</lastBuildDate>
+  <generator>ai-news-tracker/stories-1</generator>
+  <atom:link href="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss" rel="self" type="application/rss+xml"/>
+  <item>
+    <title>Introducing Gemini 4 Neon</title>
+    <link>https://deepmind.google/blog/introducing-gemini-4-neon/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-8b4c88bf</guid>
+    <pubDate>Wed, 18 Nov 2026 21:35:43 GMT</pubDate>
+    <description>10 sources: Hacker News: OpenAI (50+ points), Techmeme, The Decoder, Simon Willison and 6 more.</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>model-release</category>
+    <category>release</category>
+    <category>Anthropic</category>
+    <category>Google</category>
+    <category>Google DeepMind</category>
+    <category>OpenAI</category>
+  </item>
+  <item>
+    <title>Ollama v0.40.17</title>
+    <link>https://github.com/ollama/ollama/releases/tag/v0.40.17</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-0737a316</guid>
+    <pubDate>Sat, 21 Nov 2026 04:05:14 GMT</pubDate>
+    <description>Ollama releases. Inkling 2 Mini Inkling 2 Mini from Thinking Machines is a 26B parameter model with 5.4B active. Its looped layers give it more computation per token than its size suggests, and it still fits on a Mac at about 20GB. It handles text and images, tool calls, and thinking, and…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>tool</category>
+    <category>release</category>
+    <category>tooling</category>
+    <category>Ollama</category>
+    <category>Thinking Machines</category>
+  </item>
+  <item>
+    <title>Ollama v0.40.17-rc4</title>
+    <link>https://github.com/ollama/ollama/releases/tag/v0.40.17-rc4</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-51167375</guid>
+    <pubDate>Fri, 20 Nov 2026 23:04:26 GMT</pubDate>
+    <description>Ollama releases. Merge remote-tracking branch &apos;upstream/main&apos; into release_v0.40.17</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>tool</category>
+    <category>release</category>
+    <category>tooling</category>
+    <category>Ollama</category>
+  </item>
+  <item>
+    <title>Claude Code v2.1.330</title>
+    <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.330</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-8634cb70</guid>
+    <pubDate>Fri, 20 Nov 2026 22:32:56 GMT</pubDate>
+    <description>Claude Code releases. What&apos;s changed Added sign-in to organizations managed in Anthropic&apos;s Enterprise Admin Console: after claude auth login , Claude Code applies the organization&apos;s settings and uses its cloud provider or gateway Added easel, a built-in mod that draws charts when asked and under MCP…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>tool</category>
+    <category>release</category>
+    <category>tooling</category>
+    <category>Anthropic</category>
+    <category>Claude Code</category>
+    <category>Model Context Protocol</category>
+  </item>
+  <item>
+    <title>Token fraud is here and it’s BAD (YouTube)</title>
+    <link>https://simonwillison.net/2026/Nov/20/token-fraud-is-here-and-its-bad/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-b8d3c678</guid>
+    <pubDate>Fri, 20 Nov 2026 02:49:57 GMT</pubDate>
+    <description>Simon Willison. Token fraud is here and it’s BAD (YouTube) Claire Vo runs ChatPRD , an AI platform that helps product managers &quot;turn an idea into a spec&quot;. The product has been live since the GPT-4 era, and Claire has been building it in public for much of that time. In this YouTube video (see…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>model-release</category>
+    <category>release</category>
+    <category>OpenAI</category>
+    <category>GPT-4</category>
+  </item>
+  <item>
+    <title>Ollama v0.40.17-rc3</title>
+    <link>https://github.com/ollama/ollama/releases/tag/v0.40.17-rc3</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-370cc8c0</guid>
+    <pubDate>Fri, 20 Nov 2026 18:37:07 GMT</pubDate>
+    <description>Ollama releases. mlxrunner: add Inkling 2 Mini</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>tool</category>
+    <category>release</category>
+    <category>tooling</category>
+    <category>Ollama</category>
+  </item>
+  <item>
+    <title>Industry insiders say new US export rules affect a broader range of chips, including SoCs used in consumer electronics, extending beyond advanced AI chips (Cheng Ting-Fang/Nikkei Asia)</title>
+    <link>https://www.techmeme.com/261121/p2#a261121p2</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-dfdac2e9</guid>
+    <pubDate>Sat, 21 Nov 2026 06:00:55 GMT</pubDate>
+    <description>Techmeme. Cheng Ting-Fang / Nikkei Asia : Industry insiders say new US export rules affect a broader range of chips, including SoCs used in consumer electronics, extending beyond advanced AI chips — TAIPEI — Tighter U.S. export controls introduced Thursday are having a far broader impact…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>policy</category>
+    <category>policy</category>
+  </item>
+  <item>
+    <title>Depth Pro 2: Sharp and Temporally Consistent Metric Monocular Depth</title>
+    <link>https://huggingface.co/papers/2611.26603</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-f1fb5b69</guid>
+    <pubDate>Wed, 18 Nov 2026 19:00:00 GMT</pubDate>
+    <description>2 sources: Hugging Face Daily Papers, Apple Machine Learning Research. We present Depth Pro 2, an approach to estimating dense metric depth for images and video at full resolution. By analyzing prior methods for monocular depth estimation, we find that they commonly trade off temporal consistency and boundary sharpness: multi-frame methods favor…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>paper</category>
+    <category>research</category>
+    <category>Apple</category>
+  </item>
+  <item>
+    <title>Cursor tells lawmakers it is considering phasing out Chinese open-weight AI models due to &quot;geopolitical risk&quot;; Cursor&apos;s Composer 2 was built on Kimi K2.5 (Kai Nicol-Schwarz/CNBC)</title>
+    <link>https://www.techmeme.com/261120/p39#a261120p39</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-1aa5eb0c</guid>
+    <pubDate>Fri, 20 Nov 2026 23:00:01 GMT</pubDate>
+    <description>Techmeme. Kai Nicol-Schwarz / CNBC : Cursor tells lawmakers it is considering phasing out Chinese open-weight AI models due to “geopolitical risk”; Cursor&apos;s Composer 2 was built on Kimi K2.5 — SpaceX&apos;s artificial-intelligence coding platform, Cursor, is considering moving away from using…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>policy</category>
+    <category>policy</category>
+    <category>Moonshot</category>
+    <category>Kimi K2.5</category>
+    <category>Cursor</category>
+  </item>
+  <item>
+    <title>OpenAI makes it much harder for attackers to extract how its latest AI models think</title>
+    <link>https://the-decoder.com/openai-makes-it-much-harder-for-attackers-to-extract-how-its-latest-ai-models-think/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-dad2387f</guid>
+    <pubDate>Fri, 20 Nov 2026 20:31:50 GMT</pubDate>
+    <description>The Decoder. OpenAI has significantly strengthened safeguards against extracting internal reasoning from GPT-6.2 Astra and GPT-6.2 Sol. In adaptive red-teaming tests, the success rate for extracting protected reasoning fell from 54 percent to 0.2 percent. The company is also suspending…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>other</category>
+    <category>safety</category>
+    <category>OpenAI</category>
+    <category>GPT-6.2-Astra</category>
+    <category>GPT-6.2-Sol</category>
+  </item>
+  <item>
+    <title>Meta’s Muse Charm might cost $300</title>
+    <link>https://www.theverge.com/tech/1038087/meta-muse-charm-ai-price</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-5d88ed95</guid>
+    <pubDate>Thu, 19 Nov 2026 20:22:17 GMT</pubDate>
+    <description>2 sources: The Verge AI, TechCrunch AI. Meta is planning to price the Muse Charm, a little gadget with a screen that lets you chat with your Muse AI agent, at $300, according to The Information. CEO Mark Zuckerberg revealed the gadget earlier this year and said the company expected to ship the Charm &quot;in time for the…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>other</category>
+    <category>pricing</category>
+    <category>Meta</category>
+  </item>
+  <item>
+    <title>AI agents are getting wallets. Is Hong Kong ready for them?</title>
+    <link>https://www.scmp.com/tech/big-tech/article/3375253/ai-agents-are-getting-wallets-hong-kong-ready-them</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-f384d4e3</guid>
+    <pubDate>Sat, 21 Nov 2026 02:30:05 GMT</pubDate>
+    <description>SCMP Tech. Minds by Animoca Brands, an agentic artificial intelligence platform created by the Web3 firm, is riding on Hong Kong’s push to turn automated agents into everyday shopping tools, piloting live transactions on Visa’s network just as local regulators place agentic commerce on…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>policy</category>
+    <category>policy</category>
+  </item>
+  <item>
+    <title>Anthropic announces closing of initial public offering, including full exercise of underwriters’ option to purchase additional shares, and closing of concurrent private placement</title>
+    <link>https://www.anthropic.com/news/ipo-close</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-8b6ff918</guid>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 GMT</pubDate>
+    <description>Anthropic News (third-party scrape). Today Anthropic, PBC announced the closing of its initial public offering of an aggregate of 1,127,000,000 shares of its Class A common stock at a public offering price of $83.00 per share, including the full exercise by the underwriters of their option to purchase an…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>product</category>
+    <category>pricing</category>
+    <category>Anthropic</category>
+  </item>
+  <item>
+    <title>Nvidia faces further blow after shock US export permit data release: analysts</title>
+    <link>https://www.scmp.com/tech/big-tech/article/3375287/nvidia-faces-further-blow-after-shock-us-export-permit-data-release-analysts</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-5b2f7d67</guid>
+    <pubDate>Sat, 21 Nov 2026 01:00:13 GMT</pubDate>
+    <description>SCMP Tech. US lawmakers have thrown the cross-border semiconductor trade into fresh turmoil after releasing confidential licensing records showing Washington approved the sale of nearly 880,000 advanced AI chips to Chinese tech companies earlier this year. The disclosures, made by a US…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>policy</category>
+    <category>policy</category>
+    <category>NVIDIA</category>
+  </item>
+  <item>
+    <title>ComfyUI v0.46.2</title>
+    <link>https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.46.2</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-c2bbec5f</guid>
+    <pubDate>Fri, 20 Nov 2026 21:58:18 GMT</pubDate>
+    <description>ComfyUI releases.</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>tool</category>
+    <category>release</category>
+    <category>tooling</category>
+    <category>ComfyUI</category>
+  </item>
+  <item>
+    <title>Signal blocks screenshots on iOS 27 and Android to stop AI agents from reading private chats</title>
+    <link>https://the-decoder.com/signal-blocks-screenshots-on-ios-27-and-android-to-stop-ai-agents-from-reading-private-chats/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-2ca6d4ba</guid>
+    <pubDate>Fri, 20 Nov 2026 19:50:27 GMT</pubDate>
+    <description>The Decoder. Signal is blocking screenshots to stop AI agents like Apple&apos;s Siri AI, Google&apos;s Gemini Intelligence, and Meta&apos;s Muse from reading private chats. The app calls it an &quot;existential threat&quot; to privacy, but admits its protections remain incomplete, including on macOS. Apple, Google…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>other</category>
+    <category>safety</category>
+    <category>Apple</category>
+    <category>Google</category>
+    <category>Meta</category>
+  </item>
+  <item>
+    <title>Quoting Ravi Vakil</title>
+    <link>https://simonwillison.net/2026/Nov/20/ravi-vakil/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-8904d94d</guid>
+    <pubDate>Fri, 20 Nov 2026 19:21:49 GMT</pubDate>
+    <description>Simon Willison. Alessandro Masullo has a proposed proof of [Generalized Riemann Hypothesis], and Brian Conrad has been looking closely at it for months and gave extensive feedback which is being incorporated, and it is so far looking good. It is all human, with no AI. The hope was to bring…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>other</category>
+  </item>
+  <item>
+    <title>Quoting Levent Alpöge</title>
+    <link>https://simonwillison.net/2026/Nov/20/levent-alpoge/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-346c234c</guid>
+    <pubDate>Fri, 20 Nov 2026 16:30:48 GMT</pubDate>
+    <description>Simon Willison. I believe I have, working with Claude, discovered a proof of the Riemann Hypothesis. In fact, the method easily extends much further, resolving the so-called Generalized Riemann Hypothesis, and I expect, with more time, the Extended Riemann Hypothesis too. Claude and I have…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>opinion</category>
+    <category>Anthropic</category>
+  </item>
+  <item>
+    <title>Ollama v0.40.17-rc2: mlxrunner: adapt saved history to memory pressure (#19678)</title>
+    <link>https://github.com/ollama/ollama/releases/tag/v0.40.17-rc2</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-177d5063</guid>
+    <pubDate>Thu, 19 Nov 2026 23:41:42 GMT</pubDate>
+    <description>Ollama releases. mlxrunner: adapt saved history to memory pressure Retain Metal prefix history using observed memory headroom and execution workspace rather than a fixed 8 GiB allowance. Release unused buffers and cold history when system compression grows, preserving reusable paths and active…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>tool</category>
+    <category>release</category>
+    <category>tooling</category>
+    <category>Ollama</category>
+  </item>
+  <item>
+    <title>Claude Code v2.1.329</title>
+    <link>https://github.com/anthropics/claude-code/releases/tag/v2.1.329</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-2880b819</guid>
+    <pubDate>Thu, 19 Nov 2026 22:14:41 GMT</pubDate>
+    <description>Claude Code releases. What&apos;s changed Added a trust dialog warning that says where a folder&apos;s hooks are declared Added a warning in the conversation, in Claude Desktop and other non-interactive hosts, when hooks in managed settings fail to load Added this session&apos;s scheduled tasks, /loop wakeups, the…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>tool</category>
+    <category>release</category>
+    <category>tooling</category>
+    <category>Anthropic</category>
+    <category>Claude Code</category>
+  </item>
+  <item>
+    <title>PostgreSQL 19 Released</title>
+    <link>https://simonwillison.net/2026/Nov/19/postgresql-19/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-1b2096cc</guid>
+    <pubDate>Thu, 19 Nov 2026 20:43:57 GMT</pubDate>
+    <description>Simon Willison. PostgreSQL 19 Released Most years PostgreSQL ships a new release in September, but this year&apos;s release came two months later thanks mainly to the flurry of issues that the PostgreSQL team needed to address as part of the ongoing AI-reported vulnerability apocalypse. This…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>security</category>
+    <category>safety</category>
+  </item>
+  <item>
+    <title>A bipartisan group of 24+ House lawmakers forms the AI Safety and Innovation Caucus, seeking to balance mitigating AI risks with maintaining US leadership in AI (Owen Dahlkamp/Politico)</title>
+    <link>https://www.techmeme.com/261119/p48#a261119p48</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-49b2f6e2</guid>
+    <pubDate>Thu, 19 Nov 2026 19:01:15 GMT</pubDate>
+    <description>Techmeme. Owen Dahlkamp / Politico : A bipartisan group of 24+ House lawmakers forms the AI Safety and Innovation Caucus, seeking to balance mitigating AI risks with maintaining US leadership in AI — A bipartisan coalition of over two dozen House lawmakers is forming a new artificial…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>policy</category>
+    <category>safety</category>
+    <category>policy</category>
+  </item>
+  <item>
+    <title>Ask HN: I have been unemployed for 2y. 15 years of experience, US. What to do?</title>
+    <link>https://news.ycombinator.com/item?id=50583761</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-36836ab4</guid>
+    <pubDate>Fri, 20 Nov 2026 23:18:32 GMT</pubDate>
+    <description>Hacker News: LLM (50+ points). 196 points · 150 comments on Hacker News</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>other</category>
+  </item>
+  <item>
+    <title>Combatting adversarial distillation</title>
+    <link>https://openai.com/index/combatting-adversarial-distillation</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-a51e638d</guid>
+    <pubDate>Fri, 20 Nov 2026 10:00:00 GMT</pubDate>
+    <description>OpenAI News. OpenAI’s layered approach to adversarial distillation combines model training, safeguards, detection, and enforcement to protect against capability extraction.</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>product</category>
+    <category>OpenAI</category>
+  </item>
+  <item>
+    <title>Anthropic-backed pro-AI safety nonprofit Public First Action&apos;s PACs spent $25M+ in 12 states to help elect eight of the 13 House and Senate candidates it backed (Clara Ence Morse/Washington Post)</title>
+    <link>https://www.techmeme.com/261119/p29#a261119p29</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-b9f859cc</guid>
+    <pubDate>Thu, 19 Nov 2026 13:50:01 GMT</pubDate>
+    <description>Techmeme. Clara Ence Morse / Washington Post : Anthropic-backed pro-AI safety nonprofit Public First Action&apos;s PACs spent $25M+ in 12 states to help elect eight of the 13 House and Senate candidates it backed — As discussions of AI regulations accelerate, Anthropic spent the past year…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>policy</category>
+    <category>safety</category>
+    <category>policy</category>
+    <category>Anthropic</category>
+  </item>
+  <item>
+    <title>llm-gemini 0.38</title>
+    <link>https://simonwillison.net/2026/Nov/18/llm-gemini/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-70042ecd</guid>
+    <pubDate>Wed, 18 Nov 2026 23:59:20 GMT</pubDate>
+    <description>Simon Willison. Release: llm-gemini 0.38 Today Google introduced Gemini 4 Neon . I wrote recently about how confusing the pricing for the Gemini 4 series was - Neon has somehow made this even worse. Previously the Gemini 4 lineup was Hydrogen, Argon, and Carbon - where Argon and Carbon were…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>other</category>
+    <category>pricing</category>
+    <category>Google</category>
+    <category>Gemini 4</category>
+  </item>
+  <item>
+    <title>NYU&apos;s Tristan Buckmaster and Anthropic&apos;s Levent Alpöge publish an AI-aided proof of Navier-Stokes blowup, saying it closes a loophole in OpenAI&apos;s solution (Peter Hall/Scientific American)</title>
+    <link>https://www.techmeme.com/261121/p4#a261121p4</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-799ef24c</guid>
+    <pubDate>Sat, 21 Nov 2026 06:30:00 GMT</pubDate>
+    <description>Techmeme. Peter Hall / Scientific American : NYU&apos;s Tristan Buckmaster and Anthropic&apos;s Levent Alp&amp;ouml;ge publish an AI-aided proof of Navier-Stokes blowup, saying it closes a loophole in OpenAI&apos;s solution — Two months after getting scooped by OpenAI, N.Y.U. professor Tristan Buckmaster…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>other</category>
+    <category>Anthropic</category>
+    <category>OpenAI</category>
+  </item>
+  <item>
+    <title>How Google Duplex evolved to also call businesses for you in Gemini</title>
+    <link>https://research.google/blog/how-google-duplex-evolved-to-also-call-businesses-for-you-in-gemini/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-11d83ea7</guid>
+    <pubDate>Fri, 20 Nov 2026 23:30:30 GMT</pubDate>
+    <description>Google Research. Generative AI</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>paper</category>
+    <category>research</category>
+    <category>Google</category>
+  </item>
+  <item>
+    <title>Hebbia sees improvements in financial research with GPT-6 Astra</title>
+    <link>https://openai.com/business/customer-stories/hebbia</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-ef9e2d58</guid>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 GMT</pubDate>
+    <description>OpenAI News. Hebbia tested GPT-6 Astra for financial research. Its prerelease evaluations found gains in source coverage, citation relevance, and presentation quality.</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>product</category>
+    <category>OpenAI</category>
+    <category>GPT-6-Astra</category>
+  </item>
+  <item>
+    <title>The Gemini app is now available on lower-memory Android devices.</title>
+    <link>https://blog.google/innovation-and-ai/products/gemini-app/gemini-lower-memory-devices/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-03ddf493</guid>
+    <pubDate>Wed, 18 Nov 2026 17:00:00 GMT</pubDate>
+    <description>Google AI. The Google Gemini app now supports lower-memory Android devices. Access Gemini Live and custom image creation on your phone. Download the app today.</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>product</category>
+    <category>release</category>
+    <category>Google</category>
+    <category>Gemini Live</category>
+  </item>
+</channel>
+</rss>
