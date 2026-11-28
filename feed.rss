@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>AI News Tracker: top stories</title>
+  <link>https://0xmortuex.github.io/ai-news-tracker/</link>
+  <description>The highest-scoring AI stories of the last 3 days, one entry per story. Title, link and a short excerpt only.</description>
+  <language>en</language>
+  <lastBuildDate>Sat, 28 Nov 2026 11:07:54 GMT</lastBuildDate>
+  <generator>ai-news-tracker/stories-1</generator>
+  <atom:link href="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss" rel="self" type="application/rss+xml"/>
+  <item>
+    <title>InternLM Team Open-Sources Sage-Interaction, a 9B Full-Duplex Model Built on MiniCPM-o 4.5</title>
+    <link>https://pandaily.com/internlm-sage-interaction-minicpm-o-45-full-duplex</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-a8a52930</guid>
+    <pubDate>Sat, 28 Nov 2026 04:02:25 GMT</pubDate>
+    <description>Pandaily. The InternLM team, with support from the Shanghai Artificial Intelligence Laboratory, has open-sourced Sage-Interaction, a 9B full-duplex multimodal model built on MiniCPM-o 4.5.</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>model-release</category>
+    <category>release</category>
+  </item>
+  <item>
+    <title>Ollama v0.40.19</title>
+    <link>https://github.com/ollama/ollama/releases/tag/v0.40.19</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-3bf220bf</guid>
+    <pubDate>Fri, 27 Nov 2026 21:47:32 GMT</pubDate>
+    <description>Ollama releases. What&apos;s Changed inkling2: faster short histories, draft proposals and conv snapshots by @dhiltgen in #19881 mlxrunner: compact Engram history buffers by @pdevine in #19913 bump llama-server by @pdevine in #19917 Full Changelog : v0.40.18...v0.40.19-rc0</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>tool</category>
+    <category>release</category>
+    <category>tooling</category>
+    <category>Meta</category>
+    <category>Ollama</category>
+  </item>
+  <item>
+    <title>Ollama v0.40.20-rc0</title>
+    <link>https://github.com/ollama/ollama/releases/tag/v0.40.20-rc0</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-180f1bd1</guid>
+    <pubDate>Fri, 27 Nov 2026 21:06:59 GMT</pubDate>
+    <description>Ollama releases. bump llama-server ( #19953 )</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>tool</category>
+    <category>release</category>
+    <category>tooling</category>
+    <category>Meta</category>
+    <category>Ollama</category>
+  </item>
+  <item>
+    <title>datasette-charts 0.4a0</title>
+    <link>https://simonwillison.net/2026/Nov/27/datasette-charts/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-a3664395</guid>
+    <pubDate>Fri, 27 Nov 2026 23:57:17 GMT</pubDate>
+    <description>Simon Willison. Release: datasette-charts 0.4a0 The new datasette-charts plugin has its own plugin hook to allow other plugins to define new chart types, but I hadn&apos;t actually used it for anything yet. I had Claude Opus 5.5 build an experimental plugins just to try out the hook and it came up…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>other</category>
+    <category>Anthropic</category>
+    <category>Claude Opus 5.5</category>
+  </item>
+  <item>
+    <title>DeepSeek is China’s latest developer to worry about losing control of AI</title>
+    <link>https://www.scmp.com/tech/article/3376058/deepseek-chinas-latest-developer-worry-about-losing-control-ai</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-668cd16f</guid>
+    <pubDate>Sat, 28 Nov 2026 02:00:11 GMT</pubDate>
+    <description>SCMP Tech. Chinese artificial intelligence start-up DeepSeek has commissioned a third-party evaluation to assess whether its flagship model, V4 Pro, could escape human control, making it the latest Chinese AI developer to signal its concerns with the growing risks surrounding the…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>other</category>
+    <category>safety</category>
+    <category>DeepSeek</category>
+  </item>
+  <item>
+    <title>New model on Hugging Face: tencent/Hy-Embodied-Apexio-1.0</title>
+    <link>https://huggingface.co/tencent/Hy-Embodied-Apexio-1.0</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-e10540ac</guid>
+    <pubDate>Fri, 27 Nov 2026 05:46:43 GMT</pubDate>
+    <description>Hugging Face: Tencent models. 0 likes · 0 downloads</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>model-release</category>
+    <category>release</category>
+    <category>Hugging Face</category>
+    <category>Tencent</category>
+    <category>Hy-Embodied-Apexio-1.0</category>
+  </item>
+  <item>
+    <title>Introducing the llama.cpp benchmark dashboard for AMD Ryzen and Radeon</title>
+    <link>https://huggingface.co/blog/ggml-org/llamacpp-amd-bench</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-323091ef</guid>
+    <pubDate>Thu, 26 Nov 2026 11:37:17 GMT</pubDate>
+    <description>Hugging Face Blog.</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>product</category>
+    <category>release</category>
+    <category>research</category>
+    <category>Hugging Face</category>
+    <category>Meta</category>
+    <category>AMD</category>
+    <category>llama.cpp</category>
+  </item>
+  <item>
+    <title>ComfyUI v0.46.4</title>
+    <link>https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.46.4</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-dcf79b26</guid>
+    <pubDate>Sat, 28 Nov 2026 00:43:23 GMT</pubDate>
+    <description>ComfyUI releases.</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>tool</category>
+    <category>release</category>
+    <category>tooling</category>
+    <category>ComfyUI</category>
+  </item>
+  <item>
+    <title>OpenAI countersues Apple over trade secret theft and alleged coercion of shared suppliers</title>
+    <link>https://the-decoder.com/openai-countersues-apple-over-trade-secret-theft-and-alleged-coercion-of-shared-suppliers/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-dd3c3fc5</guid>
+    <pubDate>Fri, 27 Nov 2026 19:38:37 GMT</pubDate>
+    <description>The Decoder. OpenAI is suing Apple in a California court, accusing it of trade secret theft and of coercing shared suppliers. The countersuit follows Apple&apos;s own lawsuit from the summer. Just two years ago, the two companies teamed up to bring ChatGPT to the iPhone. Now OpenAI is building…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>policy</category>
+    <category>policy</category>
+    <category>Apple</category>
+    <category>OpenAI</category>
+    <category>ChatGPT</category>
+  </item>
+  <item>
+    <title>Banned Nvidia Blackwell chips turn up in a Shanghai data center linked to Alice Huang, Bloomberg reports</title>
+    <link>https://the-decoder.com/banned-nvidia-blackwell-chips-turn-up-in-a-shanghai-data-center-linked-to-alice-huang-bloomberg-reports/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-7cdb5534</guid>
+    <pubDate>Fri, 27 Nov 2026 18:27:02 GMT</pubDate>
+    <description>The Decoder. Two Chinese companies installed Nvidia&apos;s powerful Blackwell chips at a Shanghai data center linked to Alice Huang, according to a Bloomberg investigation. A serial number led Bloomberg to Taiwanese manufacturer Gigabyte. Exporting these chips to China without a US license is…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>policy</category>
+    <category>policy</category>
+    <category>NVIDIA</category>
+  </item>
+  <item>
+    <title>OpenAI says it corrected a GPT-6.2 Astra and Sol launch billing mistake that had incorrectly discounted usage; Astra users will now hit their limits 40% faster (Graham Barlow/TechRadar)</title>
+    <link>https://www.techmeme.com/261126/p16#a261126p16</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-fcf3635b</guid>
+    <pubDate>Thu, 26 Nov 2026 13:01:08 GMT</pubDate>
+    <description>Techmeme. Graham Barlow / TechRadar : OpenAI says it corrected a GPT-6.2 Astra and Sol launch billing mistake that had incorrectly discounted usage; Astra users will now hit their limits 40% faster — Too little, too late? … - OpenAI has admitted to a billing mistake with its new GPT-6.2…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>model-release</category>
+    <category>release</category>
+    <category>OpenAI</category>
+    <category>GPT-6.2-Astra</category>
+  </item>
+  <item>
+    <title>Sources: Nvidia tells its manufacturing partners to halt AI server shipments to Malaysia, Singapore, Thailand, and Indonesia as the US steps up export controls (Financial Times)</title>
+    <link>https://www.techmeme.com/261126/p2#a261126p2</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-1bb8ef8c</guid>
+    <pubDate>Thu, 26 Nov 2026 05:45:02 GMT</pubDate>
+    <description>2 sources: Techmeme, The Decoder. Financial Times : Sources: Nvidia tells its manufacturing partners to halt AI server shipments to Malaysia, Singapore, Thailand, and Indonesia as the US steps up export controls — Move comes as US steps up export controls to prevent Chinese access to AI computing power — Nvidia…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>policy</category>
+    <category>policy</category>
+    <category>NVIDIA</category>
+  </item>
+  <item>
+    <title>A profile of Jensen Huang, whom longtime friends and associates say has an unrelenting ability to make the most of any situation, as he returns as Nvidia&apos;s CEO (Erich Schwartzel/Wall Street Journal)</title>
+    <link>https://www.techmeme.com/261128/p4#a261128p4</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-c2bd6bea</guid>
+    <pubDate>Sat, 28 Nov 2026 07:40:01 GMT</pubDate>
+    <description>Techmeme. Erich Schwartzel / Wall Street Journal : A profile of Jensen Huang, whom longtime friends and associates say has an unrelenting ability to make the most of any situation, as he returns as Nvidia&apos;s CEO — As a longtime friend of the Nvidia CEO puts it, “Jensen will always pull a…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>other</category>
+    <category>NVIDIA</category>
+  </item>
+  <item>
+    <title>Robotics startup Embo raises $110 million in seed funding to build world-model AI for robots</title>
+    <link>https://the-decoder.com/robotics-startup-embo-raises-110-million-in-seed-funding-to-build-world-model-ai-for-robots/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-a47ab244</guid>
+    <pubDate>Sat, 28 Nov 2026 10:48:18 GMT</pubDate>
+    <description>The Decoder. Embo raised $110 million in seed funding to build a universal robot brain with world models. Its AI learns how the physical world works from internet video and practices motor skills in simulation. Google Deepmind, Meta, and MIT researchers are behind the startup as the race…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>funding</category>
+    <category>Google</category>
+    <category>Google DeepMind</category>
+    <category>Meta</category>
+  </item>
+  <item>
+    <title>At XPeng AI Day 2026, He Xiaopeng Says the Brain and Body Must Evolve Together</title>
+    <link>https://pandaily.com/xpeng-ai-day-2026-he-xiaopeng-brain-and-body-must-evolve-together</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-8d778c2c</guid>
+    <pubDate>Sat, 28 Nov 2026 09:56:13 GMT</pubDate>
+    <description>Pandaily. XPeng&apos;s eighth AI Day in Guangzhou set out a shared Physical AI stack for cars, the IRON humanoid, YOYO-01 robotaxis, and Aridge flying vehicles, plus a candid Pandaily Q&amp;A with He Xiaopeng.</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>other</category>
+  </item>
+  <item>
+    <title>Embo, which is developing world models for robotics trained on massive amounts of internet video, emerges from stealth with a $110M seed led by a16z (Embo)</title>
+    <link>https://www.techmeme.com/261128/p1#a261128p1</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-87ac6dc3</guid>
+    <pubDate>Sat, 28 Nov 2026 05:50:02 GMT</pubDate>
+    <description>Techmeme. Embo : Embo, which is developing world models for robotics trained on massive amounts of internet video, emerges from stealth with a $110M seed led by a16z — Embo is building the next generation of frontier AI models, with a deep understanding of physical reality and…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>other</category>
+  </item>
+  <item>
+    <title>Anthropic says Claude doesn&apos;t silently sabotage work and that some user reports reflect &quot;overcaution&quot;, where Claude clings to self-imposed rules on long tasks (Edwin/@edwinarbus)</title>
+    <link>https://www.techmeme.com/261127/p17#a261127p17</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-93826aab</guid>
+    <pubDate>Sat, 28 Nov 2026 03:35:05 GMT</pubDate>
+    <description>Techmeme. Edwin / @edwinarbus : Anthropic says Claude doesn&apos;t silently sabotage work and that some user reports reflect “overcaution”, where Claude clings to self-imposed rules on long tasks — Claude has not been trained to sabotage work. Yes, it sometimes makes mistakes, and other…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>other</category>
+    <category>Anthropic</category>
+  </item>
+  <item>
+    <title>llama.cpp release b12823</title>
+    <link>https://github.com/ggml-org/llama.cpp/releases/tag/b12823</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-3f048f1a</guid>
+    <pubDate>Sat, 28 Nov 2026 01:28:25 GMT</pubDate>
+    <description>llama.cpp releases. CUDA: fix ADD_ID launch for more than 65535 tokens ( #33162 ) The grid&apos;s y dimension came directly from the token count, so ADD_ID launches with more than 65535 tokens failed with &quot;invalid configuration argument&quot;. NVIDIA and HIP are equally affected, since gridDim.y is capped…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>tool</category>
+    <category>tooling</category>
+    <category>Meta</category>
+    <category>llama.cpp</category>
+  </item>
+  <item>
+    <title>llama.cpp release b12822</title>
+    <link>https://github.com/ggml-org/llama.cpp/releases/tag/b12822</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-59f96fce</guid>
+    <pubDate>Sat, 28 Nov 2026 01:11:52 GMT</pubDate>
+    <description>llama.cpp releases. vulkan: handle empty conv3d kernel, fixes validation error ( #33106 ) Website: https://llama.app Attestations: https://github.com/ggml-org/llama.cpp/attestations/73330379 macOS/iOS: macOS Apple Silicon (arm64) macOS Apple Silicon (arm64, KleidiAI enabled) DISABLED macOS Intel…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>tool</category>
+    <category>tooling</category>
+    <category>Meta</category>
+    <category>Intel</category>
+    <category>llama.cpp</category>
+  </item>
+  <item>
+    <title>Netherlands ‘will not be dictated to’, trade chief says in fight against US Match Act</title>
+    <link>https://www.scmp.com/economy/global-economy/article/3376024/netherlands-will-not-be-dictated-trade-chief-says-fight-against-us-match-act</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-76c844e3</guid>
+    <pubDate>Fri, 27 Nov 2026 09:00:13 GMT</pubDate>
+    <description>SCMP Tech. Days after the Dutch foreign minister sent similar messages during his visit to China, the country’s trade minister has vowed that the government would do “everything in its power” to stop the US’ Multilateral Alignment of Technology Controls on Hardware (Match) Act from being…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>other</category>
+    <category>safety</category>
+  </item>
+  <item>
+    <title>Taking Trainium3 to the Track: Generating Videos with LTX-2.5</title>
+    <link>https://huggingface.co/blog/video-trainium3</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-0f4bfeec</guid>
+    <pubDate>Fri, 27 Nov 2026 00:00:00 GMT</pubDate>
+    <description>Hugging Face Blog.</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>product</category>
+    <category>Hugging Face</category>
+  </item>
+  <item>
+    <title>How the MATCH Act could backfire by barring ASML from its ~350 immersion scanners in China, letting rivals service and reverse engineer them, and hire its staff (LithoWar)</title>
+    <link>https://www.techmeme.com/261127/p16#a261127p16</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-1a1592fc</guid>
+    <pubDate>Sat, 28 Nov 2026 02:00:01 GMT</pubDate>
+    <description>Techmeme. LithoWar : How the MATCH Act could backfire by barring ASML from its ~350 immersion scanners in China, letting rivals service and reverse engineer them, and hire its staff — At the heart of the AI race, while East and West stockpile advanced processors, a quiet technology…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>other</category>
+  </item>
+  <item>
+    <title>Show HN: DragDropMath – Learn math by feel</title>
+    <link>https://dragdropmath.com/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-439e0385</guid>
+    <pubDate>Fri, 27 Nov 2026 17:56:28 GMT</pubDate>
+    <description>Hacker News: LLM (50+ points). 142 points · 39 comments on Hacker News</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>other</category>
+  </item>
+  <item>
+    <title>Bipartisan efforts in Congress to regulate AI are gaining momentum, but they face an uphill climb due to the slow pace of legislative work and turf battles (New York Times)</title>
+    <link>https://www.techmeme.com/261126/p26#a261126p26</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-550a4bb2</guid>
+    <pubDate>Fri, 27 Nov 2026 00:30:01 GMT</pubDate>
+    <description>Techmeme. New York Times : Bipartisan efforts in Congress to regulate AI are gaining momentum, but they face an uphill climb due to the slow pace of legislative work and turf battles — Members of both parties say they want to tackle artificial intelligence policy, but the slow pace of…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>policy</category>
+    <category>policy</category>
+  </item>
+  <item>
+    <title>Ollama v0.40.19-rc0</title>
+    <link>https://github.com/ollama/ollama/releases/tag/v0.40.19-rc0</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-a8176724</guid>
+    <pubDate>Thu, 26 Nov 2026 06:20:48 GMT</pubDate>
+    <description>Ollama releases. bump llama-server ( #19917 )</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>tool</category>
+    <category>release</category>
+    <category>tooling</category>
+    <category>Meta</category>
+    <category>Ollama</category>
+  </item>
+  <item>
+    <title>Agency Information Collection Activities; Submission for OMB Review; Comment Request; Fraud.gov Tip Intake and Referral Form</title>
+    <link>https://www.federalregister.gov/documents/2026/11/30/2026-24266/agency-information-collection-activities-submission-for-omb-review-comment-request-fraudgov-tip</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-d7149546</guid>
+    <pubDate>Sat, 28 Nov 2026 11:07:54 GMT</pubDate>
+    <description>Federal Register: artificial intelligence. The Department of the Treasury will submit the following information collection request to the Office of Management and Budget (OMB) for review and clearance in accordance with the Paperwork Reduction Act of 1995, on or after the date of publication of this notice. The public…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>policy</category>
+    <category>policy</category>
+  </item>
+  <item>
+    <title>AgiBot&apos;s G2 Moves From Quality-Check Loading to Speaker-Box Installation at Longcheer</title>
+    <link>https://pandaily.com/agibot-g2-longcheer-nanchang-speaker-box-installation</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-5334c4de</guid>
+    <pubDate>Sat, 28 Nov 2026 04:02:45 GMT</pubDate>
+    <description>Pandaily. AgiBot said its G2 robot is now installing speaker boxes in-line at Longcheer Technology&apos;s Nanchang factory, extending earlier quality-check loading work on the same line.</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>other</category>
+  </item>
+  <item>
+    <title>[AINews] Inside the exploding Coding Data Market</title>
+    <link>https://latent.space/p/ainews-inside-the-exploding-coding-data-market/</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-a61f15eb</guid>
+    <pubDate>Sat, 28 Nov 2026 03:45:59 GMT</pubDate>
+    <description>Latent Space. November 27, 2026 — How frontier labs buy training data.</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>other</category>
+  </item>
+  <item>
+    <title>Some users claim Claude is silently sabotaging projects, especially those involving ML work, but it&apos;s hard to prove because models are built to be proactive (Drew Breunig)</title>
+    <link>https://www.techmeme.com/261127/p14#a261127p14</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-1fbed017</guid>
+    <pubDate>Fri, 27 Nov 2026 21:35:01 GMT</pubDate>
+    <description>Techmeme. Drew Breunig : Some users claim Claude is silently sabotaging projects, especially those involving ML work, but it&apos;s hard to prove because models are built to be proactive — Is Claude Throwing the Game? — There&apos;s a recent spate of claims that Claude is silently sabotaging…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>other</category>
+    <category>Anthropic</category>
+  </item>
+  <item>
+    <title>Q&amp;A with AI researchers Ege Erdil and Daniel Kokotajlo on the odds of an intelligence explosion before 2029, pausing AI, the US antagonizing China, and more (Dwarkesh Patel/Dwarkesh Podcast)</title>
+    <link>https://www.techmeme.com/261127/p13#a261127p13</link>
+    <guid isPermaLink="false">urn:ai-news-tracker:story:s-a581793f</guid>
+    <pubDate>Fri, 27 Nov 2026 20:15:01 GMT</pubDate>
+    <description>Techmeme. Dwarkesh Patel / Dwarkesh Podcast : Q&amp;A with AI researchers Ege Erdil and Daniel Kokotajlo on the odds of an intelligence explosion before 2029, pausing AI, the US antagonizing China, and more — “If we pause now, people still won&apos;t understand what&apos;s at stake.” — New podcast…</description>
+    <source url="https://raw.githubusercontent.com/0xmortuex/ai-news-tracker/data/feed.rss">AI News Tracker</source>
+    <category>other</category>
+  </item>
+</channel>
+</rss>
